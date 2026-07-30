@@ -16,6 +16,8 @@ The argument has one spine: **capability grows fastest where verification is che
 - [Thesis](00-overview/thesis.md) — the argument in one page
 - [The compressed version](00-overview/compressed.md) — if you read nothing else
 - [Reading orders](00-overview/README.md) — linear, argument-first, sceptic-first, operator-first
+- [Notation](00-overview/notation.md) — recurring shorthand
+- [Dependencies](00-overview/dependencies.md) — reverse dependency index
 
 ### [01 — The Physical Substrate](01-substrate/)
 What actually constrains this. Four inputs, four different ceilings.

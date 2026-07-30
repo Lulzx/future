@@ -10,6 +10,8 @@ Two entry points to the same argument, at different compression ratios.
 |---|---|
 | [**Thesis**](thesis.md) | You want the argument in five steps, with links into the evidence for each |
 | [**The compressed version**](compressed.md) | You will read nothing else, and want the conclusion plus what to do about it |
+| [**Notation**](notation.md) | Recurring shorthand (master asymmetry, inelastic complement, …) |
+| [**Dependencies**](dependencies.md) | Claim → pages that rest on it (for scoring misses) |
 
 ## The spine
 

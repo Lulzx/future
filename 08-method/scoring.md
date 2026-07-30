@@ -68,6 +68,6 @@ The first two resolve within about eighteen months of writing and are the earlie
 
 ---
 
-**Related:** [Part V — Probabilities](../05-probabilities/README.md) · [Part VII — Indicators](../07-indicators/) · [Steelman](steelman.md) · [Protocol](../RESEARCH.md)
+**Related:** [Part V — Probabilities](../05-probabilities/) · [Part VII — Indicators](../07-indicators/) · [Steelman](steelman.md) · [Dependencies](../00-overview/dependencies.md) · [Notation](../00-overview/notation.md) · [Protocol](../RESEARCH.md)
 
 **Next:** [Index](../README.md)
