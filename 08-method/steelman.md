@@ -60,6 +60,6 @@ That is a fair criticism and it does not have a good answer. The mitigation is t
 
 ---
 
-**Related:** [Part VI - Uncertainties](../06-uncertainties/) · [Base rates](base-rates.md) · [Scoring](scoring.md) · [Game 3](../02-games/3-firms.md)
+**Related:** [Part VI - Uncertainties](../06-uncertainties/) · [Base rates](base-rates/README.md) · [Scoring](scoring.md) · [Game 3](../02-games/3-firms.md)
 
 **Next:** [Scoring](scoring.md)

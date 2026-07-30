@@ -41,7 +41,7 @@ The document scores itself, which is a conflict of interest with a known failure
 Named in advance, because the point of naming them is to make them harder to use.
 
 1. **"Early, not wrong."** The universal escape. **Rule: a timing claim that misses its stated date by more than 3 years is a miss**, regardless of what happens afterward. Directional vindication at an arbitrary horizon is not a forecast.
-2. **Reference-class swapping.** When [aviation](base-rates.md) stops fitting the regulatory prediction, reaching for privacy instead. **Rule: the class is fixed at authoring. Changing it is a logged revision with a stated reason, not an interpretation.**
+2. **Reference-class swapping.** When [aviation](base-rates/social-response.md) stops fitting the regulatory prediction, reaching for privacy instead. **Rule: the class is fixed at authoring. Changing it is a logged revision with a stated reason, not an interpretation.**
 3. **Scope narrowing.** [Game 3](../02-games/3-firms.md)'s narrowing to "competitive markets specifically" in the [steelman](steelman.md) is exactly this move. It is legitimate *once*, done explicitly, in advance of the resolution. It is not legitimate afterward.
 4. **Indicator substitution.** Quietly promoting whichever [indicator](../07-indicators/) happens to be confirming. **Rule: the five headline indicators are fixed; changes go in the round log.**
 5. **Probability inertia.** The subtlest. A probability that never moves is not being updated; it is being defended. **Rule: annual re-scoring of every row in [Part V](../05-probabilities/README.md), and a row that hasn't moved in two years requires a written justification for why no evidence bore on it.**

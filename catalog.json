@@ -304,8 +304,20 @@
     "title": "Part VIII - Method"
   },
   {
-    "path": "08-method/base-rates.md",
+    "path": "08-method/base-rates/README.md",
     "title": "Base Rates - the reference classes underneath the estimates"
+  },
+  {
+    "path": "08-method/base-rates/cycles.md",
+    "title": "Base Rates - Technology and Capital Cycles (classes 1–2)"
+  },
+  {
+    "path": "08-method/base-rates/social-response.md",
+    "title": "Base Rates - Social Response (classes 3, 5, 6)"
+  },
+  {
+    "path": "08-method/base-rates/winters.md",
+    "title": "Base Rates - AI Winters, Failure Archaeology (class 4)"
   },
   {
     "path": "08-method/scoring.md",

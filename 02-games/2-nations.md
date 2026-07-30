@@ -22,7 +22,7 @@ The three differences above break arms *control*; a fourth breaks arms-race *sta
 
 > **No meaningful binding international agreement before a salient accident.**
 
-Coordination is **event-driven, not reason-driven**. This is the historical pattern for aviation safety, nuclear power, financial regulation, and pharmaceutical approval alike - in every case the governing architecture was written after a disaster, not before one, and by people reacting to a specific salient failure rather than to a general risk argument. → [Base rates](../08-method/base-rates.md) §3
+Coordination is **event-driven, not reason-driven**. This is the historical pattern for aviation safety, nuclear power, financial regulation, and pharmaceutical approval alike - in every case the governing architecture was written after a disaster, not before one, and by people reacting to a specific salient failure rather than to a general risk argument. → [Base rates - regulatory cycles](../08-method/base-rates/social-response.md)
 
 Expect a serious AI-attributed incident - cyber-physical, biological near-miss, or a market event - in **2027–2031**, and expect the regulatory architecture governing the 2030s to be written in the **18 months after it.**
 
@@ -54,7 +54,7 @@ Electricity-price politics ([Energy](../01-substrate/energy.md)) may bind *befor
 
 ## Diffuse harm and the privacy reference class
 
-If the dominant harms are gradual - labor displacement, epistemic degradation, dependency - **there may be no salient accident at all.** The correct reference class is then privacy regulation: late, weak, fragmented. → [Base rates](../08-method/base-rates.md) §3
+If the dominant harms are gradual - labor displacement, epistemic degradation, dependency - **there may be no salient accident at all.** The correct reference class is then privacy regulation: late, weak, fragmented. → [Base rates - regulatory cycles](../08-method/base-rates/social-response.md)
 
 That is a live failure mode for the whole Game 2 claim. The document underweights it relative to the aviation analogy. Indicator: years of rising diffuse harm metrics with no legislative super-cycle.
 

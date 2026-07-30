@@ -67,7 +67,7 @@ Every claim above, converted into something checkable on a quarterly cadence.
 
 ### [08 - Method](08-method/)
 Where the numbers come from, and how to tell when this is wrong rather than early.
-- [Base rates](08-method/base-rates.md) - the reference classes underneath every estimate
+- [Base rates](08-method/base-rates/README.md) - the reference classes underneath every estimate
 - [Steelman](08-method/steelman.md) - the three strongest arguments against the framework itself
 - [Scoring](08-method/scoring.md) - resolution rules, and the five ways this document will try to dodge
 

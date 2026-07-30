@@ -72,6 +72,6 @@ The policy response is immigration, and immigration is politically constrained i
 
 ---
 
-**Related:** [Game 4 - Labor](../02-games/4-labor.md) · [Rates](rates.md) · [Fiscal](fiscal.md) · [Assets](assets.md) · [Base rates](../08-method/base-rates.md) §6 · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [2028–2032](../04-timelines/2028-2032.md) · [2032–2040](../04-timelines/2032-2040.md)
+**Related:** [Game 4 - Labor](../02-games/4-labor.md) · [Rates](rates.md) · [Fiscal](fiscal.md) · [Assets](assets.md) · [Base rates - demographics](../08-method/base-rates/social-response.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [2028–2032](../04-timelines/2028-2032.md) · [2032–2040](../04-timelines/2032-2040.md)
 
 **Next:** [Index](../README.md) · [Protocol](../RESEARCH.md)
