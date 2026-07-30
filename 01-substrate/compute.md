@@ -6,7 +6,7 @@
 
 *Quantities current to mid-2026.*
 
-Frontier training compute grew ~4–5× per year for roughly fifteen years. That decomposes into:
+Frontier training compute grew ~4–5× per year for roughly fifteen years (Epoch AI, 2010–24 series; ~4.4×/yr since 2010). That decomposes into:
 
 - ~1.35×/yr in hardware performance per dollar
 - ~2.5–3×/yr in dollars spent
@@ -16,7 +16,7 @@ Multiply and you get "effective compute" rising ~7–10×/yr - the real engine b
 
 ## The dollar term is the one that breaks
 
-Largest training runs went ~$10M (2020) → ~$100M (2023) → ~$1B (2025). Extrapolate: ~$10B around 2027–28, ~$100B around 2029–30.
+Largest training runs went ~$10M (2020) → ~$100M (2023) → ~$1B (2025). The ladder matches Epoch AI's cost series (~2.4×/yr growth since 2016; Grok 4 compute ~$0.5B, Epoch, Sep 2025). Extrapolate: ~$10B around 2027–28, ~$100B around 2029–30.
 
 A $100B run is ~0.33% of US GDP - Apollo program scale, spent on a single artifact that depreciates in 18 months. You can do that once as a national project. You cannot do it annually as a business unless revenue justifies it.
 
@@ -39,7 +39,7 @@ A correction remains plausible, but its likely form is *consolidation* - culling
 
 ## The softest term in the decomposition
 
-Of the three multiplicands, the ~3×/yr algorithmic-efficiency term deserves the least confidence, and it is doing the most work. It is measured by asking how many FLOPs a newer method needs to match an older benchmark score - which makes it hostage to the benchmarks. Where benchmarks saturate or leak into training data, "equal capability" becomes unmeasurable, and the efficiency estimate inherits that fog. The term is also an *average over a moving frontier*: efficiency gains historically concentrate in whatever the field is optimizing this year, so past 3×/yr on next-token prediction does not automatically carry over to long-horizon agentic tasks, where the optimization pressure only arrived around 2025. If the true forward-looking term is 1.5× rather than 3×, effective compute growth roughly halves and every capability-timing estimate downstream slips by years without any visible change in spending. There is no clean indicator for this - [A1](../07-indicators/substrate.md) catches the dollar term, not the efficiency term - so this page flags it as its own least-verifiable input.
+Of the three multiplicands, the ~3×/yr algorithmic-efficiency term deserves the least confidence, and it is doing the most work. It is measured by asking how many FLOPs a newer method needs to match an older benchmark score - which makes it hostage to the benchmarks. The published estimate itself carries the warning: Epoch AI (Ho et al. 2024) puts the halving time of compute-per-capability at ~8 months with a 95% interval of 5 to 14 months, an uncertainty band wide enough to contain both the optimistic and pessimistic readings of this page. Where benchmarks saturate or leak into training data, "equal capability" becomes unmeasurable, and the efficiency estimate inherits that fog. The term is also an *average over a moving frontier*: efficiency gains historically concentrate in whatever the field is optimizing this year, so past 3×/yr on next-token prediction does not automatically carry over to long-horizon agentic tasks, where the optimization pressure only arrived around 2025. If the true forward-looking term is 1.5× rather than 3×, effective compute growth roughly halves and every capability-timing estimate downstream slips by years without any visible change in spending. There is no clean indicator for this - [A1](../07-indicators/substrate.md) catches the dollar term, not the efficiency term - so this page flags it as its own least-verifiable input.
 
 Test-time compute cuts the other way and changes the *shape* of the risk. To the extent reasoning-at-inference substitutes for parameters-at-training, capex migrates from a few concentrated training runs toward distributed serving fleets - spending that scales with revenue rather than ahead of it. That is a financially safer structure (failure arrives as margin compression, not a stranded artifact), and its cost falls on the collapsing floor of [inference economics](inference-economics.md) rather than the rising wall of this page. The 2029–30 "wall" is therefore best read as the break point of one financing pattern, not of capability progress.
 

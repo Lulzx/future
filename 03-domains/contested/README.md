@@ -22,7 +22,7 @@ In [III.A](../cognitive/) and [III.B](../physical/), capability improvement is s
 
 **1. Ground truth is cheap for the attacker and expensive for the defender.** An exploit either works or it doesn't - perfect, immediate, automatic verification, which is exactly the regime where [capability grows fastest](../../01-substrate/data.md). "Did the system stay secure" has no such signal; it is an absence, confirmable only by the passage of time. **The asymmetry in learning rates follows directly from the asymmetry in feedback**, and it recurs in every domain in this group.
 
-**2. Diffusion is the threat model, not the business model.** Everywhere else in [Part III](../README.md), capability spreading is how value gets realized. Here it is how risk gets realized. This is what makes [Game 2](../../02-games/2-nations.md)'s leaky-bucket result matter: a 9–15 month open-weight lag is a commercial detail in software and a security parameter here.
+**2. Diffusion is the threat model, not the business model.** Everywhere else in [Part III](../README.md), capability spreading is how value gets realized. Here it is how risk gets realized. This is what makes [Game 2](../../02-games/2-nations.md)'s leaky-bucket result matter: an open-weight lag now measured at ~3–6 months (Epoch AI, 2026) is a commercial detail in software and a security parameter here - and its shortening tightens this part's timelines while it loosens Part II's.
 
 **3. The counterparty adapts.** Static defenses are the only kind that gets built, and adaptive attackers are the only kind that shows up. Every prediction in this group therefore has a shorter half-life than anything in the other two groups.
 

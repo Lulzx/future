@@ -50,7 +50,7 @@ The lever weakens exactly as the stakes rise: **algorithmic efficiency and infer
 
 | | |
 |---|---|
-| **Baseline** | Open-weight tier roughly 9–15 months behind frontier |
+| **Baseline** | Open-weight tier ~3–6 months behind frontier (Epoch AI, Jan–May 2026; down from the ~9–15 months carried at authoring) |
 | **Trigger - controls working** | Gap widening past ~24 months |
 | **Trigger - controls failing** | Gap closing below ~6 months |
 | **Revises** | [Game 1](../02-games/1-labs.md), [Game 2](../02-games/2-nations.md) |

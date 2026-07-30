@@ -6,7 +6,7 @@
 
 *Quantities current to mid-2026.*
 
-Cost per token at fixed capability fell **~100–1000× in two years.**
+Cost per token at fixed capability fell **~100–1000× in two years.** The stated range is conservative against the measured one: Epoch AI's price-trend series (2023–25 data) finds 9–900× *per year* depending on task and threshold, median ~50×/yr, with the fastest declines starting after January 2024.
 
 This is the most consequential number in the entire analysis and the one people ignore. It is not a ceiling like the others in Part I - it is a floor collapsing.
 
@@ -36,7 +36,7 @@ What survives is anything holding an input that does *not* get cheaper - which i
 
 ## Three stacked mechanisms, three different exhaustion points
 
-"~100–1000× in two years" is not one process, and its durability depends on which component you ask about. **Hardware** ($/FLOP plus serving-stack utilization) improves on a manufacturing cadence - steady, slow, unlikely to stop, unlikely to accelerate. **Distillation and small-model substitution** - compressing frontier behavior into cheap models - is the largest single contributor and the one with a visible limit: you cannot distill below the capability actually needed for the task, so it exhausts per-capability-tier even as it repeats for each new tier. **Competition** converts both into price: with several near-equivalent providers and open-weight alternatives ~9–15 months behind, serving margins compress toward cost. Only the third mechanism is fragile - consolidation to 3–5 labs plus regulatory moats could restore pricing power without any technical change. So the precise form of the falsifier matters: *costs* almost certainly keep falling; whether *prices* follow is a market-structure question, and [Game 1](../02-games/1-labs.md) consolidation is the scenario where the two-year moat survives technically but dies commercially.
+"~100–1000× in two years" is not one process, and its durability depends on which component you ask about. **Hardware** ($/FLOP plus serving-stack utilization) improves on a manufacturing cadence - steady, slow, unlikely to stop, unlikely to accelerate. **Distillation and small-model substitution** - compressing frontier behavior into cheap models - is the largest single contributor and the one with a visible limit: you cannot distill below the capability actually needed for the task, so it exhausts per-capability-tier even as it repeats for each new tier. **Competition** converts both into price: with several near-equivalent providers and open-weight alternatives now only ~3–6 months behind (Epoch AI, Jan–May 2026: ~4-month average lag, ~6 under a stricter comparison rule - down from the ~9–15 months this page previously carried), serving margins compress toward cost. Only the third mechanism is fragile - consolidation to 3–5 labs plus regulatory moats could restore pricing power without any technical change. So the precise form of the falsifier matters: *costs* almost certainly keep falling; whether *prices* follow is a market-structure question, and [Game 1](../02-games/1-labs.md) consolidation is the scenario where the two-year moat survives technically but dies commercially.
 
 The distribution of the collapse is also uneven in a way the headline hides. Prices fall fastest exactly where models are substitutable - which, by the [master asymmetry](data.md), is the verifiable, benchmarkable work. Where output quality is hard to verify, buyers cannot compare providers, switching is risky, and price stays sticky. The floor collapses fastest under the tasks that were automated first: the same gradient, appearing a second time as a pricing fact.
 
@@ -59,7 +59,7 @@ Scarce then (framework list): energy, interconnection, licenses, trusted data, d
 
 ## Open weights and the leaky bucket
 
-Inference cost collapse + distillation compresses the [Game 2](../02-games/2-nations.md) lag: open-weight tiers sit ~9–15 months behind frontier partly because serving "good enough" is cheap. That is commercial for application builders and a security parameter for [cyber](../03-domains/contested/cybersecurity.md) / [bio](../03-domains/contested/biosecurity.md).
+Inference cost collapse + distillation compresses the [Game 2](../02-games/2-nations.md) lag: open-weight tiers sit only ~3–6 months behind frontier (Epoch AI, 2026) partly because serving "good enough" is cheap - and the lag has shortened, not lengthened, since this corpus first carried the figure. That is commercial for application builders and a security parameter for [cyber](../03-domains/contested/cybersecurity.md) / [bio](../03-domains/contested/biosecurity.md).
 
 ## What would falsify the two-year moat
 

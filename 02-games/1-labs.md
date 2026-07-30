@@ -42,7 +42,7 @@ That third one is load-bearing for the optimistic case and it is the one most li
 
 ## Open weights as the coupling mechanism
 
-The contest is not only closed labs racing each other. A large open-weight tier sits **~9–15 months behind** frontier, set by the ratio of frontier training spend to distillation cost - both falling together, so the gap is roughly stable.
+The contest is not only closed labs racing each other. A large open-weight tier sits close behind frontier - measured at **~3–6 months** as of 2026 (Epoch AI, Jan–May series; the corpus originally carried ~9–15 months) - set by the ratio of frontier training spend to distillation cost. The stability assumption behind the original figure is what the shortening challenges: the gap compressed rather than holding.
 
 Open weights:
 
@@ -67,6 +67,8 @@ Consolidation does not end the contest; it changes its currency. With 3–5 play
 > Consolidation to **3–5 frontier labs globally by 2029**, open-weight tier **~9–15 months behind**, gap stable rather than collapsing.
 
 > If the 2027–29 correction arrives, **majority of pure-play frontier labs** either merge, pivot to applications, or become state-adjacent within 24 months of the trough.
+
+*Ground note (r25): the lag clause is running wrong in the direction of faster diffusion - Epoch AI (Jan–May 2026) measures ~3–6 months, so "gap stable" is already violated even though the consolidation clause is unresolved. The prediction text stays as authored and scores as written; the ledger note is the revision channel, not the blockquote.*
 
 ## Failure modes
 

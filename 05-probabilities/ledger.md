@@ -65,6 +65,14 @@ Also this round: the [distributed predictions register](register.md) created - 1
 
 Rule 5 satisfied: evidence reviewed, holds justified in writing, not inertia.
 
+## Round 25 - first grounded contradiction logged (no number moves)
+
+*Date: 2026-07-30. Source: second live Ground pass.*
+
+The open-weight lag, carried since authoring at ~9–15 months and embedded in the [Game 1 prediction](../02-games/1-labs.md) ("gap stable rather than collapsing"), measures ~3–6 months as of Jan–May 2026 (Epoch AI). This is the corpus's first live-source contradiction of a stamped claim component. No main-table row carries this figure directly, so no number moves; the affected prediction scores as written at resolution, with the ground note at source. Direction of the miss: faster diffusion - which presses row 3's incident-surface reasoning and [Game 2](../02-games/2-nations.md)'s leaky-bucket result toward *more* leakage, not less, and weakens any future argument that frontier control chokepoints are sufficient policy levers.
+
+Rule 5 satisfied: evidence reviewed, contradiction logged rather than absorbed silently.
+
 ## How to read a hold
 
 The ledger's hold entries are its least glamorous and most informative content, because the failure modes of a subjective table are asymmetric in a specific way. The pressure on a maintained forecast runs toward *motion* - every round deposits new material, and moving a number is how an analyst demonstrates responsiveness - so a table that drifts a few points every pass is usually tracking the author's reading list, not the world. Rule 5 cuts the other way against *anchoring*: a number that never moves is being defended. The discipline that resolves the tension is the one visible above - every hold names the evidence reviewed and says why it was insufficient, which converts "no change" from an absence into a claim that can itself be wrong. A reader auditing this ledger should look for two smells: consecutive holds citing evidence that plainly bears on a row (anchoring wearing rule-5 clothing), and moves justified by material that merely *restates* the argument that set the prior (motion mistaken for updating). Rounds 12 and 18 are the pattern to hold future passes to: mechanism detail sharpened, numbers explicitly not moved, reasons in writing.

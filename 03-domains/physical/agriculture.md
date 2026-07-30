@@ -51,7 +51,7 @@ The distributional consequence is stark and follows directly from [Game 3](../..
 
 ## Why it matters more than its GDP share suggests
 
-Agriculture is ~1% of US GDP and ~25% of employment globally. The gains are concentrated where the sector is largest, which means **this is one of the few chapters in this document where the largest welfare effects land in low- and middle-income countries.**
+Agriculture is ~0.8% of US GDP (farm output $222B - USDA ERS, 2023) and ~26% of employment globally (World Bank / ILO modeled estimate, 2023). The gains are concentrated where the sector is largest, which means **this is one of the few chapters in this document where the largest welfare effects land in low- and middle-income countries.**
 
 The obstacle there is not model capability, which is free. It is smartphone penetration, connectivity, extension services, credit access, and land tenure security. Every one of those is a development problem with a fifty-year literature, and none of them are accelerated by better models.
 

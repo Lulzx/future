@@ -42,7 +42,7 @@ Even at parity, substitution does not follow. Three reasons, all of which favor 
 
 - **Robots replace tasks, not jobs.** A role is a bundle. Automating 70% of it at parity cost saves nothing if the remaining 30% still requires a person on site for a full shift. → the same composition argument as [Game 4](../../../02-games/4-labor.md).
 - **Flexibility has option value.** A human redeploys to a new task in minutes at zero capital cost. A robot requires integration work. In variable-demand environments the option value of flexible labor is large and rarely priced.
-- **The comparison should be to fully-loaded cost, which cuts the other way.** Wages understate labor cost by 25–40% once benefits, turnover, training, scheduling, and workplace-injury liability are included. In high-turnover, high-injury settings - warehousing, meatpacking, materials handling - **the real crossover arrives considerably earlier than the wage comparison implies.**
+- **The comparison should be to fully-loaded cost, which cuts the other way.** Wages understate labor cost materially: benefits alone add ~43% on top of wages in US private industry - $14.01 against $32.60 per hour worked (BLS ECEC, March 2026) - before turnover, training, scheduling, and workplace-injury liability are counted. In high-turnover, high-injury settings - warehousing, meatpacking, materials handling - **the real crossover arrives considerably earlier than the wage comparison implies.**
 
 The third point is why the first deployments cluster where they do. **The economics work first where labor is expensive to *employ*, not where it is expensive to pay.**
 

@@ -29,7 +29,7 @@ The chain is not equally fragile at every link, and knowing which failures are l
 ## What this predicts
 
 - Deflation in anything cognition-intensive; inflation in energy, land, healthcare, skilled trades. That divergence is the defining political-economy fact of the 2030s. → [Prices](../09-macro/prices.md)
-- Consolidation to 3–5 frontier labs by 2029, with an open-weight tier ~9–15 months behind.
+- Consolidation to 3–5 frontier labs by 2029, with a fast-following open-weight tier (lag as authored ~9–15 months; measuring ~3–6 as of 2026 - see [Game 1](../02-games/1-labs.md) ground note).
 - No binding international agreement before a salient accident; coordination is event-driven; finance/cyber more likely mechanisms than kinetic; **rules ≠ verification** (compute-governance trap). → [Game 2](../02-games/2-nations.md)
 - A shift from generation-scarcity to verification-scarcity across information, credentialing, and media - plus a [welfare channel](../03-domains/cognitive/meaning.md) (identity, companionship) the macro stats miss.
 - Robotics as the swing variable for whether growth rates actually change in the 2030s.

@@ -13,7 +13,7 @@ The policy is subject to everything in [Part I](../../../01-substrate/) - it get
 | Component | Why it binds | Where capacity sits |
 |---|---|---|
 | **Actuators** - harmonic drives, cycloidal reducers, servos | Precision machining at volume; long qualification cycles | Japan historically; China at volume and closing on precision |
-| **Rare-earth magnets** - NdFeB for high torque density | Processing, not ore, is the chokepoint | China, overwhelmingly, at the refining and sintering stage |
+| **Rare-earth magnets** - NdFeB for high torque density | Processing, not ore, is the chokepoint | China, overwhelmingly: ~91% of refined rare-earth output and ~94% of sintered NdFeB magnet production (IEA, 2024 data) |
 | **Battery cells** | Energy density and cycle life gate untethered operation | China, then Korea |
 | **Sensors** - force/torque, tactile, depth | Currently expensive and low-volume; a cost problem, not a capability one | Fragmented |
 | **Assembly** | Thousands of parts, high dexterity, tight tolerances | Wherever electronics assembly already is |

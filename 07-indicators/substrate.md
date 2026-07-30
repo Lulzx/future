@@ -24,7 +24,7 @@ The slow trigger is the more informative one. If frontier spend plateaus while c
 
 | | |
 |---|---|
-| **Baseline** | ~$60B AI revenue run-rate (2025); ~$635–670B hyperscaler capex guided for 2026 |
+| **Baseline** | ~$60B AI revenue run-rate (2025); model-layer leaders alone ~$55B annualized by spring 2026 (Anthropic ~$30B Apr-2026, OpenAI ~$25B Feb-2026, company figures via press); big-four hyperscaler capex guided ~$700–725B for 2026, up ~77% y/y (company guidance, aggregated mid-2026) |
 | **Trajectory assumed** | 45–55% CAGR to $400–700B/yr by 2030 |
 | **Trigger - correction** | Two consecutive years below ~40% CAGR |
 | **Trigger - vindication** | Revenue above ~$200B/yr by 2028 |
@@ -47,13 +47,15 @@ This is the least-watched indicator with the highest information content. **A sp
 
 | | |
 |---|---|
-| **Baseline** | 5–7 yr queues; ~410GW CAISO, ~380GW MISO; 3–4 yrs ERCOT for >75MW |
+| **Baseline** | 5–7 yr queues; ~523GW CAISO active (LBNL Queued Up 2026 edition, Jun-2026); ~380GW MISO; 3–4 yrs ERCOT for >75MW |
 | **Secondary** | Wholesale prices at datacenter-adjacent nodes up ~267%; 30–50% of 2026 capacity slipping to 2028 |
 | **Trigger - loosening** | Any major market halving typical wait, or federal transmission-siting preemption enacted |
 | **Trigger - tightening** | State-level large-load moratoria in two or more of TX, VA, GA, OH |
 | **Revises** | [Energy](../01-substrate/energy.md), [Uncertainty 2](../06-uncertainties/power-permitting.md), [Geopolitics](../03-domains/contested/geopolitics/) |
 
 Track the **behind-the-meter share** alongside the queue. If operators route around the grid faster than the grid reforms, the queue stops being the binding constraint and the political fight relocates from siting to ratepayer allocation. Those are different fights with different timelines.
+
+The queue's composition moved in 2025 in exactly the direction the datacenter story predicts: total active US queue volume fell ~10% y/y while active natural-gas capacity rose ~86% to ~253GW and solar/wind/storage all shrank (LBNL Queued Up 2026 edition, Jun-2026). A shrinking queue is not loosening if the shrinkage is withdrawals; read it with the gas share, which is the firm-power signature of large-load demand.
 
 ## A5 - Accelerator efficiency and depreciation
 
@@ -65,6 +67,8 @@ Track the **behind-the-meter share** alongside the queue. If operators route aro
 | **Revises** | [Capital](../01-substrate/capital.md) - capital intensity of the whole build |
 
 Depreciation-schedule changes are disclosed in filings, arrive before the underlying reality is common knowledge, and are one of the few places where an operator has to state what it actually believes about hardware longevity. The caveat: schedules also move for earnings-management reasons, so a lengthening that coincides with margin pressure elsewhere in the filing is a weaker signal than one that does not.
+
+The indicator has started firing, in both directions at once: Amazon shortened a subset of server and networking life from six to five years effective Jan-2025 (10-K, Feb-2025, ~$0.7B operating-income impact), while Meta extended most of its fleet to ~5.5 years in the same period. Divergence between operators is itself a reading - the uniform six-year consensus of 2023–24 is gone, and whichever schedule the next filing cycle converges toward is the honest one.
 
 ## A6 - Leading-edge capacity outside Taiwan
 

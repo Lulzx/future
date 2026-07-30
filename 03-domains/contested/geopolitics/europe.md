@@ -13,7 +13,7 @@ The mechanism is real and has worked repeatedly: the EU sets a standard, the mar
 **But the mechanism has a precondition that is weakening.** It works when compliance cost is low relative to market access value, and when the regulated product is fungible across jurisdictions. Both are less true for AI than for privacy policies:
 
 - **Frontier models can be geofenced.** Where compliance is expensive, capability arrives late or in degraded form rather than not at all - which shifts the cost onto European users rather than onto the producer.
-- **The [open-weight tier](../../../02-games/1-labs.md) routes around jurisdiction entirely.** A rule that binds three labs and not the weights circulating 9–15 months behind them is a rule on a shrinking share of deployed capability.
+- **The [open-weight tier](../../../02-games/1-labs.md) routes around jurisdiction entirely.** A rule that binds three labs and not the weights circulating ~3–6 months behind them (Epoch AI, 2026) is a rule on a shrinking share of deployed capability.
 
 > **Assessment:** the Brussels effect holds for **deployment and use** - where the regulated party is a European firm with European assets, and enforcement is straightforward - and weakens sharply for **model development**, where the regulated party may have no European presence at all. Expect European AI rules to bind European adopters far more tightly than they bind foreign developers. That is close to the opposite of the intent.
 
