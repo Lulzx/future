@@ -94,7 +94,7 @@ Every content file:
 | 20 | 2026-07-30 | First live Ground pass: [B1](07-indicators/diffusion/labor.md) refreshed to Mar-2026 NY Fed data; PJM +76% y/y added to [energy](01-substrate/energy.md); Intersect $4.75B confirmed. Round log 0–15 archived to [HISTORY.md](HISTORY.md) | 84 | 5,781 |
 | 21 | 2026-07-30 | Spine red-team completed: [Uncertainty 7 - complement erosion](06-uncertainties/complement-erosion.md) gives the spine's second half its adversarial entry (5+7 now cover both halves). Provenance retrofit on [energy](01-substrate/energy.md) per new §4 convention | 85 | 5,840 |
 | 22 | 2026-07-30 | Corpus-wide depth pass: every content file expanded in place (no new files, no splits, no probability changes). Eight parallel batches by part; thin-file debt cleared - every former sub-60 content page now argues its claims or was left tight by the §2 caveat | 85 | 6,640 |
-| 23 | 2026-07-30 | Split `diffusion.md` (169, over soft cap since r17): promoted to [diffusion/](07-indicators/diffusion/README.md) with children [labor](07-indicators/diffusion/labor.md) (B1/B6/B10/B11), [economy](07-indicators/diffusion/economy.md) (B2/B3/B5/B7), [capability](07-indicators/diffusion/capability.md) (B4/B8/B9/B12); ~50 inbound links remapped by indicator label | **88** | **6,701** |
+| 23 | 2026-07-30 | Split `diffusion.md` (169, over soft cap since r17): promoted to [diffusion/](07-indicators/diffusion/README.md) with children [labor](07-indicators/diffusion/labor.md) (B1/B6/B10/B11), [economy](07-indicators/diffusion/economy.md) (B2/B3/B5/B7), [capability](07-indicators/diffusion/capability.md) (B4/B8/B9/B12); ~50 inbound links remapped by indicator label | **88** | **6,703** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -116,7 +116,7 @@ Every content file:
 
 **Round 23:** the seam in `diffusion.md` was the object of measurement, not the indicator format - the twelve B-indicators watch three different things (people and institutions, the firm/statistical ledger, the capability frontier), and the joint-reading patterns that matter (B1×B10×B7, B4 without B12, B5 before B2) now live in the hub, which per §3 keeps the thesis. Children are balanced (57–71 lines) and each ends under the 130 ceiling with room to grow at the next Ground pass. Inbound links were remapped by indicator label (every reference in the corpus names its Bn at point of link, which made the repair mechanical and checkable); historical round-log rows in this file were remapped too, since the checker verifies them.
 
-*Invariants at r23 close: **88 files, 6,701 lines, 0 broken links.***
+*Invariants at r23 close: **88 files, 6,703 lines, 0 broken links.***
 
 **Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
 
