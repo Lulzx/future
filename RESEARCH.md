@@ -95,38 +95,39 @@ Every content file:
 | 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | 78 | 4,573 |
 | 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md); [meaning](03-domains/cognitive/meaning.md); [warfare](03-domains/contested/warfare.md) + [state capacity](03-domains/contested/state-capacity.md) depth | 80 | 4,874 |
 | 11 | 2026-07-30 | Winter archaeology; Game 2 pass; B10 fiscal indicator | 80 | 4,956 |
-| 12 | 2026-07-30 | [Cyber](03-domains/contested/cybersecurity.md)+[bio](03-domains/contested/biosecurity.md) depth; [education](03-domains/cognitive/education.md)×meaning×apprenticeship; Part V commentary hold | **80** | **5084** |
+| 12 | 2026-07-30 | Cyber+bio depth; education×meaning; Part V commentary hold | 80 | 5,084 |
+| 13 | 2026-07-30 | [Law](03-domains/cognitive/law.md)+[finance](03-domains/cognitive/finance.md)+[science](03-domains/cognitive/science.md); [notation](00-overview/notation.md)+[dependencies](00-overview/dependencies.md) | **82** | **5,353** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
 ### Split and revision notes
 
-**Splits:** r2 domains groups; r4 robotics; r6 geopolitics; r8 Part V; r9 medicine.
+**Splits:** r2 domain groups; r4 robotics; r6 geopolitics; r8 Part V; r9 medicine.
 
-**Revisions (rule 5):** r3 Game 3 scope; r7 labor upper bound + RSI governors; r8 Part V numbers; r12 Part V hold with written justification (cyber/bio/Game 2 detail → mechanism not base rate).
+**Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**r5–r11:** macro; demography; timelines+uncertainties; indicators+Games 1/5; energy/meaning/warfare/state; winters+Game2+B10.
+**r5–r12:** macro; demography; timelines+uncertainties; indicators+Games 1/5; energy/meaning/warfare/state; winters+Game2+B10; cyber/bio/education.
 
-**Round 12:** cyber (OT, identity/supply-chain/model layer, insurance as regulator, trough as incident source); bio (chain table, Game 2/state capacity); education bridges Game 5 + apprenticeship + meaning; Part V rows 3–4 commentary only.
+**Round 13:** law (layers, insurance moat, apprenticeship canary); finance (monoculture, capex channel, Game 2); science (automated labs, drug+bio bridges); [notation](00-overview/notation.md) + [dependencies](00-overview/dependencies.md).
 
-*Invariants at r12 close: **80 files, 5084 lines, 0 broken links**. RESEARCH.md protocol-ledger exemption continues.*
+*Invariants at r13 close: **82 files, 5,353 lines, 0 broken links**. RESEARCH.md protocol-ledger exemption continues.*
 
 ## 6. Open queue
 
 **High**
 
-1. **Law** and **finance** depth vs insurance/education after their neighbors thickened.
-2. **Science** × automated labs vs drug discovery / bio defensive manufacturing.
-3. **notation.md** + reverse dependency index if scoring friction rises.
+1. **Media** depth vs Game 5 / meaning / education.
+2. **Software** consistency pass (apprenticeship + outcome pricing).
+3. **Automate invariants** check script (links, caps, parent headers).
 
 **Medium**
-- Energy sector split; automate invariants check script.
-- Companion/meaning indicators into Part VII if welfare claims need quarterly hooks.
+- Energy sector split; meaning indicators in Part VII.
+- Agriculture / logistics if still thin vs medicine/robotics.
 
 **Low**
-- Archive older round prose out of RESEARCH.md.
+- Archive RESEARCH history.
 
-**Retired (r1–r12):** … + cyber/bio depth; education×meaning; Part V r12 commentary hold.
+**Retired (r1–r13):** … + law/finance/science; notation; dependency index.
 
 ## 7. Invariants
 
