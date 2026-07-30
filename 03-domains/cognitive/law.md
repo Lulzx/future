@@ -35,11 +35,19 @@ Same as [medicine](../physical/medicine/): the analytical layer compresses, the 
 
 **Ground truth is cheap on text comparison and expensive on strategy.** That is why the middle hollows first and the partnership layer sells accountability long after associates' hours vanish.
 
+## Second-order: litigation strategy when discovery is cheap
+
+Discovery cost was never only a cost - it was a weapon. A large share of civil settlements are priced off the burden of review, not the merits: the party that can impose a million documents of production on the other side buys leverage, and the party that cannot afford review settles early. Collapse the cost of review and both edges dull at once. Meritless suits that survived on nuisance-value review costs lose their threat; meritorious suits that died because the plaintiff could not afford discovery become viable. The net direction is toward **merits pricing** - settlements tracking expected judgments more closely - which is a welfare gain that appears in no legal-employment statistic and a revenue loss for every practice built on process attrition. The failure mode: if courts respond to cheap review with proportionally vaster production demands (the historical pattern - e-discovery grew the document count faster than it cut per-document cost), the arms race resets at higher volume and the leverage game survives.
+
+The same compression pulls work **in-house.** Corporate legal departments were already the growth side of the profession before models arrived; tools that let a five-lawyer department do what previously required outside counsel accelerate it. Outside firms then face a double squeeze: the automatable work is automated, and the judgment work that remains is increasingly retained by the client. What still flows out is bet-the-company litigation and deals - accountability and insurance again, purchased under a brand.
+
 ## The moat is financial, then institutional
 
 Reread with [insurance](insurance.md): the lawyer's moat is not reading speed - it is that a malpractice policy and a bar card exist for a human and do not yet cover an autonomous system. Underwriting reprices faster than the bar rewrites ethics opinions. → [Uncertainty 6](../../06-uncertainties/correlated-risk.md), [C6](../../07-indicators/governance.md)
 
 Courts and bars can also **mandate** human sign-off (they will, after incidents). That entrenches the accountability layer even when capability would allow more. The reverse - broad unauthorized-practice expansion for AI tools - is the access-to-justice path and is politically contested.
+
+The entrenchment is already case law, not forecast. Mata v. Avianca (S.D.N.Y., 2023) sanctioned lawyers for filing hallucinated citations, and the response across federal and state courts was standing orders requiring certification of AI use - note the form: the fix was not to ban the tool but to **re-attach a human signature to its output.** Rule 11 already made the signing attorney answerable for every filing; the AI orders simply re-announced it. This is the accountability layer defending itself in real time, and it generalizes: every profession with a signature requirement will rediscover its own Rule 11 within one embarrassing incident of adopting generation tools.
 
 ## Apprenticeship and education
 

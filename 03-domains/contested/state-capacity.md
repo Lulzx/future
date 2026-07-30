@@ -91,6 +91,12 @@ The architecture written in the post-incident window will be **written by whoeve
 
 That is not necessarily a bad outcome; industry drafting produced workable regimes in aviation and finance. But it is a **different** outcome from the one implied by "regulation arrives," and it should be predicted explicitly rather than discovered later. **Capture is not a risk to the process; under low state capacity, it is the default shape of the process.**
 
+## The measurement institution needs a pipeline, not a mandate
+
+One refinement on the first section, because "fund a measurement institution" is the sort of recommendation that gets adopted in name. Measurement capability is not primarily people or authority - it is **standing access to the thing being measured**, arriving continuously rather than on request. An inspectorate that can demand documents after an incident is doing forensics; one that receives training-run telemetry, deployment logs, and evaluation results as a matter of routine is doing measurement. The difference is the same one that separates a financial regulator with reporting feeds from one with subpoena power, and the first is what makes the second usable.
+
+That reframes the hard part. The obstacle is not statutory authority, which is comparatively easy to legislate, but the engineering and confidentiality machinery to receive sensitive operational data from competing firms without leaking it or being captured by whoever operates the pipe. The institutions that solved this - clearing-house reporting, aviation safety reporting, and nuclear materials accounting - each took years to build the plumbing and had a scandal in their history that funded it. *Failure mode:* the plumbing is also the capture surface. An agency dependent on a voluntary feed from the entities it regulates has a strong institutional interest in not disrupting the relationship, which is the well-documented failure of every self-reported regime this one would be modeled on.
+
 ## What would change this
 
 - **A well-funded, technically credible measurement institution** - NIST-analogue for capability evaluation, with inspection authority and independent pay scales. Cheap relative to its leverage; currently the biggest gap.

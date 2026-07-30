@@ -40,6 +40,14 @@ Notably, these are all *older* technologies socially. We are heading back toward
 
 **Teaching and drafting get cheaper; assessing and authenticating get more expensive.** Institutions that cannot fund the second stop credentialing meaningfully rather than pay for it. That is the mechanism behind [B6](../07-indicators/diffusion.md) and the quiet hollowing of asynchronous education and hiring filters. → [Education](../03-domains/cognitive/education.md), [Game 4](4-labor.md)
 
+### The evaluator side is a commons too
+
+The signaling story is usually told from the sender's side, but the evaluators are playing their own game and it is a familiar one. Careful verification is costly to the evaluator who performs it and its benefits leak to everyone who relies on the same judgment - other employers trusting a past employer's title, other readers trusting a publication's fact-check, other lenders trusting a rating. Each evaluator's rational move is to free-ride on the presumed diligence of others while quietly cheapening its own checks; the equilibrium is a verification layer that everyone cites and nobody funds. That is why the response to signal collapse is slower than the collapse itself: the senders' equilibrium broke overnight, but rebuilding requires evaluators to *coordinate* on new costly procedures, and coordination among free-riders is the harder problem. Expect verification to be rebuilt first where a single party internalizes the full cost of being wrong - underwriting, security clearance, high-stakes hiring - and last where checking was always subsidized by professional pride.
+
+### Detection loses; attestation is the stable equilibrium
+
+Within the verification response, the two technical strategies are not symmetric. *Detection* (classifying finished content as synthetic) is a move in an adversarial game against generators that improve precisely by minimizing the signal detectors need - the detector's loss function is inside the generator's training loop. Each detector generation is a temporary advantage that its own deployment erodes. *Attestation* (cryptographically binding content to a capture device or identity at creation) does not play that game at all: it makes no claim about content statistics, only about provenance, so generator improvement is irrelevant to it. The prediction: institutions that bet on detection will cycle through tools and quietly abandon them; durable infrastructure converges on attestation plus reputation, which is why [C8](../07-indicators/governance.md) tracks provenance adoption rather than detector accuracy. **Failure mode:** attestation moves the trust problem to key custody and capture-hardware integrity rather than solving it - a compromised attested camera is a *more* convincing forgery than an unattested file, so a high-profile attestation break could discredit the whole channel faster than detection ever discredited itself.
+
 ## The lemons dynamic on the open web
 
 Expect an Akerlof result in open content: as the share of synthetic, unverified material rises, the *average* value of unverified content falls, driving readers to walled gardens with provenance - accelerating enclosure of the open web.
@@ -55,6 +63,10 @@ This is a genuine loss and it is not obviously recoverable. The open web worked 
 The same logic hits companionship and care. A message that *sounds* like care is now free; care that costs time is not. Institutions and people who used linguistic warmth as a proxy for commitment lose the proxy.
 
 The welfare and mental-health channel is developed in [Meaning, work, and relationships](../03-domains/cognitive/meaning.md). The information-economics claim that belongs here: **relationship signals cheapen on the text channel and concentrate on costly channels** (time, presence, shared risk). That is isomorphic to the credential story, applied to attachment rather than hiring.
+
+## The distributional sting: the cheap signals were the democratic ones
+
+The signals that died were disproportionately the ones outsiders could use. A strong cover letter, a polished portfolio, a well-argued cold email - these were precisely the channels through which someone without networks, institutional pedigree, or geographic proximity could demonstrate quality. The replacements - in-person evaluation, institutional vouching, reputation graphs, track records with stakes - all price in proximity and prior access. Verification-scarcity is therefore not distributionally neutral: it shifts screening weight back toward who you know and where you already are, a quiet regression toward the pre-meritocratic filters the cheap signals had partially displaced. **Failure mode:** cheap cryptographic attestation of genuinely earned track records (verifiable credentials with stakes, portable reputation) could rebuild an outsider channel better than the one that died; whether it does is a design question, not a market inevitability, which is exactly why it lands on the *build* list below.
 
 ## Why this is the conclusion of the whole document
 

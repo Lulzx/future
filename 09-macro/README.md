@@ -32,6 +32,24 @@ Three reasons, and each explains a different absence:
 2. **The signs are ambiguous and the mechanisms fight each other.** Higher productivity raises the neutral rate; higher savings from capital-income concentration lowers it; demographics lower it further. Net effect requires argument rather than assertion, so most analysis skips it.
 3. **The timing is off-cycle.** These effects land after the [2028–2032](../04-timelines/2028-2032.md) diffusion window, which is past the horizon most forecasts commit to.
 
+## Which pages are conditional, and on what
+
+The five pages do not share an epistemic status, and reading them as if they did is the main way to misuse this part.
+
+| Page | Conditional on | If the condition fails |
+|---|---|---|
+| [Rates](rates.md) | The productivity step-up landing | Collapses to the demographic baseline - low rates, the 2010s continuing |
+| [Prices](prices.md) | Cognitive deflation being large | The split still occurs, an order of magnitude smaller and politically inert |
+| [Assets](assets.md) | [Game 3](../02-games/3-firms.md)'s complement thesis | Concentration continues on its pre-AI trend |
+| [Fiscal](fiscal.md) | Only partially - demographics drive half of it | The squeeze arrives anyway, roughly a decade slower |
+| [Demography](demography.md) | Nothing | Unchanged - it is the unconditional floor |
+
+The asymmetry is the point: **the strains this part describes mostly happen anyway, on demographic power alone, while the upside scenarios need the technology to deliver.** That makes Part IX less speculative than its conditional framing suggests - it forecasts strain with an AI multiplier attached, not strain that AI invented.
+
+## The three feedback edges
+
+What makes this part structural rather than appended: three of its conclusions feed back into assumptions made earlier in the corpus. [Rates](rates.md) reprices the capex in [Capital](../01-substrate/capital.md) - the financial governor. [Prices](prices.md) supplies the political fuel that [C5](../07-indicators/governance.md) tracks, which is the channel through which macro discomfort becomes regulation years before any capability rule does. And [Fiscal](fiscal.md) sets the budget inside which every state response in [State capacity](../03-domains/contested/state-capacity.md) has to operate. A reader who skips Part IX will find the rest of the document quietly assuming things this part is responsible for defending.
+
 ## What this part is not
 
 **It is not a market forecast**, and nothing here should be read as one - but note that one page in it, [demography](demography.md), is the opposite of conditional. It is the most certain thing in the entire corpus, and it argues that the labor conclusions elsewhere are too pessimistic in aggregate while leaving the compositional ones intact.

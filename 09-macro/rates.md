@@ -55,6 +55,14 @@ Two consequences worth stating separately:
 
 **That is the most useful thing in this section.** The recursive-acceleration debate is conducted almost entirely in technical terms, and there is a financial governor on it that operates regardless of how the technical question resolves.
 
+## The bypass: who is marginal to the financing
+
+The governor binds only where financing is marginal, and much of the current build is not. Capex funded from hyperscaler operating cash flow does not reprice when yields rise - there is no marginal lender positioned to say no. So the loop as drawn has a bypass, and [A3](../07-indicators/substrate.md), the financing mix, is what reports whether it is open: **the more the build migrates toward debt, SPVs, and vendor financing, the more the financial governor engages.** The corollary cuts against the stability claim above. The governor is weakest early, exactly when the largest commitments are made from cash, and engages only after the capital structure has already leveraged - a stabilizer that arrives late stabilizes the next cycle, not this one. The claim survives in weakened form: the loop still bounds the *out-years*, where every projection assumes external capital, even if it cannot touch the front-loaded spend.
+
+## Telling the forces apart ex post
+
+The four forces predict different co-movements, which is what keeps this empirical rather than doctrinal. Real yields rising *with* measured productivity and broad-based investment is the step-up - the loop engaging as described. Real yields rising with flat TFP and widening sovereign spreads is fiscal supply and term premium - [Fiscal](fiscal.md)'s story, and no vindication for the technology at all. Real yields falling despite visible AI deployment is demographics and concentration winning - the central case here. The discipline is to refuse the composite: "rates went up" confirms nothing until decomposed, most commentary will not decompose it, and the [scoring](../08-method/scoring.md) rule about right-for-the-wrong-reason exists for exactly this trap.
+
 ## Equity: the duration problem
 
 Most of the AI trade's value sits in terminal-value assumptions - cash flows far in the future. Long-duration equity is the most rate-sensitive asset class there is.

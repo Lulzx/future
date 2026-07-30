@@ -23,6 +23,8 @@ Expect **mass-precision to dominate exquisite-platform doctrine**, and defense b
 
 Industrial bases that can produce **attritable mass** (airframes, motors, warheads, radios) gain relative to those optimized only for exquisite platforms. That industrial question couples to [robotics supply chain](../physical/robotics/supply-chain.md) and to [geopolitics](geopolitics/) - manufacturing depth is strategy.
 
+The sharper form of the industrial claim is **magazine depth**. An exchange ratio only matters if you can keep making the exchange, and a doctrine built on accepting loss rates is a doctrine that consumes inventory continuously rather than in a short opening campaign. Every recent conflict has ended up as a production race whose binding constraints were unglamorous: energetics, solid rocket motors, machine tools, and the specific chips inside seekers. **None of those are relieved by better models, and all of them take years of capital investment to expand**, which means the industrial adjustment lags the doctrinal one by most of a decade even where the doctrinal argument is already accepted. The country that wins the arithmetic on paper and cannot sustain the resupply has bought the analysis without the capability.
+
 ## The crisis-stability problem
 
 The more serious issue is not cost. It is time.
@@ -37,6 +39,16 @@ Layers of the problem:
 4. **Nuclear C2 adjacency** - even when AI is kept off the release trigger, it enters warning, targeting support, and conventional operations that change nuclear thresholds
 
 This is not a claim that "killer robots cause nuclear war." It is a claim that **the error-correction mechanism that made the nuclear age survivable was time**, and autonomy spends that budget.
+
+## The human comes out of the loop for physical reasons, not doctrinal ones
+
+The debate over autonomy is usually conducted as though keeping a human in the loop were a policy choice that militaries could simply make. The contested-spectrum argument says otherwise, and it is the most important thing on this page.
+
+**A remotely operated system requires a working radio link, and the link is the first thing an opponent attacks.** Jamming, spoofing, and directional denial are cheap, mature, and improving, and they degrade exactly the control channel that human supervision depends on. In a heavily contested electromagnetic environment the choice is not between an autonomous system and a supervised one; it is between an autonomous system and one that does not function. Autonomy is therefore not a preference that norms can talk militaries out of - **it is the countermeasure to the countermeasure**, and its adoption rate is set by adversary electronic-warfare capability rather than by anyone's ethics review.
+
+This has an uncomfortable consequence for the mitigations usually proposed. Mandatory human latency and geo-fenced autonomy are coherent for the side that is not currently being jammed, which means they are coherent in peacetime and degrade precisely when they matter. Any regime that survives contact has to be designed for the case where the link is gone by assumption, which pushes the control point away from real-time supervision and toward what can be constrained *before* launch: engagement envelopes, target-class restrictions, geographic and temporal bounds, and self-deactivation defaults. Those are auditable in a way that "a human approved it" is not, since the approval is unobservable after the fact and the envelope is a property of the system.
+
+*Failure mode:* if link resilience improves faster than denial - mesh relays, optical and low-probability-of-intercept links, autonomous relay aircraft - then supervised operation survives in contested space and the physical necessity argument weakens into a cost argument. Watch whether procurement funds communications resilience or on-board autonomy when it has to choose; the budget reveals which side of this the operators believe.
 
 ## Offense–defense balance by layer
 

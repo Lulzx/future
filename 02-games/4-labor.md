@@ -42,6 +42,16 @@ Firms rationally cut junior hiring. Each firm's decision is individually correct
 
 This is a textbook commons tragedy in human capital formation. It is already visible in law, consulting, and software hiring data. And essentially no institution is set up to internalize it - the firm that trains juniors pays the full cost and captures a fraction of the benefit, which is the exact structure that guarantees undersupply.
 
+The mechanism is worth stating in Becker's terms, because it explains why the problem got *worse* rather than merely arriving. Firms rationally fund *specific* human capital (useful mainly to them) and underfund *general* human capital (portable to competitors). Junior knowledge work used to bundle the two: the memo drafted for this client taught skills portable everywhere, and the firm paid for the bundle because it needed the memo. AI unbundles it - the firm can now get the memo without buying the training that rode along with it. The training was never the product; it was a positive externality of inefficient production, and efficiency destroyed it. That framing also says what a fix must look like: some institution has to buy the training *as training*, the way German-style apprenticeship systems, teaching hospitals, and military pipelines do - cost-sharing arrangements built precisely because on-the-job spillover cannot be trusted to survive cost pressure.
+
+### The cobweb problem: the price signal arrives too late
+
+Markets do contain a self-correction: if seniors become scarce in the 2030s, the senior wage premium rises, which raises the return to becoming one. But the production lag for a senior professional is on the order of a decade, so the market response has classic cobweb dynamics - today's hiring decisions respond to today's junior glut, the shortage price signal arrives around the time the missing cohort should already have been trained, and the correction overshoots into whatever the 2030s equilibrium is. Cohorts are not inventory; you cannot backfill 2028's missing associates in 2035. The prediction that follows, checkable by the early 2030s:
+
+> **Senior-to-junior wage ratios in the exposed professions widen through the early 2030s**, and firms respond less by reviving junior hiring than by compressing the seniority ladder - using AI plus a thinner layer of seniors, redefining "senior" downward, and poaching rather than training.
+
+**Failure mode:** if AI closes the junior-to-senior gap faster than it eliminated junior work - juniors with AI performing at prior mid-levels, the [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) resolution - the cobweb never forms because the production lag itself collapsed. That is the strongest version of the counterargument, and it turns on whether judgment is learned by doing the automatable work or can be learned by supervising it.
+
 > **Watch this indicator above all others:** the ratio of entry-level to senior postings in knowledge professions. It is the leading edge of everything.
 
 → The case that this resolves rather than compounds is in [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md).

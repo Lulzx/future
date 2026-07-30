@@ -32,6 +32,10 @@ These are not the same problem. Treating them as "AI anxiety" muddies policy and
 
 Policy that only offers retraining vouchers addresses the task channel and misses the identity channel. Policy that only offers UBI addresses income and misses status. Neither is an argument against either tool; it is an argument that **the objective function is multi-dimensional** and the corpus's labor pages only score one dimension.
 
+### Status is positional, which is why abundance does not fix it
+
+The deep reason the dignity channel resists economic remedy: income is absolute, status is relative. AI can inflate the supply of goods, services, and even competence, but it cannot inflate the supply of *rank* - there is a fixed amount of being-above-median, and no productivity gain changes that. What technology can do is **reallocate which ladder counts.** Industrialization demoted craft rank and promoted managerial and credentialed rank over about two generations; the transition cohort, whose ladder was demoted mid-climb, bore the cost, and its politics were the politics of that cohort. The corpus's version: cognitive-credential rank is the ladder being demoted now, and the candidate successor ladders (care, trades, ownership of scarce complements, live presence) are currently *lower-status* than what they replace for exactly the people most exposed. Whether societies actively re-grant prestige to the complement occupations - through pay, portrayal, and institutional honor - is a policy variable hiding inside a cultural one, and it is the strongest lever on how bad the transition decade feels. Failure mode: if status reallocates as fast as it did to "tech" after 2000 (one decade, not two), this page overweights the transition cost.
+
 ## 2. Synthetic companionship - cheap signal, costly care
 
 [Game 5](../../02-games/5-information.md): AI collapses the cost of producing the *signal* of care without collapsing the cost of care. Companionship products optimize for engagement and retention - the same objective that already distorted social media, with a higher-bandwidth parasocial loop.

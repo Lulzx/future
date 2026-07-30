@@ -33,6 +33,10 @@ Expect:
 
 Surplus accrues to whoever owns the scarce complements: interconnection rights, generation, and balancing capability - not to the software vendor in competitive markets. → [Game 3](../../02-games/3-firms.md)
 
+The one place this layer could produce something other than a quiet efficiency gain is **flexible demand**, and it is underrated because it is boring. A grid's cost is set by its peak, and large AI training loads are among the few multi-hundred-megawatt consumers that are genuinely interruptible on the timescales that matter, since a checkpointed training run can pause in a way a smelter or a hospital cannot. Load that can be curtailed on price is worth vastly more to a system operator than load that cannot, and it converts the datacenter from purely a problem into partly a balancing resource. The obstacle is commercial rather than technical: interruptibility has to be contracted and priced, and the tenant's economics reward utilization above almost everything else. Inference load, which is user-facing and latency-bound, is not flexible in this way at all, so the flexible share falls as the mix shifts from training to serving. → [Inference economics](../../01-substrate/inference-economics.md)
+
+**Failure mode for the quiet-win claim:** operations gains are measured against a counterfactual nobody observes. A grid that avoided an outage produces no evidence, so this layer's value is systematically under-recorded, and the same opacity makes vendor claims here unusually hard to audit. Treat operational AI as high-confidence in direction and low-confidence in magnitude.
+
 ## Layer 2 - Planning hits the institutional wall
 
 Interconnection queues and transmission siting are not compute problems. They are **study processes, stakeholder processes, and legal processes**. AI can draft studies, screen contingencies, and propose topologies faster. It cannot hold a county hearing or rewrite NEPA.
@@ -40,6 +44,8 @@ Interconnection queues and transmission siting are not compute problems. They ar
 So planning software compresses the *analysis* inside a timeline set by [state capacity](../contested/state-capacity.md) and [Uncertainty 2](../../06-uncertainties/power-permitting.md). The highest-leverage loop in the corpus still holds: **using AI to clear permitting backlogs relieves the energy constraint on AI itself.** That is administrative, not algorithmic.
 
 Hyperscalers becoming power companies ([Part I](../../01-substrate/energy.md)) is the private workaround: leave the queue, own the generation. Utilities and ISOs that adopt the same tools without ownership still face the political allocation of who pays for upgrades.
+
+That workaround has a political cost that is accruing quietly. Behind-the-meter generation lets the largest new loads exit the queue and the cost-allocation fight at the same time, which leaves the residual grid's fixed costs spread over a customer base that no longer includes the fastest-growing consumer of power. Ratepayers see bills rise while the visible cause of the growth is not on their side of the meter, and that is a durable political grievance rather than a transient one. The corpus expects the response to arrive as cost-allocation rulemaking and special tariff classes for large loads rather than as a ban on datacenters, and the leading signal is regulatory proceedings on who pays for interconnection upgrades, not headlines about moratoria. **Where the politics land determines whether the private workaround stays available**, which makes it a constraint on [Part I's](../../01-substrate/energy.md) capacity story rather than a solution to it.
 
 ## Layer 3 - Exploration and physical plant
 

@@ -22,6 +22,8 @@
 
 Watch for **near-misses**, which are more informative than the eventual hit and arrive earlier: cyber intrusions with autonomous lateral movement, biological synthesis screening failures, flash dislocations traced to correlated model-driven positioning. A near-miss that gets publicly attributed is a small version of the forcing event and produces a small version of the regulatory response.
 
+One distortion to guard against: **attribution is itself contested terrain.** Whether an event counts as "AI-attributed" is decided politically after the fact, by actors with positions to defend - which means C1 can fire late (a genuine AI incident laundered into operator error) or early (an ordinary failure branded as AI to serve a regulatory agenda). The indicator tracks the public attribution, because that is what opens the legislative window; the analyst should separately track whether the attribution was earned, because that determines whether the resulting architecture addresses a real mechanism.
+
 ## C2 - Shelf-readiness of the response
 
 | | |

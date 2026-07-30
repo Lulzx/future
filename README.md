@@ -8,6 +8,8 @@ Built from physical constraints upward, then the strategic games that sit on top
 
 The argument has one spine: **capability grows fastest where verification is cheap, and value accrues to whatever intelligence cannot manufacture.** Everything below is a consequence of those two sentences colliding with physics, capital, and incentives.
 
+Three design choices distinguish this from most AI forecasting, and each is load-bearing. First, it is built **bottom-up from constraints** rather than top-down from capabilities: instead of asking "what will models be able to do," it asks what the four physical inputs permit, and lets capability fall out as a residual. Constraint-first reasoning is harder to bend toward a preferred conclusion, because queues, order books, and capex guidance are checkable in a way that vibes about model quality are not. Second, every major claim is paired with **a way to catch it failing** - a falsifier in [Part VI](06-uncertainties/), an indicator in [Part VII](07-indicators/), or a scored probability in [Part V](05-probabilities/). A forecast that cannot be caught failing is marketing. Third, it is **one argument, not a scenario fan**: rather than hedging across futures, it commits to a single causal chain and then attacks that chain in the open ([steelman](08-method/steelman.md), [uncertainties](06-uncertainties/)). The cost of that choice is brittleness where the chain is wrong; the [dependency index](00-overview/dependencies.md) exists so that a break propagates honestly instead of being patched leaf by leaf.
+
 ---
 
 ## Contents

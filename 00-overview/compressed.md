@@ -18,6 +18,8 @@ Concretely, that means:
 
 These are the load-bearing complements to cheap cognition, and they are undersupplied for the same reason safety is - each is a public good with private cost, so the market will build them late, and the first one to build them well will own a great deal.
 
+If the paragraph above is wrong, it is most likely wrong in one of two ways: verification itself gets automated, so it never becomes the scarce good ([Uncertainty 5](../06-uncertainties/learned-verification.md)); or the list of things intelligence cannot manufacture shrinks faster than the decade this advice assumes ([Uncertainty 7](../06-uncertainties/complement-erosion.md)). Watch those two pages; the rest of the corpus is elaboration.
+
 ---
 
 **See also:** [Game 5](../02-games/5-information.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Notation](notation.md) · [Dependencies](dependencies.md)

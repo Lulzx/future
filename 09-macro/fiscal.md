@@ -20,6 +20,12 @@ Three pressures, all arriving in the same window and all pointing the same way:
 
 **3. Demographics are already doing this independently.** Ageing populations shrink the working-age tax base and expand pension and healthcare obligations regardless of AI. **AI does not create this problem; it arrives on top of it, and the two compound.** Most fiscal projections for the 2030s already show strain before any AI assumption is added.
 
+## How the squeeze claim could be wrong
+
+The squeeze is a story about shares, and governments budget in levels. If AI raises total income enough, labor's *share* of the tax base can fall while labor-tax *receipts* still grow in absolute terms - in which case treasuries feel nothing on the horizon that matters politically, and the adaptation this page predicts gets deferred a decade. That is the main way to be wrong here, and it is the benign way: the problem would still be real, just slower than the transfer demand it races against.
+
+The second failure mode is compositional. The squeeze assumes displaced cognitive labor income is not replaced by other taxable labor income. If [Game 4](../02-games/4-labor.md)'s reallocation toward care and trades runs faster than its displacement - and [demography](demography.md) gives reasons it might - the labor base rotates rather than shrinks, and payroll receipts hold up even as their occupational composition transforms underneath. **Watch receipts by income type, not employment counts:** [B10](../07-indicators/diffusion.md) is defined on the revenue side for exactly this reason.
+
 ## The intersection with rates
 
 [Rates](rates.md) argued that a productivity step-up raises the real neutral rate. Apply that to a large stock of public debt and the interest burden rises with it.
@@ -29,6 +35,10 @@ This produces a genuinely awkward configuration:
 > **The scenario where AI works best for growth is also the scenario where debt service costs most.** Higher productivity means higher rates means higher interest expense on existing debt, and the growth dividend has to exceed that before it is fiscally net positive.
 
 It usually does - growth raises the denominator faster than rates raise the numerator, for plausible parameters. But **the timing is wrong**: rates reprice immediately and the growth dividend arrives over a decade. The interval in between is fiscally uncomfortable, and it coincides with peak demand for transition support.
+
+## The level-of-government asymmetry
+
+The squeeze is not uniform across the state. Central governments collect from labor and capital income and carry the transfer obligations - they get the worst of both sides. But **local governments in most federal systems collect from property, and property sits on the winning side of [Assets](assets.md):** land appreciation fattens the property-tax base exactly as the income-tax base thins. The plausible result is a decade in which municipalities hosting datacenters and appreciating land are flush while national treasuries strain - an inversion of the usual fiscal-federalism pattern, and one that shapes where infrastructure gets welcomed. The datacenter-siting politics in [Energy](../01-substrate/energy.md) are partly this: the level of government granting the permit is the level capturing the tax, while the level bearing the transfer burden has no seat at the siting table.
 
 ## What actually gets proposed, and what actually happens
 

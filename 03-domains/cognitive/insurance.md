@@ -24,6 +24,8 @@ The mechanism: a firm deploying an autonomous system needs coverage. The insurer
 
 This is [Game 1](../../02-games/1-labs.md)'s liability argument made concrete. It is the fastest-acting governance mechanism available, and it requires no political consensus at all.
 
+There is deep precedent for underwriters governing a technology before the state does. Nineteenth-century steam boilers were made safe by insurer inspection regimes - Hartford Steam Boiler wrote the standards and inspected the machines because it paid when they exploded - decades before equivalent public codes. Underwriters Laboratories exists because fire insurers needed electrical products tested before anyone else cared. In both cases the sequence was the same one predicted here: insurers built the measurement apparatus, priced compliance into premiums, and the eventual regulation largely codified the insurers' standards. The AI-era analogue is already visible in embryo: underwriters demanding logging, human checkpoints, and vendor indemnities as conditions of coverage are writing the de facto deployment code. The failure mode of the analogy: boilers fail independently; AI fails correlated (below), and the precedent regime never had to survive its whole book blowing up at once.
+
 > **Prediction:** by 2030, **~70%** likely that AI-specific liability coverage exists as a distinct, material line of business with published rate structures. The rate table for it will be a better guide to real-world AI risk than any benchmark or safety evaluation.
 
 ### What insurers will and won't cover
@@ -37,6 +39,8 @@ The refusals are more informative than the coverage:
 | Discrete operational failures with clear causation | Anything where the model provider won't indemnify |
 
 **The exclusions define the deployment frontier.** Where AI is uninsurable, it does not get deployed by any organization with a board, regardless of capability. This is a much harder constraint than regulation, arrives earlier, and is set by people with money at stake rather than by people with positions to defend.
+
+A quieter problem arrives at the claims desk: **causation.** Adjudicating a claim requires a proximate cause, and an agentic failure chain - user instruction, deployer configuration, model behavior, tool output, another firm's agent replying - blurs it across parties and policies. Expect the real doctrinal fights of the late 2020s to be contract-wording fights: what counts as "human in the loop," where the vendor's indemnity ends and the deployer's E&O begins, whether an agent's action was an "occurrence" under a policy drafted for human employees. Subrogation between insurers, not tort suits by victims, is where AI causation law will quietly get made first - it is the same historical path products-liability doctrine took, one insurer suing another until the allocation stabilized into standard wording.
 
 ## The correlation problem is the real one
 
@@ -54,6 +58,8 @@ The consequences follow directly:
 - **Reinsurance becomes the binding layer**, which means a handful of reinsurers effectively set the deployment ceiling for the entire economy
 - **A state backstop becomes the standing proposal** - the terrorism-reinsurance template - and gets legislated in the [18-month window](../../02-games/2-nations.md) after the first correlated event, not before
 
+The capacity cycle has a known shape worth importing. After Hurricane Andrew (1992) bankrupted a dozen Florida insurers, private capacity did not reprice smoothly - it withdrew, and the state residual market became the insurer of last resort for decades. Cyber ran a compressed version after the 2019 to 2021 ransomware loss years: premiums roughly doubled, sublimits and coinsurance appeared, and war exclusions were rewritten mid-market. Expect AI liability to follow the compressed cyber path, not the smooth one: a soft market of cheap, broad early coverage written on no loss history, then one correlated event, then a hard market whose exclusions - not whose prices - are what actually bind deployment. The practical corollary for reading this corpus: the *first* generation of AI policies is weak evidence about insurability, because it is priced on competition for premium, not on experience.
+
 ## The second-order effect on every other domain
 
 If AI liability is expensive to insure, the **inelastic complement in most of [Part III](../README.md) is not expertise - it is the balance sheet capable of absorbing the residual risk.**
@@ -66,6 +72,7 @@ Reread the domain pages with that substitution. The radiologist's moat is not di
 
 - **Model providers indemnifying broadly.** If frontier labs take on customer liability at scale, they absorb the risk internally and the insurance channel never becomes the binding constraint. Watch the indemnification terms in enterprise contracts - they are published, and they are a direct read on how much the providers believe their own reliability claims.
 - **Correlation proving overstated.** If deployments turn out to be diverse enough - different models, different scaffolds, different failure modes - the systemic argument weakens considerably and capacity arrives sooner.
+- **Self-insurance routing around the market.** Large deployers can carry AI risk in captives and never buy the coverage, in which case the published rate table this page leans on stays thin and uninformative - the pricing still happens, but privately, and the governance channel loses its public signal even while it binds internally.
 
 ---
 

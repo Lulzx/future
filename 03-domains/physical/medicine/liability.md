@@ -24,6 +24,10 @@ Capability attacks none of these directly. A model that outperforms a median phy
 
 That reframes the human moat from a capability claim into a balance-sheet claim. Balance sheets reprice faster than residencies train. A single underwriting shift or a precedent-setting judgment can move the [diagnostics](diagnostics.md) employment story more than another generation of model quality.
 
+The reason no carrier writes autonomous clinical risk today is not squeamishness; it is that the risk has the wrong statistical shape for the existing product. Malpractice works as a line of business because physician errors are close to independent: one clinician's bad day does not correlate with another's, so a book of thousands of policies diversifies. A deployed model does not have bad days independently. Every instance shares weights, prompts, and update schedule, so a systematic failure is one event affecting the entire book simultaneously. That converts a diversifiable risk into something closer to catastrophe cover, which requires reinsurance capacity, aggregate limits, and a loss history that does not exist. → [Uncertainty 6](../../../06-uncertainties/correlated-risk.md)
+
+This matters for forecasting because it says what the unlock looks like. It is not a carrier becoming braver. It is either a vendor with a balance sheet large enough to self-insure and a commercial reason to do it, or a statutory cap that bounds aggregate exposure, or enough deployment history for the tail to be priced. The first is available today to a handful of firms and is the path to watch. **A model provider offering indemnity is a stronger signal than any benchmark result**, because it means someone with full access to the failure data is willing to bet capital on the failure rate.
+
 > **Watch [C6](../../../07-indicators/governance.md):** a judgment or statute assigning liability for autonomous clinical harm. Provider-side liability collapses the moat in high-volume domains; professional-side liability entrenches it for a decade.
 
 ## Reimbursement is the other gate
@@ -31,6 +35,10 @@ That reframes the human moat from a capability claim into a balance-sheet claim.
 Even when a tool is accurate and a human will sign, **payment rules** decide deployment. Codes, prior auth, and site-of-service differentials determine whether the hospital buys the system or shelves the pilot.
 
 AI that reduces cost but also reduces billable RVUs faces a perverse incentive inside fee-for-service. AI that increases throughput under a fixed professional fee is adopted as speed-up. The same model meets opposite fates under different payment regimes - which is why deployment maps to payer policy more than to leaderboard rank.
+
+The clean prediction from this is that **capitated and salaried systems adopt clinical AI years ahead of fee-for-service ones**, because in a capitated system avoided care is retained revenue and in a fee-for-service system it is forgone revenue. The same is true across borders: national systems with global budgets have the incentive structure that fee-for-service markets lack, and are held back instead by procurement capacity and IT estate rather than by economics. This gives a testable ordering that has nothing to do with which country has the better models, and it predicts that the earliest large-scale clinical deployments look institutionally boring rather than technologically impressive.
+
+The failure mode for the reimbursement claim is that payment codes are not fixed. If a dedicated payment category for autonomous interpretation is established at a price above its delivered cost, the perverse incentive inverts overnight and adoption becomes a margin opportunity rather than a margin threat. Autonomous diabetic retinopathy screening is the existing template for how such a code gets created, and the question is only how far the template generalizes.
 
 ## Why this is not permanent safety
 

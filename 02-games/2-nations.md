@@ -14,6 +14,10 @@ Standard arms-race logic says: race. But AI differs from nuclear weapons in thre
 
 - **No verification regime.** Training runs are not detectable like enrichment cascades. Any treaty faces a verification problem nobody has solved. Compute governance - tracking accelerators - is the only technically plausible lever, and it degrades as efficiency improves and as inference-heavy approaches substitute for training-heavy ones. The lever weakens exactly as the stakes rise.
 
+## Why the nuclear analogy fails at the deterrence layer too
+
+The three differences above break arms *control*; a fourth breaks arms-race *stability*. Nuclear bipolarity stabilized because both sides could count the other's arsenal well enough, second-strike capability made first moves suicidal, and the escalation ladder was legible. AI has none of these: capability is opaque even to its owner until evaluation, nobody knows whether a lead confers a decisive first-mover advantage or a temporary commercial one, and there is no shared ladder. Under opacity, each side's rational move is to plan against the *worst-case estimate* of the rival's covert progress - so both race harder than either's true position warrants. Secrecy is itself the destabilizer: credibly demonstrating restraint would require exactly the transparency into training runs that neither security establishment will grant, so even two genuinely restrained rivals cannot communicate restraint. This is a spiral model, not a deterrence model, and it runs on beliefs rather than capabilities - which means capability plateaus do not automatically cool it. **Failure mode:** if evaluation regimes mature to where capability can be credibly demonstrated without disclosure (structured evals, third-party attestation), the opacity spiral weakens and this paragraph overstates the instability.
+
 ## Consequence
 
 > **No meaningful binding international agreement before a salient accident.**
@@ -72,6 +76,10 @@ Open weights and distillation mean post-incident rules in one bloc do not contai
 - **Not** what would require global verification of training
 
 That reinforces low odds on [Part V](../05-probabilities/) row 4 and high importance of [insurance](../03-domains/cognitive/insurance.md) and domestic administrative law.
+
+## Middle powers are rule-takers with an arbitrage option
+
+Game 2 is usually told as a dyad, but most states are neither contestant nor bystander: they are venues. The [Gulf](../03-domains/contested/geopolitics/gulf.md) sells energy and capital to both blocs; [India](../03-domains/contested/geopolitics/india.md) sells talent and a market; small jurisdictions sell regulatory permissiveness the way flags of convenience sold it to shipping. The structural consequence: any bloc-level rule strict enough to bind creates an immediate arbitrage rent for whichever middle power declines to adopt it, and middle powers face weak incentives to decline that rent. Post-incident architectures will therefore bind capital-intensive, immobile layers (frontier training, grid interconnection) far better than mobile ones (deployment, fine-tuning, talent) - a second, independent reason the enforceable residue is local rather than global.
 
 ## Failure modes for Game 2
 

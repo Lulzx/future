@@ -26,6 +26,16 @@ Uncertainties 1–3 and 4 mis-set parameters or scenarios. **This one, if resolv
 
 **This is not resolved.** Round 8 does not resolve it. It only promotes it to the register so it is tracked with a leading indicator rather than re-discovered every steelman pass.
 
+## The middle case the binary framing hides
+
+The page as originally written offered two outcomes: the asymmetry holds, or it dissolves. The more likely resolution is tiered. Verification is not one skill - checking *process* (was the reasoning well-formed, were the steps standard) is easier to learn than checking *outcome truth* in domains where feedback arrives in years (did the strategy work, was the diagnosis right for the rare case, was the research direction fertile). Learned verifiers plausibly master the first tier well before the second, because the first tier has abundant training signal and the second is starved by construction - the slow feedback that made human verification expensive also makes verifier training data scarce. If that is how it resolves, the domain ordering does not dissolve; it *bends* - process-heavy professions (compliance, documentation-driven law, protocolized medicine) move much faster than the corpus expects while taste-and-direction work stays ordered as mapped. That is a re-scoring event for half of [Part III](../03-domains/), not a framework falsification, and the corpus currently has no row for it.
+
+**Why "approximately right until 2029" is the specific failure shape:** learned verifiers improve on the tier with data first, so early-window observations confirm the ordering even while the mechanism that will break it is compounding out of sight. The corpus would pass its own indicator checks right up until the second tier cracks. The defense against being fooled is to weight the *gap trend* between verifiable and unverifiable domains, not the level - the level will look reassuring for years either way.
+
+## The institutional cushion
+
+Even a full technical win does not immediately dissolve the ordering, because verification cost is priced into institutions, not just training runs. Liability rules, professional licensure, and [insurance exclusions](correlated-risk.md) all assume a human checker; a learned verifier that works must still be *accepted* by courts, regulators, and underwriters before deployment reorders. That lag is real but it is a cushion, not a wall - it converts "the ordering dissolves" into "the ordering survives as institutional fact for some years after failing as technical fact," which changes the timeline of being wrong without changing the fact of it. A corpus that leaned on this cushion as its main defense would be conceding the framework and defending the dates.
+
 ## Relationship to Uncertainty 1
 
 [RSI](recursive-self-improvement.md) is about whether research *throughput* compounds. This uncertainty is about whether the *ordering principle* survives. They interact: a closed research loop with cheap learned verifiers is the nightmare case for continuity assumptions; a closed loop still bound by expensive verification is a productivity multiplier (Uncertainty 1's technical governor). Keeping them separate prevents conflating "faster" with "the map was wrong."

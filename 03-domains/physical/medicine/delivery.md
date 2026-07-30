@@ -20,6 +20,10 @@ This routes *around* the formal system faster than it changes it - the same patt
 
 The consumer path wins on information. The formal path keeps a monopoly on **action** - prescriptions, admissions, procedures, sick notes, insurance authorization. That split is stable until one of three things moves: regulation opens prescribing channels, liability attaches to consumer tools, or the formal system prices itself out of routine care entirely.
 
+The comparison in that table is also unfair to the formal path in a way worth stating, because it is the strongest argument against the consumer story. "Better than the median GP visit for informational purposes" holds when the input is a well-described complaint from an articulate patient. It degrades sharply when the clinically important signal is something the patient did not think to mention, could not describe, or is actively wrong about: the gait, the smell, the affect, the abdomen that is rigid, the story that does not fit. A physician's advantage is not only the exam but the fact that the exam is unprompted, and the consumer path samples only what the user chose to type. **The consumer tool is superior on the average presentation and structurally blind on the presentations that kill people**, which is precisely the distribution where the formal system earns its cost.
+
+That asymmetry is why the two systems have not merged and probably will not on the current path. The consumer layer is good at the frequent and cheap; the formal layer exists for the rare and expensive; and the interface between them - deciding which case is which - is the actual clinical skill and the part neither side has automated.
+
 ## The friction is the politics
 
 The gap between what a motivated patient can know and what the system will act on becomes a significant source of friction and political pressure.
@@ -46,6 +50,8 @@ Adding intelligence to scheduling, documentation, prior auth, and coding compres
 [Demography](../../../09-macro/demography.md) makes delivery *worse* as a labor problem: elder-care demand rises, care-worker supply falls, and robotics reaches unstructured care last. AI triage and monitoring can stretch licensed capacity; they cannot turn a missing nurse into a present one.
 
 The acute 2030s shortage is care and skilled clinical support, not diagnostic radiologists. Consumer AI that reduces unnecessary visits helps the queue; consumer AI that increases demand for reassurance visits hurts it. Net effect is an empirical question worth tracking, not a settled claim.
+
+The direction is not obvious, and the historical base rate points the wrong way for the optimistic case. Every prior improvement in patient-side medical information - the pamphlet, the helpline, the search engine, the wearable - increased contact with the system rather than reducing it, because information about a symptom generates worry more reliably than it generates reassurance, and because a tool that recommends escalation on ambiguity is the only kind that survives its own liability review. A triage system that is tuned to avoid missing anything will, mechanically, send more people in. **The tuning parameter is set by whoever bears the cost of a miss, and in the consumer path that is nobody**, which biases every deployed system toward over-referral into a system that is already capacity-constrained. This is the strongest reason to expect the net effect on queues to be negative before it is positive, and it reverses only if payers gain enough control over the triage layer to set that parameter themselves.
 
 ## Failure modes
 

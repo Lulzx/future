@@ -27,6 +27,10 @@ The constraint is no longer ideas. It is the rate at which reality can be asked 
 
 This is the highest-leverage under-invested area in the entire landscape. It converts an expensive verification signal into a cheap one, which - per [Part I](../../01-substrate/data.md) - is precisely the move that unlocks capability growth in a domain. It is also unglamorous, capital-intensive, and physical, which is why it is underfunded relative to model work.
 
+### Selection becomes the scarce skill
+
+When hypotheses were expensive, generating a good one was the mark of a scientist. When they are nearly free, the binding skill inverts: **deciding which of ten thousand plausible hypotheses deserves one of your finite lab-months.** That is portfolio allocation under deep uncertainty - expected information gain per dollar of experiment - and it is trained by exactly the slow bench experience that automation displaces, the same apprenticeship loop as [software](software.md) review. Two consequences. First, groups with instrumented feedback on their own selection quality (did our chosen experiments outperform the ones we skipped?) will compound advantage the way test-covered codebases do; almost no lab currently measures this. Second, cheap hypothesis generation *raises* the value of negative results and shared failure data, because the cost of everyone independently testing the same seductive wrong idea scales with the generation rate. The current publication system discards negative results almost perfectly, which means the waste scales with model capability until the incentive is fixed. Failure mode: if learned selection models beat human taste at ranking experiments (a narrower, more checkable claim than general verification), the inversion favors whoever has the historical outcomes data, and incumbent pharma screening archives become one of the quietly valuable datasets on earth.
+
 ## Automated labs: what they buy
 
 | Capability | Effect | Still binds |

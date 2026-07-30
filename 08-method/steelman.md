@@ -8,6 +8,8 @@
 
 Each is stated in its strongest form, then answered honestly - including where the answer is weak.
 
+Selection was not by loudness. Each of the three earns its place by passing three tests at once: it attacks a load-bearing element rather than a detail, it names a mechanism rather than a mood, and it makes at least one prediction that differs from this document's - so that evidence, not taste, can settle it. Most common objections fail the third test; "it's all hype" and "it's all inevitable" are both unfalsifiable in the forms usually offered, which is why neither appears here despite dominating the public argument.
+
 ## 1. "Verification cost stops being the ordering principle"
 
 **The argument.** The master asymmetry is a claim about *today's* training regime. It holds because RL needs a cheap reward signal. But reward modelling, process supervision, and learned critics are all attempts to manufacture verification where it was expensive - and they are working better each year. If a model can reliably judge the quality of a legal argument, a research direction, or a piece of management advice, then verification stops being scarce, and with it the entire ordering of [Part III](../03-domains/) dissolves. The domains this document says lag do so only because of a temporary property of the current method.
@@ -37,6 +39,16 @@ Each is stated in its strongest form, then answered honestly - including where t
 **The answer.** Individual adoption is not the same as organizational benefit realization, and the second is what productivity statistics measure. The [METR result](../02-games/4-labor.md) is the sharpest evidence: enthusiastic individual adoption coexisting with *negative* measured productivity. Adoption speed tells you about the tool's accessibility; it tells you nothing about the redesign of the workflows around it.
 
 **Where the answer is weak.** METR is one study, on one population, at one capability level, and it is being asked to carry an enormous amount of weight throughout this document. **If it fails to replicate at higher capability, the institutional-friction argument loses its best empirical support** and this objection substantially wins. That replication is the single most valuable piece of research anyone could run against this document.
+
+## How each objection resolves
+
+None of these needs to remain a matter of judgment for long; each is wired to a different part of the [dashboard](../07-indicators/README.md), and the wiring was chosen so that both sides should accept the verdict in advance.
+
+**Objection 1** resolves through [B8](../07-indicators/diffusion.md), the capability gap between verifiable and unverifiable domains. If that gap closes and stays closed under blinded evaluation - not benchmark scores, which the objection itself predicts will be gamed - then the asymmetry is dying and the document's domain ordering with it. If the gap persists while learned-verifier methods proliferate, the recursion answer is holding.
+
+**Objection 2** resolves through [B3](../07-indicators/diffusion.md)'s dispersion reading. Margin expansion concentrated in high-concentration industries while competitive segments pass gains through is the split verdict both hypotheses should accept. Uniform margin expansion everywhere is objection 2 winning outright, and the scope-narrowing correction below becomes a euphemism for a miss.
+
+**Objection 3** resolves through replication. The [METR result](../02-games/4-labor.md) re-run at higher capability, on production work rather than study conditions, is the single experiment that most moves this document's confidence in either direction - and it is cheap relative to what rides on it. Until it exists, [B2](../07-indicators/diffusion.md)-style instrumented productivity measures are the proxy.
 
 ## The pattern in all three answers
 

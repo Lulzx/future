@@ -32,6 +32,10 @@ Text had a decade of accumulated human output sitting on public servers. Manipul
 
 The structured/unstructured gap is the most reliable prediction in this section, because it follows directly from the data argument: structure means repetition, repetition means samples, and samples are the entire constraint.
 
+It is worth being explicit about why this estimate is wide rather than precise. A range spanning eight years is not hedging; it reflects that the outcome is controlled by a small number of research results that either land or do not, each of which would move the date by years in one step. Cross-embodiment transfer, contact-rich simulation, and cheap tactile sensing are listed in [the data problem](data-problem.md) as the three that matter, and any single one landing compresses the range from the front. Nothing on the list decays gracefully or arrives partially, which is why the corpus states a window rather than a curve. **Forecasts in this section should be read as bets on research events, not as extrapolations of a trend.**
+
+The corresponding failure mode is that all four claims here are downstream of the data claim, so they fail together rather than separately. If manipulation data stops being the binding constraint, the cost curve improves through the success-rate term, the humanoid form loses its justification, and the manufacturing advantage matters less because deployment volume stops being the route to capability. A reader who wants to disagree with this section efficiently should attack claim 1 and ignore the rest.
+
 ## What to actually watch
 
 **Teleoperation-to-autonomy ratios, not demo videos.**
@@ -39,6 +43,10 @@ The structured/unstructured gap is the most reliable prediction in this section,
 A demo shows what is possible under supervision. The ratio shows what is possible without it, which is the only number that maps to economics. Any deployment reporting impressive capability without disclosing this ratio should be read as reporting teleoperation.
 
 Secondary indicator: **$/hour of delivered work**, not unit price. A cheap robot with low utilization is expensive labor. → [Cost curves](cost-curves.md)
+
+Third: **repeat purchases by the same customer**. A pilot proves a vendor can sell; a second order from a buyer who has now run the machine for a year proves the delivered economics survived contact with a real duty cycle. Announced order books and letters of intent are neither, and in a capital-raising environment they are the number most likely to be produced for its own sake. The same test applied to autonomous vehicles a decade ago would have discounted almost every published timeline correctly.
+
+Fourth, and easiest to check: **what happened to the environment**. If a deployment required aisle re-striping, fixture installation, lighting changes, or SKU standardization, that is a structured-environment deployment regardless of what the machine looks like, and it says nothing about the unstructured timeline. Most impressive commercial robotics is environment engineering with a robot attached, which is a perfectly good business and a poor leading indicator.
 
 ## Sections
 

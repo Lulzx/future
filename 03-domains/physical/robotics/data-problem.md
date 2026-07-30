@@ -18,6 +18,10 @@ The comparable robotics corpora are measured in **thousands of hours** of demons
 
 **Worse, the data does not transfer cleanly.** A policy trained on one robot's kinematics, one gripper, one camera placement, and one lighting condition degrades on all of them. Text has no equivalent of the embodiment gap. The corpus is not only small; it is fragmented across incompatible hardware.
 
+There is a third property, less discussed than scarcity or fragmentation, that may matter more than either: **manipulation data goes stale in a way text does not.** A sentence written in 2010 trains a model in 2026 as well as it ever did. A grasp trajectory recorded on a gripper that has since been redesigned, or in a warehouse whose packaging has since changed, describes a world that no longer exists. Every hardware revision partially invalidates the corpus collected on the previous revision, which means the collecting party is running to stand still and cannot simply accumulate. This is the mechanism behind an otherwise odd observation - that robotics groups keep re-collecting data they already have - and it is a structural argument for freezing hardware earlier than engineering instinct wants to, because a mediocre platform that stays fixed accumulates a usable corpus and an improving one does not.
+
+The strategic version of the same point: **hardware iteration speed and data accumulation are in direct tension.** A competitor who ships better actuators every year may be destroying more corpus value than the improvement is worth, and a competitor who ships a frozen platform at volume may be building the only asset that compounds.
+
 ## The four ways out, ranked by how well they are working
 
 ### 1. Teleoperation - expensive, working, and the current answer
@@ -53,6 +57,10 @@ Deployed robots collect data continuously; the fleet shares a policy; each unit'
 It also has a **cold-start problem that is the whole difficulty**: the fleet must be economically viable *before* the data exists to make it viable. That is why structured environments matter so much - a warehouse task is repetitive enough to be worth deploying at today's capability, which starts the flywheel that eventually reaches unstructured tasks.
 
 > **This is the single most important dynamic in robotics.** Whoever gets a large fleet doing real work first accumulates an asset nobody can buy, copy, or catch up to quickly - proprietary real-time interaction data, which is the [inelastic complement](../../../02-games/3-firms.md) in its purest form. It is also why the winner is unlikely to be whoever has the best model.
+
+The flywheel has a defect that is rarely acknowledged by the people describing it. **A deployed fleet collects data from the distribution it already handles well**, because a fleet is only deployed where it succeeds often enough to be worth paying for. The failures that would teach it the hard cases are the ones the deployment was scoped to avoid, so the marginal value of the millionth warehouse trial is far below the value of the first, and the data has the same self-selection problem as clinical outcome records. Fleet learning compounds capability *within* an environment far better than it extends capability *across* environments, which is consistent with what a decade of autonomous driving fleet miles actually produced: superb performance in mapped, benign conditions and stubbornly slow progress on the tail.
+
+That does not defeat the argument, but it changes what the flywheel is worth. It is a strong moat and a weak escape route: excellent for defending a warehouse business against a competitor, much less useful for getting from warehouses to kitchens. The transfer question is therefore not a footnote to fleet learning but the thing fleet learning depends on, which routes straight back to cross-embodiment and cross-environment generalization below.
 
 ## What would falsify the pessimistic read
 

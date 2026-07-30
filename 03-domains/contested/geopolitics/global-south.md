@@ -48,6 +48,18 @@ Two mechanisms, running in the opposite direction to everything above.
 
 Open weights partly resolve this and are therefore more strategically important for low-income countries than for anyone else - a point usually made in terms of safety, where the argument is contested, rather than in terms of sovereignty, where it is much stronger. → [Game 1](../../../02-games/1-labs.md)
 
+## The household channel, which is where it lands first
+
+National accounts are the wrong resolution for the pessimistic case. The export-services rung mattered to these economies less as a share of GDP than as a **source of hard-currency household income concentrated in the exact families that were climbing**, and it reaches far past the workers employed in it. Remittances from diaspora labor in tradable cognitive work, urban wages that support extended rural households, and the schooling decisions those wages fund are all downstream of the same channel. A sector that flattens its hiring therefore transmits into household consumption, into secondary and tertiary enrollment choices, and into the informal credit that is underwritten against expected future wages - none of which appear in a growth statistic for several years.
+
+This matters for what an early warning looks like. The measurable leading signals are enrollment shifts away from IT and English-language qualifications, entry-level hiring in the outsourcing centers, and remittance volumes from countries whose diaspora works in exposed occupations. Waiting for GDP to register it means waiting past the point at which any policy response could still be preventive. *Failure mode:* remittance flows are dominated in most corridors by physical and care work rather than cognitive work, and those occupations are among the least exposed in this entire document, so the aggregate remittance series may barely move even while the cognitive-work corridors compress sharply. The signal has to be read by corridor and occupation, not in the total.
+
+## Sovereignty at the model layer
+
+The dependency argument above has an available answer beyond open weights, and it is being pursued: regional hosting, national compute, and locally fine-tuned models on top of foreign base weights. It is worth being clear about how much of the dependency each of those actually removes. Hosting locally removes the withdrawal risk and satisfies most data-residency rules, which is the concern regulators actually raise, but it does not remove the dependency on whoever produced the base weights and can decline to produce the next generation. Fine-tuning locally captures the language and context work that no foreign lab has commercial reason to do, which is genuine and is the highest-value layer available at low cost. Training a competitive base model domestically removes the dependency and is out of reach for almost every country in this group on power and capital grounds alone, whatever the announcements say.
+
+**So the realistic sovereign position is: foreign base weights, domestic adaptation, domestic hosting, domestic data.** That is a meaningfully better position than API dependency and a meaningfully worse one than independence, and it is the configuration to expect. Its stability depends entirely on the open-weight tier continuing to exist, which is a decision made by a handful of foreign labs and states for reasons - see [the bipolar page](bipolar.md) on why the follower releases - that have nothing to do with the countries relying on it. **A development strategy resting on the continued strategic convenience of someone else's competitive position is not sovereignty; it is a favorable lease.**
+
 ## What would actually help
 
 Ordered by leverage per dollar, and notable for how little any of it is about AI:

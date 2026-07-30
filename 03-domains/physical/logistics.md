@@ -25,6 +25,8 @@ This matters because the employment is nearly all in the second half.
 
 Same pattern as [law](../cognitive/law.md) / [software](../cognitive/software.md) middle hollow - analytical matching dies; relationship and exception handling lag.
 
+The reason brokerage survived this long is instructive, because it is the reason several other intermediaries will not. Brokers persisted through two decades of digital freight marketplaces not because matching was hard but because the market is thin, fragmented, and full of counterparties whose reliability is not documented anywhere. The broker's asset was a private reputation ledger held in their head and their phone. What changes now is that the ledger becomes explicit: telematics, on-time records, and transaction history make counterparty reliability a queryable attribute rather than a relationship. **The intermediary was pricing an information asymmetry, and the asymmetry is being measured away rather than out-thought.** Any occupation whose moat is undocumented knowledge of who is trustworthy should read this as the template, and the timing signal is instrumentation of the counterparties, not model capability.
+
 ## Long-haul autonomy: a regulatory story, not a technical one
 
 Highway driving is the most structured driving that exists: limited access, no pedestrians, consistent markings, predictable actors. Hub-to-hub autonomous freight with human drivers handling the first and last legs is a well-defined problem with a well-defined economic case.
@@ -56,6 +58,8 @@ Global supply chains carry enormous buffer inventory because coordination across
 > That is a genuine, large, and mostly unmodelled macroeconomic effect: **a one-time release of working capital across the whole traded economy**, showing up as improved return on capital rather than as measured productivity.
 
 Against it: the 2020s taught every operator that thin buffers are fragile, and the political direction of travel is toward redundancy and reshoring. **Efficiency gains may be spent on resilience rather than banked** - which is a rational choice and one that makes the effect invisible in the statistics. → [Prices](../../09-macro/prices.md), [Geopolitics](../contested/geopolitics/)
+
+A sharper objection to the working-capital story: buffer inventory is not only a communication tax, it is insurance against variance, and better coordination reduces the variance a firm can see rather than the variance that exists. A supply chain that is jointly optimized end to end is also more tightly coupled, with less slack anywhere to absorb a shock, which is the configuration that failed loudly in 2020 and 2021. So the release of working capital and the increase in fragility are the same event described twice. If the optimization is adopted broadly and a shock follows, the observed sequence will be a few years of improved return on capital followed by a correlated disruption that erases several years of the gain - and it will be attributed to the shock rather than to the coupling that amplified it. This is [Uncertainty 6](../../06-uncertainties/correlated-risk.md) in physical form, and it is why the prediction here is stated as a one-time release rather than a permanent improvement.
 
 ### Cyber and OT
 

@@ -64,7 +64,7 @@ Track the **behind-the-meter share** alongside the queue. If operators route aro
 | **Trigger - bearish** | Write-downs of prior-generation inventory |
 | **Revises** | [Capital](../01-substrate/capital.md) - capital intensity of the whole build |
 
-Depreciation-schedule changes are disclosed in filings, arrive before the underlying reality is common knowledge, and are one of the few places where an operator has to state what it actually believes about hardware longevity.
+Depreciation-schedule changes are disclosed in filings, arrive before the underlying reality is common knowledge, and are one of the few places where an operator has to state what it actually believes about hardware longevity. The caveat: schedules also move for earnings-management reasons, so a lengthening that coincides with margin pressure elsewhere in the filing is a weaker signal than one that does not.
 
 ## A6 - Leading-edge capacity outside Taiwan
 
@@ -87,6 +87,12 @@ This is the load-bearing geographic assumption of the corpus, stated at **~90%**
 | **Revises** | [Rates](../09-macro/rates.md), [Capital](../01-substrate/capital.md), [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) financial governor |
 
 The document's claim: success can raise the neutral rate and make the next round of infrastructure more expensive to fund - a negative feedback on takeoff that is not technical. A7 is how you see it in markets rather than in papers.
+
+## Reading the family as a system
+
+Single indicators mislead in ways pairs do not. A1-slow plus A2-vindication is not a mixed reading - it is the specific signature of efficiency substituting for scale, and it retires the capex wall rather than confirming half of it. A2-correction plus A3-fragility is the credit-event path; A2-correction plus A3-discipline is the orderly-pause path - the same demand fact with opposite macro consequences, which is why A3 must always be read alongside A2 rather than after it. A4-tightening plus A7-rising is the double governor, physical and financial constraints binding together, and it is the strongest confirmation the constrained case can receive from this family.
+
+Also worth naming plainly: **most of these series are produced by parties with a stake in the reading.** Disclosed training-run costs are strategic communications; revenue definitions can be widened to fold bundled products into "AI revenue"; financing structures are designed partly to keep commitments off the statements A3 reads. The defense is triangulation against physical proxies that are expensive to fake - power contracted, wafers ordered, steel in the ground - and a standing discount on any number whose publisher benefits from its size. Where a self-reported figure and a physical proxy disagree, the proxy wins.
 
 ---
 

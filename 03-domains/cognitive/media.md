@@ -44,6 +44,14 @@ Media is where that plays out daily:
 
 This is not only "misinformation." It is **Akerlof dynamics on attention markets.**
 
+### Provenance is attestation, not detection
+
+The engineering point that decides whether the certified-human market can exist: detection of synthetic content is a losing game (the generator trains against the detector), but **positive attestation is not.** C2PA-style provenance does not prove content is human; it proves a specific capture device or signer vouched for its origin, and stripping the mark destroys the claim rather than forging it. That inverts the burden correctly - the default becomes "unattested, assume synthetic" - but only if three parties move together: capture hardware signs at the sensor, platforms surface the mark, and audiences learn to miss it when absent. Each has weak individual incentives, which is why [C8](../../07-indicators/governance.md) tracks adoption rather than assuming it. The stated failure mode above (provenance never sticks) is really this coordination failing, not the cryptography.
+
+### Superstar economics, amplified
+
+The barbell has a prior name: Rosen's superstar economics (1981) - when distribution is cheap and quality is even slightly rankable, demand concentrates on the few at the top. Streaming already ran the experiment on music. Generative AI turns the dial further by making the *replacement-level* competitor free, which pushes the minimum viable career from "competent" to "irreplaceable to a specific audience." The middle does not die because audiences turn cruel; it dies because the price of adequate falls to zero while the supply of attention stays fixed. What grows alongside the stars is **curation as labor** - editors, playlist and taste brokers, community moderators of authenticated spaces - the humans paid to spend attention so others do not have to.
+
 ## Meaning, identity, and labor
 
 [Meaning](meaning.md): vocational identity for writers, designers, musicians, and video workers lands in the barbell's dead middle. Status and income compress toward:

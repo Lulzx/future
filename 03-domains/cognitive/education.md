@@ -21,6 +21,10 @@ Two obstacles, both institutional rather than technical:
 
 A third, from [state capacity](../contested/state-capacity.md): procurement and measurement. Districts that cannot evaluate learning tools become a market for hype; the METR-shaped perception gap ([Game 4](../../02-games/4-labor.md)) applies to "AI improved my class" surveys too.
 
+### The reference class is unkind
+
+Every content-delivery technology of the last century arrived with the 2-sigma pitch: radio courses, instructional television, MOOCs. MOOCs are the cleanest recent test - marginal cost near zero, elite content, global reach - and completion rates settled in the low single digits (~3-6% in the large 2013-2015 cohort studies), with completers skewing heavily toward the already-educated. The diagnosis matters for the AI case: what failed was not content quality but **motivation and accountability**, which the classroom supplies socially and the tutor historically supplied personally. Bloom's tutors did not just explain well; they noticed you, expected things of you, and were disappointed in you. An AI tutor is a far better *responsive explainer* than a MOOC video, so the honest position is that AI removes one of the two missing ingredients. Whether simulated attention can carry the accountability function - whether being noticed by a model motivates like being noticed by a person - is an open empirical question, and it is the load-bearing one. If it resolves no, AI tutoring converges to the MOOC outcome: a large gift to the motivated, rounding error for the median student, and the 2-sigma prize stays locked behind human relationships that cost what they always cost.
+
 ## The distributional prediction
 
 Expect gains to accrue **first and most to motivated learners with resources** - widening variance before narrowing means.

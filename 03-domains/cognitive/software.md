@@ -19,6 +19,12 @@ Total developer employment probably **rises through 2030** (Jevons on software d
 | Architecture, incident judgment, multi-team design | Low (verification expensive) | Senior demand ↑ |
 | Spec / review / eval harnesses | Medium–high | New hybrid roles |
 
+## The bottleneck migrates to review
+
+Amdahl's law applies to the team, not just the machine: if generation speeds up 5× and review does not, review becomes the schedule. This is already the observed shape in AI-heavy teams - pull requests queue at the senior engineers whose approval makes the code real, and the organization's effective throughput is the throughput of its trust, not of its typing. Three consequences follow. First, the economic premium moves to whatever makes verification cheap - test coverage, typed interfaces, deterministic builds, observability - so codebases *built to be checked* compound their advantage over codebases that must be understood. Second, the pressure to automate review itself is enormous and partially self-defeating: model-reviewed model code collapses the independence that made review a control ([Uncertainty 5](../../06-uncertainties/learned-verification.md) in miniature). Third, "senior demand ↑" in the table above is really *reviewer* demand, and reviewing is a skill trained by doing the work that juniors no longer do - the apprenticeship gap eating its own antidote.
+
+The open-source commons shows the failure mode early and in public. Maintainers are a review bottleneck with no budget, and the flood arrived first as noise: the curl project publicly documented a wave of AI-generated bogus vulnerability reports through its bug bounty (2024, per maintainer Daniel Stenberg), each costing scarce expert hours to refute. Free generation plus expensive verification is a tax levied by the many on the few, and volunteer infrastructure pays it first. If the commons responds by closing - reputation-gated contribution, paid triage - the open-by-default era of software ends not by license change but by review economics.
+
 ## What it does to SaaS
 
 Software's marginal cost falls toward zero, threatening the SaaS model - per-seat pricing, high margin, defended by switching cost.

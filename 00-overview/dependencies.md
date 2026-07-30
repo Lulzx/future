@@ -58,6 +58,10 @@
 2. Open every dependent link; mark which inherit the miss.
 3. Log the framework correction in [ledger](../05-probabilities/ledger.md) / [RESEARCH](../RESEARCH.md) per scoring rules - one upstream fix, not twenty silent edits.
 
+**Worked example.** Suppose the 2029 behind-the-meter prediction in [energy](../01-substrate/energy.md) misses because permitting reform makes tariff supply competitive again. The parent claim is "energy / permits bind before chips" in the substrate table. Its dependents split on inspection: [Uncertainty 2](../06-uncertainties/power-permitting.md) *anticipated* exactly this skew, so it scores as a called shot, not a miss; the [bipolar](../03-domains/contested/geopolitics/bipolar.md) page loses its "US self-constrains" paragraph but keeps its structure; the [2026–2028](../04-timelines/2026-2028.md) timeline moves left. One miss, three different inheritances. That asymmetry - dependents inherit a miss *differently* - is why the index maps pages rather than propagating a single truth value, and why step 2 says *mark which*, not *mark all*.
+
+**What the index deliberately leaves out.** Low-centrality claims are excluded even when pages cite them, because an index that lists everything ranks nothing - the value here is the ranking, and a maintenance burden that grows with corpus size would eventually make the index wrong, which is worse than incomplete. The "updated through round 13" stamp above is therefore a feature to check, not an apology: when a *new* high-centrality claim appears (as [complement erosion](../06-uncertainties/complement-erosion.md) did in round 21), the Review step owes this page a row before the round closes.
+
 ---
 
 **Related:** [Notation](notation.md) · [Scoring](../08-method/scoring.md) · [Protocol](../RESEARCH.md)

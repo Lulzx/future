@@ -37,6 +37,12 @@ Both decouple revenue from training-run cost:
 
 A correction remains plausible, but its likely form is *consolidation* - culling secondary labs and forcing mergers - rather than a halt to capability progress. **The technology does not un-invent itself in a drawdown; the cap table changes.** → [Capital](capital.md) (credit-event form ~65% if correction lands), [Game 1](../02-games/1-labs.md)
 
+## The softest term in the decomposition
+
+Of the three multiplicands, the ~3×/yr algorithmic-efficiency term deserves the least confidence, and it is doing the most work. It is measured by asking how many FLOPs a newer method needs to match an older benchmark score - which makes it hostage to the benchmarks. Where benchmarks saturate or leak into training data, "equal capability" becomes unmeasurable, and the efficiency estimate inherits that fog. The term is also an *average over a moving frontier*: efficiency gains historically concentrate in whatever the field is optimizing this year, so past 3×/yr on next-token prediction does not automatically carry over to long-horizon agentic tasks, where the optimization pressure only arrived around 2025. If the true forward-looking term is 1.5× rather than 3×, effective compute growth roughly halves and every capability-timing estimate downstream slips by years without any visible change in spending. There is no clean indicator for this - [A1](../07-indicators/substrate.md) catches the dollar term, not the efficiency term - so this page flags it as its own least-verifiable input.
+
+Test-time compute cuts the other way and changes the *shape* of the risk. To the extent reasoning-at-inference substitutes for parameters-at-training, capex migrates from a few concentrated training runs toward distributed serving fleets - spending that scales with revenue rather than ahead of it. That is a financially safer structure (failure arrives as margin compression, not a stranded artifact), and its cost falls on the collapsing floor of [inference economics](inference-economics.md) rather than the rising wall of this page. The 2029–30 "wall" is therefore best read as the break point of one financing pattern, not of capability progress.
+
 ## What actually binds first
 
 | Constraint | When | Page |

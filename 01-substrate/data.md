@@ -34,6 +34,14 @@ Roughly ordered by how cheap the ground truth is:
 
 This ordering runs through every section of [Part III](../03-domains/). When a domain prediction there looks surprising, the explanation is almost always the cost of ground truth in that domain. → [Dependencies](../00-overview/dependencies.md) spine row
 
+## Why synthetic data does not dissolve the constraint
+
+The obvious rejoinder - "models will just generate their own training data" - fails in a way that *reinforces* the asymmetry rather than escaping it. Unfiltered synthetic data degrades models toward their own priors; what makes synthetic data work in practice is a filter that keeps only verified-correct samples. Self-play in games, proof-checked mathematics, and test-passing code are all synthetic-data successes, and every one of them is a success *because* the domain has a cheap verifier to do the filtering. Synthetic generation is an amplifier wired in series with verification: where ground truth is cheap it multiplies the training signal enormously, and where ground truth is expensive it multiplies approximately nothing. The frontier's pivot to synthetic data is therefore not an escape from the master asymmetry - it is the mechanism that sharpened it.
+
+The same logic explains why the slow column is doubly stuck. Progress on taste, judgment, and long-horizon advice runs on human preference and outcome labels, which are expensive precisely because they consume the scarce senior judgment that [Game 4](../02-games/4-labor.md) says is thinning. The slow domains train on the very resource whose supply the transition is eroding - a feedback loop the fast domains simply do not have.
+
+Failure mode: if models prove able to *bootstrap* verifiers for soft domains - training a judge on sparse human labels that then generalizes reliably - the series wiring breaks and the amplifier runs open-loop. That is [Uncertainty 5](../06-uncertainties/learned-verification.md) in training-pipeline form, and it is the strongest version of that objection.
+
 ## The second-order effect
 
 Because verification is now the scarce input to *capability*, and - separately - verification is becoming the scarce input to *information markets* ([Game 5](../02-games/5-information.md)), the same word names both the technical bottleneck and the economic opportunity. That convergence is not a coincidence; both are downstream of generation becoming cheap. → [Compressed](../00-overview/compressed.md), [C8](../07-indicators/governance.md)

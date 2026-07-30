@@ -22,6 +22,16 @@ Four of the five are **public-goods problems with private costs**: safety (Game 
 
 Game 3 is the exception and the one that explains the most: it is a pure competitive-dissipation result, and it is why the aggregate statistics will look disappointing even while the technology works exactly as advertised. Scope: **competitive markets** specifically ([steelman](../08-method/steelman.md) §2).
 
+## The games compose in a specific order
+
+The five are not parallel; they feed each other, and the coupling is directional. The [substrate](../01-substrate/) sets the entry price of Game 1. Game 1's output - frontier capability plus an open-weight tier that trails it - is an exogenous parameter of every other game: it sets what Game 2 must try to control, what Game 3's firms adopt, what Game 4's tasks face, and how cheap Game 5's forgeries are. Game 3's dissipation then feeds back into Game 1 by shaping the prize: if adopter surplus flows to consumers rather than to adopters, the frontier prize is smaller than the raw capability suggests, which is one quiet reason consolidation pressure builds even while usage grows.
+
+The practical rule this ordering yields: **an intervention in an upstream game moves every game downstream of it; an intervention downstream moves almost nothing upstream.** Compute and energy policy touch all five. Content-provenance mandates (Game 5) touch only Game 5. Most proposed governance operates downstream because downstream is where harms are visible, which is a structural reason to expect regulation that is simultaneously popular and weak.
+
+## Timescale mismatch as a shared failure mode
+
+Each game equilibrates on a different clock: Game 1 in financing cycles (quarters to a few years), Game 2 in incident-and-legislation cycles (years), Game 3 in competitive diffusion (years), Game 4 in career and cohort time (decades), Game 5 in norm time (fast to break, slow to rebuild). Analysis that samples all five at one moment will always find some games "not happening" - usually 4 and 5, whose equilibria arrive last. The failure mode for this framing itself: if capability gains stall, the slow games never reach the equilibria described here, and the snapshot critics were right for the wrong reason.
+
 ## Cross-links the short table hides
 
 | Interaction | Where developed |

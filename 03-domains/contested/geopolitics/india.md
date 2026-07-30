@@ -25,6 +25,18 @@ The distinction that matters is between the **firms** and the **employment**.
 
 > **Prediction:** Indian IT services revenue continues growing through 2032 while sector headcount **flattens or declines**. The decoupling of revenue from employment is the thing to watch, and it is publicly reported quarterly by listed firms - one of the cleanest available tests of [Game 4](../../../02-games/4-labor.md) anywhere.
 
+*Failure mode for that prediction, and it is a real one:* it assumes the productivity gain is captured by the vendor rather than competed away to the client. [Game 3](../../../02-games/3-firms.md) argues that a capability everyone can buy dissipates into consumer surplus, and the buyers here are sophisticated procurement organizations who know exactly what a delivery model costs and will reprice fixed-price contracts at renewal. If that repricing runs faster than volume growth, revenue flattens alongside headcount and the firms are not fine either - the sector then looks less like margin expansion and more like the classic outcome for an industry whose core input has been commoditized. The observable that separates the two worlds is revenue per employee against contract value per delivered outcome; the first rising while the second falls is the dissipation case.
+
+## Where the cohort actually goes
+
+The prediction above is about a sector. The macroeconomic question is about the ~10M annual entrants, and the honest answer is that the sectors with capacity to absorb them are the low-productivity ones: construction, retail, domestic and care services, informal logistics, and agriculture that the growth model was supposed to be moving people *out* of. Absorption in that sense is not reassuring, because **employment and productivity come apart exactly the way welfare and growth come apart in [the Global South page](global-south.md).** A cohort that finds work at half the productivity of the job it was trained for is fully employed and the country's convergence path is still broken.
+
+Two second-order effects follow, and neither is priced in the usual discussion.
+
+**The consumption channel.** Formal-sector IT wages anchor urban middle-class demand in a small number of metros, and they anchor a great deal else: mortgage underwriting, private schooling, discretionary retail, and the aspiration that keeps engineering enrollment high. A pyramid that stops hiring at the base does not just remove jobs, it removes the credible expectation of those jobs, and the expectation is what the education spending and household borrowing were priced against. The adjustment shows up in enrollment and in urban credit quality before it shows up in employment statistics.
+
+**The fiscal channel.** The sector is a disproportionate contributor of formal-sector tax and foreign exchange, and India has no unemployment-insurance system capable of carrying a cohort-scale shock; the existing rural employment guarantee is a floor for subsistence, not a bridge for displaced graduates. So the state faces rising claims on a narrowing base at the same moment it would need to fund the [energy](../../../01-substrate/energy.md) and skills build-out that the pivot requires. This is the general shape of the problem in [fiscal](../../../09-macro/fiscal.md) form, arriving earlier here than in rich countries because the safety net is thinner and the exposure is more concentrated.
+
 ## The three real assets
 
 India's position is not weak. It is *mismatched* - strong on inputs that matter later, exposed on the one that matters now.

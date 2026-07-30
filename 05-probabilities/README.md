@@ -38,6 +38,16 @@ Planning that treats the tail risk as the main risk gets the sequencing wrong. T
 - **Row 6** is the [capex test](../01-substrate/compute.md). Nudged up on 2030: [capital](../01-substrate/capital.md) financing-mix migration (cash → private credit/SPV) raises the odds that a demand disappointment becomes a *financial* event, not just a spending pause.
 - **Row 7** held. [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md)'s three governors argue fast takeoff is over-weighted, which bounds the upper tail without moving the point estimate enough to respecify the range.
 
+## The rows are correlated, and the correlations carry information
+
+The table reads as seven independent estimates; it is not. Row 6 and row 1 are linked through the same underlying variable - if agentic reliability disappoints, autonomy fails to arrive *and* the revenue miss triggers the correction, so the bad worlds cluster. Row 3 is close to a precondition for row 4, which is why row 4 cannot be read as an independent judgment about diplomacy. Row 5 and row 2 share the physical-diffusion driver: the worlds where humanoids scale are heavily overlapping with the worlds where measured TFP clears its bar. And row 7's upper tail lives almost entirely inside the worlds where [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) breaks the timeline structure - it is not spread evenly across scenarios.
+
+The practical consequence: anyone using these numbers to price a portfolio of positions, or to compute joint probabilities by multiplication, will get the tails wrong in a known direction - the joint extremes (everything goes right, everything goes wrong) are more likely than independence implies. The corpus states marginals because marginals are scoreable; the correlation structure is stated here in words because a full joint distribution would be false precision on top of subjective inputs. Failure mode: the claimed correlations are themselves subjective and unscoreable until multiple rows resolve, which will take until the 2030s; treat them as the author's model of the world, one level less trustworthy than the marginals.
+
+## What this table is not
+
+It is not a research output, a market price, or an ensemble - it is one analyst's committed numbers, published so that being wrong is detectable. That has two use implications. First, the *deltas* and their written reasons ([ledger](ledger.md)) carry more information than the levels: a reader who disagrees with 50% on row 1 learns little from the disagreement, but a reader who sees the number move on evidence they consider irrelevant has found a real dispute about mechanism. Second, the table deliberately excludes claims the corpus argues but cannot operationalize - "value accrues to complements" has no row because no resolvable threshold survived drafting, and the honest response to an unscoreable claim is to leave it in the prose, not to launder it through a fake number. The distributed [register](register.md) exists for the middle category: claims sharp enough to score but too local for this table.
+
 ## Load-bearing assumptions not in the table
 
 Two probabilities live outside these rows because they are *inputs* rather than outcomes:

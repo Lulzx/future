@@ -18,6 +18,8 @@ The discipline: every indicator here names a **trigger value**, and every trigge
 | B | [Diffusion](diffusion.md) | Is the technology actually reaching into the economy? | Quarterly to annual |
 | C | [Governance](governance.md) | Which regulatory architecture are we going to get, and when? | Event-driven |
 
+The families are not independent, and reading them jointly is most of the skill. A binding A-family constraint shows up later as a B-family slowdown, so **a B stall with A slack points at institutions, while a B stall with A tight points at physics and finance** - opposite revisions from the same B reading. And a C-family event reprices both: the post-incident window can relax A constraints (permitting waivers) while tightening B (deployment moratoria) simultaneously.
+
 ## The five that matter most
 
 If only five things can be tracked, track these. Each is the leading edge of a different load-bearing claim.
@@ -29,6 +31,10 @@ If only five things can be tracked, track these. Each is the leading edge of a d
 | **AI revenue run-rate vs. capex** | ~$60B (2025) revenue vs. ~$650B 2026 capex guide | Revenue CAGR falling below ~40% for two consecutive years | [Compute](../01-substrate/compute.md) and [Capital](../01-substrate/capital.md) - the correction |
 | **Teleoperation-to-autonomy ratio** in deployed robots | Overwhelmingly teleoperated or scripted | Autonomy share crossing 50% on unstructured tasks | [Robotics](../03-domains/physical/robotics/) - the 2030s swing variable |
 | **Grid interconnection queue length** | 5–7 yrs; ~410GW CAISO, ~380GW MISO | Any market halving its typical wait | [Energy](../01-substrate/energy.md), [Uncertainty 2](../06-uncertainties/power-permitting.md) |
+
+### Why these five lead
+
+Each was chosen for when it moves, not only for what it measures. The posting ratio moves at the hiring decision, quarters before employment stocks show anything. Cycle time moves inside labs before any release demonstrates it. The revenue-to-capex gap moves in guidance and filings a year or more before a write-down forces the same fact into the open. The teleoperation ratio moves at deployment, years before robotics revenue is large enough to surface in sector statistics. And queue length moves at the application stage, roughly the length of the queue itself ahead of power actually binding. **A dashboard of lagging indicators confirms; this one is built to warn.** The cost accepted in exchange is a higher false-alarm rate - early-moving series are noisier than the stocks they anticipate, which is why each threshold requires persistence (two quarters, two consecutive years) rather than a single print.
 
 ### Also on the short list (rounds 5–8)
 

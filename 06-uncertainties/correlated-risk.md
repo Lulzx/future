@@ -46,6 +46,16 @@ That reframes human moats from capability claims into financial ones, and financ
 | Model-provider indemnification breadth in enterprise contracts | Whether risk stays with labs or spills to insureds |
 | Legislative proposals for AI terrorism-style backstop | Branch 3 preparing, usually post-event |
 
+## Anatomy of the first correlated event
+
+The adversarial case is sharper when the event is specified rather than gestured at. The ingredients are all standing conditions: a synchronized update pushed to every deployment at once, agentic write-access to production systems rather than draft output, and a failure mode subtle enough to run for days before detection. The CrowdStrike outage of July 2024 is the dry run - one vendor, one update, millions of machines, and insured losses widely estimated at a small fraction of the economic loss, most of which fell into exclusions and retentions. The AI version differs in one respect that matters to underwriters: CrowdStrike failed *loudly and instantly*, which capped the loss window at hours. A model-driven failure that corrupts decisions rather than crashing machines has a detection lag measured in days or weeks, and loss scales with the lag. Terrorism insurance is the other anchor: private capacity withdrew essentially overnight after September 2001 and returned only under the TRIA backstop - which is why the branch table above treats post-event withdrawal-then-backstop as a template with precedent, not speculation.
+
+The pre-event pricing problem cuts both ways, and this is the part the corpus should hold with the least confidence. With no loss history, insurers either overprice (deployment slower than capability justifies, branch 2 arriving early and unnecessarily) or underprice (capacity looks abundant right up until the first event vaporizes it, branch 1 appearing confirmed and then failing in a week). **Both errors generate years of indicator readings that look like a resolved uncertainty.** A published rate table is only weak evidence for branch 1 until it has survived an event; the indicator that actually discriminates is renewal behavior *after* the first loss, and there is no way to observe it early.
+
+## The coupling to complement erosion
+
+[Uncertainty 7](complement-erosion.md) lists liability capacity among the slowest-eroding complements, and this page is why: a balance sheet that can absorb correlated residual risk is not manufacturable by intelligence at any capability level - it is manufacturable only by accumulation or by sovereign fiat. If this uncertainty resolves to branch 2, the balance-sheet row becomes the *most* durable complement on the list and the distributional predictions in [assets](../09-macro/assets.md) concentrate further (reinsurers and states as the ultimate complement-owners). If it resolves to branch 3, a legislative act erases the scarcity overnight - the same political repricing risk U7 flags for licenses. The two pages disagree productively: U7 says political scarcity is the least durable kind; this page says the political act requires a triggering catastrophe, which puts a floor under the timeline.
+
 ## What would falsify the constraint story
 
 - **Model providers indemnify broadly** at scale - risk internalized, insurance channel never binds.

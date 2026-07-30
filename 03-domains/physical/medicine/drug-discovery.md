@@ -27,6 +27,14 @@ After 2032 the clinical side can move if automated experimentation and better tr
 
 **Whoever industrializes automated experimentation captures the largest available prize** - same conclusion as [Science](../../cognitive/science.md), for the same reason. Hypothesis generation is no longer scarce; experimental cycle time is.
 
+## Why cheaper candidates may not mean more approvals
+
+There is a counterintuitive consequence of making the early funnel cheap that the optimistic case usually skips. If candidate generation costs collapse while clinical capacity stays fixed, the constraint moves from *having* a good molecule to *choosing* which of many to spend a decade and a billion dollars testing. The industry's selection process is already the weakest link in the chain, as evidenced by the failure rate quoted above, and nothing about generating ten times more candidates improves it. Abundance upstream of an unchanged filter raises throughput at the filter's input, not its output.
+
+The optimistic reply is that better selection is exactly what models should be good at, and in principle it is. The catch is that selection quality is validated only by the clinical outcome, so improving the filter requires the very feedback loop that runs on a ten-year clock. **The one part of the pipeline where better prediction would pay most is the part where ground truth is most expensive**, which is the master asymmetry stating the case against its own most attractive application.
+
+A second-order effect worth watching: if candidate abundance is real, the scarce asset shifts to clinical trial infrastructure - patient access, site networks, regulatory relationships, and the capital to run parallel programs. Those are the inelastic complements in pharma, they are held by incumbents, and the framework predicts value accrues there rather than to the design tools. That is consistent with what the deal structures have looked like: discovery platforms license to large pharma rather than displacing it.
+
 ## What "AI drug" headlines measure
 
 They measure **entry into the pipeline** or **preclinical milestones**, not reduction in expected time-to-approval for a new molecular entity. Those are different random variables. A flood of AI-designed candidates can coexist with an unchanged median approval timeline if the clinical wall does not move.

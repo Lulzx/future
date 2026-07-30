@@ -65,6 +65,12 @@ Also this round: the [distributed predictions register](register.md) created - 1
 
 Rule 5 satisfied: evidence reviewed, holds justified in writing, not inertia.
 
+## How to read a hold
+
+The ledger's hold entries are its least glamorous and most informative content, because the failure modes of a subjective table are asymmetric in a specific way. The pressure on a maintained forecast runs toward *motion* - every round deposits new material, and moving a number is how an analyst demonstrates responsiveness - so a table that drifts a few points every pass is usually tracking the author's reading list, not the world. Rule 5 cuts the other way against *anchoring*: a number that never moves is being defended. The discipline that resolves the tension is the one visible above - every hold names the evidence reviewed and says why it was insufficient, which converts "no change" from an absence into a claim that can itself be wrong. A reader auditing this ledger should look for two smells: consecutive holds citing evidence that plainly bears on a row (anchoring wearing rule-5 clothing), and moves justified by material that merely *restates* the argument that set the prior (motion mistaken for updating). Rounds 12 and 18 are the pattern to hold future passes to: mechanism detail sharpened, numbers explicitly not moved, reasons in writing.
+
+Note also what the ledger cannot show yet: whether the holds were right. Until claims resolve, this page measures process discipline, not accuracy - a perfectly maintained ledger of badly calibrated numbers would look identical to this one. That is not a flaw to fix; it is the reason the resolution log below exists and the reason it is empty.
+
 ## Resolution log (outcomes)
 
 *Empty until claims come due. First wave: 2027–28. See [scoring](../08-method/scoring.md) "first claims due."*

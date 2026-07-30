@@ -14,6 +14,8 @@ Predictions that cannot be scored are decoration. This page specifies how each c
 
 **Directional claims resolve against the counterfactual, not the level.** "Value accrues to inelastic complements" is not scored by whether energy prices rose - they might rise for unrelated reasons - but by whether they rose *relative to* cognition-intensive prices. Most of this document's claims are relative and must be scored relative.
 
+**Relative claims fix their comparator series at authoring.** "Trades wages outpace credentialed professions" scores against the series pair named where the claim lives, not against whichever wage series later flatters it. Comparator shopping is reference-class swapping wearing a smaller hat, and it is the specific dodge relative claims invite.
+
 **A claim is a miss if it was right for the wrong reason.** If the [correction](../01-substrate/capital.md) arrives in 2028 but is triggered by a macro shock rather than by AI revenue disappointing, the timing was lucky and the mechanism was wrong. Log it as a miss with a note. Mechanism accuracy is the point; a framework that gets outcomes right through wrong mechanisms will fail on the next question.
 
 ## The scoring ledger
@@ -30,6 +32,10 @@ Maintained per [protocol](../RESEARCH.md) §5. Each entry: claim, source page, r
 
 **Unresolvable is a real and common outcome, and it is a mild indictment.** A claim that cannot be settled by evidence was underspecified when written. Count them; a rising unresolvable rate means the writing is drifting toward safety.
 
+## Who scores, and the conflict in it
+
+The document scores itself, which is a conflict of interest with a known failure profile: leniency on ambiguous resolutions and creative readings of "the mechanism was right." Two mitigations, neither complete. First, the verbatim-claim rule exists precisely so an outside reader can re-score from the ledger without trusting the scorer - the ledger is designed to be auditable, not merely kept. Second, **ambiguous resolutions default to miss.** A rule where ties go to the house selects for vague writing; a rule where ties go against it selects for sharper claims in the next round, which is the incentive the whole exercise is trying to create. The residual weakness is claim selection rather than claim scoring - the temptation to blockquote only the safe claims - and the unresolvable-rate count above is the partial check on it.
+
 ## The five ways this document will dodge
 
 Named in advance, because the point of naming them is to make them harder to use.
@@ -39,6 +45,10 @@ Named in advance, because the point of naming them is to make them harder to use
 3. **Scope narrowing.** [Game 3](../02-games/3-firms.md)'s narrowing to "competitive markets specifically" in the [steelman](steelman.md) is exactly this move. It is legitimate *once*, done explicitly, in advance of the resolution. It is not legitimate afterward.
 4. **Indicator substitution.** Quietly promoting whichever [indicator](../07-indicators/) happens to be confirming. **Rule: the five headline indicators are fixed; changes go in the round log.**
 5. **Probability inertia.** The subtlest. A probability that never moves is not being updated; it is being defended. **Rule: annual re-scoring of every row in [Part V](../05-probabilities/README.md), and a row that hasn't moved in two years requires a written justification for why no evidence bore on it.**
+
+## Small-sample honesty
+
+The calibration table below assumes enough resolved claims for frequencies to mean something, and for years it will not have them. With a few dozen resolutions, a perfectly calibrated 60% band still produces runs that look like systematic bias, and an ill-calibrated one can look fine. Until the ledger is large, **treat calibration statistics as suggestive and mechanism post-mortems as the real signal** - a single right-for-the-wrong-reason resolution teaches more at small N than the hit rate does. The failure mode this guards against is premature vindication: declaring the framework calibrated off a sample that could not have shown otherwise.
 
 ## Calibration targets
 

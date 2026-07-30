@@ -31,6 +31,12 @@ The migration of AI financing **from the first row toward the second** during 20
 
 > **Prediction:** if the 2027–29 correction described in [Compute](compute.md) arrives, its proximate trigger is **~65% likely to be a credit event in AI-adjacent structured finance** rather than an earnings miss at a hyperscaler. The equity story is well-covered; the debt story is where the leverage is.
 
+## Circularity, and why the verdict is getting harder to read
+
+A verdict is only as good as the evidence it prices, and by mid-2026 the evidence has a circularity problem. Chip vendors invest in model labs that commit the proceeds to chip purchases; hyperscalers book cloud revenue from labs they have equity stakes in; neocloud operators borrow against accelerator collateral whose resale value depends on the same demand the borrowing is meant to serve. None of this is fraudulent and all of it is precedented - vendor financing looked identical in the late-1990s telecom build - but it means headline "AI revenue" contains an echo of the capex itself, and the true external-demand signal is smaller and noisier than the reported one. The 45–55% CAGR question in [Compute](compute.md) has to be answered net of this echo, and almost no public figure is.
+
+The failure mode of this paragraph: circularity is also what *early* genuine demand looks like, since an ecosystem bootstrapping real capacity finances itself in exactly these patterns. The test is not the structure but the exit - whether end-customer revenue (outcome-priced contracts, [B5](../07-indicators/diffusion.md)) grows into the financing or the financing rolls onto new lenders. [A3](../07-indicators/substrate.md) watches the mix precisely because the structure alone cannot be scored.
+
 ## Why the sovereign row changes the game
 
 A private firm stops spending when the NPV goes negative. A state does not, because it is not buying an NPV - it is buying the option not to be dependent on someone else's compute. That is a strategic good, and strategic goods are bought at prices that make no commercial sense.

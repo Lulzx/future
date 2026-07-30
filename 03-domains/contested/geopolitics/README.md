@@ -31,6 +31,16 @@ Public discussion treats this as a single US–China race. It is at least three 
 
 Most analysis conflates all three into "who is winning," which is why most analysis is unhelpful.
 
+**Absorption is the slow axis for a reason that is not going to change.** Capability is bought, capacity is built, and absorption has to be *institutionalized* - which means changing how firms are organized, what workers are trained for, what regulators certify, and what liability attaches to a decision made with machine assistance. Those are the [inelastic complements](../../../02-games/3-firms.md) seen from the national rather than the firm level, and they move on the timescale of professional generations rather than product cycles. The historical base rate is unambiguous: electrification took about four decades from viable to productivity-visible, and the delay was not the dynamos but the rebuilding of factories around them. *Failure mode for this whole framing:* if the current wave is absorbed mainly through software that firms already buy, rather than through reorganization, absorption could run far faster than the electrification analogy suggests and the third axis stops being the bottleneck. Watch whether measured productivity gains show up in firms that reorganized or in firms that merely subscribed.
+
+## Why the ladder is defended rather than replaced
+
+The pivot below is correct and it is also, in almost every country, politically unavailable, and it is worth being precise about the mechanism rather than blaming foresight.
+
+The exposed sector is *organized*. It has employer associations, export-promotion agencies, dedicated ministries, tax regimes written for it, and a workforce concentrated in a handful of cities that vote. The beneficiaries of the pivot - future workers in domestic-demand sectors that do not yet exist, and firms not yet founded - have no association, no ministry, and no votes. This is the standard asymmetry of concentrated versus diffuse interests, and it reliably produces the same policy: subsidize the incumbent sector to defend the margin, which prolongs the specialization that created the exposure.
+
+The second mechanism is that the arbitrage keeps paying while it dies. A wasting position is still a position, and the revenue it generates is the fiscal base that would have to fund the pivot. Countries therefore face the pivot decision at exactly the moment when the case for it looks weakest - the sector is still growing, the compression shows up first in headcount rather than revenue, and the crisis is legible only in retrospect. **The signal a government would need in order to act early is a decoupling of sector revenue from sector employment**, which is publicly reported and almost never treated as a macroeconomic warning. → [India](india.md)
+
 ## The regions
 
 Each faces a *different* binding constraint. That is the organizing insight of this section, and it is why one page could not carry it.
@@ -54,6 +64,8 @@ The countries that come through this will be the ones that pivot **early** to:
 Rather than defending the arbitrage, which is a wasting position and which political economy will make very tempting to defend.
 
 The pivot is expensive and unpopular and has to begin before the crisis is legible. That is the hard part, and it is why I expect most countries not to make it.
+
+One qualification, because the pessimism above can be overdone. **A country does not have to run the pivot deliberately to end up with it.** Domestic demand grows on its own as incomes rise, energy build-out is being driven by decarbonization commitments that were made for unrelated reasons, and data sovereignty is arriving through privacy politics rather than industrial strategy. Several countries will end up holding two of the three legs by accident. The argument here is not that the pivot requires unusual wisdom, only that the *timing* does: arriving at domestic-demand-led growth in the 2040s is a different outcome from arriving in the early 2030s, and the difference is one labor-force cohort that gets absorbed or does not.
 
 ---
 

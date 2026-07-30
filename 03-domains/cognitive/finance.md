@@ -21,11 +21,21 @@ The middle and back office: compliance, underwriting, research, due diligence. P
 
 Ground truth is often **cheap** (P&L, defaults, fills). That is why finance moved early. The residual moats are fiduciary duty, balance-sheet capacity, licenses, and distribution - [Game 3](../../02-games/3-firms.md) inelastic complements.
 
+### Why the research rent actually compresses
+
+The asymmetry-rent claim deserves its mechanism. Sell-side research was already a dead margin walking before models arrived: MiFID II (EU, 2018) forced research to be priced separately from execution, and the revealed willingness to pay collapsed - buyers had been paying for access and the relationship, not the analysis. AI finishes the job from the other side: when a competent read of a filing, a transcript, or a credit doc costs approximately nothing, anyone still charging for analysis must actually be selling something else - primary access to management, the right to be wrong with someone else's signature on it, or distribution to clients who cannot run the tools. Those are all [Game 3](../../02-games/3-firms.md) complements, not analysis. The failure mode: if differentiated data access (expert networks, alternative data exclusives) re-creates the asymmetry one layer down, the rent relocates rather than compresses, and the buy-side pays the same total in a different line item.
+
+### Advisory survives on liability, not on empathy
+
+The slow row in the table is usually explained as "clients want a human." The more durable explanation is structural: a fiduciary is a legal person who can be sued, sanctioned, and barred, and the client's protection is precisely that the advisor has something to lose. An advisory model with no assets and no license offers advice with no recourse, which for large sums is a worse product at any accuracy level. This predicts the observable shape: AI eats the preparation of advice everywhere at once, while the delivery and ownership of advice stays human until the [insurance](insurance.md) and regulatory stack agrees to hold someone else accountable. It also predicts that advisory headcount thins from the bottom (paraplanners, associate advisors) while the client-facing layer persists - the same hollowing as [law](law.md), one notch slower.
+
 ## The systemic risk nobody prices
 
 If many institutions run correlated models on correlated data, you get **synchronized behavior** - the mechanism behind every flash crash.
 
 This is not a hypothetical extension of existing risk; it is a qualitative change in it. Diversity of strategy is what makes markets absorb shocks. Model monoculture removes it, and does so invisibly, because each institution's risk model evaluates its own position rather than the correlation structure across positions.
+
+The reference class exists. In August 2007 the quant equity funds discovered, over roughly one week, that they had independently converged on the same factor exposures; the unwind was violent precisely because every risk system had certified every portfolio as diversified while the *population* of portfolios was not. That episode required only shared statistical technique and shared data. Foundation models are a stronger convergence force on both axes - shared weights, shared training corpora, synchronized updates - and they add a third: shared *reasoning*, so that responses to a novel shock correlate even off the training distribution. Nothing in current supervisory practice measures the population-level object; stress tests are run institution by institution, which is exactly the blind spot.
 
 > **Model monoculture is a financial stability risk that is currently unpriced.**
 

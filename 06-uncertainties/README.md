@@ -6,6 +6,8 @@
 
 Seven live uncertainties, ordered by a mix of **variance** and **how much of the corpus they take with them if they resolve against the base case.** Everything else sits on firmer ground; these are where it would actually be revised. Together, 5 and 7 red-team the two halves of the spine - by design, so that invariant 6 is satisfied by audit rather than by accident.
 
+The seven are not the same kind of object, and reading them as a flat list understates the structure. **1 through 3 are parameter uncertainties:** the model is right, a dial is mis-set, and resolution means re-scoring numbers. **4 is a scenario uncertainty:** an external event that zeroes the analysis without the analysis having been wrong about anything. **5 and 7 are framework uncertainties:** the spine itself fails, and resolution means rewriting the ordering principle, not adjusting its outputs. **6 is a global-constraint uncertainty:** a mechanism the corpus originally filed as one domain page turns out to gate every other page's timeline. The register is ordered by blast radius within each kind, which is why the framework entries sit mid-table despite carrying the most: their probability of firing is lower than the parameter entries', but nothing else survives them intact.
+
 | | Uncertainty | If it resolves toward | Leading indicator |
 |---|---|---|---|
 | 1 | [Recursive research acceleration](recursive-self-improvement.md) | Faster - Part I ceilings stop binding | Internal research cycle time per validated experiment |
@@ -19,6 +21,8 @@ Seven live uncertainties, ordered by a mix of **variance** and **how much of the
 **Asymmetry note, revised.** Uncertainties 1–3 are still skewed toward *faster or better* than the base case. **Uncertainty 4 is skewed toward worse and is not optional.** Uncertainties 5–6 can cut either way: 5 toward much faster domain penetration if the spine fails; 6 toward slower deployment than capability implies, or a sudden unlock after a state backstop. Uncertainty 7 is skewed toward *better for consumers, worse for the corpus's distributional predictions* - erosion of the scarce-complement list is mostly abundance.
 
 A document that spends most of its length on constraints can still read as pessimistic when half its error bars point the other way - but it is no longer honest to say *all* of them do.
+
+**The entries are not independent, and the joint outcomes matter more than the marginals.** 5 firing accelerates 7 (verification stops sequencing complement erosion, so every row decays at once) and dissolves the strongest counter in 3 (learned feedback becomes trustworthy exactly where apprenticeship needs it). 6 resolving to a state backstop removes the balance-sheet floor under deployment at the same moment 5 would be removing the verification floor - the fastest world in the register is not any single entry firing but 5 and 6 firing together. In the other direction, 4 dominates everything: no combination of favorable resolutions elsewhere survives it, which is why it alone carries the "invalidates the whole document" label. A future re-score pass should check the joint cases, not just walk the table row by row - the corpus's real tail risk lives in the correlations.
 
 ## Also worth naming
 

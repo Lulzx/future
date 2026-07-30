@@ -28,6 +28,18 @@ The practical difference: a ceiling tells you what cannot happen, a verdict tell
 
 **Relay + floor together:** energy binds the *build*; inference collapse sets the *moat life* of whatever you built; capital re-prices whether the next build is allowed. → [2026–2028](../04-timelines/2026-2028.md) capex test, [Rates](../09-macro/rates.md) financial governor.
 
+## The inputs are coupled, not parallel
+
+Reading the five rows as independent misses most of the dynamics. The couplings do the work:
+
+**Energy × capital.** The energy constraint is what converts capital from a verdict into a commitment. Money queued behind a 5-year interconnection wait cannot exit on an earnings cycle; it is already poured into shells and substations. So the tighter energy binds, the more the capital stack shifts toward long-lived physical assets - which is exactly the shift that bounds the downside of a correction ([capital](capital.md) on the physical-asset residual).
+
+**Data × compute.** Effective compute is only an engine where a training signal exists. Past data exhaustion, marginal FLOPs concentrate on verifiable domains, which *narrows* what the compute curve buys even as it steepens. This is why the 7–10×/yr figure and "progress feels uneven" coexist without contradiction.
+
+**Inference × capital.** The collapsing floor is simultaneously the bull case and the bear case for the capex test: it destroys pricing power at any fixed capability (bear), while Jevons expansion of consumption is the only plausible route to the revenue bar (bull). Which effect dominates is close to *the* question of [2026–2028](../04-timelines/2026-2028.md), and it cannot be settled from either page alone.
+
+**The relay metaphor's failure mode.** A relay implies each constraint hands off cleanly to the next. The couplings above mean they can instead bind *simultaneously* - an energy-delayed build raises capex per delivered FLOP just as the capital verdict is being re-priced. The base case here assumes sequential binding; the compounding case is the pessimistic tail, and it is tracked jointly by [A2 and A4](../07-indicators/substrate.md) rather than by any single indicator.
+
 ## The one thing to take from Part I
 
 Data exhaustion forced the frontier onto verifiable-reward training. That produced the asymmetry that runs through this entire document: **capability grows fastest where verification is cheap.** Math, code, and formal reasoning race ahead. Taste, judgment, long-horizon physical interaction, and anything whose ground truth is expensive or contested lag badly.

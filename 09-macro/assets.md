@@ -46,6 +46,14 @@ Every constraint in this document protects them at once. [Robotics](../03-domain
 
 The bottleneck on it is training capacity, which is institutional and slow - the same shape as every other constraint here.
 
+## The failure mode: the list has a half-life
+
+Every row in the ownership table is a claim that intelligence cannot manufacture that complement *within the window*, and [Uncertainty 7](../06-uncertainties/complement-erosion.md) red-teams exactly this. If robotics arrives early, the physical-presence row - the one row labor holds - erodes first, which would convert this page's least intuitive prediction into its worst miss. If licensure reprices under fiscal pressure, the regulatory row follows, and the professional moat goes with it. The distributional claims here inherit the half-life of the scarcities they rest on and should be read as a dated position, not a static endowment; the trades-wage prediction above is explicitly conditioned on [B12](../07-indicators/diffusion.md) staying quiet.
+
+## The sharpest line is owner against renter
+
+Within households, the divide this page predicts is not primarily labor against capital - most households hold some of both - but **housed against unhoused.** Housing is the one appreciating complement ordinary households own at scale: roughly two-thirds of households in most advanced economies own their home (OECD housing statistics, stable for decades), but ownership is concentrated sharply by age and entry keeps getting more expensive. The renter cohort experiences the inflating basket in [Prices](prices.md) with no offsetting asset gain; the owner cohort collects the gain without selling. Because ownership tracks age, **the price split lands substantially as an intergenerational transfer**, and the politics of the 2030s will run along that line at least as hard as along the employment one - housing politics is AI distribution politics whether or not anyone frames it that way.
+
 ## What could break the concentration
 
 Three mechanisms, in descending order of plausibility:

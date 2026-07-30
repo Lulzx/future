@@ -46,6 +46,8 @@ Even at parity, substitution does not follow. Three reasons, all of which favor 
 
 The third point is why the first deployments cluster where they do. **The economics work first where labor is expensive to *employ*, not where it is expensive to pay.**
 
+There is a fourth reason, and it is the one that binds hardest in practice: **the buyer is not comparing a robot to a worker, but to doing nothing.** Capital budgets are rationed, integration consumes scarce engineering attention, and the internal champion carries career risk if the deployment underperforms while the status quo carries none. So the hurdle rate applied to an automation project is far above the cost of capital, and a system at exact wage parity is rejected without anyone computing a delivered cost per hour. Adoption requires a visible multiple, not a crossing, which is a large part of why every automation forecast built on parity arithmetic has been early. The historical analogue is industrial robots in general manufacturing, where the arithmetic worked long before the installed base reflected it.
+
 ## Where the curve actually bends
 
 Falling unit prices matter less than these three, in order:
@@ -61,6 +63,12 @@ Falling unit prices matter less than these three, in order:
 The delivered-cost model has a term that is not technological at all: **who manufactures the robot.** A vertically integrated producer with domestic actuator, magnet, and cell supply faces a materially different cost curve than one assembling imported components, and the gap is larger than any plausible software advantage. → [Supply chain](supply-chain.md)
 
 This is the point at which robotics economics stops being a technology question and becomes an industrial-policy one.
+
+## Failure modes for the delivered-cost model
+
+- **If robots are sold as a service rather than as capital**, the hurdle-rate objection above weakens considerably, because the buyer stops making a capital decision and starts making an operating one that is directly comparable to a wage. Robots-as-a-service is the pricing structure to watch, and its spread would be evidence that vendors understand the real obstacle is procurement psychology rather than unit cost.
+- **If integration standardizes**, the term with the most uncertainty in the numerator collapses fastest, and the crossover arrives earlier than the hardware trend implies. This is a tooling and interface problem of the kind that historically resolves quickly once volume justifies it.
+- **If the success-rate term proves environment-specific**, then delivered cost stays low in the settings where fleets already run and never falls in new ones, and the sector matures into a set of profitable vertical businesses rather than a general labor substitute. That outcome looks like success commercially and like failure against the [2032–2040](../../../04-timelines/2032-2040.md) growth-rate claim, and it is the resolution the [data problem](data-problem.md) considers most likely if transfer does not improve.
 
 ---
 

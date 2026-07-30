@@ -58,6 +58,16 @@ The likely political responses follow directly, and are worth predicting because
 - Housing supply politics intensifying, since land is the purest inelastic complement there is
 - Pressure on healthcare and education costs, being the two categories that already resisted every previous technology-driven deflation
 
+## How the split could fail to arrive
+
+The inflating half is inflating *given current supply institutions*, and that conditionality is the claim's main exposure. If [permitting reform](../06-uncertainties/power-permitting.md) unlocks the energy build and housing liberalization spreads, the physical basket's inflation moderates and the split narrows to something an index can average without distortion - the benign failure. The malign failure is subtler: if cognitive deflation stalls because the complements *inside* services reassert themselves - the licensed body in the room, the liability holder, the [distribution chokepoint](../02-games/3-firms.md) - then measured services prices never fall much and the two economies quietly collapse back into one. **The split is a prediction about institutions as much as technology**, which is why it scores on the relative series [B7](../07-indicators/diffusion.md) fixes, never on either half alone.
+
+There is also a self-referential wrinkle worth naming: the inflating basket's service components are wage-driven, and rising trades and care wages are simultaneously this page's inflation problem and [Assets](assets.md)' distributional compensation. The same number is the disease in one chapter and the cure in another - which is not a contradiction, but it does mean policy that suppresses the inflating half suppresses the one channel through which labor keeps a complement.
+
+## Indexation: where mismeasurement becomes money
+
+The measurement problem stops being academic at the point of indexation. Pensions, benefits, tax brackets, and wage agreements are indexed to headline CPI. For households that consume a meaningful share of the deflating basket, headline CPI overstates their experienced cost-of-living change, and indexed transfers quietly overcompensate - compounding the [fiscal](fiscal.md) squeeze from the expenditure side. But the error reverses across the income distribution: for low-income households whose basket is dominated by the inflating half, the same index *understates* experienced inflation, and indexation undercompensates exactly the group the split hits hardest. **One index, indexing two populations with opposite errors.** Expect the fight over the measurement standard to arrive alongside the target-definition debate above, and for it to be conducted as a technical dispute while being a distributional one.
+
 ## Baumol, inverted and weaponized
 
 The classic Baumol story: sectors with no productivity growth get relatively more expensive as wages rise economy-wide, which is why a haircut and a string quartet cost more each decade.

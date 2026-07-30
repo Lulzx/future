@@ -33,6 +33,12 @@ The parts that don't need the seasonal loop:
 | Specialty harvest | Expensive manipulation | 2030s+ with robotics |
 | Breeding validation | Biology's clock | Slow |
 
+## Why the seasonal loop is worse than it sounds
+
+One label per season understates the problem, because the labels are not independent draws from a stable process. Each year's result is confounded by weather, and weather is the dominant term: a management change worth a few percent of yield is buried inside season-to-season variance several times larger. Separating the signal takes either many years, during which the underlying agronomy and genetics have changed, or many fields, which requires replication across operations that do not share data. **The effective sample size is far below the number of observations**, and this is the general form of the problem in every domain where outcomes are noisy and slow rather than merely delayed.
+
+The workaround the industry actually uses is on-farm strip trials at scale, and it is a good one: split fields, randomized treatments, thousands of operations, one season. That is a real path to statistical power and it is exactly why equipment telemetry is valuable to the manufacturer holding it. It also means the entity best positioned to learn agronomy is the one with the largest installed base of instrumented machines, not the one with the best model, which is the [fleet-learning argument](robotics/data-problem.md) transplanted into a field and the reason the data-ownership fight below is the load-bearing one.
+
 ## The economics are the real constraint
 
 Farm operating margins are thin and volatile, capital cycles run 10–20 years on equipment, and the median operator is in their late fifties. Adoption is gated by **capital availability and trust**, not by capability.
@@ -50,6 +56,8 @@ Agriculture is ~1% of US GDP and ~25% of employment globally. The gains are conc
 The obstacle there is not model capability, which is free. It is smartphone penetration, connectivity, extension services, credit access, and land tenure security. Every one of those is a development problem with a fifty-year literature, and none of them are accelerated by better models.
 
 That is the pattern the whole document keeps producing: **the technology arrives free and the complements do not.** → [Global South](../contested/geopolitics/global-south.md) (welfare up, growth strategy may still fail)
+
+There is a further asymmetry that makes the smallholder case harder than the connectivity framing suggests. Precision agriculture converts information into value through machinery: a variable-rate recommendation requires a variable-rate applicator, and an autonomy recommendation requires a machine to be autonomous. On a two-hectare holding the capital required to act on better information exceeds the value of the information by a wide margin, so the free advice binds against a capital constraint rather than an information one. The forms that do transfer are the ones needing no equipment - pest and disease identification from a phone camera, planting-date and market-timing advice, input-quality verification - and those are real and worth having. **The welfare gain in low-income agriculture is likely to be substantial and to come almost entirely from the advisory layer rather than the automation layer**, which is a different and smaller claim than the one usually made for AI in development.
 
 ## Labor and demography
 

@@ -16,6 +16,16 @@ It is morally convenient: if the problem is a missing agreement, the solution is
 
 Export controls and compute governance try to change the contest from outside. They also [degrade the only future verification lever](../03-domains/contested/geopolitics/bipolar.md) - a trap Game 2 and Part V row 4 inherit.
 
+## What contest theory actually predicts here
+
+Three standard results map cleanly onto observed behavior, which is the reason to trust the frame:
+
+1. **Dissipation scales with closeness.** In a Tullock contest, aggregate effort is maximal when contestants are evenly matched and falls off as one pulls ahead. This predicts spending surges whenever a rival demonstrates parity (each capability leapfrog triggers a budget response) and predicts that a durable capability gap, if one ever opened, would *cool* the race rather than heat it. The observed pattern since 2023 - training budgets ratcheting after every rival release - is the evenly-matched regime.
+2. **Asymmetric outside options sort who over-spends.** A pure-play lab's continuation value outside the contest is roughly zero; a hyperscaler's is its existing business. Standard results say the player with the worse outside option rationally spends a *larger share* of its resources on the contest. That is the mechanism behind the consolidation prediction below: pure-plays are structurally the over-extended players, so a funding shock culls them first, not because they are worse at research but because their balance sheets are all contest.
+3. **The prize is partly constructed by the contestants.** Winner-take-most is an assumption about markets, not a law. If [inference economics](../01-substrate/inference-economics.md) holds and frontier advantage decays in months, the true prize is smaller than contestants behave as if it is - which makes the observed spend *over*-dissipation twice over. The alternative reading, that contestants are buying a small chance of a decisive, compounding lead ([Uncertainty 1](../06-uncertainties/recursive-self-improvement.md)), is the only way to rationalize current spend as an expected-value bet rather than a trap. Which reading is right is not settleable now; the spend is consistent with both rational lottery-ticket purchase and classic contest over-dissipation.
+
+**Failure mode for the frame itself:** if one lab opens a gap the others visibly cannot close and spending *still* accelerates, the contest model is missing something - most likely that the contestants are playing for state patronage rather than market prize, at which point Game 2 has absorbed Game 1.
+
 ## The safety undersupply, and three things that push back
 
 Safety is a public good with private cost, so it's undersupplied relative to social optimum. But three forces push back harder than the naive model suggests:
@@ -49,6 +59,8 @@ Closing the open tier would require a different contest structure (criminalizati
 A [correction](../01-substrate/capital.md) is **differentially destructive**: commercially financed labs exit; strategically financed ones (sovereign, hyperscaler, state-directed) remain. Post-correction the contest has fewer players and more state adjacency - which changes Game 2 more than it changes the capability curve.
 
 Sovereign buyers sit outside NPV discipline. That is how the [$100B training run](../01-substrate/compute.md) can survive a commercial winter: the buyer changes.
+
+Consolidation does not end the contest; it changes its currency. With 3–5 players, most of them state-adjacent, the contest prize shifts from market position toward strategic position, tacit coordination on price becomes feasible in the commercial layer, and the safety-relevant competition migrates into Game 2 where the players are governments. The endgame of Game 1 is not a winner - it is a handoff.
 
 ## Prediction
 

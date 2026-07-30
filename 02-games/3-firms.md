@@ -34,10 +34,31 @@ This is Baumol's cost disease inverted and weaponized. **As cognition approaches
 
 If one sentence carries through the next decade, that's it.
 
-## The test to apply
+## Where the Bertrand result does not apply
 
-For any business, ask: which of my inputs gets cheaper as intelligence gets cheaper, and which doesn't? Value accrues entirely to the second category. A business whose scarce input is on the first list is holding a wasting asset regardless of how well it executes.
+The scope condition does real work, so state it precisely. Surplus escapes to producers wherever entry is blocked or price competition is muted:
+
+- **Regulated and licensed oligopolies** (healthcare delivery, law, banking, utilities): the cost reduction arrives but prices are set by reimbursement schedules, fee customs, or rate cases, so the adopter keeps the spread until the regulator or client notices. Here AI is margin, at least for a pricing cycle.
+- **Network-effect and default-placement businesses**: competition is for position, not price, so cheaper cognition widens the moat of whoever already holds distribution rather than eroding it.
+- **Monopolized upstream input**: if frontier models consolidated to a single practical vendor, the Bertrand logic would run upstream and the model vendor would tax the whole adopter layer. [Inference economics](../01-substrate/inference-economics.md) argues the moat is short (fast-following keeps the model layer itself competitive), which is why this document expects surplus to pass *through* the model layer rather than pool in it.
+
+The two-economy split in [Prices](../09-macro/prices.md) is this section restated as macro: the competitive tradables deflate, the licensed and land-linked sectors keep their prices, and measured inflation becomes a ratio between the two.
+
+## The transient rent, and who eats the adoption cost
+
+Bertrand is the end state, not the path. During diffusion, an early adopter holds a real cost advantage with a half-life set by rivals' adoption lag - quarters to a few years depending on sector reorganization friction ([Game 4](4-labor.md) covers why the friction is organizational). So the honest pitch to an adopter is not "no gains" but "a temporary spread that decays to zero, which you must nonetheless buy." Two second-order effects follow:
+
+1. **Over-adoption is its own dissipation.** Because the investment is defensive and the counterfactual is unobservable, boards mandate adoption under competitive fear rather than measured return. Spending above the optimizing level - consultant-led programs, shelfware seats, tool churn - is the firm-level analogue of Game 1's over-dissipation, and it is why survey-measured "AI spend" will persistently exceed anything visible in productivity statistics.
+2. **The adoption cost is recurring, not one-time.** Model generations turn over in months; integrations, evals, and retraining recur with them. The *c* in the model is closer to a subscription than a capex, which lowers the equilibrium net benefit to adopters further than the static story suggests.
+
+## Failure modes
+
+- **Incumbent capture of distribution**: if a handful of platforms intermediate AI for whole sectors and hold defaults, surplus stops at the platform instead of reaching consumers - the mechanism is intact but the beneficiary changes.
+- **Model-layer consolidation** below the point of effective competition - the upstream-monopoly case above; watch pricing power at the API layer rather than rhetoric.
+- **Regulated sectors expand** as a share of the economy (aging pushes healthcare share up) - then the exception outgrows the rule and the aggregate consumer-surplus claim weakens even though every mechanism here still operates.
 
 ---
 
-**Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/cognitive/software.md) for the SaaS case · [Compressed version](../00-overview/compressed.md)
+**Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/cognitive/software.md) for the SaaS case · [Prices](../09-macro/prices.md) · [Compressed version](../00-overview/compressed.md)
+
+**Next:** [Game 4 - Labor](4-labor.md)
