@@ -46,7 +46,7 @@ When a queue is the constraint, the response is to leave the queue. That is what
 
 This changes who the players are. **A frontier lab is becoming a power company with a research division attached**, and the relevant competence shifts from ML engineering toward project finance, EPC management, and regulatory affairs. Expect org charts to follow the constraint within two years of it binding.
 
-> **Prediction:** by 2029, **>40%** of new frontier-training capacity in the US is powered by generation the operator owns or has contracted bilaterally, rather than by grid supply procured at tariff. The grid becomes the backup, not the source.
+> **Prediction:** by 2029, **>40%** of new frontier-training capacity in the US is powered by generation the operator owns or has contracted bilaterally, rather than by grid supply procured at tariff. The grid becomes the backup, not the source. **~65%** confidence (stamped round 19): this mostly extrapolates capital already committed by mid-2026; the miss scenario is interconnection and permitting reform making tariff supply competitive again, not a reversal of intent.
 
 ## The political economy of the electricity bill
 

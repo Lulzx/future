@@ -14,11 +14,13 @@ Ordered by due date. "P" is the stated confidence at the source; the source page
 
 | Due | P | Claim (short) | Where |
 |---|---|---|---|
+| 2029 | ~65% | >40% of new US frontier-training capacity on owned or bilateral generation | [Energy](../01-substrate/energy.md) |
 | 2030 | ~55% | Driver-out hub-to-hub freight at commercial scale on major US corridors | [Logistics](../03-domains/physical/logistics.md) |
 | 2030 | ~60% | Binding rules on companion AI for minors in major markets | [Meaning](../03-domains/cognitive/meaning.md) |
 | 2030 | ~70% | AI-specific liability coverage as a material line with published rates | [Insurance](../03-domains/cognitive/insurance.md) |
 | 2032 | ~60% | Cyber: deterioration 2026–29, then structural improvement in the 2030s | [Cybersecurity](../03-domains/contested/cybersecurity.md) |
 | 2032 | ~70% | Majority of general-purpose robot units manufactured globally are Chinese-made | [Robotics — supply chain](../03-domains/physical/robotics/supply-chain.md) |
+| 2032 | ~70% | Agricultural yield gains real (5–15% per input) while farm operating margins stay statistically unchanged | [Agriculture](../03-domains/physical/agriculture.md) |
 | 2032 | ~90% | No major disruption to Taiwanese leading-edge output *(input assumption)* | [Uncertainty 4](../06-uncertainties/taiwan.md) |
 | 2035 | ~15% | Meaningful UBI in a major economy | [Fiscal](../09-macro/fiscal.md) |
 | 2035 | ~30% | Gulf capacity converts into broad domestic economic transformation | [Gulf](../03-domains/contested/geopolitics/gulf.md) |
@@ -41,12 +43,7 @@ Ordered by due date. "P" is the stated confidence at the source; the source page
 |---|---|---|
 | 50 / 30 / 20 | Entry-level hiring decline: AI substitution / cyclical / work-organization — flagged at source as the number most likely to be revised | [Game 4](../02-games/4-labor.md) |
 
-## Predictions without a confidence number
-
-Two blockquoted predictions state a threshold but no probability. Both are scoreable as written (the threshold resolves them), so this is a flag, not a violation — but a future round should either stamp them or say why a stamp adds nothing:
-
-- **Energy, 2029** — >40% of new US frontier-training capacity on owned or bilaterally-contracted generation ([Energy](../01-substrate/energy.md); already in [first claims due](../08-method/scoring.md))
-- **Agriculture, 2032** — yield gains real (5–15% per input) while farm operating margins stay statistically unchanged ([Agriculture](../03-domains/physical/agriculture.md))
+*Round 19 closed the two flags this page opened in round 18: the energy 2029 and agriculture 2032 predictions were stamped (~65%, ~70%) at source and moved into the table above.*
 
 ## How this page is maintained
 

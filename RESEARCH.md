@@ -101,7 +101,8 @@ Every content file:
 | 15 | 2026-07-30 | Ag+logistics depth; B11 meaning indicators; energy split deferred | 82 | 5,547 |
 | 16 | 2026-07-30 | C8 provenance; inference+Part I; games/thesis/compressed sync | 82 | 5,613 |
 | 17 | 2026-07-30 | [B12](07-indicators/diffusion.md) physical diffusion; [compute](01-substrate/compute.md)+[data](01-substrate/data.md); reader Find + [catalog.json](catalog.json) | 82 | 5,683 |
-| 18 | 2026-07-30 | Re-score mode: [register](05-probabilities/register.md) of 16 distributed probabilities (invariant-4 closure); r13–17 hold pass in [ledger](05-probabilities/ledger.md); prices/assets ↔ B7/B12 sync | **83** | **5,762** |
+| 18 | 2026-07-30 | Re-score mode: [register](05-probabilities/register.md) of 16 distributed probabilities (invariant-4 closure); r13–17 hold pass in [ledger](05-probabilities/ledger.md); prices/assets ↔ B7/B12 sync | 83 | 5,762 |
+| 19 | 2026-07-30 | Stamped the two flagged predictions — [energy](01-substrate/energy.md) 2029 (~65%), [agriculture](03-domains/physical/agriculture.md) 2032 (~70%) — with written rationale at source; register rows added | **83** | **5,759** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -111,17 +112,16 @@ Every content file:
 
 **Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**Round 18:** Part V register indexes every probability-stamped blockquote outside the main table (closing the invariant-4 gap); rows 1–7 reviewed against rounds 13–17 and held with written justification; two unstamped predictions (energy 2029, agriculture 2032) flagged for a future confidence stamp. New rule from this round, recorded in the register: any round adding a probability-stamped blockquote adds a register row in the same Reconcile step.
+**Round 19:** closed the r18 flags. Energy 2029 stamped ~65% — mostly extrapolation of committed capital, miss scenario is grid reform, not intent reversal. Agriculture 2032 stamped ~70% — the capture half rides a two-century base rate, the measurement half carries the risk. Both stamps carry their rationale at source per the register's same-round rule. The register now has no unstamped entries; every scoreable claim in the corpus carries a confidence number.
 
-*Invariants at r18 close: **83 files, 5,762 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
+*Invariants at r19 close: **83 files, 5,759 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
 
 ## 6. Open queue
 
 **High**
 
 1. **Stay in re-score mode** — next Part V pass when real time has passed or an indicator trigger fires, not before; new domains only on demonstrated need.
-2. **Stamp or justify** the two unstamped predictions flagged in the [register](05-probabilities/register.md) (energy 2029, agriculture 2032).
-3. **Archive RESEARCH** history if the log is the main maintenance drag.
+2. **Archive RESEARCH** history if the log is the main maintenance drag.
 
 **Medium**
 - FOAK energy R&D only past soft cap; harden B12 baselines when public data exists.
@@ -129,7 +129,7 @@ Every content file:
 **Low**
 - Fancy reader features beyond Find.
 
-**Retired (r1–r18):** … + B12; compute/data; catalog Find; macro↔indicator sync; register.
+**Retired (r1–r19):** … + B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps.
 
 ## 7. Invariants
 

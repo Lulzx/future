@@ -41,7 +41,7 @@ The distributional consequence is stark and follows directly from [Game 3](../..
 
 **The inelastic complement in agriculture is land and water rights.** That is where value accrues, and it is why farmland has behaved as a financial asset for decades regardless of what happened to farm income. → [Assets](../../09-macro/assets.md), [Prices](../../09-macro/prices.md) (food in the inflating physical basket when energy/water bind)
 
-> **Prediction:** by 2032, AI-driven agricultural productivity gains are **real and measurable** — plausibly 5–15% on yield-per-input in adopting operations — and **almost entirely captured by consumers, landowners, and equipment manufacturers**, with farm operating margins statistically unchanged.
+> **Prediction:** by 2032, AI-driven agricultural productivity gains are **real and measurable** — plausibly 5–15% on yield-per-input in adopting operations — and **almost entirely captured by consumers, landowners, and equipment manufacturers**, with farm operating margins statistically unchanged. **~70%** confidence (stamped round 19): the capture half rides a two-century base rate; the risk sits in the measurement half, because "adopting operations" is a self-selected sample and the joint claim fails if the yield signal cannot be separated from it by 2032.
 
 ## Why it matters more than its GDP share suggests
 
