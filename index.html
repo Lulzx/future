@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Next Fifteen Years</title>
+<meta name="description" content="A fifteen-year forecast built from first principles.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▚</text></svg>">
+<style>
+/* ── the-monospace-web · reset.css ─────────────────────────────────────────
+   By Oskar Wickström — MIT
+   https://github.com/owickstrom/the-monospace-web                          */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0; padding: 0; border: 0;
+  font-size: 100%; font: inherit; vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* ── the-monospace-web · index.css ──────────────────────────────────────── */
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+
+:root {
+  --font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --line-height: 1.20rem;
+  --border-thickness: 2px;
+  --text-color: #000;
+  --text-color-alt: #666;
+  --background-color: #fff;
+  --background-color-alt: #eee;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff; --text-color-alt: #aaa;
+    --background-color: #000; --background-color-alt: #111;
+  }
+}
+:root[data-theme="dark"] {
+  --text-color: #fff; --text-color-alt: #aaa;
+  --background-color: #000; --background-color-alt: #111;
+}
+:root[data-theme="light"] {
+  --text-color: #000; --text-color-alt: #666;
+  --background-color: #fff; --background-color-alt: #eee;
+}
+
+* { box-sizing: border-box; }
+* + * { margin-top: var(--line-height); }
+
+html {
+  display: flex; width: 100%; margin: 0; padding: 0;
+  flex-direction: column; align-items: center;
+  background: var(--background-color); color: var(--text-color);
+}
+body {
+  position: relative; width: 100%; margin: 0;
+  padding: var(--line-height) 2ch;
+  max-width: calc(min(80ch, round(down, 100%, 1ch)));
+  line-height: var(--line-height);
+  overflow-x: hidden;
+}
+@media screen and (max-width: 480px) {
+  :root { font-size: 14px; }
+  body { padding: var(--line-height) 1ch; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+  line-height: var(--line-height);
+}
+h1 {
+  font-size: 2rem; line-height: calc(2 * var(--line-height));
+  margin-bottom: calc(var(--line-height) * 2); text-transform: uppercase;
+}
+h2 { font-size: 1rem; text-transform: uppercase; }
+
+hr {
+  position: relative; display: block; height: var(--line-height);
+  margin: calc(var(--line-height) * 1.5) 0; border: none; color: var(--text-color);
+}
+hr:after {
+  display: block; content: ""; position: absolute;
+  top: calc(var(--line-height) / 2 - var(--border-thickness));
+  left: 0; width: 100%;
+  border-top: calc(var(--border-thickness) * 3) double var(--text-color);
+  height: 0;
+}
+
+a { text-decoration-thickness: var(--border-thickness); }
+a:link, a:visited { color: var(--text-color); }
+
+p { margin-bottom: var(--line-height); word-break: break-word; word-wrap: break-word; hyphens: auto; }
+strong { font-weight: var(--font-weight-bold); }
+em { font-style: italic; }
+
+table {
+  position: relative; top: calc(var(--line-height) / 2);
+  width: calc(round(down, 100%, 1ch));
+  border-collapse: collapse; margin: 0 0 calc(var(--line-height) * 2);
+}
+th, td {
+  border: var(--border-thickness) solid var(--text-color);
+  padding:
+    calc((var(--line-height) / 2))
+    calc(1ch - var(--border-thickness) / 2)
+    calc((var(--line-height) / 2) - (var(--border-thickness)));
+  line-height: var(--line-height); vertical-align: top; text-align: left;
+}
+table tbody tr:first-child > * { padding-top: calc((var(--line-height) / 2) - var(--border-thickness)); }
+th { font-weight: 700; }
+.width-min { width: 0%; }
+.width-auto { width: 100%; }
+
+.header { margin-bottom: calc(var(--line-height) * 2); }
+.header h1 { margin: 0; }
+.header tr td:last-child { text-align: right; }
+
+pre { white-space: pre; overflow-x: auto; margin: var(--line-height) 0; overflow-y: hidden; }
+pre, code { font-family: var(--font-family); }
+code { font-weight: var(--font-weight-medium); }
+
+ul, ol { padding: 0; margin: 0 0 var(--line-height); }
+ul { list-style-type: square; padding: 0 0 0 2ch; }
+ol { list-style-type: none; counter-reset: item; padding: 0 0 0 2ch; }
+ol ul, ol ol, ul ol, ul ul { padding: 0 0 0 3ch; margin: 0; }
+ol li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item; font-weight: var(--font-weight-medium);
+}
+li { margin: 0; padding: 0; }
+li::marker { line-height: 0; }
+::-webkit-scrollbar { height: var(--line-height); }
+
+button {
+  border: var(--border-thickness) solid var(--text-color);
+  padding: calc(var(--line-height) / 2 - var(--border-thickness)) calc(1ch - var(--border-thickness));
+  margin: 0; font: inherit; font-weight: var(--font-weight-medium);
+  height: calc(var(--line-height) * 2);
+  background: var(--background-color); color: var(--text-color);
+  line-height: normal; text-transform: uppercase; cursor: pointer;
+  -webkit-appearance: none;
+}
+button:hover { background: var(--background-color-alt); }
+button:active { transform: translate(2px, 2px); }
+
+/* ── additions for the markdown renderer ────────────────────────────────── */
+
+blockquote {
+  margin: var(--line-height) 0;
+  padding: 0 0 0 2ch;
+  border-left: var(--border-thickness) solid var(--text-color);
+}
+blockquote > *:first-child { margin-top: 0; }
+blockquote > p:last-child { margin-bottom: 0; }
+
+code:not(pre code) {
+  background: var(--background-color-alt);
+  padding: 0 0.4ch;
+}
+pre {
+  border: var(--border-thickness) solid var(--text-color);
+  padding: calc(var(--line-height) / 2) 1ch;
+}
+pre code { background: none; padding: 0; }
+
+/* tables must scroll inside their own box, never the page */
+.table-scroll {
+  overflow-x: auto;
+  margin: 0 0 calc(var(--line-height) * 2);
+}
+.table-scroll table { margin-bottom: 0; }
+.table-scroll table { min-width: 100%; }
+
+.masthead { margin-bottom: calc(var(--line-height) * 2); }
+.masthead h1 { margin: 0; font-size: 1.6rem; }
+.masthead .subtitle { color: var(--text-color-alt); }
+.masthead a { text-decoration: none; }
+.masthead a:hover { text-decoration: underline; }
+
+.crumb {
+  color: var(--text-color-alt);
+  margin-top: var(--line-height);
+  word-break: break-all;
+}
+.crumb a { color: var(--text-color-alt); }
+
+.toolbar {
+  display: flex; gap: 1ch; align-items: baseline; flex-wrap: wrap;
+  margin-top: var(--line-height);
+}
+.toolbar button { height: calc(var(--line-height) * 1.8); font-size: 0.8rem; }
+
+#content > *:first-child { margin-top: 0; }
+#content h1 { word-break: break-word; }
+
+.pagenav {
+  margin-top: calc(var(--line-height) * 2);
+  padding-top: var(--line-height);
+  border-top: var(--border-thickness) solid var(--text-color);
+  color: var(--text-color-alt);
+}
+
+.msg { color: var(--text-color-alt); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <h1><a href="#/README.md">The Next Fifteen Years</a></h1>
+  <div class="subtitle">A forecast built from first principles</div>
+  <div class="crumb" id="crumb"></div>
+  <div class="toolbar">
+    <button id="theme" type="button" title="Toggle light / dark">Theme</button>
+    <button id="src" type="button" title="View this page's markdown source on GitHub">Source</button>
+    <button id="top" type="button" title="Back to the index">Index</button>
+  </div>
+</header>
+
+<hr>
+
+<main id="content"><p class="msg">Loading…</p></main>
+
+<script>
+"use strict";
+
+/* ══════════════════════════════════════════════════════════════════════════
+   A small markdown parser. Handles exactly the subset this corpus uses:
+   ATX headings, thematic breaks, GFM tables, blockquotes, fenced code,
+   ordered and unordered lists (one level of nesting), and the inline set
+   (emphasis, strong, code spans, strikethrough, links, autolinks).
+   ══════════════════════════════════════════════════════════════════════════ */
+
+const REPO = "https://github.com/Lulzx/future";
+const DEFAULT_DOC = "README.md";
+
+/* ── path resolution ─────────────────────────────────────────────────────── */
+
+function normalize(path) {
+  const out = [];
+  for (const part of path.split("/")) {
+    if (part === "" || part === ".") continue;
+    if (part === "..") { out.pop(); continue; }
+    out.push(part);
+  }
+  return out.join("/");
+}
+
+function dirname(path) {
+  const i = path.lastIndexOf("/");
+  return i === -1 ? "" : path.slice(0, i);
+}
+
+// Resolve an href found inside `base` (a doc path) to a doc path, or null if
+// the link is external / an anchor.
+function resolveDoc(href, base) {
+  if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("//") || href.startsWith("#")) {
+    return null;
+  }
+  const [rawPath, hash] = href.split("#");
+  let target = normalize(dirname(base) + "/" + rawPath);
+  if (rawPath.endsWith("/") || !/\.[a-z0-9]+$/i.test(rawPath)) {
+    target = normalize(target + "/README.md");
+  }
+  if (!target.endsWith(".md")) return null;
+  return hash ? target + "#" + hash : target;
+}
+
+/* ── inline ──────────────────────────────────────────────────────────────── */
+
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function inline(src, base) {
+  const codes = [];
+  // Pull code spans out first so their contents are never re-parsed. The
+  // sentinel uses private-use code points, so it can never collide with real
+  // text -- a bare " 42 " would otherwise be mistaken for a placeholder.
+  const S0 = "\uE000", S1 = "\uE001";
+  let s = src.replace(/(`+)([\s\S]*?)\1/g, (_, __, body) => {
+    codes.push(body.trim());
+    return S0 + (codes.length - 1) + S1;
+  });
+
+  s = escapeHtml(s);
+
+  // [text](href)
+  s = s.replace(/\[([^\]]*)\]\(([^)\s]+)\)/g, (m, text, href) => {
+    const doc = resolveDoc(href, base);
+    if (doc) return `<a href="#/${doc}">${text}</a>`;
+    if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("//")) {
+      return `<a href="${href}" rel="noopener noreferrer" target="_blank">${text}</a>`;
+    }
+    return `<a href="${href}">${text}</a>`;
+  });
+
+  s = s.replace(/&lt;(https?:\/\/[^\s>]+)&gt;/g,
+      '<a href="$1" rel="noopener noreferrer" target="_blank">$1</a>');
+
+  s = s.replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>");
+  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|[^*\w])\*([^*\n]+)\*(?![*\w])/g, "$1<em>$2</em>");
+  s = s.replace(/~~([^~]+)~~/g, "<del>$1</del>");
+
+  s = s.replace(/\uE000(\d+)\uE001/g, (_, i) => `<code>${escapeHtml(codes[+i])}</code>`);
+  return s;
+}
+
+/* ── blocks ──────────────────────────────────────────────────────────────── */
+
+const RE_HEADING   = /^(#{1,6})\s+(.*)$/;
+const RE_HR        = /^\s{0,3}(-{3,}|\*{3,}|_{3,})\s*$/;
+const RE_FENCE     = /^\s*(```|~~~)(.*)$/;
+const RE_QUOTE     = /^\s{0,3}>\s?(.*)$/;
+const RE_UL        = /^(\s*)[-*+]\s+(.*)$/;
+const RE_OL        = /^(\s*)(\d+)[.)]\s+(.*)$/;
+const RE_TROW      = /^\s*\|(.*)\|\s*$/;
+const RE_TSEP      = /^\s*\|?[\s:|-]*-[\s:|-]*\|?\s*$/;
+
+function splitRow(line) {
+  return line.replace(/^\s*\|/, "").replace(/\|\s*$/, "")
+             .split("|").map(c => c.trim());
+}
+
+function parse(lines, base) {
+  const out = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (!line.trim()) { i++; continue; }
+
+    // fenced code
+    const fence = line.match(RE_FENCE);
+    if (fence) {
+      const marker = fence[1];
+      const buf = [];
+      i++;
+      while (i < lines.length && !lines[i].trim().startsWith(marker)) buf.push(lines[i++]);
+      i++; // closing fence
+      out.push(`<pre><code>${escapeHtml(buf.join("\n"))}</code></pre>`);
+      continue;
+    }
+
+    // thematic break — checked before lists so `---` never reads as a bullet
+    if (RE_HR.test(line)) { out.push("<hr>"); i++; continue; }
+
+    // heading
+    const h = line.match(RE_HEADING);
+    if (h) {
+      const level = h[1].length;
+      const text = inline(h[2].trim(), base);
+      const id = h[2].trim().toLowerCase()
+        .replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
+      out.push(`<h${level} id="${id}">${text}</h${level}>`);
+      i++;
+      continue;
+    }
+
+    // table
+    if (RE_TROW.test(line) && i + 1 < lines.length && RE_TSEP.test(lines[i + 1])) {
+      const head = splitRow(line);
+      i += 2;
+      const body = [];
+      while (i < lines.length && RE_TROW.test(lines[i])) body.push(splitRow(lines[i++]));
+      const th = head.map(c => `<th>${inline(c, base)}</th>`).join("");
+      const rows = body.map(r =>
+        "<tr>" + r.map(c => `<td>${inline(c, base)}</td>`).join("") + "</tr>").join("");
+      const headEmpty = head.every(c => c === "");
+      out.push(
+        `<div class="table-scroll"><table>` +
+        (headEmpty ? "" : `<thead><tr>${th}</tr></thead>`) +
+        `<tbody>${rows}</tbody></table></div>`
+      );
+      continue;
+    }
+
+    // blockquote
+    if (RE_QUOTE.test(line)) {
+      const buf = [];
+      while (i < lines.length && RE_QUOTE.test(lines[i])) {
+        buf.push(lines[i].match(RE_QUOTE)[1]);
+        i++;
+      }
+      out.push(`<blockquote>${parse(buf, base)}</blockquote>`);
+      continue;
+    }
+
+    // lists
+    if (RE_UL.test(line) || RE_OL.test(line)) {
+      const ordered = RE_OL.test(line);
+      const baseIndent = (line.match(ordered ? RE_OL : RE_UL)[1] || "").length;
+      const items = [];
+      while (i < lines.length) {
+        const cur = lines[i];
+        const mu = cur.match(RE_UL), mo = cur.match(RE_OL);
+        const m = ordered ? mo : mu;
+        const anyM = mu || mo;
+        if (!anyM) {
+          // lazy continuation of the current item
+          if (cur.trim() && items.length && !RE_HR.test(cur) && !RE_HEADING.test(cur) && !RE_TROW.test(cur) && !RE_QUOTE.test(cur)) {
+            items[items.length - 1].lines.push(cur.trim());
+            i++;
+            continue;
+          }
+          break;
+        }
+        const indent = (anyM[1] || "").length;
+        if (indent > baseIndent) {
+          // nested list — collect its lines and recurse
+          const sub = [];
+          while (i < lines.length) {
+            const nm = lines[i].match(RE_UL) || lines[i].match(RE_OL);
+            if (!nm || (nm[1] || "").length <= baseIndent) break;
+            sub.push(lines[i].slice(baseIndent + 1));
+            i++;
+          }
+          if (items.length) items[items.length - 1].sub = parse(sub, base);
+          continue;
+        }
+        if ((mu && ordered) || (mo && !ordered)) break; // list type changed
+        items.push({ lines: [ordered ? mo[3] : mu[2]], sub: "" });
+        i++;
+      }
+      const tag = ordered ? "ol" : "ul";
+      const html = items.map(it =>
+        `<li>${inline(it.lines.join(" "), base)}${it.sub}</li>`).join("");
+      out.push(`<${tag}>${html}</${tag}>`);
+      continue;
+    }
+
+    // paragraph
+    const buf = [];
+    while (i < lines.length && lines[i].trim() &&
+           !RE_HEADING.test(lines[i]) && !RE_HR.test(lines[i]) &&
+           !RE_QUOTE.test(lines[i]) && !RE_FENCE.test(lines[i]) &&
+           !RE_UL.test(lines[i]) && !RE_OL.test(lines[i]) &&
+           !(RE_TROW.test(lines[i]) && RE_TSEP.test(lines[i + 1] || ""))) {
+      buf.push(lines[i++]);
+    }
+    if (buf.length) out.push(`<p>${inline(buf.join("\n"), base)}</p>`);
+    else i++;
+  }
+
+  return out.join("\n");
+}
+
+function render(md, base) {
+  return parse(md.replace(/\r\n?/g, "\n").split("\n"), base);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Loader and router
+   ══════════════════════════════════════════════════════════════════════════ */
+
+const contentEl = document.getElementById("content");
+const crumbEl   = document.getElementById("crumb");
+const cache     = new Map();
+let currentDoc  = DEFAULT_DOC;
+
+function docFromHash() {
+  const raw = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+  const path = raw.split("#")[0];
+  if (!path) return DEFAULT_DOC;
+  return normalize(path).endsWith(".md") ? normalize(path) : DEFAULT_DOC;
+}
+
+function anchorFromHash() {
+  const raw = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+  const parts = raw.split("#");
+  return parts.length > 1 ? parts[1] : "";
+}
+
+function breadcrumb(doc) {
+  const segs = doc.split("/");
+  const out = [`<a href="#/${DEFAULT_DOC}">future</a>`];
+  let acc = "";
+  segs.forEach((seg, idx) => {
+    acc = acc ? acc + "/" + seg : seg;
+    const last = idx === segs.length - 1;
+    if (last) out.push(`<span>${escapeHtml(seg)}</span>`);
+    else out.push(`<a href="#/${acc}/README.md">${escapeHtml(seg)}</a>`);
+  });
+  return out.join(" / ");
+}
+
+async function load(doc) {
+  currentDoc = doc;
+  crumbEl.innerHTML = breadcrumb(doc);
+
+  let md = cache.get(doc);
+  if (md === undefined) {
+    contentEl.innerHTML = '<p class="msg">Loading…</p>';
+    try {
+      const res = await fetch(doc, { cache: "no-cache" });
+      if (!res.ok) throw new Error(res.status + " " + res.statusText);
+      md = await res.text();
+      cache.set(doc, md);
+    } catch (err) {
+      contentEl.innerHTML =
+        `<h1>Not found</h1><p class="msg">Could not load <code>${escapeHtml(doc)}</code> — ${escapeHtml(String(err.message || err))}.</p>` +
+        `<p><a href="#/${DEFAULT_DOC}">Back to the index</a></p>`;
+      document.title = "Not found · The Next Fifteen Years";
+      return;
+    }
+  }
+
+  contentEl.innerHTML = render(md, doc) +
+    `<div class="pagenav">` +
+      (doc === DEFAULT_DOC ? "" : `<a href="#/${DEFAULT_DOC}">↑ Index</a> · `) +
+      `<a href="${REPO}/blob/main/${doc}" rel="noopener noreferrer" target="_blank">View source</a>` +
+    `</div>`;
+
+  const h1 = contentEl.querySelector("h1");
+  document.title = (h1 ? h1.textContent.trim() : doc) + " · The Next Fifteen Years";
+
+  const anchor = anchorFromHash();
+  if (anchor) {
+    const el = document.getElementById(anchor);
+    if (el) { el.scrollIntoView(); return; }
+  }
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener("hashchange", () => load(docFromHash()));
+
+/* ── toolbar ─────────────────────────────────────────────────────────────── */
+
+const root = document.documentElement;
+const stored = localStorage.getItem("theme");
+if (stored) root.setAttribute("data-theme", stored);
+
+document.getElementById("theme").addEventListener("click", () => {
+  const isDark = root.getAttribute("data-theme") === "dark" ||
+    (!root.getAttribute("data-theme") &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const next = isDark ? "light" : "dark";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+});
+
+document.getElementById("src").addEventListener("click", () => {
+  window.open(`${REPO}/blob/main/${currentDoc}`, "_blank", "noopener");
+});
+
+document.getElementById("top").addEventListener("click", () => {
+  location.hash = "#/" + DEFAULT_DOC;
+});
+
+load(docFromHash());
+</script>
+
+</body>
+</html>
