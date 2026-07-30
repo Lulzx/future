@@ -28,6 +28,11 @@ DOMAIN="future.lulzx.space"
 
 cd "$(dirname "$0")"
 
+if [[ -x ./check-invariants.sh ]]; then
+  echo "→ invariants"
+  ./check-invariants.sh
+fi
+
 echo "→ syncing to ${HOST}:${REMOTE}"
 rsync -az --delete \
   --exclude '.git' \

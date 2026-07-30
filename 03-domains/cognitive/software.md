@@ -12,11 +12,30 @@ Expect **2–4× throughput on greenfield** and **near-zero gain on legacy integ
 
 Total developer employment probably **rises through 2030** (Jevons on software demand), while composition shifts hard toward senior/architectural and away from junior/implementation.
 
+| Work type | AI leverage | Employment pressure |
+|---|---|---|
+| Greenfield features, boilerplate, tests | High | Junior implementation ↓ |
+| Legacy integration, partial rewrites | Low–medium | Sticky; context is the moat |
+| Architecture, incident judgment, multi-team design | Low (verification expensive) | Senior demand ↑ |
+| Spec / review / eval harnesses | Medium–high | New hybrid roles |
+
 ## What it does to SaaS
 
 Software's marginal cost falls toward zero, threatening the SaaS model — per-seat pricing, high margin, defended by switching cost.
 
-If a bespoke internal tool costs $5k instead of $500k, **the long tail of vertical SaaS gets eaten from below.** The vendors that survive hold something other than the software: proprietary data, a compliance position, a network, or distribution.
+If a bespoke internal tool costs $5k instead of $500k, **the long tail of vertical SaaS gets eaten from below.** The vendors that survive hold something other than the software: proprietary data, a compliance position, a network, or distribution. → [Game 3](../../02-games/3-firms.md)
+
+### Seat → outcome (timeline consistency)
+
+[2026–2028](../../04-timelines/2026-2028.md) and [B5](../../07-indicators/diffusion.md): the commercial signature of agentic reliability is **pricing on outcomes, not seats**. Software is the first large market where that shift is visible.
+
+| Pricing | Assumes | Breaks when |
+|---|---|---|
+| Per-seat | Human operator per license | Agents do the work; headcount ≠ value |
+| Usage / tokens | Metered cognition | Race to zero on inference ([inference economics](../../01-substrate/inference-economics.md)) |
+| Outcome / success fee | Attributable results + liability | Reliability and indemnity unclear |
+
+Vendors that cannot reprice watch ARR per customer fall while usage rises. Buyers that accept outcome pricing reveal belief that unsupervised work is real — more honest than benchmarks.
 
 ## The apprenticeship problem is sharpest here
 
@@ -24,6 +43,36 @@ This domain is the leading indicator for [Game 4](../../02-games/4-labor.md) bec
 
 Removing them is efficient for every individual team and quietly catastrophic for the pipeline.
 
+Aligned with [law](law.md) (same pyramid economics) and [education](education.md) (credentials + missing junior years). Mid-2026 data already shows junior software postings and entry-level tech hire shares collapsing — see Game 4 tables.
+
+> **Discriminating test (shared with labor):** if junior eng hiring fails to recover when aggregate tech hiring does (~2027–28), substitution share was large. → [B1](../../07-indicators/diffusion.md)
+
+### Uncertainty 3 here first
+
+[Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md): AI as dense mentor could *shorten* novice→expert if feedback is grounded (tests, types, prod metrics). Software has the cheapest ground truth for that inversion — [science](science.md)-like verification on code. If the inversion fails here, it is unlikely to save law or consulting.
+
+## Security and supply chain
+
+[Cybersecurity](../contested/cybersecurity.md): model-written code at volume without review expands the vuln surface; autonomous fix loops help only if verification holds. SBOMs, signing, and least-privilege tools become inelastic complements to cheap generation.
+
+## What to watch
+
+| Signal | Reading |
+|---|---|
+| Entry-level eng posting share | Apprenticeship gap |
+| Seat vs outcome revenue mix at major AI-devtool vendors | Agentic commercial threshold |
+| Vertical SaaS churn / internal-tool build rates | Long-tail SaaS eaten |
+| Time-to-merge / incident rates with AI-heavy PRs | Throughput vs quality |
+| Intern / new-grad conversion rates at large tech | Pipeline health |
+
+## Failure modes
+
+- **If legacy integration unlocks** (better repo-scale agents), the 2–4× only-on-greenfield claim was too pessimistic and employment composition shifts faster.
+- **If junior hiring recovers with the cycle**, Game 4's software canary was cyclical noise.
+- **If outcome pricing stays niche**, agentic reliability was overstated for production; seat SaaS lasts longer.
+
 ---
 
-**Related:** [Game 4 — Labor](../../02-games/4-labor.md) · [Game 3 — Firms](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md)
+**Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md) · [Law](law.md) · [Cybersecurity](../contested/cybersecurity.md) · [2026–2028](../../04-timelines/2026-2028.md) · [B1](../../07-indicators/diffusion.md) · [B5](../../07-indicators/diffusion.md)
+
+**Next:** [Law](law.md)

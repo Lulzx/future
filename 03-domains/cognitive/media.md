@@ -25,6 +25,61 @@ Because humans value provenance for its own sake — the way handmade goods surv
 
 This is the clearest instance of a pattern that recurs across [Part III](../README.md): the distribution goes barbell-shaped. What survives is either irreplaceable or free. What dies is everything that was merely competent — which is, unfortunately, how most people in creative fields actually make a living.
 
+| Survives / grows | Dies / commoditizes |
+|---|---|
+| Live, in-person, high-trust presence | Mid-tier commercial illustration/copy/stock |
+| Provenanced / attested human work | SEO content mills (already dying) |
+| Elite brand + taste curation | "Competent enough" agency production |
+| Infinite free personalized slop | — (this is the other barbell end) |
+
+## Game 5: lemons on the open feed
+
+[Game 5](../../02-games/5-information.md): as synthetic share rises, average value of *unverified* content falls → retreat to walled gardens with provenance → enclosure of the open web (~85% substantially complete by 2030 on that page's assessment).
+
+Media is where that plays out daily:
+
+- **Platforms** become the scarce distribution and verification layer (or fake it)
+- **Creators** monetize relationship and live access more than unit content
+- **News** splits into authenticated brands vs pure engagement sludge; local news lacks the brand moat and gets hit worst
+
+This is not only "misinformation." It is **Akerlof dynamics on attention markets.**
+
+## Meaning, identity, and labor
+
+[Meaning](meaning.md): vocational identity for writers, designers, musicians, and video workers lands in the barbell's dead middle. Status and income compress toward:
+
+- Stars and live acts (inelastic presence)
+- Technical/adjacent roles (prompt ops is not a career ladder; tooling ownership and taste are)
+- Non-market or hybrid patronage
+
+[Education](education.md): creative credentials signal even less when portfolios are forgeable; invigilated and live review become the filter. Same cost inversion — teaching craft materials is free; assessing authenticity is expensive.
+
+> **Prediction:** by 2030, a majority of mid-market commercial creative budgets (SMB marketing, mid-tier brand kits, stock replacement) are majority AI-produced by cost, while **top-decile cultural spend** (live, celebrity, luxury provenance) rises in real terms. Barbell, not uniform replacement.
+
+## Platforms capture more than models
+
+[Game 3](../../02-games/3-firms.md): model vendors compete; surplus accrues to **distribution, data about attention, and payment rails**. Media platforms that own the feed and the identity graph capture more than the generators. "AI studio" pure-plays face Red Queen unless they own a channel or a rights library.
+
+Rights and training-data litigation is a **legal** complementary fight ([law](law.md)), not a capability one — it reallocates rents among studios, platforms, and labs without restoring the mid-tier job.
+
+## What to watch
+
+| Signal | Reading |
+|---|---|
+| Share of feed content with C2PA / provenance marks | Certification infrastructure real |
+| Live-event ticket prices vs streaming ARPU | Presence premium |
+| Mid-tier creative employment / rate cards | Barbell middle dying |
+| Platform take rates on AI-assisted creator tools | Who captures surplus |
+| Youth media diet: authenticated vs anonymous synthetic | [Meaning](meaning.md) / attention channel |
+
+## Failure modes
+
+- **If provenance never sticks** (easy to strip or ignore), authenticity premium stays pure brand storytelling and enclosure accelerates harder.
+- **If audiences stop caring about human origin**, the handmade analogy fails; only attention scarcity remains.
+- **If regulation forces labeling that works**, mid-tier human work may retain a compliance niche longer than the barbell implies.
+
 ---
 
-**Related:** [Game 5 — Information](../../02-games/5-information.md) · [Compressed version](../../00-overview/compressed.md)
+**Related:** [Game 5](../../02-games/5-information.md) · [Game 3](../../02-games/3-firms.md) · [Meaning](meaning.md) · [Education](education.md) · [Compressed](../../00-overview/compressed.md) · [B6](../../07-indicators/diffusion.md)
+
+**Next:** [Insurance](insurance.md)

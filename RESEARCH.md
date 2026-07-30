@@ -96,7 +96,8 @@ Every content file:
 | 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md); [meaning](03-domains/cognitive/meaning.md); [warfare](03-domains/contested/warfare.md) + [state capacity](03-domains/contested/state-capacity.md) depth | 80 | 4,874 |
 | 11 | 2026-07-30 | Winter archaeology; Game 2 pass; B10 fiscal indicator | 80 | 4,956 |
 | 12 | 2026-07-30 | Cyber+bio depth; education×meaning; Part V commentary hold | 80 | 5,084 |
-| 13 | 2026-07-30 | [Law](03-domains/cognitive/law.md)+[finance](03-domains/cognitive/finance.md)+[science](03-domains/cognitive/science.md); [notation](00-overview/notation.md)+[dependencies](00-overview/dependencies.md) | **82** | **5,353** |
+| 13 | 2026-07-30 | Law+finance+science; notation+dependencies | 82 | 5,353 |
+| 14 | 2026-07-30 | [Media](03-domains/cognitive/media.md)+[software](03-domains/cognitive/software.md) depth; [check-invariants.sh](check-invariants.sh) | **82** | **5,458** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -106,28 +107,28 @@ Every content file:
 
 **Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**r5–r12:** macro; demography; timelines+uncertainties; indicators+Games 1/5; energy/meaning/warfare/state; winters+Game2+B10; cyber/bio/education.
+**r5–r13:** macro; demography; timelines+uncertainties; indicators+Games 1/5; energy/meaning/warfare/state; winters+Game2+B10; cyber/bio/education; law/finance/science+notation/deps.
 
-**Round 13:** law (layers, insurance moat, apprenticeship canary); finance (monoculture, capex channel, Game 2); science (automated labs, drug+bio bridges); [notation](00-overview/notation.md) + [dependencies](00-overview/dependencies.md).
+**Round 14:** media (barbell, Game 5 lemons, meaning/labor, platform capture); software (seat→outcome, apprenticeship canary, Uncertainty 3, cyber supply chain); `./check-invariants.sh` for links, nav, hard cap, dir cap.
 
-*Invariants at r13 close: **82 files, 5,353 lines, 0 broken links**. RESEARCH.md protocol-ledger exemption continues.*
+*Invariants at r14 close: **82 files, 5,458 lines, 0 broken links** — verified by [check-invariants.sh](check-invariants.sh). RESEARCH.md protocol-ledger exemption continues.*
 
 ## 6. Open queue
 
 **High**
 
-1. **Media** depth vs Game 5 / meaning / education.
-2. **Software** consistency pass (apprenticeship + outcome pricing).
-3. **Automate invariants** check script (links, caps, parent headers).
+1. **Agriculture** and **logistics** depth vs medicine/robotics.
+2. **Meaning indicators** in Part VII (welfare channel hooks).
+3. **Energy sector** split if still overloaded as one page.
 
 **Medium**
-- Energy sector split; meaning indicators in Part VII.
-- Agriculture / logistics if still thin vs medicine/robotics.
+- Media/provenance into governance indicators.
+- ~~Wire invariants into deploy~~ — done r14 (`deploy.sh` preflight).
 
 **Low**
 - Archive RESEARCH history.
 
-**Retired (r1–r13):** … + law/finance/science; notation; dependency index.
+**Retired (r1–r14):** … + media/software depth; invariants script.
 
 ## 7. Invariants
 

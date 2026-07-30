@@ -95,4 +95,4 @@ The five that matter most. Full dashboard with trigger values in [Part VII](07-i
 
 *Read linearly by following the **Next** link at the foot of each page, starting from [Thesis](00-overview/thesis.md).*
 
-*This corpus is maintained by a repeating review-and-expand loop. See the [autoresearch protocol](RESEARCH.md) for thresholds, split rules, the round log, and the open queue.*
+*This corpus is maintained by a repeating review-and-expand loop. See the [autoresearch protocol](RESEARCH.md) for thresholds, split rules, the round log, and the open queue. Run `./check-invariants.sh` to verify links, caps, and nav headers.*
