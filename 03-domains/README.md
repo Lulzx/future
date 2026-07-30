@@ -4,7 +4,7 @@
 
 ---
 
-Sixteen domains, each read through the same two lenses from earlier parts: **how cheap is ground truth here** ([Data](../01-substrate/data.md)) and **what is the inelastic complement** ([Game 3](../02-games/3-firms.md)).
+Eighteen domains (counting regional geopolitics as one heading), each read through the same two lenses from earlier parts: **how cheap is ground truth here** ([Data](../01-substrate/data.md)) and **what is the inelastic complement** ([Game 3](../02-games/3-firms.md)).
 
 Where a prediction here looks surprising, the explanation is almost always one of those two.
 
@@ -19,10 +19,10 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [**C — Contested**](contested/) | An adversary optimizes against you with the same tools | The question is the offense–defense balance, not capability |
 
 ### [A — Cognitive](cognitive/)
-[Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md)
+[Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md) · [Meaning](cognitive/meaning.md)
 
 ### [B — Physical](physical/)
-[Medicine](physical/medicine/) · [Robotics](physical/robotics/) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
+[Medicine](physical/medicine/) · [Robotics](physical/robotics/) · [Energy sector](physical/energy-sector.md) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
 
 ### [C — Contested](contested/)
 [Geopolitics](contested/geopolitics/) · [Warfare](contested/warfare.md) · [Cybersecurity](contested/cybersecurity.md) · [Biosecurity](contested/biosecurity.md) · [State capacity](contested/state-capacity.md)
@@ -44,6 +44,8 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [Agriculture](physical/agriculture.md) | Seasonal — one experiment per year | Land, water, biology's clock | Slow |
 | [Education](cognitive/education.md) | Weak | Childcare, socialization, motivation | Slow, institutional |
 | [Media & culture](cognitive/media.md) | None | Provenance, presence | Now |
+| [Meaning](cognitive/meaning.md) | Weak / contested | Status, presence, costly care | Now; under-measured |
+| [Energy sector](physical/energy-sector.md) | Cheap in markets; expensive in plants | Wires, sites, interconnection | Ops now; atoms slow |
 | [Robotics](physical/robotics/) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
 | [State capacity](contested/state-capacity.md) | Weak | — | The precondition for the rest |
 | [Geopolitics](contested/geopolitics/) | N/A | — | 2030s structural break |

@@ -54,7 +54,7 @@ This is a genuine loss and it is not obviously recoverable. The open web worked 
 
 The same logic hits companionship and care. A message that *sounds* like care is now free; care that costs time is not. Institutions and people who used linguistic warmth as a proxy for commitment lose the proxy.
 
-This document underweights the welfare and mental-health channel (still on the [queue](../RESEARCH.md)). The information-economics claim that belongs here: **relationship signals cheapen on the text channel and concentrate on costly channels** (time, presence, shared risk). That is isomorphic to the credential story, applied to attachment rather than hiring.
+The welfare and mental-health channel is developed in [Meaning, work, and relationships](../03-domains/cognitive/meaning.md). The information-economics claim that belongs here: **relationship signals cheapen on the text channel and concentrate on costly channels** (time, presence, shared risk). That is isomorphic to the credential story, applied to attachment rather than hiring.
 
 ## Why this is the conclusion of the whole document
 
@@ -76,6 +76,6 @@ All of these converge because all are downstream of generation becoming free. Th
 
 ---
 
-**Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Compressed version](../00-overview/compressed.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [B6](../07-indicators/diffusion.md)
+**Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Compressed version](../00-overview/compressed.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [B6](../07-indicators/diffusion.md)
 
 **Next:** [Part III — Domains](../03-domains/)

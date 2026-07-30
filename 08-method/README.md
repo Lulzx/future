@@ -20,7 +20,7 @@ A forecast without a stated method is an opinion with decimal places. This part 
 
 1. **Find the physical or institutional rate limit.** Not "what is possible" but "what is the slowest necessary step." Almost every over-optimistic AI forecast fails by modelling the fast step. → [Part I](../01-substrate/)
 2. **Identify the payoff structure, then predict behavior from it** rather than from stated intentions. Contest, security dilemma, Bertrand competition, commons tragedy, signaling collapse. → [Part II](../02-games/)
-3. **Price the ground truth.** For any capability claim, ask what the training signal is and what it costs per sample. This single question orders [all sixteen domains](../03-domains/) correctly. → [Data](../01-substrate/data.md)
+3. **Price the ground truth.** For any capability claim, ask what the training signal is and what it costs per sample. This single question orders [the domains](../03-domains/) correctly. → [Data](../01-substrate/data.md)
 4. **Anchor on the historical reference class**, then adjust explicitly and say by how much. → [Base rates](base-rates.md)
 
 ## The three assumptions doing the most work

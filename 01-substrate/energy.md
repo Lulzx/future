@@ -79,6 +79,6 @@ Two things cut further against the pessimistic read:
 
 ---
 
-**Related:** [Compute](compute.md) · [Capital](capital.md) on what the money buys · [Geopolitics](../03-domains/contested/geopolitics/) · [2028–2032](../04-timelines/2028-2032.md) on electricity price backlash
+**Related:** [Compute](compute.md) · [Capital](capital.md) on what the money buys · [Energy *sector*](../03-domains/physical/energy-sector.md) — AI as tool inside power markets, planning, and generation R&D, not only as load · [Geopolitics](../03-domains/contested/geopolitics/) · [2028–2032](../04-timelines/2028-2032.md) on electricity price backlash
 
 **Next:** [Data](data.md)

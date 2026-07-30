@@ -92,7 +92,8 @@ Every content file:
 | 6 | 2026-07-30 | [Geopolitics](03-domains/contested/geopolitics/) promoted to a directory — the non-US, non-China world was one paragraph. [US–China](03-domains/contested/geopolitics/bipolar.md), [India](03-domains/contested/geopolitics/india.md), [Europe](03-domains/contested/geopolitics/europe.md), [Gulf](03-domains/contested/geopolitics/gulf.md), [Global South](03-domains/contested/geopolitics/global-south.md) | 68 | ~3,900 |
 | 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | 69 | 3,615 |
 | 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | 74 | 4,187 |
-| 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | **78** | **4,573** |
+| 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | 78 | 4,573 |
+| 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md) as domain (not only constraint); [meaning](03-domains/cognitive/meaning.md) welfare channel; [warfare](03-domains/contested/warfare.md) and [state capacity](03-domains/contested/state-capacity.md) deepened | **80** | **4,874** |
 
 *End-state counts are exact at round close; intermediate rounds are approximate, since rounds ran in one sitting.*
 
@@ -125,7 +126,13 @@ Every content file:
 2. **[Part VII](07-indicators/)** gains A6 (Taiwan capacity), A7 (rates / financial governor), B7 (two-economy prices), B8 (verification gap), B9 (RSI three-governor panel), C7 (AI liability insurance), C3b (compute-governance trap). Short-list table extended.
 3. **[Game 1](02-games/1-labs.md)** and **[Game 5](02-games/5-information.md)** expanded to carry liability/open-weights and verification/enclosure load that later pages were already assuming.
 
-*Invariants §7 verified at the close of round 9: **78 files, 4,573 lines, 0 broken links**, no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks.*
+**Round 10 expansions:**
+
+1. **[Energy sector](03-domains/physical/energy-sector.md)** — the missing half of [Part I energy](01-substrate/energy.md): AI as tool in markets, operations, planning, exploration, and generation R&D, not only as load. Four layers ordered by ground-truth cost.
+2. **[Meaning](03-domains/cognitive/meaning.md)** — vocational identity, synthetic companionship, attention/price-split psyche. Closes the human-welfare hole [Game 5](02-games/5-information.md) had flagged.
+3. **[Warfare](03-domains/contested/warfare.md)** and **[state capacity](03-domains/contested/state-capacity.md)** brought up to geopolitics-adjacent depth (offense–defense layers, Taiwan interaction; four capacities, permitting loop, cross-state variance).
+
+*Invariants §7 verified at the close of round 10: **80 files, 4,874 lines, 0 broken links**, no content file over the hard cap, no directory over the 10-file cap. **Exemption:** [RESEARCH.md](RESEARCH.md) itself is over 180 lines (round log growth); it is the protocol ledger, not a content argument — do not pad-split; compress retired notes in a later round if needed.*
 
 ## 6. Open queue
 
@@ -133,18 +140,18 @@ Ordered by expected value of the next round's work.
 
 **High** — next round starts here
 
-1. **Energy as a domain**, not just a constraint. [Part I](01-substrate/) treats power as something AI consumes; it is also the sector AI most changes (grid optimization, siting, exploration, fusion/fission R&D). Natural sibling to [medicine](03-domains/physical/medicine/) / [robotics](03-domains/physical/robotics/) promotion pattern if it outgrows a page.
-2. **Meaning, mental health, and relationships.** [Game 5](02-games/5-information.md) now flags synthetic intimacy; nothing yet covers vocational identity loss or abundant synthetic companionship as a welfare channel. Hard to write well — still highest missing human layer.
-3. **State capacity** and **warfare** depth relative to the [geopolitics](03-domains/contested/geopolitics/) directory they sit beside.
+1. **Failure archaeology**, deepening [base rates](08-method/base-rates.md) §4 — what specifically ended each AI winter, usable as a prior.
+2. **Game 2** pass against bipolar compute-governance trap, insurance-as-incident mechanism, and state-capacity capture caveat.
+3. **Fiscal indicator** — tax-base / labor-income share as a slow B-family companion to [fiscal](09-macro/fiscal.md).
 
 **Medium**
-- **Failure archaeology**, deepening [base rates](08-method/base-rates.md) §4 — what specifically ended each AI winter, in enough detail to be a usable prior.
-- **Fiscal indicator** — tax-base / labor-income share as a slow B-family companion to [fiscal](09-macro/fiscal.md).
-- **Game 2** pass against bipolar compute-governance trap and insurance-as-incident mechanism.
+- **Cybersecurity** and **biosecurity** depth relative to warfare/state-capacity after round 10.
+- **Education** pass against meaning + apprenticeship gap (credential collapse + identity).
+- **Energy sector** split if it outgrows a page (ops / planning / generation R&D).
 
 **Low**
 - `notation.md` for recurring shorthand (effective compute, ground-truth cost, inelastic complement, the master asymmetry).
-- **Reverse dependency index**: claim → every page that rests on it. Would make [scoring](08-method/scoring.md) far sharper, since a single falsified claim should visibly propagate.
+- **Reverse dependency index**: claim → every page that rests on it.
 - Automate invariants §7 as a check script rather than a manual pass.
 
 **Retired**
@@ -162,6 +169,9 @@ Ordered by expected value of the next round's work.
 - ~~Medicine too thin~~ — round 9, four-file directory.
 - ~~Indicators stale vs rounds 5–8~~ — round 9.
 - ~~Games 1 and 5 under-carrying~~ — round 9.
+- ~~Energy only as constraint~~ — round 10, [energy sector](03-domains/physical/energy-sector.md).
+- ~~Meaning / mental health missing~~ — round 10, [meaning](03-domains/cognitive/meaning.md).
+- ~~Warfare and state capacity thin~~ — round 10.
 
 ## 7. Invariants
 

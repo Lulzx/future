@@ -13,7 +13,7 @@ The order matters. These are not four parallel concerns — they are a relay. Co
 | | Constraint | Binds when | Character |
 |---|---|---|---|
 | [Compute](compute.md) | Effective compute ~7–10×/yr; dollar term breaks at Apollo scale | 2029–30 | Financial, possibly evadable via efficiency |
-| [Energy](energy.md) | Interconnect queues, turbines, transformers | ~2026 onward | Physical *and* regulatory; skewed toward loosening |
+| [Energy](energy.md) | Interconnect queues, turbines, transformers | ~2026 onward | Physical *and* regulatory; skewed toward loosening — sector-side effects in [energy sector](../03-domains/physical/energy-sector.md) |
 | [Data](data.md) | High-quality human text exhausted | Already binding | Redirected rather than blocking — and it created the master asymmetry |
 | [Capital](capital.md) | Not a ceiling — a continuously re-priced verdict | 2027–29 | Financial and reversible; the only input that can run backwards |
 | [Inference economics](inference-economics.md) | Not a ceiling — a floor collapsing | Continuous | Sets the two-year moat on any capability |
