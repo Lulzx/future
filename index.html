@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Next Fifteen Years</title>
 <meta name="description" content="A fifteen-year forecast built from first principles.">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▚</text></svg>">
 <style>
 /* ── the-monospace-web · reset.css ─────────────────────────────────────────
@@ -58,13 +59,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #fff; --text-color-alt: #aaa;
-    --background-color: #000; --background-color-alt: #111;
+    --text-color: #fff; --text-color-alt: #8a8a8a;
+    --background-color: #000; --background-color-alt: #131313;
   }
 }
 :root[data-theme="dark"] {
-  --text-color: #fff; --text-color-alt: #aaa;
-  --background-color: #000; --background-color-alt: #111;
+  --text-color: #fff; --text-color-alt: #8a8a8a;
+  --background-color: #000; --background-color-alt: #131313;
 }
 :root[data-theme="light"] {
   --text-color: #000; --text-color-alt: #666;
@@ -78,23 +79,27 @@ html {
   display: flex; width: 100%; margin: 0; padding: 0;
   flex-direction: column; align-items: center;
   background: var(--background-color); color: var(--text-color);
+  scroll-behavior: smooth;
 }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
 body {
   position: relative; width: 100%; margin: 0;
-  padding: var(--line-height) 2ch;
+  padding: var(--line-height) 2ch calc(var(--line-height) * 5);
   max-width: calc(min(80ch, round(down, 100%, 1ch)));
   line-height: var(--line-height);
   overflow-x: hidden;
 }
 @media screen and (max-width: 480px) {
   :root { font-size: 14px; }
-  body { padding: var(--line-height) 1ch; }
+  body { padding: var(--line-height) 1ch calc(var(--line-height) * 5); }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-bold);
   margin: calc(var(--line-height) * 2) 0 var(--line-height);
   line-height: var(--line-height);
+  scroll-margin-top: var(--line-height);
 }
 h1 {
   font-size: 2rem; line-height: calc(2 * var(--line-height));
@@ -114,12 +119,19 @@ hr:after {
   height: 0;
 }
 
-a { text-decoration-thickness: var(--border-thickness); }
 a:link, a:visited { color: var(--text-color); }
 
 p { margin-bottom: var(--line-height); word-break: break-word; word-wrap: break-word; hyphens: auto; }
 strong { font-weight: var(--font-weight-bold); }
 em { font-style: italic; }
+mark { background: var(--text-color); color: var(--background-color); padding: 0 0.4ch; }
+
+sub, sup {
+  position: relative; display: inline-block; margin: 0;
+  line-height: 0; width: calc(1ch / 0.75); font-size: .75rem;
+}
+sub { vertical-align: sub; }
+sup { vertical-align: super; }
 
 table {
   position: relative; top: calc(var(--line-height) / 2);
@@ -135,29 +147,47 @@ th, td {
   line-height: var(--line-height); vertical-align: top; text-align: left;
 }
 table tbody tr:first-child > * { padding-top: calc((var(--line-height) / 2) - var(--border-thickness)); }
-th { font-weight: 700; }
-.width-min { width: 0%; }
+th { font-weight: var(--font-weight-bold); }
+.width-min { width: 0%; white-space: nowrap; }
 .width-auto { width: 100%; }
 
-.header { margin-bottom: calc(var(--line-height) * 2); }
-.header h1 { margin: 0; }
-.header tr td:last-child { text-align: right; }
+img, video { display: block; width: 100%; object-fit: contain; overflow: hidden; }
+img { font-style: italic; color: var(--text-color-alt); }
+
+details {
+  border: var(--border-thickness) solid var(--text-color);
+  padding: calc(var(--line-height) - var(--border-thickness)) 1ch;
+  margin-bottom: var(--line-height);
+}
+summary { font-weight: var(--font-weight-medium); cursor: pointer; text-transform: uppercase; }
+details[open] summary { margin-bottom: var(--line-height); }
+details > summary::marker { display: inline-block; content: '▶ '; margin: 0; }
+details[open] > summary::marker { content: '▼ '; }
+details :last-child { margin-bottom: 0; }
 
 pre { white-space: pre; overflow-x: auto; margin: var(--line-height) 0; overflow-y: hidden; }
+figure pre { margin: 0; }
 pre, code { font-family: var(--font-family); }
 code { font-weight: var(--font-weight-medium); }
 
+figure { margin: calc(var(--line-height) * 2) 3ch; overflow-x: auto; overflow-y: hidden; }
+figcaption { display: block; font-style: italic; margin-top: var(--line-height); color: var(--text-color-alt); }
+
 ul, ol { padding: 0; margin: 0 0 var(--line-height); }
 ul { list-style-type: square; padding: 0 0 0 2ch; }
-ol { list-style-type: none; counter-reset: item; padding: 0 0 0 2ch; }
+ol { list-style-type: none; counter-reset: item; padding: 0 0 0 3ch; }
 ol ul, ol ol, ul ol, ul ul { padding: 0 0 0 3ch; margin: 0; }
 ol li:before {
   content: counters(item, ".") ". ";
   counter-increment: item; font-weight: var(--font-weight-medium);
 }
+/* hang the counter in the gutter so wrapped lines stay aligned */
+ol:not(ol ol) > li { position: relative; }
+ol:not(ol ol) > li:before { position: absolute; left: -3ch; width: 3ch; }
 li { margin: 0; padding: 0; }
 li::marker { line-height: 0; }
-::-webkit-scrollbar { height: var(--line-height); }
+::-webkit-scrollbar { height: var(--line-height); width: var(--line-height); }
+::-webkit-scrollbar-thumb { background: var(--text-color-alt); }
 
 button {
   border: var(--border-thickness) solid var(--text-color);
@@ -170,66 +200,272 @@ button {
 }
 button:hover { background: var(--background-color-alt); }
 button:active { transform: translate(2px, 2px); }
+button:focus-visible { --border-thickness: 3px; outline: none; }
 
-/* ── additions for the markdown renderer ────────────────────────────────── */
-
-blockquote {
-  margin: var(--line-height) 0;
-  padding: 0 0 0 2ch;
+/* tree connectors — upstream .tree */
+.tree, .tree ul {
+  position: relative; padding-left: 0;
+  list-style-type: none; line-height: var(--line-height);
+}
+.tree ul { margin: 0; }
+.tree ul li {
+  position: relative; padding-left: 1.5ch; margin-left: 1.5ch;
   border-left: var(--border-thickness) solid var(--text-color);
 }
-blockquote > *:first-child { margin-top: 0; }
-blockquote > p:last-child { margin-bottom: 0; }
-
-code:not(pre code) {
-  background: var(--background-color-alt);
-  padding: 0 0.4ch;
+.tree ul li:before {
+  position: absolute; display: block;
+  top: calc(var(--line-height) / 2); left: 0; content: "";
+  width: 1ch; border-bottom: var(--border-thickness) solid var(--text-color);
 }
+.tree ul li:last-child { border-left: none; }
+.tree ul li:last-child:after {
+  position: absolute; display: block; top: 0; left: 0; content: "";
+  height: calc(var(--line-height) / 2);
+  border-left: var(--border-thickness) solid var(--text-color);
+}
+
+.grid {
+  --grid-cells: 0;
+  display: flex; gap: 1ch;
+  width: calc(round(down, 100%, (1ch * var(--grid-cells)) - (1ch * var(--grid-cells) - 1)));
+  margin-bottom: var(--line-height);
+}
+.grid > * { flex: 0 0 calc(round(down, (100% - (1ch * (var(--grid-cells) - 1))) / var(--grid-cells), 1ch)); }
+.grid:has(> :last-child:nth-child(1)) { --grid-cells: 1; }
+.grid:has(> :last-child:nth-child(2)) { --grid-cells: 2; }
+.grid:has(> :last-child:nth-child(3)) { --grid-cells: 3; }
+.grid:has(> :last-child:nth-child(4)) { --grid-cells: 4; }
+
+/* the character grid, toggled from the status bar */
+.debug .debug-grid {
+  --color: color-mix(in srgb, var(--text-color) 12%, var(--background-color) 88%);
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+  background-image:
+    repeating-linear-gradient(var(--color) 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, var(--color) 0 1px, transparent 1px 100%);
+  background-size: 1ch var(--line-height);
+  margin: 0;
+}
+.debug-grid { display: none; }
+.debug .debug-grid { display: block; }
+
+/* ══ reader ═══════════════════════════════════════════════════════════════
+   Everything below is this site's own layer on top of the-monospace-web.   */
+
+/* ── links ───────────────────────────────────────────────────────────────
+   The corpus is dense with cross-references. A full underline on every one
+   turns a page into a hatch pattern, so links carry a faint rule that only
+   resolves to full contrast under the cursor.                             */
+a { text-decoration: none; }
+#content a {
+  border-bottom: 1px dotted color-mix(in srgb, currentColor 55%, transparent);
+}
+#content a:hover, #content a:focus-visible {
+  background: var(--background-color-alt);
+  border-bottom: 1px solid currentColor;
+  outline: none;
+}
+/* navigational links — list entries, table cells, headings — carry no rule
+   at all; their position already says they are links. */
+#content li > a:first-child,
+#content td > a:only-child,
+#content th a,
+#content h1 a, #content h2 a, #content h3 a, #content h4 a,
+#content .toc a, #content .pagenav a, #content .nav-up a {
+  border-bottom: none;
+  font-weight: var(--font-weight-medium);
+}
+#content li > a:first-child:hover,
+#content td > a:only-child:hover,
+#content .toc a:hover,
+#content .pagenav a:hover,
+#content .nav-up a:hover { background: var(--background-color-alt); }
+
+a[target="_blank"]:after {
+  content: "↗"; font-size: .75rem; vertical-align: super;
+  line-height: 0; color: var(--text-color-alt); margin-left: .25ch;
+}
+
+/* ── masthead ────────────────────────────────────────────────────────────
+   Upstream's header table: title and subtitle at left, metadata at right,
+   everything landing on the same character grid.                          */
+.masthead { margin-bottom: var(--line-height); }
+.masthead table { top: 0; margin-bottom: 0; }
+.masthead th, .masthead td { border: none; padding: 0; }
+.masthead th {
+  color: var(--text-color-alt); font-weight: var(--font-weight-normal);
+  text-transform: uppercase; padding-right: 1ch; white-space: nowrap;
+}
+.masthead td { text-align: left; }
+.masthead h1 {
+  margin: 0; font-size: 1.5rem; line-height: calc(2 * var(--line-height));
+  letter-spacing: -0.02em;
+}
+.masthead .subtitle { display: block; color: var(--text-color-alt); }
+.masthead h1 a { border: none; }
+.masthead h1 a:hover { background: var(--background-color-alt); }
+.masthead .meta { white-space: nowrap; }
+/* the keyboard hints are noise on a touch screen */
+@media screen and (max-width: 640px), (pointer: coarse) {
+  .masthead .keys-row { display: none; }
+}
+.masthead .meta a { color: var(--text-color-alt); }
+.masthead .meta a:hover { color: var(--text-color); }
+
+.crumb { color: var(--text-color-alt); word-break: break-all; }
+.crumb a { color: var(--text-color-alt); }
+.crumb a:hover { color: var(--text-color); background: var(--background-color-alt); }
+.crumb .sep { opacity: .5; }
+
+/* ── document chrome ─────────────────────────────────────────────────── */
+#content > *:first-child { margin-top: 0; }
+#content h1 { word-break: break-word; }
+
+/* §-numbering, on every page but the index */
+#content.numbered h2:before,
+#content.numbered h3:before {
+  content: attr(data-sec) "  ";
+  color: var(--text-color-alt);
+  font-weight: var(--font-weight-normal);
+}
+
+/* a click target for the section anchor, revealed on hover */
+.anchor {
+  color: var(--text-color-alt); opacity: 0;
+  margin-left: 1ch; font-weight: var(--font-weight-normal);
+  border: none !important;
+}
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor,
+h4:hover .anchor, .anchor:focus-visible { opacity: 1; }
+
+/* the `← Index · Part IV` strip under the title */
+.nav-up {
+  color: var(--text-color-alt);
+  margin-bottom: 0;
+}
+.nav-up a { color: var(--text-color-alt); }
+.nav-up a:hover { color: var(--text-color); }
+
+/* the `*Written 2026-07-30…*` dateline */
+.dateline { color: var(--text-color-alt); font-style: italic; }
+.dateline em { font-style: italic; }
+
+/* ── table of contents ──────────────────────────────────────────────── */
+.toc { margin-bottom: calc(var(--line-height) * 2); }
+.toc ul.tree { margin: 0; padding: 0; }
+.toc .tree > li { margin-top: 0; }
+.toc .tree > li + li { margin-top: 0; }
+.toc .sec { color: var(--text-color-alt); }
+.toc .tree ul li { margin-top: 0; }
+
+/* ── blockquotes as labelled callouts ───────────────────────────────────
+   The corpus uses `> **Prediction:** …` throughout. Hoist that label onto
+   the top border so the claim reads as a box you can find by scanning.   */
+blockquote {
+  position: relative;
+  border: var(--border-thickness) solid var(--text-color);
+  padding: var(--line-height) 1ch calc(var(--line-height) - var(--border-thickness));
+  margin: calc(var(--line-height) * 2) 0 calc(var(--line-height) * 2);
+}
+blockquote > *:first-child { margin-top: 0; }
+blockquote > *:last-child { margin-bottom: 0; }
+blockquote[data-label]:before {
+  content: attr(data-label);
+  position: absolute; top: calc(var(--line-height) * -0.5 - var(--border-thickness) / 2);
+  left: 2ch; padding: 0 1ch;
+  background: var(--background-color); color: var(--text-color);
+  font-weight: var(--font-weight-bold); text-transform: uppercase;
+  line-height: var(--line-height); white-space: nowrap;
+}
+blockquote[data-label] { padding-top: calc(var(--line-height) * 1.25); }
+
+/* ── code ───────────────────────────────────────────────────────────── */
+code:not(pre code) { background: var(--background-color-alt); padding: 0 0.4ch; }
 pre {
   border: var(--border-thickness) solid var(--text-color);
   padding: calc(var(--line-height) / 2) 1ch;
 }
 pre code { background: none; padding: 0; }
 
-/* tables must scroll inside their own box, never the page */
-.table-scroll {
-  overflow-x: auto;
-  margin: 0 0 calc(var(--line-height) * 2);
+/* ── tables ─────────────────────────────────────────────────────────── */
+/* The scroll box clips, so the table drops upstream's half-line offset here
+   and the wrapper carries the spacing instead. */
+.table-scroll { overflow-x: auto; margin: var(--line-height) 0 calc(var(--line-height) * 2); }
+.table-scroll table { top: 0; margin: 0; min-width: 100%; }
+thead th { background: var(--text-color); color: var(--background-color); }
+thead th a:link, thead th a:visited { color: var(--background-color); }
+tbody tr:hover > * { background: var(--background-color-alt); }
+
+/* ── the index page ─────────────────────────────────────────────────────
+   Its `### [00 — Overview](…)` sections are the site map; give each one a
+   rule above it so the parts separate at a glance.                       */
+#content.index h3 {
+  border-top: var(--border-thickness) solid var(--text-color);
+  padding-top: calc(var(--line-height) / 2);
+  margin-top: calc(var(--line-height) * 2);
+  font-size: 1rem; text-transform: uppercase;
 }
-.table-scroll table { margin-bottom: 0; }
-.table-scroll table { min-width: 100%; }
+#content.index h3 + p { color: var(--text-color-alt); }
+#content.index ul { padding-left: 2ch; }
+#content.index li { margin-bottom: 0; }
 
-.masthead { margin-bottom: calc(var(--line-height) * 2); }
-.masthead h1 { margin: 0; font-size: 1.6rem; }
-.masthead .subtitle { color: var(--text-color-alt); }
-.masthead a { text-decoration: none; }
-.masthead a:hover { text-decoration: underline; }
-
-.crumb {
-  color: var(--text-color-alt);
-  margin-top: var(--line-height);
-  word-break: break-all;
-}
-.crumb a { color: var(--text-color-alt); }
-
-.toolbar {
-  display: flex; gap: 1ch; align-items: baseline; flex-wrap: wrap;
-  margin-top: var(--line-height);
-}
-.toolbar button { height: calc(var(--line-height) * 1.8); font-size: 0.8rem; }
-
-#content > *:first-child { margin-top: 0; }
-#content h1 { word-break: break-word; }
-
+/* ── footer navigation ──────────────────────────────────────────────── */
 .pagenav {
   margin-top: calc(var(--line-height) * 2);
-  padding-top: var(--line-height);
+  margin-bottom: 0;
+}
+.pagenav .cell {
+  border: var(--border-thickness) solid var(--text-color);
+  padding: calc(var(--line-height) / 2 - var(--border-thickness) / 2) 1ch;
+  margin-top: 0; min-width: 0;
+}
+.pagenav .cell.empty { border-style: dashed; color: var(--text-color-alt); }
+.pagenav .dir { display: block; color: var(--text-color-alt); text-transform: uppercase; }
+.pagenav .cell a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pagenav .cell:hover { background: var(--background-color-alt); }
+.pagenav + .msg { margin-top: var(--line-height); }
+
+/* ── status bar ─────────────────────────────────────────────────────────
+   Fixed to the bottom: where you are, how far in, and the two toggles.   */
+.statusbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  margin: 0;
+  background: var(--background-color);
   border-top: var(--border-thickness) solid var(--text-color);
-  color: var(--text-color-alt);
+  line-height: var(--line-height);
+}
+.statusbar-inner {
+  display: flex; align-items: center; gap: 1ch;
+  margin: 0 auto; width: 100%;
+  max-width: calc(min(80ch, round(down, 100%, 1ch)));
+  padding: calc(var(--line-height) / 2) 2ch;
+}
+.statusbar-inner > * { margin-top: 0; }
+.sb-path {
+  flex: 1 1 auto; min-width: 0; color: var(--text-color-alt);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.sb-progress { flex: 0 0 auto; white-space: pre; color: var(--text-color-alt); }
+.sb-pct { flex: 0 0 auto; color: var(--text-color-alt); white-space: pre; }
+.sb-actions { flex: 0 0 auto; display: flex; gap: 1ch; }
+.sb-actions button {
+  height: calc(var(--line-height) * 1.5); font-size: 0.75rem;
+  padding: 0 calc(1ch - var(--border-thickness));
+}
+button[aria-pressed="true"] { background: var(--text-color); color: var(--background-color); }
+@media screen and (max-width: 640px) {
+  .statusbar-inner { padding: calc(var(--line-height) / 2) 1ch; }
+  .sb-progress { display: none; }
+}
+@media screen and (max-width: 420px) {
+  .sb-pct { display: none; }
 }
 
 .msg { color: var(--text-color-alt); }
-
+kbd {
+  border: 1px solid var(--text-color-alt); padding: 0 0.5ch;
+  font-size: 0.8rem; color: var(--text-color-alt);
+}
 .sr-only {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;
@@ -239,20 +475,47 @@ pre code { background: none; padding: 0; }
 </head>
 <body>
 
+<div class="debug-grid" aria-hidden="true"></div>
+
 <header class="masthead">
-  <h1><a href="#/README.md">The Next Fifteen Years</a></h1>
-  <div class="subtitle">A forecast built from first principles</div>
-  <div class="crumb" id="crumb"></div>
-  <div class="toolbar">
-    <button id="theme" type="button" title="Toggle light / dark">Theme</button>
-    <button id="src" type="button" title="View this page's markdown source on GitHub">Source</button>
-    <button id="top" type="button" title="Back to the index">Index</button>
-  </div>
+  <table class="width-auto">
+    <tbody>
+      <tr>
+        <td class="width-auto" colspan="2">
+          <h1><a href="#/README.md">The Next Fifteen Years</a></h1>
+          <span class="subtitle">A forecast built from first principles</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="width-min">Section</th>
+        <td class="width-auto crumb" id="crumb"></td>
+      </tr>
+      <tr class="keys-row">
+        <th class="width-min">Keys</th>
+        <td class="width-auto meta">
+          <kbd>←</kbd> <kbd>→</kbd> page · <kbd>t</kbd> theme · <kbd>g</kbd> grid · <kbd>i</kbd> index
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </header>
 
 <hr>
 
 <main id="content"><p class="msg">Loading…</p></main>
+
+<footer class="statusbar">
+  <div class="statusbar-inner">
+    <span class="sb-path" id="sb-path"></span>
+    <span class="sb-progress" id="sb-progress" aria-hidden="true"></span>
+    <span class="sb-pct" id="sb-pct"></span>
+    <span class="sb-actions">
+      <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
+      <button id="grid" type="button" aria-pressed="false" title="Show the character grid (g)">Grid</button>
+      <button id="src" type="button" title="View this page's markdown source">Src</button>
+    </span>
+  </div>
+</footer>
 
 <script>
 "use strict";
@@ -261,7 +524,7 @@ pre code { background: none; padding: 0; }
    A small markdown parser. Handles exactly the subset this corpus uses:
    ATX headings, thematic breaks, GFM tables, blockquotes, fenced code,
    ordered and unordered lists (one level of nesting), and the inline set
-   (emphasis, strong, code spans, strikethrough, links, autolinks).
+   (emphasis, strong, code spans, strikethrough, marks, links, autolinks).
    ══════════════════════════════════════════════════════════════════════════ */
 
 const REPO = "https://github.com/Lulzx/future";
@@ -335,6 +598,7 @@ function inline(src, base) {
   s = s.replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>");
   s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   s = s.replace(/(^|[^*\w])\*([^*\n]+)\*(?![*\w])/g, "$1<em>$2</em>");
+  s = s.replace(/==([^=\n]+)==/g, "<mark>$1</mark>");
   s = s.replace(/~~([^~]+)~~/g, "<del>$1</del>");
 
   s = s.replace(/\uE000(\d+)\uE001/g, (_, i) => `<code>${escapeHtml(codes[+i])}</code>`);
@@ -351,10 +615,32 @@ const RE_UL        = /^(\s*)[-*+]\s+(.*)$/;
 const RE_OL        = /^(\s*)(\d+)[.)]\s+(.*)$/;
 const RE_TROW      = /^\s*\|(.*)\|\s*$/;
 const RE_TSEP      = /^\s*\|?[\s:|-]*-[\s:|-]*\|?\s*$/;
+const RE_IMG_ONLY  = /^!\[([^\]]*)\]\(([^)\s]+)\)\s*$/;
 
 function splitRow(line) {
   return line.replace(/^\s*\|/, "").replace(/\|\s*$/, "")
              .split("|").map(c => c.trim());
+}
+
+function slug(text) {
+  return text.toLowerCase().replace(/`/g, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
+}
+
+// Columns whose widest cell is short get `width-min`, so a table of claims
+// against two probability columns lays out the way it reads.
+function tableClasses(head, body) {
+  const cols = Math.max(head.length, ...body.map(r => r.length), 0);
+  const widths = [];
+  for (let c = 0; c < cols; c++) {
+    let w = (head[c] || "").length;
+    for (const r of body) w = Math.max(w, (r[c] || "").length);
+    widths.push(w);
+  }
+  const widest = widths.indexOf(Math.max(...widths));
+  return widths.map((w, i) =>
+    i === widest ? "width-auto" : (w <= 14 ? "width-min" : ""));
 }
 
 function parse(lines, base) {
@@ -385,10 +671,10 @@ function parse(lines, base) {
     const h = line.match(RE_HEADING);
     if (h) {
       const level = h[1].length;
-      const text = inline(h[2].trim(), base);
-      const id = h[2].trim().toLowerCase()
-        .replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
-      out.push(`<h${level} id="${id}">${text}</h${level}>`);
+      const raw = h[2].trim();
+      const id = slug(raw);
+      const anchor = `<a class="anchor" href="#/${base}#${id}" aria-label="Link to this section">#</a>`;
+      out.push(`<h${level} id="${id}">${inline(raw, base)}${anchor}</h${level}>`);
       i++;
       continue;
     }
@@ -399,9 +685,11 @@ function parse(lines, base) {
       i += 2;
       const body = [];
       while (i < lines.length && RE_TROW.test(lines[i])) body.push(splitRow(lines[i++]));
-      const th = head.map(c => `<th>${inline(c, base)}</th>`).join("");
+      const cls = tableClasses(head, body);
+      const klass = c => cls[c] ? ` class="${cls[c]}"` : "";
+      const th = head.map((c, n) => `<th${klass(n)}>${inline(c, base)}</th>`).join("");
       const rows = body.map(r =>
-        "<tr>" + r.map(c => `<td>${inline(c, base)}</td>`).join("") + "</tr>").join("");
+        "<tr>" + r.map((c, n) => `<td${klass(n)}>${inline(c, base)}</td>`).join("") + "</tr>").join("");
       const headEmpty = head.every(c => c === "");
       out.push(
         `<div class="table-scroll"><table>` +
@@ -465,12 +753,23 @@ function parse(lines, base) {
       continue;
     }
 
+    // a lone image becomes a figure, with its alt text as the caption
+    const img = line.trim().match(RE_IMG_ONLY);
+    if (img) {
+      out.push(`<figure><img src="${escapeHtml(img[2])}" alt="${escapeHtml(img[1])}">` +
+               (img[1] ? `<figcaption>${inline(img[1], base)}</figcaption>` : "") +
+               `</figure>`);
+      i++;
+      continue;
+    }
+
     // paragraph
     const buf = [];
     while (i < lines.length && lines[i].trim() &&
            !RE_HEADING.test(lines[i]) && !RE_HR.test(lines[i]) &&
            !RE_QUOTE.test(lines[i]) && !RE_FENCE.test(lines[i]) &&
            !RE_UL.test(lines[i]) && !RE_OL.test(lines[i]) &&
+           !RE_IMG_ONLY.test(lines[i].trim()) &&
            !(RE_TROW.test(lines[i]) && RE_TSEP.test(lines[i + 1] || ""))) {
       buf.push(lines[i++]);
     }
@@ -486,13 +785,123 @@ function render(md, base) {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
+   Post-render passes — the things markdown does not say but the page needs
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* `> **Prediction:** …` — hoist the label onto the box border. */
+function labelCallouts(root) {
+  for (const bq of root.querySelectorAll("blockquote")) {
+    const first = bq.firstElementChild;
+    if (!first || first.tagName !== "P") continue;
+    const strong = first.firstElementChild;
+    if (!strong || strong.tagName !== "STRONG") continue;
+    const text = strong.textContent.trim();
+    if (!/:$/.test(text) || text.length > 28) continue;
+    bq.setAttribute("data-label", text.replace(/:$/, ""));
+    strong.remove();
+    // drop the space the label left behind
+    if (first.firstChild && first.firstChild.nodeType === 3) {
+      first.firstChild.data = first.firstChild.data.replace(/^\s+/, "");
+    }
+  }
+}
+
+/* §1, §1.1 … on the headings of every page but the index. */
+function numberSections(root) {
+  let h2 = 0, h3 = 0;
+  for (const h of root.querySelectorAll("h2, h3")) {
+    if (h.tagName === "H2") { h2++; h3 = 0; h.dataset.sec = "§" + h2; }
+    else { h3++; h.dataset.sec = h2 ? `§${h2}.${h3}` : `§${h3}`; }
+  }
+}
+
+/* A tree-drawn table of contents, from the page's own h2/h3. */
+function buildToc(root, doc) {
+  const heads = [...root.querySelectorAll("h2, h3")];
+  if (heads.length < 3) return null;
+
+  const items = [];
+  for (const h of heads) {
+    const label = h.dataset.sec ? `<span class="sec">${h.dataset.sec}</span> ` : "";
+    const text = escapeHtml(h.textContent.replace(/#$/, "").trim());
+    const entry = `${label}<a href="#/${doc}#${h.id}">${text}</a>`;
+    if (h.tagName === "H2" || !items.length) items.push({ entry, kids: [] });
+    else items[items.length - 1].kids.push(entry);
+  }
+
+  const html = items.map(it =>
+    `<li>${it.entry}` +
+    (it.kids.length ? `<ul>${it.kids.map(k => `<li>${k}</li>`).join("")}</ul>` : "") +
+    `</li>`).join("");
+
+  const el = document.createElement("details");
+  el.className = "toc";
+  el.open = window.innerWidth > 640;
+  el.innerHTML = `<summary>Contents</summary><ul class="tree">${html}</ul>`;
+  return el;
+}
+
+/* The `← [Index] · [Part IV]` strip and the closing `**Next:** …` line are
+   the corpus's own navigation. Recognize them, style the first, and turn the
+   second into a prev/next footer. */
+function extractNav(root) {
+  const nav = { prev: null, next: null };
+  const ps = [...root.querySelectorAll("p")];
+
+  const up = ps.find(p => /^\s*←/.test(p.textContent));
+  if (up) {
+    up.classList.add("nav-up");
+    // Pages list their ancestors in either order (`← Index · Part IV`, or
+    // `← Part I · Index`); the part is the more useful "previous" of the two.
+    const links = [...up.querySelectorAll("a")];
+    const a = links.find(l => l.textContent.trim().toLowerCase() !== "index") || links[0];
+    if (a) nav.prev = { href: a.getAttribute("href"), text: a.textContent.trim() };
+  }
+
+  const next = ps.find(p => /^\s*Next:/.test(p.textContent));
+  if (next) {
+    const a = next.querySelector("a");
+    if (a) nav.next = { href: a.getAttribute("href"), text: a.textContent.trim() };
+    // the closing `---` above it is now redundant
+    const hr = next.previousElementSibling;
+    next.remove();
+    if (hr && hr.tagName === "HR") hr.remove();
+  }
+
+  // a dateline in italics near the top reads as metadata, not prose
+  for (const p of ps.slice(0, 4)) {
+    if (p.children.length === 1 && p.firstElementChild.tagName === "EM" &&
+        p.textContent.trim() === p.firstElementChild.textContent.trim()) {
+      p.classList.add("dateline");
+      break;
+    }
+  }
+
+  return nav;
+}
+
+function pagenavHtml(nav, doc) {
+  const cell = (dir, link) => link
+    ? `<div class="cell"><span class="dir">${dir}</span><a href="${link.href}">${escapeHtml(link.text)}</a></div>`
+    : `<div class="cell empty"><span class="dir">${dir}</span>—</div>`;
+  return `<nav class="pagenav grid">` +
+    cell("← Prev", nav.prev) +
+    cell("Next →", nav.next) +
+  `</nav>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
    Loader and router
    ══════════════════════════════════════════════════════════════════════════ */
 
-const contentEl = document.getElementById("content");
-const crumbEl   = document.getElementById("crumb");
-const cache     = new Map();
-let currentDoc  = DEFAULT_DOC;
+const contentEl  = document.getElementById("content");
+const crumbEl    = document.getElementById("crumb");
+const sbPathEl   = document.getElementById("sb-path");
+const sbProgEl   = document.getElementById("sb-progress");
+const sbPctEl    = document.getElementById("sb-pct");
+const cache      = new Map();
+let currentDoc   = DEFAULT_DOC;
+let currentNav   = { prev: null, next: null };
 
 function docFromHash() {
   const raw = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
@@ -517,12 +926,13 @@ function breadcrumb(doc) {
     if (last) out.push(`<span>${escapeHtml(seg)}</span>`);
     else out.push(`<a href="#/${acc}/README.md">${escapeHtml(seg)}</a>`);
   });
-  return out.join(" / ");
+  return out.join(`<span class="sep"> / </span>`);
 }
 
 async function load(doc) {
   currentDoc = doc;
   crumbEl.innerHTML = breadcrumb(doc);
+  sbPathEl.textContent = "/" + doc;
 
   let md = cache.get(doc);
   if (md === undefined) {
@@ -533,54 +943,115 @@ async function load(doc) {
       md = await res.text();
       cache.set(doc, md);
     } catch (err) {
+      contentEl.className = "";
       contentEl.innerHTML =
         `<h1>Not found</h1><p class="msg">Could not load <code>${escapeHtml(doc)}</code> — ${escapeHtml(String(err.message || err))}.</p>` +
         `<p><a href="#/${DEFAULT_DOC}">Back to the index</a></p>`;
       document.title = "Not found · The Next Fifteen Years";
+      currentNav = { prev: null, next: null };
+      updateProgress();
       return;
     }
   }
 
-  contentEl.innerHTML = render(md, doc) +
-    `<div class="pagenav">` +
-      (doc === DEFAULT_DOC ? "" : `<a href="#/${DEFAULT_DOC}">↑ Index</a> · `) +
-      `<a href="${REPO}/blob/main/${doc}" rel="noopener noreferrer" target="_blank">View source</a>` +
-    `</div>`;
+  const isIndex = doc === DEFAULT_DOC;
+  contentEl.className = isIndex ? "index" : "numbered";
+  contentEl.innerHTML = render(md, doc);
+
+  labelCallouts(contentEl);
+  if (!isIndex) numberSections(contentEl);
+  currentNav = extractNav(contentEl);
+
+  if (!isIndex) {
+    const toc = buildToc(contentEl, doc);
+    if (toc) {
+      // after the title block: the first rule, or the h1
+      const hr = contentEl.querySelector("hr");
+      const after = hr || contentEl.querySelector("h1");
+      if (after) after.after(toc); else contentEl.prepend(toc);
+    }
+  }
+
+  if (!currentNav.prev && !isIndex) {
+    currentNav.prev = { href: `#/${DEFAULT_DOC}`, text: "Index" };
+  }
+  contentEl.insertAdjacentHTML("beforeend",
+    pagenavHtml(currentNav, doc) +
+    `<p class="msg"><a href="${REPO}/blob/main/${doc}" rel="noopener noreferrer" target="_blank">View markdown source</a></p>`);
 
   const h1 = contentEl.querySelector("h1");
-  document.title = (h1 ? h1.textContent.trim() : doc) + " · The Next Fifteen Years";
+  document.title = (h1 ? h1.textContent.replace(/#$/, "").trim() : doc) + " · The Next Fifteen Years";
 
   const anchor = anchorFromHash();
   if (anchor) {
     const el = document.getElementById(anchor);
-    if (el) { el.scrollIntoView(); return; }
+    if (el) { el.scrollIntoView(); updateProgress(); return; }
   }
   window.scrollTo(0, 0);
+  updateProgress();
 }
 
 window.addEventListener("hashchange", () => load(docFromHash()));
 
-/* ── toolbar ─────────────────────────────────────────────────────────────── */
+/* ── status bar ──────────────────────────────────────────────────────────── */
+
+const BAR_CELLS = 12;
+
+function updateProgress() {
+  const doc = document.documentElement;
+  const max = doc.scrollHeight - window.innerHeight;
+  const pct = max > 8 ? Math.min(1, Math.max(0, window.scrollY / max)) : 1;
+  const filled = Math.round(pct * BAR_CELLS);
+  sbProgEl.textContent = "▓".repeat(filled) + "░".repeat(BAR_CELLS - filled);
+  sbPctEl.textContent = String(Math.round(pct * 100)).padStart(3, " ") + "%";
+}
+
+window.addEventListener("scroll", updateProgress, { passive: true });
+window.addEventListener("resize", updateProgress);
+
+/* ── controls ────────────────────────────────────────────────────────────── */
 
 const root = document.documentElement;
 const stored = localStorage.getItem("theme");
 if (stored) root.setAttribute("data-theme", stored);
 
-document.getElementById("theme").addEventListener("click", () => {
+const gridBtn = document.getElementById("grid");
+if (localStorage.getItem("grid") === "1") {
+  document.body.classList.add("debug");
+  gridBtn.setAttribute("aria-pressed", "true");
+}
+
+function toggleTheme() {
   const isDark = root.getAttribute("data-theme") === "dark" ||
     (!root.getAttribute("data-theme") &&
       window.matchMedia("(prefers-color-scheme: dark)").matches);
   const next = isDark ? "light" : "dark";
   root.setAttribute("data-theme", next);
   localStorage.setItem("theme", next);
-});
+}
 
+function toggleGrid() {
+  const on = document.body.classList.toggle("debug");
+  gridBtn.setAttribute("aria-pressed", String(on));
+  localStorage.setItem("grid", on ? "1" : "0");
+}
+
+document.getElementById("theme").addEventListener("click", toggleTheme);
+gridBtn.addEventListener("click", toggleGrid);
 document.getElementById("src").addEventListener("click", () => {
   window.open(`${REPO}/blob/main/${currentDoc}`, "_blank", "noopener");
 });
 
-document.getElementById("top").addEventListener("click", () => {
-  location.hash = "#/" + DEFAULT_DOC;
+document.addEventListener("keydown", (e) => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const t = e.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+
+  if (e.key === "ArrowLeft"  && currentNav.prev) { location.hash = currentNav.prev.href; e.preventDefault(); }
+  else if (e.key === "ArrowRight" && currentNav.next) { location.hash = currentNav.next.href; e.preventDefault(); }
+  else if (e.key === "t") toggleTheme();
+  else if (e.key === "g") toggleGrid();
+  else if (e.key === "i") location.hash = "#/" + DEFAULT_DOC;
 });
 
 load(docFromHash());
