@@ -6,7 +6,7 @@
 
 Stated plainly, so they can be scored later. These are subjective estimates, not model outputs.
 
-*Last full re-score: round 8 (2026-07-30). Round 12 commentary pass (no number moves): [ledger](ledger.md). Per-row reasoning: [reasoning](reasoning.md).*
+*Last full re-score: round 8 (2026-07-30). Commentary passes (no number moves): rounds 12, 18 — [ledger](ledger.md). Per-row reasoning: [reasoning](reasoning.md). Probabilities stated elsewhere in the corpus: [register](register.md).*
 
 | # | Claim | By 2030 | By 2040 | Δ since r0 |
 |---|---|---|---|---|
@@ -51,6 +51,6 @@ If either fails, re-score the whole table; do not patch individual rows.
 
 ---
 
-**Sections:** [Per-row reasoning and deltas](reasoning.md) · [Scoring ledger](ledger.md)
+**Sections:** [Per-row reasoning and deltas](reasoning.md) · [Scoring ledger](ledger.md) · [Distributed predictions register](register.md)
 
 **Next:** [Where this is most likely wrong](../06-uncertainties/)

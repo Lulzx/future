@@ -50,6 +50,21 @@ Source: initial corpus, 2026-07-30. No prior.
 
 Rule 5 satisfied: evidence reviewed, holds justified in writing, not inertia.
 
+## Round 18 — re-score pass against rounds 13–17 (no number moves) + register
+
+*Date: 2026-07-30. Corpus: post–rounds 13–17 (law/finance/science, media/software, ag/logistics, C8 provenance, compute/data, B12).*
+
+| Row | Action | Note |
+|---|---|---|
+| 1 | **Hold** | r13–14 law/finance/software depth refines *which* tasks verify cheaply, not the share of a knowledge worker's day that does; the verification ordering was already priced in r8 |
+| 2 | **Hold** | r16–17 compute/data consistency work changes no macro input; B2's "silence is the base case" stands |
+| 5 | **Hold** | [B12](../07-indicators/diffusion.md) operationalizes the structured-first claim into triggers; an indicator getting sharper is not evidence about the outcome |
+| 3–4, 6–7 | **Hold** | No new material in r13–17 bearing on incidents, agreements, corrections, or control |
+
+Also this round: the [distributed predictions register](register.md) created — 16 probability-stamped claims outside this table are now indexed and scoreable, closing the invariant-4 gap. No register claim required a number move on the main table.
+
+Rule 5 satisfied: evidence reviewed, holds justified in writing, not inertia.
+
 ## Resolution log (outcomes)
 
 *Empty until claims come due. First wave: 2027–28. See [scoring](../08-method/scoring.md) "first claims due."*

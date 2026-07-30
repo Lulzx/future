@@ -100,7 +100,8 @@ Every content file:
 | 14 | 2026-07-30 | Media+software depth; check-invariants.sh | 82 | 5,459 |
 | 15 | 2026-07-30 | Ag+logistics depth; B11 meaning indicators; energy split deferred | 82 | 5,547 |
 | 16 | 2026-07-30 | C8 provenance; inference+Part I; games/thesis/compressed sync | 82 | 5,613 |
-| 17 | 2026-07-30 | [B12](07-indicators/diffusion.md) physical diffusion; [compute](01-substrate/compute.md)+[data](01-substrate/data.md); reader Find + [catalog.json](catalog.json) | **82** | **5,682** |
+| 17 | 2026-07-30 | [B12](07-indicators/diffusion.md) physical diffusion; [compute](01-substrate/compute.md)+[data](01-substrate/data.md); reader Find + [catalog.json](catalog.json) | 82 | 5,683 |
+| 18 | 2026-07-30 | Re-score mode: [register](05-probabilities/register.md) of 16 distributed probabilities (invariant-4 closure); r13–17 hold pass in [ledger](05-probabilities/ledger.md); prices/assets ↔ B7/B12 sync | **83** | **5,762** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -110,16 +111,16 @@ Every content file:
 
 **Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**Round 17:** B12 warehouse/freight/harvest triggers; compute+data consistency; Find UI (`/`, catalog.json refreshed by check-invariants).
+**Round 18:** Part V register indexes every probability-stamped blockquote outside the main table (closing the invariant-4 gap); rows 1–7 reviewed against rounds 13–17 and held with written justification; two unstamped predictions (energy 2029, agriculture 2032) flagged for a future confidence stamp. New rule from this round, recorded in the register: any round adding a probability-stamped blockquote adds a register row in the same Reconcile step.
 
-*Invariants at r17 close: **82 files, 5,682 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
+*Invariants at r18 close: **83 files, 5,762 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
 
 ## 6. Open queue
 
 **High**
 
-1. **Stop / re-score mode** — corpus is broad; prefer Part V annual re-score or falsification over new domains.
-2. **Assets / prices / rates** light sync with B7/B10/B12 if macro lags.
+1. **Stay in re-score mode** — next Part V pass when real time has passed or an indicator trigger fires, not before; new domains only on demonstrated need.
+2. **Stamp or justify** the two unstamped predictions flagged in the [register](05-probabilities/register.md) (energy 2029, agriculture 2032).
 3. **Archive RESEARCH** history if the log is the main maintenance drag.
 
 **Medium**
@@ -128,7 +129,7 @@ Every content file:
 **Low**
 - Fancy reader features beyond Find.
 
-**Retired (r1–r17):** … + B12; compute/data; catalog Find.
+**Retired (r1–r18):** … + B12; compute/data; catalog Find; macro↔indicator sync; register.
 
 ## 7. Invariants
 

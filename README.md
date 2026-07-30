@@ -47,7 +47,7 @@ Domains in three groups, ordered by the cost of ground truth.
 - [2032–2040](04-timelines/2032-2040.md) — the physical world
 
 ### [05 — Subjective Probabilities](05-probabilities/)
-The numbers, re-scored against the corpus; [per-row reasoning](05-probabilities/reasoning.md) and [ledger](05-probabilities/ledger.md).
+The numbers, re-scored against the corpus; [per-row reasoning](05-probabilities/reasoning.md), [ledger](05-probabilities/ledger.md), and the [register](05-probabilities/register.md) of probabilities stated elsewhere.
 
 ### [06 — Where This Is Most Likely Wrong](06-uncertainties/)
 - [Recursive research acceleration](06-uncertainties/recursive-self-improvement.md) — highest parameter variance

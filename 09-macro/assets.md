@@ -58,6 +58,8 @@ Note that **none of these are AI policy.** They are housing, energy, tax, and pe
 
 ---
 
+**Observable:** [B7](../07-indicators/diffusion.md) price split and [B12](../07-indicators/diffusion.md) physical diffusion — the trades-wage prediction above holds only while unstructured physical work stays out of robotics' reach; it is tracked in the [register](../05-probabilities/register.md).
+
 **Related:** [Game 3 — Firms](../02-games/3-firms.md) · [Prices](prices.md) · [Fiscal](fiscal.md) · [Game 4 — Labor](../02-games/4-labor.md) · [Uncertainty 2](../06-uncertainties/power-permitting.md)
 
 **Next:** [Fiscal](fiscal.md)

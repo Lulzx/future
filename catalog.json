@@ -236,6 +236,10 @@
     "title": "Per-row reasoning — what moves each probability"
   },
   {
+    "path": "05-probabilities/register.md",
+    "title": "Distributed predictions register"
+  },
+  {
     "path": "06-uncertainties/README.md",
     "title": "Part VI — Where This Analysis Is Most Likely Wrong"
   },

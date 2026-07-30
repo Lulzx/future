@@ -68,6 +68,8 @@ The classic case took a century and people barely noticed. This version does the
 
 ---
 
+**Observable:** [B7](../07-indicators/diffusion.md) — relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).
+
 **Related:** [Game 3 — Firms](../02-games/3-firms.md) · [Energy](../01-substrate/energy.md) · [Assets](assets.md) · [2028–2032](../04-timelines/2028-2032.md) · [Fiscal](fiscal.md)
 
 **Next:** [Assets and distribution](assets.md)
