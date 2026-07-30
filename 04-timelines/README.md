@@ -1,10 +1,10 @@
-# Part IV — What Actually Happens
+# Part IV - What Actually Happens
 
 ← [Index](../README.md) · [Part III](../03-domains/)
 
 ---
 
-Three periods, each with a different rate-limiting factor. Each page synthesizes the substrate, games, domains, macro channel, indicators, and uncertainties that bear on that window — this part is a *schedule*, not a separate argument.
+Three periods, each with a different rate-limiting factor. Each page synthesizes the substrate, games, domains, macro channel, indicators, and uncertainties that bear on that window - this part is a *schedule*, not a separate argument.
 
 | Period | Rate-limited by | The question it answers |
 |---|---|---|
@@ -16,7 +16,7 @@ Three periods, each with a different rate-limiting factor. Each page synthesizes
 
 The story moves outward through the stack. First the technology has to work reliably enough to sell (2026–28). Then organizations have to restructure around it, which is slower than the technology and always has been (2028–32). Then it either crosses into the physical world or it doesn't, and that determines whether this decade is remembered as an important one or a transformative one (2032–40).
 
-Note that the *capability* frontier is not the rate-limiting factor in any of the three periods. That is the central claim of the timeline, and the main thing that would falsify it is [recursive research acceleration](../06-uncertainties/recursive-self-improvement.md) — subject to the three governors (verification, physical supply chain, financial) named there.
+Note that the *capability* frontier is not the rate-limiting factor in any of the three periods. That is the central claim of the timeline, and the main thing that would falsify it is [recursive research acceleration](../06-uncertainties/recursive-self-improvement.md) - subject to the three governors (verification, physical supply chain, financial) named there.
 
 ## What each period now carries
 

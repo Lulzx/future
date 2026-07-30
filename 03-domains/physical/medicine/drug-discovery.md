@@ -1,6 +1,6 @@
-# Drug discovery — preclinical speed, clinical wall
+# Drug discovery - preclinical speed, clinical wall
 
-← [Medicine](README.md) · [III.B — Physical](../README.md) · [Index](../../../README.md)
+← [Medicine](README.md) · [III.B - Physical](../README.md) · [Index](../../../README.md)
 
 ---
 
@@ -8,13 +8,13 @@ Real acceleration in target identification, structure prediction, and molecular 
 
 ## Where the failures are
 
-> **~60% of clinical failures are efficacy or toxicity in humans**, which AI cannot predict without better biology — biology that still has to be measured in organisms, not only in models of organisms.
+> **~60% of clinical failures are efficacy or toxicity in humans**, which AI cannot predict without better biology - biology that still has to be measured in organisms, not only in models of organisms.
 
 In silico progress moves the early funnel: more candidates, cheaper prioritization, better structures. It does not move the clock on Phase II/III, manufacturing scale-up, or regulators reading multi-year safety data.
 
 > **Estimate:** **~20–30% cost reduction in preclinical** by the early 2030s, and **minimal change to the ~10-year, ~$2B clinical gauntlet** before ~2032.
 
-After 2032 the clinical side can move if automated experimentation and better translational models land — that is a [science](../../cognitive/science.md) bottleneck, not a pharma-marketing bottleneck.
+After 2032 the clinical side can move if automated experimentation and better translational models land - that is a [science](../../cognitive/science.md) bottleneck, not a pharma-marketing bottleneck.
 
 ## The rate limiter is wet lab and recruitment
 
@@ -25,7 +25,7 @@ After 2032 the clinical side can move if automated experimentation and better tr
 | Phase I–III | Protocol design, site selection, document generation | Patient recruitment, endpoints, safety clocks |
 | Approval / manufacturing | Dossier drafting | Process validation, inspection |
 
-**Whoever industrializes automated experimentation captures the largest available prize** — same conclusion as [Science](../../cognitive/science.md), for the same reason. Hypothesis generation is no longer scarce; experimental cycle time is.
+**Whoever industrializes automated experimentation captures the largest available prize** - same conclusion as [Science](../../cognitive/science.md), for the same reason. Hypothesis generation is no longer scarce; experimental cycle time is.
 
 ## What "AI drug" headlines measure
 
@@ -40,13 +40,13 @@ Watch for:
 
 ## Connection to the rest of medicine
 
-Faster preclinical discovery does not fix [delivery](delivery.md). A cheaper candidate still meets reimbursement, licensure, and care-capacity constraints on the way to patients. The consumer-side diagnostic boom and the drug-discovery boom can both be real while population health moves slowly — because health is produced by the delivery system, not by the molecule inventory.
+Faster preclinical discovery does not fix [delivery](delivery.md). A cheaper candidate still meets reimbursement, licensure, and care-capacity constraints on the way to patients. The consumer-side diagnostic boom and the drug-discovery boom can both be real while population health moves slowly - because health is produced by the delivery system, not by the molecule inventory.
 
 ## Failure modes
 
 - **If translational models** (organoids, digital twins with validated prediction) materially raise Phase II success rates, the 20–30% preclinical claim understates the total impact and the post-2032 clinical wall softens earlier.
 - **If automated labs** remain boutique, the science bottleneck claim strengthens and drug AI stays a design tool.
-- **If regulators accept** novel evidence packages (in silico primary evidence), the institutional clock moves — low probability before a major framework rewrite, which is event-driven. → [Game 2](../../../02-games/2-nations.md)
+- **If regulators accept** novel evidence packages (in silico primary evidence), the institutional clock moves - low probability before a major framework rewrite, which is event-driven. → [Game 2](../../../02-games/2-nations.md)
 
 ---
 

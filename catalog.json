@@ -1,7 +1,7 @@
 [
   {
     "path": "00-overview/README.md",
-    "title": "Part 0 — Overview"
+    "title": "Part 0 - Overview"
   },
   {
     "path": "00-overview/compressed.md",
@@ -13,7 +13,7 @@
   },
   {
     "path": "00-overview/notation.md",
-    "title": "Notation — recurring shorthand"
+    "title": "Notation - recurring shorthand"
   },
   {
     "path": "00-overview/thesis.md",
@@ -21,11 +21,11 @@
   },
   {
     "path": "01-substrate/README.md",
-    "title": "Part I — The Physical Substrate"
+    "title": "Part I - The Physical Substrate"
   },
   {
     "path": "01-substrate/capital.md",
-    "title": "Capital — the input that is not scarce, and why that is the problem"
+    "title": "Capital - the input that is not scarce, and why that is the problem"
   },
   {
     "path": "01-substrate/compute.md",
@@ -33,47 +33,47 @@
   },
   {
     "path": "01-substrate/data.md",
-    "title": "Data — and the master asymmetry"
+    "title": "Data - and the master asymmetry"
   },
   {
     "path": "01-substrate/energy.md",
-    "title": "Energy — the constraint that bites before capital does"
+    "title": "Energy - the constraint that bites before capital does"
   },
   {
     "path": "01-substrate/inference-economics.md",
-    "title": "Inference Economics — the two-year moat"
+    "title": "Inference Economics - the two-year moat"
   },
   {
     "path": "02-games/1-labs.md",
-    "title": "Game 1 — Labs: a Tullock contest, not a prisoner's dilemma"
+    "title": "Game 1 - Labs: a Tullock contest, not a prisoner's dilemma"
   },
   {
     "path": "02-games/2-nations.md",
-    "title": "Game 2 — Nations: a security dilemma with a leaky bucket"
+    "title": "Game 2 - Nations: a security dilemma with a leaky bucket"
   },
   {
     "path": "02-games/3-firms.md",
-    "title": "Game 3 — Firms: the Red Queen, and why adoption doesn't mean profit"
+    "title": "Game 3 - Firms: the Red Queen, and why adoption doesn't mean profit"
   },
   {
     "path": "02-games/4-labor.md",
-    "title": "Game 4 — Labor: comparative advantage doesn't guarantee a wage"
+    "title": "Game 4 - Labor: comparative advantage doesn't guarantee a wage"
   },
   {
     "path": "02-games/5-information.md",
-    "title": "Game 5 — Information: the collapse of costly signaling"
+    "title": "Game 5 - Information: the collapse of costly signaling"
   },
   {
     "path": "02-games/README.md",
-    "title": "Part II — The Games"
+    "title": "Part II - The Games"
   },
   {
     "path": "03-domains/README.md",
-    "title": "Part III — Domain by Domain"
+    "title": "Part III - Domain by Domain"
   },
   {
     "path": "03-domains/cognitive/README.md",
-    "title": "III.A — Cognitive Domains"
+    "title": "III.A - Cognitive Domains"
   },
   {
     "path": "03-domains/cognitive/education.md",
@@ -85,7 +85,7 @@
   },
   {
     "path": "03-domains/cognitive/insurance.md",
-    "title": "Insurance — the institution that prices the whole transition"
+    "title": "Insurance - the institution that prices the whole transition"
   },
   {
     "path": "03-domains/cognitive/law.md",
@@ -109,15 +109,15 @@
   },
   {
     "path": "03-domains/contested/README.md",
-    "title": "III.C — Contested Domains"
+    "title": "III.C - Contested Domains"
   },
   {
     "path": "03-domains/contested/biosecurity.md",
-    "title": "Biosecurity — the asymmetry that does not resolve"
+    "title": "Biosecurity - the asymmetry that does not resolve"
   },
   {
     "path": "03-domains/contested/cybersecurity.md",
-    "title": "Cybersecurity — where verification is cheapest, for both sides"
+    "title": "Cybersecurity - where verification is cheapest, for both sides"
   },
   {
     "path": "03-domains/contested/geopolitics/README.md",
@@ -125,27 +125,27 @@
   },
   {
     "path": "03-domains/contested/geopolitics/bipolar.md",
-    "title": "United States and China — asymmetric bottlenecks"
+    "title": "United States and China - asymmetric bottlenecks"
   },
   {
     "path": "03-domains/contested/geopolitics/europe.md",
-    "title": "Europe — rule-setting without producing"
+    "title": "Europe - rule-setting without producing"
   },
   {
     "path": "03-domains/contested/geopolitics/global-south.md",
-    "title": "The Global South — the technology is free and the complements are not"
+    "title": "The Global South - the technology is free and the complements are not"
   },
   {
     "path": "03-domains/contested/geopolitics/gulf.md",
-    "title": "The Gulf — buying the complement you already own"
+    "title": "The Gulf - buying the complement you already own"
   },
   {
     "path": "03-domains/contested/geopolitics/india.md",
-    "title": "India — the exposed sector is the growth model"
+    "title": "India - the exposed sector is the growth model"
   },
   {
     "path": "03-domains/contested/state-capacity.md",
-    "title": "State Capacity — the precondition for every governance claim"
+    "title": "State Capacity - the precondition for every governance claim"
   },
   {
     "path": "03-domains/contested/warfare.md",
@@ -153,19 +153,19 @@
   },
   {
     "path": "03-domains/physical/README.md",
-    "title": "III.B — Physical Domains"
+    "title": "III.B - Physical Domains"
   },
   {
     "path": "03-domains/physical/agriculture.md",
-    "title": "Agriculture — one experiment per year"
+    "title": "Agriculture - one experiment per year"
   },
   {
     "path": "03-domains/physical/energy-sector.md",
-    "title": "Energy sector — AI as demand *and* as tool"
+    "title": "Energy sector - AI as demand *and* as tool"
   },
   {
     "path": "03-domains/physical/logistics.md",
-    "title": "Logistics — solved in the planner, unsolved in the last hundred metres"
+    "title": "Logistics - solved in the planner, unsolved in the last hundred metres"
   },
   {
     "path": "03-domains/physical/medicine/README.md",
@@ -173,19 +173,19 @@
   },
   {
     "path": "03-domains/physical/medicine/delivery.md",
-    "title": "Delivery — consumer triage and the formal system"
+    "title": "Delivery - consumer triage and the formal system"
   },
   {
     "path": "03-domains/physical/medicine/diagnostics.md",
-    "title": "Diagnostics — the radiology template"
+    "title": "Diagnostics - the radiology template"
   },
   {
     "path": "03-domains/physical/medicine/drug-discovery.md",
-    "title": "Drug discovery — preclinical speed, clinical wall"
+    "title": "Drug discovery - preclinical speed, clinical wall"
   },
   {
     "path": "03-domains/physical/medicine/liability.md",
-    "title": "Liability and licensure — authorization as the bottleneck"
+    "title": "Liability and licensure - authorization as the bottleneck"
   },
   {
     "path": "03-domains/physical/robotics/README.md",
@@ -193,39 +193,39 @@
   },
   {
     "path": "03-domains/physical/robotics/cost-curves.md",
-    "title": "Cost Curves — the threshold is economic, not technical"
+    "title": "Cost Curves - the threshold is economic, not technical"
   },
   {
     "path": "03-domains/physical/robotics/data-problem.md",
-    "title": "The Data Problem — there is no internet of manipulation"
+    "title": "The Data Problem - there is no internet of manipulation"
   },
   {
     "path": "03-domains/physical/robotics/form-factor.md",
-    "title": "Form Factor — the humanoid bet, and why it is right for the wrong reasons"
+    "title": "Form Factor - the humanoid bet, and why it is right for the wrong reasons"
   },
   {
     "path": "03-domains/physical/robotics/supply-chain.md",
-    "title": "Supply Chain — why this is not an AI race"
+    "title": "Supply Chain - why this is not an AI race"
   },
   {
     "path": "04-timelines/2026-2028.md",
-    "title": "2026–2028 — the agentic transition and the capex test"
+    "title": "2026–2028 - the agentic transition and the capex test"
   },
   {
     "path": "04-timelines/2028-2032.md",
-    "title": "2028–2032 — diffusion and the institutional lag"
+    "title": "2028–2032 - diffusion and the institutional lag"
   },
   {
     "path": "04-timelines/2032-2040.md",
-    "title": "2032–2040 — the physical world"
+    "title": "2032–2040 - the physical world"
   },
   {
     "path": "04-timelines/README.md",
-    "title": "Part IV — What Actually Happens"
+    "title": "Part IV - What Actually Happens"
   },
   {
     "path": "05-probabilities/README.md",
-    "title": "Part V — Subjective Probabilities"
+    "title": "Part V - Subjective Probabilities"
   },
   {
     "path": "05-probabilities/ledger.md",
@@ -233,7 +233,7 @@
   },
   {
     "path": "05-probabilities/reasoning.md",
-    "title": "Per-row reasoning — what moves each probability"
+    "title": "Per-row reasoning - what moves each probability"
   },
   {
     "path": "05-probabilities/register.md",
@@ -241,79 +241,83 @@
   },
   {
     "path": "06-uncertainties/README.md",
-    "title": "Part VI — Where This Analysis Is Most Likely Wrong"
+    "title": "Part VI - Where This Analysis Is Most Likely Wrong"
   },
   {
     "path": "06-uncertainties/apprenticeship-gap.md",
-    "title": "Uncertainty 3 — The shape of the apprenticeship gap after institutions respond"
+    "title": "Uncertainty 3 - The shape of the apprenticeship gap after institutions respond"
+  },
+  {
+    "path": "06-uncertainties/complement-erosion.md",
+    "title": "Uncertainty 7 - Complement erosion: the scarce list has a half-life"
   },
   {
     "path": "06-uncertainties/correlated-risk.md",
-    "title": "Uncertainty 6 — Correlated-failure insurability as the deployment frontier"
+    "title": "Uncertainty 6 - Correlated-failure insurability as the deployment frontier"
   },
   {
     "path": "06-uncertainties/learned-verification.md",
-    "title": "Uncertainty 5 — Learned verification defeats the master asymmetry"
+    "title": "Uncertainty 5 - Learned verification defeats the master asymmetry"
   },
   {
     "path": "06-uncertainties/power-permitting.md",
-    "title": "Uncertainty 2 — The political feasibility of rapid power permitting in the US"
+    "title": "Uncertainty 2 - The political feasibility of rapid power permitting in the US"
   },
   {
     "path": "06-uncertainties/recursive-self-improvement.md",
-    "title": "Uncertainty 1 — The speed of recursive research acceleration"
+    "title": "Uncertainty 1 - The speed of recursive research acceleration"
   },
   {
     "path": "06-uncertainties/taiwan.md",
-    "title": "Uncertainty 4 — Taiwan and leading-edge fabrication"
+    "title": "Uncertainty 4 - Taiwan and leading-edge fabrication"
   },
   {
     "path": "07-indicators/README.md",
-    "title": "Part VII — The Indicator Dashboard"
+    "title": "Part VII - The Indicator Dashboard"
   },
   {
     "path": "07-indicators/diffusion.md",
-    "title": "B — Diffusion Indicators"
+    "title": "B - Diffusion Indicators"
   },
   {
     "path": "07-indicators/governance.md",
-    "title": "C — Governance Indicators"
+    "title": "C - Governance Indicators"
   },
   {
     "path": "07-indicators/substrate.md",
-    "title": "A — Substrate Indicators"
+    "title": "A - Substrate Indicators"
   },
   {
     "path": "08-method/README.md",
-    "title": "Part VIII — Method"
+    "title": "Part VIII - Method"
   },
   {
     "path": "08-method/base-rates.md",
-    "title": "Base Rates — the reference classes underneath the estimates"
+    "title": "Base Rates - the reference classes underneath the estimates"
   },
   {
     "path": "08-method/scoring.md",
-    "title": "Scoring — how to hold this document accountable"
+    "title": "Scoring - how to hold this document accountable"
   },
   {
     "path": "08-method/steelman.md",
-    "title": "Steelman — the strongest arguments against this document"
+    "title": "Steelman - the strongest arguments against this document"
   },
   {
     "path": "09-macro/README.md",
-    "title": "Part IX — The Macro-Financial Channel"
+    "title": "Part IX - The Macro-Financial Channel"
   },
   {
     "path": "09-macro/assets.md",
-    "title": "Assets and Distribution — who owns the inelastic complements"
+    "title": "Assets and Distribution - who owns the inelastic complements"
   },
   {
     "path": "09-macro/demography.md",
-    "title": "Demography — the large, predictable force pointing the other way"
+    "title": "Demography - the large, predictable force pointing the other way"
   },
   {
     "path": "09-macro/fiscal.md",
-    "title": "Fiscal — a tax base built on labor income"
+    "title": "Fiscal - a tax base built on labor income"
   },
   {
     "path": "09-macro/prices.md",
@@ -321,11 +325,11 @@
   },
   {
     "path": "09-macro/rates.md",
-    "title": "Rates and Returns — why success is self-limiting"
+    "title": "Rates and Returns - why success is self-limiting"
   },
   {
     "path": "HISTORY.md",
-    "title": "Round log archive — rounds 0–15"
+    "title": "Round log archive - rounds 0–15"
   },
   {
     "path": "README.md",

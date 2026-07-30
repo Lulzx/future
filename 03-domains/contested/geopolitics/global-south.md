@@ -1,6 +1,6 @@
-# The Global South — the technology is free and the complements are not
+# The Global South - the technology is free and the complements are not
 
-← [Geopolitics](README.md) · [III.C — Contested](../README.md) · [Index](../../../README.md)
+← [Geopolitics](README.md) · [III.C - Contested](../README.md) · [Index](../../../README.md)
 
 ---
 
@@ -19,7 +19,7 @@ That constraint is the one AI most directly relieves:
 - **Agronomic advice** in local languages where extension services never reached. → [Agriculture](../../physical/agriculture.md)
 - **Legal and administrative navigation** where the alternative is exclusion from formal systems entirely.
 
-**The counterfactual is what makes this different from the rich-world case.** In a high-income country, AI advice substitutes for a professional and must clear that professional's standard to be useful — which is why [liability and licensure](../../cognitive/insurance.md) dominate the analysis. Where there is no professional, it substitutes for *nothing*, and the bar is very much lower.
+**The counterfactual is what makes this different from the rich-world case.** In a high-income country, AI advice substitutes for a professional and must clear that professional's standard to be useful - which is why [liability and licensure](../../cognitive/insurance.md) dominate the analysis. Where there is no professional, it substitutes for *nothing*, and the bar is very much lower.
 
 This is, on this document's analysis, **the single largest potential welfare gain anywhere in it.** It deserves to be stated plainly, because the rest of this page is about why it is slow.
 
@@ -36,7 +36,7 @@ This is, on this document's analysis, **the single largest potential welfare gai
 
 **Every row is a development problem with a fifty-year literature, and none of them are accelerated by better models.** This is the pattern the whole document keeps producing, and it is sharpest here: [the technology arrives free and the complements do not](../../physical/agriculture.md).
 
-The language row deserves particular attention. It is the one complement that AI could plausibly fix *itself* — synthetic data, transfer from high-resource languages, and community data collection are all viable — and it is undersupplied for the standard reason: **the people who need it most represent the least commercial value.** A public-good problem with private cost, exactly like the others in [Part II](../../../02-games/README.md), and one of the cheapest high-leverage interventions in the entire document.
+The language row deserves particular attention. It is the one complement that AI could plausibly fix *itself* - synthetic data, transfer from high-resource languages, and community data collection are all viable - and it is undersupplied for the standard reason: **the people who need it most represent the least commercial value.** A public-good problem with private cost, exactly like the others in [Part II](../../../02-games/README.md), and one of the cheapest high-leverage interventions in the entire document.
 
 ## The pessimistic case, which is also real
 
@@ -46,7 +46,7 @@ Two mechanisms, running in the opposite direction to everything above.
 
 **2. Dependency at a new layer.** If a country's health, education, and agricultural advisory systems run on models built, hosted, and controlled elsewhere, that is a dependency of a kind that has no precedent. It is not like importing machinery, which you own once bought. **It is closer to importing the electricity grid and the language simultaneously**, and it can be withdrawn, repriced, or altered by parties with no accountability to the population depending on it.
 
-Open weights partly resolve this and are therefore more strategically important for low-income countries than for anyone else — a point usually made in terms of safety, where the argument is contested, rather than in terms of sovereignty, where it is much stronger. → [Game 1](../../../02-games/1-labs.md)
+Open weights partly resolve this and are therefore more strategically important for low-income countries than for anyone else - a point usually made in terms of safety, where the argument is contested, rather than in terms of sovereignty, where it is much stronger. → [Game 1](../../../02-games/1-labs.md)
 
 ## What would actually help
 
@@ -55,14 +55,14 @@ Ordered by leverage per dollar, and notable for how little any of it is about AI
 1. **Electricity and connectivity.** The unglamorous, expensive, decisive complements. Every welfare gain above is gated on them.
 2. **Low-resource language capability**, funded as a public good since the market will not supply it.
 3. **Locally-runnable models.** On-device capability removes the connectivity, cost, and dependency constraints at once, and is the single most valuable technical direction for this use case. The efficiency trend in [Part I](../../../01-substrate/) delivers this for free over time, which is the strongest reason for optimism here.
-4. **Regulatory clarity on liability for advice given without a professional**, since the current default — apply rich-world professional standards — blocks the highest-value use cases in exactly the settings where the counterfactual is nothing at all.
+4. **Regulatory clarity on liability for advice given without a professional**, since the current default - apply rich-world professional standards - blocks the highest-value use cases in exactly the settings where the counterfactual is nothing at all.
 
-> **Assessment:** meaningful welfare gains in health, education, and agriculture across low-income countries by 2035 are **~55%** likely — high, because the counterfactual is weak and the technology is free. Meaningful *growth* gains are **~25%** likely, because growth requires the complements and the ladder, and one of those is being removed.
+> **Assessment:** meaningful welfare gains in health, education, and agriculture across low-income countries by 2035 are **~55%** likely - high, because the counterfactual is weak and the technology is free. Meaningful *growth* gains are **~25%** likely, because growth requires the complements and the ladder, and one of those is being removed.
 
 **Welfare and growth come apart here, and most analysis conflates them.** People living better while their country's development strategy fails is an entirely coherent outcome, and on this framework it is the most likely one.
 
 ---
 
-**Related:** [India](india.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Education](../../cognitive/education.md) · [Medicine](../../physical/medicine/) · [Agriculture](../../physical/agriculture.md) · [Game 1 — Labs](../../../02-games/1-labs.md) on open weights
+**Related:** [India](india.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Education](../../cognitive/education.md) · [Medicine](../../physical/medicine/) · [Agriculture](../../physical/agriculture.md) · [Game 1 - Labs](../../../02-games/1-labs.md) on open weights
 
 **Next:** [Warfare](../warfare.md)

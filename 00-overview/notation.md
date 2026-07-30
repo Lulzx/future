@@ -1,4 +1,4 @@
-# Notation — recurring shorthand
+# Notation - recurring shorthand
 
 ← [Part 0](README.md) · [Index](../README.md)
 

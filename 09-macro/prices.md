@@ -8,13 +8,13 @@
 
 ## The split, and why it is not ordinary relative-price change
 
-Relative prices always move. What is unusual here is that the split falls along a **single clean axis** — whether the good's cost is dominated by cognition or by something intelligence cannot manufacture — and that the axis cuts across nearly every consumption category simultaneously.
+Relative prices always move. What is unusual here is that the split falls along a **single clean axis** - whether the good's cost is dominated by cognition or by something intelligence cannot manufacture - and that the axis cuts across nearly every consumption category simultaneously.
 
 | Deflating | Inflating |
 |---|---|
 | Software, analysis, design, drafting | Electricity and everything energy-intensive |
 | Media, entertainment, content of all kinds | Land, housing, anything with location |
-| Routine professional services | Skilled trades — plumbing, electrical, HVAC |
+| Routine professional services | Skilled trades - plumbing, electrical, HVAC |
 | Translation, tutoring, research assistance | In-person care, and healthcare delivery |
 | Diagnostics, documentation, first-pass legal | Anything requiring a licensed body in a room |
 
@@ -24,7 +24,7 @@ This is [Game 3](../02-games/3-firms.md) showing up in the price index. Cognitio
 
 Before the policy problem, there is a measurement problem, and it is severe enough to distort everything downstream.
 
-**Quality-adjusted deflation is largely invisible in official statistics.** When a service becomes 10× better at the same price, or free at a lower quality that most users prefer, price indices capture almost none of it. This is the standard hedonic problem and AI makes it acute: a large share of the consumer surplus [Game 3](../02-games/3-firms.md) predicts lands in **unpriced or mispriced form** — free tiers, bundled features, quality improvements, and time savings that never touch a transaction.
+**Quality-adjusted deflation is largely invisible in official statistics.** When a service becomes 10× better at the same price, or free at a lower quality that most users prefer, price indices capture almost none of it. This is the standard hedonic problem and AI makes it acute: a large share of the consumer surplus [Game 3](../02-games/3-firms.md) predicts lands in **unpriced or mispriced form** - free tiers, bundled features, quality improvements, and time savings that never touch a transaction.
 
 Three consequences:
 
@@ -40,13 +40,13 @@ A central bank has one policy rate and an index averaging two opposite movements
 
 If cognitive deflation and physical inflation roughly cancel, headline inflation looks fine and **the policy stance is simultaneously too tight for the deflating half and too loose for the inflating half.** Neither sector gets appropriate policy; the average is meaningless.
 
-Worse, the inflating half is exactly where policy is least effective. Raising rates does not build transmission lines, train electricians, or add housing supply — it mostly suppresses the investment that would eventually relieve those constraints. **Monetary policy against supply-constrained inflation is close to counterproductive**, and the 2020s already demonstrated this at smaller scale.
+Worse, the inflating half is exactly where policy is least effective. Raising rates does not build transmission lines, train electricians, or add housing supply - it mostly suppresses the investment that would eventually relieve those constraints. **Monetary policy against supply-constrained inflation is close to counterproductive**, and the 2020s already demonstrated this at smaller scale.
 
 > **Prediction:** by the early 2030s, a live and serious debate about whether headline CPI is fit for purpose as a policy target, with proposals to target a services-and-shelter subindex or to exclude technology-driven deflation. **~50%** that a major central bank formally revises its target definition or its stated tolerance band by 2035.
 
 ## The distributional shape is what makes it political
 
-**Low-income households spend disproportionately on the inflating basket** — energy, housing, food, healthcare, transport. High-income households consume proportionally more of the deflating basket — software, media, education, professional services, discretionary information goods.
+**Low-income households spend disproportionately on the inflating basket** - energy, housing, food, healthcare, transport. High-income households consume proportionally more of the deflating basket - software, media, education, professional services, discretionary information goods.
 
 So the price split is **regressive on its face**, even though the aggregate welfare effect is positive and possibly large. The gains are real, widely distributed, and land in a form that is easy to under-notice; the losses are concentrated in the most salient monthly expenses.
 
@@ -54,7 +54,7 @@ So the price split is **regressive on its face**, even though the aggregate welf
 
 The likely political responses follow directly, and are worth predicting because they will be described as reactions to AI when they are reactions to prices:
 
-- Energy-price interventions — subsidies, caps, and large-load tariffs. → [Energy](../01-substrate/energy.md)
+- Energy-price interventions - subsidies, caps, and large-load tariffs. → [Energy](../01-substrate/energy.md)
 - Housing supply politics intensifying, since land is the purest inelastic complement there is
 - Pressure on healthcare and education costs, being the two categories that already resisted every previous technology-driven deflation
 
@@ -68,8 +68,8 @@ The classic case took a century and people barely noticed. This version does the
 
 ---
 
-**Observable:** [B7](../07-indicators/diffusion.md) — relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).
+**Observable:** [B7](../07-indicators/diffusion.md) - relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).
 
-**Related:** [Game 3 — Firms](../02-games/3-firms.md) · [Energy](../01-substrate/energy.md) · [Assets](assets.md) · [2028–2032](../04-timelines/2028-2032.md) · [Fiscal](fiscal.md)
+**Related:** [Game 3 - Firms](../02-games/3-firms.md) · [Energy](../01-substrate/energy.md) · [Assets](assets.md) · [2028–2032](../04-timelines/2028-2032.md) · [Fiscal](fiscal.md)
 
 **Next:** [Assets and distribution](assets.md)

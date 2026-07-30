@@ -1,4 +1,4 @@
-# Part I — The Physical Substrate
+# Part I - The Physical Substrate
 
 ← [Index](../README.md)
 
@@ -6,21 +6,21 @@
 
 Everything downstream depends on four inputs: **compute, energy, data, capital**. Each has a different scaling law and a different ceiling.
 
-The order matters. These are not four parallel concerns — they are a relay. Compute constrained the field through ~2024. Data exhaustion redirected it in 2024–25. Energy binds from ~2026. Capital tests the whole thing around 2027–29. And the character of each ceiling determines what the games in [Part II](../02-games/) can and cannot do.
+The order matters. These are not four parallel concerns - they are a relay. Compute constrained the field through ~2024. Data exhaustion redirected it in 2024–25. Energy binds from ~2026. Capital tests the whole thing around 2027–29. And the character of each ceiling determines what the games in [Part II](../02-games/) can and cannot do.
 
 ## Sections
 
 | | Constraint | Binds when | Character |
 |---|---|---|---|
 | [Compute](compute.md) | Effective compute ~7–10×/yr; dollar term breaks at Apollo scale | 2029–30 | Financial, possibly evadable via efficiency |
-| [Energy](energy.md) | Interconnect queues, turbines, transformers | ~2026 onward | Physical *and* regulatory; skewed toward loosening — sector-side effects in [energy sector](../03-domains/physical/energy-sector.md) |
-| [Data](data.md) | High-quality human text exhausted | Already binding | Redirected rather than blocking — and it created the master asymmetry |
-| [Capital](capital.md) | Not a ceiling — a continuously re-priced verdict | 2027–29 | Financial and reversible; the only input that can run backwards |
-| [Inference economics](inference-economics.md) | Not a ceiling — a floor collapsing | Continuous | Sets the two-year moat on any capability |
+| [Energy](energy.md) | Interconnect queues, turbines, transformers | ~2026 onward | Physical *and* regulatory; skewed toward loosening - sector-side effects in [energy sector](../03-domains/physical/energy-sector.md) |
+| [Data](data.md) | High-quality human text exhausted | Already binding | Redirected rather than blocking - and it created the master asymmetry |
+| [Capital](capital.md) | Not a ceiling - a continuously re-priced verdict | 2027–29 | Financial and reversible; the only input that can run backwards |
+| [Inference economics](inference-economics.md) | Not a ceiling - a floor collapsing | Continuous | Sets the two-year moat on any capability |
 
 ## Two of these are not constraints
 
-Compute, energy, and data are ceilings — they cap what is possible. [Capital](capital.md) and [inference economics](inference-economics.md) are not, and reading them as ceilings is a common error.
+Compute, energy, and data are ceilings - they cap what is possible. [Capital](capital.md) and [inference economics](inference-economics.md) are not, and reading them as ceilings is a common error.
 
 **Capital is a verdict**: there is no physical limit on the flow, only a continuously re-priced judgment about repayment. It is the fastest-moving input and the only one that can reverse. **Inference cost is a floor collapsing**: it does not constrain anything, it sets the depreciation schedule on every capability advantage anyone holds.
 
@@ -36,4 +36,4 @@ Every domain prediction in [Part III](../03-domains/) is downstream of that sent
 
 ---
 
-**Next:** [Compute](compute.md) → [Part II — The Games](../02-games/)
+**Next:** [Compute](compute.md) → [Part II - The Games](../02-games/)

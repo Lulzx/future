@@ -1,4 +1,4 @@
-# Uncertainty 2 — The political feasibility of rapid power permitting in the US
+# Uncertainty 2 - The political feasibility of rapid power permitting in the US
 
 ← [Part VI](README.md) · [Index](../README.md)
 
@@ -18,7 +18,7 @@ So the distribution is **skewed toward faster** than the base case assumes. If I
 
 ## The force pushing the other way
 
-Electricity price increases in datacenter-dense regions are generating genuine local political backlash — and this is something I have probably **underweighted at the state level.**
+Electricity price increases in datacenter-dense regions are generating genuine local political backlash - and this is something I have probably **underweighted at the state level.**
 
 Federal preemption is a national-politics story that moves in one direction. Retail rate increases are a state-politics story that moves in the other, faster, and with a much shorter feedback loop between the cost being felt and the vote being cast. State utility commissions can impose siting conditions, rate structures, and moratoria that no federal reform straightforwardly overrides.
 

@@ -1,6 +1,6 @@
 # Software Engineering
 
-← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
+← [III.A - Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -8,7 +8,7 @@ Most-affected large profession. Not because coding disappears, but because **the
 
 ## The numbers that matter
 
-Expect **2–4× throughput on greenfield** and **near-zero gain on legacy integration.** The ratio between those is where the real story is — it means the benefit is concentrated in new work and in organizations without accumulated context debt, which is very nearly the opposite of where most engineering labor currently sits.
+Expect **2–4× throughput on greenfield** and **near-zero gain on legacy integration.** The ratio between those is where the real story is - it means the benefit is concentrated in new work and in organizations without accumulated context debt, which is very nearly the opposite of where most engineering labor currently sits.
 
 Total developer employment probably **rises through 2030** (Jevons on software demand), while composition shifts hard toward senior/architectural and away from junior/implementation.
 
@@ -21,7 +21,7 @@ Total developer employment probably **rises through 2030** (Jevons on software d
 
 ## What it does to SaaS
 
-Software's marginal cost falls toward zero, threatening the SaaS model — per-seat pricing, high margin, defended by switching cost.
+Software's marginal cost falls toward zero, threatening the SaaS model - per-seat pricing, high margin, defended by switching cost.
 
 If a bespoke internal tool costs $5k instead of $500k, **the long tail of vertical SaaS gets eaten from below.** The vendors that survive hold something other than the software: proprietary data, a compliance position, a network, or distribution. → [Game 3](../../02-games/3-firms.md)
 
@@ -35,21 +35,21 @@ If a bespoke internal tool costs $5k instead of $500k, **the long tail of vertic
 | Usage / tokens | Metered cognition | Race to zero on inference ([inference economics](../../01-substrate/inference-economics.md)) |
 | Outcome / success fee | Attributable results + liability | Reliability and indemnity unclear |
 
-Vendors that cannot reprice watch ARR per customer fall while usage rises. Buyers that accept outcome pricing reveal belief that unsupervised work is real — more honest than benchmarks.
+Vendors that cannot reprice watch ARR per customer fall while usage rises. Buyers that accept outcome pricing reveal belief that unsupervised work is real - more honest than benchmarks.
 
 ## The apprenticeship problem is sharpest here
 
-This domain is the leading indicator for [Game 4](../../02-games/4-labor.md) because the exposure is cleanest: AI is best at exactly the work that used to be how people learned. Boilerplate, first-pass implementation, test writing, and bug triage were never economically valuable in themselves — they were the tuition.
+This domain is the leading indicator for [Game 4](../../02-games/4-labor.md) because the exposure is cleanest: AI is best at exactly the work that used to be how people learned. Boilerplate, first-pass implementation, test writing, and bug triage were never economically valuable in themselves - they were the tuition.
 
 Removing them is efficient for every individual team and quietly catastrophic for the pipeline.
 
-Aligned with [law](law.md) (same pyramid economics) and [education](education.md) (credentials + missing junior years). Mid-2026 data already shows junior software postings and entry-level tech hire shares collapsing — see Game 4 tables.
+Aligned with [law](law.md) (same pyramid economics) and [education](education.md) (credentials + missing junior years). Mid-2026 data already shows junior software postings and entry-level tech hire shares collapsing - see Game 4 tables.
 
 > **Discriminating test (shared with labor):** if junior eng hiring fails to recover when aggregate tech hiring does (~2027–28), substitution share was large. → [B1](../../07-indicators/diffusion.md)
 
 ### Uncertainty 3 here first
 
-[Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md): AI as dense mentor could *shorten* novice→expert if feedback is grounded (tests, types, prod metrics). Software has the cheapest ground truth for that inversion — [science](science.md)-like verification on code. If the inversion fails here, it is unlikely to save law or consulting.
+[Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md): AI as dense mentor could *shorten* novice→expert if feedback is grounded (tests, types, prod metrics). Software has the cheapest ground truth for that inversion - [science](science.md)-like verification on code. If the inversion fails here, it is unlikely to save law or consulting.
 
 ## Security and supply chain
 

@@ -1,4 +1,4 @@
-# Part III — Domain by Domain
+# Part III - Domain by Domain
 
 ← [Index](../README.md) · [Part II](../02-games/)
 
@@ -10,28 +10,28 @@ Where a prediction here looks surprising, the explanation is almost always one o
 
 ## Three groups
 
-The grouping is an argument, not an alphabet. Each group has a different relationship to ground truth, and that relationship — not the industry label — determines the shape of the transition.
+The grouping is an argument, not an alphabet. Each group has a different relationship to ground truth, and that relationship - not the industry label - determines the shape of the transition.
 
 | Group | What defines it | What follows |
 |---|---|---|
-| [**A — Cognitive**](cognitive/) | The output is symbols; verification is inspection | Fast, happening now, gated by trust and liability |
-| [**B — Physical**](physical/) | The output is atoms; verification requires a physical experiment | Slow, gated by a clock you don't control |
-| [**C — Contested**](contested/) | An adversary optimizes against you with the same tools | The question is the offense–defense balance, not capability |
+| [**A - Cognitive**](cognitive/) | The output is symbols; verification is inspection | Fast, happening now, gated by trust and liability |
+| [**B - Physical**](physical/) | The output is atoms; verification requires a physical experiment | Slow, gated by a clock you don't control |
+| [**C - Contested**](contested/) | An adversary optimizes against you with the same tools | The question is the offense–defense balance, not capability |
 
-### [A — Cognitive](cognitive/)
+### [A - Cognitive](cognitive/)
 [Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md) · [Meaning](cognitive/meaning.md)
 
-### [B — Physical](physical/)
+### [B - Physical](physical/)
 [Medicine](physical/medicine/) · [Robotics](physical/robotics/) · [Energy sector](physical/energy-sector.md) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
 
-### [C — Contested](contested/)
+### [C - Contested](contested/)
 [Geopolitics](contested/geopolitics/) · [Warfare](contested/warfare.md) · [Cybersecurity](contested/cybersecurity.md) · [Biosecurity](contested/biosecurity.md) · [State capacity](contested/state-capacity.md)
 
 ## The ground-truth ordering, in one table
 
 | Domain | Ground truth | Human moat | Timing |
 |---|---|---|---|
-| [Cybersecurity](contested/cybersecurity.md) | Free — exploits verify themselves | None on offense; integration on defense | Now |
+| [Cybersecurity](contested/cybersecurity.md) | Free - exploits verify themselves | None on offense; integration on defense | Now |
 | [Software](cognitive/software.md) | Cheap (tests) | Architecture, integration, judgment | Now |
 | [Finance](cognitive/finance.md) | Cheap (P&L) | Fiduciary responsibility | Largely done |
 | [Insurance](cognitive/insurance.md) | Cheap and historical | Balance sheet, regulatory capital | Now, quietly |
@@ -41,22 +41,22 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [Medicine](physical/medicine/) | Mixed | Licensure, liability, hands | Consumer now; institutional slow |
 | [Science](cognitive/science.md) | Varies wildly by field | Experimental throughput | Bottlenecked on wet lab |
 | [Biosecurity](contested/biosecurity.md) | Expensive; catastrophic to get wrong | Materials, tacit lab skill | Now, quietly |
-| [Agriculture](physical/agriculture.md) | Seasonal — one experiment per year | Land, water, biology's clock | Slow |
+| [Agriculture](physical/agriculture.md) | Seasonal - one experiment per year | Land, water, biology's clock | Slow |
 | [Education](cognitive/education.md) | Weak | Childcare, socialization, motivation | Slow, institutional |
 | [Media & culture](cognitive/media.md) | None | Provenance, presence | Now |
 | [Meaning](cognitive/meaning.md) | Weak / contested | Status, presence, costly care | Now; under-measured |
 | [Energy sector](physical/energy-sector.md) | Cheap in markets; expensive in plants | Wires, sites, interconnection | Ops now; atoms slow |
 | [Robotics](physical/robotics/) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
-| [State capacity](contested/state-capacity.md) | Weak | — | The precondition for the rest |
-| [Geopolitics](contested/geopolitics/) | N/A | — | 2030s structural break |
+| [State capacity](contested/state-capacity.md) | Weak | - | The precondition for the rest |
+| [Geopolitics](contested/geopolitics/) | N/A | - | 2030s structural break |
 
-**Read the table top to bottom and the thesis reads itself.** The ordering is by cost of ground truth, and it predicts the timing column almost perfectly. Where it doesn't — education and media, which have terrible ground truth and are moving fast anyway — the explanation is that the change there is not capability arriving but a **signal collapsing** ([Game 5](../02-games/5-information.md)), which is a different mechanism.
+**Read the table top to bottom and the thesis reads itself.** The ordering is by cost of ground truth, and it predicts the timing column almost perfectly. Where it doesn't - education and media, which have terrible ground truth and are moving fast anyway - the explanation is that the change there is not capability arriving but a **signal collapsing** ([Game 5](../02-games/5-information.md)), which is a different mechanism.
 
 ## The patterns across all sixteen
 
 Five things recur:
 
-1. **The diagnostic layer compresses; the accountability layer does not.** Radiology, law, finance, insurance, and consulting all show the same shape — AI absorbs the analysis and the human retains the part where someone can be sued.
+1. **The diagnostic layer compresses; the accountability layer does not.** Radiology, law, finance, insurance, and consulting all show the same shape - AI absorbs the analysis and the human retains the part where someone can be sued.
 2. **Consumer-side change outruns institutional change,** often by years, because institutions carry licensure and liability and individuals do not.
 3. **The middle gets hollowed.** Competent commercial work is the most exposed layer in nearly every domain; genuine expertise and pure commodity both survive.
 4. **Planning compresses; handling does not.** The clean split in [logistics](physical/logistics.md) recurs in agriculture, medicine, and manufacturing. Optimization was always the tractable half, and it is not where the labor hours are.
@@ -64,4 +64,4 @@ Five things recur:
 
 ---
 
-**Next:** [A — Cognitive domains](cognitive/) → [Part IV — Timelines](../04-timelines/)
+**Next:** [A - Cognitive domains](cognitive/) → [Part IV - Timelines](../04-timelines/)

@@ -1,4 +1,4 @@
-# Scoring — how to hold this document accountable
+# Scoring - how to hold this document accountable
 
 ← [Part VIII](README.md) · [Index](../README.md)
 
@@ -12,13 +12,13 @@ Predictions that cannot be scored are decoration. This page specifies how each c
 
 **Ranges resolve at the midpoint unless a threshold is stated.** "12–18% of task-hours" scores against 15%. "By 2029" means by 2029-12-31.
 
-**Directional claims resolve against the counterfactual, not the level.** "Value accrues to inelastic complements" is not scored by whether energy prices rose — they might rise for unrelated reasons — but by whether they rose *relative to* cognition-intensive prices. Most of this document's claims are relative and must be scored relative.
+**Directional claims resolve against the counterfactual, not the level.** "Value accrues to inelastic complements" is not scored by whether energy prices rose - they might rise for unrelated reasons - but by whether they rose *relative to* cognition-intensive prices. Most of this document's claims are relative and must be scored relative.
 
 **A claim is a miss if it was right for the wrong reason.** If the [correction](../01-substrate/capital.md) arrives in 2028 but is triggered by a macro shock rather than by AI revenue disappointing, the timing was lucky and the mechanism was wrong. Log it as a miss with a note. Mechanism accuracy is the point; a framework that gets outcomes right through wrong mechanisms will fail on the next question.
 
 ## The scoring ledger
 
-Maintained per [protocol](../RESEARCH.md) §5. Each entry: claim, source page, resolution date, outcome, and — the important column — **what the framework should have said.**
+Maintained per [protocol](../RESEARCH.md) §5. Each entry: claim, source page, resolution date, outcome, and - the important column - **what the framework should have said.**
 
 | Field | Why |
 |---|---|
@@ -50,7 +50,7 @@ Over a sufficient number of resolved claims:
 | ~60% | ~6 in 10 |
 | ~20% | ~2 in 10 |
 
-The 60% band is where this document lives and where calibration is hardest to fake. **Being right on 90% of the 60% claims is not good performance — it is evidence of systematic under-confidence**, which is its own failure and usually a sign of hedging to avoid scoreable error.
+The 60% band is where this document lives and where calibration is hardest to fake. **Being right on 90% of the 60% claims is not good performance - it is evidence of systematic under-confidence**, which is its own failure and usually a sign of hedging to avoid scoreable error.
 
 ## The first claims due
 
@@ -64,10 +64,10 @@ The 60% band is where this document lives and where calibration is hardest to fa
 | 2029 | >40% of new US frontier capacity on owned or bilaterally-contracted generation | [Energy](../01-substrate/energy.md) |
 | 2030 | AI-specific liability coverage exists as a material line with published rates | [Insurance](../03-domains/cognitive/insurance.md) |
 
-The first two resolve within about eighteen months of writing and are the earliest real test. **If both miss, the framework's treatment of institutional friction and capital ceilings is wrong in the same direction — toward slowness — and the whole timeline should shift, not just those two rows.**
+The first two resolve within about eighteen months of writing and are the earliest real test. **If both miss, the framework's treatment of institutional friction and capital ceilings is wrong in the same direction - toward slowness - and the whole timeline should shift, not just those two rows.**
 
 ---
 
-**Related:** [Part V — Probabilities](../05-probabilities/) · [Part VII — Indicators](../07-indicators/) · [Steelman](steelman.md) · [Dependencies](../00-overview/dependencies.md) · [Notation](../00-overview/notation.md) · [Protocol](../RESEARCH.md)
+**Related:** [Part V - Probabilities](../05-probabilities/) · [Part VII - Indicators](../07-indicators/) · [Steelman](steelman.md) · [Dependencies](../00-overview/dependencies.md) · [Notation](../00-overview/notation.md) · [Protocol](../RESEARCH.md)
 
 **Next:** [Index](../README.md)

@@ -1,10 +1,10 @@
-# Uncertainty 5 — Learned verification defeats the master asymmetry
+# Uncertainty 5 - Learned verification defeats the master asymmetry
 
 ← [Part VI](README.md) · [Index](../README.md)
 
 ---
 
-[Steelman](../08-method/steelman.md) §1 is the strongest argument against this document's framework. It deserves its own uncertainty entry — not because it is new in round 8, but because leaving the document's admitted weakest point *only* in the steelman section understates its variance relative to uncertainties 1–3.
+[Steelman](../08-method/steelman.md) §1 is the strongest argument against this document's framework. It deserves its own uncertainty entry - not because it is new in round 8, but because leaving the document's admitted weakest point *only* in the steelman section understates its variance relative to uncertainties 1–3.
 
 ## The claim that would break the corpus
 
@@ -20,7 +20,7 @@ Uncertainties 1–3 and 4 mis-set parameters or scenarios. **This one, if resolv
 
 ## The best reply, and where it is weak
 
-**Reply:** a learned verifier is only as good as what trained it — the ground-truth problem recurses one level up. Where genuine ground truth never arrives, the loop can drift confidently. Self-verification without external grounding is exactly the regime where systematic error compounds invisibly.
+**Reply:** a learned verifier is only as good as what trained it - the ground-truth problem recurses one level up. Where genuine ground truth never arrives, the loop can drift confidently. Self-verification without external grounding is exactly the regime where systematic error compounds invisibly.
 
 **Where the reply is weak:** the same recursion objection applies to human expertise, which is mostly peer-validated without external ground truth, and human expertise runs civilization. If learned verification matches peer review, that is enough for most economic purposes.
 
@@ -49,4 +49,4 @@ Uncertainties 1–3 and 4 mis-set parameters or scenarios. **This one, if resolv
 
 **Related:** [Steelman](../08-method/steelman.md) §1 · [Data](../01-substrate/data.md) · [Uncertainty 1](recursive-self-improvement.md) · [Part III](../03-domains/) · [Scoring](../08-method/scoring.md) rule 5
 
-**Previous:** [Uncertainty 4 — Taiwan](taiwan.md) · **Next:** [Uncertainty 6 — correlated risk](correlated-risk.md)
+**Previous:** [Uncertainty 4 - Taiwan](taiwan.md) · **Next:** [Uncertainty 6 - correlated risk](correlated-risk.md)

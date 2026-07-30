@@ -1,12 +1,12 @@
-# Delivery — consumer triage and the formal system
+# Delivery - consumer triage and the formal system
 
-← [Medicine](README.md) · [III.B — Physical](../README.md) · [Index](../../../README.md)
+← [Medicine](README.md) · [III.B - Physical](../README.md) · [Index](../../../README.md)
 
 ---
 
 Expect enormous **consumer-side** change: AI as first-line triage, roughly free, and better than the median GP visit for *informational* purposes.
 
-This routes *around* the formal system faster than it changes it — the same pattern as every prior information technology in medicine (WebMD, patient forums, direct-to-consumer labs), but at much larger magnitude and higher average quality.
+This routes *around* the formal system faster than it changes it - the same pattern as every prior information technology in medicine (WebMD, patient forums, direct-to-consumer labs), but at much larger magnitude and higher average quality.
 
 ## Two systems, one body
 
@@ -18,7 +18,7 @@ This routes *around* the formal system faster than it changes it — the same pa
 | **Liability** | Disclaimed | Insured professional |
 | **Ground truth used** | Text, wearable, photo | Exam, labs, imaging, longitudinal chart |
 
-The consumer path wins on information. The formal path keeps a monopoly on **action** — prescriptions, admissions, procedures, sick notes, insurance authorization. That split is stable until one of three things moves: regulation opens prescribing channels, liability attaches to consumer tools, or the formal system prices itself out of routine care entirely.
+The consumer path wins on information. The formal path keeps a monopoly on **action** - prescriptions, admissions, procedures, sick notes, insurance authorization. That split is stable until one of three things moves: regulation opens prescribing channels, liability attaches to consumer tools, or the formal system prices itself out of routine care entirely.
 
 ## The friction is the politics
 
@@ -31,15 +31,15 @@ Concrete forms already visible:
 - Distrust when the formal answer contradicts the free one without a shared evidence trail
 - In low-resource settings, the free tool as *the* care layer, not a supplement → [Global South](../../contested/geopolitics/global-south.md)
 
-> **Prediction:** by 2030, a majority of outpatient encounters in high-internet populations are preceded by patient-side model consultation. The formal system's response is a mix of integration (tools inside the EHR), containment (liability warnings, documentation burden), and backlash (scope-of-practice fights) — not indifference.
+> **Prediction:** by 2030, a majority of outpatient encounters in high-internet populations are preceded by patient-side model consultation. The formal system's response is a mix of integration (tools inside the EHR), containment (liability warnings, documentation burden), and backlash (scope-of-practice fights) - not indifference.
 
 ## What the formal system actually optimizes
 
 Healthcare has never been bottlenecked on knowing what to do in the abstract. It is bottlenecked on **who is permitted to do it and who pays.** → [Liability](liability.md)
 
-Adding intelligence to scheduling, documentation, prior auth, and coding compresses administrative load — real, large, and mostly invisible to patients. Adding intelligence to diagnosis without changing who may prescribe or operate produces better-informed waiting rooms, not shorter queues.
+Adding intelligence to scheduling, documentation, prior auth, and coding compresses administrative load - real, large, and mostly invisible to patients. Adding intelligence to diagnosis without changing who may prescribe or operate produces better-informed waiting rooms, not shorter queues.
 
-**Planning compresses; handling does not** — the same split as [logistics](../logistics.md) and [agriculture](../agriculture.md). Treatment *planning* and documentation move; the procedure, the bed, the nurse-hour, and the licensed signature do not.
+**Planning compresses; handling does not** - the same split as [logistics](../logistics.md) and [agriculture](../agriculture.md). Treatment *planning* and documentation move; the procedure, the bed, the nurse-hour, and the licensed signature do not.
 
 ## Care work and demography
 
@@ -50,7 +50,7 @@ The acute 2030s shortage is care and skilled clinical support, not diagnostic ra
 ## Failure modes
 
 - **If scope-of-practice expands** (pharmacist prescribing, nurse-led AI protocols, model-authorized refills), the formal monopoly on action softens and delivery timelines compress.
-- **If insurers require** model triage before covering a visit, the consumer path is absorbed into the formal path — integration by force of payment.
+- **If insurers require** model triage before covering a visit, the consumer path is absorbed into the formal path - integration by force of payment.
 - **If a salient consumer-AI medical harm** lands, the regulatory response may freeze the consumer path for a cycle. → [Game 2](../../../02-games/2-nations.md)
 
 ---

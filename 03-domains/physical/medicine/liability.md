@@ -1,6 +1,6 @@
-# Liability and licensure — authorization as the bottleneck
+# Liability and licensure - authorization as the bottleneck
 
-← [Medicine](README.md) · [III.B — Physical](../README.md) · [Index](../../../README.md)
+← [Medicine](README.md) · [III.B - Physical](../README.md) · [Index](../../../README.md)
 
 ---
 
@@ -20,7 +20,7 @@ Capability attacks none of these directly. A model that outperforms a median phy
 
 ## The financial moat, restated
 
-**What protects the incumbent professional is often not skill — it is that a malpractice policy exists covering a licensed human and does not yet cover an autonomous system.**
+**What protects the incumbent professional is often not skill - it is that a malpractice policy exists covering a licensed human and does not yet cover an autonomous system.**
 
 That reframes the human moat from a capability claim into a balance-sheet claim. Balance sheets reprice faster than residencies train. A single underwriting shift or a precedent-setting judgment can move the [diagnostics](diagnostics.md) employment story more than another generation of model quality.
 
@@ -30,17 +30,17 @@ That reframes the human moat from a capability claim into a balance-sheet claim.
 
 Even when a tool is accurate and a human will sign, **payment rules** decide deployment. Codes, prior auth, and site-of-service differentials determine whether the hospital buys the system or shelves the pilot.
 
-AI that reduces cost but also reduces billable RVUs faces a perverse incentive inside fee-for-service. AI that increases throughput under a fixed professional fee is adopted as speed-up. The same model meets opposite fates under different payment regimes — which is why deployment maps to payer policy more than to leaderboard rank.
+AI that reduces cost but also reduces billable RVUs faces a perverse incentive inside fee-for-service. AI that increases throughput under a fixed professional fee is adopted as speed-up. The same model meets opposite fates under different payment regimes - which is why deployment maps to payer policy more than to leaderboard rank.
 
 ## Why this is not permanent safety
 
 Licensure and liability are **chosen** constraints. They can be rewritten after a crisis, a fiscal crunch, or a rural access collapse. [Demography](../../../09-macro/demography.md) raises the odds of rewrite: a care shortage makes "only physicians may X" politically expensive.
 
-The base case is still slow change through 2030. The tail is a scope-of-practice and liability rewrite in the [18-month window](../../../02-games/2-nations.md) after a salient incident — or after a fiscal event that makes the status quo unaffordable.
+The base case is still slow change through 2030. The tail is a scope-of-practice and liability rewrite in the [18-month window](../../../02-games/2-nations.md) after a salient incident - or after a fiscal event that makes the status quo unaffordable.
 
 ## Failure modes for the "authorization binds" claim
 
-- **Enterprise indemnification by model providers** at scale — risk leaves the hospital balance sheet.
+- **Enterprise indemnification by model providers** at scale - risk leaves the hospital balance sheet.
 - **Safe harbors** for AI-assisted standard-of-care when the human follows a certified system.
 - **Workforce emergency rules** (pandemic-style) that expand who may act with model support.
 

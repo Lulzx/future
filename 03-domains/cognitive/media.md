@@ -1,6 +1,6 @@
 # Media, Art, and Culture
 
-← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
+← [III.A - Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -12,25 +12,25 @@ Therefore **attention and curation are the scarce goods**, and authenticity beco
 
 Not because synthetic work is worse. Often it isn't.
 
-Because humans value provenance for its own sake — the way handmade goods survived industrialization as a luxury category. The value is in the knowledge of how it was made, which is a fact about the object's history rather than its properties. That is not a preference AI can satisfy by getting better, which is what makes it durable.
+Because humans value provenance for its own sake - the way handmade goods survived industrialization as a luxury category. The value is in the knowledge of how it was made, which is a fact about the object's history rather than its properties. That is not a preference AI can satisfy by getting better, which is what makes it durable.
 
 ## What to expect
 
 - **Live performance appreciates sharply.** It is the one format where presence cannot be faked and the verification is free.
-- **"Made by a person" becomes a marketed and certified attribute** — which requires the provenance infrastructure from [Game 5](../../02-games/5-information.md) to exist. The certification is the product.
-- **The middle is obliterated.** Competent commercial work — stock imagery, corporate video, functional copy, library music — is the most exposed category in the economy.
+- **"Made by a person" becomes a marketed and certified attribute** - which requires the provenance infrastructure from [Game 5](../../02-games/5-information.md) to exist. The certification is the product.
+- **The middle is obliterated.** Competent commercial work - stock imagery, corporate video, functional copy, library music - is the most exposed category in the economy.
 - **Both ends expand.** The top (genuine originality, personal connection, parasocial relationship) and the bottom (infinite free slop) both grow.
 
 ## The barbell
 
-This is the clearest instance of a pattern that recurs across [Part III](../README.md): the distribution goes barbell-shaped. What survives is either irreplaceable or free. What dies is everything that was merely competent — which is, unfortunately, how most people in creative fields actually make a living.
+This is the clearest instance of a pattern that recurs across [Part III](../README.md): the distribution goes barbell-shaped. What survives is either irreplaceable or free. What dies is everything that was merely competent - which is, unfortunately, how most people in creative fields actually make a living.
 
 | Survives / grows | Dies / commoditizes |
 |---|---|
 | Live, in-person, high-trust presence | Mid-tier commercial illustration/copy/stock |
 | Provenanced / attested human work | SEO content mills (already dying) |
 | Elite brand + taste curation | "Competent enough" agency production |
-| Infinite free personalized slop | — (this is the other barbell end) |
+| Infinite free personalized slop | - (this is the other barbell end) |
 
 ## Game 5: lemons on the open feed
 
@@ -52,7 +52,7 @@ This is not only "misinformation." It is **Akerlof dynamics on attention markets
 - Technical/adjacent roles (prompt ops is not a career ladder; tooling ownership and taste are)
 - Non-market or hybrid patronage
 
-[Education](education.md): creative credentials signal even less when portfolios are forgeable; invigilated and live review become the filter. Same cost inversion — teaching craft materials is free; assessing authenticity is expensive.
+[Education](education.md): creative credentials signal even less when portfolios are forgeable; invigilated and live review become the filter. Same cost inversion - teaching craft materials is free; assessing authenticity is expensive.
 
 > **Prediction:** by 2030, a majority of mid-market commercial creative budgets (SMB marketing, mid-tier brand kits, stock replacement) are majority AI-produced by cost, while **top-decile cultural spend** (live, celebrity, luxury provenance) rises in real terms. Barbell, not uniform replacement.
 
@@ -60,7 +60,7 @@ This is not only "misinformation." It is **Akerlof dynamics on attention markets
 
 [Game 3](../../02-games/3-firms.md): model vendors compete; surplus accrues to **distribution, data about attention, and payment rails**. Media platforms that own the feed and the identity graph capture more than the generators. "AI studio" pure-plays face Red Queen unless they own a channel or a rights library.
 
-Rights and training-data litigation is a **legal** complementary fight ([law](law.md)), not a capability one — it reallocates rents among studios, platforms, and labs without restoring the mid-tier job.
+Rights and training-data litigation is a **legal** complementary fight ([law](law.md)), not a capability one - it reallocates rents among studios, platforms, and labs without restoring the mid-tier job.
 
 ## What to watch
 

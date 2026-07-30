@@ -56,7 +56,7 @@
 
 1. A prediction **misses** → find its parent claim in the left column.
 2. Open every dependent link; mark which inherit the miss.
-3. Log the framework correction in [ledger](../05-probabilities/ledger.md) / [RESEARCH](../RESEARCH.md) per scoring rules — one upstream fix, not twenty silent edits.
+3. Log the framework correction in [ledger](../05-probabilities/ledger.md) / [RESEARCH](../RESEARCH.md) per scoring rules - one upstream fix, not twenty silent edits.
 
 ---
 

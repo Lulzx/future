@@ -1,20 +1,20 @@
-# Part II — The Games
+# Part II - The Games
 
 ← [Index](../README.md) · [Part I](../01-substrate/)
 
 ---
 
-Five strategic structures sit on top of the [physical substrate](../01-substrate/). Each has a different game-theoretic character, and getting the character right matters — most public analysis applies prisoner's-dilemma logic to situations that are not prisoner's dilemmas, and then recommends coordination mechanisms that cannot work on the actual payoff structure.
+Five strategic structures sit on top of the [physical substrate](../01-substrate/). Each has a different game-theoretic character, and getting the character right matters - most public analysis applies prisoner's-dilemma logic to situations that are not prisoner's dilemmas, and then recommends coordination mechanisms that cannot work on the actual payoff structure.
 
 ## The five
 
 | | Players | Structure | Key result |
 |---|---|---|---|
-| [1 — Labs](1-labs.md) | Frontier labs | Tullock contest | Over-dissipation; consolidation to 3–5 by 2029; open weights ~9–15 mo behind |
-| [2 — Nations](2-nations.md) | States | Security dilemma with leakage | No binding agreement before a salient accident; compute-governance trap |
-| [3 — Firms](3-firms.md) | Adopters | Red Queen / Bertrand | Adoption mandatory; surplus to consumers *(competitive markets)* |
-| [4 — Labor](4-labor.md) | Workers, firms | Commons tragedy in human capital | Apprenticeship gap; aggregate displacement is an **upper bound** once [demography](../09-macro/demography.md) is included |
-| [5 — Information](5-information.md) | Signalers, evaluators | Signaling collapse → lemons market | Verification replaces generation; → [meaning](../03-domains/cognitive/meaning.md) |
+| [1 - Labs](1-labs.md) | Frontier labs | Tullock contest | Over-dissipation; consolidation to 3–5 by 2029; open weights ~9–15 mo behind |
+| [2 - Nations](2-nations.md) | States | Security dilemma with leakage | No binding agreement before a salient accident; compute-governance trap |
+| [3 - Firms](3-firms.md) | Adopters | Red Queen / Bertrand | Adoption mandatory; surplus to consumers *(competitive markets)* |
+| [4 - Labor](4-labor.md) | Workers, firms | Commons tragedy in human capital | Apprenticeship gap; aggregate displacement is an **upper bound** once [demography](../09-macro/demography.md) is included |
+| [5 - Information](5-information.md) | Signalers, evaluators | Signaling collapse → lemons market | Verification replaces generation; → [meaning](../03-domains/cognitive/meaning.md) |
 
 ## What they have in common
 
@@ -35,4 +35,4 @@ Game 3 is the exception and the one that explains the most: it is a pure competi
 
 ---
 
-**Next:** [Game 1 — Labs](1-labs.md) → [Part III — Domains](../03-domains/)
+**Next:** [Game 1 - Labs](1-labs.md) → [Part III - Domains](../03-domains/)

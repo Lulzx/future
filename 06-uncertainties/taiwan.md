@@ -1,4 +1,4 @@
-# Uncertainty 4 — Taiwan and leading-edge fabrication
+# Uncertainty 4 - Taiwan and leading-edge fabrication
 
 ← [Part VI](README.md) · [Index](../README.md)
 
@@ -6,11 +6,11 @@
 
 Every projection in this document assumes Taiwanese fabrication continues. **That assumption is doing more work than any other single input, and it is not an AI question.**
 
-It is listed here, not only in [bipolar](../03-domains/contested/geopolitics/bipolar.md), because an uncertainty that invalidates the entire corpus belongs in the uncertainty register — not buried as a modelling footnote on a regional page.
+It is listed here, not only in [bipolar](../03-domains/contested/geopolitics/bipolar.md), because an uncertainty that invalidates the entire corpus belongs in the uncertainty register - not buried as a modelling footnote on a regional page.
 
 ## What the assumption is
 
-> **~90%** — no major disruption to Taiwanese leading-edge output through 2032.
+> **~90%** - no major disruption to Taiwanese leading-edge output through 2032.
 
 That is not a confident geopolitical judgment. It is a modelling assumption, stated so it can be scored, and everything downstream inherits it: training-run cost curves, the US–China chokepoint analysis, robotics electronics supply, the capex test, and every timeline date.
 
@@ -24,7 +24,7 @@ That is not a confident geopolitical judgment. It is a modelling assumption, sta
 
 ## AI cuts both ways on the probability
 
-Better ISR and autonomous systems make a blockade more detectable and more costly. They also compress decision timelines in exactly the way [warfare](../03-domains/contested/warfare.md) identifies as escalatory. Net effect on the 90% is genuinely unclear; the point of stating 90% is not precision but **inheritance** — readers should know what they are accepting.
+Better ISR and autonomous systems make a blockade more detectable and more costly. They also compress decision timelines in exactly the way [warfare](../03-domains/contested/warfare.md) identifies as escalatory. Net effect on the 90% is genuinely unclear; the point of stating 90% is not precision but **inheritance** - readers should know what they are accepting.
 
 ## Why it sat outside Part VI until round 8
 
@@ -43,10 +43,10 @@ The corpus treated it as a background condition rather than a live uncertainty. 
 
 If the assumption fails: stop patching individual domains. Re-score [Part V](../05-probabilities/) from scratch, rewrite [Part IV](../04-timelines/) with multi-year slips on every compute-gated claim, and treat [bipolar](../03-domains/contested/geopolitics/bipolar.md) capacity bifurcation as the base case rather than a scenario.
 
-If leading-edge capacity outside Taiwan crosses a meaningful share of advanced wafers *before* a crisis: lower the variance of this uncertainty without changing the point estimate of disruption probability — the *consequence* of disruption shrinks.
+If leading-edge capacity outside Taiwan crosses a meaningful share of advanced wafers *before* a crisis: lower the variance of this uncertainty without changing the point estimate of disruption probability - the *consequence* of disruption shrinks.
 
 ---
 
 **Related:** [Bipolar](../03-domains/contested/geopolitics/bipolar.md) · [Compute](../01-substrate/compute.md) · [Robotics supply chain](../03-domains/physical/robotics/supply-chain.md) · [Warfare](../03-domains/contested/warfare.md) · [Part V](../05-probabilities/) load-bearing assumptions
 
-**Previous:** [Uncertainty 3](apprenticeship-gap.md) · **Next:** [Uncertainty 5 — learned verification](learned-verification.md)
+**Previous:** [Uncertainty 3](apprenticeship-gap.md) · **Next:** [Uncertainty 5 - learned verification](learned-verification.md)

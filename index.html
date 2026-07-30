@@ -211,7 +211,7 @@ function parse(lines, base) {
       continue;
     }
 
-    // thematic break — checked before lists so `---` never reads as a bullet
+    // thematic break - checked before lists so `---` never reads as a bullet
     if (RE_HR.test(line)) { out.push("<hr>"); i++; continue; }
 
     // heading
@@ -278,7 +278,7 @@ function parse(lines, base) {
         }
         const indent = (anyM[1] || "").length;
         if (indent > baseIndent) {
-          // nested list — collect its lines and recurse
+          // nested list - collect its lines and recurse
           const sub = [];
           while (i < lines.length) {
             const nm = lines[i].match(RE_UL) || lines[i].match(RE_OL);
@@ -332,10 +332,10 @@ function render(md, base) {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   Post-render passes — the things markdown does not say but the page needs
+   Post-render passes - the things markdown does not say but the page needs
    ══════════════════════════════════════════════════════════════════════════ */
 
-/* `> **Prediction:** …` — hoist the label onto the box border. */
+/* `> **Prediction:** …` - hoist the label onto the box border. */
 function labelCallouts(root) {
   for (const bq of root.querySelectorAll("blockquote")) {
     const first = bq.firstElementChild;
@@ -430,7 +430,7 @@ function extractNav(root) {
 function pagenavHtml(nav, doc) {
   const cell = (dir, link) => link
     ? `<div class="cell"><span class="dir">${dir}</span><a href="${link.href}">${escapeHtml(link.text)}</a></div>`
-    : `<div class="cell empty"><span class="dir">${dir}</span>—</div>`;
+    : `<div class="cell empty"><span class="dir">${dir}</span> - </div>`;
   return `<nav class="pagenav grid">` +
     cell("← Prev", nav.prev) +
     cell("Next →", nav.next) +
@@ -492,7 +492,7 @@ async function load(doc) {
     } catch (err) {
       contentEl.className = "";
       contentEl.innerHTML =
-        `<h1>Not found</h1><p class="msg">Could not load <code>${escapeHtml(doc)}</code> — ${escapeHtml(String(err.message || err))}.</p>` +
+        `<h1>Not found</h1><p class="msg">Could not load <code>${escapeHtml(doc)}</code> - ${escapeHtml(String(err.message || err))}.</p>` +
         `<p><a href="#/${DEFAULT_DOC}">Back to the index</a></p>`;
       document.title = "Not found · The Next Fifteen Years";
       currentNav = { prev: null, next: null };

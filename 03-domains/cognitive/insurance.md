@@ -1,6 +1,6 @@
-# Insurance — the institution that prices the whole transition
+# Insurance - the institution that prices the whole transition
 
-← [III.A — Cognitive](README.md) · [Index](../../README.md)
+← [III.A - Cognitive](README.md) · [Index](../../README.md)
 
 ---
 
@@ -12,7 +12,7 @@ That gives them two roles here, and the second is far more consequential than th
 
 Underwriting, claims triage, fraud detection, and actuarial modeling are close to ideal AI targets: abundant structured historical data, cheap ground truth (the claim either happened or it didn't), and a loss function that is literally a loss function.
 
-Expect the standard shape — the analytical layer compresses, the accountability layer does not, and the middle hollows. Claims adjusters and junior underwriters are among the most exposed occupations in the economy on task composition alone.
+Expect the standard shape - the analytical layer compresses, the accountability layer does not, and the middle hollows. Claims adjusters and junior underwriters are among the most exposed occupations in the economy on task composition alone.
 
 But this is the boring half.
 
@@ -20,7 +20,7 @@ But this is the boring half.
 
 **Liability for AI systems will be priced by underwriters long before it is settled by legislators or courts.**
 
-The mechanism: a firm deploying an autonomous system needs coverage. The insurer must quote. To quote, it must form a view on failure rates, severity distribution, and correlation. That view becomes a price, the price becomes a constraint on deployment, and the constraint binds **continuously** — repriced at every renewal — rather than in the discrete, lagging way legislation binds.
+The mechanism: a firm deploying an autonomous system needs coverage. The insurer must quote. To quote, it must form a view on failure rates, severity distribution, and correlation. That view becomes a price, the price becomes a constraint on deployment, and the constraint binds **continuously** - repriced at every renewal - rather than in the discrete, lagging way legislation binds.
 
 This is [Game 1](../../02-games/1-labs.md)'s liability argument made concrete. It is the fastest-acting governance mechanism available, and it requires no political consensus at all.
 
@@ -44,7 +44,7 @@ Insurance works when losses are independent. AI risk is **structurally correlate
 
 - A small number of foundation models are deployed across a huge number of insureds
 - A single model failure mode manifests simultaneously everywhere it is deployed
-- Update cycles are synchronized — everyone gets the new version at once
+- Update cycles are synchronized - everyone gets the new version at once
 
 This is systemic risk with the shape of cyber risk, which the industry already handles badly. Cyber underwriting has repeatedly mispriced correlated events (NotPetya, MOVEit, CrowdStrike), and AI concentration is worse: fewer effective providers, deeper integration, faster propagation.
 
@@ -52,23 +52,23 @@ The consequences follow directly:
 
 - **Aggregate limits and event exclusions** appear early, capping how much AI risk the private market will absorb at any price
 - **Reinsurance becomes the binding layer**, which means a handful of reinsurers effectively set the deployment ceiling for the entire economy
-- **A state backstop becomes the standing proposal** — the terrorism-reinsurance template — and gets legislated in the [18-month window](../../02-games/2-nations.md) after the first correlated event, not before
+- **A state backstop becomes the standing proposal** - the terrorism-reinsurance template - and gets legislated in the [18-month window](../../02-games/2-nations.md) after the first correlated event, not before
 
 ## The second-order effect on every other domain
 
-If AI liability is expensive to insure, the **inelastic complement in most of [Part III](../README.md) is not expertise — it is the balance sheet capable of absorbing the residual risk.**
+If AI liability is expensive to insure, the **inelastic complement in most of [Part III](../README.md) is not expertise - it is the balance sheet capable of absorbing the residual risk.**
 
 Reread the domain pages with that substitution. The radiologist's moat is not diagnostic skill; it is that a malpractice policy exists that covers a human radiologist and does not yet cover an autonomous system. The law firm's moat is the same. So is the auditor's, the engineer's, and the physician's.
 
-**That reframes the human moat from a capability claim into a financial one** — and financial arrangements can be changed by a single underwriting decision, much faster than capabilities can be acquired. It is the most plausible mechanism by which the [Part III](../README.md) timelines turn out to be far too slow.
+**That reframes the human moat from a capability claim into a financial one** - and financial arrangements can be changed by a single underwriting decision, much faster than capabilities can be acquired. It is the most plausible mechanism by which the [Part III](../README.md) timelines turn out to be far too slow.
 
 ## What would falsify this
 
-- **Model providers indemnifying broadly.** If frontier labs take on customer liability at scale, they absorb the risk internally and the insurance channel never becomes the binding constraint. Watch the indemnification terms in enterprise contracts — they are published, and they are a direct read on how much the providers believe their own reliability claims.
-- **Correlation proving overstated.** If deployments turn out to be diverse enough — different models, different scaffolds, different failure modes — the systemic argument weakens considerably and capacity arrives sooner.
+- **Model providers indemnifying broadly.** If frontier labs take on customer liability at scale, they absorb the risk internally and the insurance channel never becomes the binding constraint. Watch the indemnification terms in enterprise contracts - they are published, and they are a direct read on how much the providers believe their own reliability claims.
+- **Correlation proving overstated.** If deployments turn out to be diverse enough - different models, different scaffolds, different failure modes - the systemic argument weakens considerably and capacity arrives sooner.
 
 ---
 
-**Related:** [Finance](finance.md) · [Law](law.md) · [Medicine](../physical/medicine/) · [Game 1 — Labs](../../02-games/1-labs.md) on liability as a safety mechanism · [Uncertainty 6 — correlated risk](../../06-uncertainties/correlated-risk.md) · [Governance indicators](../../07-indicators/governance.md) C6
+**Related:** [Finance](finance.md) · [Law](law.md) · [Medicine](../physical/medicine/) · [Game 1 - Labs](../../02-games/1-labs.md) on liability as a safety mechanism · [Uncertainty 6 - correlated risk](../../06-uncertainties/correlated-risk.md) · [Governance indicators](../../07-indicators/governance.md) C6
 
-**Next:** [III.B — Physical domains](../physical/)
+**Next:** [III.B - Physical domains](../physical/)

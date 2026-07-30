@@ -1,6 +1,6 @@
 # Meaning, work, and relationships
 
-← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
+← [III.A - Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -18,7 +18,7 @@ It is harder to write well than a capex table. It is also where a large share of
 
 These are not the same problem. Treating them as "AI anxiety" muddies policy and forecasting.
 
-## 1. Vocational identity — composition again
+## 1. Vocational identity - composition again
 
 [Demography](../../09-macro/demography.md) and [Game 4](../../02-games/4-labor.md) already say aggregate unemployment is the wrong headline. The meaning channel cares about the same composition:
 
@@ -26,15 +26,15 @@ These are not the same problem. Treating them as "AI anxiety" muddies policy and
 - Status hierarchies inside professions compress around scarce complements (licensure, client trust, physical presence) and inflate around credentials that no longer signal
 - Regions built on a single exposed cognitive export ([India](../contested/geopolitics/india.md)) import an identity shock with the employment shock
 
-**Mass unemployment is not required for mass disorientation.** Underemployment, occupational downgrading, and "the career ladder is gone" are enough. The apprenticeship gap is not only a 2040 skill shortage — it is a missing *rite of passage* into adult competence.
+**Mass unemployment is not required for mass disorientation.** Underemployment, occupational downgrading, and "the career ladder is gone" are enough. The apprenticeship gap is not only a 2040 skill shortage - it is a missing *rite of passage* into adult competence.
 
 > **Prediction:** by 2032, political language about AI in high-income democracies is **majority about dignity, status, and fairness of transition**, not about GDP. Measured unemployment can look fine while this channel is hot.
 
 Policy that only offers retraining vouchers addresses the task channel and misses the identity channel. Policy that only offers UBI addresses income and misses status. Neither is an argument against either tool; it is an argument that **the objective function is multi-dimensional** and the corpus's labor pages only score one dimension.
 
-## 2. Synthetic companionship — cheap signal, costly care
+## 2. Synthetic companionship - cheap signal, costly care
 
-[Game 5](../../02-games/5-information.md): AI collapses the cost of producing the *signal* of care without collapsing the cost of care. Companionship products optimize for engagement and retention — the same objective that already distorted social media, with a higher-bandwidth parasocial loop.
+[Game 5](../../02-games/5-information.md): AI collapses the cost of producing the *signal* of care without collapsing the cost of care. Companionship products optimize for engagement and retention - the same objective that already distorted social media, with a higher-bandwidth parasocial loop.
 
 Distinguish outcomes the document should not conflate:
 
@@ -47,7 +47,7 @@ Distinguish outcomes the document should not conflate:
 
 The honest position: **distribution is wide**. Average treatment effect is not the right object; who uses which product under what alternative is. A tool that is net-positive for a housebound eighty-year-old and net-negative for a socially anxious fifteen-year-old is not a contradiction.
 
-> **Assessment:** binding rules on companion systems for minors are **~60%** likely in major markets by 2030 — event-driven after salient harms, per [Game 2](../../02-games/2-nations.md), not reason-driven from first principles. Adult access remains wide.
+> **Assessment:** binding rules on companion systems for minors are **~60%** likely in major markets by 2030 - event-driven after salient harms, per [Game 2](../../02-games/2-nations.md), not reason-driven from first principles. Adult access remains wide.
 
 ## 3. Attention, agency, and the two-economy psyche
 
@@ -58,17 +58,17 @@ The honest position: **distribution is wide**. Average treatment effect is not t
 
 The "everything I need costs more while everything I can download is free" political fact has a private analogue: **the day feels full and the life feels thin.** That is not a formal model. It is a reconciliation of the price split with the attention split, and it will show up in mental-health demand and in populist content long before it shows up in TFP.
 
-Care work stays scarce ([demography](../../09-macro/demography.md)); demand for human therapists, clergy, coaches, and friends does not fall just because a chatbot is available — for many it rises when the chatbot makes distress more legible. The binding constraint is trained humans and reimbursement, same as [medicine](../physical/medicine/liability.md).
+Care work stays scarce ([demography](../../09-macro/demography.md)); demand for human therapists, clergy, coaches, and friends does not fall just because a chatbot is available - for many it rises when the chatbot makes distress more legible. The binding constraint is trained humans and reimbursement, same as [medicine](../physical/medicine/liability.md).
 
 ## What this page deliberately does not claim
 
 - **It does not claim civilizational spiritual collapse.** Reference classes (industrialization, urbanization, social media) show large adaptation and large localized harm, not uniform ruin.
-- **It does not reduce meaning to employment.** Plenty of people will find status in trades, care, ownership of inelastic complements, and non-market roles — if society still *grants* status there. That grant is cultural and political, not technical.
+- **It does not reduce meaning to employment.** Plenty of people will find status in trades, care, ownership of inelastic complements, and non-market roles - if society still *grants* status there. That grant is cultural and political, not technical.
 - **It does not treat "human connection" as un-automatable forever.** [Uncertainty 5](../../06-uncertainties/learned-verification.md) is about judgment; attachment is a different question. The load-bearing claim here is about *cost and commitment signals*, not about whether a model can simulate empathy convincingly (it can).
 
 ## Indicators worth watching
 
-Dashboard: **[B11](../../07-indicators/diffusion.md)** — companion use × social contact; junior identity channel; minor-protection rules.
+Dashboard: **[B11](../../07-indicators/diffusion.md)** - companion use × social contact; junior identity channel; minor-protection rules.
 
 | Signal | Reading |
 |---|---|
@@ -86,6 +86,6 @@ Dashboard: **[B11](../../07-indicators/diffusion.md)** — companion use × soci
 
 ---
 
-**Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Education](education.md) (credential + identity + apprenticeship bridge) · [Media](media.md) · [Medicine — delivery](../physical/medicine/delivery.md) · [Demography](../../09-macro/demography.md) · [Prices](../../09-macro/prices.md)
+**Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Education](education.md) (credential + identity + apprenticeship bridge) · [Media](media.md) · [Medicine - delivery](../physical/medicine/delivery.md) · [Demography](../../09-macro/demography.md) · [Prices](../../09-macro/prices.md)
 
-**Next:** [III.B — Physical domains](../physical/)
+**Next:** [III.B - Physical domains](../physical/)

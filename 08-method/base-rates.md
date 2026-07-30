@@ -1,4 +1,4 @@
-# Base Rates — the reference classes underneath the estimates
+# Base Rates - the reference classes underneath the estimates
 
 ← [Part VIII](README.md) · [Index](../README.md)
 
@@ -18,11 +18,11 @@ The discipline that matters: **name the class before looking at the case.** A re
 | ERP / enterprise software | ~10 years | Process re-engineering |
 | Internet | ~10–15 years | Business model discovery |
 
-**The trend is real: each cycle is faster.** Extrapolating gives AI something like 5–10 years to measurable aggregate effect, which puts the signal in 2029–33 — the basis for the [2028–2032](../04-timelines/2028-2032.md) claim and for [Part V](../05-probabilities/README.md) row 2's low 2030 number.
+**The trend is real: each cycle is faster.** Extrapolating gives AI something like 5–10 years to measurable aggregate effect, which puts the signal in 2029–33 - the basis for the [2028–2032](../04-timelines/2028-2032.md) claim and for [Part V](../05-probabilities/README.md) row 2's low 2030 number.
 
 **Adjustment, faster:** AI ships over existing rails, self-serves, needs no physical retooling, and has by far the fastest adoption curve of any technology in the table.
 
-**Adjustment, slower:** the rate limit in every row above was never the technology — it was **organizational redesign**, which runs at the speed of management turnover and has not obviously accelerated. The [METR result](../02-games/4-labor.md) is direct evidence that adoption and benefit realization are separate variables.
+**Adjustment, slower:** the rate limit in every row above was never the technology - it was **organizational redesign**, which runs at the speed of management turnover and has not obviously accelerated. The [METR result](../02-games/4-labor.md) is direct evidence that adoption and benefit realization are separate variables.
 
 These two adjustments point in opposite directions and roughly cancel, which is why the base case sits close to the naive extrapolation. That is a weak reason to believe it, and it is stated as such.
 
@@ -35,9 +35,9 @@ Railways (1840s, 1870s), electrification, telecoms (1990s), shale (2010s). The p
 - **The physical asset survives the correction and gets used**
 - **Equity holders are largely wiped out; the technology is not**
 
-This is where the "~40% chance of a serious correction that resets the timeline by 2–4 years without killing the technology" figure comes from. Note it is a **conjunction of a high-probability event (correction) and a specific mechanism (credit)** — see [Capital](../01-substrate/capital.md).
+This is where the "~40% chance of a serious correction that resets the timeline by 2–4 years without killing the technology" figure comes from. Note it is a **conjunction of a high-probability event (correction) and a specific mechanism (credit)** - see [Capital](../01-substrate/capital.md).
 
-**Adjustment:** AI capex has an unusually short-lived core asset. Rail track lasts a century; accelerators last 3–6 years. That makes the correction *sharper* and the surviving-asset argument *weaker* than the reference class implies — except for the [rising share in power and shells](../01-substrate/capital.md), which behaves like the classic case.
+**Adjustment:** AI capex has an unusually short-lived core asset. Rail track lasts a century; accelerators last 3–6 years. That makes the correction *sharper* and the surviving-asset argument *weaker* than the reference class implies - except for the [rising share in power and shells](../01-substrate/capital.md), which behaves like the classic case.
 
 ## 3. Regulatory response cycles
 
@@ -51,11 +51,11 @@ This is where the "~40% chance of a serious correction that resets the timeline 
 
 The pattern is **event-driven, fast once triggered, and shaped by whatever was already drafted.** This is the entire basis for [Game 2](../02-games/2-nations.md)'s central claim and for the emphasis in [C2](../07-indicators/governance.md) on shelf-readiness.
 
-**The privacy row is the important exception.** Where harm is diffuse and gradual rather than concentrated and salient, no window opens at all and regulation arrives late, weak, and fragmented. **If AI harms turn out to be diffuse — labor displacement, epistemic degradation, gradual dependency — the correct reference class is privacy, not aviation**, and the [Game 2](../02-games/2-nations.md) prediction is wrong in an important way: there is no forcing event and no architecture, just drift.
+**The privacy row is the important exception.** Where harm is diffuse and gradual rather than concentrated and salient, no window opens at all and regulation arrives late, weak, and fragmented. **If AI harms turn out to be diffuse - labor displacement, epistemic degradation, gradual dependency - the correct reference class is privacy, not aviation**, and the [Game 2](../02-games/2-nations.md) prediction is wrong in an important way: there is no forcing event and no architecture, just drift.
 
 That is a live possibility and it is underweighted in this document.
 
-## 4. AI winters — failure archaeology
+## 4. AI winters - failure archaeology
 
 The winter analogy is the most-abused reference class in AI forecasting. Used loosely, it says "hype always dies." Used carefully, it asks **what specifically killed funding last time**, and whether those kill conditions are present now.
 
@@ -71,12 +71,12 @@ The winter analogy is the most-abused reference class in AI forecasting. Used lo
 
 1. **Capability plateaued below the threshold of a paying use case** (or the use case required integration the demos skipped)
 2. **Funding had been justified on crossing that threshold soon**
-3. **When the miss became undeniable, the money left** — often via government program cancellation or enterprise budget cycles, not via a philosophical reassessment
+3. **When the miss became undeniable, the money left** - often via government program cancellation or enterprise budget cycles, not via a philosophical reassessment
 
 Secondary kill factors that recur:
 
 - **Specialized stack stranded** (Lisp machines; any hardware that only makes sense if the software thesis wins)
-- **Evaluation was theatrical** — demos in constrained environments that did not survive contact with open-world cost
+- **Evaluation was theatrical** - demos in constrained environments that did not survive contact with open-world cost
 - **Substitute technology won the budget** (conventional software, simpler stats, better process design)
 
 ### What did *not* end the winters
@@ -85,17 +85,17 @@ Secondary kill factors that recur:
 - Exhaustion of interesting research questions
 - Permanent public rejection of the idea
 
-Research continued through every winter at lower amplitude. Winters are **commercial and procurement events**, not ontological ones. That is why the right analogy for 2027–29 is closer to [capex boom corrections](#2-infrastructure-capex-booms) than to 1974 — *if* revenue is real.
+Research continued through every winter at lower amplitude. Winters are **commercial and procurement events**, not ontological ones. That is why the right analogy for 2027–29 is closer to [capex boom corrections](#2-infrastructure-capex-booms) than to 1974 - *if* revenue is real.
 
 ### Diagnostic for this cycle
 
 | Kill condition from history | Present in mid-2020s? |
 |---|---|
-| No revenue attached to deployed capability | **No** — material revenue, usage, task performance |
-| Capability stuck below sold threshold | **Mixed** — strong on verifiable tasks; weak on open-ended autonomy sold as near |
-| Funding justified only on next threshold crossing | **Partially** — train-run scale and AGI timelines still do this for a share of capital |
-| Specialized stack with no residual value | **Partially** — accelerators depreciate fast; power/shells do not → [Capital](../01-substrate/capital.md) |
-| Government single-buyer cancels | **Low** — civilian commercial demand dominates; sovereign is additive |
+| No revenue attached to deployed capability | **No** - material revenue, usage, task performance |
+| Capability stuck below sold threshold | **Mixed** - strong on verifiable tasks; weak on open-ended autonomy sold as near |
+| Funding justified only on next threshold crossing | **Partially** - train-run scale and AGI timelines still do this for a share of capital |
+| Specialized stack with no residual value | **Partially** - accelerators depreciate fast; power/shells do not → [Capital](../01-substrate/capital.md) |
+| Government single-buyer cancels | **Low** - civilian commercial demand dominates; sovereign is additive |
 
 **By the historical test, a full capability winter is the wrong base rate.** The matching pattern is: **correction that culls over-build and secondary labs while leaving deployed capability and the research line intact.** That is why [Compute](../01-substrate/compute.md) and [Part V](../05-probabilities/) row 6 model a capital-markets event, not a field death.
 
@@ -103,8 +103,8 @@ Research continued through every winter at lower amplitude. Winters are **commer
 
 Failure archaeology also names the paths that would *make* this cycle rhyme with 1987:
 
-- **Revenue quality collapses** — seat-priced option-value subscriptions churn when CFOs cut “AI” as a line item; outcome-priced revenue does not. → [B5](../07-indicators/diffusion.md)
-- **Agent demos never clear unsupervised production reliability** while capex assumed they would — threshold miss with modern branding
+- **Revenue quality collapses** - seat-priced option-value subscriptions churn when CFOs cut “AI” as a line item; outcome-priced revenue does not. → [B5](../07-indicators/diffusion.md)
+- **Agent demos never clear unsupervised production reliability** while capex assumed they would - threshold miss with modern branding
 - **Energy/politics** freeze deployment capacity so that model progress cannot convert to revenue at the assumed rate → [Energy](../01-substrate/energy.md)
 - **A salient incident** freezes enterprise adoption for a cycle even though capability is real → [Game 2](../02-games/2-nations.md)
 
@@ -118,10 +118,10 @@ The China shock is the closest well-studied analogue, and the lesson taken from 
 
 Two adjustments for the AI case, in opposite directions:
 
-- **Worse:** exposure is occupational and cohort-based rather than geographic, so it hits people who cannot move away from it. And it lands on the entry rung specifically — see [Game 4](../02-games/4-labor.md).
+- **Worse:** exposure is occupational and cohort-based rather than geographic, so it hits people who cannot move away from it. And it lands on the entry rung specifically - see [Game 4](../02-games/4-labor.md).
 - **Better:** cognitive workers are more geographically mobile, better credentialed, and better capitalized than displaced manufacturing workers were. The absorption capacity is genuinely higher.
 
-## 6. Demographics — the counterweight (integrated round 7)
+## 6. Demographics - the counterweight (integrated round 7)
 
 Every advanced economy has a shrinking working-age population through the 2030s. Full treatment: [Demography](../09-macro/demography.md).
 
@@ -129,6 +129,6 @@ Every advanced economy has a shrinking working-age population through the 2030s.
 
 ---
 
-**Related:** [Part V — Probabilities](../05-probabilities/) · [Steelman](steelman.md) · [Scoring](scoring.md) · [Capital](../01-substrate/capital.md) · [Demography](../09-macro/demography.md)
+**Related:** [Part V - Probabilities](../05-probabilities/) · [Steelman](steelman.md) · [Scoring](scoring.md) · [Capital](../01-substrate/capital.md) · [Demography](../09-macro/demography.md)
 
 **Next:** [Steelman](steelman.md)

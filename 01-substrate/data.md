@@ -1,4 +1,4 @@
-# Data — and the master asymmetry
+# Data - and the master asymmetry
 
 ← [Part I](README.md) · [Index](../README.md)
 
@@ -6,7 +6,7 @@
 
 *Quantities current to mid-2026.*
 
-High-quality human text is essentially exhausted — roughly 10^14 useful tokens against models already trained on 10^13. The remaining headroom is one order of magnitude, and it is the *low-quality* order.
+High-quality human text is essentially exhausted - roughly 10^14 useful tokens against models already trained on 10^13. The remaining headroom is one order of magnitude, and it is the *low-quality* order.
 
 The frontier therefore moved to synthetic data, RL on verifiable outcomes, and self-play in domains with cheap ground truth.
 
@@ -36,13 +36,13 @@ This ordering runs through every section of [Part III](../03-domains/). When a d
 
 ## The second-order effect
 
-Because verification is now the scarce input to *capability*, and — separately — verification is becoming the scarce input to *information markets* ([Game 5](../02-games/5-information.md)), the same word names both the technical bottleneck and the economic opportunity. That convergence is not a coincidence; both are downstream of generation becoming cheap. → [Compressed](../00-overview/compressed.md), [C8](../07-indicators/governance.md)
+Because verification is now the scarce input to *capability*, and - separately - verification is becoming the scarce input to *information markets* ([Game 5](../02-games/5-information.md)), the same word names both the technical bottleneck and the economic opportunity. That convergence is not a coincidence; both are downstream of generation becoming cheap. → [Compressed](../00-overview/compressed.md), [C8](../07-indicators/governance.md)
 
 ## What would retire the asymmetry
 
 [Uncertainty 5](../06-uncertainties/learned-verification.md) / [steelman](../08-method/steelman.md) §1: if learned verifiers are good enough that expensive domains stop lagging, **Part III reorders** and this page's spine claim fails. Track with [B8](../07-indicators/diffusion.md) (production depth in unverifiable domains, not demos).
 
-Partial escape without killing the asymmetry: **buy cheaper ground truth** — automated labs ([science](../03-domains/cognitive/science.md)), instrumented robotics data ([robotics](../03-domains/physical/robotics/)), outcome-priced contracts ([B5](../07-indicators/diffusion.md)). That moves a domain left in the table; it does not erase the table.
+Partial escape without killing the asymmetry: **buy cheaper ground truth** - automated labs ([science](../03-domains/cognitive/science.md)), instrumented robotics data ([robotics](../03-domains/physical/robotics/)), outcome-priced contracts ([B5](../07-indicators/diffusion.md)). That moves a domain left in the table; it does not erase the table.
 
 ## Interaction with the rest of Part I
 
@@ -55,7 +55,7 @@ Partial escape without killing the asymmetry: **buy cheaper ground truth** — a
 
 ## Robotics special case
 
-There is **no internet of manipulation.** Text and code had public corpora; physical interaction does not. That is why [robotics](../03-domains/physical/robotics/) lags even when vision-language models transfer well — the binding constraint is samples in the world, not model size. → [B12](../07-indicators/diffusion.md)
+There is **no internet of manipulation.** Text and code had public corpora; physical interaction does not. That is why [robotics](../03-domains/physical/robotics/) lags even when vision-language models transfer well - the binding constraint is samples in the world, not model size. → [B12](../07-indicators/diffusion.md)
 
 ---
 

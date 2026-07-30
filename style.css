@@ -1,5 +1,5 @@
 /* ── the-monospace-web · reset.css ─────────────────────────────────────────
-   By Oskar Wickström — MIT
+   By Oskar Wickström - MIT
    https://github.com/owickstrom/the-monospace-web                          */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -192,7 +192,7 @@ button:hover { background: var(--background-color-alt); }
 button:active { transform: translate(2px, 2px); }
 button:focus-visible { --border-thickness: 3px; outline: none; }
 
-/* tree connectors — upstream .tree */
+/* tree connectors - upstream .tree */
 .tree, .tree ul {
   position: relative; padding-left: 0;
   list-style-type: none; line-height: var(--line-height);
@@ -396,7 +396,7 @@ thead th a:link, thead th a:visited { color: var(--background-color); }
 tbody tr:hover > * { background: var(--background-color-alt); }
 
 /* ── the index page ─────────────────────────────────────────────────────
-   Its `### [00 — Overview](…)` sections are the site map; give each one a
+   Its `### [00 - Overview](…)` sections are the site map; give each one a
    rule above it so the parts separate at a glance.                       */
 #content.index h3 {
   border-top: var(--border-thickness) solid var(--text-color);

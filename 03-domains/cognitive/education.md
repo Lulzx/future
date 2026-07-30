@@ -1,6 +1,6 @@
 # Education
 
-← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
+← [III.A - Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -10,7 +10,7 @@ Bloom's 2-sigma problem: individual tutoring produces ~2 standard deviations of 
 
 It is now solvable for the marginal cost of tokens.
 
-This is arguably the largest positive-welfare opportunity available anywhere in this document — a known, replicated, enormous effect size, gated purely on a cost that has collapsed.
+This is arguably the largest positive-welfare opportunity available anywhere in this document - a known, replicated, enormous effect size, gated purely on a cost that has collapsed.
 
 ## Why it probably won't be realized quickly
 
@@ -23,13 +23,13 @@ A third, from [state capacity](../contested/state-capacity.md): procurement and 
 
 ## The distributional prediction
 
-Expect gains to accrue **first and most to motivated learners with resources** — widening variance before narrowing means.
+Expect gains to accrue **first and most to motivated learners with resources** - widening variance before narrowing means.
 
 This is the standard shape for any technology that lowers the cost of self-directed learning: it multiplies existing motivation and existing support rather than substituting for them. The equalizing potential is real but arrives second, and only if someone deliberately builds for it. → [Global South](../contested/geopolitics/global-south.md) for the case where the alternative is no tutor at all (welfare up even if inequality among the connected also rises).
 
 ## Second-order: the credentialing collapse
 
-Education's assessment machinery is simultaneously being dismantled by [Game 5](../../02-games/5-information.md). The essay, the take-home, and the problem set are dead as evaluation instruments. Institutions must move to synchronous, invigilated, or oral assessment — which is expensive, and which is the same guild-shaped reversion showing up everywhere else.
+Education's assessment machinery is simultaneously being dismantled by [Game 5](../../02-games/5-information.md). The essay, the take-home, and the problem set are dead as evaluation instruments. Institutions must move to synchronous, invigilated, or oral assessment - which is expensive, and which is the same guild-shaped reversion showing up everywhere else.
 
 Ironic result: **the cost of teaching collapses while the cost of assessing rises.** → [B6](../../07-indicators/diffusion.md)
 
@@ -51,7 +51,7 @@ Three corpus threads meet here:
 
 [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md): if AI provides dense expert-quality feedback (Bloom's 2-sigma applied to professional formation), the novice→expert path shortens rather than breaks.
 
-That is **the same mechanism as this page's upside**, applied past K–12 into law, software, medicine, and trades. The conditions are the same: feedback must be grounded (not just fluent), and institutions must accept non-traditional proof of competence. If both hold, education and labor-market formation partially fuse — continuous assessment-with-tools rather than a four-year signal then a hiring cliff.
+That is **the same mechanism as this page's upside**, applied past K–12 into law, software, medicine, and trades. The conditions are the same: feedback must be grounded (not just fluent), and institutions must accept non-traditional proof of competence. If both hold, education and labor-market formation partially fuse - continuous assessment-with-tools rather than a four-year signal then a hiring cliff.
 
 Base case remains: K–12 and universities move slowly; firms cut juniors; the inversion stays under-built. The upside is the highest-leverage deliberate build in the labor section.
 
@@ -65,7 +65,7 @@ Base case remains: K–12 and universities move slowly; firms cut juniors; the i
 | Childcare / campus social | Untouched | Core residual product for undergrad |
 | Elite network / sorting | Strengthens as mass signal dies | Scarce complement |
 
-Elite institutions sell network and sorting — inelastic. Mass institutions sold a credential that AI forged; they face the hollowing. That is [Game 3](../../02-games/3-firms.md) inside education: surplus to scarce complements (brand, network, selective admissions), not to content production.
+Elite institutions sell network and sorting - inelastic. Mass institutions sold a credential that AI forged; they face the hollowing. That is [Game 3](../../02-games/3-firms.md) inside education: surplus to scarce complements (brand, network, selective admissions), not to content production.
 
 ## What to watch
 
@@ -79,7 +79,7 @@ Elite institutions sell network and sorting — inelastic. Mass institutions sol
 
 ## Failure modes
 
-- **If invigilated assessment scales cheaply** (proctoring AI that works), teaching-cost collapse and assessment-cost rise do not co-occur — credentials partially restabilize.
+- **If invigilated assessment scales cheaply** (proctoring AI that works), teaching-cost collapse and assessment-cost rise do not co-occur - credentials partially restabilize.
 - **If firms rebuild junior pipelines** (Uncertainty 3 private resolution), education's role as substitute apprenticeship matters less.
 - **If 2-sigma gains show up in national assessments despite institutions**, the adoption story was too pessimistic; distributional variance may still widen.
 
