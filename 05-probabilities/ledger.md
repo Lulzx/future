@@ -73,6 +73,22 @@ The open-weight lag, carried since authoring at ~9–15 months and embedded in t
 
 Rule 5 satisfied: evidence reviewed, contradiction logged rather than absorbed silently.
 
+## Round 26 - re-score against the r25 Ground evidence (one move)
+
+*Date: 2026-07-30. Trigger: the r25 grounded contradiction (open-weight lag ~3–6 months, Epoch AI) plus the refreshed A-family prints.*
+
+| Row | Action | Note |
+|---|---|---|
+| 1 | **Hold** | Capex and revenue prints say the build continues; nothing new on task-hour substitution or outcome-pricing share, which are this row's actual variables |
+| 2 | **Hold** | Larger capex does not bear on *measured* TFP clearing 2%; the J-curve position is unchanged |
+| 3 | **Hold** | The shortened lag widens the incident surface directionally, but one measured series with no deployment-severity datapoint is below the bar for moving a catastrophe probability; the mechanism list stands |
+| 4 | **−1 / −2 → 7% / 28%** | The lag compression is direct evidence on this row's central object: verification of frontier training covers a shrinking capability share when near-frontier weights circulate ~3–6 months behind. Same direction as r8's export-control argument, now measured |
+| 5 | **Hold** | IFR 54% and rare-earth concentration sharpen the supply-chain picture without evidence on unstructured autonomy or delivered $/hour |
+| 6 | **Hold** | The dollar gap widened (capex ~$700–725B guided vs ~$55B model-layer revenue) but revenue roughly doubled y/y, so the *ratio* - the variable that matters - is ambiguous; A3's financing mix went unverified this pass. Watch A2 through 2027 before moving |
+| 7 | **Hold** | No new evidence on cycle-time compression or eval integrity; the governors' status is unchanged |
+
+Rule 5 satisfied: one move with written mechanism, six holds with named evidence. First table move since round 8.
+
 ## How to read a hold
 
 The ledger's hold entries are its least glamorous and most informative content, because the failure modes of a subjective table are asymmetric in a specific way. The pressure on a maintained forecast runs toward *motion* - every round deposits new material, and moving a number is how an analyst demonstrates responsiveness - so a table that drifts a few points every pass is usually tracking the author's reading list, not the world. Rule 5 cuts the other way against *anchoring*: a number that never moves is being defended. The discipline that resolves the tension is the one visible above - every hold names the evidence reviewed and says why it was insufficient, which converts "no change" from an absence into a claim that can itself be wrong. A reader auditing this ledger should look for two smells: consecutive holds citing evidence that plainly bears on a row (anchoring wearing rule-5 clothing), and moves justified by material that merely *restates* the argument that set the prior (motion mistaken for updating). Rounds 12 and 18 are the pattern to hold future passes to: mechanism detail sharpened, numbers explicitly not moved, reasons in writing.

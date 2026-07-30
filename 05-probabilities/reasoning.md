@@ -62,13 +62,16 @@ Each row: the claim restated, what evidence would move it, what rounds 1–7 act
 | | By 2030 | By 2040 |
 |---|---|---|
 | Round 0 | 10% | 35% |
-| Round 8 | **8%** | **30%** |
+| Round 8 | 8% | 30% |
+| Round 26 | **7%** | **28%** |
 
 **Why it was already low.** Row 3 is nearly a precondition (event-driven coordination). Compute governance is the only technically plausible lever and degrades with efficiency.
 
 **Evidence that would move it up:** a compute-accounting or attestation standard actually deployed bilaterally, even at small scale, since the row's pessimism rests on the verification object being spent, not on unwillingness to sign paper; a sub-threshold incident with clearly cross-border harm. **Down:** further rounds of export-control escalation, each of which spends more of the future verification mechanism on present competition.
 
 **Round 8 rationale.** [Bipolar](../03-domains/contested/geopolitics/bipolar.md) named the trap explicitly: the export-control lever and the future verification mechanism are the same object; competitive use is a decision to abandon verification later, being made implicitly. That is new structural reason for pessimism, not just "coordination is hard." −2 / −5.
+
+**Round 26 rationale.** The r25 Ground pass measured the open-weight lag at ~3–6 months (Epoch AI, Jan–May 2026) against the ~9–15 the corpus carried at authoring. This row is where that lands hardest: an agreement constraining frontier training verifies a shrinking share of deployed capability when near-frontier weights circulate a quarter behind, so the verification object is not only being spent by export controls (the r8 argument), it is depreciating on its own. The move is small (−1 / −2) because the row was already priced for pessimism and one measured series is one series; the direction, not the magnitude, is the information.
 
 ## Row 5 - Humanoids >1M units/yr deployed
 

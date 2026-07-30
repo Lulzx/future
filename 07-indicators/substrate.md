@@ -12,7 +12,7 @@ These test whether the ceilings in [Part I](../01-substrate/) bind on the schedu
 
 | | |
 |---|---|
-| **Baseline** | ~$1B largest disclosed run (2025) |
+| **Baseline** | ~$1B largest frontier run (2025) - third-party estimate (Epoch AI); no run this size is publicly *disclosed*, and the r25 Ground pass could not close that gap |
 | **Trajectory assumed** | ~$10B by 2027–28, ~$100B by 2029–30 |
 | **Trigger - slower** | No run above $5B by end-2028 |
 | **Trigger - faster** | A credible >$20B single run before 2028 |

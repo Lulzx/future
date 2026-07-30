@@ -6,14 +6,14 @@
 
 Stated plainly, so they can be scored later. These are subjective estimates, not model outputs.
 
-*Last full re-score: round 8 (2026-07-30). Commentary passes (no number moves): rounds 12, 18 - [ledger](ledger.md). Per-row reasoning: [reasoning](reasoning.md). Probabilities stated elsewhere in the corpus: [register](register.md).*
+*Last re-score with a move: round 26 (2026-07-30), triggered by the r25 grounded contradiction. Prior full re-score: round 8. Commentary passes (no number moves): rounds 12, 18 - [ledger](ledger.md). Per-row reasoning: [reasoning](reasoning.md). Probabilities stated elsewhere in the corpus: [register](register.md).*
 
 | # | Claim | By 2030 | By 2040 | Δ since r0 |
 |---|---|---|---|---|
 | 1 | AI systems autonomously do most of a competent knowledge worker's day-to-day tasks | **50%** | **80%** | 2030 +5 |
 | 2 | Measured TFP growth in the US exceeds 2%/yr sustained | **20%** | **50%** | 2030 −5; 2040 −5 |
 | 3 | A major AI-attributed catastrophe (>1,000 deaths or >$100B) | **20%** | **45%** | - |
-| 4 | Binding international agreement with real verification | **8%** | **30%** | 2030 −2; 2040 −5 |
+| 4 | Binding international agreement with real verification | **7%** | **28%** | 2030 −3; 2040 −7 |
 | 5 | Humanoid robots at >1M units/yr deployed | **12%** | **55%** | 2030 −3; 2040 −5 |
 | 6 | A serious capital-markets AI correction (>40% sector drawdown) | **45%** | **65%** | 2030 +5 |
 | 7 | Existential-scale loss of human control | **1–3%** | **3–8%** | - |
