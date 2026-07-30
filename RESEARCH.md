@@ -93,85 +93,44 @@ Every content file:
 | 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | 69 | 3,615 |
 | 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | 74 | 4,187 |
 | 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | 78 | 4,573 |
-| 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md) as domain (not only constraint); [meaning](03-domains/cognitive/meaning.md) welfare channel; [warfare](03-domains/contested/warfare.md) and [state capacity](03-domains/contested/state-capacity.md) deepened | **80** | **4,874** |
+| 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md); [meaning](03-domains/cognitive/meaning.md); [warfare](03-domains/contested/warfare.md) + [state capacity](03-domains/contested/state-capacity.md) depth | 80 | 4,874 |
+| 11 | 2026-07-30 | [Base rates](08-method/base-rates.md) winter failure archaeology; [Game 2](02-games/2-nations.md) trap/incident/capture pass; [B10](07-indicators/diffusion.md) fiscal tax-base indicator | **80** | **4956** |
 
-*End-state counts are exact at round close; intermediate rounds are approximate, since rounds ran in one sitting.*
+*End-state counts are exact at round close; intermediate rounds approximate.*
 
 ### Split and revision notes
 
-**Round 2 split:** `03-domains/{16 files}` → `03-domains/{cognitive,physical,contested}/`. Seam is cost-and-source of ground truth (symbols / atoms / adversary), not industry label. 29 files had links rewritten; validated with a resolver pass over every markdown link in the tree.
+**Splits:** r2 domains→cognitive/physical/contested; r4 robotics→4 files; r6 geopolitics→5 regions; r8 Part V→table/reasoning/ledger; r9 medicine→4 files.
 
-**Round 3 revision:** [steelman](08-method/steelman.md) §2 concedes that [Game 3](02-games/3-firms.md)'s scope should be narrowed to competitive markets specifically. Logged here because per [scoring](08-method/scoring.md) rule 3, a scope narrowing is legitimate once, in advance, and on the record.
+**Revisions (rule 5):** r3 Game 3 scope→competitive markets; r7 Game 4 aggregate→upper bound + RSI three governors; r8 Part V re-score (ledger).
 
-**Round 4 split:** `03-domains/physical/robotics.md` → `robotics/{README,data-problem,cost-curves,supply-chain,form-factor}.md`. Seam is the four distinct constraints (data / economics / manufacturing / embodiment), each of which was one compressed paragraph in the original. 10 files had links rewritten from `robotics.md` to `robotics/`.
+**r5–r10 one-liners:** r5 Part IX macro; r7 demography; r8 timelines+uncertainties 4–6; r9 indicators+Games 1/5; r10 energy sector+meaning+warfare/state capacity.
 
-**Round 5 note:** [Part IX](09-macro/) closes a loop the corpus had been leaving open — [Capital](01-substrate/capital.md) raised the neutral-rate feedback and nothing followed through. The finding worth flagging: there is a **financial governor on recursive acceleration** ([rates](09-macro/rates.md)) that the [RSI discussion](06-uncertainties/recursive-self-improvement.md) does not consider, and it operates regardless of how the technical question resolves. That should be integrated into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) in a future round.
+**Round 11:**
 
-**Round 6 split:** `03-domains/contested/geopolitics.md` → `geopolitics/{README,bipolar,india,europe,gulf,global-south}.md`. Seam is *binding constraint by region* — each region faces a different one, which is why a single page could not carry it. 11 files relinked.
+1. **Winter failure archaeology** in [base rates](08-method/base-rates.md) §4 — kill conditions table; this cycle fails the historical winter test on revenue; correction ≠ capability winter; paths that could still rhyme (revenue quality, agent threshold miss, energy freeze, incident freeze). §6 demography pointer updated (no longer "unwritten").
+2. **[Game 2](02-games/2-nations.md)** absorbs compute-governance trap, multi-mechanism incident table (finance/insurance first; kinetic least recoverable), privacy-class failure mode, state-capacity capture (~50% industry-originated text unless measurement exists).
+3. **[B10](07-indicators/diffusion.md)** — labor share of tax revenue as fiscal squeeze observable.
 
-**Round 7 revisions — two claims in the corpus were revised against themselves, per [scoring](08-method/scoring.md) rule 5:**
-
-1. [Game 4](02-games/4-labor.md)'s aggregate displacement estimate should be read as an **upper bound**. [Demography](09-macro/demography.md) shows the displacement lands in a shrinking labor force, which absorbs it far more easily than the estimate assumed. The *compositional* claim — the apprenticeship gap — survives unchanged and is now a larger share of the total harm than the document previously implied.
-2. [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) now names **three governors on takeoff speed**, only one of which is technical. The fast-takeoff scenarios are over-weighted relative to their technical plausibility, because two of the three constraints on them are not technical and were being left out of the model.
-
-**Round 8 revisions:**
-
-1. **[Part V](05-probabilities/) re-scored** against rounds 1–7, with every delta written in [reasoning](05-probabilities/reasoning.md) and logged in [ledger](05-probabilities/ledger.md). Net: rows 1 and 6 up on 2030; rows 2, 4, 5 down; rows 3 and 7 held with explicit justification (rule 5, not inertia). Part V promoted to a three-file directory.
-2. **Uncertainties 4–6 promoted into the register** rather than left as asides on regional, steelman, and domain pages. Taiwan is the first uncertainty *not* skewed toward better outcomes. Learned verification is the framework-level risk. Correlated insurability is the deployment-frontier constraint.
-3. **No silent probability inertia.** The re-score is the first compliance with scoring rule 5 since round 0; the prior gap was itself a protocol violation, now closed.
-
-**Round 9 split and expansions:**
-
-1. **`03-domains/physical/medicine.md` → `medicine/{README,diagnostics,delivery,drug-discovery,liability}.md`.** Seam is the four arguments the thin page already named. Inbound links rewritten to `medicine/`.
-2. **[Part VII](07-indicators/)** gains A6 (Taiwan capacity), A7 (rates / financial governor), B7 (two-economy prices), B8 (verification gap), B9 (RSI three-governor panel), C7 (AI liability insurance), C3b (compute-governance trap). Short-list table extended.
-3. **[Game 1](02-games/1-labs.md)** and **[Game 5](02-games/5-information.md)** expanded to carry liability/open-weights and verification/enclosure load that later pages were already assuming.
-
-**Round 10 expansions:**
-
-1. **[Energy sector](03-domains/physical/energy-sector.md)** — the missing half of [Part I energy](01-substrate/energy.md): AI as tool in markets, operations, planning, exploration, and generation R&D, not only as load. Four layers ordered by ground-truth cost.
-2. **[Meaning](03-domains/cognitive/meaning.md)** — vocational identity, synthetic companionship, attention/price-split psyche. Closes the human-welfare hole [Game 5](02-games/5-information.md) had flagged.
-3. **[Warfare](03-domains/contested/warfare.md)** and **[state capacity](03-domains/contested/state-capacity.md)** brought up to geopolitics-adjacent depth (offense–defense layers, Taiwan interaction; four capacities, permitting loop, cross-state variance).
-
-*Invariants §7 verified at the close of round 10: **80 files, 4,874 lines, 0 broken links**, no content file over the hard cap, no directory over the 10-file cap. **Exemption:** [RESEARCH.md](RESEARCH.md) itself is over 180 lines (round log growth); it is the protocol ledger, not a content argument — do not pad-split; compress retired notes in a later round if needed.*
+*Invariants at r11 close: **80 files, 4956 lines, 0 broken links**. RESEARCH.md remains the only hard-cap exemption (protocol ledger).*
 
 ## 6. Open queue
 
-Ordered by expected value of the next round's work.
+**High**
 
-**High** — next round starts here
-
-1. **Failure archaeology**, deepening [base rates](08-method/base-rates.md) §4 — what specifically ended each AI winter, usable as a prior.
-2. **Game 2** pass against bipolar compute-governance trap, insurance-as-incident mechanism, and state-capacity capture caveat.
-3. **Fiscal indicator** — tax-base / labor-income share as a slow B-family companion to [fiscal](09-macro/fiscal.md).
+1. **Cybersecurity** and **biosecurity** depth relative to warfare/state-capacity.
+2. **Education** pass against [meaning](03-domains/cognitive/meaning.md) + apprenticeship gap.
+3. **Part V** light re-score if Game 2 refinements move row 3/4 commentary (not necessarily the numbers).
 
 **Medium**
-- **Cybersecurity** and **biosecurity** depth relative to warfare/state-capacity after round 10.
-- **Education** pass against meaning + apprenticeship gap (credential collapse + identity).
-- **Energy sector** split if it outgrows a page (ops / planning / generation R&D).
+- Energy sector split if it outgrows a page.
+- Reverse dependency index; `notation.md`.
+- Automate invariants §7 as a check script.
 
 **Low**
-- `notation.md` for recurring shorthand (effective compute, ground-truth cost, inelastic complement, the master asymmetry).
-- **Reverse dependency index**: claim → every page that rests on it.
-- Automate invariants §7 as a check script rather than a manual pass.
+- Compress this log further into archive if it keeps growing.
 
-**Retired**
-- ~~Missing fourth input (capital)~~ — round 1.
-- ~~Indicators with trigger values~~ — round 1, [Part VII](07-indicators/).
-- ~~Method / base rates / falsifiability~~ — round 3, [Part VIII](08-method/).
-- ~~Robotics is too thin to carry the 2030s~~ — round 4, now a four-file directory.
-- ~~The macro-financial channel is absent~~ — round 5, [Part IX](09-macro/).
-- ~~The non-US, non-China world~~ — round 6, [geopolitics](03-domains/contested/geopolitics/) is now a five-region directory.
-- ~~Demography as counterweight~~ — round 7, [demography](09-macro/demography.md).
-- ~~The financial governor on RSI~~ — round 7, folded into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md).
-- ~~Timelines not synthesizing the corpus~~ — round 8, [Part IV](04-timelines/) expanded.
-- ~~Part V never re-scored~~ — round 8, [ledger](05-probabilities/ledger.md).
-- ~~Uncertainties stuck at three~~ — round 8, six in the register.
-- ~~Medicine too thin~~ — round 9, four-file directory.
-- ~~Indicators stale vs rounds 5–8~~ — round 9.
-- ~~Games 1 and 5 under-carrying~~ — round 9.
-- ~~Energy only as constraint~~ — round 10, [energy sector](03-domains/physical/energy-sector.md).
-- ~~Meaning / mental health missing~~ — round 10, [meaning](03-domains/cognitive/meaning.md).
-- ~~Warfare and state capacity thin~~ — round 10.
+**Retired (r1–r11):** capital; indicators; method; robotics dir; macro; geopolitics dir; demography; RSI financial governor; timelines; Part V re-score; uncertainties 4–6; medicine dir; indicators r5–8; Games 1/5; energy sector; meaning; warfare/state capacity; winter archaeology; Game 2 pass; B10 fiscal.
 
 ## 7. Invariants
 

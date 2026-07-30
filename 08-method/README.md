@@ -12,7 +12,7 @@ A forecast without a stated method is an opinion with decimal places. This part 
 
 | | | |
 |---|---|---|
-| [Base rates](base-rates.md) | The reference classes every estimate leans on — GPT diffusion, capex booms, regulatory cycles, AI winters | Where the priors come from |
+| [Base rates](base-rates.md) | Reference classes — GPT diffusion, capex booms, regulatory cycles, **AI winter failure archaeology**, labor shocks, demographics | Where the priors come from |
 | [Steelman](steelman.md) | The strongest versions of the three arguments against this document | Where it is most likely wrong for reasons it does not already admit |
 | [Scoring](scoring.md) | How claims resolve, what counts as a miss, and the errors this framework is structurally prone to | How to hold it accountable |
 

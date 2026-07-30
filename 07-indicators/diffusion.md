@@ -109,8 +109,25 @@ Pair with insurance and liability: if underwriters cover autonomous professional
 
 Headline RSI talk tracks only the first row. The document's revision in round 7 requires reading all three before moving timelines.
 
+## B10 — Labor share of tax base / public revenue mix
+
+| | |
+|---|---|
+| **Baseline** | Advanced-economy revenue still dominated by labor income and payroll; capital share of tax take lower and more volatile |
+| **Cadence** | Annual (budget and national-accounts releases) |
+| **Trigger — squeeze on** | Labor-related tax share of total revenue falls materially over a rolling 5-year window while capital/consumption shares rise *and* transfer + debt-service outlays rise |
+| **Trigger — claim fails** | Labor tax share stable through 2032 despite AI diffusion and ageing |
+| **Revises** | [Fiscal](../09-macro/fiscal.md), [Demography](../09-macro/demography.md), [State capacity](../03-domains/contested/state-capacity.md) |
+
+This is the slow companion to the labor and price stories. [Fiscal](../09-macro/fiscal.md) argues three pressures arrive together: narrower easy-to-collect base, higher transfer demand, demographics. B10 does not prove AI caused the shift — ageing alone can move it — but **joint movement with B1 (junior hiring) and B7 (price split)** is the AI-relevant pattern.
+
+Secondary reads (same page in spirit):
+
+- Interest expense / revenue after any neutral-rate rise ([Rates](../09-macro/rates.md))
+- Adoption of consumption-tax expansion vs capital-income tightening (tests the "path of least resistance" prediction)
+
 ---
 
-**Related:** [Game 3](../02-games/3-firms.md) · [Game 4](../02-games/4-labor.md) · [Part IV — Timelines](../04-timelines/) · [Part IX](../09-macro/)
+**Related:** [Game 3](../02-games/3-firms.md) · [Game 4](../02-games/4-labor.md) · [Part IV — Timelines](../04-timelines/) · [Part IX](../09-macro/) · [Fiscal](../09-macro/fiscal.md)
 
 **Next:** [C — Governance indicators](governance.md)

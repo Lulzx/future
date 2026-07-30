@@ -56,6 +56,8 @@ Universal basic income dominates public discussion of this topic and deserves a 
 
 ---
 
-**Related:** [Assets](assets.md) · [Prices](prices.md) · [Rates](rates.md) · [Game 4 — Labor](../02-games/4-labor.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md)
+**Related:** [Assets](assets.md) · [Prices](prices.md) · [Rates](rates.md) · [Game 4 — Labor](../02-games/4-labor.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [B10 — tax-base indicator](../07-indicators/diffusion.md)
+
+**Observable:** [B10](../07-indicators/diffusion.md) — labor-related tax share of total revenue vs transfer and debt-service outlays.
 
 **Next:** [Index](../README.md) · [Protocol](../RESEARCH.md)
