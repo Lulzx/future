@@ -24,7 +24,7 @@ Three pressures, all arriving in the same window and all pointing the same way:
 
 The squeeze is a story about shares, and governments budget in levels. If AI raises total income enough, labor's *share* of the tax base can fall while labor-tax *receipts* still grow in absolute terms - in which case treasuries feel nothing on the horizon that matters politically, and the adaptation this page predicts gets deferred a decade. That is the main way to be wrong here, and it is the benign way: the problem would still be real, just slower than the transfer demand it races against.
 
-The second failure mode is compositional. The squeeze assumes displaced cognitive labor income is not replaced by other taxable labor income. If [Game 4](../02-games/4-labor.md)'s reallocation toward care and trades runs faster than its displacement - and [demography](demography.md) gives reasons it might - the labor base rotates rather than shrinks, and payroll receipts hold up even as their occupational composition transforms underneath. **Watch receipts by income type, not employment counts:** [B10](../07-indicators/diffusion.md) is defined on the revenue side for exactly this reason.
+The second failure mode is compositional. The squeeze assumes displaced cognitive labor income is not replaced by other taxable labor income. If [Game 4](../02-games/4-labor.md)'s reallocation toward care and trades runs faster than its displacement - and [demography](demography.md) gives reasons it might - the labor base rotates rather than shrinks, and payroll receipts hold up even as their occupational composition transforms underneath. **Watch receipts by income type, not employment counts:** [B10](../07-indicators/diffusion/labor.md) is defined on the revenue side for exactly this reason.
 
 ## The intersection with rates
 
@@ -66,8 +66,8 @@ Universal basic income dominates public discussion of this topic and deserves a 
 
 ---
 
-**Related:** [Assets](assets.md) · [Prices](prices.md) · [Rates](rates.md) · [Game 4 - Labor](../02-games/4-labor.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [B10 - tax-base indicator](../07-indicators/diffusion.md)
+**Related:** [Assets](assets.md) · [Prices](prices.md) · [Rates](rates.md) · [Game 4 - Labor](../02-games/4-labor.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [B10 - tax-base indicator](../07-indicators/diffusion/labor.md)
 
-**Observable:** [B10](../07-indicators/diffusion.md) - labor-related tax share of total revenue vs transfer and debt-service outlays.
+**Observable:** [B10](../07-indicators/diffusion/labor.md) - labor-related tax share of total revenue vs transfer and debt-service outlays.
 
 **Next:** [Index](../README.md) · [Protocol](../RESEARCH.md)

@@ -103,7 +103,7 @@ Research continued through every winter at lower amplitude. Winters are **commer
 
 Failure archaeology also names the paths that would *make* this cycle rhyme with 1987:
 
-- **Revenue quality collapses** - seat-priced option-value subscriptions churn when CFOs cut “AI” as a line item; outcome-priced revenue does not. → [B5](../07-indicators/diffusion.md)
+- **Revenue quality collapses** - seat-priced option-value subscriptions churn when CFOs cut “AI” as a line item; outcome-priced revenue does not. → [B5](../07-indicators/diffusion/economy.md)
 - **Agent demos never clear unsupervised production reliability** while capex assumed they would - threshold miss with modern branding
 - **Energy/politics** freeze deployment capacity so that model progress cannot convert to revenue at the assumed rate → [Energy](../01-substrate/energy.md)
 - **A salient incident** freezes enterprise adoption for a cycle even though capability is real → [Game 2](../02-games/2-nations.md)

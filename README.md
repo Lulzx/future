@@ -62,7 +62,7 @@ The numbers, re-scored against the corpus; [per-row reasoning](05-probabilities/
 ### [07 - The Indicator Dashboard](07-indicators/)
 Every claim above, converted into something checkable on a quarterly cadence.
 - [A - Substrate](07-indicators/substrate.md): are the ceilings binding on schedule?
-- [B - Diffusion](07-indicators/diffusion.md): is it actually reaching the economy?
+- [B - Diffusion](07-indicators/diffusion/README.md): is it actually reaching the economy?
 - [C - Governance](07-indicators/governance.md): which architecture do we get, and when?
 
 ### [08 - Method](08-method/)

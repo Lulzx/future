@@ -26,7 +26,7 @@ Selection was not by loudness. Each of the three earns its place by passing thre
 
 **Why it's strong.** The empirical premise is correct - concentration is high and rising - and the model in [Game 3](../02-games/3-firms.md) is the textbook case rather than the observed one. It also makes a cleanly opposite prediction, which is rare and valuable.
 
-**The answer.** Both can be true at once, and the resolution is dispersion rather than the mean: consumer surplus in competitive segments, margin expansion in concentrated ones. That is why [B3](../07-indicators/diffusion.md) specifies watching **dispersion, not the average** - the two hypotheses look identical in aggregate data and completely different in the cross-section.
+**The answer.** Both can be true at once, and the resolution is dispersion rather than the mean: consumer surplus in competitive segments, margin expansion in concentrated ones. That is why [B3](../07-indicators/diffusion/economy.md) specifies watching **dispersion, not the average** - the two hypotheses look identical in aggregate data and completely different in the cross-section.
 
 **Where the answer is weak.** It is close to unfalsifiable as stated. If margins rise the document says "concentrated markets," and if they don't it says "Red Queen." **The honest position: [Game 3](../02-games/3-firms.md) is a claim about competitive markets specifically, and its scope should be narrowed to say so** rather than presented as a general result. That is a correction, not a defense.
 
@@ -44,11 +44,11 @@ Selection was not by loudness. Each of the three earns its place by passing thre
 
 None of these needs to remain a matter of judgment for long; each is wired to a different part of the [dashboard](../07-indicators/README.md), and the wiring was chosen so that both sides should accept the verdict in advance.
 
-**Objection 1** resolves through [B8](../07-indicators/diffusion.md), the capability gap between verifiable and unverifiable domains. If that gap closes and stays closed under blinded evaluation - not benchmark scores, which the objection itself predicts will be gamed - then the asymmetry is dying and the document's domain ordering with it. If the gap persists while learned-verifier methods proliferate, the recursion answer is holding.
+**Objection 1** resolves through [B8](../07-indicators/diffusion/capability.md), the capability gap between verifiable and unverifiable domains. If that gap closes and stays closed under blinded evaluation - not benchmark scores, which the objection itself predicts will be gamed - then the asymmetry is dying and the document's domain ordering with it. If the gap persists while learned-verifier methods proliferate, the recursion answer is holding.
 
-**Objection 2** resolves through [B3](../07-indicators/diffusion.md)'s dispersion reading. Margin expansion concentrated in high-concentration industries while competitive segments pass gains through is the split verdict both hypotheses should accept. Uniform margin expansion everywhere is objection 2 winning outright, and the scope-narrowing correction below becomes a euphemism for a miss.
+**Objection 2** resolves through [B3](../07-indicators/diffusion/economy.md)'s dispersion reading. Margin expansion concentrated in high-concentration industries while competitive segments pass gains through is the split verdict both hypotheses should accept. Uniform margin expansion everywhere is objection 2 winning outright, and the scope-narrowing correction below becomes a euphemism for a miss.
 
-**Objection 3** resolves through replication. The [METR result](../02-games/4-labor.md) re-run at higher capability, on production work rather than study conditions, is the single experiment that most moves this document's confidence in either direction - and it is cheap relative to what rides on it. Until it exists, [B2](../07-indicators/diffusion.md)-style instrumented productivity measures are the proxy.
+**Objection 3** resolves through replication. The [METR result](../02-games/4-labor.md) re-run at higher capability, on production work rather than study conditions, is the single experiment that most moves this document's confidence in either direction - and it is cheap relative to what rides on it. Until it exists, [B2](../07-indicators/diffusion/economy.md)-style instrumented productivity measures are the proxy.
 
 ## The pattern in all three answers
 

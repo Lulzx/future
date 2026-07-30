@@ -49,7 +49,7 @@ The distribution of the collapse is also uneven in a way the headline hides. Pri
 | [Data](data.md) | Master asymmetry still orders *what* gets cheap; free inference on unverifiable tasks stays low-value |
 | [Capital](capital.md) | Collapsing inference cost is the bull case for revenue without proportional training capex - softens correction if outcome pricing scales |
 
-[Software](../03-domains/cognitive/software.md): seat→outcome pricing is the commercial face of "capability is free; attribution and liability are not." [B5](../07-indicators/diffusion.md) tracks that shift.
+[Software](../03-domains/cognitive/software.md): seat→outcome pricing is the commercial face of "capability is free; attribution and liability are not." [B5](../07-indicators/diffusion/economy.md) tracks that shift.
 
 ## The corollary nobody plans for
 
@@ -69,6 +69,6 @@ Inference cost collapse + distillation compresses the [Game 2](../02-games/2-nat
 
 ---
 
-**Related:** [Game 3](../02-games/3-firms.md) · [Software](../03-domains/cognitive/software.md) · [Compute](compute.md) · [Capital](capital.md) · [Game 1](../02-games/1-labs.md) open-weight tier · [B5](../07-indicators/diffusion.md)
+**Related:** [Game 3](../02-games/3-firms.md) · [Software](../03-domains/cognitive/software.md) · [Compute](compute.md) · [Capital](capital.md) · [Game 1](../02-games/1-labs.md) open-weight tier · [B5](../07-indicators/diffusion/economy.md)
 
 **Next:** [Part II - The Games](../02-games/)

@@ -48,7 +48,7 @@ The bottleneck on it is training capacity, which is institutional and slow - the
 
 ## The failure mode: the list has a half-life
 
-Every row in the ownership table is a claim that intelligence cannot manufacture that complement *within the window*, and [Uncertainty 7](../06-uncertainties/complement-erosion.md) red-teams exactly this. If robotics arrives early, the physical-presence row - the one row labor holds - erodes first, which would convert this page's least intuitive prediction into its worst miss. If licensure reprices under fiscal pressure, the regulatory row follows, and the professional moat goes with it. The distributional claims here inherit the half-life of the scarcities they rest on and should be read as a dated position, not a static endowment; the trades-wage prediction above is explicitly conditioned on [B12](../07-indicators/diffusion.md) staying quiet.
+Every row in the ownership table is a claim that intelligence cannot manufacture that complement *within the window*, and [Uncertainty 7](../06-uncertainties/complement-erosion.md) red-teams exactly this. If robotics arrives early, the physical-presence row - the one row labor holds - erodes first, which would convert this page's least intuitive prediction into its worst miss. If licensure reprices under fiscal pressure, the regulatory row follows, and the professional moat goes with it. The distributional claims here inherit the half-life of the scarcities they rest on and should be read as a dated position, not a static endowment; the trades-wage prediction above is explicitly conditioned on [B12](../07-indicators/diffusion/capability.md) staying quiet.
 
 ## The sharpest line is owner against renter
 
@@ -66,7 +66,7 @@ Note that **none of these are AI policy.** They are housing, energy, tax, and pe
 
 ---
 
-**Observable:** [B7](../07-indicators/diffusion.md) price split and [B12](../07-indicators/diffusion.md) physical diffusion - the trades-wage prediction above holds only while unstructured physical work stays out of robotics' reach; it is tracked in the [register](../05-probabilities/register.md).
+**Observable:** [B7](../07-indicators/diffusion/economy.md) price split and [B12](../07-indicators/diffusion/capability.md) physical diffusion - the trades-wage prediction above holds only while unstructured physical work stays out of robotics' reach; it is tracked in the [register](../05-probabilities/register.md).
 
 **Related:** [Game 3 - Firms](../02-games/3-firms.md) · [Prices](prices.md) · [Fiscal](fiscal.md) · [Game 4 - Labor](../02-games/4-labor.md) · [Uncertainty 2](../06-uncertainties/power-permitting.md)
 

@@ -36,7 +36,7 @@ The exposed predictions are distributional. If complements erode faster than the
 | Signal | Reading |
 |---|---|
 | Wholesale price at datacenter-heavy nodes falling despite continued load growth | Efficiency/supply winning the energy race; the top row eroding |
-| Robot deployment economics outside structured environments ([B12](../07-indicators/diffusion.md)) | Physical presence becoming manufacturable |
+| Robot deployment economics outside structured environments ([B12](../07-indicators/diffusion/capability.md)) | Physical presence becoming manufacturable |
 | Share of commerce completed agent-to-agent without a placement premium | Distribution row eroding |
 | Scope-of-practice expansions or license liberalization passing state legislatures | Political rows repricing |
 

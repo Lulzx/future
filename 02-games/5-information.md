@@ -38,7 +38,7 @@ Notably, these are all *older* technologies socially. We are heading back toward
 
 ### Cost structure inversion
 
-**Teaching and drafting get cheaper; assessing and authenticating get more expensive.** Institutions that cannot fund the second stop credentialing meaningfully rather than pay for it. That is the mechanism behind [B6](../07-indicators/diffusion.md) and the quiet hollowing of asynchronous education and hiring filters. → [Education](../03-domains/cognitive/education.md), [Game 4](4-labor.md)
+**Teaching and drafting get cheaper; assessing and authenticating get more expensive.** Institutions that cannot fund the second stop credentialing meaningfully rather than pay for it. That is the mechanism behind [B6](../07-indicators/diffusion/labor.md) and the quiet hollowing of asynchronous education and hiring filters. → [Education](../03-domains/cognitive/education.md), [Game 4](4-labor.md)
 
 ### The evaluator side is a commons too
 
@@ -88,6 +88,6 @@ All of these converge because all are downstream of generation becoming free. Th
 
 ---
 
-**Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Compressed version](../00-overview/compressed.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [B6](../07-indicators/diffusion.md) · [C8 provenance](../07-indicators/governance.md)
+**Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Compressed version](../00-overview/compressed.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [B6](../07-indicators/diffusion/labor.md) · [C8 provenance](../07-indicators/governance.md)
 
 **Next:** [Part III - Domains](../03-domains/)

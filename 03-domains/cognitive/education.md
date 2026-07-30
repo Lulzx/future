@@ -35,7 +35,7 @@ This is the standard shape for any technology that lowers the cost of self-direc
 
 Education's assessment machinery is simultaneously being dismantled by [Game 5](../../02-games/5-information.md). The essay, the take-home, and the problem set are dead as evaluation instruments. Institutions must move to synchronous, invigilated, or oral assessment - which is expensive, and which is the same guild-shaped reversion showing up everywhere else.
 
-Ironic result: **the cost of teaching collapses while the cost of assessing rises.** → [B6](../../07-indicators/diffusion.md)
+Ironic result: **the cost of teaching collapses while the cost of assessing rises.** → [B6](../../07-indicators/diffusion/labor.md)
 
 ### Credentials, meaning, and the junior rung
 
@@ -49,7 +49,7 @@ Three corpus threads meet here:
 
 **The apprenticeship gap is not only a firm problem.** If employers no longer buy junior years of practice, and higher education responds by selling more credentials that signal less, the system produces **indebted graduates without a path into competence**. That is worse than either failure alone.
 
-> **Prediction:** by 2030, selective employers in exposed professions weight **supervised work samples, apprenticeships, and invigilated assessments** over GPA/essay bundles. Universities that cannot fund expensive assessment either niche into research/childcare brands or hollow out. → [B6](../../07-indicators/diffusion.md)
+> **Prediction:** by 2030, selective employers in exposed professions weight **supervised work samples, apprenticeships, and invigilated assessments** over GPA/essay bundles. Universities that cannot fund expensive assessment either niche into research/childcare brands or hollow out. → [B6](../../07-indicators/diffusion/labor.md)
 
 ### Uncertainty 3's inversion path runs through education
 
@@ -89,6 +89,6 @@ Elite institutions sell network and sorting - inelastic. Mass institutions sold 
 
 ---
 
-**Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) · [Meaning](meaning.md) · [B6](../../07-indicators/diffusion.md) · [Science](science.md)
+**Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) · [Meaning](meaning.md) · [B6](../../07-indicators/diffusion/labor.md) · [Science](science.md)
 
 **Next:** [Media & culture](media.md)

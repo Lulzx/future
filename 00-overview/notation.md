@@ -22,7 +22,7 @@ Terms that carry load across the corpus. Definitions are operational, not dictio
 | **Two economies** | Cognition-intensive deflation vs physical/care/energy inflation | [Prices](../09-macro/prices.md) |
 | **Financial governor** | Success raises returns → raises discount rates → dearer next capex round | [Rates](../09-macro/rates.md), [Capital](../01-substrate/capital.md) |
 | **Shelf-readiness** | Having a drafted architecture before the incident window opens | [C2](../07-indicators/governance.md) |
-| **Outcome pricing** | Billing for results not seats; revealed belief in reliability | [B5](../07-indicators/diffusion.md), [2026–2028](../04-timelines/2026-2028.md) |
+| **Outcome pricing** | Billing for results not seats; revealed belief in reliability | [B5](../07-indicators/diffusion/economy.md), [2026–2028](../04-timelines/2026-2028.md) |
 | **Two-year moat** | Any fixed capability level becomes ~free within ~24 months; frontier access is a wasting asset | [Inference economics](../01-substrate/inference-economics.md), [Game 3](../02-games/3-firms.md) |
 | **Revenue bar / capex test** | Does AI revenue reach ~$400–700B/yr by 2030, net of financing circularity | [Compute](../01-substrate/compute.md), [Capital](../01-substrate/capital.md), [A2](../07-indicators/substrate.md) |
 | **Verification scarcity** | Post-collapse regime where generation is free and checking is the priced good | [Game 5](../02-games/5-information.md), [Compressed](compressed.md), [C8](../07-indicators/governance.md) |

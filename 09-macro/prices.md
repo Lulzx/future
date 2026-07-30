@@ -60,7 +60,7 @@ The likely political responses follow directly, and are worth predicting because
 
 ## How the split could fail to arrive
 
-The inflating half is inflating *given current supply institutions*, and that conditionality is the claim's main exposure. If [permitting reform](../06-uncertainties/power-permitting.md) unlocks the energy build and housing liberalization spreads, the physical basket's inflation moderates and the split narrows to something an index can average without distortion - the benign failure. The malign failure is subtler: if cognitive deflation stalls because the complements *inside* services reassert themselves - the licensed body in the room, the liability holder, the [distribution chokepoint](../02-games/3-firms.md) - then measured services prices never fall much and the two economies quietly collapse back into one. **The split is a prediction about institutions as much as technology**, which is why it scores on the relative series [B7](../07-indicators/diffusion.md) fixes, never on either half alone.
+The inflating half is inflating *given current supply institutions*, and that conditionality is the claim's main exposure. If [permitting reform](../06-uncertainties/power-permitting.md) unlocks the energy build and housing liberalization spreads, the physical basket's inflation moderates and the split narrows to something an index can average without distortion - the benign failure. The malign failure is subtler: if cognitive deflation stalls because the complements *inside* services reassert themselves - the licensed body in the room, the liability holder, the [distribution chokepoint](../02-games/3-firms.md) - then measured services prices never fall much and the two economies quietly collapse back into one. **The split is a prediction about institutions as much as technology**, which is why it scores on the relative series [B7](../07-indicators/diffusion/economy.md) fixes, never on either half alone.
 
 There is also a self-referential wrinkle worth naming: the inflating basket's service components are wage-driven, and rising trades and care wages are simultaneously this page's inflation problem and [Assets](assets.md)' distributional compensation. The same number is the disease in one chapter and the cure in another - which is not a contradiction, but it does mean policy that suppresses the inflating half suppresses the one channel through which labor keeps a complement.
 
@@ -78,7 +78,7 @@ The classic case took a century and people barely noticed. This version does the
 
 ---
 
-**Observable:** [B7](../07-indicators/diffusion.md) - relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).
+**Observable:** [B7](../07-indicators/diffusion/economy.md) - relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).
 
 **Related:** [Game 3 - Firms](../02-games/3-firms.md) · [Energy](../01-substrate/energy.md) · [Assets](assets.md) · [2028–2032](../04-timelines/2028-2032.md) · [Fiscal](fiscal.md)
 

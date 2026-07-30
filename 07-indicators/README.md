@@ -15,7 +15,7 @@ The discipline: every indicator here names a **trigger value**, and every trigge
 | | Family | Answers | Cadence |
 |---|---|---|---|
 | A | [Substrate](substrate.md) | Are the physical and financial ceilings binding on schedule? | Quarterly |
-| B | [Diffusion](diffusion.md) | Is the technology actually reaching into the economy? | Quarterly to annual |
+| B | [Diffusion](diffusion/README.md) | Is the technology actually reaching into the economy? | Quarterly to annual |
 | C | [Governance](governance.md) | Which regulatory architecture are we going to get, and when? | Event-driven |
 
 The families are not independent, and reading them jointly is most of the skill. A binding A-family constraint shows up later as a B-family slowdown, so **a B stall with A slack points at institutions, while a B stall with A tight points at physics and finance** - opposite revisions from the same B reading. And a C-family event reprices both: the post-incident window can relax A constraints (permitting waivers) while tightening B (deployment moratoria) simultaneously.
@@ -42,12 +42,12 @@ Each was chosen for when it moves, not only for what it measures. The posting ra
 |---|---|---|
 | **AI liability as published insurance line** + reinsurer capacity | [C7](governance.md) | [Uncertainty 6](../06-uncertainties/correlated-risk.md); deployment frontier |
 | **Leading-edge wafer share outside Taiwan** | [A6](substrate.md) | [Uncertainty 4](../06-uncertainties/taiwan.md) |
-| **Cognitive vs physical services inflation gap** | [B7](diffusion.md) | [Prices](../09-macro/prices.md) two-economy claim |
-| **Capability gap: verifiable vs unverifiable domains** | [B8](diffusion.md) | [Uncertainty 5](../06-uncertainties/learned-verification.md) |
-| **Labor share of tax revenue** | [B10](diffusion.md) | [Fiscal](../09-macro/fiscal.md) squeeze |
-| **Companion use × social contact; junior identity** | [B11](diffusion.md) | [Meaning](../03-domains/cognitive/meaning.md) welfare channel |
+| **Cognitive vs physical services inflation gap** | [B7](diffusion/economy.md) | [Prices](../09-macro/prices.md) two-economy claim |
+| **Capability gap: verifiable vs unverifiable domains** | [B8](diffusion/capability.md) | [Uncertainty 5](../06-uncertainties/learned-verification.md) |
+| **Labor share of tax revenue** | [B10](diffusion/labor.md) | [Fiscal](../09-macro/fiscal.md) squeeze |
+| **Companion use × social contact; junior identity** | [B11](diffusion/labor.md) | [Meaning](../03-domains/cognitive/meaning.md) welfare channel |
 | **Capture-time provenance at scale** | [C8](governance.md) | [Game 5](../02-games/5-information.md) / [media](../03-domains/cognitive/media.md) enclosure vs public verification |
-| **Warehouse / freight / specialty harvest autonomy** | [B12](diffusion.md) | [Robotics](../03-domains/physical/robotics/) physical fork |
+| **Warehouse / freight / specialty harvest autonomy** | [B12](diffusion/capability.md) | [Robotics](../03-domains/physical/robotics/) physical fork |
 
 ## How to read a dashboard without fooling yourself
 

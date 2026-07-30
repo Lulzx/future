@@ -81,7 +81,7 @@ Yield variance rises with climate volatility; energy and fertilizer costs sit in
 | See-and-spray / precision acreage share | Perception layer deployed |
 | Teleoperation-to-autonomy in field equipment | Structured robotics path |
 | Farmland price vs farm operating margin | Complement capture |
-| Specialty harvest wage vs automation pilots | Manipulation bottleneck → [B12](../../07-indicators/diffusion.md) |
+| Specialty harvest wage vs automation pilots | Manipulation bottleneck → [B12](../../07-indicators/diffusion/capability.md) |
 | Open vs OEM-locked farm data regimes | Who owns the flow |
 
 ## Failure modes

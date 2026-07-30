@@ -17,7 +17,7 @@ Each row: the claim restated, what evidence would move it, what rounds 1–7 act
 
 **What it means.** Not "can demo the task" - *does* the task as the default path in production, without a human in the loop for the majority of a competent worker's actual day. Verification-cheap domains (software, support, parts of finance) count earlier; open-ended professional judgment counts later.
 
-**Evidence that would move it up:** seat→outcome pricing becoming the enterprise default; junior:senior posting ratios failing to recover with the cycle ([B1](../07-indicators/diffusion.md)); measured task-hour substitution approaching the [Game 4](../02-games/4-labor.md) band.
+**Evidence that would move it up:** seat→outcome pricing becoming the enterprise default; junior:senior posting ratios failing to recover with the cycle ([B1](../07-indicators/diffusion/labor.md)); measured task-hour substitution approaching the [Game 4](../02-games/4-labor.md) band.
 
 **Evidence that would move it down:** METR-style negative productivity results replicating at higher capability; insurance exclusions blocking autonomous deployment in the domains that looked easy ([insurance](../03-domains/cognitive/insurance.md)); organizational redesign remaining the binder through 2030.
 

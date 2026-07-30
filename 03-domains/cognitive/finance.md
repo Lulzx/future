@@ -67,7 +67,7 @@ Front-office junior research and middle-office analyst roles compress like law. 
 | AI-sector credit spreads and SPV disclosure | [A3](../../07-indicators/substrate.md) fragility |
 | Compliance headcount vs research headcount at large banks | Labor composition |
 | Speed of post-incident rulemaking after a dislocation | Game 2 window |
-| Outcome-priced AI vendor contracts in banks | [B5](../../07-indicators/diffusion.md) reliability belief |
+| Outcome-priced AI vendor contracts in banks | [B5](../../07-indicators/diffusion/economy.md) reliability belief |
 
 ## Failure modes
 

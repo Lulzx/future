@@ -276,8 +276,20 @@
     "title": "Part VII - The Indicator Dashboard"
   },
   {
-    "path": "07-indicators/diffusion.md",
+    "path": "07-indicators/diffusion/README.md",
     "title": "B - Diffusion Indicators"
+  },
+  {
+    "path": "07-indicators/diffusion/capability.md",
+    "title": "Diffusion - The Capability Frontier (B4, B8, B9, B12)"
+  },
+  {
+    "path": "07-indicators/diffusion/economy.md",
+    "title": "Diffusion - The Economic Ledger (B2, B3, B5, B7)"
+  },
+  {
+    "path": "07-indicators/diffusion/labor.md",
+    "title": "Diffusion - Labor and Institutions (B1, B6, B10, B11)"
   },
   {
     "path": "07-indicators/governance.md",

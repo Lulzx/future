@@ -66,7 +66,7 @@ The 60% band is where this document lives and where calibration is hardest to fa
 
 | Due | Claim | Source |
 |---|---|---|
-| 2027–28 | Junior hiring fails to recover with aggregate white-collar hiring | [Game 4](../02-games/4-labor.md), [B1](../07-indicators/diffusion.md) |
+| 2027–28 | Junior hiring fails to recover with aggregate white-collar hiring | [Game 4](../02-games/4-labor.md), [B1](../07-indicators/diffusion/labor.md) |
 | 2028 | No frontier training run above $5B → the capex ceiling was evadable | [A1](../07-indicators/substrate.md) |
 | 2028 | Revenue above ~$200B/yr run-rate | [A2](../07-indicators/substrate.md) |
 | 2027–2031 | A salient AI-attributed incident occurs | [Game 2](../02-games/2-nations.md), [C1](../07-indicators/governance.md) |

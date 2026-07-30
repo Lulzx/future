@@ -48,9 +48,9 @@ Because verification is now the scarce input to *capability*, and - separately -
 
 ## What would retire the asymmetry
 
-[Uncertainty 5](../06-uncertainties/learned-verification.md) / [steelman](../08-method/steelman.md) §1: if learned verifiers are good enough that expensive domains stop lagging, **Part III reorders** and this page's spine claim fails. Track with [B8](../07-indicators/diffusion.md) (production depth in unverifiable domains, not demos).
+[Uncertainty 5](../06-uncertainties/learned-verification.md) / [steelman](../08-method/steelman.md) §1: if learned verifiers are good enough that expensive domains stop lagging, **Part III reorders** and this page's spine claim fails. Track with [B8](../07-indicators/diffusion/capability.md) (production depth in unverifiable domains, not demos).
 
-Partial escape without killing the asymmetry: **buy cheaper ground truth** - automated labs ([science](../03-domains/cognitive/science.md)), instrumented robotics data ([robotics](../03-domains/physical/robotics/)), outcome-priced contracts ([B5](../07-indicators/diffusion.md)). That moves a domain left in the table; it does not erase the table.
+Partial escape without killing the asymmetry: **buy cheaper ground truth** - automated labs ([science](../03-domains/cognitive/science.md)), instrumented robotics data ([robotics](../03-domains/physical/robotics/)), outcome-priced contracts ([B5](../07-indicators/diffusion/economy.md)). That moves a domain left in the table; it does not erase the table.
 
 ## Interaction with the rest of Part I
 
@@ -63,7 +63,7 @@ Partial escape without killing the asymmetry: **buy cheaper ground truth** - aut
 
 ## Robotics special case
 
-There is **no internet of manipulation.** Text and code had public corpora; physical interaction does not. That is why [robotics](../03-domains/physical/robotics/) lags even when vision-language models transfer well - the binding constraint is samples in the world, not model size. → [B12](../07-indicators/diffusion.md)
+There is **no internet of manipulation.** Text and code had public corpora; physical interaction does not. That is why [robotics](../03-domains/physical/robotics/) lags even when vision-language models transfer well - the binding constraint is samples in the world, not model size. → [B12](../07-indicators/diffusion/capability.md)
 
 ---
 

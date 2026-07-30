@@ -98,4 +98,4 @@ Also worth naming plainly: **most of these series are produced by parties with a
 
 **Related:** [Part I - Substrate](../01-substrate/) · [Capital](../01-substrate/capital.md) · [Energy](../01-substrate/energy.md) · [Part IX - Macro](../09-macro/)
 
-**Next:** [B - Diffusion indicators](diffusion.md)
+**Next:** [B - Diffusion indicators](diffusion/README.md)

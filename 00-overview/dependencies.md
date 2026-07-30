@@ -30,18 +30,18 @@
 |---|---|
 | **No binding intl agreement before salient accident** | [Game 2](../02-games/2-nations.md); [Part V](../05-probabilities/) rows 3–4; [C1–C2](../07-indicators/governance.md); governance sections in cyber/bio/finance |
 | **Compute-governance trap** | [Bipolar](../03-domains/contested/geopolitics/bipolar.md); [Game 2](../02-games/2-nations.md); [Part V](../05-probabilities/) row 4; [C3b](../07-indicators/governance.md) |
-| **Apprenticeship gap (composition)** | [Game 4](../02-games/4-labor.md); [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md); [law](../03-domains/cognitive/law.md); [education](../03-domains/cognitive/education.md); [meaning](../03-domains/cognitive/meaning.md); [B1](../07-indicators/diffusion.md) |
+| **Apprenticeship gap (composition)** | [Game 4](../02-games/4-labor.md); [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md); [law](../03-domains/cognitive/law.md); [education](../03-domains/cognitive/education.md); [meaning](../03-domains/cognitive/meaning.md); [B1](../07-indicators/diffusion/labor.md) |
 | **Aggregate labor displacement as upper bound** | [Game 4](../02-games/4-labor.md) + [demography](../09-macro/demography.md); softens only the aggregate claim |
-| **Signaling collapse / verification scarce** | [Game 5](../02-games/5-information.md); [education](../03-domains/cognitive/education.md); [media](../03-domains/cognitive/media.md); [compressed](compressed.md); [B6](../07-indicators/diffusion.md) |
+| **Signaling collapse / verification scarce** | [Game 5](../02-games/5-information.md); [education](../03-domains/cognitive/education.md); [media](../03-domains/cognitive/media.md); [compressed](compressed.md); [B6](../07-indicators/diffusion/labor.md) |
 
 ## Uncertainties & load-bearing assumptions
 
 | Claim | Dependents |
 |---|---|
 | **Taiwan ~90% continuity through 2032** | Nearly all compute-gated claims; [Uncertainty 4](../06-uncertainties/taiwan.md); [A6](../07-indicators/substrate.md); [Part V](../05-probabilities/) load-bearing table |
-| **Three RSI governors** | [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md); all timeline dates; [B9](../07-indicators/diffusion.md); [Part V](../05-probabilities/) row 7 tail interpretation |
+| **Three RSI governors** | [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md); all timeline dates; [B9](../07-indicators/diffusion/capability.md); [Part V](../05-probabilities/) row 7 tail interpretation |
 | **Correlated risk uninsurable at scale** | [Insurance](../03-domains/cognitive/insurance.md); [Uncertainty 6](../06-uncertainties/correlated-risk.md); deployment frontiers in law/medicine/cyber; [C7](../07-indicators/governance.md) |
-| **Learned verification fails to retire asymmetry** | Domain ordering; [Uncertainty 5](../06-uncertainties/learned-verification.md); [B8](../07-indicators/diffusion.md) |
+| **Learned verification fails to retire asymmetry** | Domain ordering; [Uncertainty 5](../06-uncertainties/learned-verification.md); [B8](../07-indicators/diffusion/capability.md) |
 
 ## Domain swing variables
 

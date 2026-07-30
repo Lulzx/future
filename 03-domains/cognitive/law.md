@@ -59,7 +59,7 @@ Law is a canary for [Game 4](../../02-games/4-labor.md):
 
 [Education](education.md) + [meaning](meaning.md): credential collapse meets missing junior rungs → status shock for a profession built on tournament ranking. Uncertainty 3's inversion (AI as dense mentor) is testable here first: supervised AI-augmented junior years vs pure headcount cuts.
 
-> **Watch:** entry-level : senior posting ratios in large firms; first-year class sizes vs BigLaw offer rates. Same indicator family as [B1](../../07-indicators/diffusion.md).
+> **Watch:** entry-level : senior posting ratios in large firms; first-year class sizes vs BigLaw offer rates. Same indicator family as [B1](../../07-indicators/diffusion/labor.md).
 
 ## Access expansion vs quality risk
 

@@ -33,7 +33,7 @@ If a bespoke internal tool costs $5k instead of $500k, **the long tail of vertic
 
 ### Seat → outcome (timeline consistency)
 
-[2026–2028](../../04-timelines/2026-2028.md) and [B5](../../07-indicators/diffusion.md): the commercial signature of agentic reliability is **pricing on outcomes, not seats**. Software is the first large market where that shift is visible.
+[2026–2028](../../04-timelines/2026-2028.md) and [B5](../../07-indicators/diffusion/economy.md): the commercial signature of agentic reliability is **pricing on outcomes, not seats**. Software is the first large market where that shift is visible.
 
 | Pricing | Assumes | Breaks when |
 |---|---|---|
@@ -51,7 +51,7 @@ Removing them is efficient for every individual team and quietly catastrophic fo
 
 Aligned with [law](law.md) (same pyramid economics) and [education](education.md) (credentials + missing junior years). Mid-2026 data already shows junior software postings and entry-level tech hire shares collapsing - see Game 4 tables.
 
-> **Discriminating test (shared with labor):** if junior eng hiring fails to recover when aggregate tech hiring does (~2027–28), substitution share was large. → [B1](../../07-indicators/diffusion.md)
+> **Discriminating test (shared with labor):** if junior eng hiring fails to recover when aggregate tech hiring does (~2027–28), substitution share was large. → [B1](../../07-indicators/diffusion/labor.md)
 
 ### Uncertainty 3 here first
 
@@ -79,6 +79,6 @@ Aligned with [law](law.md) (same pyramid economics) and [education](education.md
 
 ---
 
-**Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md) · [Law](law.md) · [Cybersecurity](../contested/cybersecurity.md) · [2026–2028](../../04-timelines/2026-2028.md) · [B1](../../07-indicators/diffusion.md) · [B5](../../07-indicators/diffusion.md)
+**Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md) · [Law](law.md) · [Cybersecurity](../contested/cybersecurity.md) · [2026–2028](../../04-timelines/2026-2028.md) · [B1](../../07-indicators/diffusion/labor.md) · [B5](../../07-indicators/diffusion/economy.md)
 
 **Next:** [Law](law.md)

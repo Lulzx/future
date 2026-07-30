@@ -41,7 +41,7 @@ Each game equilibrates on a different clock: Game 1 in financing cycles (quarter
 | Nations × insurance: correlated failure as forcing event | [Game 2](2-nations.md), [Uncertainty 6](../06-uncertainties/correlated-risk.md) |
 | Firms × prices: two-economy split | [Game 3](3-firms.md), [Prices](../09-macro/prices.md) |
 | Labor × demography: aggregate softens, composition hardens | [Game 4](4-labor.md), [Demography](../09-macro/demography.md) |
-| Information × education/media/meaning | [Game 5](5-information.md), [B6](../07-indicators/diffusion.md), [B11](../07-indicators/diffusion.md) |
+| Information × education/media/meaning | [Game 5](5-information.md), [B6](../07-indicators/diffusion/labor.md), [B11](../07-indicators/diffusion/labor.md) |
 
 ---
 

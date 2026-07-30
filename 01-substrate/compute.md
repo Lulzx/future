@@ -32,7 +32,7 @@ At ~$60B in 2025, that requires sustained 45–55% CAGR. Enterprise software has
 
 Both decouple revenue from training-run cost:
 
-- **Inference and application-layer spend can scale faster than frontier training spend** once agents are reliable enough to sell on outcomes rather than seats. The revenue base is not gated on the $100B run; the $100B run is gated on the revenue base. These can decouple for several years. → [Inference economics](inference-economics.md), [B5](../07-indicators/diffusion.md)
+- **Inference and application-layer spend can scale faster than frontier training spend** once agents are reliable enough to sell on outcomes rather than seats. The revenue base is not gated on the $100B run; the $100B run is gated on the revenue base. These can decouple for several years. → [Inference economics](inference-economics.md), [B5](../07-indicators/diffusion/economy.md)
 - **Algorithmic efficiency and test-time compute stretch the effective-compute curve without proportional dollar growth.** If reasoning-at-inference substitutes for parameters-at-training, the capex extrapolation above overstates the required spend, possibly by an order of magnitude. → [A1](../07-indicators/substrate.md) slow trigger
 
 A correction remains plausible, but its likely form is *consolidation* - culling secondary labs and forcing mergers - rather than a halt to capability progress. **The technology does not un-invent itself in a drawdown; the cap table changes.** → [Capital](capital.md) (credit-event form ~65% if correction lands), [Game 1](../02-games/1-labs.md)
@@ -56,7 +56,7 @@ By 2028 the US rate-limiter is closer to permits than to chips - export controls
 
 ## RSI and the three governors
 
-If [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) closes the research loop, efficiency substitutes for dollars and this page's wall softens. Still gated by verification (of research quality), physical fabs/power, and the [financial governor](../09-macro/rates.md) (success raises hurdle rates). → [B9](../07-indicators/diffusion.md)
+If [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) closes the research loop, efficiency substitutes for dollars and this page's wall softens. Still gated by verification (of research quality), physical fabs/power, and the [financial governor](../09-macro/rates.md) (success raises hurdle rates). → [B9](../07-indicators/diffusion/capability.md)
 
 ## What to watch
 
