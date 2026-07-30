@@ -2,6 +2,8 @@
 
 *Written 2026-07-30. Quantities reflect knowledge through mid-2026. Probabilities are subjective.*
 
+**Read it at [future.lulzx.space](https://future.lulzx.space)** — the site renders these files directly; there is no build step and no generated copy.
+
 Built from physical constraints upward, then the strategic games that sit on top of them, then domain by domain, then timelines.
 
 The argument has one spine: **capability grows fastest where verification is cheap, and value accrues to whatever intelligence cannot manufacture.** Everything below is a consequence of those two sentences colliding with physics, capital, and incentives.
