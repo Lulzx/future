@@ -93,7 +93,7 @@ Every content file:
 | 19 | 2026-07-30 | Stamped the two flagged predictions - [energy](01-substrate/energy.md) 2029 (~65%), [agriculture](03-domains/physical/agriculture.md) 2032 (~70%) - with written rationale at source; register rows added | 83 | 5,759 |
 | 20 | 2026-07-30 | First live Ground pass: [B1](07-indicators/diffusion.md) refreshed to Mar-2026 NY Fed data; PJM +76% y/y added to [energy](01-substrate/energy.md); Intersect $4.75B confirmed. Round log 0–15 archived to [HISTORY.md](HISTORY.md) | 84 | 5,781 |
 | 21 | 2026-07-30 | Spine red-team completed: [Uncertainty 7 - complement erosion](06-uncertainties/complement-erosion.md) gives the spine's second half its adversarial entry (5+7 now cover both halves). Provenance retrofit on [energy](01-substrate/energy.md) per new §4 convention | 85 | 5,840 |
-| 22 | 2026-07-30 | Corpus-wide depth pass: every content file expanded in place (no new files, no splits, no probability changes). Eight parallel batches by part; thin-file debt cleared - every former sub-60 content page now argues its claims or was left tight by the §2 caveat | **85** | **6,635** |
+| 22 | 2026-07-30 | Corpus-wide depth pass: every content file expanded in place (no new files, no splits, no probability changes). Eight parallel batches by part; thin-file debt cleared - every former sub-60 content page now argues its claims or was left tight by the §2 caveat | **85** | **6,640** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -111,7 +111,7 @@ Every content file:
 
 **Round 22:** an expansion-only round run as eight parallel batches, one per part grouping, on an explicit instruction to deepen every document. Discipline held corpus-wide: no file was created, moved, or split; no probability value, register row, or indicator trigger changed; new quantities carry dates and named sources at point of use (e.g. 2018 FDA autonomous-retinopathy clearance in [diagnostics](03-domains/physical/medicine/diagnostics.md), LBNL Queued Up 2024 in [power-permitting](06-uncertainties/power-permitting.md)); new claims otherwise stay qualitative to preserve invariant 4. The typical addition is a mechanism or reference class behind a claim that was previously asserted (quant-quake 2007 for model monoculture, MOOC completion for education, line-shaft electrification for management turnover) plus a stated failure mode. Two files were deliberately left short of the 60-line flag ([apprenticeship-gap](06-uncertainties/apprenticeship-gap.md) 57, [complement-erosion](06-uncertainties/complement-erosion.md) 55) under the §2 no-padding caveat; [diffusion](07-indicators/diffusion.md) (169) and [base-rates](08-method/base-rates.md) (134) were excluded from growth as over/near soft cap.
 
-*Invariants at r22 close: **85 files, 6,635 lines, 0 broken links.***
+*Invariants at r22 close: **85 files, 6,640 lines, 0 broken links.***
 
 **Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
 
