@@ -97,7 +97,8 @@ Every content file:
 | 11 | 2026-07-30 | Winter archaeology; Game 2 pass; B10 fiscal indicator | 80 | 4,956 |
 | 12 | 2026-07-30 | Cyber+bio depth; education×meaning; Part V commentary hold | 80 | 5,084 |
 | 13 | 2026-07-30 | Law+finance+science; notation+dependencies | 82 | 5,353 |
-| 14 | 2026-07-30 | [Media](03-domains/cognitive/media.md)+[software](03-domains/cognitive/software.md) depth; [check-invariants.sh](check-invariants.sh) | **82** | **5,459** |
+| 14 | 2026-07-30 | Media+software depth; check-invariants.sh | 82 | 5,459 |
+| 15 | 2026-07-30 | [Agriculture](03-domains/physical/agriculture.md)+[logistics](03-domains/physical/logistics.md) depth; [B11](07-indicators/diffusion.md) meaning indicators; energy-sector split deferred (91 lines, healthy) | **82** | **5547** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -107,28 +108,28 @@ Every content file:
 
 **Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**r5–r13:** macro; demography; timelines+uncertainties; indicators+Games 1/5; energy/meaning/warfare/state; winters+Game2+B10; cyber/bio/education; law/finance/science+notation/deps.
+**r5–r14:** macro … invariants script (see prior rows).
 
-**Round 14:** media (barbell, Game 5 lemons, meaning/labor, platform capture); software (seat→outcome, apprenticeship canary, Uncertainty 3, cyber supply chain); `./check-invariants.sh` for links, nav, hard cap, dir cap.
+**Round 15:** agriculture (layers, demography, Global South, data/monoculture risks); logistics (warehouse, cyber OT, demography pull, working capital); B11 welfare dashboard; **no energy-sector split** — 91 lines under soft cap, one argument with four layers already sectioned.
 
-*Invariants at r14 close: **82 files, 5,459 lines, 0 broken links** — verified by [check-invariants.sh](check-invariants.sh). RESEARCH.md protocol-ledger exemption continues.*
+*Invariants at r15 close: **82 files, 5547 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh). Energy-sector split deferred (healthy length).*
 
 ## 6. Open queue
 
 **High**
 
-1. **Agriculture** and **logistics** depth vs medicine/robotics.
-2. **Meaning indicators** in Part VII (welfare channel hooks).
-3. **Energy sector** split if still overloaded as one page.
+1. **Media/provenance** into governance indicators (C-family).
+2. **Inference economics** / [Part I](01-substrate/) thin pages consistency pass.
+3. **Games hub** + compressed/thesis sync with post-r10 material.
 
 **Medium**
-- Media/provenance into governance indicators.
-- ~~Wire invariants into deploy~~ — done r14 (`deploy.sh` preflight).
-
-**Low**
+- Agriculture/logistics indicators if physical diffusion needs quarterly hooks.
 - Archive RESEARCH history.
 
-**Retired (r1–r14):** … + media/software depth; invariants script.
+**Low**
+- FOAK generation R&D page only if energy-sector grows past soft cap.
+
+**Retired (r1–r15):** … + ag/logistics depth; B11; energy split considered/deferred.
 
 ## 7. Invariants
 

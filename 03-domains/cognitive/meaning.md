@@ -68,6 +68,8 @@ Care work stays scarce ([demography](../../09-macro/demography.md)); demand for 
 
 ## Indicators worth watching
 
+Dashboard: **[B11](../../07-indicators/diffusion.md)** — companion use × social contact; junior identity channel; minor-protection rules.
+
 | Signal | Reading |
 |---|---|
 | Youth loneliness / friendship-count time series vs companion-app usage | Substitution vs complement |

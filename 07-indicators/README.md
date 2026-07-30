@@ -39,6 +39,7 @@ If only five things can be tracked, track these. Each is the leading edge of a d
 | **Cognitive vs physical services inflation gap** | [B7](diffusion.md) | [Prices](../09-macro/prices.md) two-economy claim |
 | **Capability gap: verifiable vs unverifiable domains** | [B8](diffusion.md) | [Uncertainty 5](../06-uncertainties/learned-verification.md) |
 | **Labor share of tax revenue** | [B10](diffusion.md) | [Fiscal](../09-macro/fiscal.md) squeeze |
+| **Companion use × social contact; junior identity** | [B11](diffusion.md) | [Meaning](../03-domains/cognitive/meaning.md) welfare channel |
 
 ## How to read a dashboard without fooling yourself
 
