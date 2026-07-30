@@ -2,7 +2,7 @@
 #
 # Publish the corpus to https://future.lulzx.space
 #
-# The site is the markdown itself: index.html is a self-contained reader that
+# The site is the markdown itself: index.html plus style.css is a reader that
 # fetches the .md files over HTTP and renders them in the browser. So a deploy
 # is nothing more than copying the tree — there is no build step, and the files
 # on the server are byte-identical to the ones in git.
@@ -41,7 +41,7 @@ if [[ "${1:-}" == "--check" ]]; then
   ip=$(dig +short @1.1.1.1 "$DOMAIN" | head -1)
   [[ -n "$ip" ]] || { echo "   ${DOMAIN} does not resolve"; exit 1; }
   echo "→ checking ${DOMAIN} (${ip})"
-  for path in / /README.md /RESEARCH.md /09-macro/demography.md; do
+  for path in / /style.css /README.md /RESEARCH.md /09-macro/demography.md; do
     code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 \
       --resolve "${DOMAIN}:443:${ip}" "https://${DOMAIN}${path}")
     printf '   %-28s %s\n' "$path" "$code"
