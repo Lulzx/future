@@ -97,7 +97,7 @@ Every content file:
 | 11 | 2026-07-30 | Winter archaeology; Game 2 pass; B10 fiscal indicator | 80 | 4,956 |
 | 12 | 2026-07-30 | Cyber+bio depth; education×meaning; Part V commentary hold | 80 | 5,084 |
 | 13 | 2026-07-30 | Law+finance+science; notation+dependencies | 82 | 5,353 |
-| 14 | 2026-07-30 | [Media](03-domains/cognitive/media.md)+[software](03-domains/cognitive/software.md) depth; [check-invariants.sh](check-invariants.sh) | **82** | **5,458** |
+| 14 | 2026-07-30 | [Media](03-domains/cognitive/media.md)+[software](03-domains/cognitive/software.md) depth; [check-invariants.sh](check-invariants.sh) | **82** | **5,459** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -111,7 +111,7 @@ Every content file:
 
 **Round 14:** media (barbell, Game 5 lemons, meaning/labor, platform capture); software (seat→outcome, apprenticeship canary, Uncertainty 3, cyber supply chain); `./check-invariants.sh` for links, nav, hard cap, dir cap.
 
-*Invariants at r14 close: **82 files, 5,458 lines, 0 broken links** — verified by [check-invariants.sh](check-invariants.sh). RESEARCH.md protocol-ledger exemption continues.*
+*Invariants at r14 close: **82 files, 5,459 lines, 0 broken links** — verified by [check-invariants.sh](check-invariants.sh). RESEARCH.md protocol-ledger exemption continues.*
 
 ## 6. Open queue
 
