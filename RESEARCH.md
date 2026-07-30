@@ -33,9 +33,11 @@ A round is not complete until step 5. Half-applied rounds are the main way a cor
 
 **Caveat on the line count, learned in round 7.** Lines are a proxy for content and a poor one in a corpus written in long paragraphs: a dense 40-line page can carry more argument than a listy 90-line one. Treat `< 60` as a *flag to go look*, never as an instruction to pad. The real test is the one in §3 — **does the page contain more than one argument that deserves its own room?** [Compressed](00-overview/compressed.md) is 22 lines and is exactly the right length; pre-split [medicine](03-domains/physical/medicine/) was 35 lines with four arguments (promoted in round 9).
 
+**Scope.** Size thresholds apply to content files. Meta files — `RESEARCH.md`, `HISTORY.md` — are exempt; they grow by accretion of records, not arguments, and have no seams to split on.
+
 **Directory size.** Maximum **10 content files** per directory, excluding `README.md`. At 11, introduce a subdirectory layer grouped by kind, not by alphabet.
 
-**Depth.** Maximum 3 levels below root (`part/group/file.md`). Deeper than that means the taxonomy is wrong, not that the content is too big.
+**Depth.** Maximum 3 directory levels below root (`part/group/subgroup/file.md`). Deeper than that means the taxonomy is wrong, not that the content is too big.
 
 ## 3. How to split
 
@@ -75,6 +77,7 @@ Every content file:
 ```
 
 - **Claims carry quantities where quantities exist**, and quantities carry a direction of uncertainty.
+- **Externally sourced quantities name their source where they appear** (inline or in the file's header note), not only in the round log — the log gets archived; the file is where the next Ground pass will look.
 - **Predictions are set off as blockquotes** so they can be found and scored later.
 - **Every strong claim gets a stated failure mode.** A page with no way to be wrong is not doing work.
 - **Cross-link forward and backward.** The corpus is a graph; the directory tree is only a filing convenience.
@@ -100,6 +103,8 @@ Every content file:
 
 *Invariants at r20 close: **84 files, 5,781 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
 
+**Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
+
 ## 6. Open queue
 
 **High**
@@ -113,18 +118,19 @@ Every content file:
 **Low**
 - Fancy reader features beyond Find.
 
-**Retired (r1–r20):** … + B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass.
+**Retired (r1–r20):** earlier items in [HISTORY.md](HISTORY.md); recent: B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass.
 
 ## 7. Invariants
 
-Things that must remain true after every round.
+Things that must remain true after every round. ⚙ marks the ones [check-invariants.sh](check-invariants.sh) enforces; the rest are honor-system and belong in the Review step's checklist.
 
 1. Every file is reachable from `README.md` in ≤ 3 clicks.
-2. Every file has a working `← Parent` link.
-3. No file exceeds the hard cap without a logged exemption.
-4. Every probability stated anywhere appears in [Part V](05-probabilities/) or links to it.
+2. ⚙ Every file has a working `← Parent` link.
+3. ⚙ No file exceeds the hard cap without a logged exemption.
+4. Every probability stated anywhere appears in [Part V](05-probabilities/) or links to it. *(Not machine-checked: a bare `%` is usually a growth rate, not a probability, so a grep would mostly false-positive.)*
 5. Every quantity has a date attached, explicitly or by the file's header note.
 6. The spine of the argument — *capability grows fastest where verification is cheap; value accrues to what intelligence cannot manufacture* — is never contradicted silently. If a round produces evidence against it, that goes in [Part VI](06-uncertainties/), not into a footnote.
+7. ⚙ No file sits more than 3 directory levels below root (§2 depth cap).
 
 ---
 

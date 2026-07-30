@@ -11,7 +11,7 @@ ROOT=$(pwd)
 FAIL=0
 HARD_CAP=180
 DIR_CAP=10
-EXEMPT_OVER='^RESEARCH\.md$'
+EXEMPT_OVER='^(RESEARCH|HISTORY)\.md$'
 
 note() { printf '%s\n' "$*"; }
 fail() { note "FAIL: $*"; FAIL=1; }
@@ -115,7 +115,24 @@ else
   ok "no directory over $DIR_CAP content files"
 fi
 
-# ── 5. Counts ──────────────────────────────────────────────────────────────
+# ── 5. Depth cap: max 3 directory levels below root ────────────────────────
+too_deep=$(python3 - <<'PY'
+from pathlib import Path
+rows = []
+for f in sorted(Path('.').rglob('*.md')):
+    if len(f.parts) > 4:  # part/group/subgroup/file.md is the deepest allowed
+        rows.append(str(f))
+print('\n'.join(rows))
+PY
+)
+if [[ -n "$too_deep" ]]; then
+  fail "files deeper than 3 directory levels:"
+  printf '%s\n' "$too_deep" | sed 's/^/       /'
+else
+  ok "no file deeper than 3 directory levels"
+fi
+
+# ── 6. Counts ──────────────────────────────────────────────────────────────
 counts=$(python3 - <<'PY'
 from pathlib import Path
 files = list(Path('.').rglob('*.md'))
@@ -125,7 +142,7 @@ PY
 )
 ok "corpus $counts"
 
-# ── 6. Refresh catalog.json for the reader find UI ─────────────────────────
+# ── 7. Refresh catalog.json for the reader find UI ─────────────────────────
 python3 - <<'PY'
 from pathlib import Path
 import json, re
