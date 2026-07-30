@@ -18,6 +18,7 @@ The loop is real and this document had been treating it as open. [Capital](../01
 | [Prices and the two economies](prices.md) | Deflation in cognition, inflation in everything physical, and what that does to policy | The defining political-economy fact of the 2030s |
 | [Assets and distribution](assets.md) | Who owns the inelastic complements, and what that does to wealth concentration | The distributional consequence of [Game 3](../02-games/3-firms.md) |
 | [Fiscal](fiscal.md) | Tax bases built on labor income, meeting an economy that uses less of it | The slowest-moving and most consequential |
+| [Demography](demography.md) | The large, already-determined force pointing the other way | Revises [Game 4](../02-games/4-labor.md)'s aggregate down and leaves its composition standing |
 
 ## The one-paragraph version
 
@@ -33,7 +34,9 @@ Three reasons, and each explains a different absence:
 
 ## What this part is not
 
-**It is not a market forecast**, and nothing here should be read as one. The claims are about *directions and mechanisms* under a stated productivity assumption, and the productivity assumption itself carries only ~25% by 2030 in [Part V](../05-probabilities/README.md) row 2.
+**It is not a market forecast**, and nothing here should be read as one — but note that one page in it, [demography](demography.md), is the opposite of conditional. It is the most certain thing in the entire corpus, and it argues that the labor conclusions elsewhere are too pessimistic in aggregate while leaving the compositional ones intact.
+
+ The claims are about *directions and mechanisms* under a stated productivity assumption, and the productivity assumption itself carries only ~25% by 2030 in [Part V](../05-probabilities/README.md) row 2.
 
 The conditional structure matters: **most of this part is what happens if the optimistic case is right.** That is worth working out precisely because the rest of the document spends its length on constraints, and the constrained case has no interesting macro consequences at all — it just looks like the 2010s continuing.
 

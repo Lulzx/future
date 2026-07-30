@@ -25,7 +25,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 [Medicine](physical/medicine.md) · [Robotics](physical/robotics/) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
 
 ### [C — Contested](contested/)
-[Geopolitics](contested/geopolitics.md) · [Warfare](contested/warfare.md) · [Cybersecurity](contested/cybersecurity.md) · [Biosecurity](contested/biosecurity.md) · [State capacity](contested/state-capacity.md)
+[Geopolitics](contested/geopolitics/) · [Warfare](contested/warfare.md) · [Cybersecurity](contested/cybersecurity.md) · [Biosecurity](contested/biosecurity.md) · [State capacity](contested/state-capacity.md)
 
 ## The ground-truth ordering, in one table
 
@@ -46,7 +46,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [Media & culture](cognitive/media.md) | None | Provenance, presence | Now |
 | [Robotics](physical/robotics/) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
 | [State capacity](contested/state-capacity.md) | Weak | — | The precondition for the rest |
-| [Geopolitics](contested/geopolitics.md) | N/A | — | 2030s structural break |
+| [Geopolitics](contested/geopolitics/) | N/A | — | 2030s structural break |
 
 **Read the table top to bottom and the thesis reads itself.** The ordering is by cost of ground truth, and it predicts the timing column almost perfectly. Where it doesn't — education and media, which have terrible ground truth and are moving fast anyway — the explanation is that the change there is not capability arriving but a **signal collapsing** ([Game 5](../02-games/5-information.md)), which is a different mechanism.
 

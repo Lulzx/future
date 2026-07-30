@@ -49,12 +49,12 @@ Against it: the 2020s taught every operator that thin buffers are fragile, and t
 
 ## The strategic layer
 
-Logistics is where the economics meet [geopolitics](../contested/geopolitics.md). Port automation, chokepoint control, sanctions compliance, and trade-route reconfiguration are all being reshaped simultaneously, and the actor best positioned is whoever controls both the physical infrastructure and the data flowing over it.
+Logistics is where the economics meet [geopolitics](../contested/geopolitics/). Port automation, chokepoint control, sanctions compliance, and trade-route reconfiguration are all being reshaped simultaneously, and the actor best positioned is whoever controls both the physical infrastructure and the data flowing over it.
 
 Note what that describes: **infrastructure plus proprietary real-time flow data** — two [inelastic complements](../../02-games/3-firms.md) in the same hand. The framework predicts value concentrates there, and it does.
 
 ---
 
-**Related:** [Robotics](robotics/) on manipulation · [Agriculture](agriculture.md) · [Insurance](../cognitive/insurance.md) on the deployment frontier · [Geopolitics](../contested/geopolitics.md) · [2032–2040](../../04-timelines/2032-2040.md)
+**Related:** [Robotics](robotics/) on manipulation · [Agriculture](agriculture.md) · [Insurance](../cognitive/insurance.md) on the deployment frontier · [Geopolitics](../contested/geopolitics/) · [2032–2040](../../04-timelines/2032-2040.md)
 
 **Next:** [III.C — Contested domains](../contested/)

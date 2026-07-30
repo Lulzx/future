@@ -51,6 +51,6 @@ Secondary indicator: **$/hour of delivered work**, not unit price. A cheap robot
 
 ---
 
-**Related:** [2032–2040](../../../04-timelines/2032-2040.md) · [Geopolitics](../../contested/geopolitics.md) on robotics enabling reshoring · [Game 4](../../../02-games/4-labor.md) on why physical roles are insulated until this lands · [Logistics](../logistics.md) and [Agriculture](../agriculture.md) for the structured-environment cases
+**Related:** [2032–2040](../../../04-timelines/2032-2040.md) · [Geopolitics](../../contested/geopolitics/) on robotics enabling reshoring · [Game 4](../../../02-games/4-labor.md) on why physical roles are insulated until this lands · [Logistics](../logistics.md) and [Agriculture](../agriculture.md) for the structured-environment cases
 
 **Next:** [The data problem](data-problem.md)

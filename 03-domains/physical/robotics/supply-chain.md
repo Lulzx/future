@@ -37,7 +37,7 @@ In robotics **there is no equivalent chokepoint working in the same direction.**
 
 **1. Export controls run in reverse.** The tool that constrains a rival in AI does not obviously exist in robotics, and the analogous tool — rare-earth and component restriction — is held by the other side. Policy built on the AI template will not transfer.
 
-**2. Reshoring gets complicated.** [Geopolitics](../../contested/geopolitics.md) argues robotics enables reshoring of manufacturing to high-wage countries. True in principle. But **if the robots doing the reshoring are themselves imported from the country being reshored away from, the strategic gain is partial** — the dependency moves up a layer rather than disappearing. Reshoring assembly while importing the means of assembly is a weaker position than it appears in the announcement.
+**2. Reshoring gets complicated.** [Geopolitics](../../contested/geopolitics/) argues robotics enables reshoring of manufacturing to high-wage countries. True in principle. But **if the robots doing the reshoring are themselves imported from the country being reshored away from, the strategic gain is partial** — the dependency moves up a layer rather than disappearing. Reshoring assembly while importing the means of assembly is a weaker position than it appears in the announcement.
 
 **3. The deployment data asymmetry compounds.** Whoever deploys the most units collects the most [interaction data](data-problem.md), which improves the policies, which improves the economics, which drives more deployment. If deployment volume and manufacturing capacity are correlated — and they are — **then the manufacturing advantage becomes a data advantage becomes a capability advantage.** This is the mechanism by which a hardware lead turns into a software lead, and it is the opposite of how the current AI race is structured.
 
@@ -50,6 +50,6 @@ In robotics **there is no equivalent chokepoint working in the same direction.**
 
 ---
 
-**Related:** [Cost curves](cost-curves.md) · [The data problem](data-problem.md) on the deployment flywheel · [Geopolitics](../../contested/geopolitics.md) on reshoring · [Energy](../../../01-substrate/energy.md) for the same decoupling argument · [Game 2 — Nations](../../../02-games/2-nations.md)
+**Related:** [Cost curves](cost-curves.md) · [The data problem](data-problem.md) on the deployment flywheel · [Geopolitics](../../contested/geopolitics/) on reshoring · [Energy](../../../01-substrate/energy.md) for the same decoupling argument · [Game 2 — Nations](../../../02-games/2-nations.md)
 
 **Next:** [Form factor](form-factor.md)

@@ -41,7 +41,7 @@ Agriculture is ~1% of US GDP and ~25% of employment globally. The gains are conc
 
 The obstacle there is not model capability, which is free. It is smartphone penetration, connectivity, extension services, credit access, and land tenure security. Every one of those is a development problem with a fifty-year literature, and none of them are accelerated by better models.
 
-That is the pattern the whole document keeps producing: **the technology arrives free and the complements do not.** → [Geopolitics](../contested/geopolitics.md)
+That is the pattern the whole document keeps producing: **the technology arrives free and the complements do not.** → [Geopolitics](../contested/geopolitics/)
 
 ## Two risks specific to this domain
 
@@ -50,6 +50,6 @@ That is the pattern the whole document keeps producing: **the technology arrives
 
 ---
 
-**Related:** [Robotics](robotics/) on the manipulation bottleneck · [Logistics](logistics.md) · [Game 3 — Firms](../../02-games/3-firms.md) on why producers don't capture it · [Geopolitics](../contested/geopolitics.md)
+**Related:** [Robotics](robotics/) on the manipulation bottleneck · [Logistics](logistics.md) · [Game 3 — Firms](../../02-games/3-firms.md) on why producers don't capture it · [Geopolitics](../contested/geopolitics/)
 
 **Next:** [Logistics](logistics.md)

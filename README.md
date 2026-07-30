@@ -35,7 +35,7 @@ Five strategic structures that determine behavior given the substrate.
 Sixteen domains in three groups, ordered by the cost of ground truth.
 - [**A — Cognitive**](03-domains/cognitive/) — output is symbols: [software](03-domains/cognitive/software.md) · [law](03-domains/cognitive/law.md) · [finance](03-domains/cognitive/finance.md) · [science](03-domains/cognitive/science.md) · [education](03-domains/cognitive/education.md) · [media](03-domains/cognitive/media.md) · [insurance](03-domains/cognitive/insurance.md)
 - [**B — Physical**](03-domains/physical/) — output is atoms: [medicine](03-domains/physical/medicine.md) · [robotics](03-domains/physical/robotics/) · [agriculture](03-domains/physical/agriculture.md) · [logistics](03-domains/physical/logistics.md)
-- [**C — Contested**](03-domains/contested/) — an adversary optimizes against you: [geopolitics](03-domains/contested/geopolitics.md) · [warfare](03-domains/contested/warfare.md) · [cybersecurity](03-domains/contested/cybersecurity.md) · [biosecurity](03-domains/contested/biosecurity.md) · [state capacity](03-domains/contested/state-capacity.md)
+- [**C — Contested**](03-domains/contested/) — an adversary optimizes against you: [geopolitics](03-domains/contested/geopolitics/) ([US–China](03-domains/contested/geopolitics/bipolar.md) · [India](03-domains/contested/geopolitics/india.md) · [Europe](03-domains/contested/geopolitics/europe.md) · [Gulf](03-domains/contested/geopolitics/gulf.md) · [Global South](03-domains/contested/geopolitics/global-south.md)) · [warfare](03-domains/contested/warfare.md) · [cybersecurity](03-domains/contested/cybersecurity.md) · [biosecurity](03-domains/contested/biosecurity.md) · [state capacity](03-domains/contested/state-capacity.md)
 
 ### [04 — Timelines](04-timelines/)
 - [2026–2028](04-timelines/2026-2028.md) — the agentic transition and the capex test
@@ -68,6 +68,7 @@ What happens to rates, prices, assets, and the tax base if any of this is true.
 - [Prices and the two economies](09-macro/prices.md) — the defining political-economy fact of the 2030s
 - [Assets and distribution](09-macro/assets.md) — six of the seven inelastic complements are owned by capital
 - [Fiscal](09-macro/fiscal.md) — a tax base built on labor income, meeting an economy that uses less of it
+- [Demography](09-macro/demography.md) — the one already-determined force, and it points the other way
 
 ---
 

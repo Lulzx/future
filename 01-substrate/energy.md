@@ -64,7 +64,7 @@ Countries that can build power fast gain structural advantage **that has nothing
 - **Gulf states**, with sovereign capital, abundant gas, and minimal permitting friction
 - **A second tier** — India, Brazil, Indonesia — with the additions but not yet the transmission or the demand-side buyers
 
-This decouples AI capacity from AI capability. A country can have world-class researchers and no ability to deploy them at scale, or the reverse. Most existing analysis conflates the two. → [Geopolitics](../03-domains/contested/geopolitics.md)
+This decouples AI capacity from AI capability. A country can have world-class researchers and no ability to deploy them at scale, or the reverse. Most existing analysis conflates the two. → [Geopolitics](../03-domains/contested/geopolitics/)
 
 ## Caveat: this is politics, not physics
 
@@ -79,6 +79,6 @@ Two things cut further against the pessimistic read:
 
 ---
 
-**Related:** [Compute](compute.md) · [Capital](capital.md) on what the money buys · [Geopolitics](../03-domains/contested/geopolitics.md) · [2028–2032](../04-timelines/2028-2032.md) on electricity price backlash
+**Related:** [Compute](compute.md) · [Capital](capital.md) on what the money buys · [Geopolitics](../03-domains/contested/geopolitics/) · [2028–2032](../04-timelines/2028-2032.md) on electricity price backlash
 
 **Next:** [Data](data.md)

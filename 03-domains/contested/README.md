@@ -12,7 +12,7 @@ In [III.A](../cognitive/) and [III.B](../physical/), capability improvement is s
 
 | Domain | Ground truth | Offense–defense shift | Timing |
 |---|---|---|---|
-| [Geopolitics](geopolitics.md) | N/A | — | 2030s structural break |
+| [Geopolitics](geopolitics/) — [US–China](geopolitics/bipolar.md), [India](geopolitics/india.md), [Europe](geopolitics/europe.md), [Gulf](geopolitics/gulf.md), [Global South](geopolitics/global-south.md) | N/A | — | 2030s structural break |
 | [Warfare](warfare.md) | Cheap and brutal | Toward offense; escalation judgment is the moat | Now |
 | [Cybersecurity](cybersecurity.md) | Very cheap — exploits verify themselves | Contested; likely defense-favoring at equilibrium | Now |
 | [Biosecurity](biosecurity.md) | Expensive to obtain, catastrophic to get wrong | Toward offense; asymmetric | Now, quietly |
@@ -32,4 +32,4 @@ It is not adversarial in the same sense, but it is contested — and it is the *
 
 ---
 
-**Next:** [Geopolitics](geopolitics.md) → [Part IV — Timelines](../../04-timelines/)
+**Next:** [Geopolitics](geopolitics/) → [Part IV — Timelines](../../04-timelines/)

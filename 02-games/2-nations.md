@@ -26,4 +26,4 @@ The practical implication: the highest-leverage governance work right now is not
 
 ---
 
-**Related:** [Energy](../01-substrate/energy.md) on who can actually build capacity · [Geopolitics](../03-domains/contested/geopolitics.md) · [Probabilities](../05-probabilities/README.md) on why the incident row matters more than the tail row
+**Related:** [Energy](../01-substrate/energy.md) on who can actually build capacity · [Geopolitics](../03-domains/contested/geopolitics/) · [Probabilities](../05-probabilities/README.md) on why the incident row matters more than the tail row

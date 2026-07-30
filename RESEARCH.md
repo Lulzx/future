@@ -31,6 +31,8 @@ A round is not complete until step 5. Half-applied rounds are the main way a cor
 | 130–180 | Soft cap | Look for a natural seam; split if one exists |
 | > 180 | Hard cap | Must split this round |
 
+**Caveat on the line count, learned in round 7.** Lines are a proxy for content and a poor one in a corpus written in long paragraphs: a dense 40-line page can carry more argument than a listy 90-line one. Treat `< 60` as a *flag to go look*, never as an instruction to pad. The real test is the one in §3 — **does the page contain more than one argument that deserves its own room?** [Compressed](00-overview/compressed.md) is 22 lines and is exactly the right length; [medicine](03-domains/physical/medicine.md) is 35 lines and contains four arguments.
+
 **Directory size.** Maximum **10 content files** per directory, excluding `README.md`. At 11, introduce a subdirectory layer grouped by kind, not by alphabet.
 
 **Depth.** Maximum 3 levels below root (`part/group/file.md`). Deeper than that means the taxonomy is wrong, not that the content is too big.
@@ -86,7 +88,9 @@ Every content file:
 | 2 | 2026-07-30 | Domain breadth — [insurance](03-domains/cognitive/insurance.md), [agriculture](03-domains/physical/agriculture.md), [logistics](03-domains/physical/logistics.md), [cybersecurity](03-domains/contested/cybersecurity.md), [biosecurity](03-domains/contested/biosecurity.md), [state capacity](03-domains/contested/state-capacity.md). `03-domains/` hit the 10-file cap and split into cognitive / physical / contested, with all inbound links rewritten | 49 | ~2,100 |
 | 3 | 2026-07-30 | Method and falsifiability — [Part VIII](08-method/): reference classes, the three strongest arguments against the framework, resolution rules and the five dodges. Added [Part 0 hub](00-overview/README.md) | 54 | 2,568 |
 | 4 | 2026-07-30 | [Robotics](03-domains/physical/robotics/) promoted to a directory — the swing variable for the 2030s was 37 lines. Split into [the data problem](03-domains/physical/robotics/data-problem.md), [cost curves](03-domains/physical/robotics/cost-curves.md), [supply chain](03-domains/physical/robotics/supply-chain.md), [form factor](03-domains/physical/robotics/form-factor.md) | 58 | ~3,000 |
-| 5 | 2026-07-30 | [Part IX](09-macro/) — the macro-financial channel, the largest structural hole in the corpus. Rates, prices, assets, fiscal | **63** | **3,180** |
+| 5 | 2026-07-30 | [Part IX](09-macro/) — the macro-financial channel, the largest structural hole in the corpus. Rates, prices, assets, fiscal | 63 | 3,180 |
+| 6 | 2026-07-30 | [Geopolitics](03-domains/contested/geopolitics/) promoted to a directory — the non-US, non-China world was one paragraph. [US–China](03-domains/contested/geopolitics/bipolar.md), [India](03-domains/contested/geopolitics/india.md), [Europe](03-domains/contested/geopolitics/europe.md), [Gulf](03-domains/contested/geopolitics/gulf.md), [Global South](03-domains/contested/geopolitics/global-south.md) | 68 | ~3,900 |
+| 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | **69** | **3,615** |
 
 *End-state counts are exact; intermediate rounds are approximate, since rounds ran in one sitting.*
 
@@ -100,7 +104,14 @@ Every content file:
 
 **Round 5 note:** [Part IX](09-macro/) closes a loop the corpus had been leaving open — [Capital](01-substrate/capital.md) raised the neutral-rate feedback and nothing followed through. The finding worth flagging: there is a **financial governor on recursive acceleration** ([rates](09-macro/rates.md)) that the [RSI discussion](06-uncertainties/recursive-self-improvement.md) does not consider, and it operates regardless of how the technical question resolves. That should be integrated into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) in a future round.
 
-*Invariants §7 verified at the close of round 5: **63 files, 3,180 lines, 0 broken links**, no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks.*
+**Round 6 split:** `03-domains/contested/geopolitics.md` → `geopolitics/{README,bipolar,india,europe,gulf,global-south}.md`. Seam is *binding constraint by region* — each region faces a different one, which is why a single page could not carry it. 11 files relinked.
+
+**Round 7 revisions — two claims in the corpus were revised against themselves, per [scoring](08-method/scoring.md) rule 5:**
+
+1. [Game 4](02-games/4-labor.md)'s aggregate displacement estimate should be read as an **upper bound**. [Demography](09-macro/demography.md) shows the displacement lands in a shrinking labor force, which absorbs it far more easily than the estimate assumed. The *compositional* claim — the apprenticeship gap — survives unchanged and is now a larger share of the total harm than the document previously implied.
+2. [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) now names **three governors on takeoff speed**, only one of which is technical. The fast-takeoff scenarios are over-weighted relative to their technical plausibility, because two of the three constraints on them are not technical and were being left out of the model.
+
+*Invariants §7 verified at the close of round 7: **69 files, 3,615 lines, 0 broken links**, no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks.*
 
 ## 6. Open queue
 
@@ -108,10 +119,10 @@ Ordered by expected value of the next round's work.
 
 **High** — next round starts here
 
-1. **The non-US, non-China world.** Currently a paragraph inside [geopolitics](03-domains/contested/geopolitics.md). India, the EU, the Gulf, and the Global South each have a *different* binding constraint — talent, regulation, capital, and connectivity respectively — and the document's US-centrism is admitted in [Part VIII](08-method/) but not fixed. `geopolitics.md` should become a directory.
-2. **Demography as counterweight.** Flagged in [base rates](08-method/base-rates.md) §6 and again in [rates](09-macro/rates.md), integrated nowhere. Shrinking working-age populations are a large, predictable, opposite-signed force to [Game 4](02-games/4-labor.md), and the aggregate displacement estimate may be too pessimistic because of it. Deserves its own page, probably in [Part IX](09-macro/).
-3. **The financial governor on RSI.** [Rates](09-macro/rates.md) established that success raises the cost of financing further success — a negative feedback on takeoff speed that [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) does not consider. Integrate it there.
-4. **`04-timelines/` is the weakest part of the corpus.** Three files, ~30 lines each, each carrying more claims than it argues, and now the only part with no links to its [indicators](07-indicators/) or [macro consequences](09-macro/). Each should be ~120.
+1. **`04-timelines/` is now unambiguously the weakest part of the corpus.** Three files, ~30 lines each, each carrying more claims than it argues, and the only part with no links to its [indicators](07-indicators/), [macro consequences](09-macro/), or [regional detail](03-domains/contested/geopolitics/). Nine rounds of material have accumulated that these three pages should be synthesizing and don't. Each should be ~120.
+2. **[Part V](05-probabilities/README.md) has not been re-scored since round 0**, which violates [scoring](08-method/scoring.md) rule 5 — a probability that never moves is being defended, not updated. Seven rounds have produced material bearing on rows 1, 2, 5, and 6. It should be re-scored against the current corpus, with every delta justified in writing, and should probably become a directory (the table, the reasoning per row, and the scoring ledger).
+3. **The uncertainties are stale at three.** [Part VI](06-uncertainties/) still lists the original three. Rounds 2–7 surfaced at least three more of comparable variance: Taiwan (named in [bipolar](03-domains/contested/geopolitics/bipolar.md) as the assumption that invalidates everything, at a stated ~90%), learned verification defeating the master asymmetry ([steelman](08-method/steelman.md) §1, the document's own admitted weakest point), and correlated-failure insurability ([insurance](03-domains/cognitive/insurance.md)) as the real deployment frontier.
+4. **Medicine is now the thinnest load-bearing page**, at ~35 lines, in the group where [robotics](03-domains/physical/robotics/) needed four files. Diagnostics, delivery, drug discovery, and the liability moat are four distinct arguments compressed into one page.
 
 **Medium**
 - **The energy industry as a domain**, not just a constraint. [Part I](01-substrate/) treats power as something AI consumes; it is also the sector AI most changes (grid optimization, siting, exploration, fusion/fission R&D).
@@ -129,6 +140,9 @@ Ordered by expected value of the next round's work.
 - ~~Method / base rates / falsifiability~~ — round 3, [Part VIII](08-method/).
 - ~~Robotics is too thin to carry the 2030s~~ — round 4, now a four-file directory.
 - ~~The macro-financial channel is absent~~ — round 5, [Part IX](09-macro/).
+- ~~The non-US, non-China world~~ — round 6, [geopolitics](03-domains/contested/geopolitics/) is now a five-region directory.
+- ~~Demography as counterweight~~ — round 7, [demography](09-macro/demography.md).
+- ~~The financial governor on RSI~~ — round 7, folded into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md).
 
 ## 7. Invariants
 

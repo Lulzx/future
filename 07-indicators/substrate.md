@@ -51,7 +51,7 @@ This is the least-watched indicator with the highest information content. **A sp
 | **Secondary** | Wholesale prices at datacenter-adjacent nodes up ~267%; 30–50% of 2026 capacity slipping to 2028 |
 | **Trigger — loosening** | Any major market halving typical wait, or federal transmission-siting preemption enacted |
 | **Trigger — tightening** | State-level large-load moratoria in two or more of TX, VA, GA, OH |
-| **Revises** | [Energy](../01-substrate/energy.md), [Uncertainty 2](../06-uncertainties/power-permitting.md), [Geopolitics](../03-domains/contested/geopolitics.md) |
+| **Revises** | [Energy](../01-substrate/energy.md), [Uncertainty 2](../06-uncertainties/power-permitting.md), [Geopolitics](../03-domains/contested/geopolitics/) |
 
 Track the **behind-the-meter share** alongside the queue. If operators route around the grid faster than the grid reforms, the queue stops being the binding constraint and the political fight relocates from siting to ratepayer allocation. Those are different fights with different timelines.
 
