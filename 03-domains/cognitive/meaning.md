@@ -84,6 +84,6 @@ Care work stays scarce ([demography](../../09-macro/demography.md)); demand for 
 
 ---
 
-**Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Education](education.md) · [Media](media.md) · [Medicine — delivery](../physical/medicine/delivery.md) · [Demography](../../09-macro/demography.md) · [Prices](../../09-macro/prices.md)
+**Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Education](education.md) (credential + identity + apprenticeship bridge) · [Media](media.md) · [Medicine — delivery](../physical/medicine/delivery.md) · [Demography](../../09-macro/demography.md) · [Prices](../../09-macro/prices.md)
 
 **Next:** [III.B — Physical domains](../physical/)

@@ -94,43 +94,39 @@ Every content file:
 | 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | 74 | 4,187 |
 | 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | 78 | 4,573 |
 | 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md); [meaning](03-domains/cognitive/meaning.md); [warfare](03-domains/contested/warfare.md) + [state capacity](03-domains/contested/state-capacity.md) depth | 80 | 4,874 |
-| 11 | 2026-07-30 | [Base rates](08-method/base-rates.md) winter failure archaeology; [Game 2](02-games/2-nations.md) trap/incident/capture pass; [B10](07-indicators/diffusion.md) fiscal tax-base indicator | **80** | **4956** |
+| 11 | 2026-07-30 | Winter archaeology; Game 2 pass; B10 fiscal indicator | 80 | 4,956 |
+| 12 | 2026-07-30 | [Cyber](03-domains/contested/cybersecurity.md)+[bio](03-domains/contested/biosecurity.md) depth; [education](03-domains/cognitive/education.md)×meaning×apprenticeship; Part V commentary hold | **80** | **5084** |
 
-*End-state counts are exact at round close; intermediate rounds approximate.*
+*End-state counts exact at round close; intermediate approximate.*
 
 ### Split and revision notes
 
-**Splits:** r2 domains→cognitive/physical/contested; r4 robotics→4 files; r6 geopolitics→5 regions; r8 Part V→table/reasoning/ledger; r9 medicine→4 files.
+**Splits:** r2 domains groups; r4 robotics; r6 geopolitics; r8 Part V; r9 medicine.
 
-**Revisions (rule 5):** r3 Game 3 scope→competitive markets; r7 Game 4 aggregate→upper bound + RSI three governors; r8 Part V re-score (ledger).
+**Revisions (rule 5):** r3 Game 3 scope; r7 labor upper bound + RSI governors; r8 Part V numbers; r12 Part V hold with written justification (cyber/bio/Game 2 detail → mechanism not base rate).
 
-**r5–r10 one-liners:** r5 Part IX macro; r7 demography; r8 timelines+uncertainties 4–6; r9 indicators+Games 1/5; r10 energy sector+meaning+warfare/state capacity.
+**r5–r11:** macro; demography; timelines+uncertainties; indicators+Games 1/5; energy/meaning/warfare/state; winters+Game2+B10.
 
-**Round 11:**
+**Round 12:** cyber (OT, identity/supply-chain/model layer, insurance as regulator, trough as incident source); bio (chain table, Game 2/state capacity); education bridges Game 5 + apprenticeship + meaning; Part V rows 3–4 commentary only.
 
-1. **Winter failure archaeology** in [base rates](08-method/base-rates.md) §4 — kill conditions table; this cycle fails the historical winter test on revenue; correction ≠ capability winter; paths that could still rhyme (revenue quality, agent threshold miss, energy freeze, incident freeze). §6 demography pointer updated (no longer "unwritten").
-2. **[Game 2](02-games/2-nations.md)** absorbs compute-governance trap, multi-mechanism incident table (finance/insurance first; kinetic least recoverable), privacy-class failure mode, state-capacity capture (~50% industry-originated text unless measurement exists).
-3. **[B10](07-indicators/diffusion.md)** — labor share of tax revenue as fiscal squeeze observable.
-
-*Invariants at r11 close: **80 files, 4956 lines, 0 broken links**. RESEARCH.md remains the only hard-cap exemption (protocol ledger).*
+*Invariants at r12 close: **80 files, 5084 lines, 0 broken links**. RESEARCH.md protocol-ledger exemption continues.*
 
 ## 6. Open queue
 
 **High**
 
-1. **Cybersecurity** and **biosecurity** depth relative to warfare/state-capacity.
-2. **Education** pass against [meaning](03-domains/cognitive/meaning.md) + apprenticeship gap.
-3. **Part V** light re-score if Game 2 refinements move row 3/4 commentary (not necessarily the numbers).
+1. **Law** and **finance** depth vs insurance/education after their neighbors thickened.
+2. **Science** × automated labs vs drug discovery / bio defensive manufacturing.
+3. **notation.md** + reverse dependency index if scoring friction rises.
 
 **Medium**
-- Energy sector split if it outgrows a page.
-- Reverse dependency index; `notation.md`.
-- Automate invariants §7 as a check script.
+- Energy sector split; automate invariants check script.
+- Companion/meaning indicators into Part VII if welfare claims need quarterly hooks.
 
 **Low**
-- Compress this log further into archive if it keeps growing.
+- Archive older round prose out of RESEARCH.md.
 
-**Retired (r1–r11):** capital; indicators; method; robotics dir; macro; geopolitics dir; demography; RSI financial governor; timelines; Part V re-score; uncertainties 4–6; medicine dir; indicators r5–8; Games 1/5; energy sector; meaning; warfare/state capacity; winter archaeology; Game 2 pass; B10 fiscal.
+**Retired (r1–r12):** … + cyber/bio depth; education×meaning; Part V r12 commentary hold.
 
 ## 7. Invariants
 

@@ -16,7 +16,7 @@ That is the correct default — no institution currently internalizes the cost �
 
 - **Apprenticeship displaces credentialism** as the entry path. This is already being pushed by [Game 5](../02-games/5-information.md) from the other direction: as credentials die as signals, direct demonstrated experience becomes the surviving alternative. Two independent forces pointing the same way.
 
-- **AI itself compresses the novice→expert timeline** enough that fewer junior-years are needed to produce a senior.
+- **AI itself compresses the novice→expert timeline** enough that fewer junior-years are needed to produce a senior. Same mechanism as Bloom's 2-sigma in [education](../03-domains/cognitive/education.md), applied to professional formation.
 
 ## The one that would invert the prediction
 

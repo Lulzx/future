@@ -38,6 +38,18 @@ Source: initial corpus, 2026-07-30. No prior.
 
 **Net directional read of the re-score:** slightly more confident in near-term commercial and financial stress (rows 1, 6); slightly less confident in measured macro productivity, verified international control, and early humanoid scale (rows 2, 4, 5). The ordering thesis — incident >> loss-of-control as operative risk — is unchanged.
 
+## Round 12 — commentary pass (no number moves)
+
+*Date: 2026-07-30. Corpus: post–rounds 9–11 (medicine, indicators, Game 2, winters) + r12 cyber/bio/education depth.*
+
+| Row | Action | Note |
+|---|---|---|
+| 3 | **Hold** | Game 2 multi-mechanism table + cyber trough + bio chain analysis improve *which* incident, not P(incident above threshold) enough to move 20/45 |
+| 4 | **Hold** | Trap + "rules ≠ verification" already priced in r8 delta; r11 capture caveat affects quality of rules, not existence probability enough to respecify 8/30 |
+| 1–2, 5–7 | **Hold** | No new material forcing a move; education/meaning are welfare channels outside these rows |
+
+Rule 5 satisfied: evidence reviewed, holds justified in writing, not inertia.
+
 ## Resolution log (outcomes)
 
 *Empty until claims come due. First wave: 2027–28. See [scoring](../08-method/scoring.md) "first claims due."*
