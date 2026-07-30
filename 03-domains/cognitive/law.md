@@ -20,7 +20,7 @@ Worse, the leverage model compounds it: BigLaw profitability requires a pyramid 
 
 ## The pattern
 
-Same as [medicine](../physical/medicine.md): the analytical layer compresses, the accountability layer does not. What survives is not what is hardest to do — it is what someone must be answerable for.
+Same as [medicine](../physical/medicine/): the analytical layer compresses, the accountability layer does not. What survives is not what is hardest to do — it is what someone must be answerable for.
 
 ---
 

@@ -14,7 +14,7 @@ The binding constraint on human welfare in low-income countries has often been *
 
 That constraint is the one AI most directly relieves:
 
-- **Medical triage and diagnostic support** where the alternative is not a better doctor but no doctor. → [Medicine](../../physical/medicine.md)
+- **Medical triage and diagnostic support** where the alternative is not a better doctor but no doctor. → [Medicine](../../physical/medicine/)
 - **Tutoring at the [2-sigma](../../cognitive/education.md) effect size** where the alternative is a class of eighty with an undertrained teacher.
 - **Agronomic advice** in local languages where extension services never reached. → [Agriculture](../../physical/agriculture.md)
 - **Legal and administrative navigation** where the alternative is exclusion from formal systems entirely.
@@ -63,6 +63,6 @@ Ordered by leverage per dollar, and notable for how little any of it is about AI
 
 ---
 
-**Related:** [India](india.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Education](../../cognitive/education.md) · [Medicine](../../physical/medicine.md) · [Agriculture](../../physical/agriculture.md) · [Game 1 — Labs](../../../02-games/1-labs.md) on open weights
+**Related:** [India](india.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Education](../../cognitive/education.md) · [Medicine](../../physical/medicine/) · [Agriculture](../../physical/agriculture.md) · [Game 1 — Labs](../../../02-games/1-labs.md) on open weights
 
 **Next:** [Warfare](../warfare.md)

@@ -22,7 +22,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 [Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md)
 
 ### [B — Physical](physical/)
-[Medicine](physical/medicine.md) · [Robotics](physical/robotics/) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
+[Medicine](physical/medicine/) · [Robotics](physical/robotics/) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
 
 ### [C — Contested](contested/)
 [Geopolitics](contested/geopolitics/) · [Warfare](contested/warfare.md) · [Cybersecurity](contested/cybersecurity.md) · [Biosecurity](contested/biosecurity.md) · [State capacity](contested/state-capacity.md)
@@ -38,7 +38,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [Warfare](contested/warfare.md) | Cheap and brutal | Escalation judgment | Now |
 | [Law](cognitive/law.md) | Moderate | Standing, liability, negotiation | Now |
 | [Logistics](physical/logistics.md) | Cheap in planning, expensive in handling | The last hundred metres | Split |
-| [Medicine](physical/medicine.md) | Mixed | Licensure, liability, hands | Consumer now; institutional slow |
+| [Medicine](physical/medicine/) | Mixed | Licensure, liability, hands | Consumer now; institutional slow |
 | [Science](cognitive/science.md) | Varies wildly by field | Experimental throughput | Bottlenecked on wet lab |
 | [Biosecurity](contested/biosecurity.md) | Expensive; catastrophic to get wrong | Materials, tacit lab skill | Now, quietly |
 | [Agriculture](physical/agriculture.md) | Seasonal — one experiment per year | Land, water, biology's clock | Slow |

@@ -29,4 +29,4 @@ This is the highest-leverage under-invested area in the entire landscape. It con
 
 ---
 
-**Related:** [Data](../../01-substrate/data.md) · [Medicine](../physical/medicine.md) on the same bottleneck in drug discovery · [2032–2040](../../04-timelines/2032-2040.md)
+**Related:** [Data](../../01-substrate/data.md) · [Drug discovery](../physical/medicine/drug-discovery.md) on the same bottleneck · [2032–2040](../../04-timelines/2032-2040.md)

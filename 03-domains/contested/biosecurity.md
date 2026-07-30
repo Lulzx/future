@@ -6,7 +6,7 @@
 
 Biology is the one domain in this document where the offense–defense balance does not plausibly recover, and the reason is structural rather than technical.
 
-**Attack and defense operate on different clocks.** Designing a pathogen is increasingly a computational problem. Developing, trialling, manufacturing, and distributing a countermeasure is a physical, regulatory, and logistical problem measured in months to years. AI compresses the first term far more than the second, because the first has cheap computational ground truth and the second is gated on biology, factories, and institutions. → [Medicine](../physical/medicine.md)
+**Attack and defense operate on different clocks.** Designing a pathogen is increasingly a computational problem. Developing, trialling, manufacturing, and distributing a countermeasure is a physical, regulatory, and logistical problem measured in months to years. AI compresses the first term far more than the second, because the first has cheap computational ground truth and the second is gated on biology, factories, and institutions. → [Medicine](../physical/medicine/)
 
 That gap is the whole concern, and it widens rather than narrows as the technology improves.
 
@@ -49,6 +49,6 @@ The same capabilities that create the concern are the strongest tools available 
 
 ---
 
-**Related:** [Cybersecurity](cybersecurity.md) · [Medicine](../physical/medicine.md) · [Science](../cognitive/science.md) on automated experimentation · [Game 2 — Nations](../../02-games/2-nations.md) · [Probabilities](../../05-probabilities/README.md)
+**Related:** [Cybersecurity](cybersecurity.md) · [Medicine](../physical/medicine/) · [Science](../cognitive/science.md) on automated experimentation · [Game 2 — Nations](../../02-games/2-nations.md) · [Probabilities](../../05-probabilities/README.md)
 
 **Next:** [State capacity](state-capacity.md)

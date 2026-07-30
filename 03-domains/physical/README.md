@@ -12,7 +12,7 @@ This is where the [master asymmetry](../../01-substrate/data.md) bites hardest. 
 
 | Domain | Ground truth | Human moat | Timing |
 |---|---|---|---|
-| [Medicine](medicine.md) | Mixed — cheap in imaging, expensive in outcomes | Licensure, liability, hands, procedure | Consumer now; institutional slow |
+| [Medicine](medicine/) | Mixed — cheap in imaging, expensive in outcomes | Licensure, liability, hands, procedure | Consumer now; institutional slow |
 | [Robotics](robotics/) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
 | [Agriculture](agriculture.md) | Seasonal — one experiment per year | Land, water, biology's clock | Slow and underrated |
 | [Logistics](logistics.md) | Cheap in planning, expensive in execution | The last hundred metres | Planning now; handling 2030s |
@@ -27,4 +27,4 @@ This is where the [master asymmetry](../../01-substrate/data.md) bites hardest. 
 
 ---
 
-**Next:** [Medicine](medicine.md) → [III.C — Contested domains](../contested/)
+**Next:** [Medicine](medicine/) → [III.C — Contested domains](../contested/)

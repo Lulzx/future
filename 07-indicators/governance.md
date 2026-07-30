@@ -71,12 +71,35 @@ The argument here is that **this arrives before any federal capability regulatio
 |---|---|
 | **Baseline** | Unresolved; contracts allocate by negotiation, courts have not settled it |
 | **Trigger** | A precedent-setting judgment or statute assigning liability for autonomous system harm |
-| **Revises** | [Law](../03-domains/cognitive/law.md), [Medicine](../03-domains/physical/medicine.md), [Game 1](../02-games/1-labs.md), and every "human retains the part where someone can be sued" claim in [Part III](../03-domains/) |
+| **Revises** | [Law](../03-domains/cognitive/law.md), [Medicine](../03-domains/physical/medicine/), [Game 1](../02-games/1-labs.md), and every "human retains the part where someone can be sued" claim in [Part III](../03-domains/) |
 
 Underrated because it is slow and unglamorous. But **the accountability layer is the human moat in most of Part III**, and its width is set entirely by where liability lands. A ruling that shifts liability onto model providers collapses that moat in several domains simultaneously; one that keeps it with the deploying professional entrenches it for a decade.
 
+## C7 — AI liability insurance capacity
+
+| | |
+|---|---|
+| **Baseline** | No material AI-specific commercial line with published rates; cyber forms used as imperfect substitute; correlation poorly modeled |
+| **Trigger — private capacity** | Distinct AI liability line with published rate tables and growing limits |
+| **Trigger — correlation binds** | Aggregate limits / event exclusions tighten; reinsurer withdrawal; or first correlated multi-insured loss event |
+| **Trigger — state backstop** | Terrorism-reinsurance-style proposal enacted or seriously drafted post-event |
+| **Revises** | [Insurance](../03-domains/cognitive/insurance.md), [Uncertainty 6](../06-uncertainties/correlated-risk.md), [2028–2032](../04-timelines/2028-2032.md) deployment frontier |
+
+**The exclusions define the deployment frontier** more tightly than capability demos. C6 is precedent; C7 is price and availability. Together they say whether the moat is legal doctrine or balance-sheet arithmetic.
+
+## C3b — Compute-governance trap (export controls vs verification)
+
+| | |
+|---|---|
+| **Baseline** | Accelerator export controls used as competitive instrument; no bilateral verification regime |
+| **Trigger — trap deepens** | Tighter controls + accelerating domestic substitution / efficiency that shrink the controlled set's relevance |
+| **Trigger — trap acknowledged** | Official linkage of control regimes to a future verification architecture (even aspirational) |
+| **Revises** | [Bipolar](../03-domains/contested/geopolitics/bipolar.md), [Part V](../05-probabilities/) row 4, [C3](governance.md) |
+
+Round 6 named the mechanism: the lever and the future arms-control verification tool are the same object. C3 tracks technical viability; this row tracks whether policy is spending the option.
+
 ---
 
-**Related:** [Game 2 — Nations](../02-games/2-nations.md) · [Part V — Probabilities](../05-probabilities/README.md) · [Warfare](../03-domains/contested/warfare.md) · [Finance](../03-domains/cognitive/finance.md)
+**Related:** [Game 2 — Nations](../02-games/2-nations.md) · [Part V — Probabilities](../05-probabilities/) · [Warfare](../03-domains/contested/warfare.md) · [Finance](../03-domains/cognitive/finance.md) · [Insurance](../03-domains/cognitive/insurance.md)
 
 **Next:** [Part VII index](README.md) · [Protocol](../RESEARCH.md)

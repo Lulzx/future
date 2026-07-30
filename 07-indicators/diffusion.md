@@ -75,8 +75,42 @@ A sleeper indicator. Vendors will only accept outcome pricing when they believe 
 
 Tests the "guilds mediated by cryptography" claim directly. The cost side is what to watch: **teaching gets cheaper while assessing gets more expensive**, and institutions that cannot fund the second will stop credentialing meaningfully rather than pay for it.
 
+## B7 — The two-economy price split
+
+| | |
+|---|---|
+| **Baseline** | Cognitive services soft or deflating; energy, shelter, care, trades firm or rising |
+| **Trigger — claim confirmed** | Sustained divergence: CPI/PCE components for software/info services fall or lag while energy+shelter+care outpace for 8+ quarters |
+| **Trigger — claim fails** | Uniform inflation or deflation across both baskets |
+| **Revises** | [Prices](../09-macro/prices.md), [2028–2032](../04-timelines/2028-2032.md), [Assets](../09-macro/assets.md) |
+
+This is the macro expression of [Game 3](../02-games/3-firms.md). Prefer **relative** component moves over headline CPI. Headline can look fine while both halves of the claim are true.
+
+## B8 — Verifiable vs unverifiable domain gap
+
+| | |
+|---|---|
+| **Baseline** | Large gap: software/math/code far ahead of open-ended professional judgment and physical manipulation |
+| **Trigger — asymmetry holds** | Gap stable or widening as measured by production deployment depth (not demos) |
+| **Trigger — asymmetry fails** | Production autonomous decision-making in liability-bearing unverifiable domains without cheap external ground truth |
+| **Revises** | [Uncertainty 5](../06-uncertainties/learned-verification.md), [Steelman](../08-method/steelman.md) §1, ordering of [Part III](../03-domains/) |
+
+Pair with insurance and liability: if underwriters cover autonomous professional judgment, they are revealing a belief that verification is solved enough to price.
+
+## B9 — Research cycle time (RSI governor panel)
+
+| | |
+|---|---|
+| **Baseline** | Not disclosed; infer from release cadence, paper throughput, and hiring of research engineers |
+| **Trigger — technical loop** | Sustained >2× compression in time per validated experiment at frontier labs |
+| **Physical governor check** | Cycle compression coexists with queued power/fabs — capability not deployable at the new rate |
+| **Financial governor check** | Cycle compression coexists with rising real hurdle rates on training clusters ([A7](substrate.md)) |
+| **Revises** | [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) — all three governors, not only the technical one |
+
+Headline RSI talk tracks only the first row. The document's revision in round 7 requires reading all three before moving timelines.
+
 ---
 
-**Related:** [Game 3](../02-games/3-firms.md) · [Game 4](../02-games/4-labor.md) · [Part IV — Timelines](../04-timelines/)
+**Related:** [Game 3](../02-games/3-firms.md) · [Game 4](../02-games/4-labor.md) · [Part IV — Timelines](../04-timelines/) · [Part IX](../09-macro/)
 
 **Next:** [C — Governance indicators](governance.md)

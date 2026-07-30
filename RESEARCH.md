@@ -31,7 +31,7 @@ A round is not complete until step 5. Half-applied rounds are the main way a cor
 | 130–180 | Soft cap | Look for a natural seam; split if one exists |
 | > 180 | Hard cap | Must split this round |
 
-**Caveat on the line count, learned in round 7.** Lines are a proxy for content and a poor one in a corpus written in long paragraphs: a dense 40-line page can carry more argument than a listy 90-line one. Treat `< 60` as a *flag to go look*, never as an instruction to pad. The real test is the one in §3 — **does the page contain more than one argument that deserves its own room?** [Compressed](00-overview/compressed.md) is 22 lines and is exactly the right length; [medicine](03-domains/physical/medicine.md) is 35 lines and contains four arguments.
+**Caveat on the line count, learned in round 7.** Lines are a proxy for content and a poor one in a corpus written in long paragraphs: a dense 40-line page can carry more argument than a listy 90-line one. Treat `< 60` as a *flag to go look*, never as an instruction to pad. The real test is the one in §3 — **does the page contain more than one argument that deserves its own room?** [Compressed](00-overview/compressed.md) is 22 lines and is exactly the right length; pre-split [medicine](03-domains/physical/medicine/) was 35 lines with four arguments (promoted in round 9).
 
 **Directory size.** Maximum **10 content files** per directory, excluding `README.md`. At 11, introduce a subdirectory layer grouped by kind, not by alphabet.
 
@@ -91,7 +91,8 @@ Every content file:
 | 5 | 2026-07-30 | [Part IX](09-macro/) — the macro-financial channel, the largest structural hole in the corpus. Rates, prices, assets, fiscal | 63 | 3,180 |
 | 6 | 2026-07-30 | [Geopolitics](03-domains/contested/geopolitics/) promoted to a directory — the non-US, non-China world was one paragraph. [US–China](03-domains/contested/geopolitics/bipolar.md), [India](03-domains/contested/geopolitics/india.md), [Europe](03-domains/contested/geopolitics/europe.md), [Gulf](03-domains/contested/geopolitics/gulf.md), [Global South](03-domains/contested/geopolitics/global-south.md) | 68 | ~3,900 |
 | 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | 69 | 3,615 |
-| 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | **74** | **4,187** |
+| 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | 74 | 4,187 |
+| 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | **78** | **4,573** |
 
 *End-state counts are exact at round close; intermediate rounds are approximate, since rounds ran in one sitting.*
 
@@ -118,7 +119,13 @@ Every content file:
 2. **Uncertainties 4–6 promoted into the register** rather than left as asides on regional, steelman, and domain pages. Taiwan is the first uncertainty *not* skewed toward better outcomes. Learned verification is the framework-level risk. Correlated insurability is the deployment-frontier constraint.
 3. **No silent probability inertia.** The re-score is the first compliance with scoring rule 5 since round 0; the prior gap was itself a protocol violation, now closed.
 
-*Invariants §7 verified at the close of round 8: **74 files, 4,187 lines, 0 broken links** (one false positive in the §4 code example), no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks. Timeline pages landed at 75–101 lines — under the aspirational ~120, but dense synthesis rather than thin stubs; the §2 caveat applies.*
+**Round 9 split and expansions:**
+
+1. **`03-domains/physical/medicine.md` → `medicine/{README,diagnostics,delivery,drug-discovery,liability}.md`.** Seam is the four arguments the thin page already named. Inbound links rewritten to `medicine/`.
+2. **[Part VII](07-indicators/)** gains A6 (Taiwan capacity), A7 (rates / financial governor), B7 (two-economy prices), B8 (verification gap), B9 (RSI three-governor panel), C7 (AI liability insurance), C3b (compute-governance trap). Short-list table extended.
+3. **[Game 1](02-games/1-labs.md)** and **[Game 5](02-games/5-information.md)** expanded to carry liability/open-weights and verification/enclosure load that later pages were already assuming.
+
+*Invariants §7 verified at the close of round 9: **78 files, 4,573 lines, 0 broken links**, no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks.*
 
 ## 6. Open queue
 
@@ -126,15 +133,14 @@ Ordered by expected value of the next round's work.
 
 **High** — next round starts here
 
-1. **Medicine is now the thinnest load-bearing page**, at ~35 lines, in the group where [robotics](03-domains/physical/robotics/) needed four files. Diagnostics, delivery, drug discovery, and the liability moat are four distinct arguments compressed into one page.
-2. **[Indicators](07-indicators/) have not absorbed rounds 5–8.** Macro (rates, two-economy prices, fiscal), Taiwan, insurance correlation, and the three RSI governors are mostly absent from the dashboard. Family A/B/C tables and the "five that matter most" need a pass so the quarterly cadence still matches the claims.
-3. **Games 1 and 5 are thin relative to their load.** [Labs](02-games/1-labs.md) (~30 lines) and [Information](02-games/5-information.md) under-carry the liability and epistemic-collapse claims that later pages depend on.
+1. **Energy as a domain**, not just a constraint. [Part I](01-substrate/) treats power as something AI consumes; it is also the sector AI most changes (grid optimization, siting, exploration, fusion/fission R&D). Natural sibling to [medicine](03-domains/physical/medicine/) / [robotics](03-domains/physical/robotics/) promotion pattern if it outgrows a page.
+2. **Meaning, mental health, and relationships.** [Game 5](02-games/5-information.md) now flags synthetic intimacy; nothing yet covers vocational identity loss or abundant synthetic companionship as a welfare channel. Hard to write well — still highest missing human layer.
+3. **State capacity** and **warfare** depth relative to the [geopolitics](03-domains/contested/geopolitics/) directory they sit beside.
 
 **Medium**
-- **The energy industry as a domain**, not just a constraint. [Part I](01-substrate/) treats power as something AI consumes; it is also the sector AI most changes (grid optimization, siting, exploration, fusion/fission R&D).
-- **Meaning, mental health, and relationships.** [Game 5](02-games/5-information.md) covers the epistemic collapse; nothing covers what abundant synthetic companionship and the loss of vocational identity do to people. Genuinely hard to write well, which is why it is missing.
 - **Failure archaeology**, deepening [base rates](08-method/base-rates.md) §4 — what specifically ended each AI winter, in enough detail to be a usable prior.
-- **State capacity** and **warfare** depth relative to the geopolitics directory they now sit beside.
+- **Fiscal indicator** — tax-base / labor-income share as a slow B-family companion to [fiscal](09-macro/fiscal.md).
+- **Game 2** pass against bipolar compute-governance trap and insurance-as-incident mechanism.
 
 **Low**
 - `notation.md` for recurring shorthand (effective compute, ground-truth cost, inelastic complement, the master asymmetry).
@@ -153,6 +159,9 @@ Ordered by expected value of the next round's work.
 - ~~Timelines not synthesizing the corpus~~ — round 8, [Part IV](04-timelines/) expanded.
 - ~~Part V never re-scored~~ — round 8, [ledger](05-probabilities/ledger.md).
 - ~~Uncertainties stuck at three~~ — round 8, six in the register.
+- ~~Medicine too thin~~ — round 9, four-file directory.
+- ~~Indicators stale vs rounds 5–8~~ — round 9.
+- ~~Games 1 and 5 under-carrying~~ — round 9.
 
 ## 7. Invariants
 

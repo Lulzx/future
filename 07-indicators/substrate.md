@@ -66,8 +66,30 @@ Track the **behind-the-meter share** alongside the queue. If operators route aro
 
 Depreciation-schedule changes are disclosed in filings, arrive before the underlying reality is common knowledge, and are one of the few places where an operator has to state what it actually believes about hardware longevity.
 
+## A6 — Leading-edge capacity outside Taiwan
+
+| | |
+|---|---|
+| **Baseline** | Vast majority of leading-edge logic wafers still Taiwan-concentrated; announced multi-region fabs years from volume at node |
+| **Trigger — assumption softens** | Non-TW share of advanced wafers crosses a material threshold (double-digit % of leading-edge) *with yields*, not ribbon-cuttings |
+| **Trigger — assumption fails** | Blockade, kinetic conflict, or multi-quarter interruption of TW leading-edge output |
+| **Revises** | [Uncertainty 4](../06-uncertainties/taiwan.md), [Bipolar](../03-domains/contested/geopolitics/bipolar.md), every compute-gated timeline |
+
+This is the load-bearing geographic assumption of the corpus, stated at **~90%** continuity through 2032. A6 does not predict geopolitics; it tracks whether the *consequence* of disruption is shrinking (substitution) and whether disruption has occurred (binary).
+
+## A7 — Real rates and AI capex cost of capital
+
+| | |
+|---|---|
+| **Baseline** | Real rates elevated vs 2010s; AI build financed under mid-2020s WACC assumptions |
+| **Trigger — financial governor binds** | Sustained rise in real yields coinciding with AI-related return narratives, raising hurdle rates on multi-year campus builds |
+| **Trigger — demographics win** | Real rates stay low or fall despite visible AI deployment and productivity chatter |
+| **Revises** | [Rates](../09-macro/rates.md), [Capital](../01-substrate/capital.md), [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) financial governor |
+
+The document's claim: success can raise the neutral rate and make the next round of infrastructure more expensive to fund — a negative feedback on takeoff that is not technical. A7 is how you see it in markets rather than in papers.
+
 ---
 
-**Related:** [Part I — Substrate](../01-substrate/) · [Capital](../01-substrate/capital.md) · [Energy](../01-substrate/energy.md)
+**Related:** [Part I — Substrate](../01-substrate/) · [Capital](../01-substrate/capital.md) · [Energy](../01-substrate/energy.md) · [Part IX — Macro](../09-macro/)
 
 **Next:** [B — Diffusion indicators](diffusion.md)

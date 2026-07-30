@@ -1,0 +1,55 @@
+# Drug discovery — preclinical speed, clinical wall
+
+← [Medicine](README.md) · [III.B — Physical](../README.md) · [Index](../../../README.md)
+
+---
+
+Real acceleration in target identification, structure prediction, and molecular design. That sentence is true and often followed by a fantasy about timelines collapsing to years. The fantasy skips where drugs actually fail.
+
+## Where the failures are
+
+> **~60% of clinical failures are efficacy or toxicity in humans**, which AI cannot predict without better biology — biology that still has to be measured in organisms, not only in models of organisms.
+
+In silico progress moves the early funnel: more candidates, cheaper prioritization, better structures. It does not move the clock on Phase II/III, manufacturing scale-up, or regulators reading multi-year safety data.
+
+> **Estimate:** **~20–30% cost reduction in preclinical** by the early 2030s, and **minimal change to the ~10-year, ~$2B clinical gauntlet** before ~2032.
+
+After 2032 the clinical side can move if automated experimentation and better translational models land — that is a [science](../../cognitive/science.md) bottleneck, not a pharma-marketing bottleneck.
+
+## The rate limiter is wet lab and recruitment
+
+| Stage | What AI helps | What still binds |
+|---|---|---|
+| Target ID / design | A lot | Biological validity of the target |
+| Preclinical in vitro / in vivo | Throughput, design of experiments | Animal models, assay development |
+| Phase I–III | Protocol design, site selection, document generation | Patient recruitment, endpoints, safety clocks |
+| Approval / manufacturing | Dossier drafting | Process validation, inspection |
+
+**Whoever industrializes automated experimentation captures the largest available prize** — same conclusion as [Science](../../cognitive/science.md), for the same reason. Hypothesis generation is no longer scarce; experimental cycle time is.
+
+## What "AI drug" headlines measure
+
+They measure **entry into the pipeline** or **preclinical milestones**, not reduction in expected time-to-approval for a new molecular entity. Those are different random variables. A flood of AI-designed candidates can coexist with an unchanged median approval timeline if the clinical wall does not move.
+
+Watch for:
+
+- Time from target hypothesis to IND-enabling package (should fall)
+- Phase II success rates (should not rise much without better translational biology)
+- Share of trials using adaptive designs and digital endpoints (institutional absorption)
+- Automated lab capex and utilization in pharma and CROs (the real swing variable)
+
+## Connection to the rest of medicine
+
+Faster preclinical discovery does not fix [delivery](delivery.md). A cheaper candidate still meets reimbursement, licensure, and care-capacity constraints on the way to patients. The consumer-side diagnostic boom and the drug-discovery boom can both be real while population health moves slowly — because health is produced by the delivery system, not by the molecule inventory.
+
+## Failure modes
+
+- **If translational models** (organoids, digital twins with validated prediction) materially raise Phase II success rates, the 20–30% preclinical claim understates the total impact and the post-2032 clinical wall softens earlier.
+- **If automated labs** remain boutique, the science bottleneck claim strengthens and drug AI stays a design tool.
+- **If regulators accept** novel evidence packages (in silico primary evidence), the institutional clock moves — low probability before a major framework rewrite, which is event-driven. → [Game 2](../../../02-games/2-nations.md)
+
+---
+
+**Related:** [Science](../../cognitive/science.md) · [Data](../../../01-substrate/data.md) · [Biosecurity](../../contested/biosecurity.md) · [2032–2040](../../../04-timelines/2032-2040.md)
+
+**Next:** [Liability and licensure](liability.md)
