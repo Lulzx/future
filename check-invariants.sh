@@ -24,6 +24,8 @@ root = pathlib.Path('.')
 link_re = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
 broken = []
 for f in sorted(root.rglob('*.md')):
+    if '_site' in f.parts:
+        continue
     text = re.sub(r'```.*?```', '', f.read_text(), flags=re.S)
     for m in link_re.finditer(text):
         href = m.group(2).split('#')[0].split(' ')[0]
@@ -56,6 +58,8 @@ import pathlib
 root = pathlib.Path('.')
 missing = []
 for f in sorted(root.rglob('*.md')):
+    if '_site' in f.parts:
+        continue
     if f.name == 'RESEARCH.md':
         continue
     head = '\n'.join(f.read_text().splitlines()[:20])
@@ -81,6 +85,8 @@ hard = $HARD_CAP
 exempt = re.compile(r'$EXEMPT_OVER')
 rows = []
 for f in sorted(pathlib.Path('.').rglob('*.md')):
+    if '_site' in f.parts:
+        continue
     n = len(f.read_text().splitlines())
     if n > hard and not exempt.search(str(f)):
         rows.append(f'{n}\t{f}')
@@ -101,6 +107,8 @@ from collections import defaultdict
 cap = $DIR_CAP
 c = defaultdict(int)
 for f in Path('.').rglob('*.md'):
+    if '_site' in f.parts:
+        continue
     if f.name == 'README.md':
         continue
     c[str(f.parent)] += 1
@@ -120,6 +128,8 @@ too_deep=$(python3 - <<'PY'
 from pathlib import Path
 rows = []
 for f in sorted(Path('.').rglob('*.md')):
+    if '_site' in f.parts:
+        continue
     if len(f.parts) > 4:  # part/group/subgroup/file.md is the deepest allowed
         rows.append(str(f))
 print('\n'.join(rows))
@@ -135,7 +145,7 @@ fi
 # ── 6. Counts ──────────────────────────────────────────────────────────────
 counts=$(python3 - <<'PY'
 from pathlib import Path
-files = list(Path('.').rglob('*.md'))
+files = [p for p in Path('.').rglob('*.md') if '_site' not in p.parts]
 lines = sum(len(p.read_text().splitlines()) for p in files)
 print(f'{len(files)} files, {lines} lines')
 PY
@@ -156,7 +166,7 @@ def title_of(path: Path) -> str:
 
 entries = []
 for p in sorted(Path('.').rglob('*.md')):
-    if any(part.startswith('.') for part in p.parts):
+    if '_site' in p.parts or any(part.startswith('.') for part in p.parts):
         continue
     entries.append({"path": p.as_posix(), "title": title_of(p)})
 Path('catalog.json').write_text(json.dumps(entries, indent=2, ensure_ascii=False) + '\n')

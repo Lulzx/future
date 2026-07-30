@@ -2,10 +2,10 @@
 #
 # Publish the corpus to https://future.lulzx.space
 #
-# The site is the markdown itself: index.html plus style.css is a reader that
-# fetches the .md files over HTTP and renders them in the browser. So a deploy
-# is nothing more than copying the tree — there is no build step, and the files
-# on the server are byte-identical to the ones in git.
+# The site is pre-rendered static HTML: build.mjs renders every .md into a
+# plain .html page (no client-side JavaScript needed to read the content), and
+# the raw .md files are published alongside at the same paths. A deploy is
+# build + copy of _site/.
 #
 # Serving:
 #   Caddy (host process, own mount namespace) — /srv/www/future maps to the
@@ -33,12 +33,13 @@ if [[ -x ./check-invariants.sh ]]; then
   ./check-invariants.sh
 fi
 
+echo "→ building static pages"
+node build.mjs
+
 echo "→ syncing to ${HOST}:${REMOTE}"
 rsync -az --delete \
-  --exclude '.git' \
-  --exclude 'deploy.sh' \
   --exclude '.DS_Store' \
-  ./ "${HOST}:${REMOTE}/"
+  _site/ "${HOST}:${REMOTE}/"
 
 count=$(ssh "$HOST" "find ${REMOTE} -name '*.md' | wc -l")
 echo "→ ${count} markdown files live"

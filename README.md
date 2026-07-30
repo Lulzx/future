@@ -2,7 +2,7 @@
 
 *Written 2026-07-30. Quantities reflect knowledge through mid-2026. Probabilities are subjective.*
 
-**Read it at [future.lulzx.space](https://future.lulzx.space)** - the site renders these files directly; there is no build step and no generated copy.
+**Read it at [future.lulzx.space](https://future.lulzx.space)** - every page is pre-rendered static HTML (`build.mjs`, no dependencies), and the raw markdown stays published at the same path (`thesis.html` ↔ `thesis.md`).
 
 Built from physical constraints upward, then the strategic games that sit on top of them, then domain by domain, then timelines.
 
