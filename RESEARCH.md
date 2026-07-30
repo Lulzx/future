@@ -98,7 +98,8 @@ Every content file:
 | 12 | 2026-07-30 | Cyber+bio depth; education×meaning; Part V commentary hold | 80 | 5,084 |
 | 13 | 2026-07-30 | Law+finance+science; notation+dependencies | 82 | 5,353 |
 | 14 | 2026-07-30 | Media+software depth; check-invariants.sh | 82 | 5,459 |
-| 15 | 2026-07-30 | [Agriculture](03-domains/physical/agriculture.md)+[logistics](03-domains/physical/logistics.md) depth; [B11](07-indicators/diffusion.md) meaning indicators; energy-sector split deferred (91 lines, healthy) | **82** | **5547** |
+| 15 | 2026-07-30 | Ag+logistics depth; B11 meaning indicators; energy split deferred | 82 | 5,547 |
+| 16 | 2026-07-30 | [C8](07-indicators/governance.md) provenance; [inference economics](01-substrate/inference-economics.md)+Part I hub; [Games](02-games/)+[thesis](00-overview/thesis.md)/[compressed](00-overview/compressed.md) sync | **82** | **5613** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -108,28 +109,25 @@ Every content file:
 
 **Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**r5–r14:** macro … invariants script (see prior rows).
+**Round 16:** C8 capture-time provenance vs theatre/enclosure; inference economics tied to capital/software/open weights/falsifiers; Part I hub relay+floor; Games hub cross-links (demography, trap, insurance, meaning); thesis/compressed updated for demography upper bound, trap, meaning, insurance frontier, C8.
 
-**Round 15:** agriculture (layers, demography, Global South, data/monoculture risks); logistics (warehouse, cyber OT, demography pull, working capital); B11 welfare dashboard; **no energy-sector split** — 91 lines under soft cap, one argument with four layers already sectioned.
-
-*Invariants at r15 close: **82 files, 5547 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh). Energy-sector split deferred (healthy length).*
+*Invariants at r16 close: **82 files, 5613 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
 
 ## 6. Open queue
 
 **High**
 
-1. **Media/provenance** into governance indicators (C-family).
-2. **Inference economics** / [Part I](01-substrate/) thin pages consistency pass.
-3. **Games hub** + compressed/thesis sync with post-r10 material.
+1. **Physical diffusion indicators** (warehouse autonomy, specialty harvest, hub-to-hub freight) if Part VII still underweights III.B.
+2. **Compute / data** light consistency pass (same treatment as inference r16).
+3. **Reader UX** — TOC / search if the corpus is hard to navigate at 80+ files.
 
 **Medium**
-- Agriculture/logistics indicators if physical diffusion needs quarterly hooks.
-- Archive RESEARCH history.
+- Archive RESEARCH history; FOAK energy R&D only if energy-sector exceeds soft cap.
 
 **Low**
-- FOAK generation R&D page only if energy-sector grows past soft cap.
+- New domains only on clear missing seam (not length padding).
 
-**Retired (r1–r15):** … + ag/logistics depth; B11; energy split considered/deferred.
+**Retired (r1–r16):** … + C8; inference/Part I/games/overview sync.
 
 ## 7. Invariants
 

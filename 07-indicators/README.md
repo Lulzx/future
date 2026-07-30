@@ -40,6 +40,7 @@ If only five things can be tracked, track these. Each is the leading edge of a d
 | **Capability gap: verifiable vs unverifiable domains** | [B8](diffusion.md) | [Uncertainty 5](../06-uncertainties/learned-verification.md) |
 | **Labor share of tax revenue** | [B10](diffusion.md) | [Fiscal](../09-macro/fiscal.md) squeeze |
 | **Companion use × social contact; junior identity** | [B11](diffusion.md) | [Meaning](../03-domains/cognitive/meaning.md) welfare channel |
+| **Capture-time provenance at scale** | [C8](governance.md) | [Game 5](../02-games/5-information.md) / [media](../03-domains/cognitive/media.md) enclosure vs public verification |
 
 ## How to read a dashboard without fooling yourself
 

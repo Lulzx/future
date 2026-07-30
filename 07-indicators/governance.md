@@ -98,8 +98,22 @@ Underrated because it is slow and unglamorous. But **the accountability layer is
 
 Round 6 named the mechanism: the lever and the future arms-control verification tool are the same object. C3 tracks technical viability; this row tracks whether policy is spending the option.
 
+## C8 — Provenance and synthetic-media infrastructure
+
+| | |
+|---|---|
+| **Baseline** | C2PA and similar standards exist; adoption uneven; easy to strip; platforms inconsistent |
+| **Trigger — infrastructure real** | Major platforms + device makers ship default capture-time attestation *and* consumer-visible trust UX at scale |
+| **Trigger — theatre** | Labeling mandates without attestation (easy spoof, high compliance cost, low trust effect) |
+| **Trigger — enclosure path** | Verified content retreats almost entirely into walled gardens; open web treated as unverified by default |
+| **Revises** | [Game 5](../02-games/5-information.md), [Media](../03-domains/cognitive/media.md), [Compressed](../00-overview/compressed.md), [B6](diffusion.md), [B11](diffusion.md) |
+
+[Game 5](../02-games/5-information.md) and [media](../03-domains/cognitive/media.md) argue authenticity becomes a product and that open unverified content goes lemons. **C8 is whether society builds the public good (point-of-capture provenance) or only private gardens.** Differs from B6 (assessment reversion in education/hiring): C8 is *content and identity* infrastructure for the feed and the courtroom.
+
+Watch legislation that mandates labels without requiring hard attestation — that is the privacy-class failure mode applied to media (rules without measurement). → [State capacity](../03-domains/contested/state-capacity.md)
+
 ---
 
-**Related:** [Game 2 — Nations](../02-games/2-nations.md) · [Part V — Probabilities](../05-probabilities/) · [Warfare](../03-domains/contested/warfare.md) · [Finance](../03-domains/cognitive/finance.md) · [Insurance](../03-domains/cognitive/insurance.md)
+**Related:** [Game 2 — Nations](../02-games/2-nations.md) · [Part V — Probabilities](../05-probabilities/) · [Warfare](../03-domains/contested/warfare.md) · [Finance](../03-domains/cognitive/finance.md) · [Insurance](../03-domains/cognitive/insurance.md) · [Media](../03-domains/cognitive/media.md) · [Game 5](../02-games/5-information.md)
 
 **Next:** [Part VII index](README.md) · [Protocol](../RESEARCH.md)

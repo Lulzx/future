@@ -24,13 +24,15 @@ Compute, energy, and data are ceilings — they cap what is possible. [Capital](
 
 **Capital is a verdict**: there is no physical limit on the flow, only a continuously re-priced judgment about repayment. It is the fastest-moving input and the only one that can reverse. **Inference cost is a floor collapsing**: it does not constrain anything, it sets the depreciation schedule on every capability advantage anyone holds.
 
-The practical difference: a ceiling tells you what cannot happen, a verdict tells you what someone currently believes, and a collapsing floor tells you how long your advantage lasts. Forecasts that treat all four alike get the timing wrong in both directions.
+The practical difference: a ceiling tells you what cannot happen, a verdict tells you what someone currently believes, and a collapsing floor tells you how long your advantage lasts. Forecasts that treat all five rows alike get the timing wrong in both directions.
+
+**Relay + floor together:** energy binds the *build*; inference collapse sets the *moat life* of whatever you built; capital re-prices whether the next build is allowed. → [2026–2028](../04-timelines/2026-2028.md) capex test, [Rates](../09-macro/rates.md) financial governor.
 
 ## The one thing to take from Part I
 
 Data exhaustion forced the frontier onto verifiable-reward training. That produced the asymmetry that runs through this entire document: **capability grows fastest where verification is cheap.** Math, code, and formal reasoning race ahead. Taste, judgment, long-horizon physical interaction, and anything whose ground truth is expensive or contested lag badly.
 
-Every domain prediction in [Part III](../03-domains/) is downstream of that sentence.
+Every domain prediction in [Part III](../03-domains/) is downstream of that sentence. [Uncertainty 5](../06-uncertainties/learned-verification.md) is the claim that would reorder them.
 
 ---
 

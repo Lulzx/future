@@ -66,7 +66,7 @@ Rights and training-data litigation is a **legal** complementary fight ([law](la
 
 | Signal | Reading |
 |---|---|
-| Share of feed content with C2PA / provenance marks | Certification infrastructure real |
+| Share of feed content with C2PA / provenance marks | Certification infrastructure real → [C8](../../07-indicators/governance.md) |
 | Live-event ticket prices vs streaming ARPU | Presence premium |
 | Mid-tier creative employment / rate cards | Barbell middle dying |
 | Platform take rates on AI-assisted creator tools | Who captures surplus |
