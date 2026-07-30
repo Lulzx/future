@@ -146,8 +146,24 @@ Secondary reads:
 - Live-event prices vs streaming ARPU (presence premium)
 - Share of mental-health encounters noting AI companion use ([Medicine — delivery](../03-domains/physical/medicine/delivery.md))
 
+## B12 — Physical diffusion (atoms, not demos)
+
+| | |
+|---|---|
+| **Baseline** | Warehouse/port autonomy rising but teleop-heavy; specialty harvest still human; hub-to-hub driver-out freight pilot-scale, multi-state insurance incomplete |
+| **Cadence** | Quarterly industry reports + regulator filings |
+| **Trigger — warehouse path** | Autonomy share of *unstructured* warehouse pick tasks crosses ~50% (not sortation alone) |
+| **Trigger — freight path** | Driver-out hub-to-hub commercial service on major US corridors with published insurance (not geofenced pilots only) |
+| **Trigger — harvest path** | Specialty crop harvest robots at delivered $/hour competitive with local wage *at scale* (not demos) |
+| **Trigger — lag confirms** | Through 2032, structured environments commercial while last-metre and specialty harvest still labor-bound |
+| **Revises** | [Robotics](../03-domains/physical/robotics/), [Logistics](../03-domains/physical/logistics.md), [Agriculture](../03-domains/physical/agriculture.md), [2032–2040](../04-timelines/2032-2040.md), [Part V](../05-probabilities/) row 5 |
+
+This is the III.B companion to the headline teleoperation ratio. **Prefer delivered work metrics and insurance-enabled routes over unit sales.** Structured-first is the base case; early unstructured success pulls the growth fork forward.
+
+Secondary: port automation share by region (geopolitical capacity); farmland equipment autonomy miles.
+
 ---
 
-**Related:** [Game 3](../02-games/3-firms.md) · [Game 4](../02-games/4-labor.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Part IV — Timelines](../04-timelines/) · [Part IX](../09-macro/) · [Fiscal](../09-macro/fiscal.md)
+**Related:** [Game 3](../02-games/3-firms.md) · [Game 4](../02-games/4-labor.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Robotics](../03-domains/physical/robotics/) · [Part IV — Timelines](../04-timelines/) · [Part IX](../09-macro/) · [Fiscal](../09-macro/fiscal.md)
 
 **Next:** [C — Governance indicators](governance.md)

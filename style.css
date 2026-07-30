@@ -465,6 +465,50 @@ kbd {
   border: 1px solid var(--text-color-alt); padding: 0 0.5ch;
   font-size: 0.8rem; color: var(--text-color-alt);
 }
+
+/* ── find dialog (catalog search) ─────────────────────────────────────── */
+.find-dialog {
+  border: var(--border-thickness) solid var(--text-color);
+  background: var(--background-color); color: var(--text-color);
+  padding: 0; margin: auto;
+  width: min(56ch, calc(100% - 2ch));
+  max-height: min(70vh, 32rem);
+}
+.find-dialog::backdrop {
+  background: color-mix(in srgb, var(--text-color) 35%, transparent);
+}
+.find-form {
+  margin: 0; padding: var(--line-height) 1ch;
+  display: flex; flex-direction: column; gap: calc(var(--line-height) / 2);
+}
+.find-form > * { margin-top: 0; }
+.find-label {
+  font-weight: var(--font-weight-bold); text-transform: uppercase;
+  color: var(--text-color-alt);
+}
+#find-input {
+  font: inherit; color: var(--text-color); background: var(--background-color);
+  border: var(--border-thickness) solid var(--text-color);
+  padding: calc(var(--line-height) / 4) 1ch;
+  width: 100%;
+}
+#find-input:focus { outline: none; background: var(--background-color-alt); }
+.find-results {
+  list-style: none; padding: 0; margin: 0;
+  max-height: min(40vh, 20rem); overflow-y: auto;
+  border-top: var(--border-thickness) solid var(--text-color);
+}
+.find-results li { margin: 0; border-bottom: 1px solid var(--background-color-alt); }
+.find-results a {
+  display: block; padding: calc(var(--line-height) / 4) 0.5ch;
+  border-bottom: none !important; text-decoration: none; color: var(--text-color);
+}
+.find-results li.is-active a,
+.find-results a:hover { background: var(--background-color-alt); }
+.find-title { display: block; font-weight: var(--font-weight-medium); }
+.find-path { display: block; color: var(--text-color-alt); font-size: 0.85rem; }
+.find-empty { padding: var(--line-height) 0.5ch; color: var(--text-color-alt); }
+.find-hint { color: var(--text-color-alt); font-size: 0.85rem; }
 .sr-only {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;

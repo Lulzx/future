@@ -99,7 +99,8 @@ Every content file:
 | 13 | 2026-07-30 | Law+finance+science; notation+dependencies | 82 | 5,353 |
 | 14 | 2026-07-30 | Media+software depth; check-invariants.sh | 82 | 5,459 |
 | 15 | 2026-07-30 | Ag+logistics depth; B11 meaning indicators; energy split deferred | 82 | 5,547 |
-| 16 | 2026-07-30 | [C8](07-indicators/governance.md) provenance; [inference economics](01-substrate/inference-economics.md)+Part I hub; [Games](02-games/)+[thesis](00-overview/thesis.md)/[compressed](00-overview/compressed.md) sync | **82** | **5613** |
+| 16 | 2026-07-30 | C8 provenance; inference+Part I; games/thesis/compressed sync | 82 | 5,613 |
+| 17 | 2026-07-30 | [B12](07-indicators/diffusion.md) physical diffusion; [compute](01-substrate/compute.md)+[data](01-substrate/data.md); reader Find + [catalog.json](catalog.json) | **82** | **5,682** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -109,25 +110,25 @@ Every content file:
 
 **Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
 
-**Round 16:** C8 capture-time provenance vs theatre/enclosure; inference economics tied to capital/software/open weights/falsifiers; Part I hub relay+floor; Games hub cross-links (demography, trap, insurance, meaning); thesis/compressed updated for demography upper bound, trap, meaning, insurance frontier, C8.
+**Round 17:** B12 warehouse/freight/harvest triggers; compute+data consistency; Find UI (`/`, catalog.json refreshed by check-invariants).
 
-*Invariants at r16 close: **82 files, 5613 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
+*Invariants at r17 close: **82 files, 5,682 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
 
 ## 6. Open queue
 
 **High**
 
-1. **Physical diffusion indicators** (warehouse autonomy, specialty harvest, hub-to-hub freight) if Part VII still underweights III.B.
-2. **Compute / data** light consistency pass (same treatment as inference r16).
-3. **Reader UX** — TOC / search if the corpus is hard to navigate at 80+ files.
+1. **Stop / re-score mode** — corpus is broad; prefer Part V annual re-score or falsification over new domains.
+2. **Assets / prices / rates** light sync with B7/B10/B12 if macro lags.
+3. **Archive RESEARCH** history if the log is the main maintenance drag.
 
 **Medium**
-- Archive RESEARCH history; FOAK energy R&D only if energy-sector exceeds soft cap.
+- FOAK energy R&D only past soft cap; harden B12 baselines when public data exists.
 
 **Low**
-- New domains only on clear missing seam (not length padding).
+- Fancy reader features beyond Find.
 
-**Retired (r1–r16):** … + C8; inference/Part I/games/overview sync.
+**Retired (r1–r17):** … + B12; compute/data; catalog Find.
 
 ## 7. Invariants
 

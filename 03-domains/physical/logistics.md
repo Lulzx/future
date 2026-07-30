@@ -71,8 +71,8 @@ Note what that describes: **infrastructure plus proprietary real-time flow data*
 
 | Signal | Reading |
 |---|---|
-| Hub-to-hub autonomous miles without safety driver | Regulatory + insurance gate |
-| Warehouse teleop-to-autonomy ratio | Structured robotics |
+| Hub-to-hub autonomous miles without safety driver | Regulatory + insurance gate → [B12](../../07-indicators/diffusion.md) |
+| Warehouse teleop-to-autonomy ratio | Structured robotics → [B12](../../07-indicators/diffusion.md) |
 | Brokerage headcount / margin vs load volume | White-collar physical compression |
 | Inventory / sales ratios (if resilience not binding) | Working-capital release |
 | Port and yard automation share by region | Geopolitical capacity |

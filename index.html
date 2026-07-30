@@ -29,7 +29,7 @@
       <tr class="keys-row">
         <th class="width-min">Keys</th>
         <td class="width-auto meta">
-          <kbd>←</kbd> <kbd>→</kbd> page · <kbd>t</kbd> theme · <kbd>g</kbd> grid · <kbd>i</kbd> index
+          <kbd>←</kbd> <kbd>→</kbd> page · <kbd>/</kbd> find · <kbd>t</kbd> theme · <kbd>g</kbd> grid · <kbd>i</kbd> index
         </td>
       </tr>
     </tbody>
@@ -46,12 +46,23 @@
     <span class="sb-progress" id="sb-progress" aria-hidden="true"></span>
     <span class="sb-pct" id="sb-pct"></span>
     <span class="sb-actions">
+      <button id="find" type="button" title="Find a page (/)">Find</button>
       <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
       <button id="grid" type="button" aria-pressed="false" title="Show the character grid (g)">Grid</button>
       <button id="src" type="button" title="View this page's markdown source">Src</button>
     </span>
   </div>
 </footer>
+
+<dialog id="find-dialog" class="find-dialog">
+  <form method="dialog" class="find-form" id="find-form">
+    <label class="find-label" for="find-input">Find page</label>
+    <input id="find-input" type="search" autocomplete="off" spellcheck="false"
+      placeholder="Title or path…" aria-controls="find-results">
+    <ul id="find-results" class="find-results" role="listbox"></ul>
+    <p class="find-hint"><kbd>↑</kbd><kbd>↓</kbd> select · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</p>
+  </form>
+</dialog>
 
 <script>
 "use strict";
@@ -578,6 +589,105 @@ document.getElementById("src").addEventListener("click", () => {
   window.open(`${REPO}/blob/main/${currentDoc}`, "_blank", "noopener");
 });
 
+/* ── find / catalog ─────────────────────────────────────────────────────── */
+
+const findDialog = document.getElementById("find-dialog");
+const findInput  = document.getElementById("find-input");
+const findList   = document.getElementById("find-results");
+let catalog = null;
+let findHits = [];
+let findSel = 0;
+
+async function ensureCatalog() {
+  if (catalog) return catalog;
+  const res = await fetch("catalog.json", { cache: "no-cache" });
+  if (!res.ok) throw new Error("catalog.json " + res.status);
+  catalog = await res.json();
+  return catalog;
+}
+
+function scoreEntry(q, entry) {
+  const t = entry.title.toLowerCase();
+  const p = entry.path.toLowerCase();
+  if (t === q || p === q) return 100;
+  if (t.startsWith(q) || p.startsWith(q)) return 80;
+  if (t.includes(q) || p.includes(q)) return 50;
+  const parts = q.split(/\s+/).filter(Boolean);
+  if (parts.length > 1 && parts.every(w => t.includes(w) || p.includes(w))) return 40;
+  return 0;
+}
+
+function renderFindHits() {
+  findList.innerHTML = findHits.map((e, i) =>
+    `<li role="option" class="${i === findSel ? "is-active" : ""}" data-i="${i}">` +
+    `<a href="#/${e.path}"><span class="find-title">${escapeHtml(e.title)}</span>` +
+    `<span class="find-path">${escapeHtml(e.path)}</span></a></li>`
+  ).join("") || `<li class="find-empty">No matches</li>`;
+}
+
+function runFind() {
+  const q = findInput.value.trim().toLowerCase();
+  if (!catalog) return;
+  if (!q) {
+    findHits = catalog.slice(0, 40);
+  } else {
+    findHits = catalog
+      .map(e => ({ e, s: scoreEntry(q, e) }))
+      .filter(x => x.s > 0)
+      .sort((a, b) => b.s - a.s || a.e.path.localeCompare(b.e.path))
+      .slice(0, 40)
+      .map(x => x.e);
+  }
+  findSel = 0;
+  renderFindHits();
+}
+
+async function openFind() {
+  try {
+    await ensureCatalog();
+  } catch (err) {
+    alert("Could not load catalog.json: " + err.message);
+    return;
+  }
+  findInput.value = "";
+  runFind();
+  if (typeof findDialog.showModal === "function") findDialog.showModal();
+  else findDialog.setAttribute("open", "");
+  findInput.focus();
+}
+
+function closeFind() {
+  if (findDialog.open) findDialog.close();
+}
+
+function goFindSel() {
+  const e = findHits[findSel];
+  if (!e) return;
+  closeFind();
+  location.hash = "#/" + e.path;
+}
+
+document.getElementById("find").addEventListener("click", openFind);
+findInput.addEventListener("input", runFind);
+findList.addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (a) closeFind();
+});
+findDialog.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown") {
+    findSel = Math.min(findHits.length - 1, findSel + 1);
+    renderFindHits();
+    e.preventDefault();
+  } else if (e.key === "ArrowUp") {
+    findSel = Math.max(0, findSel - 1);
+    renderFindHits();
+    e.preventDefault();
+  } else if (e.key === "Enter") {
+    goFindSel();
+    e.preventDefault();
+  }
+});
+
 document.addEventListener("keydown", (e) => {
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   const t = e.target;
@@ -588,6 +698,7 @@ document.addEventListener("keydown", (e) => {
   else if (e.key === "t") toggleTheme();
   else if (e.key === "g") toggleGrid();
   else if (e.key === "i") location.hash = "#/" + DEFAULT_DOC;
+  else if (e.key === "/" || e.key === "s") { openFind(); e.preventDefault(); }
 });
 
 load(docFromHash());

@@ -125,6 +125,28 @@ PY
 )
 ok "corpus $counts"
 
+# ── 6. Refresh catalog.json for the reader find UI ─────────────────────────
+python3 - <<'PY'
+from pathlib import Path
+import json, re
+
+def title_of(path: Path) -> str:
+    for line in path.read_text(errors='replace').splitlines():
+        m = re.match(r'^#\s+(.+)$', line.strip())
+        if m:
+            return m.group(1).strip()
+    return path.stem
+
+entries = []
+for p in sorted(Path('.').rglob('*.md')):
+    if any(part.startswith('.') for part in p.parts):
+        continue
+    entries.append({"path": p.as_posix(), "title": title_of(p)})
+Path('catalog.json').write_text(json.dumps(entries, indent=2, ensure_ascii=False) + '\n')
+print(len(entries))
+PY
+ok "catalog.json refreshed"
+
 # ── summary ────────────────────────────────────────────────────────────────
 if [[ "$FAIL" -ne 0 ]]; then
   note ""
