@@ -243,9 +243,9 @@ button:focus-visible { --border-thickness: 3px; outline: none; }
    Everything below is this site's own layer on top of the-monospace-web.   */
 
 /* ── links ───────────────────────────────────────────────────────────────
-   The corpus is dense with cross-references. A full underline on every one
-   turns a page into a hatch pattern, so links carry a faint rule that only
-   resolves to full contrast under the cursor.                             */
+   Every link gets a dotted rule so cross-references read as links even when
+   they sit alone in a list or table cell. Hover resolves the rule to solid
+   and paints the background. Section-anchor hashes (§) stay clean.        */
 a { text-decoration: none; }
 #content a {
   border-bottom: 1px dotted color-mix(in srgb, currentColor 55%, transparent);
@@ -255,21 +255,10 @@ a { text-decoration: none; }
   border-bottom: 1px solid currentColor;
   outline: none;
 }
-/* navigational links — list entries, table cells, headings — carry no rule
-   at all; their position already says they are links. */
-#content li > a:first-child,
-#content td > a:only-child,
-#content th a,
-#content h1 a, #content h2 a, #content h3 a, #content h4 a,
-#content .toc a, #content .pagenav a, #content .nav-up a {
-  border-bottom: none;
-  font-weight: var(--font-weight-medium);
+#content .anchor {
+  border-bottom: none !important;
+  background: none;
 }
-#content li > a:first-child:hover,
-#content td > a:only-child:hover,
-#content .toc a:hover,
-#content .pagenav a:hover,
-#content .nav-up a:hover { background: var(--background-color-alt); }
 
 a[target="_blank"]:after {
   content: "↗"; font-size: .75rem; vertical-align: super;
@@ -292,19 +281,37 @@ a[target="_blank"]:after {
   letter-spacing: -0.02em;
 }
 .masthead .subtitle { display: block; color: var(--text-color-alt); }
-.masthead h1 a { border: none; }
-.masthead h1 a:hover { background: var(--background-color-alt); }
+.masthead h1 a {
+  border-bottom: 1px dotted color-mix(in srgb, currentColor 55%, transparent);
+}
+.masthead h1 a:hover {
+  background: var(--background-color-alt);
+  border-bottom: 1px solid currentColor;
+}
 .masthead .meta { white-space: nowrap; }
 /* the keyboard hints are noise on a touch screen */
 @media screen and (max-width: 640px), (pointer: coarse) {
   .masthead .keys-row { display: none; }
 }
-.masthead .meta a { color: var(--text-color-alt); }
-.masthead .meta a:hover { color: var(--text-color); }
+.masthead .meta a {
+  color: var(--text-color-alt);
+  border-bottom: 1px dotted color-mix(in srgb, currentColor 55%, transparent);
+}
+.masthead .meta a:hover {
+  color: var(--text-color);
+  border-bottom: 1px solid currentColor;
+}
 
 .crumb { color: var(--text-color-alt); word-break: break-all; }
-.crumb a { color: var(--text-color-alt); }
-.crumb a:hover { color: var(--text-color); background: var(--background-color-alt); }
+.crumb a {
+  color: var(--text-color-alt);
+  border-bottom: 1px dotted color-mix(in srgb, currentColor 55%, transparent);
+}
+.crumb a:hover {
+  color: var(--text-color);
+  background: var(--background-color-alt);
+  border-bottom: 1px solid currentColor;
+}
 .crumb .sep { opacity: .5; }
 
 /* ── document chrome ─────────────────────────────────────────────────── */
@@ -323,7 +330,6 @@ a[target="_blank"]:after {
 .anchor {
   color: var(--text-color-alt); opacity: 0;
   margin-left: 1ch; font-weight: var(--font-weight-normal);
-  border: none !important;
 }
 h1:hover .anchor, h2:hover .anchor, h3:hover .anchor,
 h4:hover .anchor, .anchor:focus-visible { opacity: 1; }
@@ -334,7 +340,10 @@ h4:hover .anchor, .anchor:focus-visible { opacity: 1; }
   margin-bottom: 0;
 }
 .nav-up a { color: var(--text-color-alt); }
-.nav-up a:hover { color: var(--text-color); }
+.nav-up a:hover {
+  color: var(--text-color);
+  border-bottom: 1px solid currentColor;
+}
 
 /* the `*Written 2026-07-30…*` dateline */
 .dateline { color: var(--text-color-alt); font-style: italic; }

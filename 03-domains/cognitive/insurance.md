@@ -69,6 +69,6 @@ Reread the domain pages with that substitution. The radiologist's moat is not di
 
 ---
 
-**Related:** [Finance](finance.md) · [Law](law.md) · [Medicine](../physical/medicine.md) · [Game 1 — Labs](../../02-games/1-labs.md) on liability as a safety mechanism · [Governance indicators](../../07-indicators/governance.md) C6
+**Related:** [Finance](finance.md) · [Law](law.md) · [Medicine](../physical/medicine.md) · [Game 1 — Labs](../../02-games/1-labs.md) on liability as a safety mechanism · [Uncertainty 6 — correlated risk](../../06-uncertainties/correlated-risk.md) · [Governance indicators](../../07-indicators/governance.md) C6
 
 **Next:** [III.B — Physical domains](../physical/)

@@ -44,13 +44,16 @@ Sixteen domains in three groups, ordered by the cost of ground truth.
 - [2028–2032](04-timelines/2028-2032.md) — diffusion and the institutional lag
 - [2032–2040](04-timelines/2032-2040.md) — the physical world
 
-### [05 — Subjective Probabilities](05-probabilities/README.md)
-The numbers, stated plainly, with a note on which row is actually operative.
+### [05 — Subjective Probabilities](05-probabilities/)
+The numbers, re-scored against the corpus; [per-row reasoning](05-probabilities/reasoning.md) and [ledger](05-probabilities/ledger.md).
 
 ### [06 — Where This Is Most Likely Wrong](06-uncertainties/)
-- [Recursive research acceleration](06-uncertainties/recursive-self-improvement.md) — highest variance
+- [Recursive research acceleration](06-uncertainties/recursive-self-improvement.md) — highest parameter variance
 - [Power permitting politics](06-uncertainties/power-permitting.md)
 - [The apprenticeship gap after institutions respond](06-uncertainties/apprenticeship-gap.md)
+- [Taiwan / leading-edge fab](06-uncertainties/taiwan.md) — invalidates the document if it fails
+- [Learned verification](06-uncertainties/learned-verification.md) — framework-level risk
+- [Correlated-failure insurability](06-uncertainties/correlated-risk.md) — deployment frontier as balance sheet
 
 ### [07 — The Indicator Dashboard](07-indicators/)
 Every claim above, converted into something checkable on a quarterly cadence.

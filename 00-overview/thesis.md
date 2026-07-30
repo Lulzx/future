@@ -30,7 +30,7 @@ This document is built from physical constraints upward, then the strategic game
 
 ## What would falsify it
 
-Three things, in descending order of variance: a closing recursive-research loop, sudden US permitting reform, and an institutional response to the apprenticeship gap. → [Part VI](../06-uncertainties/)
+The highest-variance parameters: a closing recursive-research loop, sudden US permitting reform, and an institutional response to the apprenticeship gap. The ones that take more of the corpus with them: Taiwanese fab continuity (~90% modelling assumption), learned verification defeating the master asymmetry, and correlated-failure insurability as the real deployment frontier. → [Part VI](../06-uncertainties/)
 
 ---
 

@@ -1,6 +1,6 @@
 # Uncertainty 1 — The speed of recursive research acceleration
 
-*Highest variance of the three.*
+*Highest variance among the parameter uncertainties; see also [Uncertainty 5](learned-verification.md) for the framework-level risk.*
 
 ← [Part VI](README.md) · [Index](../README.md)
 

@@ -90,9 +90,10 @@ Every content file:
 | 4 | 2026-07-30 | [Robotics](03-domains/physical/robotics/) promoted to a directory — the swing variable for the 2030s was 37 lines. Split into [the data problem](03-domains/physical/robotics/data-problem.md), [cost curves](03-domains/physical/robotics/cost-curves.md), [supply chain](03-domains/physical/robotics/supply-chain.md), [form factor](03-domains/physical/robotics/form-factor.md) | 58 | ~3,000 |
 | 5 | 2026-07-30 | [Part IX](09-macro/) — the macro-financial channel, the largest structural hole in the corpus. Rates, prices, assets, fiscal | 63 | 3,180 |
 | 6 | 2026-07-30 | [Geopolitics](03-domains/contested/geopolitics/) promoted to a directory — the non-US, non-China world was one paragraph. [US–China](03-domains/contested/geopolitics/bipolar.md), [India](03-domains/contested/geopolitics/india.md), [Europe](03-domains/contested/geopolitics/europe.md), [Gulf](03-domains/contested/geopolitics/gulf.md), [Global South](03-domains/contested/geopolitics/global-south.md) | 68 | ~3,900 |
-| 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | **69** | **3,615** |
+| 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | 69 | 3,615 |
+| 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | **74** | **4,187** |
 
-*End-state counts are exact; intermediate rounds are approximate, since rounds ran in one sitting.*
+*End-state counts are exact at round close; intermediate rounds are approximate, since rounds ran in one sitting.*
 
 ### Split and revision notes
 
@@ -111,7 +112,13 @@ Every content file:
 1. [Game 4](02-games/4-labor.md)'s aggregate displacement estimate should be read as an **upper bound**. [Demography](09-macro/demography.md) shows the displacement lands in a shrinking labor force, which absorbs it far more easily than the estimate assumed. The *compositional* claim — the apprenticeship gap — survives unchanged and is now a larger share of the total harm than the document previously implied.
 2. [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) now names **three governors on takeoff speed**, only one of which is technical. The fast-takeoff scenarios are over-weighted relative to their technical plausibility, because two of the three constraints on them are not technical and were being left out of the model.
 
-*Invariants §7 verified at the close of round 7: **69 files, 3,615 lines, 0 broken links**, no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks.*
+**Round 8 revisions:**
+
+1. **[Part V](05-probabilities/) re-scored** against rounds 1–7, with every delta written in [reasoning](05-probabilities/reasoning.md) and logged in [ledger](05-probabilities/ledger.md). Net: rows 1 and 6 up on 2030; rows 2, 4, 5 down; rows 3 and 7 held with explicit justification (rule 5, not inertia). Part V promoted to a three-file directory.
+2. **Uncertainties 4–6 promoted into the register** rather than left as asides on regional, steelman, and domain pages. Taiwan is the first uncertainty *not* skewed toward better outcomes. Learned verification is the framework-level risk. Correlated insurability is the deployment-frontier constraint.
+3. **No silent probability inertia.** The re-score is the first compliance with scoring rule 5 since round 0; the prior gap was itself a protocol violation, now closed.
+
+*Invariants §7 verified at the close of round 8: **74 files, 4,187 lines, 0 broken links** (one false positive in the §4 code example), no file over the hard cap, no directory over the 10-file cap, every file reachable from the index in ≤3 clicks. Timeline pages landed at 75–101 lines — under the aspirational ~120, but dense synthesis rather than thin stubs; the §2 caveat applies.*
 
 ## 6. Open queue
 
@@ -119,15 +126,15 @@ Ordered by expected value of the next round's work.
 
 **High** — next round starts here
 
-1. **`04-timelines/` is now unambiguously the weakest part of the corpus.** Three files, ~30 lines each, each carrying more claims than it argues, and the only part with no links to its [indicators](07-indicators/), [macro consequences](09-macro/), or [regional detail](03-domains/contested/geopolitics/). Nine rounds of material have accumulated that these three pages should be synthesizing and don't. Each should be ~120.
-2. **[Part V](05-probabilities/README.md) has not been re-scored since round 0**, which violates [scoring](08-method/scoring.md) rule 5 — a probability that never moves is being defended, not updated. Seven rounds have produced material bearing on rows 1, 2, 5, and 6. It should be re-scored against the current corpus, with every delta justified in writing, and should probably become a directory (the table, the reasoning per row, and the scoring ledger).
-3. **The uncertainties are stale at three.** [Part VI](06-uncertainties/) still lists the original three. Rounds 2–7 surfaced at least three more of comparable variance: Taiwan (named in [bipolar](03-domains/contested/geopolitics/bipolar.md) as the assumption that invalidates everything, at a stated ~90%), learned verification defeating the master asymmetry ([steelman](08-method/steelman.md) §1, the document's own admitted weakest point), and correlated-failure insurability ([insurance](03-domains/cognitive/insurance.md)) as the real deployment frontier.
-4. **Medicine is now the thinnest load-bearing page**, at ~35 lines, in the group where [robotics](03-domains/physical/robotics/) needed four files. Diagnostics, delivery, drug discovery, and the liability moat are four distinct arguments compressed into one page.
+1. **Medicine is now the thinnest load-bearing page**, at ~35 lines, in the group where [robotics](03-domains/physical/robotics/) needed four files. Diagnostics, delivery, drug discovery, and the liability moat are four distinct arguments compressed into one page.
+2. **[Indicators](07-indicators/) have not absorbed rounds 5–8.** Macro (rates, two-economy prices, fiscal), Taiwan, insurance correlation, and the three RSI governors are mostly absent from the dashboard. Family A/B/C tables and the "five that matter most" need a pass so the quarterly cadence still matches the claims.
+3. **Games 1 and 5 are thin relative to their load.** [Labs](02-games/1-labs.md) (~30 lines) and [Information](02-games/5-information.md) under-carry the liability and epistemic-collapse claims that later pages depend on.
 
 **Medium**
 - **The energy industry as a domain**, not just a constraint. [Part I](01-substrate/) treats power as something AI consumes; it is also the sector AI most changes (grid optimization, siting, exploration, fusion/fission R&D).
 - **Meaning, mental health, and relationships.** [Game 5](02-games/5-information.md) covers the epistemic collapse; nothing covers what abundant synthetic companionship and the loss of vocational identity do to people. Genuinely hard to write well, which is why it is missing.
 - **Failure archaeology**, deepening [base rates](08-method/base-rates.md) §4 — what specifically ended each AI winter, in enough detail to be a usable prior.
+- **State capacity** and **warfare** depth relative to the geopolitics directory they now sit beside.
 
 **Low**
 - `notation.md` for recurring shorthand (effective compute, ground-truth cost, inelastic complement, the master asymmetry).
@@ -143,6 +150,9 @@ Ordered by expected value of the next round's work.
 - ~~The non-US, non-China world~~ — round 6, [geopolitics](03-domains/contested/geopolitics/) is now a five-region directory.
 - ~~Demography as counterweight~~ — round 7, [demography](09-macro/demography.md).
 - ~~The financial governor on RSI~~ — round 7, folded into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md).
+- ~~Timelines not synthesizing the corpus~~ — round 8, [Part IV](04-timelines/) expanded.
+- ~~Part V never re-scored~~ — round 8, [ledger](05-probabilities/ledger.md).
+- ~~Uncertainties stuck at three~~ — round 8, six in the register.
 
 ## 7. Invariants
 

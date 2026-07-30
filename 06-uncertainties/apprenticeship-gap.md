@@ -36,4 +36,4 @@ Stabilization means the response is happening. Continued decline means it isn't.
 
 ---
 
-**Previous:** [Uncertainty 2](power-permitting.md) · **Back to:** [Compressed version](../00-overview/compressed.md)
+**Previous:** [Uncertainty 2](power-permitting.md) · **Next:** [Uncertainty 4 — Taiwan](taiwan.md)

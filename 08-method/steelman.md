@@ -4,7 +4,7 @@
 
 ---
 
-[Part VI](../06-uncertainties/) lists three uncertainties the document already concedes. This page is different: these are the arguments that say the **framework** is wrong, not that a parameter in it is mis-set.
+[Part VI](../06-uncertainties/) lists the live uncertainties the document already concedes — parameters and scenarios. This page is different: these are the arguments that say the **framework** is wrong, not that a parameter in it is mis-set.
 
 Each is stated in its strongest form, then answered honestly — including where the answer is weak.
 
@@ -16,7 +16,7 @@ Each is stated in its strongest form, then answered honestly — including where
 
 **The answer.** A learned verifier is only as good as what trained it, so this recurses rather than resolves — it moves the ground-truth problem one level up rather than eliminating it, and where genuine ground truth never arrives, the loop can drift confidently. Self-verification without external grounding is exactly the regime where systematic error compounds invisibly.
 
-**Where the answer is weak.** The same recursion objection applies to human expertise, which is also mostly peer-validated without external ground truth, and human expertise works well enough to run civilization. If learned verification is as good as peer review, that is sufficient for most economic purposes. **This is the most serious objection in the document and it is not resolved.** → [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md)
+**Where the answer is weak.** The same recursion objection applies to human expertise, which is also mostly peer-validated without external ground truth, and human expertise works well enough to run civilization. If learned verification is as good as peer review, that is sufficient for most economic purposes. **This is the most serious objection in the document and it is not resolved.** → [Uncertainty 5](../06-uncertainties/learned-verification.md) (promoted from this section in round 8); interacts with but is distinct from [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md).
 
 ## 2. "The competitive-dissipation result is wrong because these markets aren't competitive"
 

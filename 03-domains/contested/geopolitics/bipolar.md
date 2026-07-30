@@ -43,7 +43,7 @@ Every projection in this document assumes Taiwanese fabrication continues. That 
 - **It is the one scenario that invalidates the entire document**, and unlike the uncertainties in [Part VI](../../../06-uncertainties/), it is not skewed toward better outcomes.
 - **AI cuts both ways on the probability.** Better ISR and autonomous systems make a blockade more detectable and more costly; they also compress decision timelines in exactly the way [Warfare](../warfare.md) identifies as escalatory.
 
-> **Stated so it can be scored:** this document assumes **~90%** no major disruption to Taiwanese leading-edge output through 2032. That is not a confident geopolitical judgment; it is a modelling assumption, and everything downstream inherits it.
+> **Stated so it can be scored:** this document assumes **~90%** no major disruption to Taiwanese leading-edge output through 2032. That is not a confident geopolitical judgment; it is a modelling assumption, and everything downstream inherits it. Promoted to [Uncertainty 4](../../../06-uncertainties/taiwan.md) in round 8 so the register accounts for it.
 
 ## The most likely 2030s configuration
 

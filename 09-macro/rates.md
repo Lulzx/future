@@ -36,7 +36,7 @@ The net effect is genuinely contested, which is why this section argues rather t
 
 **The concentration force is subtle and matters.** If [Game 3](../02-games/3-firms.md) is right that gains accrue to capital and to consumers rather than to labor, then income shifts toward high-savings-propensity holders. Higher aggregate saving pushes rates *down*, partially offsetting the productivity effect. **The distribution of the gains feeds back into the price of capital** — a link almost nothing in the AI-forecasting literature makes. → [Assets](assets.md)
 
-> **Assessment:** a productivity step-up sufficient to raise real rates by more than ~100bp against the demographic tide is **~30%** likely by 2035 — roughly the same as [Part V](../05-probabilities/README.md) row 2, since it is nearly the same claim wearing different clothes. Note what this implies: **the most likely world is one where AI works well enough to matter and rates stay low anyway**, because demographics dominate.
+> **Assessment:** a productivity step-up sufficient to raise real rates by more than ~100bp against the demographic tide is **~30%** likely by 2035 — between [Part V](../05-probabilities/) row 2's 20% by 2030 and 50% by 2040, since it is nearly the same claim wearing different clothes. Note what this implies: **the most likely world is one where AI works well enough to matter and rates stay low anyway**, because demographics dominate.
 
 ## The self-limiting loop, stated properly
 

@@ -36,7 +36,7 @@ Three reasons, and each explains a different absence:
 
 **It is not a market forecast**, and nothing here should be read as one — but note that one page in it, [demography](demography.md), is the opposite of conditional. It is the most certain thing in the entire corpus, and it argues that the labor conclusions elsewhere are too pessimistic in aggregate while leaving the compositional ones intact.
 
- The claims are about *directions and mechanisms* under a stated productivity assumption, and the productivity assumption itself carries only ~25% by 2030 in [Part V](../05-probabilities/README.md) row 2.
+ The claims are about *directions and mechanisms* under a stated productivity assumption, and the productivity assumption itself carries only ~20% by 2030 in [Part V](../05-probabilities/) row 2 (re-scored down from 25% in round 8 — measured TFP is a high bar once quality-adjustment gaps are priced).
 
 The conditional structure matters: **most of this part is what happens if the optimistic case is right.** That is worth working out precisely because the rest of the document spends its length on constraints, and the constrained case has no interesting macro consequences at all — it just looks like the 2010s continuing.
 
