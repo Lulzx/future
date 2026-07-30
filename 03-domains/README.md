@@ -22,7 +22,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 [Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md)
 
 ### [B — Physical](physical/)
-[Medicine](physical/medicine.md) · [Robotics](physical/robotics.md) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
+[Medicine](physical/medicine.md) · [Robotics](physical/robotics/) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
 
 ### [C — Contested](contested/)
 [Geopolitics](contested/geopolitics.md) · [Warfare](contested/warfare.md) · [Cybersecurity](contested/cybersecurity.md) · [Biosecurity](contested/biosecurity.md) · [State capacity](contested/state-capacity.md)
@@ -44,7 +44,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [Agriculture](physical/agriculture.md) | Seasonal — one experiment per year | Land, water, biology's clock | Slow |
 | [Education](cognitive/education.md) | Weak | Childcare, socialization, motivation | Slow, institutional |
 | [Media & culture](cognitive/media.md) | None | Provenance, presence | Now |
-| [Robotics](physical/robotics.md) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
+| [Robotics](physical/robotics/) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
 | [State capacity](contested/state-capacity.md) | Weak | — | The precondition for the rest |
 | [Geopolitics](contested/geopolitics.md) | N/A | — | 2030s structural break |
 

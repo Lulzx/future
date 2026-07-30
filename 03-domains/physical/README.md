@@ -13,7 +13,7 @@ This is where the [master asymmetry](../../01-substrate/data.md) bites hardest. 
 | Domain | Ground truth | Human moat | Timing |
 |---|---|---|---|
 | [Medicine](medicine.md) | Mixed — cheap in imaging, expensive in outcomes | Licensure, liability, hands, procedure | Consumer now; institutional slow |
-| [Robotics](robotics.md) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
+| [Robotics](robotics/) | Expensive; no internet of manipulation | Everything unstructured | 2032–2040 |
 | [Agriculture](agriculture.md) | Seasonal — one experiment per year | Land, water, biology's clock | Slow and underrated |
 | [Logistics](logistics.md) | Cheap in planning, expensive in execution | The last hundred metres | Planning now; handling 2030s |
 
@@ -23,7 +23,7 @@ This is where the [master asymmetry](../../01-substrate/data.md) bites hardest. 
 
 **The division of labor is the same everywhere: planning compresses, handling does not.** Route optimization, treatment planning, yield modeling, and warehouse scheduling are all essentially solved problems that were merely expensive. Picking up an unfamiliar object, palpating an abdomen, and pruning a vine are not, and they are the parts that consume most of the labor hours.
 
-**Whether this group moves in the 2030s is the single largest open question in the document.** Everything in [Part III.A](../cognitive/) is priced in; the growth-rate consequences of AI depend almost entirely on whether the domains here follow. → [Robotics](robotics.md), [2032–2040](../../04-timelines/2032-2040.md)
+**Whether this group moves in the 2030s is the single largest open question in the document.** Everything in [Part III.A](../cognitive/) is priced in; the growth-rate consequences of AI depend almost entirely on whether the domains here follow. → [Robotics](robotics/), [2032–2040](../../04-timelines/2032-2040.md)
 
 ---
 

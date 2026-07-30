@@ -22,7 +22,7 @@ The parts that don't need the seasonal loop:
 ## What is not, and won't quickly
 
 - **Agronomic decision-making** — the seasonal-loop problem above. Simulation helps and is improving, but crop models are calibrated against the same scarce field trials, so simulation inherits the data scarcity rather than escaping it.
-- **Specialty crop harvesting.** Strawberries, asparagus, tree fruit, and vine crops require delicate manipulation of deformable objects in unstructured, occluded environments — the hardest open problem in [robotics](robotics.md), attached to the lowest-margin employer of the most vulnerable labor force. That combination is why it stays unsolved.
+- **Specialty crop harvesting.** Strawberries, asparagus, tree fruit, and vine crops require delicate manipulation of deformable objects in unstructured, occluded environments — the hardest open problem in [robotics](robotics/), attached to the lowest-margin employer of the most vulnerable labor force. That combination is why it stays unsolved.
 - **Breeding cycles.** Genomic prediction is genuinely improving, but the validation still requires growing the plant. Biology sets the clock.
 
 ## The economics are the real constraint
@@ -50,6 +50,6 @@ That is the pattern the whole document keeps producing: **the technology arrives
 
 ---
 
-**Related:** [Robotics](robotics.md) on the manipulation bottleneck · [Logistics](logistics.md) · [Game 3 — Firms](../../02-games/3-firms.md) on why producers don't capture it · [Geopolitics](../contested/geopolitics.md)
+**Related:** [Robotics](robotics/) on the manipulation bottleneck · [Logistics](logistics.md) · [Game 3 — Firms](../../02-games/3-firms.md) on why producers don't capture it · [Geopolitics](../contested/geopolitics.md)
 
 **Next:** [Logistics](logistics.md)

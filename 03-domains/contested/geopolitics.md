@@ -13,7 +13,7 @@ The post-1980 growth model runs: **cheap labor → export manufacturing → serv
 Both middle rungs are under simultaneous attack:
 
 - **AI eats the BPO/IT-services rung** — now, in this decade.
-- **Robotics eventually eats the manufacturing rung** and enables reshoring — 2030s, per [Robotics](../physical/robotics.md).
+- **Robotics eventually eats the manufacturing rung** and enables reshoring — 2030s, per [Robotics](../physical/robotics/).
 
 This has never happened before. Previous technology waves moved the ladder or raised the height of each rung; they did not remove two adjacent rungs within fifteen years of each other. Every country currently mid-climb is affected, and the ones furthest along are most exposed because they specialized hardest.
 
@@ -37,4 +37,4 @@ The pivot is expensive and unpopular and has to begin before the crisis is legib
 
 ---
 
-**Related:** [Energy](../../01-substrate/energy.md) on who can build capacity · [Robotics](../physical/robotics.md) · [Game 2 — Nations](../../02-games/2-nations.md)
+**Related:** [Energy](../../01-substrate/energy.md) on who can build capacity · [Robotics](../physical/robotics/) · [Game 2 — Nations](../../02-games/2-nations.md)

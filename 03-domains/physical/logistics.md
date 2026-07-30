@@ -35,7 +35,7 @@ What gates it is **liability and jurisdiction**, not capability. A truck crosses
 
 Everything from the delivery vehicle to the door is the hard part: stairs, gates, dogs, apartment buildings, packages that must not be left in the rain, and a recipient who may or may not be present. It has no structure, no repetition, and no cheap ground truth.
 
-This is the same wall as [specialty crop harvesting](agriculture.md) and general-purpose [manipulation](robotics.md). **The economy's physical labor is concentrated in exactly the interactions that are hardest to learn**, which is the central reason the [2032–2040](../../04-timelines/2032-2040.md) period is uncertain rather than the 2026–2032 one.
+This is the same wall as [specialty crop harvesting](agriculture.md) and general-purpose [manipulation](robotics/). **The economy's physical labor is concentrated in exactly the interactions that are hardest to learn**, which is the central reason the [2032–2040](../../04-timelines/2032-2040.md) period is uncertain rather than the 2026–2032 one.
 
 ## Supply chains as an information problem
 
@@ -55,6 +55,6 @@ Note what that describes: **infrastructure plus proprietary real-time flow data*
 
 ---
 
-**Related:** [Robotics](robotics.md) on manipulation · [Agriculture](agriculture.md) · [Insurance](../cognitive/insurance.md) on the deployment frontier · [Geopolitics](../contested/geopolitics.md) · [2032–2040](../../04-timelines/2032-2040.md)
+**Related:** [Robotics](robotics/) on manipulation · [Agriculture](agriculture.md) · [Insurance](../cognitive/insurance.md) on the deployment frontier · [Geopolitics](../contested/geopolitics.md) · [2032–2040](../../04-timelines/2032-2040.md)
 
 **Next:** [III.C — Contested domains](../contested/)

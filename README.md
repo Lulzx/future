@@ -34,7 +34,7 @@ Five strategic structures that determine behavior given the substrate.
 ### [03 — Domain by Domain](03-domains/)
 Sixteen domains in three groups, ordered by the cost of ground truth.
 - [**A — Cognitive**](03-domains/cognitive/) — output is symbols: [software](03-domains/cognitive/software.md) · [law](03-domains/cognitive/law.md) · [finance](03-domains/cognitive/finance.md) · [science](03-domains/cognitive/science.md) · [education](03-domains/cognitive/education.md) · [media](03-domains/cognitive/media.md) · [insurance](03-domains/cognitive/insurance.md)
-- [**B — Physical**](03-domains/physical/) — output is atoms: [medicine](03-domains/physical/medicine.md) · [robotics](03-domains/physical/robotics.md) · [agriculture](03-domains/physical/agriculture.md) · [logistics](03-domains/physical/logistics.md)
+- [**B — Physical**](03-domains/physical/) — output is atoms: [medicine](03-domains/physical/medicine.md) · [robotics](03-domains/physical/robotics/) · [agriculture](03-domains/physical/agriculture.md) · [logistics](03-domains/physical/logistics.md)
 - [**C — Contested**](03-domains/contested/) — an adversary optimizes against you: [geopolitics](03-domains/contested/geopolitics.md) · [warfare](03-domains/contested/warfare.md) · [cybersecurity](03-domains/contested/cybersecurity.md) · [biosecurity](03-domains/contested/biosecurity.md) · [state capacity](03-domains/contested/state-capacity.md)
 
 ### [04 — Timelines](04-timelines/)
@@ -62,6 +62,13 @@ Where the numbers come from, and how to tell when this is wrong rather than earl
 - [Steelman](08-method/steelman.md) — the three strongest arguments against the framework itself
 - [Scoring](08-method/scoring.md) — resolution rules, and the five ways this document will try to dodge
 
+### [09 — The Macro-Financial Channel](09-macro/)
+What happens to rates, prices, assets, and the tax base if any of this is true.
+- [Rates and returns](09-macro/rates.md) — why success is self-limiting
+- [Prices and the two economies](09-macro/prices.md) — the defining political-economy fact of the 2030s
+- [Assets and distribution](09-macro/assets.md) — six of the seven inelastic complements are owned by capital
+- [Fiscal](09-macro/fiscal.md) — a tax base built on labor income, meeting an economy that uses less of it
+
 ---
 
 ## Indicators to watch
@@ -72,7 +79,7 @@ The five that matter most. Full dashboard with trigger values in [Part VII](07-i
 |---|---|---|
 | Entry-level : senior posting ratio in knowledge professions | The leading edge of the labor transition | [Game 4](02-games/4-labor.md) |
 | Internal research cycle time per validated experiment | Whether the RSI loop is closing | [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) |
-| Teleoperation-to-autonomy ratios in deployed robots | Real robotics progress, vs. demo videos | [Robotics](03-domains/physical/robotics.md) |
+| Teleoperation-to-autonomy ratios in deployed robots | Real robotics progress, vs. demo videos | [Robotics](03-domains/physical/robotics/) |
 | AI revenue run-rate vs. capex | Whether the 2027–29 correction lands | [Compute](01-substrate/compute.md) |
 | Grid interconnection queue length | Whether the energy ceiling is loosening | [Energy](01-substrate/energy.md) |
 
