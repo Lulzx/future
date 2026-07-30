@@ -14,7 +14,7 @@ These test the central timeline claim: that from ~2028 the binding constraint is
 
 | | |
 |---|---|
-| **Baseline** | Entry-level ~7% of large-tech new hires (2024); recent-grad unemployment ~5.7% vs ~4.5% historical; 22–25 year-olds in exposed occupations −16% relative employment |
+| **Baseline** | Entry-level ~7% of large-tech new hires (2024); recent-grad unemployment 5.6% (Mar 2026, NY Fed) vs ~4.3% overall; US entry-level postings −35% since early 2023; 22–25 year-olds in exposed occupations −16% relative employment |
 | **Trigger — structural** | Ratio fails to recover when aggregate white-collar hiring recovers |
 | **Trigger — cyclical** | Ratio recovers within two quarters of aggregate hiring |
 | **Revises** | [Game 4](../02-games/4-labor.md), [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md), [Education](../03-domains/cognitive/education.md) |

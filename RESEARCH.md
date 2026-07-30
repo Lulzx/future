@@ -83,45 +83,29 @@ Every content file:
 
 | Round | Date | Focus | Files after | Lines after |
 |---|---|---|---|---|
-| 0 | 2026-07-30 | Initial corpus — substrate, games, domains, timelines, probabilities, uncertainties | 34 | 1,195 |
-| 1 | 2026-07-30 | Filled the declared-but-missing fourth input ([capital](01-substrate/capital.md)); re-grounded [energy](01-substrate/energy.md) and [labor](02-games/4-labor.md) against mid-2026 data; promoted the root indicator table into [Part VII](07-indicators/) with trigger values | 40 | ~1,800 |
-| 2 | 2026-07-30 | Domain breadth — [insurance](03-domains/cognitive/insurance.md), [agriculture](03-domains/physical/agriculture.md), [logistics](03-domains/physical/logistics.md), [cybersecurity](03-domains/contested/cybersecurity.md), [biosecurity](03-domains/contested/biosecurity.md), [state capacity](03-domains/contested/state-capacity.md). `03-domains/` hit the 10-file cap and split into cognitive / physical / contested, with all inbound links rewritten | 49 | ~2,100 |
-| 3 | 2026-07-30 | Method and falsifiability — [Part VIII](08-method/): reference classes, the three strongest arguments against the framework, resolution rules and the five dodges. Added [Part 0 hub](00-overview/README.md) | 54 | 2,568 |
-| 4 | 2026-07-30 | [Robotics](03-domains/physical/robotics/) promoted to a directory — the swing variable for the 2030s was 37 lines. Split into [the data problem](03-domains/physical/robotics/data-problem.md), [cost curves](03-domains/physical/robotics/cost-curves.md), [supply chain](03-domains/physical/robotics/supply-chain.md), [form factor](03-domains/physical/robotics/form-factor.md) | 58 | ~3,000 |
-| 5 | 2026-07-30 | [Part IX](09-macro/) — the macro-financial channel, the largest structural hole in the corpus. Rates, prices, assets, fiscal | 63 | 3,180 |
-| 6 | 2026-07-30 | [Geopolitics](03-domains/contested/geopolitics/) promoted to a directory — the non-US, non-China world was one paragraph. [US–China](03-domains/contested/geopolitics/bipolar.md), [India](03-domains/contested/geopolitics/india.md), [Europe](03-domains/contested/geopolitics/europe.md), [Gulf](03-domains/contested/geopolitics/gulf.md), [Global South](03-domains/contested/geopolitics/global-south.md) | 68 | ~3,900 |
-| 7 | 2026-07-30 | [Demography](09-macro/demography.md) integrated as the counterweight to [Game 4](02-games/4-labor.md); the financial governor folded back into [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) | 69 | 3,615 |
-| 8 | 2026-07-30 | [Timelines](04-timelines/) synthesized against rounds 1–7; [Part V](05-probabilities/) re-scored and promoted (table + reasoning + ledger); uncertainties 4–6 added ([Taiwan](06-uncertainties/taiwan.md), [learned verification](06-uncertainties/learned-verification.md), [correlated risk](06-uncertainties/correlated-risk.md)) | 74 | 4,187 |
-| 9 | 2026-07-30 | [Medicine](03-domains/physical/medicine/) promoted (diagnostics / delivery / drug-discovery / liability); [indicators](07-indicators/) absorb macro, Taiwan, insurance, RSI governors; [Game 1](02-games/1-labs.md) and [Game 5](02-games/5-information.md) expanded | 78 | 4,573 |
-| 10 | 2026-07-30 | [Energy sector](03-domains/physical/energy-sector.md); [meaning](03-domains/cognitive/meaning.md); [warfare](03-domains/contested/warfare.md) + [state capacity](03-domains/contested/state-capacity.md) depth | 80 | 4,874 |
-| 11 | 2026-07-30 | Winter archaeology; Game 2 pass; B10 fiscal indicator | 80 | 4,956 |
-| 12 | 2026-07-30 | Cyber+bio depth; education×meaning; Part V commentary hold | 80 | 5,084 |
-| 13 | 2026-07-30 | Law+finance+science; notation+dependencies | 82 | 5,353 |
-| 14 | 2026-07-30 | Media+software depth; check-invariants.sh | 82 | 5,459 |
-| 15 | 2026-07-30 | Ag+logistics depth; B11 meaning indicators; energy split deferred | 82 | 5,547 |
+| 0–15 | 2026-07-30 | Bootstrap through domain breadth, promotions, and depth passes — archived in [HISTORY.md](HISTORY.md) | 82 | 5,547 |
 | 16 | 2026-07-30 | C8 provenance; inference+Part I; games/thesis/compressed sync | 82 | 5,613 |
 | 17 | 2026-07-30 | [B12](07-indicators/diffusion.md) physical diffusion; [compute](01-substrate/compute.md)+[data](01-substrate/data.md); reader Find + [catalog.json](catalog.json) | 82 | 5,683 |
 | 18 | 2026-07-30 | Re-score mode: [register](05-probabilities/register.md) of 16 distributed probabilities (invariant-4 closure); r13–17 hold pass in [ledger](05-probabilities/ledger.md); prices/assets ↔ B7/B12 sync | 83 | 5,762 |
-| 19 | 2026-07-30 | Stamped the two flagged predictions — [energy](01-substrate/energy.md) 2029 (~65%), [agriculture](03-domains/physical/agriculture.md) 2032 (~70%) — with written rationale at source; register rows added | **83** | **5,759** |
+| 19 | 2026-07-30 | Stamped the two flagged predictions — [energy](01-substrate/energy.md) 2029 (~65%), [agriculture](03-domains/physical/agriculture.md) 2032 (~70%) — with written rationale at source; register rows added | 83 | 5,759 |
+| 20 | 2026-07-30 | First live Ground pass: [B1](07-indicators/diffusion.md) refreshed to Mar-2026 NY Fed data; PJM +76% y/y added to [energy](01-substrate/energy.md); Intersect $4.75B confirmed. Round log 0–15 archived to [HISTORY.md](HISTORY.md) | **84** | **5,781** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
 ### Split and revision notes
 
-**Splits:** r2 domain groups; r4 robotics; r6 geopolitics; r8 Part V; r9 medicine.
+**Splits and early revisions (r1–r15):** archived in [HISTORY.md](HISTORY.md).
 
-**Revisions (rule 5):** r3 Game 3 scope; r7 labor+RSI; r8 Part V numbers; r12 Part V hold.
+**Round 20:** the Ground step ran against live sources for the first time. Verified exactly: Intersect $4.75B (announced 2025-12-22, closing H1 2026); the +267% wholesale figure (Bloomberg node analysis, 2020–25), now paired with the fresher PJM +76% y/y print with datacenter load named as primary driver by the market monitor. Refreshed: B1 baseline to NY Fed March 2026 (recent-grad unemployment 5.6% vs ~4.3% overall; entry-level postings −35% since early 2023). No grounded quantity contradicted an argument — the numbers moved within the direction the corpus already claimed.
 
-**Round 19:** closed the r18 flags. Energy 2029 stamped ~65% — mostly extrapolation of committed capital, miss scenario is grid reform, not intent reversal. Agriculture 2032 stamped ~70% — the capture half rides a two-century base rate, the measurement half carries the risk. Both stamps carry their rationale at source per the register's same-round rule. The register now has no unstamped entries; every scoreable claim in the corpus carries a confidence number.
-
-*Invariants at r19 close: **83 files, 5,759 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
+*Invariants at r20 close: **84 files, 5,781 lines, 0 broken links** — [check-invariants.sh](check-invariants.sh).*
 
 ## 6. Open queue
 
 **High**
 
 1. **Stay in re-score mode** — next Part V pass when real time has passed or an indicator trigger fires, not before; new domains only on demonstrated need.
-2. **Archive RESEARCH** history if the log is the main maintenance drag.
+2. **Quarterly Ground cadence** — repeat the r20 live-source pass on A/B/C indicator baselines; next natural window Q4 2026.
 
 **Medium**
 - FOAK energy R&D only past soft cap; harden B12 baselines when public data exists.
@@ -129,7 +113,7 @@ Every content file:
 **Low**
 - Fancy reader features beyond Find.
 
-**Retired (r1–r19):** … + B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps.
+**Retired (r1–r20):** … + B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass.
 
 ## 7. Invariants
 

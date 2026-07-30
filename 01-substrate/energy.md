@@ -50,7 +50,7 @@ This changes who the players are. **A frontier lab is becoming a power company w
 
 ## The political economy of the electricity bill
 
-The constraint has a consumer-facing side that will dominate the politics well before it dominates the engineering. Wholesale electricity costs near US datacenter concentrations have risen sharply — on the order of **+267%** at the most affected nodes.
+The constraint has a consumer-facing side that will dominate the politics well before it dominates the engineering. Wholesale electricity costs near US datacenter concentrations have risen sharply — on the order of **+267%** at the most affected nodes (2020–25), and on PJM, the largest US market, average wholesale cost rose **~76% year-on-year** into early 2026 with the market monitor naming datacenter load growth as the primary driver.
 
 That number is the seed of the backlash. The mechanism is simple and hard to argue against in public: a large inflexible load arrives in a constrained market, clears at the top of the supply stack, and every ratepayer in the zone sees it on their bill. The benefits are national and diffuse; the costs are local and itemized monthly.
 
