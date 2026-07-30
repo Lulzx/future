@@ -1,14 +1,22 @@
 # The Next Fifteen Years, From First Principles
 
+A forecast of AI and the world economy through 2040: one argument across ~100,000 words and 90 pages, with scored probabilities, named falsifiers, and a quarterly indicator dashboard.
+
 *Written 2026-07-30. Quantities reflect knowledge through mid-2026. Probabilities are subjective.*
 
-**Read it at [future.lulzx.space](https://future.lulzx.space)** - every page is pre-rendered static HTML (`build.mjs`, no dependencies), and the raw markdown stays published at the same path (`thesis.html` ↔ `thesis.md`).
+**Read it at [future.lulzx.space](https://future.lulzx.space)**. Short on time? Start with [the compressed version](00-overview/compressed.md).
 
 Built from physical constraints upward, then the strategic games that sit on top of them, then domain by domain, then timelines.
 
 The argument has one spine: **capability grows fastest where verification is cheap, and value accrues to whatever intelligence cannot manufacture.** Everything below is a consequence of those two sentences colliding with physics, capital, and incentives.
 
-Three design choices distinguish this from most AI forecasting, and each is load-bearing. First, it is built **bottom-up from constraints** rather than top-down from capabilities: instead of asking "what will models be able to do," it asks what the four physical inputs permit, and lets capability fall out as a residual. Constraint-first reasoning is harder to bend toward a preferred conclusion, because queues, order books, and capex guidance are checkable in a way that vibes about model quality are not. Second, every major claim is paired with **a way to catch it failing** - a falsifier in [Part VI](06-uncertainties/), an indicator in [Part VII](07-indicators/), or a scored probability in [Part V](05-probabilities/). A forecast that cannot be caught failing is marketing. Third, it is **one argument, not a scenario fan**: rather than hedging across futures, it commits to a single causal chain and then attacks that chain in the open ([steelman](08-method/steelman.md), [uncertainties](06-uncertainties/)). The cost of that choice is brittleness where the chain is wrong; the [dependency index](00-overview/dependencies.md) exists so that a break propagates honestly instead of being patched leaf by leaf.
+Three design choices distinguish this from most AI forecasting, and each is load-bearing:
+
+1. **Bottom-up from constraints**, not top-down from capabilities. Instead of asking "what will models be able to do," it asks what the four physical inputs permit, and lets capability fall out as a residual. Constraint-first reasoning is harder to bend toward a preferred conclusion, because queues, order books, and capex guidance are checkable in a way that vibes about model quality are not.
+
+2. **Every major claim is paired with a way to catch it failing** - a falsifier in [Part VI](06-uncertainties/), an indicator in [Part VII](07-indicators/), or a scored probability in [Part V](05-probabilities/). A forecast that cannot be caught failing is marketing.
+
+3. **One argument, not a scenario fan.** Rather than hedging across futures, it commits to a single causal chain and then attacks that chain in the open ([steelman](08-method/steelman.md), [uncertainties](06-uncertainties/)). The cost of that choice is brittleness where the chain is wrong; the [dependency index](00-overview/dependencies.md) exists so that a break propagates honestly instead of being patched leaf by leaf.
 
 ---
 
@@ -97,4 +105,4 @@ The five that matter most. Full dashboard with trigger values in [Part VII](07-i
 
 *Read linearly by following the **Next** link at the foot of each page, starting from [Thesis](00-overview/thesis.md).*
 
-*This corpus is maintained by a repeating review-and-expand loop. See the [autoresearch protocol](RESEARCH.md) for thresholds, split rules, the round log, and the open queue. Run `./check-invariants.sh` to verify links, caps, and nav headers. On the site: press `/` or use **Find** to search all pages.*
+*This corpus is maintained by a repeating review-and-expand loop; see the [autoresearch protocol](RESEARCH.md). On the site: press `/` or use **Find** to search all pages.*
