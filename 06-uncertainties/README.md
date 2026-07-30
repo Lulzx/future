@@ -27,3 +27,5 @@ I have deliberately left both sides of this in rather than resolving it. It is g
 ---
 
 **Start with:** [Uncertainty 1 — recursive research acceleration](recursive-self-improvement.md)
+
+**Next:** [Part VII — The Indicator Dashboard](../07-indicators/), which turns all three of these into things you can actually check.

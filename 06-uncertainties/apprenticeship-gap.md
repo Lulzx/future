@@ -22,7 +22,7 @@ That is the correct default — no institution currently internalizes the cost �
 
 That last one is the genuinely interesting possibility.
 
-The pessimistic case assumes expertise requires roughly the same number of hours it always has, and that AI has removed the hours. But the hours were never the point — the point was the feedback. If AI can provide dense, expert-quality feedback on work at a volume no human mentor ever could ([Bloom's 2-sigma](../03-domains/education.md), applied to professional formation rather than schooling), the novice→expert pathway might get *shorter*, not broken.
+The pessimistic case assumes expertise requires roughly the same number of hours it always has, and that AI has removed the hours. But the hours were never the point — the point was the feedback. If AI can provide dense, expert-quality feedback on work at a volume no human mentor ever could ([Bloom's 2-sigma](../03-domains/cognitive/education.md), applied to professional formation rather than schooling), the novice→expert pathway might get *shorter*, not broken.
 
 That would not merely mitigate the gap. It would invert the whole prediction: expertise becomes cheaper to produce at exactly the moment it becomes scarcer, and the shortage self-corrects.
 

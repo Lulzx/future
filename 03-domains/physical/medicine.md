@@ -1,6 +1,6 @@
 # Medicine
 
-← [Part III](README.md) · [Index](../README.md)
+← [III.B — Physical](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -28,8 +28,8 @@ Real acceleration in target identification and structure prediction. But **~60% 
 
 > Expect **~20–30% cost reduction in preclinical**, and minimal change to the 10-year, $2B clinical gauntlet before ~2032.
 
-The rate limiter is wet-lab throughput and trial recruitment — which is why **automated labs matter more than better models.** Same conclusion as [Science](science.md), for the same reason.
+The rate limiter is wet-lab throughput and trial recruitment — which is why **automated labs matter more than better models.** Same conclusion as [Science](../cognitive/science.md), for the same reason.
 
 ---
 
-**Related:** [Science](science.md) · [Data](../01-substrate/data.md) on ground-truth cost · [Game 3](../02-games/3-firms.md) on licensure as an inelastic complement
+**Related:** [Science](../cognitive/science.md) · [Data](../../01-substrate/data.md) on ground-truth cost · [Game 3](../../02-games/3-firms.md) on licensure as an inelastic complement

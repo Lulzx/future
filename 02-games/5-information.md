@@ -55,4 +55,4 @@ All four converge because all four are downstream of generation becoming free. T
 
 ---
 
-**Related:** [Media & culture](../03-domains/media.md) · [Education](../03-domains/education.md) · [Compressed version](../00-overview/compressed.md)
+**Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Compressed version](../00-overview/compressed.md)

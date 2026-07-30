@@ -13,12 +13,14 @@ The argument has one spine: **capability grows fastest where verification is che
 ### [00 — Overview](00-overview/)
 - [Thesis](00-overview/thesis.md) — the argument in one page
 - [The compressed version](00-overview/compressed.md) — if you read nothing else
+- [Reading orders](00-overview/README.md) — linear, argument-first, sceptic-first, operator-first
 
 ### [01 — The Physical Substrate](01-substrate/)
 What actually constrains this. Four inputs, four different ceilings.
 - [Compute](01-substrate/compute.md) — scaling curves and the capex wall
 - [Energy](01-substrate/energy.md) — the constraint that bites before capital does
 - [Data](01-substrate/data.md) — exhaustion and the verification asymmetry
+- [Capital](01-substrate/capital.md) — not a ceiling but a verdict, and the only input that can reverse
 - [Inference economics](01-substrate/inference-economics.md) — the two-year moat
 
 ### [02 — The Games](02-games/)
@@ -30,7 +32,10 @@ Five strategic structures that determine behavior given the substrate.
 - [Game 5 — Information](02-games/5-information.md): the collapse of costly signaling
 
 ### [03 — Domain by Domain](03-domains/)
-[Software](03-domains/software.md) · [Medicine](03-domains/medicine.md) · [Science](03-domains/science.md) · [Law](03-domains/law.md) · [Finance](03-domains/finance.md) · [Education](03-domains/education.md) · [Manufacturing & robotics](03-domains/robotics.md) · [Geopolitics & development](03-domains/geopolitics.md) · [Media & culture](03-domains/media.md) · [Warfare](03-domains/warfare.md)
+Sixteen domains in three groups, ordered by the cost of ground truth.
+- [**A — Cognitive**](03-domains/cognitive/) — output is symbols: [software](03-domains/cognitive/software.md) · [law](03-domains/cognitive/law.md) · [finance](03-domains/cognitive/finance.md) · [science](03-domains/cognitive/science.md) · [education](03-domains/cognitive/education.md) · [media](03-domains/cognitive/media.md) · [insurance](03-domains/cognitive/insurance.md)
+- [**B — Physical**](03-domains/physical/) — output is atoms: [medicine](03-domains/physical/medicine.md) · [robotics](03-domains/physical/robotics.md) · [agriculture](03-domains/physical/agriculture.md) · [logistics](03-domains/physical/logistics.md)
+- [**C — Contested**](03-domains/contested/) — an adversary optimizes against you: [geopolitics](03-domains/contested/geopolitics.md) · [warfare](03-domains/contested/warfare.md) · [cybersecurity](03-domains/contested/cybersecurity.md) · [biosecurity](03-domains/contested/biosecurity.md) · [state capacity](03-domains/contested/state-capacity.md)
 
 ### [04 — Timelines](04-timelines/)
 - [2026–2028](04-timelines/2026-2028.md) — the agentic transition and the capex test
@@ -45,18 +50,34 @@ The numbers, stated plainly, with a note on which row is actually operative.
 - [Power permitting politics](06-uncertainties/power-permitting.md)
 - [The apprenticeship gap after institutions respond](06-uncertainties/apprenticeship-gap.md)
 
+### [07 — The Indicator Dashboard](07-indicators/)
+Every claim above, converted into something checkable on a quarterly cadence.
+- [A — Substrate](07-indicators/substrate.md): are the ceilings binding on schedule?
+- [B — Diffusion](07-indicators/diffusion.md): is it actually reaching the economy?
+- [C — Governance](07-indicators/governance.md): which architecture do we get, and when?
+
+### [08 — Method](08-method/)
+Where the numbers come from, and how to tell when this is wrong rather than early.
+- [Base rates](08-method/base-rates.md) — the reference classes underneath every estimate
+- [Steelman](08-method/steelman.md) — the three strongest arguments against the framework itself
+- [Scoring](08-method/scoring.md) — resolution rules, and the five ways this document will try to dodge
+
 ---
 
 ## Indicators to watch
+
+The five that matter most. Full dashboard with trigger values in [Part VII](07-indicators/).
 
 | Indicator | What it tells you | Detail |
 |---|---|---|
 | Entry-level : senior posting ratio in knowledge professions | The leading edge of the labor transition | [Game 4](02-games/4-labor.md) |
 | Internal research cycle time per validated experiment | Whether the RSI loop is closing | [Uncertainty 1](06-uncertainties/recursive-self-improvement.md) |
-| Teleoperation-to-autonomy ratios in deployed robots | Real robotics progress, vs. demo videos | [Robotics](03-domains/robotics.md) |
+| Teleoperation-to-autonomy ratios in deployed robots | Real robotics progress, vs. demo videos | [Robotics](03-domains/physical/robotics.md) |
 | AI revenue run-rate vs. capex | Whether the 2027–29 correction lands | [Compute](01-substrate/compute.md) |
 | Grid interconnection queue length | Whether the energy ceiling is loosening | [Energy](01-substrate/energy.md) |
 
 ---
 
 *Read linearly by following the **Next** link at the foot of each page, starting from [Thesis](00-overview/thesis.md).*
+
+*This corpus is maintained by a repeating review-and-expand loop. See the [autoresearch protocol](RESEARCH.md) for thresholds, split rules, the round log, and the open queue.*

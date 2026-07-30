@@ -1,6 +1,6 @@
 # Law
 
-← [Part III](README.md) · [Index](../README.md)
+← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -20,8 +20,8 @@ Worse, the leverage model compounds it: BigLaw profitability requires a pyramid 
 
 ## The pattern
 
-Same as [medicine](medicine.md): the analytical layer compresses, the accountability layer does not. What survives is not what is hardest to do — it is what someone must be answerable for.
+Same as [medicine](../physical/medicine.md): the analytical layer compresses, the accountability layer does not. What survives is not what is hardest to do — it is what someone must be answerable for.
 
 ---
 
-**Related:** [Game 4 — the apprenticeship gap](../02-games/4-labor.md) · [Game 3](../02-games/3-firms.md) on liability capacity as an inelastic complement
+**Related:** [Game 4 — the apprenticeship gap](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) on liability capacity as an inelastic complement

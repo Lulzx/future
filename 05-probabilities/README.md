@@ -28,7 +28,7 @@ Planning that treats the tail risk as the main risk gets the sequencing wrong. T
 
 - Row 1 tracks [the agentic transition](../04-timelines/2026-2028.md) — note it is heavily qualified by [verification cost](../01-substrate/data.md); "most tasks" arrives much earlier in verifiable domains.
 - Row 2 is the [J-curve](../04-timelines/2028-2032.md) resolving. The 2030 number is low because organizational redesign is slow, not because the technology is.
-- Row 3 is the forcing event in [Game 2](../02-games/2-nations.md). [Finance](../03-domains/finance.md) is the most likely mechanism; [warfare](../03-domains/warfare.md) is the least recoverable.
+- Row 3 is the forcing event in [Game 2](../02-games/2-nations.md). [Finance](../03-domains/cognitive/finance.md) is the most likely mechanism; [warfare](../03-domains/contested/warfare.md) is the least recoverable.
 - Row 4 is low precisely *because* row 3 is a precondition — see [Game 2](../02-games/2-nations.md).
 - Row 5 is the swing variable for [2032–2040](../04-timelines/2032-2040.md).
 - Row 6 is the [capex test](../01-substrate/compute.md).

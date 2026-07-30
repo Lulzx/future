@@ -15,7 +15,16 @@ The order matters. These are not four parallel concerns — they are a relay. Co
 | [Compute](compute.md) | Effective compute ~7–10×/yr; dollar term breaks at Apollo scale | 2029–30 | Financial, possibly evadable via efficiency |
 | [Energy](energy.md) | Interconnect queues, turbines, transformers | ~2026 onward | Physical *and* regulatory; skewed toward loosening |
 | [Data](data.md) | High-quality human text exhausted | Already binding | Redirected rather than blocking — and it created the master asymmetry |
+| [Capital](capital.md) | Not a ceiling — a continuously re-priced verdict | 2027–29 | Financial and reversible; the only input that can run backwards |
 | [Inference economics](inference-economics.md) | Not a ceiling — a floor collapsing | Continuous | Sets the two-year moat on any capability |
+
+## Two of these are not constraints
+
+Compute, energy, and data are ceilings — they cap what is possible. [Capital](capital.md) and [inference economics](inference-economics.md) are not, and reading them as ceilings is a common error.
+
+**Capital is a verdict**: there is no physical limit on the flow, only a continuously re-priced judgment about repayment. It is the fastest-moving input and the only one that can reverse. **Inference cost is a floor collapsing**: it does not constrain anything, it sets the depreciation schedule on every capability advantage anyone holds.
+
+The practical difference: a ceiling tells you what cannot happen, a verdict tells you what someone currently believes, and a collapsing floor tells you how long your advantage lasts. Forecasts that treat all four alike get the timing wrong in both directions.
 
 ## The one thing to take from Part I
 

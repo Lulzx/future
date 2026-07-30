@@ -1,6 +1,6 @@
 # Geopolitics and Development
 
-← [Part III](README.md) · [Index](../README.md)
+← [III.C — Contested](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -13,7 +13,7 @@ The post-1980 growth model runs: **cheap labor → export manufacturing → serv
 Both middle rungs are under simultaneous attack:
 
 - **AI eats the BPO/IT-services rung** — now, in this decade.
-- **Robotics eventually eats the manufacturing rung** and enables reshoring — 2030s, per [Robotics](robotics.md).
+- **Robotics eventually eats the manufacturing rung** and enables reshoring — 2030s, per [Robotics](../physical/robotics.md).
 
 This has never happened before. Previous technology waves moved the ladder or raised the height of each rung; they did not remove two adjacent rungs within fifteen years of each other. Every country currently mid-climb is affected, and the ones furthest along are most exposed because they specialized hardest.
 
@@ -28,8 +28,8 @@ India's ~$250B IT services export sector sits directly in the path of the first 
 The countries that come through this will be the ones that pivot **early** to:
 
 - **Domestic demand** — growth that does not depend on selling labor cost to foreigners
-- **Energy production** — the binding global constraint ([Energy](../01-substrate/energy.md)), and one where geography and permitting speed matter more than capital
-- **Data sovereignty** — owning the flow data that [Game 3](../02-games/3-firms.md) identifies as inelastic
+- **Energy production** — the binding global constraint ([Energy](../../01-substrate/energy.md)), and one where geography and permitting speed matter more than capital
+- **Data sovereignty** — owning the flow data that [Game 3](../../02-games/3-firms.md) identifies as inelastic
 
 Rather than defending the arbitrage, which is a wasting position and which political economy will make very tempting to defend.
 
@@ -37,4 +37,4 @@ The pivot is expensive and unpopular and has to begin before the crisis is legib
 
 ---
 
-**Related:** [Energy](../01-substrate/energy.md) on who can build capacity · [Robotics](robotics.md) · [Game 2 — Nations](../02-games/2-nations.md)
+**Related:** [Energy](../../01-substrate/energy.md) on who can build capacity · [Robotics](../physical/robotics.md) · [Game 2 — Nations](../../02-games/2-nations.md)

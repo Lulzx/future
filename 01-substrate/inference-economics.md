@@ -31,4 +31,4 @@ If capability is free on a two-year lag, then the correct planning question is n
 
 ---
 
-**Related:** [Game 3 — Firms](../02-games/3-firms.md) on where the value actually lands · [Software](../03-domains/software.md) on what this does to SaaS · [Compute](compute.md)
+**Related:** [Game 3 — Firms](../02-games/3-firms.md) on where the value actually lands · [Software](../03-domains/cognitive/software.md) on what this does to SaaS · [Compute](compute.md)

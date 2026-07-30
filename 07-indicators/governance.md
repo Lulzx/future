@@ -1,0 +1,82 @@
+# C — Governance Indicators
+
+← [Part VII](README.md) · [Index](../README.md)
+
+---
+
+*Baselines as of mid-2026. Cadence: event-driven.*
+
+[Game 2](../02-games/2-nations.md) argues that coordination is event-driven rather than reason-driven: the architecture governing the 2030s gets written in the **18 months following a salient accident**. This family therefore has an unusual structure — most of it sits still, and then all of it moves at once.
+
+**The purpose of watching it during the quiet period is to know which draft is on the shelf when the window opens.**
+
+## C1 — The incident
+
+| | |
+|---|---|
+| **Baseline** | No AI-attributed event large enough to force a legislative cycle |
+| **Assumed window** | 2027–2031 |
+| **Most likely mechanism** | A market dislocation — [Finance](../03-domains/cognitive/finance.md) has the fastest loops, the least human latency, and the most correlated positioning |
+| **Least recoverable** | [Warfare](../03-domains/contested/warfare.md) — an escalation event has no rollback |
+| **Revises** | [Part V](../05-probabilities/README.md) row 3; everything in family C downstream of it |
+
+Watch for **near-misses**, which are more informative than the eventual hit and arrive earlier: cyber intrusions with autonomous lateral movement, biological synthesis screening failures, flash dislocations traced to correlated model-driven positioning. A near-miss that gets publicly attributed is a small version of the forcing event and produces a small version of the regulatory response.
+
+## C2 — Shelf-readiness of the response
+
+| | |
+|---|---|
+| **Baseline** | Fragmented; no consensus architecture drafted and defensible |
+| **Trigger — prepared** | A coherent, technically literate regime published and endorsed across factions *before* the incident |
+| **Trigger — unprepared** | The window opens with only advocacy positions available |
+| **Revises** | The quality, not the timing, of 2030s governance |
+
+The most actionable item in the document. **The window will be short and whatever is ready will win** — this is the observed pattern in aviation, nuclear power, financial regulation, and pharmaceutical approval alike. Drafting quality now determines outcomes later far more than advocacy volume does.
+
+## C3 — Compute governance viability
+
+| | |
+|---|---|
+| **Baseline** | Export controls on accelerators; no verification regime for training |
+| **Trigger — viable** | On-chip attestation or location verification deployed at scale |
+| **Trigger — dead** | Frontier capability routinely reached below any plausible reporting threshold |
+| **Revises** | [Game 2](../02-games/2-nations.md), [Part V](../05-probabilities/README.md) row 4 |
+
+The lever weakens exactly as the stakes rise: **algorithmic efficiency and inference-heavy methods both erode the correlation between "large training cluster" and "frontier capability,"** which is the correlation the entire compute-governance approach rests on. Track efficiency gains as an indicator of governance feasibility, not just of capability.
+
+## C4 — Diffusion rate of frontier capability
+
+| | |
+|---|---|
+| **Baseline** | Open-weight tier roughly 9–15 months behind frontier |
+| **Trigger — controls working** | Gap widening past ~24 months |
+| **Trigger — controls failing** | Gap closing below ~6 months |
+| **Revises** | [Game 1](../02-games/1-labs.md), [Game 2](../02-games/2-nations.md) |
+
+Leads decay at maybe 30–50%/yr absent extraordinary security. This measures whether that decay rate is being changed by policy or merely described by it. **A lead you cannot hold is a commercial asset, not a strategic one** — and the width of this gap is the difference between the two.
+
+## C5 — Electricity-price politics
+
+| | |
+|---|---|
+| **Baseline** | Wholesale prices up sharply at datacenter-adjacent nodes; localized political reaction |
+| **Trigger** | Large-load tariffs, siting moratoria, or ratepayer-protection statutes in two or more major markets |
+| **Revises** | [Energy](../01-substrate/energy.md), [2028–2032](../04-timelines/2028-2032.md) |
+
+The argument here is that **this arrives before any federal capability regulation does**, because it is the only channel through which AI touches a median voter's budget monthly. If federal safety regulation lands first, that ordering claim was wrong and the political model in [Game 2](../02-games/2-nations.md) needs revisiting.
+
+## C6 — Liability allocation
+
+| | |
+|---|---|
+| **Baseline** | Unresolved; contracts allocate by negotiation, courts have not settled it |
+| **Trigger** | A precedent-setting judgment or statute assigning liability for autonomous system harm |
+| **Revises** | [Law](../03-domains/cognitive/law.md), [Medicine](../03-domains/physical/medicine.md), [Game 1](../02-games/1-labs.md), and every "human retains the part where someone can be sued" claim in [Part III](../03-domains/) |
+
+Underrated because it is slow and unglamorous. But **the accountability layer is the human moat in most of Part III**, and its width is set entirely by where liability lands. A ruling that shifts liability onto model providers collapses that moat in several domains simultaneously; one that keeps it with the deploying professional entrenches it for a decade.
+
+---
+
+**Related:** [Game 2 — Nations](../02-games/2-nations.md) · [Part V — Probabilities](../05-probabilities/README.md) · [Warfare](../03-domains/contested/warfare.md) · [Finance](../03-domains/cognitive/finance.md)
+
+**Next:** [Part VII index](README.md) · [Protocol](../RESEARCH.md)

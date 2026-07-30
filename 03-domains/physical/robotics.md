@@ -1,12 +1,12 @@
 # Manufacturing and Robotics
 
-← [Part III](README.md) · [Index](../README.md)
+← [III.B — Physical](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
 The lag domain — and **the one that determines whether this is a big deal or a civilizational one.**
 
-Everything else in this document redistributes value within an information economy. Robotics is what would change the growth rate of the physical one. It is the swing variable for [2032–2040](../04-timelines/2032-2040.md).
+Everything else in this document redistributes value within an information economy. Robotics is what would change the growth rate of the physical one. It is the swing variable for [2032–2040](../../04-timelines/2032-2040.md).
 
 ## Why it lags
 
@@ -34,4 +34,4 @@ Secondary indicator: **$/hour of delivered work**, not unit price. A cheap robot
 
 ---
 
-**Related:** [2032–2040](../04-timelines/2032-2040.md) · [Geopolitics](geopolitics.md) on robotics enabling reshoring · [Game 4](../02-games/4-labor.md) on why physical roles are insulated until this lands
+**Related:** [2032–2040](../../04-timelines/2032-2040.md) · [Geopolitics](../contested/geopolitics.md) on robotics enabling reshoring · [Game 4](../../02-games/4-labor.md) on why physical roles are insulated until this lands

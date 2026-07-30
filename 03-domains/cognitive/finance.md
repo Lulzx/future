@@ -1,6 +1,6 @@
 # Finance
 
-← [Part III](README.md) · [Index](../README.md)
+← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -18,8 +18,8 @@ This is not a hypothetical extension of existing risk; it is a qualitative chang
 
 > **Model monoculture is a financial stability risk that is currently unpriced.**
 
-This is also the most plausible candidate for the "salient accident" in [Game 2](../02-games/2-nations.md) — a large market dislocation is far more likely than a cyber-physical or biological event, arrives faster, and produces the same regulatory forcing function.
+This is also the most plausible candidate for the "salient accident" in [Game 2](../../02-games/2-nations.md) — a large market dislocation is far more likely than a cyber-physical or biological event, arrives faster, and produces the same regulatory forcing function.
 
 ---
 
-**Related:** [Game 2 — Nations](../02-games/2-nations.md) on event-driven coordination · [Probabilities](../05-probabilities/README.md)
+**Related:** [Game 2 — Nations](../../02-games/2-nations.md) on event-driven coordination · [Probabilities](../../05-probabilities/README.md)

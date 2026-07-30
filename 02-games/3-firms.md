@@ -40,4 +40,4 @@ For any business, ask: which of my inputs gets cheaper as intelligence gets chea
 
 ---
 
-**Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/software.md) for the SaaS case · [Compressed version](../00-overview/compressed.md)
+**Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/cognitive/software.md) for the SaaS case · [Compressed version](../00-overview/compressed.md)

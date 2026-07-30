@@ -1,6 +1,6 @@
 # Education
 
-← [Part III](README.md) · [Index](../README.md)
+← [III.A — Cognitive](README.md) · [Part III](../README.md) · [Index](../../README.md)
 
 ---
 
@@ -27,10 +27,10 @@ This is the standard shape for any technology that lowers the cost of self-direc
 
 ## Second-order: the credentialing collapse
 
-Education's assessment machinery is simultaneously being dismantled by [Game 5](../02-games/5-information.md). The essay, the take-home, and the problem set are dead as evaluation instruments. Institutions must move to synchronous, invigilated, or oral assessment — which is expensive, and which is the same guild-shaped reversion showing up everywhere else.
+Education's assessment machinery is simultaneously being dismantled by [Game 5](../../02-games/5-information.md). The essay, the take-home, and the problem set are dead as evaluation instruments. Institutions must move to synchronous, invigilated, or oral assessment — which is expensive, and which is the same guild-shaped reversion showing up everywhere else.
 
 Ironic result: **the cost of teaching collapses while the cost of assessing rises.**
 
 ---
 
-**Related:** [Game 5 — Information](../02-games/5-information.md) · [Game 4 — the apprenticeship gap](../02-games/4-labor.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md)
+**Related:** [Game 5 — Information](../../02-games/5-information.md) · [Game 4 — the apprenticeship gap](../../02-games/4-labor.md) · [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md)

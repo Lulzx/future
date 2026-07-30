@@ -37,4 +37,4 @@ Because verification is now the scarce input to *capability*, and — separately
 
 ---
 
-**Related:** [Science](../03-domains/science.md) on automated experimentation as the way to buy cheap ground truth · [Game 5](../02-games/5-information.md) · [Compressed version](../00-overview/compressed.md)
+**Related:** [Science](../03-domains/cognitive/science.md) on automated experimentation as the way to buy cheap ground truth · [Game 5](../02-games/5-information.md) · [Compressed version](../00-overview/compressed.md)
