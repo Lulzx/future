@@ -90,6 +90,10 @@ Yield variance rises with climate volatility; energy and fertilizer costs sit in
 - **If specialty harvest robots clear cost curves early**, the hardest labor problem resolves inside this decade - pulls [2032–2040](../../04-timelines/2032-2040.md) forward for food labor.
 - **If advice monoculture causes a visible pest/price crisis**, regulation or liability reshapes agronomic AI the way Game 2 reshapes other domains.
 
+### Land still captures the surplus
+
+Precision and autonomy that raise yields without creating new land mostly reprice into **farmland and water rights** - Game 3 applied to acres. That is why farmland price vs operating margin is in the watch table, and why [assets](../../09-macro/assets.md) lists land among durable complements. A boom in see-and-spray acreage with flat farmer margins and rising land prices is the base case, not a paradox. Global South smallholders without title or credit may see welfare gains from advice tools without capturing the land rent - welfare and asset concentration again come apart ([global south](../contested/geopolitics/global-south.md)).
+
 ---
 
 **Related:** [Robotics](robotics/) · [Logistics](logistics.md) · [Game 3](../../02-games/3-firms.md) · [Global South](../contested/geopolitics/global-south.md) · [Science](../cognitive/science.md) · [Assets](../../09-macro/assets.md)

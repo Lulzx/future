@@ -62,6 +62,16 @@
 
 **What the index deliberately leaves out.** Low-centrality claims are excluded even when pages cite them, because an index that lists everything ranks nothing - the value here is the ranking, and a maintenance burden that grows with corpus size would eventually make the index wrong, which is worse than incomplete. The "updated through round 13" stamp above is therefore a feature to check, not an apology: when a *new* high-centrality claim appears (as [complement erosion](../06-uncertainties/complement-erosion.md) did in round 21), the Review step owes this page a row before the round closes.
 
+### High-centrality additions since the stamp
+
+| Parent claim | Major dependents |
+|---|---|
+| **Complement list has a half-life (U7)** | [Assets](../09-macro/assets.md); [prices](../09-macro/prices.md); Game 3 distributional read; U5 as accelerant |
+| **Open-weight lag ~3–6 months (measured)** | Game 1 prize; Game 2 leakage; Part V row 4; bipolar coupling; global-south lease |
+| **Gray-zone Taiwan (soft assumption fail)** | Compute risk premium; timelines in quarters; A6 not sufficient alone |
+
+These rows do not replace the stamp; they are the debt the stamp records. A future round that rewrites the full table should fold them into the main index and reset the stamp.
+
 ---
 
 **Related:** [Notation](notation.md) · [Scoring](../08-method/scoring.md) · [Protocol](../RESEARCH.md)

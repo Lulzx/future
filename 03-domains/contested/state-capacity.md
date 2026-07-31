@@ -114,6 +114,8 @@ That reframes the hard part. The obstacle is not statutory authority, which is c
 | Post-incident rule text authorship (agency vs industry consortium) | Capture vs capacity |
 | Interconnection queue movement after "AI for government" programs | Permitting loop closed or rhetorical |
 
+**Soft-cap note:** this page is near the expansion ceiling; further depth should split (measurement vs procurement vs talent) rather than pad. The indicators table is the operational core - if only one section is maintained, maintain that.
+
 ---
 
 **Related:** [Game 2 - Nations](../../02-games/2-nations.md) · [Energy constraint](../../01-substrate/energy.md) · [Energy sector](../physical/energy-sector.md) · [Law](../cognitive/law.md) · [Uncertainty 2](../../06-uncertainties/power-permitting.md) · [Governance indicators](../../07-indicators/governance.md) · [Europe](geopolitics/europe.md) as rule-setter vs builder

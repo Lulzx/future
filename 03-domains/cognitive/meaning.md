@@ -88,6 +88,10 @@ Dashboard: **[B11](../../07-indicators/diffusion/labor.md)** - companion use × 
 - **If companion products are mostly complements** (users with more human contact, not less), the substitution fear was media-driven.
 - **If the framework's price-split politics never materialize**, the "day full, life thin" bridge was aesthetic rather than causal.
 
+### Do not score this page on GDP
+
+TFP, unemployment, and median wages can all look fine while the channels above are live - identity, companionship, and status reallocation do not have to show up in the labor force survey. That is why [B11](../../07-indicators/diffusion/labor.md) exists and why it is deliberately noisier than A-family series. A round that declares "labor was fine, meaning was overstated" because B1 recovered has not checked this page's claims. Require joint movement: B11 with B1/B6, or clinical and survey series that name companion use, before retiring the welfare channel.
+
 ---
 
 **Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Education](education.md) (credential + identity + apprenticeship bridge) · [Media](media.md) · [Medicine - delivery](../physical/medicine/delivery.md) · [Demography](../../09-macro/demography.md) · [Prices](../../09-macro/prices.md)

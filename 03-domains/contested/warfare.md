@@ -92,6 +92,10 @@ Export controls on frontier models do little to a $50k airframe with a commodity
 - **If norms and C2 design** deliberately re-insert time (mandatory human latency, geo-fenced autonomy), the crisis-stability claim softens for states that adopt them - and creates a disadvantage against states that do not.
 - **If the first salient AI incident is kinetic**, Game 2's architecture is written under wartime politics, not financial ones - a different and harsher institutional path.
 
+### Attritable mass is a manufacturing race
+
+Doctrine that depends on cheap one-way systems is a [robotics supply chain](../physical/robotics/supply-chain.md) claim in uniform: actuators, airframes, explosives chemistry, and assembly throughput, not model quality. States that can surge production of attritable systems hold a different deterrence map than states that can only surge exquisite platforms. Score munitions budgets *and* domestic production capacity for cheap systems together; a doctrine paper without a factory is not a resolved indicator.
+
 ---
 
 **Related:** [Game 2 - Nations](../../02-games/2-nations.md) · [Bipolar](geopolitics/bipolar.md) · [Robotics supply chain](../physical/robotics/supply-chain.md) · [Cybersecurity](cybersecurity.md) · [Uncertainty 4](../../06-uncertainties/taiwan.md) · [Part V](../../05-probabilities/) · [Compressed version](../../00-overview/compressed.md)

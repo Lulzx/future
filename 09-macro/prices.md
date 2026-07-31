@@ -76,6 +76,12 @@ The classic Baumol story: sectors with no productivity growth get relatively mor
 
 The classic case took a century and people barely noticed. This version does the same thing in ten years, which is precisely why it becomes political rather than merely interesting.
 
+### Headline CPI can hide both halves
+
+Uniform headline inflation or deflation is the wrong score. Software and info services can fall while shelter, energy, and care rise - headline looks "stable" while [B7](../07-indicators/diffusion/economy.md) is firing. Central banks that target headline or core will face a politics of *relative* prices that their mandate does not name. That is the register claim about monetary policy discomfort in the 2030s: not necessarily higher average inflation, but a split basket that makes every rate decision look like taking a side.
+
+If [Uncertainty 7](../06-uncertainties/complement-erosion.md) erodes the physical basket's scarcity, the split narrows late - a dated half-life, not a falsification of early-window B7.
+
 ---
 
 **Observable:** [B7](../07-indicators/diffusion/economy.md) - relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).

@@ -101,6 +101,10 @@ A first **AI-attributed correlated cyber loss** is a leading candidate for the G
 - **If formal methods / memory safety stall** on legacy and liability, the 2030s recovery does not arrive.
 - **If the first big incident is model-layer** (tool-using agent causing mass loss), regulation targets AI products more than classical vuln management - different architecture.
 
+### Adoption, not tooling, is the trough
+
+Defensive AI that sits on a shelf does not close the offense–defense gap. Municipalities, hospitals, and OT operators buy on procurement and staffing cycles that lag product releases by years - the same institutional lag as [Part IV](../../04-timelines/). Score time-to-exploit *and* share of critical estates running modern defensive tooling *and* cyber insurance terms together. A world of excellent vendor demos with flat memory-safe rewrite share and rising OT incidents is the trough confirmed, not "defense is catching up."
+
 ---
 
 **Related:** [Warfare](warfare.md) · [Biosecurity](biosecurity.md) · [Game 5](../../02-games/5-information.md) · [Game 2](../../02-games/2-nations.md) · [Insurance](../cognitive/insurance.md) · [Software](../cognitive/software.md) · [Energy sector](../physical/energy-sector.md) · [C1 / C7](../../07-indicators/governance.md)

@@ -89,6 +89,10 @@ A bio near-miss is a candidate [Game 2](../../02-games/2-nations.md) forcing eve
 | Public funding for surge manufacturing | Whether the slow term is resourced |
 | Lab-accident and near-miss disclosure regimes | Learning rate on physical risk |
 
+### Asymmetric clocks are the whole page
+
+Offense can improve on design and troubleshooting timescales; defense must still clear surveillance, manufacturing surge, trial authorization, and distribution - institutional clocks. That is why "AI helps both sides equally" is the wrong framing even when both sides use models. A year of faster design without a year of faster surge manufacturing is a *worse* net for defense if it widens the gap at the design step while the slow steps stay fixed. Score the chain by its slowest necessary defensive step, not by design-tool demos. → [state capacity](state-capacity.md)
+
 ---
 
 **Related:** [Cybersecurity](cybersecurity.md) · [Medicine](../physical/medicine/) · [Science](../cognitive/science.md) · [Game 2](../../02-games/2-nations.md) · [Game 4](../../02-games/4-labor.md) · [Part V](../../05-probabilities/) · [State capacity](state-capacity.md)

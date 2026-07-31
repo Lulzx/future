@@ -86,6 +86,10 @@ All of these converge because all are downstream of generation becoming free. Th
 - **Learned verification is good enough** for high-stakes text - institutions stop paying for synchronous assessment; [Uncertainty 5](../06-uncertainties/learned-verification.md) wins.
 - **Enclosure completes** without good provenance inside the walls - private gardens with the same forgery problem, just gated.
 
+### Costly signaling reappears as product design
+
+When text is free, markets reprice *costly to fake* signals: live presence, long-horizon reputation, cryptographic provenance, invigilated performance, physical co-location. That is why education drifts to oral exams, media to authenticated creators, hiring to work samples, and platforms to walled gardens - not because people suddenly hate AI, but because cheap signals stop clearing. Builders who treat "more generation" as the product fight this page; builders who sell verification infrastructure are this page's commercial form. → [C8](../07-indicators/governance.md), [compressed](../00-overview/compressed.md)
+
 ---
 
 **Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Compressed version](../00-overview/compressed.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [B6](../07-indicators/diffusion/labor.md) · [C8 provenance](../07-indicators/governance.md)

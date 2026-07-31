@@ -98,6 +98,10 @@ Universities face the same [education](education.md) bind: content cheap, assess
 - **If automated labs stay boutique**, the "largest prize" claim fails on capital allocation, not on idea quality.
 - **If learned verification** ([Uncertainty 5](../../06-uncertainties/learned-verification.md)) makes theoretical fields self-validate wrongly, math/CS speed becomes a liability - confident wrong proofs at scale.
 
+### Paper flood is the free generation problem inside science
+
+The same verification scarcity that reorders capability also hits the literature: more papers, faster, with weaker average signal. Top venues raising provenance and replication bars are not Luddism - they are C8-style infrastructure for claims. Fields that can check cheaply (some ML, some formal math) will absorb the flood; fields that cannot will either slow acceptance or degrade. That is [Game 5](../../02-games/5-information.md) with tenure on the line. Watch desk-reject rates and replication mandates before watching raw publication counts as "progress."
+
 ---
 
 **Related:** [Data](../../01-substrate/data.md) · [Drug discovery](../physical/medicine/drug-discovery.md) · [Biosecurity](../contested/biosecurity.md) · [Energy sector](../physical/energy-sector.md) · [Uncertainty 1](../../06-uncertainties/recursive-self-improvement.md) · [2032–2040](../../04-timelines/2032-2040.md)

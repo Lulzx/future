@@ -90,6 +90,10 @@ The sectoral prediction matches the rest of the document: **adoption is mandator
 - **If load flexibility** (interruptible training) is widely priced, the effective interconnection queue shortens without this page's planning story mattering as much.
 - **If a major grid incident** is attributed to automated control, the 18-month [Game 2](../../02-games/2-nations.md) window writes restrictive OT rules that freeze Layer 1–2 gains.
 
+### Two pages, two objects
+
+[Part I energy](../../01-substrate/energy.md) is AI as *load*. This page is AI as *tool* inside the industry that serves that load. Confusing them produces nonsense: "AI will solve the power shortage" mixes a demand story with a supply-side R&D story. Operations AI can raise effective capacity of *existing* assets; it does not pour concrete for a substation. Score Layer 1–2 (ops/planning) on congestion and outage metrics; score Layer 3 (generation R&D) on FOAK timelines measured in years. Never credit a chatbot demo against either.
+
 ---
 
 **Related:** [Energy - the constraint](../../01-substrate/energy.md) · [Uncertainty 2](../../06-uncertainties/power-permitting.md) · [State capacity](../contested/state-capacity.md) · [Science](../cognitive/science.md) · [Geopolitics](../contested/geopolitics/) · [Prices](../../09-macro/prices.md)

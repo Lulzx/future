@@ -98,6 +98,10 @@ Single indicators mislead in ways pairs do not. A1-slow plus A2-vindication is n
 
 Also worth naming plainly: **most of these series are produced by parties with a stake in the reading.** Disclosed training-run costs are strategic communications; revenue definitions can be widened to fold bundled products into "AI revenue"; financing structures are designed partly to keep commitments off the statements A3 reads. The defense is triangulation against physical proxies that are expensive to fake - power contracted, wafers ordered, steel in the ground - and a standing discount on any number whose publisher benefits from its size. Where a self-reported figure and a physical proxy disagree, the proxy wins.
 
+### A6 and the gray zone
+
+[A6](substrate.md) (non-Taiwan advanced wafer share) retires *consequence* of Taiwan disruption as capacity diversifies. It does not retire *probability* - and the gray-zone table on [Uncertainty 4](../06-uncertainties/taiwan.md) can fire while A6 is still low (repricing without substitution). Read A6 for shield decay / consequence shrink; read freight insurance and license denials for soft failure of the consumed assumption. Do not wait for A6 to move before scoring gray-zone stress.
+
 ---
 
 **Related:** [Part I - Substrate](../01-substrate/) · [Capital](../01-substrate/capital.md) · [Energy](../01-substrate/energy.md) · [Part IX - Macro](../09-macro/)

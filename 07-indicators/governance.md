@@ -114,6 +114,8 @@ Round 6 named the mechanism: the lever and the future arms-control verification 
 
 Watch legislation that mandates labels without requiring hard attestation - that is the privacy-class failure mode applied to media (rules without measurement). → [State capacity](../03-domains/contested/state-capacity.md)
 
+**Near soft cap:** prefer editing existing C-rows over adding new ones; a future split would separate incident/architecture (C1–C4) from liability/provenance (C5–C8) if growth continues.
+
 ---
 
 **Related:** [Game 2 - Nations](../02-games/2-nations.md) · [Part V - Probabilities](../05-probabilities/) · [Warfare](../03-domains/contested/warfare.md) · [Finance](../03-domains/cognitive/finance.md) · [Insurance](../03-domains/cognitive/insurance.md) · [Media](../03-domains/cognitive/media.md) · [Game 5](../02-games/5-information.md)

@@ -88,6 +88,10 @@ Game 2 is usually told as a dyad, but most states are neither contestant nor bys
 - **Pre-incident binding treaty with real verification** - the central claim fails cleanly (score it)
 - **Compute governance revives** via on-chip attestation at scale - trap partially escapes; revisit row 4
 
+### Jurisdiction is the brand
+
+Which agency gets the incident determines which shelf draft becomes law. Finance/cyber → Treasury/SEC/central bank language; clinical → HHS/FDA/medical boards; kinetic → defense and export-control language. The raw causal chain can involve models in all three while the *political* label follows the first institution to claim the microphone. That is why [finance](../03-domains/cognitive/finance.md) is the incident favourite in this corpus without being the welfare-worst failure - speed of feedback and existing crisis muscle, not body count. Score C1 on jurisdiction of the first material event, not only on whether an event occurred.
+
 ---
 
 **Related:** [Energy](../01-substrate/energy.md) · [Geopolitics](../03-domains/contested/geopolitics/) · [Bipolar](../03-domains/contested/geopolitics/bipolar.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Insurance](../03-domains/cognitive/insurance.md) · [Warfare](../03-domains/contested/warfare.md) · [Part V](../05-probabilities/) · [Governance indicators](../07-indicators/governance.md)
