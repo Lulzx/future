@@ -68,6 +68,6 @@ If the credit-event path fires, three clocks reset and one does not. **Secondary
 
 ---
 
-**Related:** [Compute](compute.md) on the capex wall · [Energy](energy.md) on what the money cannot buy quickly · [Game 3 - Firms](../02-games/3-firms.md) on where returns land · [Finance](../03-domains/cognitive/finance.md)
+**Related:** [Compute](compute.md) on the capex wall · [Energy](energy.md) on what the money cannot buy quickly · [Game 3 - Firms](../02-games/3-firms.md) on where returns land · [Startups / venture](../03-domains/cognitive/startups/venture.md) on power-law capital under cheap founding · [Finance](../03-domains/cognitive/finance.md)
 
 **Next:** [Inference economics](inference-economics.md)

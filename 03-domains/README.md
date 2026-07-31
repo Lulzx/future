@@ -4,7 +4,7 @@
 
 ---
 
-Eighteen domains (counting regional geopolitics as one heading), each read through the same two lenses from earlier parts: **how cheap is ground truth here** ([Data](../01-substrate/data.md)) and **what is the inelastic complement** ([Game 3](../02-games/3-firms.md)).
+Nineteen domains (counting regional geopolitics as one heading, and startups as the formation layer), each read through the same two lenses from earlier parts: **how cheap is ground truth here** ([Data](../01-substrate/data.md)) and **what is the inelastic complement** ([Game 3](../02-games/3-firms.md)).
 
 Where a prediction here looks surprising, the explanation is almost always one of those two.
 
@@ -19,7 +19,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 | [**C - Contested**](contested/) | An adversary optimizes against you with the same tools | The question is the offense–defense balance, not capability |
 
 ### [A - Cognitive](cognitive/)
-[Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md) · [Meaning](cognitive/meaning.md)
+[Software](cognitive/software.md) · [Law](cognitive/law.md) · [Finance](cognitive/finance.md) · [Science](cognitive/science.md) · [Education](cognitive/education.md) · [Media & culture](cognitive/media.md) · [Insurance](cognitive/insurance.md) · [Startups](cognitive/startups/) · [Meaning](cognitive/meaning.md)
 
 ### [B - Physical](physical/)
 [Medicine](physical/medicine/) · [Robotics](physical/robotics/) · [Energy sector](physical/energy-sector.md) · [Agriculture](physical/agriculture.md) · [Logistics](physical/logistics.md)
@@ -33,6 +33,7 @@ The grouping is an argument, not an alphabet. Each group has a different relatio
 |---|---|---|---|
 | [Cybersecurity](contested/cybersecurity.md) | Free - exploits verify themselves | None on offense; integration on defense | Now |
 | [Software](cognitive/software.md) | Cheap (tests) | Architecture, integration, judgment | Now |
+| [Startups](cognitive/startups/) | Cheap for demos; expensive for durable PMF | Complements (data, license, distribution, atoms) | Now; formation first |
 | [Finance](cognitive/finance.md) | Cheap (P&L) | Fiduciary responsibility | Largely done |
 | [Insurance](cognitive/insurance.md) | Cheap and historical | Balance sheet, regulatory capital | Now, quietly |
 | [Warfare](contested/warfare.md) | Cheap and brutal | Escalation judgment | Now |
@@ -78,7 +79,7 @@ Five things recur:
 
 **The five patterns are not independent, and that is the risk.** Patterns 1 and 5 are the same claim seen from two sides: the accountability layer survives because an insurance contract exists for it. Pattern 2 follows from pattern 5, because individuals carry no liability instrument to reprice. So a single event in the underwriting market - one precedent-setting judgment, one carrier deciding autonomous clinical or driving risk is writable at a price - propagates through three of the five simultaneously rather than through one at a time. The corpus treats this as [Uncertainty 6](../06-uncertainties/correlated-risk.md) and it is the main reason these patterns should not be read as five separate pieces of evidence for the same conclusion.
 
-**Failure mode for the whole part.** The domain pages assume the unit of change is the task and that roles re-bundle around whatever is left. If instead the unit of change is the *firm* - if AI-native entrants rebuild the whole workflow rather than selling tools into the existing one - then task-level analysis systematically underestimates speed, because an entrant does not have to route around licensure and liability that it never inherited. The corpus's most exposed pages under that reading are the ones where the moat is procedural rather than physical: [law](cognitive/law.md), [insurance](cognitive/insurance.md), and the administrative half of [medicine](physical/medicine/). Watch entrant share, not incumbent headcount.
+**Failure mode for the whole part.** The domain pages assume the unit of change is the task and that roles re-bundle around whatever is left. If instead the unit of change is the *firm* - if AI-native entrants rebuild the whole workflow rather than selling tools into the existing one - then task-level analysis systematically underestimates speed, because an entrant does not have to route around licensure and liability that it never inherited. The corpus's most exposed pages under that reading are the ones where the moat is procedural rather than physical: [law](cognitive/law.md), [insurance](cognitive/insurance.md), and the administrative half of [medicine](physical/medicine/). Watch entrant share, not incumbent headcount. The entrant path is treated as its own object in [Startups](cognitive/startups/) - cheap founding, expensive moats, and which complements still mint durable firms.
 
 ### How to use this part with Part V
 

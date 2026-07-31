@@ -13,7 +13,7 @@
 | Claim | Dependents |
 |---|---|
 | **Master asymmetry** (verify-cheap → capability-fast) | Entire [Part III](../03-domains/) ordering; [timelines](../04-timelines/); [Uncertainty 5](../06-uncertainties/learned-verification.md) if it fails; [steelman](../08-method/steelman.md) §1 |
-| **Value → inelastic complements** | [Game 3](../02-games/3-firms.md); [Assets](../09-macro/assets.md); [Prices](../09-macro/prices.md); domain "moat" sections |
+| **Value → inelastic complements** | [Game 3](../02-games/3-firms.md); [Assets](../09-macro/assets.md); [Prices](../09-macro/prices.md); domain "moat" sections; [Startups](../03-domains/cognitive/startups/) (formation + selection) |
 | **Institutional lag > capability from ~2028** | [2028–2032](../04-timelines/2028-2032.md); [Part V](../05-probabilities/) row 2; [steelman](../08-method/steelman.md) §3 |
 
 ## Substrate

@@ -68,6 +68,6 @@ The consumer-surplus claim is harder to observe directly. The proxy is relative 
 
 ---
 
-**Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/cognitive/software.md) for the SaaS case · [Prices](../09-macro/prices.md) · [Compressed version](../00-overview/compressed.md)
+**Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/cognitive/software.md) for the SaaS case · [Startups](../03-domains/cognitive/startups/) for Game 3 applied to firm birth · [Prices](../09-macro/prices.md) · [Compressed version](../00-overview/compressed.md)
 
 **Next:** [Game 4 - Labor](4-labor.md)

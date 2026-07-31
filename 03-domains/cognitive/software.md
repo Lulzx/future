@@ -87,6 +87,6 @@ Aligned with [law](law.md) (same pyramid economics) and [education](education.md
 
 ---
 
-**Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md) · [Law](law.md) · [Cybersecurity](../contested/cybersecurity.md) · [2026–2028](../../04-timelines/2026-2028.md) · [B1](../../07-indicators/diffusion/labor.md) · [B5](../../07-indicators/diffusion/economy.md)
+**Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md) · [Startups](startups/) (formation and selection when shipping is cheap) · [Law](law.md) · [Cybersecurity](../contested/cybersecurity.md) · [2026–2028](../../04-timelines/2026-2028.md) · [B1](../../07-indicators/diffusion/labor.md) · [B5](../../07-indicators/diffusion/economy.md)
 
-**Next:** [Law](law.md)
+**Next:** [Startups](startups/) · [Law](law.md)
