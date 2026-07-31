@@ -78,6 +78,6 @@ Even the "good" rows are not permanent. [Uncertainty 7](../../../06-uncertaintie
 
 ---
 
-**Related:** [Game 3](../../../02-games/3-firms.md) · [Software](../software.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Assets](../../../09-macro/assets.md) · [Uncertainty 7](../../../06-uncertainties/complement-erosion.md) · [Formation](formation.md) · [Exits](exits.md)
+**Related:** [Game 3](../../../02-games/3-firms.md) · [Software](../software.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Assets](../../../09-macro/assets.md) · [Uncertainty 7](../../../06-uncertainties/complement-erosion.md) · [Formation](formation.md) · [Exits](exits.md) · [Ideas](ideas.md) (constructive list)
 
 **Next:** [Venture](venture.md)

@@ -78,4 +78,4 @@ The upper tail still exists. It looks like the [selection](selection.md) map's d
 
 **Related:** [Selection](selection.md) · [Venture](venture.md) · [Software](../software.md) · [Game 3](../../../02-games/3-firms.md) · [Assets](../../../09-macro/assets.md) · [Insurance](../insurance.md) · [B5](../../../07-indicators/diffusion/economy.md)
 
-**Next:** [Meaning, work, and relationships](../meaning.md)
+**Next:** [Ideas](ideas.md)

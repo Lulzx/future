@@ -17,6 +17,8 @@ That is the whole argument. Everything else is mechanism, category map, and fals
 > **3. Venture capital is a market for power-law outcomes; cheap founding floods the left tail.** When thousands of teams can ship an MVP for the cost of a seed check, deal flow explodes and signal quality collapses. The fund that survives is the one that underwrites *moat quality*, not product demos. → [Venture](venture.md)
 >
 > **4. Exit paths concentrate.** Acquirers buy distribution, data, and people more often than code; IPOs require durable margin, which pure SaaS increasingly cannot show. Death becomes the modal outcome faster; acqui-hires and quiet shutdowns replace the mid-tier "successful enough" exit. → [Exits](exits.md)
+>
+> **5. The constructive edge is a request list.** The same selection filter implies a short list of company shapes worth founding - verification, atoms, and institutions - not another generation wrapper. → [Ideas](ideas.md)
 
 ## Why this sits under cognitive domains
 
@@ -38,6 +40,7 @@ That sentence is Game 3 applied to firm birth rather than firm survival. The res
 | [Selection](selection.md) | Continuous; visible in cohort outcomes by ~2029 | Category mix of funded rounds vs durable ARR |
 | [Venture](venture.md) | Fund vintage 2024–28 marks by 2030–32 | Seed multiples; power-law concentration of returns |
 | [Exits](exits.md) | Lagged 5–10 years after founding | Acquisition vs IPO mix; median exit multiple |
+| [Ideas](ideas.md) | Continuous (founder action now) | Whether capital and talent actually flow to complements |
 
 ## Failure mode for the hub argument
 
@@ -62,9 +65,10 @@ All four claims assume that **customers can and will switch** when a cheaper or 
 | [Selection](selection.md) | Category map: what survives Game 3 and what is demo economics |
 | [Venture](venture.md) | Fund structure, signal collapse, and who underwrites moats |
 | [Exits](exits.md) | Acquisition, IPO, acqui-hire, and the death rate |
+| [Ideas](ideas.md) | Requests for startups - what to build, filtered by this forecast |
 
 ---
 
-**Related:** [Game 3 - Firms](../../../02-games/3-firms.md) · [Software](../software.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Capital](../../../01-substrate/capital.md) · [Assets](../../../09-macro/assets.md) · [Insurance](../insurance.md)
+**Related:** [Game 3 - Firms](../../../02-games/3-firms.md) · [Software](../software.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Capital](../../../01-substrate/capital.md) · [Assets](../../../09-macro/assets.md) · [Insurance](../insurance.md) · [Compressed](../../../00-overview/compressed.md)
 
-**Next:** [Formation](formation.md)
+**Next:** [Formation](formation.md) · or jump to [Ideas](ideas.md)

@@ -24,4 +24,4 @@ A third way to be wrong is quieter: **Taiwan soft-fails** without a war ([Uncert
 
 ---
 
-**See also:** [Game 5](../02-games/5-information.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Notation](notation.md) · [Dependencies](dependencies.md)
+**See also:** [Game 5](../02-games/5-information.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Startups - ideas](../03-domains/cognitive/startups/ideas.md) (what to build from this list) · [Notation](notation.md) · [Dependencies](dependencies.md)

@@ -109,6 +109,7 @@ Every content file:
 | 35 | 2026-07-31 | Domain scoring filters: education/science/meaning/law/software/media; warfare/cyber/bio; ag/logistics/energy-sector; timelines evidence families; rates/prices; Game 2 rules≠verification; Gulf counter-cyclical; scoring evidence-by-period; Taiwan shield decay | **91** | **7465** |
 | 36 | 2026-07-31 | New [scenarios](04-timelines/scenarios.md): best / base / worst (W1–W3) and named branches (RSI, U5, U7, gray-zone Taiwan, correction-then-maturity); wired into Part IV hub, index, overview, Part V correlations, 2032–40 linear Next. No Part V number moves. | **92** | **7614** |
 | 37 | 2026-07-31 | New [Startups](03-domains/cognitive/startups/): hub + [formation](03-domains/cognitive/startups/formation.md) · [selection](03-domains/cognitive/startups/selection.md) · [venture](03-domains/cognitive/startups/venture.md) · [exits](03-domains/cognitive/startups/exits.md) — Game 3 applied to firm birth (cheap founding, expensive moats). Wired into main index, Part III, cognitive hub, software/Game3/capital/dependencies. | **97** | **8009** |
+| 38 | 2026-07-31 | [Ideas](03-domains/cognitive/startups/ideas.md) RFS-style catalogs (verification / atoms / institutions) — YC presentation shape, corpus complement filter; anti-RFS list; wired from startups hub, compressed, main index | **101** | **8440** |
 
 *End-state counts exact at round close; intermediate approximate.*
 

@@ -32,7 +32,7 @@ These are the domains where change is happening **now**, and where the shape is 
 
 **The section's welfare ledger is split, and the halves move on different clocks.** Software, finance, law, and insurance are mostly stories about producer surplus reallocating - who captures the margin when the analytical layer compresses. Education, media, and meaning are mostly stories about consumer welfare and identity moving in ways national statistics record badly or not at all: the tutored child, the flooded feed, the missing junior rung. The first half shows up in earnings calls within quarters; the second accumulates for years before it surfaces, usually as politics rather than as data ([meaning](meaning.md) makes this the explicit prediction). Reading only the first half is how a forecast ends up right about GDP and wrong about the decade.
 
-**[Startups](startups/) is the formation layer of the first half.** When building software is cheap, attempts flood and durable rent concentrates in whoever still owns an inelastic complement - Game 3 applied to firm *birth*, not only firm survival. Read it after [software](software.md) if the question is "who forms the AI-native firm, and what do they own?"
+**[Startups](startups/) is the formation layer of the first half.** When building software is cheap, attempts flood and durable rent concentrates in whoever still owns an inelastic complement - Game 3 applied to firm *birth*, not only firm survival. Read it after [software](software.md) if the question is "who forms the AI-native firm, and what do they own?" The constructive list - what to build - is [Ideas](startups/ideas.md) (RFS-style, complement-filtered).
 
 ### Process vs judgment (U5 middle case)
 
