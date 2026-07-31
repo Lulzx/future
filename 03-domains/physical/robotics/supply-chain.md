@@ -55,6 +55,10 @@ In robotics **there is no equivalent chokepoint working in the same direction.**
 - **Component supply proving less scarce than modelled.** Every item in the bill of materials above is a manufactured good with an expandable supply curve, not a natural monopoly. Harmonic drives are scarce because demand has been small and qualification cycles long, not because the physics is hard; a credible multi-year order book is the thing that has always caused capacity to appear. If humanoid volumes materialize, the component map at the top of this page describes the starting conditions rather than the equilibrium, and the strategic conclusions weaken accordingly. **This is the most likely way this page is wrong**, and the signal is capacity announcements from second-source suppliers followed by actual shipments, not by tooling installed.
 - **Assembly automating itself.** If robots can assemble robots, the labor-cost component of manufacturing falls and location matters less. This is the recursive case in the physical economy, and it is the most interesting long-run possibility in this section - it does for manufacturing what [recursive research acceleration](../../../06-uncertainties/recursive-self-improvement.md) would do for research.
 
+### Score shipments, not summits
+
+Industrial-policy announcements are the most contaminated series in this domain. The unit that moves the page is **exported or installed robot units by origin of manufacture**, and secondarily second-source actuator/magnet *shipments* (not tool installs). IFR and national customs data beat press releases. A year of Western funding announcements with flat unit share is confirmation of this page, not a near-miss.
+
 ---
 
 **Related:** [Cost curves](cost-curves.md) · [The data problem](data-problem.md) on the deployment flywheel · [Geopolitics](../../contested/geopolitics/) on reshoring · [Energy](../../../01-substrate/energy.md) for the same decoupling argument · [Game 2 - Nations](../../../02-games/2-nations.md)

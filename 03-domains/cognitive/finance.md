@@ -75,6 +75,10 @@ Front-office junior research and middle-office analyst roles compress like law. 
 - **If trading was never the margin** and advisory proves AI-proof longer than claimed, the "already automated" premise overstates residual disruption.
 - **If a pure cyber incident** hits finance harder than model herding, the forcing event is still financial *jurisdiction* but different mechanism - still Game 2, different shelf draft.
 
+### Why finance is the incident favourite
+
+Among candidate forcing events, finance has three structural advantages for becoming the political brand: **existing agencies** with crisis muscle memory, **fast feedback** (P&L and market prices resolve in days, not years), and **correlated-balance-sheet channels** that make one firm's model problem everyone's funding problem ([Uncertainty 6](../../06-uncertainties/correlated-risk.md)). A clinical AI harm may be worse in welfare terms and still write slower rules because the institutional path is state medical boards, not the Fed. That is why the prediction above is about *labeling and jurisdiction*, not about which failure is most likely in raw probability.
+
 ---
 
 **Related:** [Game 2](../../02-games/2-nations.md) · [Capital](../../01-substrate/capital.md) · [Insurance](insurance.md) · [Cybersecurity](../contested/cybersecurity.md) · [Rates](../../09-macro/rates.md) · [Part V](../../05-probabilities/) · [Uncertainty 6](../../06-uncertainties/correlated-risk.md)

@@ -68,6 +68,12 @@ Not a winner, and not decoupling either - **partial bifurcation with asymmetric 
 
 The last point is the one most likely to surprise. **A Western reshoring program executed with imported robots is a weaker strategic position than it appears**, and the announcements will not say so.
 
+### Open-weight lag as the coupling constant
+
+The open-weight tier is how the two ecosystems stay closer than export controls intend. Measured lag **~3–6 months** as of early 2026 (Epoch AI) - shorter than this corpus originally carried - means distillation and follower release are doing more work than the control regime. That compresses the private prize of frontier access ([Game 1](../../../02-games/1-labs.md), [inference economics](../../../01-substrate/inference-economics.md)) and degrades compute-governance as a verification story ([C3](../../../07-indicators/governance.md), [Part V](../../../05-probabilities/) row 4). Policy that treats weights as containable is fighting the measured constant. Policy that treats *capacity* (power, fabs, talent clearance) as the contested object is aligned with the configuration above.
+
+**Failure mode of this page:** scoring "decoupling" from diplomatic language. Bifurcation is a *layer* property - hardware, models, applications, data rules can split independently. A summit that claims decoupling while open weights and third-country routing still couple the layers has not changed the configuration.
+
 ---
 
 **Related:** [Energy](../../../01-substrate/energy.md) · [Game 2 - Nations](../../../02-games/2-nations.md) · [Robotics supply chain](../../physical/robotics/supply-chain.md) · [Warfare](../warfare.md) · [Compute](../../../01-substrate/compute.md)

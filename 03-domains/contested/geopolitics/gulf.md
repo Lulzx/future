@@ -74,6 +74,12 @@ Three consequences that reach beyond the region:
 2. **It confirms the decoupling of capacity from capability.** [Energy](../../../01-substrate/energy.md) predicted that countries able to build power fast gain structural advantage independent of research talent. The Gulf is that prediction happening in real time and is the cleanest available evidence for it.
 3. **It changes what a correction looks like.** Sovereign capacity persists through a drawdown. The 2030s compute map is therefore more state-adjacent and more geographically dispersed than a straight extrapolation of 2026 market share implies.
 
+### The labor contradiction is the binding long-run risk
+
+Capacity can be built with foreign EPC and imported operators for a decade. An *ecosystem* cannot: it needs long-horizon residents, universities that produce more than guest workers, and firms whose customers are not only the sovereign. The signals table above (residence grants, domestic firms with external revenue) is therefore not a nice-to-have social indicator - it is the difference between "power export with GPUs" and "third pole of the industry." Money and gas buy the first; only institutions buy the second. A Ground pass that only counts MW of announced campuses is scoring the easy half.
+
+**Failure mode of this page:** treating every campus ribbon-cutting as confirmation of the ecosystem bet. Contracted export capacity to hyperscalers can grow while the ecosystem bet fails quietly.
+
 ---
 
 **Related:** [Energy](../../../01-substrate/energy.md) · [Capital](../../../01-substrate/capital.md) on sovereign financing · [Game 2 - Nations](../../../02-games/2-nations.md) · [US and China](bipolar.md) · [Uncertainty 2](../../../06-uncertainties/power-permitting.md)

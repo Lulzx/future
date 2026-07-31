@@ -59,6 +59,10 @@ The direction is not obvious, and the historical base rate points the wrong way 
 - **If insurers require** model triage before covering a visit, the consumer path is absorbed into the formal path - integration by force of payment.
 - **If a salient consumer-AI medical harm** lands, the regulatory response may freeze the consumer path for a cycle. → [Game 2](../../../02-games/2-nations.md)
 
+### Global South counterfactual flips the sign
+
+In high-income delivery systems the counterfactual for a wrong triage is a worse path through an existing system. In low-resource settings the counterfactual is often **no care at all**. That is why [global south](../../contested/geopolitics/global-south.md) prices large welfare gains from the same tools this page treats as queue-worsening: the over-referral bias is still real, but the baseline is empty clinics, not full ones. Exporting high-income liability standards into that environment blocks the highest-value uses. The policy joint is [liability](liability.md) and state capacity, not model quality.
+
 ---
 
 **Related:** [Diagnostics](diagnostics.md) · [Liability](liability.md) · [Demography](../../../09-macro/demography.md) · [Global South](../../contested/geopolitics/global-south.md) · [Prices](../../../09-macro/prices.md) on healthcare in the inflating basket

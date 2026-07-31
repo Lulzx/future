@@ -63,6 +63,10 @@ There is also a counter-argument to compounding that the technical debate underw
 
 **Failure mode of this page:** treating the absence of public evidence as evidence of absence. The epistemics here are adversarial - the actor with the best information has commercial and safety reasons to understate or overstate it depending on the week - and this page's estimate should update on revealed behavior (capex commitments, talent hoarding, government briefings) more than on public claims in either direction.
 
+### What a "closed loop" would force on the rest of the corpus
+
+If B9's technical trigger fires *and* physical and financial governors are not binding: pull [Part IV](../04-timelines/) forward, raise [Part V](../05-probabilities/) rows 1–2 and 5, re-read [compute](../01-substrate/compute.md)'s dollar wall as soft, and treat [U5](learned-verification.md) as more urgent (a loop with cheap learned verifiers is the discontinuity case). If the technical trigger fires but governors bind: log a *local* research win and leave timelines mostly intact - the page's whole point is that the conjunction, not the first conjunct, moves the map. Do not re-score on release-day hype alone.
+
 ---
 
 **Related:** [Compute](../01-substrate/compute.md) · [Data](../01-substrate/data.md) on why verification bounds the loop · [Rates](../09-macro/rates.md) on the financial governor · [Energy](../01-substrate/energy.md) · [Steelman](../08-method/steelman.md) §1

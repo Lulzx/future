@@ -59,6 +59,8 @@ Three cautions apply to the table above that do not apply to any single row read
 
 Any round that adds a probability-stamped blockquote anywhere in the corpus must add a row here in the same round (Reconcile step). When a claim resolves, its row moves to the [resolution log](ledger.md) with the outcome and the framework correction. Calibration is judged across this register *and* the main table together - the [scoring](../08-method/scoring.md) 60% band lives mostly on this page.
 
+**Partial resolution rule:** if a blockquote bundles clauses (e.g. consolidation *and* lag), score each clause when it becomes decidable - do not wait for the whole sentence. Document partials in the [ledger](ledger.md); leave the source blockquote as authored until a re-score round rewrites it under scoring rule 5. That is how the open-weight lag was handled in r25–26 without laundering the miss.
+
 ---
 
 **Related:** [Main table](README.md) · [Ledger](ledger.md) · [Scoring](../08-method/scoring.md) · [Indicators](../07-indicators/)

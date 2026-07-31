@@ -83,6 +83,10 @@ Two things cut further against the pessimistic read:
 
 → Treated at length in [Uncertainty 2: power permitting](../06-uncertainties/power-permitting.md)
 
+### Behind-the-meter is the quiet routing
+
+When queues and ratepayer politics bind, the rational hyperscaler response is not only "lobby for reform" - it is **captive generation and bilateral contracts** that never enter the retail rate case. That is already visible in gas-turbine and on-site deal announcements. It loosens *firm* capacity for the buyer without shortening the interconnection queue the public sees, so [A4](../07-indicators/substrate.md) can look stuck while training capacity still grows. Score both: queue length for the political constraint, behind-the-meter share of new MW for the routing path. [Uncertainty 2](../06-uncertainties/power-permitting.md) now lists the latter explicitly.
+
 ---
 
 **Related:** [Compute](compute.md) · [Capital](capital.md) on what the money buys · [Energy *sector*](../03-domains/physical/energy-sector.md) - AI as tool inside power markets, planning, and generation R&D, not only as load · [Geopolitics](../03-domains/contested/geopolitics/) · [2028–2032](../04-timelines/2028-2032.md) on electricity price backlash

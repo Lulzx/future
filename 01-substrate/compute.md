@@ -67,6 +67,12 @@ If [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) closes the
 | Financing mix | [A3](../07-indicators/substrate.md) |
 | Non-TW advanced wafer share | [A6](../07-indicators/substrate.md) |
 
+### How the wall can move without the curve breaking
+
+Three ways the 2029–30 dollar wall softens without falsifying scaling: **(1)** algorithmic efficiency substitutes for raw FLOPs (the RSI technical governor, partially); **(2)** inference revenue funds train runs so the *ratio* improves even if absolute train cost stays high ([A2](../07-indicators/substrate.md)); **(3)** sovereign buyers take the last, most expensive runs off commercial P&Ls ([capital](capital.md)). None of these is "scaling died." All three are "who pays and how efficient the dollars became." Score the wall as a *commercial-linear* claim, not as a physics claim - physics is the energy and fab rows above it.
+
+**Failure mode of this page:** treating every missed $100B run announcement as evidence the wall arrived early. Discretionary delay, power queue, and chip allocation can slip a run without the economic ceiling binding. A1 needs cost *and* intent, not silence.
+
 ---
 
 **Related:** [Energy](energy.md) · [Capital](capital.md) · [Inference economics](inference-economics.md) · [Game 1](../02-games/1-labs.md) · [2026–2028](../04-timelines/2026-2028.md) · [Part V](../05-probabilities/)

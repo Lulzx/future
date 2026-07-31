@@ -69,6 +69,12 @@ The real risk is different and less discussed: **regulatory cost falling on Euro
 - **Whether AI rules bind adopters or developers in practice**, measured by enforcement actions rather than by statute text.
 - **Capital markets union progress.** Perennially announced. If it ever actually happens, the scale-up gap is the thing it would fix, and the effect would be large.
 
+### Europe as the shelf-readiness lab
+
+[Class 3](../../../08-method/base-rates/social-response.md) says the rules written after a salient incident are the ones already drafted. Europe is the jurisdiction most likely to have a shelf draft when the window opens - the AI Act and adjacent product-liability work are exactly that inventory. That is a real global public good if the draft is usable, and a real global cost if it is the privacy-class miss: diffuse compliance burden, weak verification of the things that matter, and extraterritorial reach that shapes non-EU products without shaping non-EU *capability*. Watch whether post-incident packages in other jurisdictions **copy European architecture** or write around it. Copying is Europe's influence path; writing around it is the failure mode where Europe paid the drafting cost and lost the template.
+
+**Failure mode of this page:** treating "no frontier lab HQ in the EU" as strategic defeat. Game 3 says value lands in complements Europe *does* hold (regulation, insurance capital, industrial brands, land with grid). Defeat is compliance without those rents, not absence of train-run campuses.
+
 ---
 
 **Related:** [Game 3 - Firms](../../../02-games/3-firms.md) · [Insurance](../../cognitive/insurance.md) · [Energy](../../../01-substrate/energy.md) · [State capacity](../state-capacity.md) · [Game 2 - Nations](../../../02-games/2-nations.md)

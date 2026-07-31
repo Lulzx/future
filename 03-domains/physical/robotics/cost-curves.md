@@ -70,6 +70,10 @@ This is the point at which robotics economics stops being a technology question 
 - **If integration standardizes**, the term with the most uncertainty in the numerator collapses fastest, and the crossover arrives earlier than the hardware trend implies. This is a tooling and interface problem of the kind that historically resolves quickly once volume justifies it.
 - **If the success-rate term proves environment-specific**, then delivered cost stays low in the settings where fleets already run and never falls in new ones, and the sector matures into a set of profitable vertical businesses rather than a general labor substitute. That outcome looks like success commercially and like failure against the [2032–2040](../../../04-timelines/2032-2040.md) growth-rate claim, and it is the resolution the [data problem](data-problem.md) considers most likely if transfer does not improve.
 
+### Fully-loaded labor is the right comparison
+
+Wages understate the hurdle. BLS employer-cost series put fully-loaded private employment roughly **+40%** above wages alone (benefits, payroll tax, workers' comp - ECEC, early 2026 prints). High-turnover and high-injury settings add recruitment, overtime, and injury costs on top. A robot that loses on wage comparison can win on fully-loaded cost years earlier - which is why the prediction above names high-turnover structured settings first, not the lowest wage. Score [B12](../../../07-indicators/diffusion/capability.md) against fully-loaded local cost, not minimum wage.
+
 ---
 
 **Related:** [The data problem](data-problem.md) on the success-rate term · [Supply chain](supply-chain.md) · [Game 4 - Labor](../../../02-games/4-labor.md) on task-versus-job composition · [Logistics](../logistics.md)

@@ -74,6 +74,10 @@ Reread the domain pages with that substitution. The radiologist's moat is not di
 - **Correlation proving overstated.** If deployments turn out to be diverse enough - different models, different scaffolds, different failure modes - the systemic argument weakens considerably and capacity arrives sooner.
 - **Self-insurance routing around the market.** Large deployers can carry AI risk in captives and never buy the coverage, in which case the published rate table this page leans on stays thin and uninformative - the pricing still happens, but privately, and the governance channel loses its public signal even while it binds internally.
 
+### Soft market is not a falsifier
+
+Early cheap AI riders written into cyber and professional policies are **competition for premium on no loss history**, not evidence that correlation was overstated. Score insurability on (a) aggregate limits and exclusion language after the first material loss year, and (b) whether reinsurance capacity stays open at those terms - not on 2025–27 brochure rates. [Uncertainty 6](../../06-uncertainties/correlated-risk.md) lists the severity ladder; this page supplies the market-cycle shape underneath it.
+
 ---
 
 **Related:** [Finance](finance.md) · [Law](law.md) · [Medicine](../physical/medicine/) · [Game 1 - Labs](../../02-games/1-labs.md) on liability as a safety mechanism · [Uncertainty 6 - correlated risk](../../06-uncertainties/correlated-risk.md) · [Governance indicators](../../07-indicators/governance.md) C6

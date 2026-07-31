@@ -76,6 +76,10 @@ The 60% band is where this document lives and where calibration is hardest to fa
 
 The first two resolve within about eighteen months of writing and are the earliest real test. **If both miss, the framework's treatment of institutional friction and capital ceilings is wrong in the same direction - toward slowness - and the whole timeline should shift, not just those two rows.**
 
+### Partial credit and the lag clause
+
+[Game 1](../02-games/1-labs.md)'s consolidation prediction bundles two clauses: lab count by 2029, and open-weight lag ~9–15 months stable. The lag clause is already running wrong (measured ~3–6 months). Score **by clause**, not by the conjunction: a correct consolidation count with a wrong lag is a partial hit that still revises Game 2 leakage and row 4, which is what r26 did. Refusing to score until 2029 would bury an already-resolved component - one of the five dodges this page exists to prevent.
+
 ---
 
 **Related:** [Part V - Probabilities](../05-probabilities/) · [Part VII - Indicators](../07-indicators/) · [Steelman](steelman.md) · [Dependencies](../00-overview/dependencies.md) · [Notation](../00-overview/notation.md) · [Protocol](../RESEARCH.md)
