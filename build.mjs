@@ -103,8 +103,15 @@ function inline(src, base) {
   s = s.replace(/&lt;(https?:\/\/[^\s>]+)&gt;/g,
       '<a href="$1" rel="noopener noreferrer" target="_blank">$1</a>');
 
-  s = s.replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>");
-  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  // Emphasis: allow single-star italics nested inside double-star bold
+  // (e.g. **What "best" does *not* mean here:**). The old [^*]+ form
+  // stopped at the first inner *, leaving raw ** on the page.
+  s = s.replace(/\*\*\*((?:[^*]|\*(?!\*))+?)\*\*\*/g, (_, inner) =>
+    `<strong><em>${inner}</em></strong>`);
+  s = s.replace(/\*\*((?:[^*]|\*(?!\*))+?)\*\*/g, (_, inner) => {
+    const withEm = inner.replace(/(^|[^*\w])\*([^*\n]+)\*(?![*\w])/g, "$1<em>$2</em>");
+    return `<strong>${withEm}</strong>`;
+  });
   s = s.replace(/(^|[^*\w])\*([^*\n]+)\*(?![*\w])/g, "$1<em>$2</em>");
   s = s.replace(/==([^=\n]+)==/g, "<mark>$1</mark>");
   s = s.replace(/~~([^~]+)~~/g, "<del>$1</del>");
