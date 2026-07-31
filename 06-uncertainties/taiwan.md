@@ -73,6 +73,8 @@ If leading-edge capacity outside Taiwan crosses a meaningful share of advanced w
 
 If gray-zone indicators fire without crisis: do not wait for invasion language. Reprice [compute](../01-substrate/compute.md) and timeline slips in quarters, raise the risk premium on every train-run schedule, and treat open-weight vs closed bifurcation as accelerated. The 90% line item may still "hold" under a disruption reading while the document is already wrong for operators.
 
+**Shield decay vs consequence shrink.** Every wafer of leading-edge capacity outside Taiwan lowers disruption *consequence* (A6) and can raise disruption *incentive* for the side losing monopoly - the two effects run through the same indicator and partially cancel. Score both arrows.
+
 **Failure mode of this page:** watching for invasion when the modal failure is ambiguity - now partially mitigated by the gray-zone table, but only if Ground passes actually read it.
 
 ---

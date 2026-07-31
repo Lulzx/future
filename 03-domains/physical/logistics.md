@@ -91,6 +91,8 @@ Note what that describes: **infrastructure plus proprietary real-time flow data*
 
 Route optimization, slotting, and forecast engines already run on cheap ground truth - the cognitive half of logistics is not the 2030s story. The residual is physical: yard jockeying, trailer hookup, door delivery, exception handling in weather and clutter. Score automation by **where human hands still touch the box**, not by TMS feature lists. Brokerage compression (white-collar) can race ahead of yard autonomy (physical) for a full decade - same master asymmetry, same warehouse.
 
+**Insurance and multi-state liability gate the highway, not the model.** Hub-to-hub autonomy without published multi-state cover is a pilot forever. Prefer insured commercial routes over geofenced demos when scoring the ~55% claim.
+
 ---
 
 **Related:** [Robotics](robotics/) · [Agriculture](agriculture.md) · [Insurance](../cognitive/insurance.md) · [Cybersecurity](../contested/cybersecurity.md) · [Geopolitics](../contested/geopolitics/) · [2032–2040](../../04-timelines/2032-2040.md) · [Finance](../cognitive/finance.md)

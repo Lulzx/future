@@ -96,6 +96,8 @@ Export controls on frontier models do little to a $50k airframe with a commodity
 
 Doctrine that depends on cheap one-way systems is a [robotics supply chain](../physical/robotics/supply-chain.md) claim in uniform: actuators, airframes, explosives chemistry, and assembly throughput, not model quality. States that can surge production of attritable systems hold a different deterrence map than states that can only surge exquisite platforms. Score munitions budgets *and* domestic production capacity for cheap systems together; a doctrine paper without a factory is not a resolved indicator.
 
+**Crisis-stability tax is the underrated cost.** Compressing decision loops raises near-miss rates even when every system works as designed. Watch near-miss reports and mandatory human-latency rules - capability without C2 design is incomplete scoring.
+
 ---
 
 **Related:** [Game 2 - Nations](../../02-games/2-nations.md) · [Bipolar](geopolitics/bipolar.md) · [Robotics supply chain](../physical/robotics/supply-chain.md) · [Cybersecurity](cybersecurity.md) · [Uncertainty 4](../../06-uncertainties/taiwan.md) · [Part V](../../05-probabilities/) · [Compressed version](../../00-overview/compressed.md)

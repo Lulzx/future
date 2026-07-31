@@ -94,6 +94,8 @@ Yield variance rises with climate volatility; energy and fertilizer costs sit in
 
 Precision and autonomy that raise yields without creating new land mostly reprice into **farmland and water rights** - Game 3 applied to acres. That is why farmland price vs operating margin is in the watch table, and why [assets](../../09-macro/assets.md) lists land among durable complements. A boom in see-and-spray acreage with flat farmer margins and rising land prices is the base case, not a paradox. Global South smallholders without title or credit may see welfare gains from advice tools without capturing the land rent - welfare and asset concentration again come apart ([global south](../contested/geopolitics/global-south.md)).
 
+**One season is the sample rate.** Advice tools that look great in simulation still face annual field trials. Do not score agronomic AI on software release cadence - score on multi-season replication across fields and climates.
+
 ---
 
 **Related:** [Robotics](robotics/) · [Logistics](logistics.md) · [Game 3](../../02-games/3-firms.md) · [Global South](../contested/geopolitics/global-south.md) · [Science](../cognitive/science.md) · [Assets](../../09-macro/assets.md)

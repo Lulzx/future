@@ -80,6 +80,8 @@ Capacity can be built with foreign EPC and imported operators for a decade. An *
 
 **Failure mode of this page:** treating every campus ribbon-cutting as confirmation of the ecosystem bet. Contracted export capacity to hyperscalers can grow while the ecosystem bet fails quietly.
 
+**Sovereign capex through a drawdown is the counter-cyclical claim to test.** If Gulf capacity commitments hold when commercial labs cut, the post-correction map is more state-adjacent as [capital](../../../01-substrate/capital.md) argues. Watch commitments *during* a credit event, not only during boom announcements.
+
 ---
 
 **Related:** [Energy](../../../01-substrate/energy.md) · [Capital](../../../01-substrate/capital.md) on sovereign financing · [Game 2 - Nations](../../../02-games/2-nations.md) · [US and China](bipolar.md) · [Uncertainty 2](../../../06-uncertainties/power-permitting.md)

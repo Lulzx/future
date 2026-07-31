@@ -105,6 +105,8 @@ A first **AI-attributed correlated cyber loss** is a leading candidate for the G
 
 Defensive AI that sits on a shelf does not close the offense–defense gap. Municipalities, hospitals, and OT operators buy on procurement and staffing cycles that lag product releases by years - the same institutional lag as [Part IV](../../04-timelines/). Score time-to-exploit *and* share of critical estates running modern defensive tooling *and* cyber insurance terms together. A world of excellent vendor demos with flat memory-safe rewrite share and rising OT incidents is the trough confirmed, not "defense is catching up."
 
+**Memory-safe rewrite share is the structural defense series.** Tooling that finds vulns without rewriting the estate is a treadmill. Prefer languages/OS migration stats in critical codebases over scanner license counts.
+
 ---
 
 **Related:** [Warfare](warfare.md) · [Biosecurity](biosecurity.md) · [Game 5](../../02-games/5-information.md) · [Game 2](../../02-games/2-nations.md) · [Insurance](../cognitive/insurance.md) · [Software](../cognitive/software.md) · [Energy sector](../physical/energy-sector.md) · [C1 / C7](../../07-indicators/governance.md)

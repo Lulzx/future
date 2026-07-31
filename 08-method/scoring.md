@@ -80,6 +80,8 @@ The first two resolve within about eighteen months of writing and are the earlie
 
 [Game 1](../02-games/1-labs.md)'s consolidation prediction bundles two clauses: lab count by 2029, and open-weight lag ~9–15 months stable. The lag clause is already running wrong (measured ~3–6 months). Score **by clause**, not by the conjunction: a correct consolidation count with a wrong lag is a partial hit that still revises Game 2 leakage and row 4, which is what r26 did. Refusing to score until 2029 would bury an already-resolved component - one of the five dodges this page exists to prevent.
 
+**Evidence family by period** (from [timelines hub](../04-timelines/README.md)): 2026–28 financial; 2028–32 statistical/legal; 2032–40 physical. Scoring a claim with the wrong family is a mechanism error even if the calendar outcome lucks out.
+
 ---
 
 **Related:** [Part V - Probabilities](../05-probabilities/) · [Part VII - Indicators](../07-indicators/) · [Steelman](steelman.md) · [Dependencies](../00-overview/dependencies.md) · [Notation](../00-overview/notation.md) · [Protocol](../RESEARCH.md)

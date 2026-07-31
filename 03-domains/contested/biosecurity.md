@@ -93,6 +93,8 @@ A bio near-miss is a candidate [Game 2](../../02-games/2-nations.md) forcing eve
 
 Offense can improve on design and troubleshooting timescales; defense must still clear surveillance, manufacturing surge, trial authorization, and distribution - institutional clocks. That is why "AI helps both sides equally" is the wrong framing even when both sides use models. A year of faster design without a year of faster surge manufacturing is a *worse* net for defense if it widens the gap at the design step while the slow steps stay fixed. Score the chain by its slowest necessary defensive step, not by design-tool demos. → [state capacity](state-capacity.md)
 
+**Screening coverage at synthesis providers is the quiet control point.** It is measurable, commercial, and does not require solving design-tool dual-use. Prefer share-of-orders-screened over model capability debates when scoring near-term defense.
+
 ---
 
 **Related:** [Cybersecurity](cybersecurity.md) · [Medicine](../physical/medicine/) · [Science](../cognitive/science.md) · [Game 2](../../02-games/2-nations.md) · [Game 4](../../02-games/4-labor.md) · [Part V](../../05-probabilities/) · [State capacity](state-capacity.md)

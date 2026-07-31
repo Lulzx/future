@@ -42,6 +42,8 @@ The net effect is genuinely contested, which is why this section argues rather t
 
 If the productivity force wins and neutral rates rise, three pages move together. [Capital](../01-substrate/capital.md) becomes more expensive at exactly the moment the next train-run wants more of it - the financial governor on [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md). [Assets](assets.md) reprice: long-duration growth claims compress while scarce real complements (powered land, licenses) can re-rate on the real yield. [Fiscal](fiscal.md) gets a mixed gift - higher rates raise debt service even as a stronger tax base from productivity may improve the primary balance. The base case (demographics dominate) is quieter: rates stay low, the capex boom is not self-limited by discount rates, and the correction risk stays in the *credit structure* rather than in the neutral-rate channel.
 
+**~30% by 2035 is almost row 2 in different clothes.** Do not treat it as an independent probability - it moves when measured TFP clears (or fails). Concentration and demography are the offsets that make the base case "AI works, rates stay low."
+
 ## The self-limiting loop, stated properly
 
 Combine this with [Capital](../01-substrate/capital.md) and a feedback loop appears that no linear projection captures:

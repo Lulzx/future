@@ -92,6 +92,8 @@ Dashboard: **[B11](../../07-indicators/diffusion/labor.md)** - companion use × 
 
 TFP, unemployment, and median wages can all look fine while the channels above are live - identity, companionship, and status reallocation do not have to show up in the labor force survey. That is why [B11](../../07-indicators/diffusion/labor.md) exists and why it is deliberately noisier than A-family series. A round that declares "labor was fine, meaning was overstated" because B1 recovered has not checked this page's claims. Require joint movement: B11 with B1/B6, or clinical and survey series that name companion use, before retiring the welfare channel.
 
+**Status reallocation is the slow politics.** If care and trades gain wages without gaining prestige, the identity channel stays open and politics stays angry even when "jobs exist." Watch cultural prestige markers alongside wage series - wages alone understate the meaning claim.
+
 ---
 
 **Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Education](education.md) (credential + identity + apprenticeship bridge) · [Media](media.md) · [Medicine - delivery](../physical/medicine/delivery.md) · [Demography](../../09-macro/demography.md) · [Prices](../../09-macro/prices.md)

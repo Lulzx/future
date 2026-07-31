@@ -83,6 +83,8 @@ Aligned with [law](law.md) (same pyramid economics) and [education](education.md
 - **If junior hiring recovers with the cycle**, Game 4's software canary was cyclical noise.
 - **If outcome pricing stays niche**, agentic reliability was overstated for production; seat SaaS lasts longer.
 
+**Context debt is the moat that generation cannot buy.** Greenfield throughput without integration into decades of partial systems is demo economics. Score production PRs merged into brownfield repos and incident rates after agent merges - not greenfield benchmark suites alone.
+
 ---
 
 **Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Inference economics](../../01-substrate/inference-economics.md) · [Law](law.md) · [Cybersecurity](../contested/cybersecurity.md) · [2026–2028](../../04-timelines/2026-2028.md) · [B1](../../07-indicators/diffusion/labor.md) · [B5](../../07-indicators/diffusion/economy.md)

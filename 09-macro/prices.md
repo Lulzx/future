@@ -82,6 +82,8 @@ Uniform headline inflation or deflation is the wrong score. Software and info se
 
 If [Uncertainty 7](../06-uncertainties/complement-erosion.md) erodes the physical basket's scarcity, the split narrows late - a dated half-life, not a falsification of early-window B7.
 
+**Eight quarters is the bar for a reason.** One energy spike or software discount season is noise. Require sustained relative divergence before rewriting politics or assets claims.
+
 ---
 
 **Observable:** [B7](../07-indicators/diffusion/economy.md) - relative CPI/PCE component divergence between the cognitive and physical baskets. The central-bank prediction above is tracked in the [register](../05-probabilities/register.md).

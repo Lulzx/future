@@ -102,6 +102,8 @@ Universities face the same [education](education.md) bind: content cheap, assess
 
 The same verification scarcity that reorders capability also hits the literature: more papers, faster, with weaker average signal. Top venues raising provenance and replication bars are not Luddism - they are C8-style infrastructure for claims. Fields that can check cheaply (some ML, some formal math) will absorb the flood; fields that cannot will either slow acceptance or degrade. That is [Game 5](../../02-games/5-information.md) with tenure on the line. Watch desk-reject rates and replication mandates before watching raw publication counts as "progress."
 
+**Automated labs are the 2030s prize, not another model release.** Capex and utilization of cloud/robotic wet labs move this page; leaderboard wins on pure theory do not. Boutique demo labs with no utilization series are theatre. → [drug discovery](../physical/medicine/drug-discovery.md)
+
 ---
 
 **Related:** [Data](../../01-substrate/data.md) · [Drug discovery](../physical/medicine/drug-discovery.md) · [Biosecurity](../contested/biosecurity.md) · [Energy sector](../physical/energy-sector.md) · [Uncertainty 1](../../06-uncertainties/recursive-self-improvement.md) · [2032–2040](../../04-timelines/2032-2040.md)

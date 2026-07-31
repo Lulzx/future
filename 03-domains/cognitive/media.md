@@ -98,4 +98,6 @@ Rights and training-data litigation is a **legal** complementary fight ([law](la
 
 Elite authentic brands and fully synthetic sludge both have strategies. The squeezed layer is **mid-tier human production** - good enough to be replaced by models, not famous enough to sell provenance as luxury. Watch rate cards and employment in that band, not only creator-economy headlines at the top.
 
+**Presence premium is the surviving rent.** Live events, invigilated performance, and authenticated creators sell scarcity of co-location and skin-in-the-game - Game 5's costly signals as product. Score live vs stream ARPU and authenticated feed share, not total content volume.
+
 **Next:** [Insurance](insurance.md)

@@ -91,6 +91,8 @@ Elite institutions sell network and sorting - inelastic. Mass institutions sold 
 
 Once generation of essays, problem sets, and lecture prose is free, the institution that still charges four years of tuition is selling something else: **credential, cohort, and invigilated signal**. MOOC history already showed content without assessment does not substitute for degrees. The 2030s risk is the reverse of the 2010s hype: assessment gets *more* expensive (human or high-assurance proctoring) while content gets free, so sticker prices hold or rise even as "AI tutors" proliferate. That is not a contradiction - it is Game 5 applied to schooling. Score [B6](../../07-indicators/diffusion/labor.md) (assessment reversion) and employer work-sample adoption together; content-platform NPS alone is marketing.
 
+**Childcare and socialization do not ship over the internet.** Even perfect tutors leave the building's other two jobs intact. Adoption that ignores those jobs is not "slow education" - it is a category error about what the institution sells.
+
 ---
 
 **Related:** [Game 5](../../02-games/5-information.md) · [Game 4](../../02-games/4-labor.md) · [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) · [Meaning](meaning.md) · [B6](../../07-indicators/diffusion/labor.md) · [Science](science.md)

@@ -81,6 +81,8 @@ Regulation will oscillate between **access** and **unauthorized practice**. Expe
 
 Much of billable legal work is **process** (standard motions, discovery hygiene, form contracts) with scoreboards that learned verifiers can attack; much of the residual rent is **judgment** (strategy, negotiation, courtroom presence) that does not. If [Uncertainty 5](../../06-uncertainties/learned-verification.md)'s tiered resolution lands, expect process layers to compress hard while judgment layers hold - a re-scoring of *within-profession* employment, not a dissolution of the profession. That is the version of "AI eats law" that this page's table already half-predicts; the middle case just arrives earlier for the process rows.
 
+**Unauthorized-practice fights are state-level.** Expect fifty US regimes and large EU variance before any federal "AI law" story. Access gains and quality risks will not co-move - that is the political axis, not model quality. Score bar opinions and enforcement actions, not demos of contract drafting.
+
 ---
 
 **Related:** [Game 4](../../02-games/4-labor.md) · [Game 3](../../02-games/3-firms.md) · [Insurance](insurance.md) · [Medicine](../physical/medicine/) · [Education](education.md) · [Meaning](meaning.md)
