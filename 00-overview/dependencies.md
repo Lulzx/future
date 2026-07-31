@@ -34,11 +34,11 @@
 | **Aggregate labor displacement as upper bound** | [Game 4](../02-games/4-labor.md) + [demography](../09-macro/demography.md); softens only the aggregate claim |
 | **Signaling collapse / verification scarce** | [Game 5](../02-games/5-information.md); [education](../03-domains/cognitive/education.md); [media](../03-domains/cognitive/media.md); [compressed](compressed.md); [B6](../07-indicators/diffusion/labor.md) |
 
-## Uncertainties & load-bearing assumptions
+## Uncertainties and underlying assumptions
 
 | Claim | Dependents |
 |---|---|
-| **Taiwan ~90% continuity through 2032** | Nearly all compute-gated claims; [Uncertainty 4](../06-uncertainties/taiwan.md); [A6](../07-indicators/substrate.md); [Part V](../05-probabilities/) load-bearing table |
+| **Taiwan ~90% continuity through 2032** | Nearly all compute-gated claims; [Uncertainty 4](../06-uncertainties/taiwan.md); [A6](../07-indicators/substrate.md); [Part V](../05-probabilities/) assumptions table |
 | **Three RSI governors** | [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md); all timeline dates; [B9](../07-indicators/diffusion/capability.md); [Part V](../05-probabilities/) row 7 tail interpretation |
 | **Correlated risk uninsurable at scale** | [Insurance](../03-domains/cognitive/insurance.md); [Uncertainty 6](../06-uncertainties/correlated-risk.md); deployment frontiers in law/medicine/cyber; [C7](../07-indicators/governance.md) |
 | **Learned verification fails to retire asymmetry** | Domain ordering; [Uncertainty 5](../06-uncertainties/learned-verification.md); [B8](../07-indicators/diffusion/capability.md) |

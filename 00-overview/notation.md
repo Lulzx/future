@@ -6,7 +6,7 @@
 
 Terms that carry load across the corpus. Definitions are operational, not dictionary.
 
-| Term | Meaning here | Load-bearing in |
+| Term | Meaning here | Where it matters |
 |---|---|---|
 | **Master asymmetry** | Capability grows fastest where verification / ground truth is cheap | [Data](../01-substrate/data.md), all of [Part III](../03-domains/) |
 | **Ground-truth cost** | Cost of knowing whether an output is correct (labels, experiments, P&L, exploits) | Domain ordering |
@@ -33,7 +33,7 @@ Terms that carry load across the corpus. Definitions are operational, not dictio
 
 ## How a term earns a row
 
-A term is admitted here when it does load-bearing work in at least two parts of the corpus and would otherwise be re-derived in each. The definitions are operational on purpose: "inelastic complement" is defined by what happens to its price under demand, not by a category list, because the category list changes ([Uncertainty 7](../06-uncertainties/complement-erosion.md)) while the operational test does not. When a page uses one of these terms in a way that fails the operational test, that is a bug in the page, not a looseness in the term.
+A term is admitted here when it does real work in at least two parts of the corpus and would otherwise be re-derived in each. The definitions are operational on purpose: "inelastic complement" is defined by what happens to its price under demand, not by a category list, because the category list changes ([Uncertainty 7](../06-uncertainties/complement-erosion.md)) while the operational test does not. When a page uses one of these terms in a way that fails the operational test, that is a bug in the page, not a looseness in the term.
 
 The vocabulary also serves [scoring](../08-method/scoring.md). A prediction phrased in a pinned term cannot quietly migrate its meaning after the fact - "the apprenticeship gap widened" resolves against the definition in this table, not against whatever the phrase has come to mean in 2032. Shared shorthand is a commitment device before it is a convenience.
 

@@ -79,7 +79,7 @@ Aligned with [law](law.md) (same pyramid economics) and [education](education.md
 
 ## Failure modes
 
-- **If legacy integration unlocks** (better repo-scale agents), the 2–4× only-on-greenfield claim was too pessimistic and employment composition shifts faster.
+- **If legacy integration opens up** (better repo-scale agents), the 2–4× only-on-greenfield claim was too pessimistic and employment composition shifts faster.
 - **If junior hiring recovers with the cycle**, Game 4's software canary was cyclical noise.
 - **If outcome pricing stays niche**, agentic reliability was overstated for production; seat SaaS lasts longer.
 

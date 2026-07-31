@@ -79,7 +79,7 @@ The indicator has started firing, in both directions at once: Amazon shortened a
 | **Trigger - assumption fails** | Blockade, kinetic conflict, or multi-quarter interruption of TW leading-edge output |
 | **Revises** | [Uncertainty 4](../06-uncertainties/taiwan.md), [Bipolar](../03-domains/contested/geopolitics/bipolar.md), every compute-gated timeline |
 
-This is the load-bearing geographic assumption of the corpus, stated at **~90%** continuity through 2032. A6 does not predict geopolitics; it tracks whether the *consequence* of disruption is shrinking (substitution) and whether disruption has occurred (binary).
+This is the geographic assumption the corpus rests on, stated at **~90%** continuity through 2032. A6 does not predict geopolitics; it tracks whether the *consequence* of disruption is shrinking (substitution) and whether disruption has occurred (binary).
 
 ## A7 - Real rates and AI capex cost of capital
 

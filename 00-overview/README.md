@@ -37,7 +37,7 @@ Compression is not a convenience here; it is a test. An argument that survives b
 ## Reading orders
 
 - **Linear** - follow the **Next** link at the foot of each page, starting with [Thesis](thesis.md). Runs about 90 minutes.
-- **Argument-first** - [Thesis](thesis.md) → [Part I](../01-substrate/) → [Part II](../02-games/) → stop. That is the load-bearing half.
+- **Argument-first** - [Thesis](thesis.md) → [Part I](../01-substrate/) → [Part II](../02-games/) → stop. That is the half that carries the argument.
 - **Sceptic-first** - [Part VI](../06-uncertainties/) and [Part VIII](../08-method/) before anything else, to see where it is weakest and how the numbers were made.
 - **Operator-first** - [Compressed](compressed.md) → [Game 3](../02-games/3-firms.md) → [Part VII](../07-indicators/), for what to build and what to watch.
 

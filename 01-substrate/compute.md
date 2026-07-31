@@ -50,7 +50,7 @@ Test-time compute cuts the other way and changes the *shape* of the risk. To the
 | Energy / interconnect | ~2026 onward in US | [Energy](energy.md) |
 | Capital verdict | 2027–29 | [Capital](capital.md) |
 | Training $ extrapolation | 2029–30 if still linear | this page |
-| Taiwan leading-edge capacity | always load-bearing | [A6](../07-indicators/substrate.md), [Uncertainty 4](../06-uncertainties/taiwan.md) |
+| Taiwan leading-edge capacity | binds throughout | [A6](../07-indicators/substrate.md), [Uncertainty 4](../06-uncertainties/taiwan.md) |
 
 By 2028 the US rate-limiter is closer to permits than to chips - export controls address China's bottleneck, not America's. → [Bipolar](../03-domains/contested/geopolitics/bipolar.md)
 

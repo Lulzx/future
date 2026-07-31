@@ -26,7 +26,7 @@ The strategic version of the same point: **hardware iteration speed and data acc
 
 ### 1. Teleoperation - expensive, working, and the current answer
 
-A human wears a rig or drives a controller; the robot records. Data quality is excellent, and it is the backbone of essentially every impressive demo of the last three years.
+A human wears a rig or drives a controller; the robot records. Data quality is excellent, and it is the backbone of nearly every impressive demo of the last three years.
 
 But the cost structure is brutal: it is **human labor at roughly 1:1 with robot operating time**, which means collecting the data costs more than the labor being automated, until the policy generalizes. That is a bet, not a business, and it only pays if generalization arrives.
 
@@ -68,7 +68,7 @@ That does not defeat the argument, but it changes what the flywheel is worth. It
 - **Simulation closing the contact gap.** Differentiable and learned simulators for deformable and contact-rich physics would convert the constraint from physical to computational - which is the one substitution this document treats as always available.
 - **Tactile sensing at scale.** Much of the missing information is force and texture. Cheap, durable, high-resolution tactile skin would make video-scale pretraining far more useful by supplying the missing channel at fine-tuning time.
 
-**Any one of these landing moves the [2032–2040](../../../04-timelines/2032-2040.md) estimate meaningfully earlier.** They are the highest-variance items in the physical half of this document.
+**Any one of these landing moves the [2032–2040](../../../04-timelines/2032-2040.md) estimate years earlier.** They are the highest-variance items in the physical half of this document.
 
 ### Teleop is a measurement, not a shame
 

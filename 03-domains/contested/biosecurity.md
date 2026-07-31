@@ -32,7 +32,7 @@ It does **not** erode materials access or the physical requirement for a compete
 Two consequences:
 
 - **Uplift is a bad frame in isolation.** "Can a model provide information a determined actor couldn't find" was the right question in 2023 and is the wrong one now. The right question is **where in the chain the marginal barrier sits**, and whether AI lowers *that* step. Mostly it lowers protocol and troubleshooting - middle of the chain, not the ends.
-- **Screening is the highest-leverage intervention available.** Nucleic-acid synthesis screening is a genuine chokepoint: a small number of providers, a technically tractable check, and no requirement for international consensus to start. It is undersupplied for the standard [public-good reason](../../02-games/README.md) - private cost, diffuse benefit - and it is among the most cost-effective items in this document.
+- **Screening buys more than any other intervention here.** Nucleic-acid synthesis screening is a genuine chokepoint: a small number of providers, a technically tractable check, and no requirement for international consensus to start. It is undersupplied for the standard [public-good reason](../../02-games/README.md) - private cost, diffuse benefit - and it is among the most cost-effective items in this document.
 
 ## Why biology is not cybersecurity
 
@@ -50,7 +50,7 @@ Compared to the attention allocated to loss-of-control scenarios, biological ris
 
 The likely explanation for the neglect is information hazard: **the topic is genuinely hard to discuss publicly without contributing to the problem**, so serious analysis happens in closed settings and public discourse defaults to the risks that can be safely elaborated. That is a rational response to a real constraint, and it produces a systematically distorted public risk picture.
 
-> **Assessment:** a serious AI-attributable biological *incident* - a near-miss, a screening failure, or a non-state actor progressing further than they otherwise would have - is meaningfully more likely by 2032 than loss-of-control scenarios, and meaningfully less likely than a [financial](../cognitive/finance.md) or [cyber](cybersecurity.md) incident. It is the middle probability band of [Part V](../../05-probabilities/) row 3 mechanisms, and the one with the worst tail if it scales.
+> **Assessment:** a serious AI-attributable biological *incident* - a near-miss, a screening failure, or a non-state actor progressing further than they otherwise would have - is more likely by 2032 than loss-of-control scenarios, and less likely than a [financial](../cognitive/finance.md) or [cyber](cybersecurity.md) incident. It is the middle probability band of [Part V](../../05-probabilities/) row 3 mechanisms, and the one with the worst tail if it scales.
 
 ## The defensive side is real and worth stating
 

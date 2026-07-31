@@ -6,7 +6,7 @@
 
 This document spends most of its length on a technology displacing labor. It has, until now, said almost nothing about the fact that **every advanced economy is running out of workers anyway.**
 
-That omission matters, because demographics are the rarest thing in forecasting: a large effect, with a long lead time, that is **already determined**. The people who will be of working age in 2045 have all been born. There is essentially no uncertainty in the projection, only in the policy response to it.
+That omission matters, because demographics are the rarest thing in forecasting: a large effect, with a long lead time, that is **already determined**. The people who will be of working age in 2045 have all been born. There is almost no uncertainty in the projection, only in the policy response to it.
 
 ## The arithmetic
 

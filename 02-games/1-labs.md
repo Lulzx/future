@@ -34,7 +34,7 @@ Safety is a public good with private cost, so it's undersupplied relative to soc
 2. **Talent.** Researchers have preferences and are mobile. This is a real constraint on lab behavior, and it is unusual for an industry: the scarce input has opinions about how it is used.
 3. **Capability–safety complementarity.** A model that reliably follows instructions is both safer and more commercially valuable. Alignment and usefulness are correlated goods over much of the range - genuinely lucky, and **not guaranteed to hold at higher capability.**
 
-That third one is load-bearing for the optimistic case and it is the one most likely to fail quietly. If the correlation breaks, the undersupply becomes real and there is no market mechanism left to correct it.
+That third one carries the optimistic case and it is the one most likely to fail quietly. If the correlation breaks, the undersupply becomes real and there is no market mechanism left to correct it.
 
 ### Where liability actually binds
 

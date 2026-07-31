@@ -24,7 +24,7 @@ That last one is the genuinely interesting possibility.
 
 The pessimistic case assumes expertise requires roughly the same number of hours it always has, and that AI has removed the hours. But the hours were never the point - the point was the feedback. If AI can provide dense, expert-quality feedback on work at a volume no human mentor ever could ([Bloom's 2-sigma](../03-domains/cognitive/education.md), applied to professional formation rather than schooling), the novice→expert pathway might get *shorter*, not broken.
 
-That would not merely mitigate the gap. It would invert the whole prediction: expertise becomes cheaper to produce at exactly the moment it becomes scarcer, and the shortage self-corrects.
+That would not just mitigate the gap. It would invert the whole prediction: expertise becomes cheaper to produce at exactly the moment it becomes scarcer, and the shortage self-corrects.
 
 I do not think this is the base case. But it is a real possibility, it is under-explored, and it is the single most valuable thing to be right about in this section - because unlike the other two uncertainties, this one is something people can deliberately build.
 
@@ -44,7 +44,7 @@ The four responses above operate on very different clocks, which matters more th
 
 ## What resolution forces
 
-**If the ratios stabilize by 2029:** [Game 4](../02-games/4-labor.md) gets rewritten from commons failure to lagged adjustment, and the education page's Bloom mechanism gets promoted from analogy to load-bearing claim. **If they keep falling:** the commons-failure model strengthens, and the interesting question becomes which institution moves first - the corpus should then watch professional bodies, not firms. **Failure mode of this page:** reading the posting ratio as a clean signal. Entry-level postings can stabilize because the response worked, or because the definition of "entry-level" drifted up to include what used to be mid-level - the indicator needs the seniority mix underneath it checked before it is scored.
+**If the ratios stabilize by 2029:** [Game 4](../02-games/4-labor.md) gets rewritten from commons failure to lagged adjustment, and the education page's Bloom mechanism gets promoted from analogy to central claim. **If they keep falling:** the commons-failure model strengthens, and the interesting question becomes which institution moves first - the corpus should then watch professional bodies, not firms. **Failure mode of this page:** reading the posting ratio as a clean signal. Entry-level postings can stabilize because the response worked, or because the definition of "entry-level" drifted up to include what used to be mid-level - the indicator needs the seniority mix underneath it checked before it is scored.
 
 ## Sectoral shape, not a single curve
 

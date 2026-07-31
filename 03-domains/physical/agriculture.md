@@ -37,7 +37,7 @@ The parts that don't need the seasonal loop:
 
 One label per season understates the problem, because the labels are not independent draws from a stable process. Each year's result is confounded by weather, and weather is the dominant term: a management change worth a few percent of yield is buried inside season-to-season variance several times larger. Separating the signal takes either many years, during which the underlying agronomy and genetics have changed, or many fields, which requires replication across operations that do not share data. **The effective sample size is far below the number of observations**, and this is the general form of the problem in every domain where outcomes are noisy and slow rather than merely delayed.
 
-The workaround the industry actually uses is on-farm strip trials at scale, and it is a good one: split fields, randomized treatments, thousands of operations, one season. That is a real path to statistical power and it is exactly why equipment telemetry is valuable to the manufacturer holding it. It also means the entity best positioned to learn agronomy is the one with the largest installed base of instrumented machines, not the one with the best model, which is the [fleet-learning argument](robotics/data-problem.md) transplanted into a field and the reason the data-ownership fight below is the load-bearing one.
+The workaround the industry actually uses is on-farm strip trials at scale, and it is a good one: split fields, randomized treatments, thousands of operations, one season. That is a real path to statistical power and it is exactly why equipment telemetry is valuable to the manufacturer holding it. It also means the entity best positioned to learn agronomy is the one with the largest installed base of instrumented machines, not the one with the best model, which is the [fleet-learning argument](robotics/data-problem.md) transplanted into a field and the reason the data-ownership fight below decides the sector.
 
 ## The economics are the real constraint
 
@@ -72,7 +72,7 @@ There is a further asymmetry that makes the smallholder case harder than the con
 
 ## Climate and energy coupling
 
-Yield variance rises with climate volatility; energy and fertilizer costs sit in the [two-economy](../../09-macro/prices.md) inflating basket. AI that cuts input intensity is a real hedge; AI that only raises gross yield without input discipline can worsen environmental externalities. The precision-application win is the load-bearing positive case.
+Yield variance rises with climate volatility; energy and fertilizer costs sit in the [two-economy](../../09-macro/prices.md) inflating basket. AI that cuts input intensity is a real hedge; AI that only raises gross yield without input discipline can worsen environmental externalities. Precision application is the positive case that holds.
 
 ## What to watch
 

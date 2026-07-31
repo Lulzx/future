@@ -12,7 +12,7 @@ That combination is the most-cited counterexample to "AI will replace profession
 
 **1. Reading images was never the whole job.** Protocol selection, incidental findings, multidisciplinary conferences, procedural work, communication with referring clinicians, and the residual judgment when the image is ambiguous or the patient is not - those absorb the hours the model frees. Compressing one task reallocates time inside the role rather than deleting the role, until the *entire* task bundle is automatable and *liability transfers*. Neither has happened.
 
-**2. Liability does not transfer to a model.** Someone licensed has to sign. That is not a technical claim; it is an institutional one, and it is load-bearing for employment even where pure diagnostic accuracy favors the machine. → [Liability](liability.md)
+**2. Liability does not transfer to a model.** Someone licensed has to sign. That is not a technical claim; it is an institutional one, and it is what holds employment up even where pure diagnostic accuracy favors the machine. → [Liability](liability.md)
 
 Both reasons generalize. Law, finance, insurance underwriting, and consulting show the same shape: the analytical layer compresses, the accountability layer does not. → [Part III patterns](../../README.md)
 

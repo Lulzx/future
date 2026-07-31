@@ -75,7 +75,7 @@ Each row: the claim restated, what evidence would move it, what rounds 1–7 act
 
 ## Row 5 - Humanoids >1M units/yr deployed
 
-**Claim:** Humanoid robots deployed (not merely produced) at a rate exceeding one million units per year.
+**Claim:** Humanoid robots deployed (not just produced) at a rate exceeding one million units per year.
 
 | | By 2030 | By 2040 |
 |---|---|---|
@@ -88,7 +88,7 @@ Each row: the claim restated, what evidence would move it, what rounds 1–7 act
 
 ## Row 6 - Serious capital-markets AI correction
 
-**Claim:** A >40% drawdown in a recognizable AI-sector equity (or AI-adjacent credit) index, with AI fundamentals in the causal chain - not merely a broad macro crash that takes AI with it.
+**Claim:** A >40% drawdown in a recognizable AI-sector equity (or AI-adjacent credit) index, with AI fundamentals in the causal chain - not just a broad macro crash that takes AI with it.
 
 | | By 2030 | By 2040 |
 |---|---|---|

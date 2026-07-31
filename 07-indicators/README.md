@@ -22,7 +22,7 @@ The families are not independent, and reading them jointly is most of the skill.
 
 ## The five that matter most
 
-If only five things can be tracked, track these. Each is the leading edge of a different load-bearing claim.
+If only five things can be tracked, track these. Each is the leading edge of a different claim the corpus depends on.
 
 | Indicator | Baseline (mid-2026) | Watch for | Breaks |
 |---|---|---|---|

@@ -48,7 +48,7 @@ The practical consequence: anyone using these numbers to price a portfolio of po
 
 It is not a research output, a market price, or an ensemble - it is one analyst's committed numbers, published so that being wrong is detectable. That has two use implications. First, the *deltas* and their written reasons ([ledger](ledger.md)) carry more information than the levels: a reader who disagrees with 50% on row 1 learns little from the disagreement, but a reader who sees the number move on evidence they consider irrelevant has found a real dispute about mechanism. Second, the table deliberately excludes claims the corpus argues but cannot operationalize - "value accrues to complements" has no row because no resolvable threshold survived drafting, and the honest response to an unscoreable claim is to leave it in the prose, not to launder it through a fake number. The distributed [register](register.md) exists for the middle category: claims sharp enough to score but too local for this table.
 
-## Load-bearing assumptions not in the table
+## Assumptions the table rests on
 
 Two probabilities live outside these rows because they are *inputs* rather than outcomes:
 

@@ -34,7 +34,7 @@ This is the single most underrated fact in AI forecasting: **the bottleneck migr
 
 By 2028 the rate-limiting step on frontier AI in the US is not chip supply. It is environmental review, transmission rights-of-way, and turbine manufacturing. These are legal and industrial constraints, and they respond to entirely different levers than anything the labs control.
 
-The corollary is that AI progress becomes partly a **function of American administrative law** - a sentence that would have sounded absurd in 2023 and is now load-bearing.
+The corollary is that AI progress becomes partly a **function of American administrative law** - a sentence that would have sounded absurd in 2023 and now sets the schedule.
 
 ## The escape hatch: behind the meter
 
@@ -52,7 +52,7 @@ This changes who the players are. **A frontier lab is becoming a power company w
 
 The obvious market response - turbine and transformer makers expanding capacity into a demand spike - is happening slowly and late, and the reluctance is rational. Heavy electrical equipment plants take years to build and decades to pay back, while the demand signal in front of them is a single sector's five-year build-out with a known correction scenario attached ([capital](capital.md)). Manufacturers who overbuilt into past electricity booms ate decade-long busts, and the surviving firms are the ones that learned that lesson; order books full into 2030 (as of mid-2026) are being served by overtime and brownfield debottlenecking, not greenfield plants. The result is a supply chain that converts a demand surge into queue length rather than volume - backlogs stretch, prices rise, capacity barely moves. This is the industrial-base analogue of the permitting problem: both are institutions optimized for a stable grid being asked to price a spike they have reason to distrust. Failure mode: sovereign-backed offtake guarantees or defense-production-style procurement would change the manufacturers' math overnight - which is why equipment lead times belong on the same watch list as statutes, [A4](../07-indicators/substrate.md).
 
-The behind-the-meter escape also has a physical dependency the strategy discussion tends to skip: **islanded loads still need firm backup, and grid-scale storage or redundant generation adds materially to the $/MW figures in [capital](capital.md)**. Training tolerates interruption; inference serving increasingly does not, since it carries customer SLAs. As the load mix shifts from training toward serving ([inference economics](inference-economics.md) Jevons expansion), the interruptibility advantage that makes curtailment-tolerant interconnection cheap quietly erodes. The industry's flexibility story is truest in exactly the phase of the build-out that is ending first.
+The behind-the-meter escape also has a physical dependency the strategy discussion tends to skip: **islanded loads still need firm backup, and grid-scale storage or redundant generation adds real cost to the $/MW figures in [capital](capital.md)**. Training tolerates interruption; inference serving increasingly does not, since it carries customer SLAs. As the load mix shifts from training toward serving ([inference economics](inference-economics.md) Jevons expansion), the interruptibility advantage that makes curtailment-tolerant interconnection cheap quietly erodes. The industry's flexibility story is truest in exactly the phase of the build-out that is ending first.
 
 ## The political economy of the electricity bill
 

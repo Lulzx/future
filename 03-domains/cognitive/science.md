@@ -25,7 +25,7 @@ The constraint is no longer ideas. It is the rate at which reality can be asked 
 
 > **Whoever industrializes automated experimentation - self-driving labs at scale - captures the largest available prize of the 2030s.**
 
-This is the highest-leverage under-invested area in the entire landscape. It converts an expensive verification signal into a cheap one, which - per [Part I](../../01-substrate/data.md) - is precisely the move that unlocks capability growth in a domain. It is also unglamorous, capital-intensive, and physical, which is why it is underfunded relative to model work.
+This is the most under-invested area in the corpus relative to what it would buy. It converts an expensive verification signal into a cheap one, which - per [Part I](../../01-substrate/data.md) - is precisely the move that lets capability grow in a domain. It is also unglamorous, capital-intensive, and physical, which is why it is underfunded relative to model work.
 
 ### Selection becomes the scarce skill
 

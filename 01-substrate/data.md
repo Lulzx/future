@@ -6,7 +6,7 @@
 
 *Quantities current to mid-2026.*
 
-High-quality human text is essentially exhausted - roughly 10^14 useful tokens against models already trained on 10^13. The remaining headroom is one order of magnitude, and it is the *low-quality* order.
+High-quality human text is exhausted - roughly 10^14 useful tokens against models already trained on 10^13. The remaining headroom is one order of magnitude, and it is the *low-quality* order.
 
 The frontier therefore moved to synthetic data, RL on verifiable outcomes, and self-play in domains with cheap ground truth.
 

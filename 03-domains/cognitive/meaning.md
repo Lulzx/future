@@ -68,7 +68,7 @@ Care work stays scarce ([demography](../../09-macro/demography.md)); demand for 
 
 - **It does not claim civilizational spiritual collapse.** Reference classes (industrialization, urbanization, social media) show large adaptation and large localized harm, not uniform ruin.
 - **It does not reduce meaning to employment.** Plenty of people will find status in trades, care, ownership of inelastic complements, and non-market roles - if society still *grants* status there. That grant is cultural and political, not technical.
-- **It does not treat "human connection" as un-automatable forever.** [Uncertainty 5](../../06-uncertainties/learned-verification.md) is about judgment; attachment is a different question. The load-bearing claim here is about *cost and commitment signals*, not about whether a model can simulate empathy convincingly (it can).
+- **It does not treat "human connection" as un-automatable forever.** [Uncertainty 5](../../06-uncertainties/learned-verification.md) is about judgment; attachment is a different question. The claim here is about *cost and commitment signals*, not about whether a model can simulate empathy convincingly (it can).
 
 ## Indicators worth watching
 

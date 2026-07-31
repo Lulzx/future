@@ -41,7 +41,7 @@ The one place this layer could produce something other than a quiet efficiency g
 
 Interconnection queues and transmission siting are not compute problems. They are **study processes, stakeholder processes, and legal processes**. AI can draft studies, screen contingencies, and propose topologies faster. It cannot hold a county hearing or rewrite NEPA.
 
-So planning software compresses the *analysis* inside a timeline set by [state capacity](../contested/state-capacity.md) and [Uncertainty 2](../../06-uncertainties/power-permitting.md). The highest-leverage loop in the corpus still holds: **using AI to clear permitting backlogs relieves the energy constraint on AI itself.** That is administrative, not algorithmic.
+So planning software compresses the *analysis* inside a timeline set by [state capacity](../contested/state-capacity.md) and [Uncertainty 2](../../06-uncertainties/power-permitting.md). The tightest loop in the corpus still holds: **using AI to clear permitting backlogs relieves the energy constraint on AI itself.** That is administrative, not algorithmic.
 
 Hyperscalers becoming power companies ([Part I](../../01-substrate/energy.md)) is the private workaround: leave the queue, own the generation. Utilities and ISOs that adopt the same tools without ownership still face the political allocation of who pays for upgrades.
 

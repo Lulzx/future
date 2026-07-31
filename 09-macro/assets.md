@@ -58,7 +58,7 @@ Within households, the divide this page predicts is not primarily labor against 
 
 Three mechanisms, in descending order of plausibility:
 
-1. **Supply response in the inelastic complements.** Land and energy are inelastic *given current regulation*. Permitting reform, transmission build-out, and housing liberalization would each convert a rent into a normal return. **This is the highest-leverage distributional intervention available and it is not usually discussed as one** - housing and permitting policy are the AI distribution policy. → [Uncertainty 2](../06-uncertainties/power-permitting.md)
+1. **Supply response in the inelastic complements.** Land and energy are inelastic *given current regulation*. Permitting reform, transmission build-out, and housing liberalization would each convert a rent into a normal return. **Nothing else on the table moves the distribution this much, and it is almost never discussed as distributional policy** - housing and permitting policy are the AI distribution policy. → [Uncertainty 2](../06-uncertainties/power-permitting.md)
 2. **Broad ownership of the complements.** Sovereign wealth funds, universal capital accounts, and pension exposure to infrastructure all convert asset appreciation from a concentrating force into a distributed one. Mechanically straightforward, politically difficult, and already implemented in several countries.
 3. **Taxing the rents rather than the labor.** Land value taxation is the textbook answer to exactly this configuration and has been the textbook answer for 150 years without being adopted. → [Fiscal](fiscal.md)
 

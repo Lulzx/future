@@ -62,7 +62,7 @@ Universal basic income dominates public discussion of this topic and deserves a 
 
 > **Assessment:** meaningful UBI in a major economy by 2035 is **~15%** likely. Far more likely, and more useful: expanded conditional transfers, wage insurance, and subsidized training - none of which are new instruments, all of which are politically achievable, and all of which target the actual mechanism better.
 
-**The higher-leverage fiscal intervention is on the training side, not the transfer side** - subsidizing the junior-hiring externality directly, since [Game 4](../02-games/4-labor.md) identifies it as a commons tragedy where firms pay full cost and capture a fraction of the benefit. That is a textbook case for a Pigouvian subsidy, it is cheap relative to UBI, and essentially nobody is proposing it.
+**The higher-leverage fiscal intervention is on the training side, not the transfer side** - subsidizing the junior-hiring externality directly, since [Game 4](../02-games/4-labor.md) identifies it as a commons tragedy where firms pay full cost and capture a fraction of the benefit. That is a textbook case for a Pigouvian subsidy, it is cheap relative to UBI, and almost nobody is proposing it.
 
 ### State capacity is the binding constraint on every fiscal fix
 

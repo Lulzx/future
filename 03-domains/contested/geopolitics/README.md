@@ -58,7 +58,7 @@ Each faces a *different* binding constraint. That is the organizing insight of t
 | [**The Gulf**](gulf.md) | Nothing physical - capital and power are abundant | Can compute be converted into an economy? |
 | [**The Global South**](global-south.md) | The complements: connectivity, credit, electricity, tenure | Does the free technology reach anyone? |
 
-## What navigating it looks like
+## What working within it looks like
 
 The countries that come through this will be the ones that pivot **early** to:
 

@@ -12,7 +12,7 @@ The standard argument for humanoids is that the world is built for human bodies,
 
 **And the humanoid form is mechanically poor.** Bipedal locomotion is unstable, energy-hungry, and adds enormous control complexity to reach the same places wheels reach on flat floors - which is most commercial floors. A wheeled base with one or two arms is cheaper, more stable, longer-running, and better at nearly every specific task.
 
-Task-specific machines beat general-purpose ones on cost and reliability, every time, and always have. If the question were only "what is the efficient body for this task," the answer would essentially never be a humanoid.
+Task-specific machines beat general-purpose ones on cost and reliability, every time, and always have. If the question were only "what is the efficient body for this task," the answer would almost never be a humanoid.
 
 ## The strong argument: the form factor is a data strategy
 

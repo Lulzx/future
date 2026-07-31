@@ -10,7 +10,7 @@ Built from physical constraints upward, then the strategic games that sit on top
 
 The argument has one spine: **capability grows fastest where verification is cheap, and value accrues to whatever intelligence cannot manufacture.** Everything below is a consequence of those two sentences colliding with physics, capital, and incentives.
 
-Three design choices distinguish this from most AI forecasting, and each is load-bearing:
+Three design choices distinguish this from most AI forecasting, and none of them is decorative:
 
 1. **Bottom-up from constraints**, not top-down from capabilities. Instead of asking "what will models be able to do," it asks what the four physical inputs permit, and lets capability fall out as a residual. Constraint-first reasoning is harder to bend toward a preferred conclusion, because queues, order books, and capex guidance are checkable in a way that vibes about model quality are not.
 

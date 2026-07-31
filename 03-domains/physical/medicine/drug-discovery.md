@@ -52,7 +52,7 @@ Faster preclinical discovery does not fix [delivery](delivery.md). A cheaper can
 
 ## Failure modes
 
-- **If translational models** (organoids, digital twins with validated prediction) materially raise Phase II success rates, the 20–30% preclinical claim understates the total impact and the post-2032 clinical wall softens earlier.
+- **If translational models** (organoids, digital twins with validated prediction) raise Phase II success rates, the 20–30% preclinical claim understates the total impact and the post-2032 clinical wall softens earlier.
 - **If automated labs** remain boutique, the science bottleneck claim strengthens and drug AI stays a design tool.
 - **If regulators accept** novel evidence packages (in silico primary evidence), the institutional clock moves - low probability before a major framework rewrite, which is event-driven. → [Game 2](../../../02-games/2-nations.md)
 

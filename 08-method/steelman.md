@@ -8,13 +8,13 @@
 
 Each is stated in its strongest form, then answered honestly - including where the answer is weak.
 
-Selection was not by loudness. Each of the three earns its place by passing three tests at once: it attacks a load-bearing element rather than a detail, it names a mechanism rather than a mood, and it makes at least one prediction that differs from this document's - so that evidence, not taste, can settle it. Most common objections fail the third test; "it's all hype" and "it's all inevitable" are both unfalsifiable in the forms usually offered, which is why neither appears here despite dominating the public argument.
+Selection was not by loudness. Each of the three earns its place by passing three tests at once: it attacks a step the argument needs rather than a detail, it names a mechanism rather than a mood, and it makes at least one prediction that differs from this document's - so that evidence, not taste, can settle it. Most common objections fail the third test; "it's all hype" and "it's all inevitable" are both unfalsifiable in the forms usually offered, which is why neither appears here despite dominating the public argument.
 
 ## 1. "Verification cost stops being the ordering principle"
 
 **The argument.** The master asymmetry is a claim about *today's* training regime. It holds because RL needs a cheap reward signal. But reward modelling, process supervision, and learned critics are all attempts to manufacture verification where it was expensive - and they are working better each year. If a model can reliably judge the quality of a legal argument, a research direction, or a piece of management advice, then verification stops being scarce, and with it the entire ordering of [Part III](../03-domains/) dissolves. The domains this document says lag do so only because of a temporary property of the current method.
 
-**Why it's strong.** It attacks the load-bearing claim directly, it has a plausible mechanism, and it has empirical support: capability in "unverifiable" domains has improved considerably more than a strict reading of the asymmetry would predict. Long-form writing, strategic reasoning, and open-ended research assistance have all advanced without cheap ground truth.
+**Why it's strong.** It attacks the central claim directly, it has a plausible mechanism, and it has empirical support: capability in "unverifiable" domains has improved considerably more than a strict reading of the asymmetry would predict. Long-form writing, strategic reasoning, and open-ended research assistance have all advanced without cheap ground truth.
 
 **The answer.** A learned verifier is only as good as what trained it, so this recurses rather than resolves - it moves the ground-truth problem one level up rather than eliminating it, and where genuine ground truth never arrives, the loop can drift confidently. Self-verification without external grounding is exactly the regime where systematic error compounds invisibly.
 

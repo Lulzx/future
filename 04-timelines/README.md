@@ -14,7 +14,7 @@ Three periods, each with a different rate-limiting factor. Each page synthesizes
 
 ## The shape of it
 
-The story moves outward through the stack. First the technology has to work reliably enough to sell (2026–28). Then organizations have to restructure around it, which is slower than the technology and always has been (2028–32). Then it either crosses into the physical world or it doesn't, and that determines whether this decade is remembered as an important one or a transformative one (2032–40).
+The story moves outward through the stack. First the technology has to work reliably enough to sell (2026–28). Then organizations have to restructure around it, which is slower than the technology and always has been (2028–32). Then it either crosses into the physical world or it doesn't, and that determines whether this decade is remembered as an important one or a decisive one (2032–40).
 
 Note that the *capability* frontier is not the rate-limiting factor in any of the three periods. That is the central claim of the timeline, and the main thing that would falsify it is [recursive research acceleration](../06-uncertainties/recursive-self-improvement.md) - subject to the three governors (verification, physical supply chain, financial) named there.
 
@@ -28,7 +28,7 @@ This ordering is also why the three pages weight evidence differently. The first
 
 ## What each period now carries
 
-Rounds 1–7 deposited material that these pages have to hold, not merely link to:
+Rounds 1–7 deposited material that these pages have to hold, not just link to:
 
 | Thread | Lands hardest in |
 |---|---|
@@ -39,13 +39,13 @@ Rounds 1–7 deposited material that these pages have to hold, not merely link t
 | Regional binding constraints (five regions) | All three; decisive splits by 2032–40 |
 | Demography revising aggregate labor down, composition standing | [2028–2032](2028-2032.md) and [2032–2040](2032-2040.md) |
 | Robotics fork; science automation; macro feedback loops | [2032–2040](2032-2040.md) |
-| Taiwan as load-bearing modelling assumption | All three; named explicitly |
+| Taiwan as the underlying modelling assumption | All three; named explicitly |
 
 Cross-check claims against [Part VII](../07-indicators/) (observables), [Part V](../05-probabilities/) (stated probabilities), and [Part VI](../06-uncertainties/) (where the schedule breaks).
 
 ## Why the schedule stops at 2040
 
-The horizon is a claim, not a convenience. Past the robotics fork, the branches diverge too far for a single narrative to mean anything - a 2045 in the high-growth branch and a 2045 in the disappointment branch share almost no load-bearing facts, so any page covering both would be written at a level of abstraction that cannot be wrong, and a page that cannot be wrong is excluded by the [file conventions](../RESEARCH.md). The honest form for post-2040 content is conditional (already present inside [2032–2040](2032-2040.md) as branch descriptions), not calendrical. If a future round finds the 2032–40 fork resolving early and cleanly, *that* is the trigger for drafting a fourth period - the schedule extends when a branch is chosen, not when time passes.
+The horizon is a claim, not a convenience. Past the robotics fork, the branches diverge too far for a single narrative to mean anything - a 2045 in the high-growth branch and a 2045 in the disappointment branch share almost no facts that matter, so any page covering both would be written at a level of abstraction that cannot be wrong, and a page that cannot be wrong is excluded by the [file conventions](../RESEARCH.md). The honest form for post-2040 content is conditional (already present inside [2032–2040](2032-2040.md) as branch descriptions), not calendrical. If a future round finds the 2032–40 fork resolving early and cleanly, *that* is the trigger for drafting a fourth period - the schedule extends when a branch is chosen, not when time passes.
 
 The same logic runs backward as a reading instruction: the further a page's dates sit from the present, the more its value lives in the *conditionals* (what determines which branch) and the less in the *dates*. The 2026–28 page should be read as a forecast; the 2032–40 page as a decision tree with probabilities on the branches. Scoring should respect this - marking the third period "wrong" because an event slipped two years would miss what the page actually claims, and [scoring](../08-method/scoring.md) rule 1's mechanism-over-outcome principle exists for exactly this case.
 

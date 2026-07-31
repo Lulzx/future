@@ -30,7 +30,7 @@ A regulator cannot enforce what it cannot measure. Right now, no government can 
 
 Every one of those is currently established by **self-report from the regulated entity.** That is the structural situation in pharmaceutical approval before the FDA had inspection authority, and in financial reporting before independent audit - and both took decades and a scandal each to fix.
 
-**The highest-leverage governance investment available is not rulemaking. It is measurement capability** - the technical ability to check claims independently. Without it, any architecture written in the post-incident window is unenforceable, and unenforceable rules produce compliance theatre plus a false sense of resolution, which is worse than no rules at all.
+**The governance investment that pays best is not rulemaking but measurement capability** - the technical ability to check claims independently. Without it, any architecture written in the post-incident window is unenforceable, and unenforceable rules produce compliance theatre plus a false sense of resolution, which is worse than no rules at all.
 
 Compute governance as verification ([C3](../../07-indicators/governance.md), [bipolar trap](geopolitics/bipolar.md)) only works if someone can audit chips, clusters, or attestations. That is a measurement institution problem before it is a treaty problem.
 
@@ -58,7 +58,7 @@ Government is unusually well-suited to the current technology, and unusually bad
 
 ### The permitting loop
 
-**Permitting throughput is a state-capacity question, and permitting is the binding constraint on [energy](../../01-substrate/energy.md), which is the binding constraint on AI itself.** A state that used AI to clear its own permitting backlog would be relieving the constraint on the technology by deploying the technology. That is the single highest-leverage administrative intervention available and it requires no new statutory authority in many jurisdictions - only procurement and willingness.
+**Permitting throughput is a state-capacity question, and permitting is the binding constraint on [energy](../../01-substrate/energy.md), which is the binding constraint on AI itself.** A state that used AI to clear its own permitting backlog would be relieving the constraint on the technology by deploying the technology. That is the one administrative intervention that pays for itself, and it requires no new statutory authority in many jurisdictions - only procurement and willingness.
 
 Same logic applies to grid studies ([energy sector](../physical/energy-sector.md)), court dockets ([law](../cognitive/law.md)), and licensing boards that gate [medicine](../physical/medicine/liability.md).
 

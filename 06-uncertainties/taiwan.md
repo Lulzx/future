@@ -79,6 +79,6 @@ If gray-zone indicators fire without crisis: do not wait for invasion language. 
 
 ---
 
-**Related:** [Bipolar](../03-domains/contested/geopolitics/bipolar.md) · [Compute](../01-substrate/compute.md) · [Robotics supply chain](../03-domains/physical/robotics/supply-chain.md) · [Warfare](../03-domains/contested/warfare.md) · [Part V](../05-probabilities/) load-bearing assumptions
+**Related:** [Bipolar](../03-domains/contested/geopolitics/bipolar.md) · [Compute](../01-substrate/compute.md) · [Robotics supply chain](../03-domains/physical/robotics/supply-chain.md) · [Warfare](../03-domains/contested/warfare.md) · [Part V](../05-probabilities/) assumptions
 
 **Previous:** [Uncertainty 3](apprenticeship-gap.md) · **Next:** [Uncertainty 5 - learned verification](learned-verification.md)

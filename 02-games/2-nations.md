@@ -26,7 +26,7 @@ Coordination is **event-driven, not reason-driven**. This is the historical patt
 
 Expect a serious AI-attributed incident - cyber-physical, biological near-miss, or a market event - in **2027–2031**, and expect the regulatory architecture governing the 2030s to be written in the **18 months after it.**
 
-The practical implication: the highest-leverage governance work right now is not advocacy. It is having the good version of the architecture drafted, defensible, and on the shelf before the window opens, because the window will be short and whatever is ready will win. → [C2](../07-indicators/governance.md)
+The practical implication: the governance work that matters right now is not advocacy but having the good version of the architecture drafted, defensible, and on the shelf before the window opens, because the window will be short and whatever is ready will win. → [C2](../07-indicators/governance.md)
 
 ## The compute-governance trap
 
