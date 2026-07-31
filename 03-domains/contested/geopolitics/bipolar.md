@@ -74,6 +74,8 @@ The open-weight tier is how the two ecosystems stay closer than export controls 
 
 **Failure mode of this page:** scoring "decoupling" from diplomatic language. Bifurcation is a *layer* property - hardware, models, applications, data rules can split independently. A summit that claims decoupling while open weights and third-country routing still couple the layers has not changed the configuration.
 
+**Third countries choose per layer.** Chinese hardware + Western models (or reverse) is the modal configuration for application states - not bloc purity. Score customs and API traffic, not alliance communiqués. → [global south](global-south.md), [gulf](gulf.md)
+
 ---
 
 **Related:** [Energy](../../../01-substrate/energy.md) · [Game 2 - Nations](../../../02-games/2-nations.md) · [Robotics supply chain](../../physical/robotics/supply-chain.md) · [Warfare](../warfare.md) · [Compute](../../../01-substrate/compute.md)

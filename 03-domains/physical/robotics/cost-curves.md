@@ -74,6 +74,8 @@ This is the point at which robotics economics stops being a technology question 
 
 Wages understate the hurdle. BLS employer-cost series put fully-loaded private employment roughly **+40%** above wages alone (benefits, payroll tax, workers' comp - ECEC, early 2026 prints). High-turnover and high-injury settings add recruitment, overtime, and injury costs on top. A robot that loses on wage comparison can win on fully-loaded cost years earlier - which is why the prediction above names high-turnover structured settings first, not the lowest wage. Score [B12](../../../07-indicators/diffusion/capability.md) against fully-loaded local cost, not minimum wage.
 
+**RaaS changes the buyer psychology, not the physics.** Robots-as-a-service converts a capital hurdle into an opex comparison to wage - watch RaaS share as a *procurement* signal that the cost curve is being packaged for adoption, not as proof success rates improved.
+
 ---
 
 **Related:** [The data problem](data-problem.md) on the success-rate term · [Supply chain](supply-chain.md) · [Game 4 - Labor](../../../02-games/4-labor.md) on task-versus-job composition · [Logistics](../logistics.md)

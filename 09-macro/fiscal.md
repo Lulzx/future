@@ -68,6 +68,8 @@ Universal basic income dominates public discussion of this topic and deserves a 
 
 Instruments above assume a state that can design, pass, and administer them. [State capacity](../03-domains/contested/state-capacity.md) is uneven and, in several high-income jurisdictions, thinning on technical hiring just as the measurement and enforcement load rises. A correct fiscal diagnosis with a state that cannot run the program is not an operational plan. Prefer interventions that use existing administrative rails (payroll tax credits for junior headcount, expanded apprenticeships through existing guilds, land-value components inside existing property tax) over greenfield agencies. Complexity is not free when [B10](../07-indicators/diffusion/labor.md) is already warning that the base is under pressure.
 
+**Demography drives half of this page even if AI TFP misses.** Aging raises transfers and care spend on a path already locked in. AI multiplies the squeeze; it did not invent it. → [Demography](demography.md)
+
 ---
 
 **Related:** [Assets](assets.md) · [Prices](prices.md) · [Rates](rates.md) · [Game 4 - Labor](../02-games/4-labor.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [B10 - tax-base indicator](../07-indicators/diffusion/labor.md)

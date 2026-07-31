@@ -73,6 +73,8 @@ Three ways the 2029–30 dollar wall softens without falsifying scaling: **(1)**
 
 **Failure mode of this page:** treating every missed $100B run announcement as evidence the wall arrived early. Discretionary delay, power queue, and chip allocation can slip a run without the economic ceiling binding. A1 needs cost *and* intent, not silence.
 
+**A6 vs gray zone.** Rising non-Taiwan wafer share shrinks *consequence* of disruption; it does not green-light the 90% probability. Soft rationing ([U4](../06-uncertainties/taiwan.md) gray zone) can reprice every run schedule while A6 is still low. Read both.
+
 ---
 
 **Related:** [Energy](energy.md) · [Capital](capital.md) · [Inference economics](inference-economics.md) · [Game 1](../02-games/1-labs.md) · [2026–2028](../04-timelines/2026-2028.md) · [Part V](../05-probabilities/)

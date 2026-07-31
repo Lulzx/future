@@ -69,6 +69,8 @@ It is also the largest market, because domestic labor is the biggest pool of unp
 
 [2032–2040](../../../04-timelines/2032-2040.md) forks on whether robots clear delivered $/hour in enough physical tasks to move aggregate growth - not on whether those robots look human. A world of cheap wheeled manipulators and mobile bases that clear the economic threshold is a high-growth fork even if every humanoid demo remains a research program. A world of beautiful bipeds that never leave teleop is not. Read [B12](../../../07-indicators/diffusion/capability.md) and [cost curves](cost-curves.md) for the fork; read this page for which body wins *conditional* on the fork going high.
 
+**Humanoid as data bet, not efficiency bet.** The form wins if human demonstration data + existing environments dominate; it loses if cross-embodiment transfer makes arbitrary bodies cheap to retrain. Score transfer papers and teleop ratios, not biped marketing.
+
 ---
 
 **Related:** [The data problem](data-problem.md) · [Cost curves](cost-curves.md) · [Supply chain](supply-chain.md) · [2032–2040](../../../04-timelines/2032-2040.md) · [Game 4 - Labor](../../../02-games/4-labor.md)

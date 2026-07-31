@@ -77,6 +77,8 @@ Ordered by leverage per dollar, and notable for how little any of it is about AI
 
 A shorter open-weight lag (~3–6 months measured) is *good* for welfare applications on this page - cheaper, sooner local adaptation - and *bad* for any strategy that hoped frontier export controls would create a protected market for domestic base models. Development ministries that plan as if weights stay scarce for years are planning against the measured lag. The realistic program is the "favorable lease" above, hedged by on-device efficiency and power/connectivity, not by waiting for a national foundation model that never pencils.
 
+**Electricity and connectivity still gate the free tools.** A free model behind a bad grid is a press release. Score welfare claims against rural electrification and device penetration before model-leaderboard envy.
+
 ---
 
 **Related:** [India](india.md) · [Inference economics](../../../01-substrate/inference-economics.md) · [Education](../../cognitive/education.md) · [Medicine](../../physical/medicine/) · [Agriculture](../../physical/agriculture.md) · [Game 1 - Labs](../../../02-games/1-labs.md) on open weights

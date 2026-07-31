@@ -89,7 +89,7 @@ Rule 5 satisfied: evidence reviewed, contradiction logged rather than absorbed s
 
 Rule 5 satisfied: one move with written mechanism, six holds with named evidence. First table move since round 8.
 
-## Rounds 27–33 - hold passes (no number moves)
+## Rounds 27–34 - hold passes (no number moves)
 
 *Date: 2026-07-31. Depth rounds + hub hygiene + scoring filters; no new scoreable series crossed a Part V bar.*
 

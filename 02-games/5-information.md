@@ -90,6 +90,8 @@ All of these converge because all are downstream of generation becoming free. Th
 
 When text is free, markets reprice *costly to fake* signals: live presence, long-horizon reputation, cryptographic provenance, invigilated performance, physical co-location. That is why education drifts to oral exams, media to authenticated creators, hiring to work samples, and platforms to walled gardens - not because people suddenly hate AI, but because cheap signals stop clearing. Builders who treat "more generation" as the product fight this page; builders who sell verification infrastructure are this page's commercial form. → [C8](../07-indicators/governance.md), [compressed](../00-overview/compressed.md)
 
+**Labeling without attestation is theatre.** Mandates that require "AI-generated" tags without capture-time cryptography are the privacy-class miss applied to media - compliance cost, spoofable signal. Score C8's infrastructure trigger, not the existence of a label law.
+
 ---
 
 **Related:** [Media & culture](../03-domains/cognitive/media.md) · [Education](../03-domains/cognitive/education.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Compressed version](../00-overview/compressed.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [B6](../07-indicators/diffusion/labor.md) · [C8 provenance](../07-indicators/governance.md)

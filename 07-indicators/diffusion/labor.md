@@ -75,6 +75,8 @@ Secondary reads:
 
 Profession-level B1 cuts beat blended knowledge-work averages - [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) is sectoral.
 
+**Export hubs belong on B1.** Bangalore, Manila, and similar corridors are the development face of the same indicator - score junior export-services employment against US hiring cycles, not only domestic FAANG postings. → [India](../../03-domains/contested/geopolitics/india.md)
+
 ---
 
 **Related:** [Game 4](../../02-games/4-labor.md) · [Game 5](../../02-games/5-information.md) · [Meaning](../../03-domains/cognitive/meaning.md) · [Fiscal](../../09-macro/fiscal.md)

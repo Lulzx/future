@@ -73,6 +73,8 @@ The pre-event pricing problem cuts both ways, and this is the part the corpus sh
 
 Three signatures, in rising severity. **(1) Exclusion language** spreads from specialty lines into ordinary professional liability and cyber - the quiet form, already partly present. **(2) Aggregate limits and co-insurance** appear on AI-assisted work even where coverage nominally exists - capacity without usable limits is capacity in name only. **(3) A correlated loss event** that hits multiple insureds on the same model generation - the event that converts a theoretical argument into a reinsurance market freeze. [C6](../07-indicators/governance.md) and the insurance page's product watch are the leading indicators; waiting for (3) to score this uncertainty is waiting for the resolution event itself.
 
+**Monoculture is the underwriting input.** Herding on the same model family, scaffold, and update schedule is what turns independent professional risk into catastrophe risk. Watch model-share concentration in deployed enterprise stacks the way finance watches factor crowding - [finance](../03-domains/cognitive/finance.md) monoculture table applies here with different labels.
+
 ---
 
 **Related:** [Insurance](../03-domains/cognitive/insurance.md) · [Game 2](../02-games/2-nations.md) · [Game 1](../02-games/1-labs.md) on liability · [Governance indicators](../07-indicators/governance.md) · [2028–2032](../04-timelines/2028-2032.md)

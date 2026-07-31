@@ -80,6 +80,8 @@ Consolidation does not end the contest; it changes its currency. With 3–5 play
 
 A shorter open-weight lag shrinks the private prize (frontier access is a thinner wasting asset - [inference economics](../01-substrate/inference-economics.md)) while raising the social stakes of every release (capability reaches the application layer and the rival ecosystem faster). Rational contestants may therefore *increase* closed-frontier spend to buy a temporary lead even as the lead is worth less - classic over-dissipation under a depreciating prize. The policy implication from the PD frame (agree to slow down) gets harder, not easier: verification of any slowdown is weaker when weights and distillations circulate in months. That is why [Part V](../05-probabilities/README.md) row 4 moved in r26 and why Game 1 and Game 2 must be read as a coupled system after the lag miss.
 
+**Score consolidation and lag separately.** The authored blockquote still pairs them; [scoring](../08-method/scoring.md) partial-credit rule and the register require clause-level resolution. Lag already missed; consolidation is still open through 2029.
+
 ---
 
 **Related:** [Compute](../01-substrate/compute.md) · [Capital](../01-substrate/capital.md) · [Game 2 - Nations](2-nations.md) · [Insurance](../03-domains/cognitive/insurance.md) · [Uncertainty 1 - RSI](../06-uncertainties/recursive-self-improvement.md)

@@ -71,6 +71,8 @@ Inference cost collapse + distillation compresses the [Game 2](../02-games/2-nat
 - **Capability jumps so large** that "fixed level" free is irrelevant - each cohort is a new regime ([Uncertainty 1](../06-uncertainties/recursive-self-improvement.md), still subject to three governors)
 - **Regulation locks frontier behind non-price barriers** that keep a durable access moat for a few labs
 
+**Prices can stick while costs fall** if the model layer consolidates - [Game 1](../02-games/1-labs.md) endgame. Score serving *prices* and *costs* separately; the two-year moat is a cost claim that only becomes a product-strategy claim when competition transmits it into price.
+
 ---
 
 **Related:** [Game 3](../02-games/3-firms.md) · [Software](../03-domains/cognitive/software.md) · [Compute](compute.md) · [Capital](capital.md) · [Game 1](../02-games/1-labs.md) open-weight tier · [B5](../07-indicators/diffusion/economy.md)

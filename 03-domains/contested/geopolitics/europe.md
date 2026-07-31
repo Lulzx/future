@@ -75,6 +75,8 @@ The real risk is different and less discussed: **regulatory cost falling on Euro
 
 **Failure mode of this page:** treating "no frontier lab HQ in the EU" as strategic defeat. Game 3 says value lands in complements Europe *does* hold (regulation, insurance capital, industrial brands, land with grid). Defeat is compliance without those rents, not absence of train-run campuses.
 
+**Industrial electricity is the capacity scoreboard.** Capability talent can sit in London while training MW sits elsewhere if European industrial power stays structurally expensive. Watch A4-style prices against US/Gulf/China, not only AI Act headlines.
+
 ---
 
 **Related:** [Game 3 - Firms](../../../02-games/3-firms.md) · [Insurance](../../cognitive/insurance.md) · [Energy](../../../01-substrate/energy.md) · [State capacity](../state-capacity.md) · [Game 2 - Nations](../../../02-games/2-nations.md)

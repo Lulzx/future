@@ -71,6 +71,8 @@ Failure archaeology also names the paths that would *make* this cycle rhyme with
 
 The public will call several of the top rows a "winter." This page's job is to refuse that label unless the bottom row's conjunction is met.
 
+**Outcome revenue is the winter vaccine.** Seat-priced option-value AI churns in a CFO cut; outcome-priced revenue with liability attached does not. [B5](../../07-indicators/diffusion/economy.md) is therefore also a winter-risk indicator, not only a reliability indicator.
+
 ---
 
 **Related:** [Cycles](cycles.md) · [Capital](../../01-substrate/capital.md) · [Compute](../../01-substrate/compute.md) · [Part V](../../05-probabilities/) row 6 · [Uncertainty 6](../../06-uncertainties/correlated-risk.md)

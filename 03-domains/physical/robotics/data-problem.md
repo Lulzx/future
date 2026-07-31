@@ -74,6 +74,8 @@ That does not defeat the argument, but it changes what the flywheel is worth. It
 
 High teleoperation share in "autonomous" fleets is the honest baseline, not a failure. It is how the cold-start problem gets paid for: humans provide the success distribution the fleet later learns from, at a cost that only works if utilization and wages justify the robot-plus-operator stack. Watch the **teleop-to-autonomy ratio falling in production settings** ([robotics hub](README.md) indicator family, [B12](../../../07-indicators/diffusion/capability.md)) - not demo videos with no operator in frame. A rising teleop share at constant deployment is a regression; a falling share at rising deployment is the flywheel.
 
+**Fleet learning is a moat inside a domain, not a bridge between them.** Millionth warehouse pick teaches warehouse; it does not teach kitchens. Treat cross-environment transfer as a separate research event from fleet scale.
+
 ---
 
 **Related:** [Cost curves](cost-curves.md) · [Form factor](form-factor.md) on why humanoids are a data strategy · [Data](../../../01-substrate/data.md) for the general asymmetry · [Agriculture](../agriculture.md) and [Logistics](../logistics.md) for structured-environment fleets
