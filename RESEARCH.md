@@ -104,7 +104,8 @@ Every content file:
 | 30 | 2026-07-31 | Domain depth sweep: education/science/meaning; warfare/cyber/bio; ag/logistics/energy-sector; prices/Game5; timelines 2032–40; A6↔Taiwan gray zone; dependencies high-centrality debt; Game 2 jurisdiction brand; soft-cap notes on state-capacity/governance | 91 | 7,189 |
 | 31 | 2026-07-31 | Hub/index hygiene: Games lag table + reading order; Part V/ledger r27–31 holds; indicator capex sync + Taiwan gray-zone shortlist; medicine/robotics hubs; Part I/IV/VIII/IX READMEs; U3 export ladders; media mid-tier | 91 | 7,248 |
 | 32 | 2026-07-31 | Thin-hub depth: base-rates/cognitive/diffusion/uncertainties/overview READMEs; geopolitics lag coupling; Part III↔Part V; steelman U5 middle; B4×B12; cycles scrutiny≠correction; software review scarce; U7 warehouse discipline; energy interruptible | 91 | 7,333 |
-| 33 | 2026-07-31 | Content shallow band + notation: U2 routing; medicine stack; supply-chain reshoring; capital/Game3 scoring discipline; B-economy circularity; U1/U3/U5/U7 filters; India revenue/employment; register Taiwan cluster; notation new terms; compressed gray-zone | **91** | **7377** |
+| 33 | 2026-07-31 | Content shallow band + notation: U2 routing; medicine stack; supply-chain reshoring; capital/Game3 scoring discipline; B-economy circularity; U1/U3/U5/U7 filters; India revenue/employment; register Taiwan cluster; notation new terms; compressed gray-zone | 91 | 7,377 |
+| 34 | 2026-07-31 | Mid-band 75–95: substrate data/inference/compute; robotics form/cost/data; U6 monoculture; bipolar per-layer; demography unconditional; Europe power; B1 export hubs; global-south grid; insurance/finance; Games 1/4/5; assets/fiscal; 2026–28 evidence family; winters B5 | **91** | **7419** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -166,7 +167,12 @@ Every content file:
 
 **Round 33:** content-file shallow band scoring filters - power-permitting interruptible/behind-the-meter as routing; drug-discovery preclinical≠health; liability indemnity signal; diagnostics fees+headcount; delivery payer-threshold; supply-chain reshoring-with-imports; capital skepticism≠A3; Game 3 SaaS example; economy circularity filter; U5 not-on-benchmarks; U1 lag≠RSI; U3 definition drift; U7 land residual; India revenue/employment decoupling; register Taiwan cluster; [notation](00-overview/notation.md) admits complement half-life, gray-zone Taiwan, process/outcome verification, behind-the-meter; compressed/thesis gray-zone one-liners. Ledger hold block extended to r27–33. No probability moves, no splits.
 
-*Invariants at r33 close: **91 files, 7377 lines, 0 broken links.***
+*Invariants at r33 close: **91 files, 7,377 lines, 0 broken links.***
+
+
+**Round 34:** mid-band depth (75–95 lines) across substrate, robotics, uncertainties, geopolitics, macro, games, and early timeline - scoring filters: synthetic data doesn't erase columns; prices vs costs on inference moat; A6 vs Taiwan gray zone; humanoid as data bet; U6 monoculture; bipolar per-layer choice; demography unconditional; Europe industrial electricity; B1 export hubs; global-south grid gate; insurance prices all domains; finance herding; Game 1 clause scoring; Game 4 weak 50/30/20 prior; Game 5 label theatre; assets housed/unhoused; fiscal demography floor; 2026–28 financial evidence family; winters outcome-revenue vaccine. No probability moves, no splits.
+
+*Invariants at r34 close: **91 files, 7419 lines, 0 broken links.***
 
 **Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
 
