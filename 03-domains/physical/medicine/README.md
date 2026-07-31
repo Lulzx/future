@@ -53,6 +53,11 @@ All four claims assume the system being changed is the incumbent one. The readin
 | Real fee per study vs practitioner headcount | The [diagnostics](diagnostics.md) prediction resolving through price rather than employment |
 | Phase II success rates | Whether [drug discovery](drug-discovery.md) acceleration reached the part that matters |
 | Outpatient encounters preceded by model consultation | The [delivery](delivery.md) prediction, and the direction of its effect on queues |
+| Capitated / national vs fee-for-service deployment maps | Whether payment structure predicts adoption as claimed |
+
+### High-income vs low-resource sign flip
+
+In high-income systems, consumer triage risks *over-referral into full queues*. In low-resource settings the counterfactual is often no care - same tools, opposite welfare sign. → [delivery](delivery.md), [global south](../../contested/geopolitics/global-south.md). Do not export one prediction to the other geography without flipping the counterfactual.
 
 ## Sections
 

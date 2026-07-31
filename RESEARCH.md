@@ -101,7 +101,8 @@ Every content file:
 | 27 | 2026-07-31 | Depth + Ground: thin base-rates children and U3/U7 cleared past the r22 short flag; B-economy/B-capability instrumentation; Game 3 scoring cross-section; capital/timeline capex synced to ~$700–725B mid-2026 guidance; Find UI restored on static site (mobile-ready) | 91 | 6,934 |
 | 28 | 2026-07-31 | Depth on 60–80 band: Taiwan gray-zone indicator table; U5 coupling map + middle-case resolution; U2 scoring joint; Game 1 lag→contest; data misread rules; India escapes; B-labor joints; assets↔U7; fiscal×state capacity; winters scoring matrix; form-factor vs growth fork | 91 | 7,033 |
 | 29 | 2026-07-31 | Depth continues: Europe shelf-readiness; bipolar open-weight coupling; compute wall movers; delivery/global-south sign flip; insurance soft-market caveat; RSI re-score gate; Gulf labor contradiction; robotics fully-loaded cost + teleop + shipments; scoring partial-credit; finance incident favourite; law process/judgment; energy behind-the-meter; 2028–32 political split | 91 | 7,112 |
-| 30 | 2026-07-31 | Domain depth sweep: education/science/meaning; warfare/cyber/bio; ag/logistics/energy-sector; prices/Game5; timelines 2032–40; A6↔Taiwan gray zone; dependencies high-centrality debt; Game 2 jurisdiction brand; soft-cap notes on state-capacity/governance | **91** | **7,189** |
+| 30 | 2026-07-31 | Domain depth sweep: education/science/meaning; warfare/cyber/bio; ag/logistics/energy-sector; prices/Game5; timelines 2032–40; A6↔Taiwan gray zone; dependencies high-centrality debt; Game 2 jurisdiction brand; soft-cap notes on state-capacity/governance | 91 | 7,189 |
+| 31 | 2026-07-31 | Hub/index hygiene: Games lag table + reading order; Part V/ledger r27–31 holds; indicator capex sync + Taiwan gray-zone shortlist; medicine/robotics hubs; Part I/IV/VIII/IX READMEs; U3 export ladders; media mid-tier | **91** | **7248** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -152,6 +153,10 @@ Every content file:
 **Round 30:** domain-wide depth sweep rather than a single theme - cognitive (assessment-as-product, paper flood, B11 scoring discipline), contested (attritable manufacturing race, cyber adoption trough, bio asymmetric clocks, Game 2 jurisdiction branding), physical (land rent in ag, hands-on-box logistics, energy load vs tool pages), macro/method (headline CPI hide, costly signaling as product design, 2032–40 fork on delivered work, A6 vs gray zone, dependencies debt table for U7/lag/Taiwan). Soft-cap hygiene notes on [state capacity](03-domains/contested/state-capacity.md) and [governance](07-indicators/governance.md) rather than padding them. No probability moves, no splits, no new files.
 
 *Invariants at r30 close: **91 files, 7,189 lines, 0 broken links.***
+
+**Round 31:** hub and index pass after four content-depth rounds - the risk was parent pages falling behind children. Updated [Games](02-games/README.md) open-weight lag to measured ~3–6 months and added reading order; [Part V](05-probabilities/) + [ledger](05-probabilities/ledger.md) + [reasoning](05-probabilities/reasoning.md) explicit r27–31 hold block (rule 5); [indicators](07-indicators/README.md) capex baseline → ~$700–725B and Taiwan gray-zone on the short list; medicine hub sign-flip + robotics fifth watch; substrate behind-the-meter note; timelines evidence-by-period table; method partial-credit; macro U7 twin; U3 export-ladder scope; media mid-tier casualty. No probability moves, no splits.
+
+*Invariants at r31 close: **91 files, 7248 lines, 0 broken links.***
 
 **Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
 

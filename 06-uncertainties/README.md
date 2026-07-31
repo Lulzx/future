@@ -13,7 +13,7 @@ The seven are not the same kind of object, and reading them as a flat list under
 | 1 | [Recursive research acceleration](recursive-self-improvement.md) | Faster - Part I ceilings stop binding | Internal research cycle time per validated experiment |
 | 2 | [Power permitting politics](power-permitting.md) | Faster - skewed, can only loosen | Grid interconnection queue length |
 | 3 | [Apprenticeship gap response](apprenticeship-gap.md) | Better - could invert the prediction | Entry-level : senior posting ratios through 2029 |
-| 4 | [Taiwan / leading-edge fab](taiwan.md) | Worse - invalidates the whole document | Capacity share outside TW; crisis indicators |
+| 4 | [Taiwan / leading-edge fab](taiwan.md) | Worse - invalidates the whole document | Capacity share outside TW; crisis *and* gray-zone (insurance, licenses, slip) |
 | 5 | [Learned verification](learned-verification.md) | Framework-false - master asymmetry fails | Capability gap closing in unverifiable domains |
 | 6 | [Correlated-failure insurability](correlated-risk.md) | Deployment frontier is financial, not technical | AI liability line; reinsurer capacity; backstop proposals |
 | 7 | [Complement erosion](complement-erosion.md) | Faster - value flows to consumers, not complement-owners | Datacenter-node prices vs load; robot cost curves; license liberalization |

@@ -40,6 +40,8 @@ Reading the five rows as independent misses most of the dynamics. The couplings 
 
 **The relay metaphor's failure mode.** A relay implies each constraint hands off cleanly to the next. The couplings above mean they can instead bind *simultaneously* - an energy-delayed build raises capex per delivered FLOP just as the capital verdict is being re-priced. The base case here assumes sequential binding; the compounding case is the pessimistic tail, and it is tracked jointly by [A2 and A4](../07-indicators/substrate.md) rather than by any single indicator.
 
+**Behind-the-meter routing.** When A4 (queue) looks stuck, check whether new MW is arriving as captive generation that never enters the public queue ([energy](energy.md)). Slack in the political series with tight physical capacity is a different story from both tight.
+
 ## The one thing to take from Part I
 
 Data exhaustion forced the frontier onto verifiable-reward training. That produced the asymmetry that runs through this entire document: **capability grows fastest where verification is cheap.** Math, code, and formal reasoning race ahead. Taste, judgment, long-horizon physical interaction, and anything whose ground truth is expensive or contested lag badly.

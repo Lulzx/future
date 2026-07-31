@@ -49,6 +49,16 @@ The horizon is a claim, not a convenience. Past the robotics fork, the branches 
 
 The same logic runs backward as a reading instruction: the further a page's dates sit from the present, the more its value lives in the *conditionals* (what determines which branch) and the less in the *dates*. The 2026–28 page should be read as a forecast; the 2032–40 page as a decision tree with probabilities on the branches. Scoring should respect this - marking the third period "wrong" because an event slipped two years would miss what the page actually claims, and [scoring](../08-method/scoring.md) rule 1's mechanism-over-outcome principle exists for exactly this case.
 
+### Evidence weight by period
+
+| Period | Primary evidence family |
+|---|---|
+| 2026–28 | Financial: revenue vs capex, financing mix, junior hiring |
+| 2028–32 | Statistical + legal: TFP, insurance lines, price split, first incident |
+| 2032–40 | Physical: delivered $/hour, autonomy ratios, wafer share outside TW |
+
+A claim in the wrong evidence family is a category error - e.g. defending a 2027 forecast with a productivity print, or a 2035 growth claim with a demo video.
+
 ---
 
 **Next:** [2026–2028](2026-2028.md) → [Probabilities](../05-probabilities/)

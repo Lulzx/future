@@ -58,6 +58,8 @@ Any of these would make [delivery](delivery.md) timelines look too pessimistic w
 
 Licensure and liability capacity are the political rows on the [complement list](../../../09-macro/assets.md). They do not erode by model quality; they reprice by statute and by underwriting. That makes medicine the cleanest domain in which to watch [Uncertainty 7](../../../06-uncertainties/complement-erosion.md)'s political channel: a single scope-of-practice expansion or a carrier product for autonomous reads is more informative about the half-life of those rows than another generation of diagnostic benchmarks. The same event is also a [C6](../../../07-indicators/governance.md) trigger. Score it once, revise both pages.
 
+**Soft market ≠ unlock.** Early AI riders on malpractice policies written without loss history are competition for premium, not proof the balance-sheet moat fell - same discipline as [insurance](../../cognitive/insurance.md).
+
 ---
 
 **Related:** [Diagnostics](diagnostics.md) · [Insurance](../../cognitive/insurance.md) · [Law](../../cognitive/law.md) · [Game 1](../../../02-games/1-labs.md) · [C6 Liability](../../../07-indicators/governance.md) · [State capacity](../../contested/state-capacity.md)

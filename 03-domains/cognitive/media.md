@@ -94,4 +94,8 @@ Rights and training-data litigation is a **legal** complementary fight ([law](la
 
 **Related:** [Game 5](../../02-games/5-information.md) · [Game 3](../../02-games/3-firms.md) · [Meaning](meaning.md) · [Education](education.md) · [Compressed](../../00-overview/compressed.md) · [B6](../../07-indicators/diffusion/labor.md) · [C8](../../07-indicators/governance.md)
 
+### Mid-tier is the casualty class
+
+Elite authentic brands and fully synthetic sludge both have strategies. The squeezed layer is **mid-tier human production** - good enough to be replaced by models, not famous enough to sell provenance as luxury. Watch rate cards and employment in that band, not only creator-economy headlines at the top.
+
 **Next:** [Insurance](insurance.md)

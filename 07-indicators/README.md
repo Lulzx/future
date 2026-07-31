@@ -28,7 +28,7 @@ If only five things can be tracked, track these. Each is the leading edge of a d
 |---|---|---|---|
 | **Entry-level : senior posting ratio**, knowledge professions | Depressed; entry-level ~7% of large-tech hires | Failure to recover when aggregate white-collar hiring does | [Game 4](../02-games/4-labor.md) - settles the substitution-vs-cyclical split |
 | **Internal research cycle time** per validated experiment at frontier labs | Not disclosed; infer from release cadence and paper throughput | Sustained >2× compression *and* physical/financial governors not binding | [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) - the RSI loop closing |
-| **AI revenue run-rate vs. capex** | ~$60B (2025) revenue vs. ~$650B 2026 capex guide | Revenue CAGR falling below ~40% for two consecutive years | [Compute](../01-substrate/compute.md) and [Capital](../01-substrate/capital.md) - the correction |
+| **AI revenue run-rate vs. capex** | ~$60B (2025) revenue vs. ~$700–725B 2026 hyperscaler capex guide | Revenue CAGR falling below ~40% for two consecutive years | [Compute](../01-substrate/compute.md) and [Capital](../01-substrate/capital.md) - the correction |
 | **Teleoperation-to-autonomy ratio** in deployed robots | Overwhelmingly teleoperated or scripted | Autonomy share crossing 50% on unstructured tasks | [Robotics](../03-domains/physical/robotics/) - the 2030s swing variable |
 | **Grid interconnection queue length** | 5–7 yrs; ~410GW CAISO, ~380GW MISO | Any market halving its typical wait | [Energy](../01-substrate/energy.md), [Uncertainty 2](../06-uncertainties/power-permitting.md) |
 
@@ -48,6 +48,7 @@ Each was chosen for when it moves, not only for what it measures. The posting ra
 | **Companion use × social contact; junior identity** | [B11](diffusion/labor.md) | [Meaning](../03-domains/cognitive/meaning.md) welfare channel |
 | **Capture-time provenance at scale** | [C8](governance.md) | [Game 5](../02-games/5-information.md) / [media](../03-domains/cognitive/media.md) enclosure vs public verification |
 | **Warehouse / freight / specialty harvest autonomy** | [B12](diffusion/capability.md) | [Robotics](../03-domains/physical/robotics/) physical fork |
+| **Taiwan gray-zone** (freight insurance, license denials, delivery slip) | [U4](../06-uncertainties/taiwan.md) | Soft fail of fab continuity without crisis headline |
 
 ## How to read a dashboard without fooling yourself
 

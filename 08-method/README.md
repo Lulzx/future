@@ -54,6 +54,10 @@ Every estimate here is built from public information: filings, statistical relea
 - **Non-US institutions.** The regulatory, labor-market, and permitting analysis is US-centric because that is where the reference data is. The EU, India, and China each run different institutional clocks. → open queue in the [protocol](../RESEARCH.md).
 - **Second-order political reaction.** The document predicts economic pressure well and predicts what politics does with it poorly. Political responses to distributional shocks are historically the least forecastable part of any such transition.
 
+### Partial credit is mandatory
+
+Bundled predictions (consolidation *and* lag; incident *and* architecture) must score by clause when one clause becomes decidable ([scoring](scoring.md), [register](../05-probabilities/register.md)). Waiting for the whole sentence is a dodge. The open-weight lag is the worked example: already wrong as written, logged in r25–26 without rewriting every blockquote that contained it.
+
 ---
 
 **Next:** [Base rates](base-rates/README.md) · [Protocol](../RESEARCH.md)

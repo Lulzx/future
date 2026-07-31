@@ -89,6 +89,12 @@ Rule 5 satisfied: evidence reviewed, contradiction logged rather than absorbed s
 
 Rule 5 satisfied: one move with written mechanism, six holds with named evidence. First table move since round 8.
 
+## Rounds 27–31 - hold passes (no number moves)
+
+*Date: 2026-07-31. Depth rounds + hub hygiene; no new scoreable series crossed a Part V bar.*
+
+All seven rows **held**. Mechanism prose and indicators improved (Taiwan gray-zone table, Game 3 scoring cross-section, robotics fully-loaded cost, partial-clause rules, capex sync already reflected in r26 row-6 hold). Capex guidance ~$700–725B reconfirmed at source - does not force a row-6 move while the *ratio* remains ambiguous. Open-weight lag already priced into row 4 in r26. Rule 5: multi-round holds with named reasons, not silence.
+
 ## How to read a hold
 
 The ledger's hold entries are its least glamorous and most informative content, because the failure modes of a subjective table are asymmetric in a specific way. The pressure on a maintained forecast runs toward *motion* - every round deposits new material, and moving a number is how an analyst demonstrates responsiveness - so a table that drifts a few points every pass is usually tracking the author's reading list, not the world. Rule 5 cuts the other way against *anchoring*: a number that never moves is being defended. The discipline that resolves the tension is the one visible above - every hold names the evidence reviewed and says why it was insufficient, which converts "no change" from an absence into a claim that can itself be wrong. A reader auditing this ledger should look for two smells: consecutive holds citing evidence that plainly bears on a row (anchoring wearing rule-5 clothing), and moves justified by material that merely *restates* the argument that set the prior (motion mistaken for updating). Rounds 12 and 18 are the pattern to hold future passes to: mechanism detail sharpened, numbers explicitly not moved, reasons in writing.

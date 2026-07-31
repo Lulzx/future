@@ -6,7 +6,7 @@
 
 Stated plainly, so they can be scored later. These are subjective estimates, not model outputs.
 
-*Last re-score with a move: round 26 (2026-07-30), triggered by the r25 grounded contradiction. Prior full re-score: round 8. Commentary passes (no number moves): rounds 12, 18 - [ledger](ledger.md). Per-row reasoning: [reasoning](reasoning.md). Probabilities stated elsewhere in the corpus: [register](register.md).*
+*Last re-score with a move: round 26 (2026-07-30), triggered by the r25 grounded contradiction. Prior full re-score: round 8. Commentary / hold passes (no number moves): rounds 12, 18, **27–30** (depth and Ground without new scoreable evidence) - [ledger](ledger.md). Per-row reasoning: [reasoning](reasoning.md). Probabilities stated elsewhere in the corpus: [register](register.md).*
 
 | # | Claim | By 2030 | By 2040 | Δ since r0 |
 |---|---|---|---|---|

@@ -112,6 +112,10 @@ Each row: the claim restated, what evidence would move it, what rounds 1–7 act
 
 **Round 8 rationale.** [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md) now names three governors; fast takeoff is over-weighted relative to technical plausibility alone. That *compresses* the upper tail somewhat but does not justify rewriting the range - ranges this wide already encode that uncertainty. Held, with the note that the operative planning risk remains row 3.
 
+## Rounds 27–30 - hold block (no number moves)
+
+Depth and Ground without a new scoreable series that crosses a Part V bar. Mechanism prose improved (Taiwan gray zone, Game 3 cross-section, robotics fully-loaded cost, partial-clause scoring); **row 4 already moved in r26** on lag compression and is not re-moved. Capex prints revised toward ~$700–725B - direction already priced in row 6's r8 delta and r26 hold. Rule 5: holds logged here rather than inertia.
+
 ---
 
 **Related:** [Ledger](ledger.md) · [Scoring rules](../08-method/scoring.md) · [Indicators](../07-indicators/)

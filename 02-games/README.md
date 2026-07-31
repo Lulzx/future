@@ -10,7 +10,7 @@ Five strategic structures sit on top of the [physical substrate](../01-substrate
 
 | | Players | Structure | Key result |
 |---|---|---|---|
-| [1 - Labs](1-labs.md) | Frontier labs | Tullock contest | Over-dissipation; consolidation to 3–5 by 2029; open weights ~9–15 mo behind |
+| [1 - Labs](1-labs.md) | Frontier labs | Tullock contest | Over-dissipation; consolidation to 3–5 by 2029; open weights **~3–6 mo** measured (authored ~9–15; ground note r25) |
 | [2 - Nations](2-nations.md) | States | Security dilemma with leakage | No binding agreement before a salient accident; compute-governance trap |
 | [3 - Firms](3-firms.md) | Adopters | Red Queen / Bertrand | Adoption mandatory; surplus to consumers *(competitive markets)* |
 | [4 - Labor](4-labor.md) | Workers, firms | Commons tragedy in human capital | Apprenticeship gap; aggregate displacement is an **upper bound** once [demography](../09-macro/demography.md) is included |
@@ -42,6 +42,12 @@ Each game equilibrates on a different clock: Game 1 in financing cycles (quarter
 | Firms × prices: two-economy split | [Game 3](3-firms.md), [Prices](../09-macro/prices.md) |
 | Labor × demography: aggregate softens, composition hardens | [Game 4](4-labor.md), [Demography](../09-macro/demography.md) |
 | Information × education/media/meaning | [Game 5](5-information.md), [B6](../07-indicators/diffusion/labor.md), [B11](../07-indicators/diffusion/labor.md) |
+| Labs × firms: lag compression shrinks prize, raises over-dissipation | [Game 1](1-labs.md), [inference](../01-substrate/inference-economics.md) |
+| Nations × finance: jurisdiction brands the incident | [Game 2](2-nations.md), [finance](../03-domains/cognitive/finance.md) |
+
+### Reading order when short on time
+
+[Game 3](3-firms.md) first (where surplus lands), then [Game 4](4-labor.md) (who loses the pathway), then [Game 1](1-labs.md) + [Game 2](2-nations.md) as the supply-side race. Game 5 last - it is the atmosphere everything else breathes, easiest to underweight until education and media make it concrete.
 
 ---
 

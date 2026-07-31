@@ -58,6 +58,10 @@ Stabilization means the response is happening. Continued decline means it isn't.
 
 **Secondary signals worth scoring alongside the ratio:** promotion time-to-senior lengthening (stock still looks fine while flow is broken); training-budget share of opex at large professional firms; and the appearance of explicit "apprenticeship" or "associateship" products sold by firms or guilds - the last is the private form of the medical-residency response and is bullish for mitigation even when posting ratios are still noisy.
 
+### Export ladders are on this page too
+
+[India](../03-domains/contested/geopolitics/india.md) and [global south](../03-domains/contested/geopolitics/global-south.md) face the same junior-rung cut as rich-world knowledge professions, with thinner safety nets. The apprenticeship gap is not only a BigLaw/FAANG story - it is a development strategy story wherever cognitive labor was the export. Score B1-style signals in outsourcing hubs alongside domestic series.
+
 ---
 
 **Previous:** [Uncertainty 2](power-permitting.md) · **Next:** [Uncertainty 4 - Taiwan](taiwan.md)

@@ -48,6 +48,8 @@ Third: **repeat purchases by the same customer**. A pilot proves a vendor can se
 
 Fourth, and easiest to check: **what happened to the environment**. If a deployment required aisle re-striping, fixture installation, lighting changes, or SKU standardization, that is a structured-environment deployment regardless of what the machine looks like, and it says nothing about the unstructured timeline. Most impressive commercial robotics is environment engineering with a robot attached, which is a perfectly good business and a poor leading indicator.
 
+Fifth: **origin of manufacture and second-source component shipments** - industrial-policy theater is not supply-chain change. → [Supply chain](supply-chain.md)
+
 ## Sections
 
 | | |
