@@ -65,6 +65,10 @@ Partial escape without killing the asymmetry: **buy cheaper ground truth** - aut
 
 There is **no internet of manipulation.** Text and code had public corpora; physical interaction does not. That is why [robotics](../03-domains/physical/robotics/) lags even when vision-language models transfer well - the binding constraint is samples in the world, not model size. → [B12](../07-indicators/diffusion/capability.md)
 
+### How to misread the table
+
+Three common errors. **(1) Treating benchmark progress as domain progress** - a model can ace a legal exam and still sit in the medium column for negotiation and strategy, because the exam is a scoreboard and the job is not. **(2) Averaging a domain** - medicine is fast in narrow imaging and slow in clinical judgment; filing the average as "medium" hides the deployment path (tools first, autonomy later). **(3) Assuming the ordering is a forecast of employment** - superhuman code generation can raise developer headcount via Jevons while still being the fastest column; [software](../03-domains/cognitive/software.md) is the worked example. The table orders *capability growth*, not job destruction.
+
 ---
 
 **Related:** [Science](../03-domains/cognitive/science.md) · [Game 5](../02-games/5-information.md) · [Uncertainty 5](../06-uncertainties/learned-verification.md) · [Notation](../00-overview/notation.md) · [Compressed](../00-overview/compressed.md)

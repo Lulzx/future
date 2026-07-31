@@ -83,6 +83,10 @@ Three confounds, and honesty requires stating that they are not resolved:
 
 The discriminating test runs through the next cycle: **if junior hiring fails to recover when aggregate white-collar hiring does, the substitution share was large.** That test resolves around 2027–28 and is worth more than any amount of further cross-sectional analysis. → [Indicators](../07-indicators/README.md)
 
+### Comparative advantage does not pay a wage
+
+The classical reassurance - humans will specialize in what they are relatively better at - assumes that *relative* advantage still commands a market price above reservation utility. If AI absolute advantage covers both the junior task set and a growing share of senior judgment, the residual human tasks can be (a) high-skill and scarce (complements, good wages) or (b) low-skill and abundant (care, presence, bad wages) or (c) institutionally reserved (licenses). The distribution across (a)–(c) is set by [Game 3](3-firms.md)'s complement list and by demography, not by comparative-advantage slogans. This page's apprenticeship claim is about pathway (a) drying up at the entry point; [demography](../09-macro/demography.md) and care shortages are about pathway (b) expanding. Both can be true at once.
+
 ---
 
 **Related:** [Software](../03-domains/cognitive/software.md) and [Law](../03-domains/cognitive/law.md) for where the gap is already visible · [2026–2028](../04-timelines/2026-2028.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [Indicators](../07-indicators/README.md)

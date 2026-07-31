@@ -64,6 +64,10 @@ Three mechanisms, in descending order of plausibility:
 
 Note that **none of these are AI policy.** They are housing, energy, tax, and pension policy. That is the recurring finding of this part: **the distributional consequences of AI are mostly determined by institutions that have nothing to do with AI**, and are being set right now by people not thinking about it at all.
 
+### Interaction with complement erosion
+
+[Uncertainty 7](../06-uncertainties/complement-erosion.md) is the adversarial page for this one. If the scarce list has a short half-life, concentration claims here overstate late-2030s wealth inequality even while early-2030s concentration is real. The operational discipline: date-stamp which row of the complement list is doing the work in any distributional claim, and retire the claim when that row's indicator fires. Land+zoning is the residual after other rows erode; a page that needs six durable rows is more fragile than a page that needs one.
+
 ---
 
 **Observable:** [B7](../07-indicators/diffusion/economy.md) price split and [B12](../07-indicators/diffusion/capability.md) physical diffusion - the trades-wage prediction above holds only while unstructured physical work stays out of robotics' reach; it is tracked in the [register](../05-probabilities/register.md).

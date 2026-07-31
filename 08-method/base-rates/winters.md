@@ -59,6 +59,18 @@ Failure archaeology also names the paths that would *make* this cycle rhyme with
 
 **Adjustment:** revenue *quality* matters more than revenue quantity. Seat-priced subscriptions bought on option value behave differently in a downturn than usage priced against a measured outcome.
 
+### Scoring a miss cleanly
+
+| Observed pattern | Class match | Not a winter |
+|---|---|---|
+| Equity drawdown, no credit event, train runs continue | Price move | Do not credit class 4 or 2 |
+| Credit event, secondary labs exit, inference keeps growing | Class 2 / [row 6](../../05-probabilities/README.md) | Capability line intact |
+| Seat revenue collapses, outcome revenue holds | Revenue *quality* cull | Technology not falsified |
+| Incident freezes enterprise buy, research continues | Adoption freeze (Game 2) | Looks like winter in stats only |
+| Capability plateaus *and* paying use cases fail *and* funding freezes | Class 4 full winter | Requires all three |
+
+The public will call several of the top rows a "winter." This page's job is to refuse that label unless the bottom row's conjunction is met.
+
 ---
 
 **Related:** [Cycles](cycles.md) · [Capital](../../01-substrate/capital.md) · [Compute](../../01-substrate/compute.md) · [Part V](../../05-probabilities/) row 6 · [Uncertainty 6](../../06-uncertainties/correlated-risk.md)

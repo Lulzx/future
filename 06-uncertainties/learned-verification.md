@@ -55,6 +55,17 @@ Even a full technical win does not immediately dissolve the ordering, because ve
 
 **If the asymmetry holds through ~2030:** the steelman objection stays live but the base case strengthens; this uncertainty's variance drops without retiring the mechanism.
 
+**If the tiered middle case lands:** re-score process-heavy professions (compliance, protocolized medicine, documentation law) forward without dissolving the spine; leave taste-and-direction domains ordered as mapped; update [B8](../07-indicators/diffusion/capability.md) to track *two* gaps (process vs outcome) rather than one. That is a Part III edit, not a framework rewrite - and it is the resolution shape this page now treats as most likely.
+
+### Coupling map (read with the rest of Part VI)
+
+| If this fires… | Effect on U5 |
+|---|---|
+| [U1](recursive-self-improvement.md) technical loop | Accelerates verifier training where data exists; sharpens the tier split |
+| [U3](apprenticeship-gap.md) inversion path | Needs cheap learned feedback in soft domains - U5 middle/full win is a prerequisite |
+| [U6](correlated-risk.md) coverage expands | Underwriters revealing belief that verification is priced; strongest commercial signal for U5 |
+| [U7](complement-erosion.md) | U5 full win shortens every complement half-life at once (non-sequential erosion) |
+
 ---
 
 **Related:** [Steelman](../08-method/steelman.md) §1 · [Data](../01-substrate/data.md) · [Uncertainty 1](recursive-self-improvement.md) · [Part III](../03-domains/) · [Scoring](../08-method/scoring.md) rule 5

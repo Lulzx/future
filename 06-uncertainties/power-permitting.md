@@ -52,10 +52,14 @@ This also sets the coupling to the rest of the register: this uncertainty is ups
 
 | Signal | Reading |
 |---|---|
-| Grid interconnection queue length | The headline constraint loosening or not |
+| Grid interconnection queue length (and composition: generation vs storage vs load) | The headline constraint loosening or not |
 | Turbine and transformer lead times | Whether industrial capacity is responding |
 | State-level siting moratoria and special rate classes for datacenters | Backlash converting into binding constraint |
 | Federal preemption of transmission siting | The single change that would most move the base case |
+| Behind-the-meter / captive generation share of new datacenter MW | Routing around the queue without reform |
+| Gulf and non-US training-capacity announcements that cite power as the reason | Offshoring of the constraint (failure mode above firing) |
+
+**How to score without fooling yourself.** Queue length falling because projects *withdrew* is not reform. Lead times falling because demand paused is not industrial expansion. The joint that matters is: queue throughput up *and* turbine/transformer deliveries up *and* retail-rate backlash not spawning new moratoria. Any one alone is noise.
 
 ---
 

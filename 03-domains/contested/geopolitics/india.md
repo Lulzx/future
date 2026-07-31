@@ -59,6 +59,12 @@ That trade was the single most effective poverty-reduction mechanism of the last
 
 **This is the largest single welfare consequence in the document and it receives almost no attention** - the discourse on AI and labor is conducted almost entirely about workers in rich countries, who are better insured, better capitalized, and better represented than the workers who are actually most exposed. → [The Global South](global-south.md)
 
+## What would change the path
+
+Three escapes, none free. **(1) Domestic demand for cognitive services** grows fast enough that export-ladder compression is a terms-of-trade hit rather than an employment crisis - requires middle-class income growth that demography and politics may not deliver on this timeline. **(2) Physical-economy upgrading** (logistics, manufacturing with robots, energy) absorbs labor the export services sector sheds - runs into the power and manufacturing gaps above, and into [robotics supply chain](../../physical/robotics/supply-chain.md) geography that does not favor late entrants. **(3) Digital public infrastructure as an export** - India selling DPI stacks and identity rails the way it once sold IT services - a real niche, too small alone to replace the BPO wage bill. The base case remains: compression of the cognitive export ladder is the central Indian AI story, and it is a welfare story before it is a geopolitics story.
+
+**Failure mode of this page:** treating every IT layoff in Bangalore as confirmation. Cyclical US tech demand and structural AI substitution are different; the discriminating test is whether junior and mid-tier export services employment recovers with the US cycle or decouples from it. → [B1](../../../07-indicators/diffusion/labor.md) logic applied to trade data.
+
 ---
 
 **Related:** [Game 4 - Labor](../../../02-games/4-labor.md) · [The Global South](global-south.md) · [Software](../../cognitive/software.md) · [Uncertainty 3](../../../06-uncertainties/apprenticeship-gap.md) · [Energy](../../../01-substrate/energy.md)

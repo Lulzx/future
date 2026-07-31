@@ -59,6 +59,10 @@ The task is a single closed question with a binary output. The image is captured
 - **If reimbursement unbundles** "AI read" from "physician over-read" at a price that makes the human optional, the template breaks for screening modalities first.
 - **If outcome-linked diagnostics** (not just image labels) get cheap ground truth from longitudinal records, the expensive half of the table moves up.
 
+### Ordering is a checklist, not a leaderboard
+
+The retinopathy template is deliberately boring. Models will keep posting spectacular results on open diagnostic challenges that fail one or more of the four conditions (open question, uncontrolled capture, costly false positive, incumbent displacement). Those results move benchmarks and do not move this page's deployment order. When scoring "AI in diagnostics is faster than the corpus expected," ask which condition flipped - usually none have, and the surprise was a demo.
+
 ---
 
 **Related:** [Liability](liability.md) · [Delivery](delivery.md) · [Law](../../cognitive/law.md) · [Insurance](../../cognitive/insurance.md)

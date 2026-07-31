@@ -64,6 +64,17 @@ Secondary reads:
 - Live-event prices vs streaming ARPU (presence premium)
 - Share of mental-health encounters noting AI companion use ([Medicine - delivery](../../03-domains/physical/medicine/delivery.md))
 
+## Joint readings for this file
+
+| Pattern | Reading |
+|---|---|
+| B1 falling, B6 flat | Apprenticeship gap without credential collapse - firms stop hiring juniors while still using degrees as a filter |
+| B1 falling, B6 rising (assessment reversion) | Both Game 4 and Game 5 live; hiring becomes work-sample based and the junior rung still shrinks |
+| B10 tax base soft, B1 recovered | Compositional recovery without fiscal relief - seniors and complements earn, juniors still thin |
+| B11 substitution concern + B1 depressed after hiring recovery | Welfare channel and labor channel confirm each other; [meaning](../../03-domains/cognitive/meaning.md) is not a sideshow |
+
+Profession-level B1 cuts beat blended knowledge-work averages - [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) is sectoral.
+
 ---
 
 **Related:** [Game 4](../../02-games/4-labor.md) · [Game 5](../../02-games/5-information.md) · [Meaning](../../03-domains/cognitive/meaning.md) · [Fiscal](../../09-macro/fiscal.md)

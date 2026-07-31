@@ -42,6 +42,8 @@ The corpus treated it as a background condition rather than a live uncertainty. 
 
 ## Leading indicators
 
+### Crisis path (binary failure)
+
 | Signal | Reading |
 |---|---|
 | Amphibious / blockade-relevant PLA activity and US/TW posture | Direct |
@@ -49,13 +51,29 @@ The corpus treated it as a background condition rather than a live uncertainty. 
 | Export-control and sanctions stair-steps around semiconductor equipment | Political temperature |
 | Corporate multi-region fab qualification progress (yield, not ribbon-cuttings) | Substitution lag |
 
+### Gray-zone path (modal bad outcome)
+
+These are the indicators the failure-mode paragraph used to only name. Score them on a quarterly Ground pass *before* fleet trackers:
+
+| Signal | Reading if it moves |
+|---|---|
+| **War-risk / strait freight insurance** premia and denial rates | Shippers pricing ambiguity; capacity still "available" but expensive |
+| **Export-license denial and delay rates** on advanced-node tools and wafers (US, NL, JP public stats where available) | Bifurcation without a crisis headline |
+| **Delivery-schedule slippage** on accelerator and foundry orders (company guidance vs prior quarter) | Soft rationing |
+| **Spot and contract ASP step-ups** for leading-edge wafers without a demand spike story | Political allocation premium |
+| **Corporate dual-sourcing spend** announced as *risk*, not capacity expansion | Revealed belief the 90% is eroding |
+
+A gray-zone miss can leave every crisis indicator green while the corpus's *consumed* assumption ("supply keeps flowing to the buyers we model") is already false. That is the audit finding above, operationalized.
+
 ## What would revise the rest of the corpus
 
 If the assumption fails: stop patching individual domains. Re-score [Part V](../05-probabilities/) from scratch, rewrite [Part IV](../04-timelines/) with multi-year slips on every compute-gated claim, and treat [bipolar](../03-domains/contested/geopolitics/bipolar.md) capacity bifurcation as the base case rather than a scenario.
 
 If leading-edge capacity outside Taiwan crosses a meaningful share of advanced wafers *before* a crisis: lower the variance of this uncertainty without changing the point estimate of disruption probability - the *consequence* of disruption shrinks.
 
-**Failure mode of this page:** watching for invasion when the modal failure is ambiguity. Every indicator in the table above is tuned to detect a crisis; none of them detects the gray-zone repricing described earlier, which would arrive as freight insurance rates, export-license denial statistics, and delivery-schedule slippage - boring numbers on boring pages. A future Ground pass should check those before checking the fleet trackers.
+If gray-zone indicators fire without crisis: do not wait for invasion language. Reprice [compute](../01-substrate/compute.md) and timeline slips in quarters, raise the risk premium on every train-run schedule, and treat open-weight vs closed bifurcation as accelerated. The 90% line item may still "hold" under a disruption reading while the document is already wrong for operators.
+
+**Failure mode of this page:** watching for invasion when the modal failure is ambiguity - now partially mitigated by the gray-zone table, but only if Ground passes actually read it.
 
 ---
 

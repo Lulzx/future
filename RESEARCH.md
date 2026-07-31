@@ -98,7 +98,8 @@ Every content file:
 | 24 | 2026-07-30 | Split `base-rates.md` (134): promoted to [base-rates/](08-method/base-rates/README.md) with children [cycles](08-method/base-rates/cycles.md) (classes 1–2), [social-response](08-method/base-rates/social-response.md) (classes 3, 5, 6), [winters](08-method/base-rates/winters.md) (class 4); global class numbering preserved because other pages cite classes by number | 91 | 6,758 |
 | 25 | 2026-07-30 | Second live Ground pass (3 parallel verifiers): A-family baselines, compute/inference, macro/robotics figures refreshed with named sources. First grounded contradiction: open-weight lag ~3–6 months (Epoch AI) vs the authored ~9–15 - logged in the [ledger](05-probabilities/ledger.md), ground-noted at [source](02-games/1-labs.md), predictions left as written | 91 | 6,777 |
 | 26 | 2026-07-30 | Re-score pass triggered by the r25 contradiction: [row 4](05-probabilities/reasoning.md) moved −1/−2 to 7%/28% (verification covers a shrinking capability share when weights circulate ~3–6 months behind); six holds with written reasons in the [ledger](05-probabilities/ledger.md). First table move since r8. A1 baseline softened to "estimate, not disclosure" | 91 | 6,801 |
-| 27 | 2026-07-31 | Depth + Ground: thin base-rates children and U3/U7 cleared past the r22 short flag; B-economy/B-capability instrumentation; Game 3 scoring cross-section; capital/timeline capex synced to ~$700–725B mid-2026 guidance; Find UI restored on static site (mobile-ready) | **91** | **6,934** |
+| 27 | 2026-07-31 | Depth + Ground: thin base-rates children and U3/U7 cleared past the r22 short flag; B-economy/B-capability instrumentation; Game 3 scoring cross-section; capital/timeline capex synced to ~$700–725B mid-2026 guidance; Find UI restored on static site (mobile-ready) | 91 | 6,934 |
+| 28 | 2026-07-31 | Depth on 60–80 band: Taiwan gray-zone indicator table; U5 coupling map + middle-case resolution; U2 scoring joint; Game 1 lag→contest; data misread rules; India escapes; B-labor joints; assets↔U7; fiscal×state capacity; winters scoring matrix; form-factor vs growth fork | **91** | **7,033** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -138,6 +139,10 @@ Every content file:
 
 *Invariants at r27 close: **91 files, 6,934 lines, 0 broken links.***
 
+**Round 28:** continued the depth pass on the healthy-but-shallow band. Headline addition: [Taiwan](06-uncertainties/taiwan.md) now has an operational gray-zone indicator table (freight insurance, export-license denials, delivery slippage, ASP step-ups, dual-sourcing risk spend) - the r27 queue item closed in-file rather than waiting for a Ground pass to invent it. Elsewhere: U5 middle-case resolution path and Part VI coupling map; power-permitting joint-scoring rules; Game 1 over-dissipation under a depreciating prize after lag compression; data-table misread rules; drug-discovery dual-use joint; India path escapes + discriminating test; B-labor joint readings; assets dated against U7; fiscal interventions gated on state capacity; winters pattern matrix; humanoid form factor demoted relative to the growth fork; diagnostics checklist vs leaderboard; Game 4 comparative-advantage wage caveat. No splits, no probability moves, no new files.
+
+*Invariants at r28 close: **91 files, 7,033 lines, 0 broken links.***
+
 **Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
 
 ## 6. Open queue
@@ -150,12 +155,12 @@ Every content file:
 **Medium**
 - FOAK energy R&D only past soft cap; harden B12 baselines when public data exists.
 - Continue depth on healthy-but-shallow pages (60–80 line band) when the loop runs - mechanism and failure modes, not padding.
-- Gray-zone Taiwan indicators (freight insurance, export-license denials, delivery slippage) on next Ground pass per [taiwan](06-uncertainties/taiwan.md) failure mode.
+- Next Ground pass should *read* the Taiwan gray-zone table (now in-file as of r28), not invent it.
 
 **Low**
 - Fancy reader features beyond Find (restored r27).
 
-**Retired (r1–r21):** earlier items in [HISTORY.md](HISTORY.md); recent: B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass; spine red-team (U7); r27 thin-file clearance + Find restore.
+**Retired (r1–r21):** earlier items in [HISTORY.md](HISTORY.md); recent: B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass; spine red-team (U7); r27 thin-file clearance + Find restore; r28 Taiwan gray-zone table.
 
 ## 7. Invariants
 

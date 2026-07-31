@@ -65,6 +65,10 @@ It is also the largest market, because domestic labor is the biggest pool of unp
 - **Cross-embodiment transfer working well.** Would *weaken* the humanoid case considerably - if human demonstration data transfers to arbitrary bodies, the data-compatibility argument evaporates and task-specific machines win on cost. → [The data problem](data-problem.md)
 - **A safety framework for shared human-robot spaces.** Currently the constraint on any deployment where a machine and a person occupy the same floor without a cage. Standards and insurance, not capability. → [Insurance](../../cognitive/insurance.md)
 
+### Form factor is not the growth fork
+
+[2032–2040](../../../04-timelines/2032-2040.md) forks on whether robots clear delivered $/hour in enough physical tasks to move aggregate growth - not on whether those robots look human. A world of cheap wheeled manipulators and mobile bases that clear the economic threshold is a high-growth fork even if every humanoid demo remains a research program. A world of beautiful bipeds that never leave teleop is not. Read [B12](../../../07-indicators/diffusion/capability.md) and [cost curves](cost-curves.md) for the fork; read this page for which body wins *conditional* on the fork going high.
+
 ---
 
 **Related:** [The data problem](data-problem.md) · [Cost curves](cost-curves.md) · [Supply chain](supply-chain.md) · [2032–2040](../../../04-timelines/2032-2040.md) · [Game 4 - Labor](../../../02-games/4-labor.md)

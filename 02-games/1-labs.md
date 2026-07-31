@@ -74,7 +74,11 @@ Consolidation does not end the contest; it changes its currency. With 3–5 play
 
 - **Prize structure changes** (procurement only from audited labs; strict liability on frontier release) - contest intensity falls.
 - **Capability–safety correlation breaks** - private undersupply of safety becomes first-order; talent and liability may not compensate.
-- **Open-weight gap closes below ~6 months** - controls failing; [C4](../07-indicators/governance.md) trigger.
+- **Open-weight gap closes below ~6 months** - controls failing; [C4](../07-indicators/governance.md) trigger. *Already partially live at ~3–6 months measured; the failure mode is now about whether it stays there or compresses further, not whether it can happen.*
+
+### What the lag compression does to the contest
+
+A shorter open-weight lag shrinks the private prize (frontier access is a thinner wasting asset - [inference economics](../01-substrate/inference-economics.md)) while raising the social stakes of every release (capability reaches the application layer and the rival ecosystem faster). Rational contestants may therefore *increase* closed-frontier spend to buy a temporary lead even as the lead is worth less - classic over-dissipation under a depreciating prize. The policy implication from the PD frame (agree to slow down) gets harder, not easier: verification of any slowdown is weaker when weights and distillations circulate in months. That is why [Part V](../05-probabilities/README.md) row 4 moved in r26 and why Game 1 and Game 2 must be read as a coupled system after the lag miss.
 
 ---
 

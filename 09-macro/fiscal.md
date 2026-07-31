@@ -64,6 +64,10 @@ Universal basic income dominates public discussion of this topic and deserves a 
 
 **The higher-leverage fiscal intervention is on the training side, not the transfer side** - subsidizing the junior-hiring externality directly, since [Game 4](../02-games/4-labor.md) identifies it as a commons tragedy where firms pay full cost and capture a fraction of the benefit. That is a textbook case for a Pigouvian subsidy, it is cheap relative to UBI, and essentially nobody is proposing it.
 
+### State capacity is the binding constraint on every fiscal fix
+
+Instruments above assume a state that can design, pass, and administer them. [State capacity](../03-domains/contested/state-capacity.md) is uneven and, in several high-income jurisdictions, thinning on technical hiring just as the measurement and enforcement load rises. A correct fiscal diagnosis with a state that cannot run the program is not an operational plan. Prefer interventions that use existing administrative rails (payroll tax credits for junior headcount, expanded apprenticeships through existing guilds, land-value components inside existing property tax) over greenfield agencies. Complexity is not free when [B10](../07-indicators/diffusion/labor.md) is already warning that the base is under pressure.
+
 ---
 
 **Related:** [Assets](assets.md) · [Prices](prices.md) · [Rates](rates.md) · [Game 4 - Labor](../02-games/4-labor.md) · [State capacity](../03-domains/contested/state-capacity.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [B10 - tax-base indicator](../07-indicators/diffusion/labor.md)

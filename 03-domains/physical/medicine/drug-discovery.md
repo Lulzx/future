@@ -56,6 +56,10 @@ Faster preclinical discovery does not fix [delivery](delivery.md). A cheaper can
 - **If automated labs** remain boutique, the science bottleneck claim strengthens and drug AI stays a design tool.
 - **If regulators accept** novel evidence packages (in silico primary evidence), the institutional clock moves - low probability before a major framework rewrite, which is event-driven. → [Game 2](../../../02-games/2-nations.md)
 
+### Dual-use is not a sidebar
+
+The same stack that shortens design cycles for legitimate candidates shortens them for [biosecurity](../../contested/biosecurity.md) threat agents. The binding public-interest question is not whether AI "helps drug discovery" - it does, where verification is cheap - but whether the *marginal* capability is more valuable in the clinic or more dangerous in the wrong hands, given that screening and synthesis barriers sit elsewhere in the chain. A page that celebrates preclinical throughput without naming that joint is incomplete; a page that freezes discovery over dual-use without pricing the disease burden is incomplete the other way. The corpus's answer is layered barriers and state capacity, not a discovery freeze - see the biosecurity chain table.
+
 ---
 
 **Related:** [Science](../../cognitive/science.md) · [Data](../../../01-substrate/data.md) · [Biosecurity](../../contested/biosecurity.md) · [2032–2040](../../../04-timelines/2032-2040.md)
