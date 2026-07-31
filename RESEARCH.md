@@ -107,6 +107,7 @@ Every content file:
 | 33 | 2026-07-31 | Content shallow band + notation: U2 routing; medicine stack; supply-chain reshoring; capital/Game3 scoring discipline; B-economy circularity; U1/U3/U5/U7 filters; India revenue/employment; register Taiwan cluster; notation new terms; compressed gray-zone | 91 | 7,377 |
 | 34 | 2026-07-31 | Mid-band 75–95: substrate data/inference/compute; robotics form/cost/data; U6 monoculture; bipolar per-layer; demography unconditional; Europe power; B1 export hubs; global-south grid; insurance/finance; Games 1/4/5; assets/fiscal; 2026–28 evidence family; winters B5 | **91** | **7419** |
 | 35 | 2026-07-31 | Domain scoring filters: education/science/meaning/law/software/media; warfare/cyber/bio; ag/logistics/energy-sector; timelines evidence families; rates/prices; Game 2 rules≠verification; Gulf counter-cyclical; scoring evidence-by-period; Taiwan shield decay | **91** | **7465** |
+| 36 | 2026-07-31 | New [scenarios](04-timelines/scenarios.md): best / base / worst (W1–W3) and named branches (RSI, U5, U7, gray-zone Taiwan, correction-then-maturity); wired into Part IV hub, index, overview, Part V correlations, 2032–40 linear Next. No Part V number moves. | **92** | **7614** |
 
 *End-state counts exact at round close; intermediate approximate.*
 

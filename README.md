@@ -55,6 +55,7 @@ Domains in three groups, ordered by the cost of ground truth.
 - [2026–2028](04-timelines/2026-2028.md) - the agentic transition and the capex test
 - [2028–2032](04-timelines/2028-2032.md) - diffusion and the institutional lag
 - [2032–2040](04-timelines/2032-2040.md) - the physical world
+- [Scenarios](04-timelines/scenarios.md) - best case, base case, worst cases, and the named branches between
 
 ### [05 - Subjective Probabilities](05-probabilities/)
 The numbers, re-scored against the corpus; [per-row reasoning](05-probabilities/reasoning.md), [ledger](05-probabilities/ledger.md), and the [register](05-probabilities/register.md) of probabilities stated elsewhere.

@@ -12,6 +12,7 @@ Two entry points to the same argument, at different compression ratios.
 | [**The compressed version**](compressed.md) | You will read nothing else, and want the conclusion plus what to do about it |
 | [**Notation**](notation.md) | Recurring shorthand (master asymmetry, inelastic complement, …) |
 | [**Dependencies**](dependencies.md) | Claim → pages that rest on it (for scoring misses) |
+| [**Scenarios**](../04-timelines/scenarios.md) | Best / base / worst joint worlds (stress tests of the chain, not a fan that replaces it) |
 
 ## The spine
 

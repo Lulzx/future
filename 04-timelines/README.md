@@ -11,6 +11,7 @@ Three periods, each with a different rate-limiting factor. Each page synthesizes
 | [2026–2028](2026-2028.md) | Capital and reliability | Does the revenue justify the capex? |
 | [2028–2032](2028-2032.md) | Institutions and organizations | How fast can the world absorb it? |
 | [2032–2040](2032-2040.md) | Physics and atoms | Does the growth rate actually change? |
+| [Scenarios](scenarios.md) | Joint resolution of the chain | Best, base, worst, and the named branches between |
 
 ## The shape of it
 
@@ -41,7 +42,7 @@ Rounds 1–7 deposited material that these pages have to hold, not just link to:
 | Robotics fork; science automation; macro feedback loops | [2032–2040](2032-2040.md) |
 | Taiwan as the underlying modelling assumption | All three; named explicitly |
 
-Cross-check claims against [Part VII](../07-indicators/) (observables), [Part V](../05-probabilities/) (stated probabilities), and [Part VI](../06-uncertainties/) (where the schedule breaks).
+Cross-check claims against [Part VII](../07-indicators/) (observables), [Part V](../05-probabilities/) (stated probabilities), and [Part VI](../06-uncertainties/) (where the schedule breaks). For best / worst / other joint worlds in one place, see [scenarios](scenarios.md) - stress tests of the chain, not a replacement for it.
 
 ## Why the schedule stops at 2040
 
@@ -61,4 +62,4 @@ A claim in the wrong evidence family is a category error - e.g. defending a 2027
 
 ---
 
-**Next:** [2026–2028](2026-2028.md) → [Probabilities](../05-probabilities/)
+**Next:** [2026–2028](2026-2028.md) → … → [2032–2040](2032-2040.md) → [Scenarios](scenarios.md) → [Probabilities](../05-probabilities/)
