@@ -70,6 +70,10 @@ The policy response is immigration, and immigration is politically constrained i
 
 **Net: the transition is probably easier in aggregate and no easier in composition.** That is the same conclusion [Game 4](../02-games/4-labor.md) reached, arrived at from the opposite direction, which is the best kind of evidence available for a claim like this.
 
+### Cross-check with the social-response base rate
+
+[Class 6](../08-method/base-rates/social-response.md) carries the same result into priors: aggregate displacement is an upper bound; the apprenticeship gap is a larger share of harm; adoption politics may be easier in labor-scarce economies than US-centric analysis assumes. The quiet implication for [class 3](../08-method/base-rates/social-response.md) (regulatory response): quieter aggregate labor markets push AI harm toward the *privacy* reference class - diffuse, cohort-based, hard to force a window - unless care or housing scarcity produces a different kind of salient incident. Demography does not only shrink the unemployment problem; it reshapes which political template is available to write the rules.
+
 ---
 
 **Related:** [Game 4 - Labor](../02-games/4-labor.md) · [Rates](rates.md) · [Fiscal](fiscal.md) · [Assets](assets.md) · [Base rates - demographics](../08-method/base-rates/social-response.md) · [Uncertainty 3](../06-uncertainties/apprenticeship-gap.md) · [2028–2032](../04-timelines/2028-2032.md) · [2032–2040](../04-timelines/2032-2040.md)

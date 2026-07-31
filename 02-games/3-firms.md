@@ -51,11 +51,18 @@ Bertrand is the end state, not the path. During diffusion, an early adopter hold
 1. **Over-adoption is its own dissipation.** Because the investment is defensive and the counterfactual is unobservable, boards mandate adoption under competitive fear rather than measured return. Spending above the optimizing level - consultant-led programs, shelfware seats, tool churn - is the firm-level analogue of Game 1's over-dissipation, and it is why survey-measured "AI spend" will persistently exceed anything visible in productivity statistics.
 2. **The adoption cost is recurring, not one-time.** Model generations turn over in months; integrations, evals, and retraining recur with them. The *c* in the model is closer to a subscription than a capex, which lowers the equilibrium net benefit to adopters further than the static story suggests.
 
+## How to score the Red Queen without cheating
+
+Three observables, not one. **Adoption** (surveyed use, seat counts) can rise while **margins** (B3) stay flat and **prices** (B7 cognitive basket) fall - that is the base case and it is *not* a bubble. Adoption rising with margins expanding in competitive sectors is the Red Queen broken. Adoption rising with margins expanding only in concentrated/licensed sectors is the scope condition working as written - Game 3 still holds where it claimed to hold. The [steelman](../08-method/steelman.md) §2 objection (markets aren't competitive) is scored by this cross-section, not by the average: uniform margin expansion everywhere falsifies; dispersion confirms the split.
+
+The consumer-surplus claim is harder to observe directly. The proxy is relative prices: if competitive cognitive services deflate while complements inflate, surplus is leaving the adopter layer somewhere. Whether it lands with consumers or with complement-owners is the [assets](../09-macro/assets.md) / [Uncertainty 7](../06-uncertainties/complement-erosion.md) question, not a Game 3 failure.
+
 ## Failure modes
 
 - **Incumbent capture of distribution**: if a handful of platforms intermediate AI for whole sectors and hold defaults, surplus stops at the platform instead of reaching consumers - the mechanism is intact but the beneficiary changes.
 - **Model-layer consolidation** below the point of effective competition - the upstream-monopoly case above; watch pricing power at the API layer rather than rhetoric.
 - **Regulated sectors expand** as a share of the economy (aging pushes healthcare share up) - then the exception outgrows the rule and the aggregate consumer-surplus claim weakens even though every mechanism here still operates.
+- **Complement erosion runs fast**: the list this page routes surplus to is itself temporary - [Uncertainty 7](../06-uncertainties/complement-erosion.md). Game 3's *mechanism* (competitive dissipation) can hold while its *distributional implication* softens toward consumer abundance.
 
 ---
 

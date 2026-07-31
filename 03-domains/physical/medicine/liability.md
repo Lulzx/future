@@ -54,6 +54,10 @@ The base case is still slow change through 2030. The tail is a scope-of-practice
 
 Any of these would make [delivery](delivery.md) timelines look too pessimistic without the diagnostic models getting smarter.
 
+## Coupling to complement erosion
+
+Licensure and liability capacity are the political rows on the [complement list](../../../09-macro/assets.md). They do not erode by model quality; they reprice by statute and by underwriting. That makes medicine the cleanest domain in which to watch [Uncertainty 7](../../../06-uncertainties/complement-erosion.md)'s political channel: a single scope-of-practice expansion or a carrier product for autonomous reads is more informative about the half-life of those rows than another generation of diagnostic benchmarks. The same event is also a [C6](../../../07-indicators/governance.md) trigger. Score it once, revise both pages.
+
 ---
 
 **Related:** [Diagnostics](diagnostics.md) · [Insurance](../../cognitive/insurance.md) · [Law](../../cognitive/law.md) · [Game 1](../../../02-games/1-labs.md) · [C6 Liability](../../../07-indicators/governance.md) · [State capacity](../../contested/state-capacity.md)

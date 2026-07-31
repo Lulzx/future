@@ -67,6 +67,11 @@ The pre-event pricing problem cuts both ways, and this is the part the corpus sh
 - **Uncertainty 1 (RSI):** faster capability without insurability just piles uninsured deployment pressure; the governors on takeoff do not include this one and should be read alongside it for *deployed* takeoff.
 - **Game 2 incident window:** the first correlated insurance event may *be* the salient incident that writes the 2030s architecture - financial rather than kinetic.
 - **Steelman §1 / Uncertainty 5:** if learned verification makes autonomous professional judgment reliable, insurers may cover what they currently exclude - coupling verification progress to the deployment frontier through a balance-sheet channel.
+- **Uncertainty 7:** liability capacity is one of the slow-eroding complements. If this page fires (coverage never arrives at scale), that row's half-life lengthens - scarce complement stays scarce for a balance-sheet reason, not a technical one. If coverage arrives, the row erodes by underwriting rather than by statute.
+
+### What "fires" looks like in the data
+
+Three signatures, in rising severity. **(1) Exclusion language** spreads from specialty lines into ordinary professional liability and cyber - the quiet form, already partly present. **(2) Aggregate limits and co-insurance** appear on AI-assisted work even where coverage nominally exists - capacity without usable limits is capacity in name only. **(3) A correlated loss event** that hits multiple insureds on the same model generation - the event that converts a theoretical argument into a reinsurance market freeze. [C6](../07-indicators/governance.md) and the insurance page's product watch are the leading indicators; waiting for (3) to score this uncertainty is waiting for the resolution event itself.
 
 ---
 

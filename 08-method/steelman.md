@@ -30,6 +30,8 @@ Selection was not by loudness. Each of the three earns its place by passing thre
 
 **Where the answer is weak.** It is close to unfalsifiable as stated. If margins rise the document says "concentrated markets," and if they don't it says "Red Queen." **The honest position: [Game 3](../02-games/3-firms.md) is a claim about competitive markets specifically, and its scope should be narrowed to say so** rather than presented as a general result. That is a correction, not a defense.
 
+**Scope note (round 27):** [Game 3](../02-games/3-firms.md) now states the scoring cross-section explicitly - adoption / margins / prices read together, with dispersion as the test - so objection 2 is no longer free to claim unfalsifiability against a single mean. The remaining weakness is measurement: "competitive sector" is itself a judgment call at the boundary.
+
 ## 3. "Institutional friction is a cope"
 
 **The argument.** Every one of this document's slow timelines rests on institutions being slow. But that inference comes from technologies that required physical retooling, capital replacement, or coordinated standard-setting. AI requires none of those. It is distributed instantly, self-serves, needs no procurement to try, and diffuses through individuals rather than organizations - a worker adopts it whether or not the employer has a policy. The diffusion analogy is simply the wrong reference class, and every date in [Part IV](../04-timelines/) is 3–5 years late.

@@ -399,35 +399,179 @@ function breadcrumb(doc) {
   return out.join(`<span class="sep"> / </span>`);
 }
 
-// The only script left: theme toggle, ← → paging, and a redirect for old
-// `#/path.md` deep links. The content never depends on it.
-const SCRIPT = `<script>
+// Relative path from a rendered page up to the site root ("" at root, "../" one deep).
+function rootPrefix(doc) {
+  const d = dirname(outPath(doc));
+  if (!d) return "";
+  return "../".repeat(d.split("/").length);
+}
+
+// Client script: theme, ← → paging, Find (catalog search), and redirect for
+// old `#/path.md` deep links. Content never depends on it.
+function clientScript(doc) {
+  const catalogUrl = rootPrefix(doc) + "catalog.json";
+  const root = rootPrefix(doc);
+  return `<script>
 (function () {
   "use strict";
+  var CATALOG_URL = ${JSON.stringify(catalogUrl)};
+  var ROOT = ${JSON.stringify(root)};
+
   var m = location.hash.match(/^#\\/?(.+\\.md)(?:#(.*))?$/);
   if (m) {
     var p = m[1].replace(/(^|\\/)README\\.md$/, "$1").replace(/\\.md$/, ".html");
     location.replace("/" + p + (m[2] ? "#" + m[2] : ""));
     return;
   }
-  var root = document.documentElement;
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  /* ── theme ─────────────────────────────────────────────────────────────── */
+  var rootEl = document.documentElement;
   var stored = localStorage.getItem("theme");
-  if (stored) root.setAttribute("data-theme", stored);
-  var btn = document.getElementById("theme");
+  if (stored) rootEl.setAttribute("data-theme", stored);
   function toggleTheme() {
-    var isDark = root.getAttribute("data-theme") === "dark" ||
-      (!root.getAttribute("data-theme") &&
+    var isDark = rootEl.getAttribute("data-theme") === "dark" ||
+      (!rootEl.getAttribute("data-theme") &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
     var next = isDark ? "light" : "dark";
-    root.setAttribute("data-theme", next);
+    rootEl.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
   }
-  if (btn) btn.addEventListener("click", toggleTheme);
+  var themeBtn = document.getElementById("theme");
+  if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
+
+  /* ── find / catalog ────────────────────────────────────────────────────── */
+  var findDialog = document.getElementById("find-dialog");
+  var findInput  = document.getElementById("find-input");
+  var findList   = document.getElementById("find-results");
+  var findBtn    = document.getElementById("find");
+  var catalog = null;
+  var findHits = [];
+  var findSel = 0;
+
+  function mdToHref(mdPath) {
+    var html;
+    if (mdPath === "README.md") html = "./";
+    else if (mdPath.slice(-10) === "/README.md") html = mdPath.slice(0, -"README.md".length);
+    else html = mdPath.replace(/\\.md$/, ".html");
+    return ROOT + html;
+  }
+
+  async function ensureCatalog() {
+    if (catalog) return catalog;
+    var res = await fetch(CATALOG_URL, { cache: "no-cache" });
+    if (!res.ok) throw new Error("catalog.json " + res.status);
+    catalog = await res.json();
+    return catalog;
+  }
+
+  function scoreEntry(q, entry) {
+    var t = entry.title.toLowerCase();
+    var p = entry.path.toLowerCase();
+    if (t === q || p === q) return 100;
+    if (t.indexOf(q) === 0 || p.indexOf(q) === 0) return 80;
+    if (t.indexOf(q) !== -1 || p.indexOf(q) !== -1) return 50;
+    var parts = q.split(/\\s+/).filter(Boolean);
+    if (parts.length > 1 && parts.every(function (w) {
+      return t.indexOf(w) !== -1 || p.indexOf(w) !== -1;
+    })) return 40;
+    return 0;
+  }
+
+  function renderFindHits() {
+    findList.innerHTML = findHits.map(function (e, i) {
+      return '<li role="option" class="' + (i === findSel ? "is-active" : "") + '" data-i="' + i + '">' +
+        '<a href="' + escapeHtml(mdToHref(e.path)) + '">' +
+        '<span class="find-title">' + escapeHtml(e.title) + '</span>' +
+        '<span class="find-path">' + escapeHtml(e.path) + '</span></a></li>';
+    }).join("") || '<li class="find-empty">No matches</li>';
+  }
+
+  function runFind() {
+    var q = findInput.value.trim().toLowerCase();
+    if (!catalog) return;
+    if (!q) {
+      findHits = catalog.slice(0, 40);
+    } else {
+      findHits = catalog
+        .map(function (e) { return { e: e, s: scoreEntry(q, e) }; })
+        .filter(function (x) { return x.s > 0; })
+        .sort(function (a, b) {
+          return b.s - a.s || a.e.path.localeCompare(b.e.path);
+        })
+        .slice(0, 40)
+        .map(function (x) { return x.e; });
+    }
+    findSel = 0;
+    renderFindHits();
+  }
+
+  async function openFind() {
+    try {
+      await ensureCatalog();
+    } catch (err) {
+      alert("Could not load catalog.json: " + err.message);
+      return;
+    }
+    findInput.value = "";
+    runFind();
+    if (typeof findDialog.showModal === "function") findDialog.showModal();
+    else findDialog.setAttribute("open", "");
+    // Defer focus so mobile keyboards open after the dialog paints.
+    setTimeout(function () { findInput.focus(); }, 0);
+  }
+
+  function closeFind() {
+    if (findDialog.open) findDialog.close();
+  }
+
+  function goFindSel() {
+    var e = findHits[findSel];
+    if (!e) return;
+    closeFind();
+    location.href = mdToHref(e.path);
+  }
+
+  if (findBtn) findBtn.addEventListener("click", openFind);
+  if (findInput) findInput.addEventListener("input", runFind);
+  if (findList) findList.addEventListener("click", function (e) {
+    var a = e.target.closest("a");
+    if (a) closeFind();
+  });
+  if (findDialog) {
+    findDialog.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") {
+        findSel = Math.min(findHits.length - 1, findSel + 1);
+        renderFindHits();
+        e.preventDefault();
+      } else if (e.key === "ArrowUp") {
+        findSel = Math.max(0, findSel - 1);
+        renderFindHits();
+        e.preventDefault();
+      } else if (e.key === "Enter") {
+        goFindSel();
+        e.preventDefault();
+      }
+    });
+    // method=dialog closes on submit; stop empty submits from racing navigation.
+    var form = document.getElementById("find-form");
+    if (form) form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      goFindSel();
+    });
+  }
+
+  /* ── keys ──────────────────────────────────────────────────────────────── */
   document.addEventListener("keydown", function (e) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     var t = e.target;
     if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
     if (e.key === "t") { toggleTheme(); return; }
+    if (e.key === "/" || e.key === "s") { openFind(); e.preventDefault(); return; }
     if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
     var sel = e.key === "ArrowLeft"
       ? ".pagenav .cell:first-child:not(.empty) a"
@@ -437,6 +581,7 @@ const SCRIPT = `<script>
   });
 })();
 </script>`;
+}
 
 function page(doc, title, bodyClass, contentHtml) {
   const stylesheet = relHref(doc, DEFAULT_DOC) === "./"
@@ -475,7 +620,7 @@ function page(doc, title, bodyClass, contentHtml) {
       <tr class="keys-row">
         <th class="width-min">Keys</th>
         <td class="width-auto meta">
-          <kbd>←</kbd> <kbd>→</kbd> page · <kbd>t</kbd> theme
+          <kbd>←</kbd> <kbd>→</kbd> page · <kbd>/</kbd> find · <kbd>t</kbd> theme
         </td>
       </tr>
     </tbody>
@@ -492,13 +637,24 @@ ${contentHtml}
   <div class="statusbar-inner">
     <span class="sb-path" id="sb-path">${escapeHtml(urlPath)}</span>
     <span class="sb-actions">
+      <button id="find" type="button" title="Find a page (/)">Find</button>
       <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
-      <a href="${srcHref}">Src</a>
+      <a class="sb-link" href="${srcHref}">Src</a>
     </span>
   </div>
 </footer>
 
-${SCRIPT}
+<dialog id="find-dialog" class="find-dialog" aria-label="Find a page">
+  <form method="dialog" class="find-form" id="find-form">
+    <label class="find-label" for="find-input">Find page</label>
+    <input id="find-input" type="search" enterkeyhint="go" autocomplete="off"
+      spellcheck="false" placeholder="Title or path…" aria-controls="find-results">
+    <ul id="find-results" class="find-results" role="listbox"></ul>
+    <p class="find-hint"><kbd>↑</kbd><kbd>↓</kbd> select · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</p>
+  </form>
+</dialog>
+
+${clientScript(doc)}
 
 </body>
 </html>

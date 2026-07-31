@@ -17,6 +17,8 @@ The leading edge: how long agents run unsupervised, whether the verifiable/unver
 
 Measure **task horizon at fixed reliability**, not benchmark scores. The economically relevant question is never "can it do this" but "can it do this unsupervised for four hours without a failure that costs more than the labor saved." Those diverge, and the second is what firms actually buy.
 
+**Contamination to refuse.** Demo videos, supervised "agent" product tours, and benchmark suites with hidden retry budgets do not move this indicator. Prefer: production incident rates, human-handoff frequency per task-hour, and whether the buyer removed the checkpoint *after* a measured pilot rather than as a launch claim.
+
 ## B8 - Verifiable vs unverifiable domain gap
 
 | | |
@@ -28,6 +30,8 @@ Measure **task horizon at fixed reliability**, not benchmark scores. The economi
 
 Pair with insurance and liability: if underwriters cover autonomous professional judgment, they are revealing a belief that verification is solved enough to price.
 
+**Gap construction.** Prefer *production deployment depth* (share of workflow run without human sign-off in liability-bearing settings) over capability evals. A model that writes strong legal strategy memos in a lab eval but cannot be the final signer does not close the gap. Closing requires the institutional stack - licensure, liability, insurance - to accept the output, which is why this indicator is coupled to [C6](../governance.md) and [Uncertainty 5](../../06-uncertainties/learned-verification.md)'s institutional cushion.
+
 ## B9 - Research cycle time (RSI governor panel)
 
 | | |
@@ -38,7 +42,7 @@ Pair with insurance and liability: if underwriters cover autonomous professional
 | **Financial governor check** | Cycle compression coexists with rising real hurdle rates on training clusters ([A7](../substrate.md)) |
 | **Revises** | [Uncertainty 1](../../06-uncertainties/recursive-self-improvement.md) - all three governors, not only the technical one |
 
-Headline RSI talk tracks only the first row. The document's revision in round 7 requires reading all three before moving timelines.
+Headline RSI talk tracks only the first row. The document's revision in round 7 requires reading all three before moving timelines. Compression with either governor binding is a *local* technical win that does not pull [Part IV](../../04-timelines/) forward until the governors clear.
 
 ## B12 - Physical diffusion (atoms, not demos)
 

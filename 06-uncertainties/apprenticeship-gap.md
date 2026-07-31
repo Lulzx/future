@@ -46,11 +46,17 @@ The four responses above operate on very different clocks, which matters more th
 
 **If the ratios stabilize by 2029:** [Game 4](../02-games/4-labor.md) gets rewritten from commons failure to lagged adjustment, and the education page's Bloom mechanism gets promoted from analogy to load-bearing claim. **If they keep falling:** the commons-failure model strengthens, and the interesting question becomes which institution moves first - the corpus should then watch professional bodies, not firms. **Failure mode of this page:** reading the posting ratio as a clean signal. Entry-level postings can stabilize because the response worked, or because the definition of "entry-level" drifted up to include what used to be mid-level - the indicator needs the seniority mix underneath it checked before it is scored.
 
+## Sectoral shape, not a single curve
+
+The gap will not open uniformly. Software and other cheap-verification professions see the junior rung collapse first and hardest - which is also where the inversion (dense AI feedback) is most plausible, so the *net* gap there is the residual of two large opposing forces. Law, accounting, and consulting sit in the middle: billable leverage models make juniors a margin tool, so firms resist cutting the rung until clients stop paying for it, then cut abruptly. Medicine and other licensed trades have the residency template already; the risk is not zero hiring but *ratio drift* under fiscal pressure - fewer training slots per senior, not an open market failure. The indicator that matters is therefore **profession-specific posting ratios**, not a blended knowledge-work average that averages a solved domain with a broken one and reports calm.
+
 ## Leading indicator
 
 > Whether **entry-level-to-senior posting ratios stabilize or continue falling through 2029.**
 
-Stabilization means the response is happening. Continued decline means it isn't.
+Stabilization means the response is happening. Continued decline means it isn't. Prefer series that hold the seniority definition fixed (or publish the mix), and prefer profession-level cuts over the blended index.
+
+**Secondary signals worth scoring alongside the ratio:** promotion time-to-senior lengthening (stock still looks fine while flow is broken); training-budget share of opex at large professional firms; and the appearance of explicit "apprenticeship" or "associateship" products sold by firms or guilds - the last is the private form of the medical-residency response and is bullish for mitigation even when posting ratios are still noisy.
 
 ---
 

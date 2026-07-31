@@ -25,6 +25,10 @@ Amdahl's law applies to the team, not just the machine: if generation speeds up 
 
 The open-source commons shows the failure mode early and in public. Maintainers are a review bottleneck with no budget, and the flood arrived first as noise: the curl project publicly documented a wave of AI-generated bogus vulnerability reports through its bug bounty (2024, per maintainer Daniel Stenberg), each costing scarce expert hours to refute. Free generation plus expensive verification is a tax levied by the many on the few, and volunteer infrastructure pays it first. If the commons responds by closing - reputation-gated contribution, paid triage - the open-by-default era of software ends not by license change but by review economics.
 
+### Junior employment as the leading edge of Game 4
+
+Software is where [Game 4](../../02-games/4-labor.md) is measurable first, because the junior task set (boilerplate, tests, first-draft PRs) is exactly the high-leverage greenfield row in the table, and because posting data is liquid. The [B1](../../07-indicators/diffusion/labor.md) baseline already shows the leading edge; the software-specific claim is that *stabilization of junior software postings while other knowledge professions keep falling* would mean the inversion path in [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) is live here first - dense AI feedback compressing the path to competence where verification is cheapest. Continued decline in junior software postings through 2029, even in a hiring recovery, is the commons-failure path at its purest.
+
 ## What it does to SaaS
 
 Software's marginal cost falls toward zero, threatening the SaaS model - per-seat pricing, high margin, defended by switching cost.

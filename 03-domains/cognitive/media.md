@@ -86,8 +86,12 @@ Rights and training-data litigation is a **legal** complementary fight ([law](la
 - **If audiences stop caring about human origin**, the handmade analogy fails; only attention scarcity remains.
 - **If regulation forces labeling that works**, mid-tier human work may retain a compliance niche longer than the barbell implies.
 
+### C8 as the public-good test
+
+[C8](../../07-indicators/governance.md) asks whether provenance is built as infrastructure (capture-time attestation with consumer-visible trust UX) or only as private gardens. Media is where the answer shows first: feeds, ad markets, and courtroom evidence are the high-volume use cases. A world of working C8 looks like a thinner authenticity premium *outside* gardens - verification becomes a default rather than a brand. A world of failed C8 looks like this page's barbell at full strength: verified islands, a lemons open web, and [Game 5](../../02-games/5-information.md)'s costly-signaling collapse complete. Labeling mandates without attestation are the privacy-class miss applied to media - rules that create compliance cost without measurement, and that this page should not mistake for the infrastructure path.
+
 ---
 
-**Related:** [Game 5](../../02-games/5-information.md) · [Game 3](../../02-games/3-firms.md) · [Meaning](meaning.md) · [Education](education.md) · [Compressed](../../00-overview/compressed.md) · [B6](../../07-indicators/diffusion/labor.md)
+**Related:** [Game 5](../../02-games/5-information.md) · [Game 3](../../02-games/3-firms.md) · [Meaning](meaning.md) · [Education](education.md) · [Compressed](../../00-overview/compressed.md) · [B6](../../07-indicators/diffusion/labor.md) · [C8](../../07-indicators/governance.md)
 
 **Next:** [Insurance](insurance.md)

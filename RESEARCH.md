@@ -97,7 +97,8 @@ Every content file:
 | 23 | 2026-07-30 | Split `diffusion.md` (169, over soft cap since r17): promoted to [diffusion/](07-indicators/diffusion/README.md) with children [labor](07-indicators/diffusion/labor.md) (B1/B6/B10/B11), [economy](07-indicators/diffusion/economy.md) (B2/B3/B5/B7), [capability](07-indicators/diffusion/capability.md) (B4/B8/B9/B12); ~50 inbound links remapped by indicator label | 88 | 6,703 |
 | 24 | 2026-07-30 | Split `base-rates.md` (134): promoted to [base-rates/](08-method/base-rates/README.md) with children [cycles](08-method/base-rates/cycles.md) (classes 1–2), [social-response](08-method/base-rates/social-response.md) (classes 3, 5, 6), [winters](08-method/base-rates/winters.md) (class 4); global class numbering preserved because other pages cite classes by number | 91 | 6,758 |
 | 25 | 2026-07-30 | Second live Ground pass (3 parallel verifiers): A-family baselines, compute/inference, macro/robotics figures refreshed with named sources. First grounded contradiction: open-weight lag ~3–6 months (Epoch AI) vs the authored ~9–15 - logged in the [ledger](05-probabilities/ledger.md), ground-noted at [source](02-games/1-labs.md), predictions left as written | 91 | 6,777 |
-| 26 | 2026-07-30 | Re-score pass triggered by the r25 contradiction: [row 4](05-probabilities/reasoning.md) moved −1/−2 to 7%/28% (verification covers a shrinking capability share when weights circulate ~3–6 months behind); six holds with written reasons in the [ledger](05-probabilities/ledger.md). First table move since r8. A1 baseline softened to "estimate, not disclosure" | **91** | **6,801** |
+| 26 | 2026-07-30 | Re-score pass triggered by the r25 contradiction: [row 4](05-probabilities/reasoning.md) moved −1/−2 to 7%/28% (verification covers a shrinking capability share when weights circulate ~3–6 months behind); six holds with written reasons in the [ledger](05-probabilities/ledger.md). First table move since r8. A1 baseline softened to "estimate, not disclosure" | 91 | 6,801 |
+| 27 | 2026-07-31 | Depth + Ground: thin base-rates children and U3/U7 cleared past the r22 short flag; B-economy/B-capability instrumentation; Game 3 scoring cross-section; capital/timeline capex synced to ~$700–725B mid-2026 guidance; Find UI restored on static site (mobile-ready) | **91** | **6,934** |
 
 *End-state counts exact at round close; intermediate approximate.*
 
@@ -133,6 +134,10 @@ Every content file:
 
 *Invariants at r26 close: **91 files, 6,801 lines, 0 broken links.***
 
+**Round 27:** Review found post-split thin debt in [cycles](08-method/base-rates/cycles.md) / [social-response](08-method/base-rates/social-response.md) (44 lines each) and the deliberately-short U3/U7 flags from r22. Expand step restored mechanism depth: Solow/J-curve structure and capex-boom scoring in class 1–2; shelf-readiness and China-shock political transfer in class 3/5/6; U7 dated-horizon table; U3 sectoral shape + secondary signals; B2/B3/B5/B7 joint readings and series notes; Game 3 falsification cross-section; capital correction clocks; capability contamination rules. Ground step: hyperscaler 2026 capex re-synced at source to ~$700–725B (company guidance through mid-2026: Amazon ~$200B, Microsoft ~$190B, Alphabet ~$180–205B, Meta ~$125–145B) in [capital](01-substrate/capital.md) and [2026–2028](04-timelines/2026-2028.md) - matches the A2 baseline already held at that range since r25. No probability moves (re-score mode holds). Separately restored the reader Find control dropped in the static-HTML migration: button + dialog + `/`/`s` shortcut, root-relative catalog from nested pages, mobile tap targets and iOS input sizing. No splits required (nothing near soft cap).
+
+*Invariants at r27 close: **91 files, 6,934 lines, 0 broken links.***
+
 **Protocol revision (post-r20, 2026-07-30):** provenance convention added to §4 (sources named at point of use, not only in the archived round log); meta-file exemption made explicit in §2; §2 depth example corrected to `part/group/subgroup/file.md` (the tree already used 3 directory levels, e.g. `physical/medicine/`); depth added as invariant 7 and to the checker; `HISTORY.md` added to the hard-cap exemption; §7 now marks which invariants are machine-enforced.
 
 ## 6. Open queue
@@ -144,11 +149,13 @@ Every content file:
 
 **Medium**
 - FOAK energy R&D only past soft cap; harden B12 baselines when public data exists.
+- Continue depth on healthy-but-shallow pages (60–80 line band) when the loop runs - mechanism and failure modes, not padding.
+- Gray-zone Taiwan indicators (freight insurance, export-license denials, delivery slippage) on next Ground pass per [taiwan](06-uncertainties/taiwan.md) failure mode.
 
 **Low**
-- Fancy reader features beyond Find.
+- Fancy reader features beyond Find (restored r27).
 
-**Retired (r1–r21):** earlier items in [HISTORY.md](HISTORY.md); recent: B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass; spine red-team (U7).
+**Retired (r1–r21):** earlier items in [HISTORY.md](HISTORY.md); recent: B12; compute/data; catalog Find; macro↔indicator sync; register; prediction stamps; log archive; first live Ground pass; spine red-team (U7); r27 thin-file clearance + Find restore.
 
 ## 7. Invariants
 

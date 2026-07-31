@@ -17,6 +17,22 @@ Reread the [complement list](../09-macro/assets.md) as a target list:
 
 What erodes slowest: land and zoning, proprietary *real-time* flow data (self-renewing by construction), and liability capacity while [Uncertainty 6](correlated-risk.md) stays unresolved.
 
+## Dated horizons (working table)
+
+If the objection is right, each row needs a horizon rather than a permanent label. Working estimates for the base case - not probabilities stamped in Part V, but orderings the [indicators](../07-indicators/) can falsify:
+
+| Complement | Horizon before material erosion | Gate |
+|---|---|---|
+| Physical presence / skilled trades | 2032–2040 (structured first) | Robot cost curves + [B12](../07-indicators/diffusion/capability.md) |
+| Energy scarcity (not land) | 2030–2035 if supply wins | Permitting + industrial capacity + efficiency; [U2](power-permitting.md) |
+| Distribution / default placement | 2028–2032 in agent-heavy verticals | Agent-mediated commerce share |
+| Regulatory licenses | Event-driven; can reprice in one session | Scope-of-practice bills; fiscal pressure |
+| Liability capacity | Stays scarce while correlation unpriced | [U6](correlated-risk.md); carrier products |
+| Land + zoning | Beyond 2040 in most metros | Political, not technical |
+| Real-time proprietary flow data | Self-renewing; horizon is access law, not tech | Platform regulation, not model quality |
+
+The table is the operational form of "half-life." A miss on any single row is a local rewrite; a simultaneous miss on the slow rows (land, liability, real-time data) is the abundance scenario [assets](../09-macro/assets.md) does not currently price.
+
 ## The historical base rate cuts both ways
 
 Past general-purpose technologies eroded their era's complement lists, and where the surplus went is the empirical question this page turns on. Agricultural mechanization manufactured what labor scarcity had protected, and the surplus mostly reached consumers as cheaper food - farmland rents concentrated, but the *share* of income flowing through the eroded rows collapsed. Electrification commoditized generation while the surplus lodged in the adjacent uneroded rows: distribution rights, appliance manufacture, urban land near the grid. The pattern across cases is that **erosion rarely delivers surplus cleanly to consumers or cleanly to complement-owners - it migrates rent to whichever adjacent row erodes slowest.** Applied here, that favors a middle reading the corpus's distributional pages do not currently price: the assets story can be wrong about *which* complements concentrate wealth while being right that *some* row does, with land-with-power and liability capacity as the historically-shaped candidates for where the rent migrates. That is a weaker claim than the one [assets](../09-macro/assets.md) makes, and if this page fires, it is the claim the corpus retreats to before conceding abundance.

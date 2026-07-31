@@ -12,7 +12,7 @@ Capital is named as the fourth input alongside compute, energy, and data. It beh
 
 ## The scale, as of mid-2026
 
-The four largest hyperscalers guided to roughly **$635–670B of combined 2026 capex**, of which on the order of **$240B** is physical plant - land, shells, power, cooling, and construction - rather than silicon. Cumulative 2025–2027 hyperscaler capex is tracking toward **~$1.15T**, against **$477B** across 2022–2024.
+The four largest hyperscalers guided to roughly **$700–725B of combined 2026 capex** (company guidance through mid-2026: Amazon ~$200B, Microsoft ~$190B, Alphabet ~$180–205B, Meta ~$125–145B; earlier-year prints sat ~$635–670B and have been revised up). Of that, on the order of **$240B+** is physical plant - land, shells, power, cooling, and construction - rather than silicon. Cumulative 2025–2030 hyperscaler capex forecasts from sell-side houses have been revised into the multi-trillion range; the point for this page is direction and financing mix, not any single cumulative total.
 
 Two derived facts matter more than the headline:
 
@@ -53,11 +53,16 @@ If AI does deliver the TFP step-up in [Part V](../05-probabilities/README.md) ro
 
 **Success raises the cost of the capital required to continue.** The better the technology works, the more expensive it becomes to finance the next round of it. This is not a paradox; it is how every genuine general-purpose technology has behaved, and it is why railway and electrification booms both ran through capital-market crises without the underlying technology failing.
 
+## What a correction does and does not reset
+
+If the credit-event path fires, three clocks reset and one does not. **Secondary-lab financing** freezes for years - pure-plays and neoclouds are the casualty class. **Hyperscaler board patience** shortens for a cycle, which cuts train-run ambition more than inference capacity already built. **Vendor and SPV markets** reprice collateral haircuts, which is the transmission into the broader credit system. What does *not* reset: the research line at state-adjacent and cash-rich labs, the powered land (often more valuable after a cull of competing demand), and the open-weight diffusion already in the wild. That is why [class 2](../08-method/base-rates/cycles.md) and [winters](../08-method/base-rates/winters.md) both insist on scoring a *capital* winter rather than a capability winter, and why [Part V](../05-probabilities/README.md) row 6's 2–4 year timeline slip is a financing claim, not a science claim.
+
 ## What would falsify the pessimistic read
 
 - **Revenue per dollar of capex improving.** If inference revenue scales super-linearly against infrastructure spend - plausible if agents are sold on outcomes rather than seats - the capital question dissolves without a correction. See [Inference economics](inference-economics.md).
 - **Depreciation schedules proving conservative.** If accelerators retain useful life past six years because inference demand absorbs older silicon, the effective capital intensity of the whole build falls sharply.
 - **The physical-asset residual being large.** Powered land with interconnection is worth more in 2032 than it cost in 2026 under nearly every scenario. If the majority of spend is really that, the downside is bounded in a way the headline numbers hide.
+- **Financing mix migrates back to operating cash.** If the 2025–26 drift into private credit reverses, the credit-event path loses its fuel even if revenue disappoints - a spending pause replaces a financial event.
 
 ---
 

@@ -425,7 +425,7 @@ tbody tr:hover > * { background: var(--background-color-alt); }
 .pagenav + .msg { margin-top: var(--line-height); }
 
 /* ── status bar ─────────────────────────────────────────────────────────
-   Fixed to the bottom: where you are, how far in, and the two toggles.   */
+   Fixed to the bottom: where you are, and Find / Theme / Src.            */
 .statusbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
   margin: 0;
@@ -446,18 +446,46 @@ tbody tr:hover > * { background: var(--background-color-alt); }
 }
 .sb-progress { flex: 0 0 auto; white-space: pre; color: var(--text-color-alt); }
 .sb-pct { flex: 0 0 auto; color: var(--text-color-alt); white-space: pre; }
-.sb-actions { flex: 0 0 auto; display: flex; gap: 1ch; }
-.sb-actions button {
+.sb-actions {
+  flex: 0 0 auto; display: flex; align-items: center; gap: 1ch;
+  /* Never shrink: Find must stay tappable on narrow screens. */
+  flex-shrink: 0;
+}
+.sb-actions button,
+.sb-actions .sb-link {
   height: calc(var(--line-height) * 1.5); font-size: 0.75rem;
   padding: 0 calc(1ch - var(--border-thickness));
+  display: inline-flex; align-items: center; justify-content: center;
+  border: var(--border-thickness) solid var(--text-color);
+  background: var(--background-color); color: var(--text-color);
+  font-family: inherit; cursor: pointer;
+  text-decoration: none; border-bottom: var(--border-thickness) solid var(--text-color) !important;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-width: 4.5ch;
+}
+.sb-actions button:hover,
+.sb-actions .sb-link:hover,
+.sb-actions button:focus-visible,
+.sb-actions .sb-link:focus-visible {
+  background: var(--background-color-alt);
 }
 button[aria-pressed="true"] { background: var(--text-color); color: var(--background-color); }
 @media screen and (max-width: 640px) {
   .statusbar-inner { padding: calc(var(--line-height) / 2) 1ch; }
   .sb-progress { display: none; }
+  .sb-actions button,
+  .sb-actions .sb-link {
+    /* Larger hit target on phones */
+    height: calc(var(--line-height) * 2);
+    min-width: 5.5ch;
+    font-size: 0.8rem;
+    padding: 0 1ch;
+  }
 }
 @media screen and (max-width: 420px) {
   .sb-pct { display: none; }
+  .sb-path { max-width: 40%; }
 }
 
 .msg { color: var(--text-color-alt); }
@@ -470,9 +498,13 @@ kbd {
 .find-dialog {
   border: var(--border-thickness) solid var(--text-color);
   background: var(--background-color); color: var(--text-color);
-  padding: 0; margin: auto;
-  width: min(56ch, calc(100% - 2ch));
-  max-height: min(70vh, 32rem);
+  padding: 0;
+  /* Center on both desktop and mobile; use dvh so the keyboard does not clip. */
+  margin: auto;
+  width: min(56ch, calc(100vw - 2ch));
+  max-width: calc(100vw - 2ch);
+  max-height: min(70dvh, 32rem);
+  box-sizing: border-box;
 }
 .find-dialog::backdrop {
   background: color-mix(in srgb, var(--text-color) 35%, transparent);
@@ -491,24 +523,44 @@ kbd {
   border: var(--border-thickness) solid var(--text-color);
   padding: calc(var(--line-height) / 4) 1ch;
   width: 100%;
+  /* 16px minimum stops iOS Safari from zooming the page on focus. */
+  font-size: max(1rem, 16px);
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 #find-input:focus { outline: none; background: var(--background-color-alt); }
 .find-results {
   list-style: none; padding: 0; margin: 0;
-  max-height: min(40vh, 20rem); overflow-y: auto;
+  max-height: min(40dvh, 20rem); overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   border-top: var(--border-thickness) solid var(--text-color);
 }
 .find-results li { margin: 0; border-bottom: 1px solid var(--background-color-alt); }
 .find-results a {
-  display: block; padding: calc(var(--line-height) / 4) 0.5ch;
+  display: block;
+  padding: calc(var(--line-height) / 2) 0.5ch;
   border-bottom: none !important; text-decoration: none; color: var(--text-color);
+  /* Comfortable tap target */
+  min-height: calc(var(--line-height) * 2.5);
 }
 .find-results li.is-active a,
-.find-results a:hover { background: var(--background-color-alt); }
+.find-results a:hover,
+.find-results a:focus-visible { background: var(--background-color-alt); }
 .find-title { display: block; font-weight: var(--font-weight-medium); }
 .find-path { display: block; color: var(--text-color-alt); font-size: 0.85rem; }
 .find-empty { padding: var(--line-height) 0.5ch; color: var(--text-color-alt); }
 .find-hint { color: var(--text-color-alt); font-size: 0.85rem; }
+@media screen and (max-width: 640px) {
+  .find-dialog {
+    width: calc(100vw - 1ch);
+    max-height: min(80dvh, 36rem);
+    /* Prefer top placement so the soft keyboard leaves results visible. */
+    margin: 1ch auto auto;
+  }
+  .find-hint { display: none; } /* keyboard hints are desktop-only */
+  .find-results { max-height: min(50dvh, 24rem); }
+}
 .sr-only {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;

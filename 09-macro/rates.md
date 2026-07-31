@@ -38,6 +38,10 @@ The net effect is genuinely contested, which is why this section argues rather t
 
 > **Assessment:** a productivity step-up sufficient to raise real rates by more than ~100bp against the demographic tide is **~30%** likely by 2035 - between [Part V](../05-probabilities/) row 2's 20% by 2030 and 50% by 2040, since it is nearly the same claim wearing different clothes. Note what this implies: **the most likely world is one where AI works well enough to matter and rates stay low anyway**, because demographics dominate.
 
+### What "self-limiting success" does to the rest of the corpus
+
+If the productivity force wins and neutral rates rise, three pages move together. [Capital](../01-substrate/capital.md) becomes more expensive at exactly the moment the next train-run wants more of it - the financial governor on [Uncertainty 1](../06-uncertainties/recursive-self-improvement.md). [Assets](assets.md) reprice: long-duration growth claims compress while scarce real complements (powered land, licenses) can re-rate on the real yield. [Fiscal](fiscal.md) gets a mixed gift - higher rates raise debt service even as a stronger tax base from productivity may improve the primary balance. The base case (demographics dominate) is quieter: rates stay low, the capex boom is not self-limited by discount rates, and the correction risk stays in the *credit structure* rather than in the neutral-rate channel.
+
 ## The self-limiting loop, stated properly
 
 Combine this with [Capital](../01-substrate/capital.md) and a feedback loop appears that no linear projection captures:
