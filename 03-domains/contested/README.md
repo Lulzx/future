@@ -54,6 +54,10 @@ The reverse dependency is weaker but real: the offense-favoring near term is its
 
 It is not adversarial in the same sense, but it is contested - and it is the **precondition for every governance claim in the document.** [Game 2](../../02-games/2-nations.md) predicts regulatory architecture written in an 18-month window after a salient incident. Whether that architecture is any good, and whether it can be enforced at all, is a question about the technical and institutional capability of the state, which currently receives almost no attention relative to its leverage.
 
+### Lag compression raises the offense floor
+
+Open-weight lag ~3–6 months means defensive institutions must absorb capability that was frontier last quarter. That does not change which domain supplies the salient incident, but it shortens the time between "available to sophisticated actors" and "available to the margin." Score trough severity with lag as a parameter, not as a constant from 2023.
+
 ---
 
 **Next:** [Geopolitics](geopolitics/) → [Part IV - Timelines](../../04-timelines/)

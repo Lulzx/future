@@ -23,6 +23,12 @@ The classes are not equally strong, and the corpus leans on them unequally. Clas
 
 The failure mode of the whole apparatus: reference classes discipline priors, they do not generate truth. A genuinely unprecedented mechanism - recursive capability feedback is the candidate ([Uncertainty 1](../../06-uncertainties/recursive-self-improvement.md)) - belongs to no class, and forcing it into one manufactures false confidence in both directions. Where the corpus argues from no-precedent, it says so instead of borrowing a class that does not fit.
 
+### How classes compose in practice
+
+Most Part V rows are **conjunctions** of classes, not pure draws from one. Row 6 (correction) is class 2's boom pattern × class 4's "not a full winter" filter. Row 4 (agreement) is class 3's event-driven window × the privacy-class exception if harms stay diffuse. Row 2 (TFP) is class 1's diffusion lag × class 6's demographic counterweight on labor politics. When a re-score moves a row, name which class's adjustment changed - otherwise the ledger cannot be audited.
+
+**Score classes before cases.** If the GPT-diffusion analogy (class 1) is wrong, half the timeline moves; if only software's specifics are wrong, one domain page moves. That is why [dependencies](../../00-overview/dependencies.md) routes misses to parent claims, and why this hub exists separately from domain detail.
+
 ---
 
 **Related:** [Part V - Probabilities](../../05-probabilities/) · [Steelman](../steelman.md) · [Scoring](../scoring.md)

@@ -33,7 +33,12 @@ Most analysis conflates all three into "who is winning," which is why most analy
 
 **Absorption is the slow axis for a reason that is not going to change.** Capability is bought, capacity is built, and absorption has to be *institutionalized* - which means changing how firms are organized, what workers are trained for, what regulators certify, and what liability attaches to a decision made with machine assistance. Those are the [inelastic complements](../../../02-games/3-firms.md) seen from the national rather than the firm level, and they move on the timescale of professional generations rather than product cycles. The historical base rate is unambiguous: electrification took about four decades from viable to productivity-visible, and the delay was not the dynamos but the rebuilding of factories around them. *Failure mode for this whole framing:* if the current wave is absorbed mainly through software that firms already buy, rather than through reorganization, absorption could run far faster than the electrification analogy suggests and the third axis stops being the bottleneck. Watch whether measured productivity gains show up in firms that reorganized or in firms that merely subscribed.
 
+### Open-weight lag is the coupling constant
+
+Measured lag **~3–6 months** (Epoch AI, early 2026) means capability axes stay closer than export-control rhetoric implies. Capacity and absorption still diverge. Policy that treats weights as containable fights the measured constant; policy that contests power, fabs, and institutions is aligned with the three-axis table. → [bipolar](bipolar.md), [Game 1](../../../02-games/1-labs.md)
+
 ## Why the ladder is defended rather than replaced
+
 
 The pivot below is correct and it is also, in almost every country, politically unavailable, and it is worth being precise about the mechanism rather than blaming foresight.
 

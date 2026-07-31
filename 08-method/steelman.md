@@ -60,6 +60,10 @@ That is a fair criticism and it does not have a good answer. The mitigation is t
 
 **If this document is badly wrong, the most likely single reason is objection 1**, and the most likely form is that it looks approximately right until roughly 2029 and then ages very poorly.
 
+### Objection 1's middle case is now the default watch
+
+[Uncertainty 5](../06-uncertainties/learned-verification.md) no longer treats dissolve-vs-hold as the only fork: process verification can improve while outcome verification stays expensive. That is a Part III re-score event, not full framework death. Objection 1 still wins if *both* tiers close; partial wins should not be scored as full spine failure.
+
 ---
 
 **Related:** [Part VI - Uncertainties](../06-uncertainties/) · [Base rates](base-rates/README.md) · [Scoring](scoring.md) · [Game 3](../02-games/3-firms.md)

@@ -53,6 +53,8 @@ The demographic counterweight does not cancel class 5. It changes *which* harm s
 
 **Failure mode of this page:** using "demographics help absorption" to dismiss B1. Compositional harm and aggregate employment are different objects; class 6 bounds the second and leaves the first untouched.
 
+**Mixture harms tip class 3.** AI can produce both a salient incident *and* diffuse cohort harm. Class 3 predicts the architecture addresses the salient channel first - finance/cyber rules after a market event, not apprenticeship policy. Plan shelf drafts for both; expect only the salient one to pass.
+
 ---
 
 **Related:** [Game 2](../../02-games/2-nations.md) · [Game 4](../../02-games/4-labor.md) · [Demography](../../09-macro/demography.md) · [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md)

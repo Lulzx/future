@@ -53,6 +53,8 @@ Three features of the present boom map cleanly onto the table, and one does not.
 
 Pair with [winters](winters.md): class 2 is the capital-markets reference; class 4 is the capability-funding archaeology. Full winters require capability stuck below a paying use case. This cycle has revenue; class 2 is therefore the central case and class 4 is the tail.
 
+**Investor scrutiny is not the correction.** 2026 earnings seasons already price skepticism of the spend; that is the political economy of the capex test arriving early, not class 2 firing. Class 2 needs credit stress, capacity cull, and multi-year financing chill - score the conjunction.
+
 ---
 
 **Related:** [Capital](../../01-substrate/capital.md) · [Compute](../../01-substrate/compute.md) · [2028–2032](../../04-timelines/2028-2032.md) · [Winters](winters.md)

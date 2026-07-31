@@ -36,6 +36,14 @@ I have deliberately left both sides of this in rather than resolving it. It is g
 
 ---
 
+### Gray-zone Taiwan is now operational
+
+[Uncertainty 4](taiwan.md) carries a crisis table *and* a gray-zone table (freight insurance, export licenses, delivery slip, ASP step-ups, dual-sourcing). Ground passes should read the gray-zone rows before fleet trackers. Soft fail of the *consumed* assumption (supply to modeled buyers) can leave crisis indicators green.
+
+### Sceptic reading order
+
+[U5](learned-verification.md) + [U7](complement-erosion.md) (spine) → [U4](taiwan.md) (zero condition) → [U1](recursive-self-improvement.md) (parameter variance) → rest. Do not start with U2/U3 alone; they move numbers, not the framework.
+
 **Start with:** [Uncertainty 1 - recursive research acceleration](recursive-self-improvement.md)
 
 **Next:** [Part VII - The Indicator Dashboard](../07-indicators/), which turns the checkable subset of these into observables.

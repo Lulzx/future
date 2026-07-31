@@ -60,6 +60,10 @@ This is the III.B companion to the headline teleoperation ratio. **Prefer delive
 
 Secondary: port automation share by region (geopolitical capacity); farmland equipment autonomy miles.
 
+### B4 × B12 is the fork
+
+Agents that clear multi-hour verifiable cognitive work (B4) without physical diffusion (B12) confirm the cognitive/physical split - high Part V row 1, low row 5 pressure. Both firing early is the high-growth branch of [2032–2040](../../04-timelines/2032-2040.md). B12 without B4 is unlikely under this framework (atoms harder than symbols); if observed, re-check measurement contamination on B12 first.
+
 ---
 
 **Related:** [Uncertainty 5](../../06-uncertainties/learned-verification.md) · [Uncertainty 1](../../06-uncertainties/recursive-self-improvement.md) · [Robotics](../../03-domains/physical/robotics/) · [Part IV - Timelines](../../04-timelines/)

@@ -29,6 +29,8 @@ The open-source commons shows the failure mode early and in public. Maintainers 
 
 Software is where [Game 4](../../02-games/4-labor.md) is measurable first, because the junior task set (boilerplate, tests, first-draft PRs) is exactly the high-leverage greenfield row in the table, and because posting data is liquid. The [B1](../../07-indicators/diffusion/labor.md) baseline already shows the leading edge; the software-specific claim is that *stabilization of junior software postings while other knowledge professions keep falling* would mean the inversion path in [Uncertainty 3](../../06-uncertainties/apprenticeship-gap.md) is live here first - dense AI feedback compressing the path to competence where verification is cheapest. Continued decline in junior software postings through 2029, even in a hiring recovery, is the commons-failure path at its purest.
 
+**Review is the scarce seat.** Amdahl on the team means senior PR capacity sets throughput. Tools that flood generation without shrinking review time raise queue length, not shipped value - the open-source bogus-report tax scaled to every company that hires juniors as "AI amplifiers" without growing reviewer headcount.
+
 ## What it does to SaaS
 
 Software's marginal cost falls toward zero, threatening the SaaS model - per-seat pricing, high margin, defended by switching cost.

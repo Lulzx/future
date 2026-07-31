@@ -80,6 +80,10 @@ Five things recur:
 
 **Failure mode for the whole part.** The domain pages assume the unit of change is the task and that roles re-bundle around whatever is left. If instead the unit of change is the *firm* - if AI-native entrants rebuild the whole workflow rather than selling tools into the existing one - then task-level analysis systematically underestimates speed, because an entrant does not have to route around licensure and liability that it never inherited. The corpus's most exposed pages under that reading are the ones where the moat is procedural rather than physical: [law](cognitive/law.md), [insurance](cognitive/insurance.md), and the administrative half of [medicine](physical/medicine/). Watch entrant share, not incumbent headcount.
 
+### How to use this part with Part V
+
+Domain pages rarely carry their own main-table rows; they feed mechanisms into rows 1, 3, 5 and the [register](../05-probabilities/register.md). A domain miss that does not change a scored probability is still a miss - log it under scoring rule 5 as local, not silent. The reverse: a Part V move that does not touch any domain page is a smell that the table and the prose have decoupled.
+
 ---
 
 **Next:** [A - Cognitive domains](cognitive/) → [Part IV - Timelines](../04-timelines/)

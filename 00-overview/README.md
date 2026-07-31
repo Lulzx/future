@@ -43,6 +43,14 @@ Compression is not a convenience here; it is a test. An argument that survives b
 
 Each order has a failure mode worth knowing before you pick. Linear front-loads substrate detail and can bury the economic punchline for a reader who only wanted the conclusion. Argument-first stops before [Part VI](../06-uncertainties/), so it delivers the case without the counter-case - do not cite the corpus from that read alone. Sceptic-first inverts that risk: uncertainties read as fatal when you have not yet seen the structure they are attacking. Operator-first optimizes for action and quietly assumes the framework is right; an operator who skips the [dependency index](dependencies.md) will not notice when a miss upstream invalidates the thing they are building. There is no order without a blind spot - the orders exist so you can choose which one you accept.
 
+### Site navigation
+
+On [future.lulzx.space](https://future.lulzx.space): **Find** (bottom bar, or `/` on desktop) searches all pages via [catalog.json](../catalog.json). Theme toggle is `t`. Arrow keys page when prev/next exist.
+
+### When the short forms disagree with the long form
+
+Prefer [compressed](compressed.md) / [thesis](thesis.md) as the claim and treat the long page as drifted until reconciled in a Review step. That is not a style preference - it is the commitment device that makes [scoring](../08-method/scoring.md) work.
+
 ---
 
 **Next:** [Thesis](thesis.md) → [Part I - The Physical Substrate](../01-substrate/)

@@ -31,6 +31,14 @@ These are the domains where change is happening **now**, and where the shape is 
 
 **The section's welfare ledger is split, and the halves move on different clocks.** Software, finance, law, and insurance are mostly stories about producer surplus reallocating - who captures the margin when the analytical layer compresses. Education, media, and meaning are mostly stories about consumer welfare and identity moving in ways national statistics record badly or not at all: the tutored child, the flooded feed, the missing junior rung. The first half shows up in earnings calls within quarters; the second accumulates for years before it surfaces, usually as politics rather than as data ([meaning](meaning.md) makes this the explicit prediction). Reading only the first half is how a forecast ends up right about GDP and wrong about the decade.
 
+### Process vs judgment (U5 middle case)
+
+Several rows will not dissolve whole if [learned verification](../../06-uncertainties/learned-verification.md) only masters *process* checks. Law, compliance-heavy finance, protocolized medicine-adjacent work, and education assessment are process-heavy; negotiation, taste, research direction, and meaning are not. Expect within-domain re-scoring (process compresses, judgment holds) before framework rewrite. Score with [B8](../../07-indicators/diffusion/capability.md) as two gaps when the middle case lands.
+
+### Reading order
+
+[Software](software.md) (template) → [Insurance](insurance.md) (deployment frontier) → [Law](law.md)/[Finance](finance.md) → [Education](education.md)/[Media](media.md)/[Meaning](meaning.md) for the welfare half. [Science](science.md) anytime for the automated-labs prize.
+
 ---
 
 **Next:** [Software](software.md) → [III.B - Physical domains](../physical/)

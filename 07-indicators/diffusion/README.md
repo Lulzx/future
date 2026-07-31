@@ -29,6 +29,21 @@ The twelve indicators split on what they watch. The [labor and institutions](lab
 
 Read the family jointly, not row by row. The highest-information patterns are cross-group: B1 moving with B10 and B7 is the AI-relevant fiscal signature; B4 moving without B12 is the cognitive/physical fork confirming; B5 moving before B2 is revealed belief running ahead of measured fact, which is exactly the order every prior general-purpose technology showed.
 
+### Contamination hierarchy
+
+| Prefer | Distrust alone |
+|---|---|
+| Outcome-priced contracts (B5), margin dispersion (B3), component CPI (B7) | Vendor NPS, "AI adoption" surveys |
+| Profession-level posting ratios (B1) | Blended "knowledge work" employment |
+| Teleop→autonomy + delivered $/hour (B12) | Unit sales, demo videos |
+| Production deployment depth (B8) | Benchmark gap closes |
+
+Surveys are allowed as *secondary* series when they name the same object as an instrumented measure and move with it. Alone they are marketing.
+
+### A×B joint (reminder)
+
+B stall + A slack → institutions. B stall + A tight → substrate. Do not re-score Part IV from B alone. → [substrate](../substrate.md)
+
 ---
 
 **Related:** [Game 3](../../02-games/3-firms.md) · [Game 4](../../02-games/4-labor.md) · [Part IV - Timelines](../../04-timelines/) · [Part IX](../../09-macro/)

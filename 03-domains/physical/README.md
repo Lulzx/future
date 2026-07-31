@@ -54,6 +54,10 @@ The capture story is more uniform here than in the cognitive domains, and it is 
 
 The consequence is that the physical domains are where the distributional prediction is most confident and the productivity prediction is least. Output effects depend on whether handling automates, which is genuinely uncertain. Capture effects depend only on who holds the complement, which is already observable today. Where a page here states a timing claim with hedging and a capture claim without it, that asymmetry is deliberate. → [Assets](../../09-macro/assets.md), [Uncertainty 7](../../06-uncertainties/complement-erosion.md) for the case against the durability of that list
 
+### Fully-loaded cost, not wage
+
+Every crossover claim on this page should be scored against **employer cost of labor** (wages + benefits + injury + turnover), not headline wage. That moves the threshold earlier in high-turnover structured settings and later in low-wage informal ones. → [cost curves](robotics/cost-curves.md)
+
 ---
 
 **Next:** [Medicine](medicine/) → [III.C - Contested domains](../contested/)
