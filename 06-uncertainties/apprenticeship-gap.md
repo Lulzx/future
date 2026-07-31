@@ -62,6 +62,8 @@ Stabilization means the response is happening. Continued decline means it isn't.
 
 [India](../03-domains/contested/geopolitics/india.md) and [global south](../03-domains/contested/geopolitics/global-south.md) face the same junior-rung cut as rich-world knowledge professions, with thinner safety nets. The apprenticeship gap is not only a BigLaw/FAANG story - it is a development strategy story wherever cognitive labor was the export. Score B1-style signals in outsourcing hubs alongside domestic series.
 
+**Definition drift kills the indicator.** If "entry-level" postings quietly become mid-level tasks rebadged, B1 stabilizes while the pipeline still dies. Prefer series that fix seniority definitions or publish the mix - and check promotion times as the stock/flow cross-check.
+
 ---
 
 **Previous:** [Uncertainty 2](power-permitting.md) · **Next:** [Uncertainty 4 - Taiwan](taiwan.md)

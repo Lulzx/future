@@ -67,6 +67,8 @@ There is also a counter-argument to compounding that the technical debate underw
 
 If B9's technical trigger fires *and* physical and financial governors are not binding: pull [Part IV](../04-timelines/) forward, raise [Part V](../05-probabilities/) rows 1–2 and 5, re-read [compute](../01-substrate/compute.md)'s dollar wall as soft, and treat [U5](learned-verification.md) as more urgent (a loop with cheap learned verifiers is the discontinuity case). If the technical trigger fires but governors bind: log a *local* research win and leave timelines mostly intact - the page's whole point is that the conjunction, not the first conjunct, moves the map. Do not re-score on release-day hype alone.
 
+**Narrowing open-weight lag is not RSI.** A shorter follower gap (measured ~3–6 months) is evidence of *shared* productivity multipliers and distillation - closer to "loop is a public good" than "one lab closed the loop." RSI-positive signature is frontier *pulling away* while governors strain.
+
 ---
 
 **Related:** [Compute](../01-substrate/compute.md) · [Data](../01-substrate/data.md) on why verification bounds the loop · [Rates](../09-macro/rates.md) on the financial governor · [Energy](../01-substrate/energy.md) · [Steelman](../08-method/steelman.md) §1

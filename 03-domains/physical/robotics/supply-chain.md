@@ -59,6 +59,8 @@ In robotics **there is no equivalent chokepoint working in the same direction.**
 
 Industrial-policy announcements are the most contaminated series in this domain. The unit that moves the page is **exported or installed robot units by origin of manufacture**, and secondarily second-source actuator/magnet *shipments* (not tool installs). IFR and national customs data beat press releases. A year of Western funding announcements with flat unit share is confirmation of this page, not a near-miss.
 
+**Reshoring with imported robots** moves the dependency up one layer, not off the map. Score origin of the *means of assembly* alongside origin of final goods - [bipolar](../../contested/geopolitics/bipolar.md) already flags the surprise.
+
 ---
 
 **Related:** [Cost curves](cost-curves.md) · [The data problem](data-problem.md) on the deployment flywheel · [Geopolitics](../../contested/geopolitics/) on reshoring · [Energy](../../../01-substrate/energy.md) for the same decoupling argument · [Game 2 - Nations](../../../02-games/2-nations.md)

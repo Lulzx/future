@@ -66,6 +66,8 @@ Even a full technical win does not immediately dissolve the ordering, because ve
 | [U6](correlated-risk.md) coverage expands | Underwriters revealing belief that verification is priced; strongest commercial signal for U5 |
 | [U7](complement-erosion.md) | U5 full win shortens every complement half-life at once (non-sequential erosion) |
 
+**Do not score U5 on benchmark gap alone.** Process-heavy evals will close first and look like the asymmetry dying. Prefer production final-decision authority + insurance pricing ([B8](../07-indicators/diffusion/capability.md) contamination rules). A world of great process judges and unchanged taste/strategy autonomy is the middle case, not full win.
+
 ---
 
 **Related:** [Steelman](../08-method/steelman.md) §1 · [Data](../01-substrate/data.md) · [Uncertainty 1](recursive-self-improvement.md) · [Part III](../03-domains/) · [Scoring](../08-method/scoring.md) rule 5

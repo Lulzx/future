@@ -61,6 +61,8 @@ Any round that adds a probability-stamped blockquote anywhere in the corpus must
 
 **Partial resolution rule:** if a blockquote bundles clauses (e.g. consolidation *and* lag), score each clause when it becomes decidable - do not wait for the whole sentence. Document partials in the [ledger](ledger.md); leave the source blockquote as authored until a re-score round rewrites it under scoring rule 5. That is how the open-weight lag was handled in r25–26 without laundering the miss.
 
+**Taiwan cluster:** the ~90% fab row is not one of sixteen independent bets - it sits under compute-gated dates, robotics supply, and bipolar capacity. Gray-zone indicators ([U4](../06-uncertainties/taiwan.md)) can stress the *consumed* assumption while the stated disruption row still "holds." Log soft fails in the ledger before treating green crisis dashboards as vindication.
+
 ---
 
 **Related:** [Main table](README.md) · [Ledger](ledger.md) · [Scoring](../08-method/scoring.md) · [Indicators](../07-indicators/)

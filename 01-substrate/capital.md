@@ -64,6 +64,8 @@ If the credit-event path fires, three clocks reset and one does not. **Secondary
 - **The physical-asset residual being large.** Powered land with interconnection is worth more in 2032 than it cost in 2026 under nearly every scenario. If the majority of spend is really that, the downside is bounded in a way the headline numbers hide.
 - **Financing mix migrates back to operating cash.** If the 2025–26 drift into private credit reverses, the credit-event path loses its fuel even if revenue disappoints - a spending pause replaces a financial event.
 
+**Investor skepticism in earnings Q&A is not A3 firing.** Scrutiny of the spend can rise for years while financing mix still drifts toward SPVs. Score [A3](../07-indicators/substrate.md) on mix and collateral structure, not on the tone of analyst questions. → [cycles](../08-method/base-rates/cycles.md)
+
 ---
 
 **Related:** [Compute](compute.md) on the capex wall · [Energy](energy.md) on what the money cannot buy quickly · [Game 3 - Firms](../02-games/3-firms.md) on where returns land · [Finance](../03-domains/cognitive/finance.md)

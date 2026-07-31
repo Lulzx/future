@@ -89,9 +89,9 @@ Rule 5 satisfied: evidence reviewed, contradiction logged rather than absorbed s
 
 Rule 5 satisfied: one move with written mechanism, six holds with named evidence. First table move since round 8.
 
-## Rounds 27–31 - hold passes (no number moves)
+## Rounds 27–33 - hold passes (no number moves)
 
-*Date: 2026-07-31. Depth rounds + hub hygiene; no new scoreable series crossed a Part V bar.*
+*Date: 2026-07-31. Depth rounds + hub hygiene + scoring filters; no new scoreable series crossed a Part V bar.*
 
 All seven rows **held**. Mechanism prose and indicators improved (Taiwan gray-zone table, Game 3 scoring cross-section, robotics fully-loaded cost, partial-clause rules, capex sync already reflected in r26 row-6 hold). Capex guidance ~$700–725B reconfirmed at source - does not force a row-6 move while the *ratio* remains ambiguous. Open-weight lag already priced into row 4 in r26. Rule 5: multi-round holds with named reasons, not silence.
 

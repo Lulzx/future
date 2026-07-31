@@ -65,6 +65,8 @@ Three escapes, none free. **(1) Domestic demand for cognitive services** grows f
 
 **Failure mode of this page:** treating every IT layoff in Bangalore as confirmation. Cyclical US tech demand and structural AI substitution are different; the discriminating test is whether junior and mid-tier export services employment recovers with the US cycle or decouples from it. → [B1](../../../07-indicators/diffusion/labor.md) logic applied to trade data.
 
+**Revenue/employment decoupling** in the export sector is the early-warning series governments should watch and usually don't - still growing invoices with thinning junior headcount is the ladder failing quietly. → [geopolitics hub](README.md)
+
 ---
 
 **Related:** [Game 4 - Labor](../../../02-games/4-labor.md) · [The Global South](global-south.md) · [Software](../../cognitive/software.md) · [Uncertainty 3](../../../06-uncertainties/apprenticeship-gap.md) · [Energy](../../../01-substrate/energy.md)

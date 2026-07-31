@@ -64,6 +64,8 @@ The consumer-surplus claim is harder to observe directly. The proxy is relative 
 - **Regulated sectors expand** as a share of the economy (aging pushes healthcare share up) - then the exception outgrows the rule and the aggregate consumer-surplus claim weakens even though every mechanism here still operates.
 - **Complement erosion runs fast**: the list this page routes surplus to is itself temporary - [Uncertainty 7](../06-uncertainties/complement-erosion.md). Game 3's *mechanism* (competitive dissipation) can hold while its *distributional implication* softens toward consumer abundance.
 
+**SaaS is the worked example.** Seat-priced software with no data/distribution/compliance moat is Red Queen pure: adopt or die, margins flat, prices soft. Outcome pricing ([B5](../07-indicators/diffusion/economy.md)) is the escape hatch when reliability is real - not a different game, a different pricing of the same one. → [Software](../03-domains/cognitive/software.md)
+
 ---
 
 **Related:** [Inference economics](../01-substrate/inference-economics.md) on the two-year moat · [Software](../03-domains/cognitive/software.md) for the SaaS case · [Prices](../09-macro/prices.md) · [Compressed version](../00-overview/compressed.md)

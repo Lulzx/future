@@ -66,6 +66,9 @@ This is the macro expression of [Game 3](../../02-games/3-firms.md). Prefer **re
 | B3 Red Queen confirmed, B7 diverging | Surplus leaving competitive firms into complements and consumers - spine second half holding |
 | B2 fires early, B3 margins expand in competitive sectors | Either reorganization accelerated or the Red Queen is wrong - re-score row 2 and Game 3 together |
 | B7 uniform deflation | Complements eroding or demand collapsed; check [U7](../../06-uncertainties/complement-erosion.md) vs. recession before rewriting [prices](../../09-macro/prices.md) |
+| B3 margins expand only in licensed/concentrated sectors | Scope condition of Game 3 holding - not Red Queen broken |
+
+**Circularity filter for B5/A2.** Outcome revenue can still be partly circular if the "customer" is an equity affiliate. Prefer third-party enterprise contracts with public indemnity language over cloud credits between related parties. → [Capital](../../01-substrate/capital.md)
 
 ---
 

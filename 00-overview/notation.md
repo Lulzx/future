@@ -26,6 +26,10 @@ Terms that carry load across the corpus. Definitions are operational, not dictio
 | **Two-year moat** | Any fixed capability level becomes ~free within ~24 months; frontier access is a wasting asset | [Inference economics](../01-substrate/inference-economics.md), [Game 3](../02-games/3-firms.md) |
 | **Revenue bar / capex test** | Does AI revenue reach ~$400–700B/yr by 2030, net of financing circularity | [Compute](../01-substrate/compute.md), [Capital](../01-substrate/capital.md), [A2](../07-indicators/substrate.md) |
 | **Verification scarcity** | Post-collapse regime where generation is free and checking is the priced good | [Game 5](../02-games/5-information.md), [Compressed](compressed.md), [C8](../07-indicators/governance.md) |
+| **Complement half-life** | Scarce-complement rows erode on dated horizons, not forever | [Uncertainty 7](../06-uncertainties/complement-erosion.md), [Assets](../09-macro/assets.md) |
+| **Gray-zone Taiwan** | Soft fail of fab continuity (insurance, licenses, slip) without crisis headline | [Uncertainty 4](../06-uncertainties/taiwan.md), [A6](../07-indicators/substrate.md) |
+| **Process vs outcome verification** | U5 middle case: process checks learnable, outcome truth still expensive | [Uncertainty 5](../06-uncertainties/learned-verification.md), [Law](../03-domains/cognitive/law.md) |
+| **Behind-the-meter** | Captive generation / bilateral power routing around public interconnect queues | [Energy](../01-substrate/energy.md), [Uncertainty 2](../06-uncertainties/power-permitting.md) |
 
 ## How a term earns a row
 

@@ -63,6 +63,8 @@ The direction is not obvious, and the historical base rate points the wrong way 
 
 In high-income delivery systems the counterfactual for a wrong triage is a worse path through an existing system. In low-resource settings the counterfactual is often **no care at all**. That is why [global south](../../contested/geopolitics/global-south.md) prices large welfare gains from the same tools this page treats as queue-worsening: the over-referral bias is still real, but the baseline is empty clinics, not full ones. Exporting high-income liability standards into that environment blocks the highest-value uses. The policy joint is [liability](liability.md) and state capacity, not model quality.
 
+**Payer control of the triage threshold** is the only clean way the over-referral bias reverses in high-income systems. Until then, expect queues to worsen first - every prior patient-information wave did.
+
 ---
 
 **Related:** [Diagnostics](diagnostics.md) · [Liability](liability.md) · [Demography](../../../09-macro/demography.md) · [Global South](../../contested/geopolitics/global-south.md) · [Prices](../../../09-macro/prices.md) on healthcare in the inflating basket

@@ -39,7 +39,7 @@ The chain is not equally fragile at every link, and knowing which failures are l
 
 **Parameter uncertainties (skewed, often toward faster/better):** recursive research acceleration (three governors: verification, physical, financial), sudden US permitting reform, institutional response to the apprenticeship gap.
 
-**Load-bearing risks (can invalidate large branches):** Taiwanese fab continuity (~90% modelling assumption), learned verification defeating the master asymmetry, correlated-failure insurability as the real deployment ceiling, and [complement erosion](../06-uncertainties/complement-erosion.md) - the scarce-complement list having a shorter half-life than the distributional predictions assume.
+**Load-bearing risks (can invalidate large branches):** Taiwanese fab continuity (~90% modelling assumption - including gray-zone soft fails, not only invasion), learned verification defeating the master asymmetry, correlated-failure insurability as the real deployment ceiling, and [complement erosion](../06-uncertainties/complement-erosion.md) - the scarce-complement list having a shorter half-life than the distributional predictions assume.
 
 → [Part VI](../06-uncertainties/) · [Dependencies](dependencies.md) · [Part V](../05-probabilities/)
 

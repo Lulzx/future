@@ -63,6 +63,8 @@ The task is a single closed question with a binary output. The image is captured
 
 The retinopathy template is deliberately boring. Models will keep posting spectacular results on open diagnostic challenges that fail one or more of the four conditions (open question, uncontrolled capture, costly false positive, incumbent displacement). Those results move benchmarks and do not move this page's deployment order. When scoring "AI in diagnostics is faster than the corpus expected," ask which condition flipped - usually none have, and the surprise was a demo.
 
+**Employment can rise while fees fall.** Superhuman reading with more radiologists is the template's employment claim - the surplus leaves as price, not headcount, until liability moves. Watch real fee per study *and* headcount; either alone misreads.
+
 ---
 
 **Related:** [Liability](liability.md) · [Delivery](delivery.md) · [Law](../../cognitive/law.md) · [Insurance](../../cognitive/insurance.md)

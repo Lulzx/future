@@ -20,6 +20,8 @@ These are the load-bearing complements to cheap cognition, and they are undersup
 
 If the paragraph above is wrong, it is most likely wrong in one of two ways: verification itself gets automated, so it never becomes the scarce good ([Uncertainty 5](../06-uncertainties/learned-verification.md)); or the list of things intelligence cannot manufacture shrinks faster than the decade this advice assumes ([Uncertainty 7](../06-uncertainties/complement-erosion.md)). Watch those two pages; the rest of the corpus is elaboration.
 
+A third way to be wrong is quieter: **Taiwan soft-fails** without a war ([Uncertainty 4](../06-uncertainties/taiwan.md) gray zone) and every timeline slips in quarters while the spine still looks intact. Watch freight insurance and license denials, not only fleets.
+
 ---
 
 **See also:** [Game 5](../02-games/5-information.md) · [Meaning](../03-domains/cognitive/meaning.md) · [Notation](notation.md) · [Dependencies](dependencies.md)

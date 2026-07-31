@@ -60,6 +60,8 @@ Licensure and liability capacity are the political rows on the [complement list]
 
 **Soft market ≠ unlock.** Early AI riders on malpractice policies written without loss history are competition for premium, not proof the balance-sheet moat fell - same discipline as [insurance](../../cognitive/insurance.md).
 
+**Indemnity from the model provider** is the cleanest C6/C6-adjacent signal: someone with failure data is staking capital. Narrow marketing + narrow indemnity is the contest equilibrium; the reverse would reprice the whole medicine stack in one product cycle.
+
 ---
 
 **Related:** [Diagnostics](diagnostics.md) · [Insurance](../../cognitive/insurance.md) · [Law](../../cognitive/law.md) · [Game 1](../../../02-games/1-labs.md) · [C6 Liability](../../../07-indicators/governance.md) · [State capacity](../../contested/state-capacity.md)

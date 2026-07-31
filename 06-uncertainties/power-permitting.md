@@ -61,6 +61,8 @@ This also sets the coupling to the rest of the register: this uncertainty is ups
 
 **How to score without fooling yourself.** Queue length falling because projects *withdrew* is not reform. Lead times falling because demand paused is not industrial expansion. The joint that matters is: queue throughput up *and* turbine/transformer deliveries up *and* retail-rate backlash not spawning new moratoria. Any one alone is noise.
 
+**Interruptible training** (curtail on peak) and **behind-the-meter** MW can loosen *buyer* capacity while public queue stats stay red - score them as routing, not as "reform fired." → [Energy](../01-substrate/energy.md)
+
 ---
 
 **Previous:** [Uncertainty 1](recursive-self-improvement.md) · **Next:** [Uncertainty 3](apprenticeship-gap.md)
