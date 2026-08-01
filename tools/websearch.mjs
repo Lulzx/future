@@ -92,18 +92,82 @@ export function parseLite(html, limit = 6) {
   return out.filter((r) => r.url && r.title);
 }
 
-export async function webSearch(query, { limit = 6, signal } = {}) {
-  const q = String(query || "").trim();
-  if (!q) return { query: q, results: [] };
+/**
+ * Mojeek's results are plain: <li class="rN"> holding <a class="title" href>
+ * and <p class="s">, with no redirect wrapper and no ads. It also answers a
+ * bare GET from a datacentre IP, which DuckDuckGo does not — that is why
+ * production proxies Mojeek while this server prefers DuckDuckGo.
+ */
+export function parseMojeek(html, limit = 6) {
+  const out = [];
+  const re =
+    /<a class="title"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>|<p class="s">([\s\S]*?)<\/p>/gi;
+  let pending = null;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    if (m[1] !== undefined) {
+      if (pending) out.push(pending);
+      const url = decode(m[1]);
+      pending = { title: decode(m[2]), url, domain: domainOf(url), snippet: "" };
+    } else if (pending) {
+      pending.snippet = decode(m[3]);
+      out.push(pending);
+      pending = null;
+    }
+    if (out.length >= limit) break;
+  }
+  if (pending && out.length < limit) out.push(pending);
+  return out.filter((r) => r.url && r.title);
+}
 
-  const res = await fetch(`${ENDPOINT}?q=${encodeURIComponent(q)}`, {
-    headers: { "User-Agent": UA, Accept: "text/html" },
+const ENGINES = {
+  ddg: {
+    url: (q) => `${ENDPOINT}?q=${encodeURIComponent(q)}`,
+    parse: parseLite,
+  },
+  mojeek: {
+    url: (q) => `https://www.mojeek.com/search?q=${encodeURIComponent(q)}`,
+    parse: parseMojeek,
+  },
+};
+
+async function run(engine, q, limit, signal) {
+  const e = ENGINES[engine];
+  const res = await fetch(e.url(q), {
+    headers: {
+      "User-Agent": UA,
+      Accept: "text/html",
+      "Accept-Language": "en-US,en;q=0.9",
+    },
     signal,
   });
   if (!res.ok) {
-    throw Object.assign(new Error(`DuckDuckGo returned ${res.status}`), {
+    throw Object.assign(new Error(`${engine} returned ${res.status}`), {
       code: "UPSTREAM",
     });
   }
-  return { query: q, results: parseLite(await res.text(), limit) };
+  return e.parse(await res.text(), limit);
+}
+
+/**
+ * DuckDuckGo first, Mojeek if it comes back empty — DDG serves a bot-check
+ * page (and no results) to addresses it does not like, which is silent
+ * otherwise.
+ */
+export async function webSearch(query, { limit = 6, signal, engine } = {}) {
+  const q = String(query || "").trim();
+  if (!q) return { query: q, results: [] };
+
+  const order = engine ? [engine] : ["ddg", "mojeek"];
+  let lastErr = null;
+  for (const name of order) {
+    try {
+      const results = await run(name, q, limit, signal);
+      if (results.length) return { query: q, engine: name, results };
+    } catch (err) {
+      lastErr = err;
+    }
+  }
+  if (lastErr) throw lastErr;
+  return { query: q, engine: order.at(-1), results: [] };
 }

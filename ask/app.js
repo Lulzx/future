@@ -1316,7 +1316,7 @@ async function webSearch(query, n = 5) {
   // DuckDuckGo's own HTML, so handle both.
   const type = res.headers.get("content-type") || "";
   if (type.includes("json")) return (await res.json()).results || [];
-  return parseLiteHtml(await res.text(), n);
+  return parseSearchHtml(await res.text(), n);
 }
 
 /** DDG wraps every href in /l/?uddg=<target>; sponsored ones go via y.js. */
@@ -1332,8 +1332,38 @@ function unwrapDdg(href) {
 
 const IS_AD = /(^|\/)y\.js|[?&]ad_(domain|provider|type)=|bing\.com\/aclick/i;
 
-function parseLiteHtml(html, limit) {
+/**
+ * Two shapes to read: DuckDuckGo Lite (.result-link / .result-snippet, with
+ * /l/?uddg= redirects and ads) and Mojeek (a.title / p.s, plain hrefs). The
+ * production proxy serves Mojeek because DuckDuckGo will not answer a GET
+ * from a datacentre address.
+ */
+function parseSearchHtml(html, limit) {
   const doc = new DOMParser().parseFromString(html, "text/html");
+  if (!doc.querySelector(".result-link") && doc.querySelector("a.title")) {
+    return [...doc.querySelectorAll("a.title")]
+      .slice(0, limit)
+      .map((a) => {
+        const url = a.getAttribute("href") || "";
+        return {
+          title: a.textContent.trim(),
+          url,
+          domain: (() => {
+            try {
+              return new URL(url).hostname.replace(/^www\./, "");
+            } catch {
+              return "web";
+            }
+          })(),
+          snippet:
+            a.closest("li")?.querySelector("p.s")?.textContent
+              .replace(/\s+/g, " ")
+              .trim() || "",
+        };
+      })
+      .filter((r) => r.url && r.title);
+  }
+
   const nodes = doc.querySelectorAll(".result-link, .result-snippet");
   const out = [];
   let pending = null;
