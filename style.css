@@ -363,6 +363,8 @@ a[target="_blank"]:after {
   text-transform: uppercase; padding-right: 1ch; white-space: nowrap;
 }
 .masthead td { text-align: left; }
+/* dotted underlines hang below the baseline, so the rows need a little air */
+.masthead tbody tr + tr th, .masthead tbody tr + tr td { padding-top: 0.2rem; }
 .masthead h1 {
   margin: 0; font-size: 1.5rem; line-height: calc(2 * var(--line-height));
   letter-spacing: -0.02em;
