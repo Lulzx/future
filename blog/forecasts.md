@@ -1,11 +1,11 @@
 ---
 title: The Scorecard
 dek: Every claim on this blog that can be caught failing, held still long enough to be graded. Each one carries a probability, a resolution date, and the rule it resolves by.
-date: 2026-08-01
+date: 2026-08-02
 tags: forecasts, method
 page: true
 takeaway: A forecast that cannot lose is marketing. Everything on this page can lose.
-corpus: 07-indicators/README.md, 06-uncertainties/README.md, 01-substrate/inference-economics.md, 06-uncertainties/taiwan.md, 06-uncertainties/learned-verification.md, 01-substrate/energy.md
+corpus: 07-indicators/README.md, 06-uncertainties/README.md, 01-substrate/inference-economics.md, 06-uncertainties/taiwan.md, 06-uncertainties/learned-verification.md, 01-substrate/energy.md, 02-games/4-labor.md
 ---
 
 # The Scorecard
@@ -36,8 +36,10 @@ Several of these rules sharpen claims the posts made loosely. That sharpening is
 | 7 | If Taiwan supply breaks, repricing moves before anything kinetic | 70% | conditional |
 | 8 | No learned judge carries production liability in a slow domain | 80% | Dec 2028 |
 | 9 | Over 100 MW of AI compute operating in orbit | 60% | Dec 2030 |
+| 10 | Junior hiring misses the next white-collar recovery | 65% | conditional |
+| 11 | No professional body mandates AI-era training ratios | 80% | Dec 2029 |
 
-All nine opened 1 August 2026. All nine open.
+Rows 1 through 9 opened 1 August 2026, rows 10 and 11 on 2 August 2026. All eleven open.
 
 ## 1. The open-weight lag is still six months or shorter at the end of 2027
 
@@ -110,6 +112,22 @@ A no here would be bad for this page and very good for the world's slow domains,
 **Resolves yes if** publicly disclosed, independently trackable orbital compute capacity in active service exceeds 100 MW of IT load on 31 December 2030, summed across all operators, per operator disclosures cross-checked against satellite tracking. Ground-relay and communications payloads do not count, compute payloads do.
 
 The post names the miss scenario: launch cost per kilogram staying above roughly $500. Opened at 60%. Corpus: [energy](../01-substrate/energy.md), [power permitting](../06-uncertainties/power-permitting.md).
+
+## 10. If white-collar hiring recovers before 2029, junior hiring misses the recovery
+
+[Every Junior Job Was Secretly Two Products](two-products.md) calls this the Recovery Test, and the corpus calls the underlying ratio [the single highest-value indicator in the document](../07-indicators/diffusion/labor.md), because it separates three explanations that currently look identical: AI substitution, rate-cycle mean reversion, and remote-work training collapse. A conditional row, like row 7, because the test only runs if the recovery arrives.
+
+**Resolves only if**, by 31 December 2028, aggregate US white-collar hiring recovers: Indeed's professional-occupation postings, or JOLTS openings for professional and business services, up year over year for two consecutive quarters. **Then resolves yes if** entry-level postings (zero to one year of experience, Indeed Hiring Lab series) are still down year over year through that same window, or the entry-level share of US software postings is still below 10% (it was 4.5% in Q1 2026). **Resolves no** if junior postings recover within two quarters of the aggregate.
+
+A no here is good news and gets said as such: it would mean the junior collapse was mostly cycle, and the corpus's 50% substitution estimate falls with it. Opened at 65%. Corpus: [the labor game](../02-games/4-labor.md), [labor indicators](../07-indicators/diffusion/labor.md).
+
+## 11. Through 2029, no professional body mandates training ratios in response to AI
+
+The same post's scorecard-of-responses observes that as of August 2026 no professional body has moved, and [the corpus's speed ordering](../06-uncertainties/apprenticeship-gap.md) says guild mandates are the slowest response on the menu. Medicine's residency system took decades to formalize.
+
+**Resolves yes if**, by 31 December 2029, no major professional body in law, accounting, or engineering in the US or UK (state bars or the ABA, AICPA or ICAEW, or an equivalent licensing institution) has adopted a binding requirement on junior training intake or supervision ratios that its own text or contemporaneous statements tie to AI displacement of junior work. Voluntary guidance, reports, and consultations do not count. A binding rule does, whatever it is called.
+
+**Resolves no** is the hopeful branch: the commons failure getting a collective fix inside the corpus window, faster than the medical precedent suggests. Opened at 80%.
 
 ---
 

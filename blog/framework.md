@@ -1,11 +1,11 @@
 ---
 title: The Framework
 dek: The posts on this blog keep using the same handful of named concepts. This page says what each one claims, how they fit into one model, and where each claim grounds out in the corpus.
-date: 2026-08-01
+date: 2026-08-02
 tags: method, concepts
 page: true
-takeaway: One model, asked as five questions. Every post is an answer to one of them.
-corpus: 00-overview/README.md, 01-substrate/inference-economics.md, 01-substrate/data.md, 01-substrate/energy.md, 02-games/3-firms.md, 06-uncertainties/taiwan.md
+takeaway: One model, asked as six questions. Every post is an answer to one of them.
+corpus: 00-overview/README.md, 01-substrate/inference-economics.md, 01-substrate/data.md, 01-substrate/energy.md, 02-games/3-firms.md, 02-games/4-labor.md, 06-uncertainties/taiwan.md
 ---
 
 # The Framework
@@ -16,9 +16,9 @@ Each post here reads on its own, but they are not independent essays. They are o
 2. [You Cannot Own a Falling Floor](falling-floor.md), the economic model
 3. [The Bottleneck Migrates](silicon-electrons-permits.md), the physical model
 
-Together they say where AI capability goes next, why having it stops being worth anything, and what scarce thing the race runs into instead. [The Taiwan post](taiwan-gray-zone.md) is the risk model underneath all three: the one assumption that, if it fails, takes the rest of the document with it.
+Together they say where AI capability goes next, why having it stops being worth anything, and what scarce thing the race runs into instead. [The Taiwan post](taiwan-gray-zone.md) is the risk model underneath all three: the one assumption that, if it fails, takes the rest of the document with it. [The two-products post](two-products.md) is the people model: what the same transition does to the pipeline that manufactures senior judgment.
 
-The model itself fits in five questions. Everything on this blog, and most of the corpus, is an answer to one of them.
+The model itself fits in six questions. Everything on this blog, and most of the corpus, is an answer to one of them.
 
 ## Where does capability go next?
 
@@ -37,6 +37,10 @@ The cost decline is close to physics. The *price* decline is politics, carried b
 Mostly not the people spending the money. When every firm has to adopt and none gains an edge by adopting, spending becomes defensive: **the Red Queen**, the standard fate of a general-purpose technology, argued in [the firms game](../02-games/3-firms.md). The surplus passes through to customers and to whoever owns the short list of things that do not get cheaper: energy, distribution, licences, liability capacity, trusted data, senior judgment.
 
 The stable position is to **own the scoreboard**: be the party that defines correct, carries the liability for that judgment, and holds the data that settles the argument.
+
+## Where does the next senior come from?
+
+Currently, nowhere. Junior work was **the Bundle**: a deliverable the firm paid for, and the slow manufacture of a senior professional, sold together because they could not be produced apart. AI lets firms buy the deliverable alone, so each one rationally stops buying the training, and the profession's pipeline dries up while the existing stock of seniors keeps every dashboard green for a decade. The discriminator is **the Recovery Test**: if entry-level hiring misses the next white-collar hiring recovery, around 2027 to 2028, the cut was substitution rather than cycle. Grounded in [the labor game](../02-games/4-labor.md) and [the apprenticeship gap](../06-uncertainties/apprenticeship-gap.md).
 
 ## What physical constraint binds next?
 
@@ -69,5 +73,7 @@ For reference, every named concept in one place. The claim column is deliberatel
 | The Gray Zone | Taiwan fails by repricing long before it fails by invasion | [Taiwan](taiwan-gray-zone.md) |
 | Scored vs consumed | The assumption you scored is weaker than the one your conclusions rest on | [Taiwan](taiwan-gray-zone.md) |
 | The Green Dashboard | Indicators built for the dramatic failure stay green through the actual one | [Taiwan](taiwan-gray-zone.md) |
+| The Bundle | Junior work sold a deliverable and manufactured a senior in one purchase | [Two products](two-products.md) |
+| The Recovery Test | If juniors miss the next white-collar recovery, the cut was substitution, not cycle | [Two products](two-products.md) |
 
 If a future post coins something and it is not on this list within a week, that is a bug in this page.
