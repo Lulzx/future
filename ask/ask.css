@@ -8,6 +8,9 @@
 
 .ask-main { max-width: 100%; }
 
+/* our display rules would otherwise beat the UA's [hidden] */
+[hidden] { display: none !important; }
+
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
@@ -672,6 +675,11 @@ button.example {
   display: flex;
   flex-direction: column;
 }
+/* wide layout: sheet chrome off, panel dismissible */
+.sheet-grab { display: none; }
+.sheet-toggle { display: none; }
+.panel-hidden .sources-col { display: none; }
+.panel-hidden .ask-layout { grid-template-columns: minmax(0, 1fr); }
 .sources-col > * { margin-top: 0; }
 @media screen and (min-width: 62rem) {
   .sources-scroll {
@@ -719,6 +727,51 @@ button.example {
   font-variant-numeric: tabular-nums;
 }
 
+/* ── activity trace ─────────────────────────────────────────────────────── */
+.activity {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--line-height);
+}
+.activity > li {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 2.5ch minmax(0, 1fr) auto;
+  gap: 0 1ch;
+  align-items: baseline;
+  padding: 0.2em 1ch;
+  font-size: 0.82rem;
+  color: var(--text-color-alt);
+}
+.activity > li::before { content: none; }
+.activity .act-mark {
+  font-size: 0.8rem;
+  color: var(--text-color-alt);
+}
+.activity .act-text { min-width: 0; overflow-wrap: anywhere; }
+.activity .act-time {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72rem;
+  opacity: 0.7;
+  justify-self: end;
+}
+.activity > li.is-running { color: var(--text-color); }
+.activity > li.is-running .act-mark { animation: dot-pulse 1.1s ease-in-out infinite; }
+.activity > li.is-done .act-mark { color: var(--text-color); }
+.activity > li.is-fail .act-mark,
+.activity > li.is-fail { color: var(--text-color); font-weight: var(--font-weight-medium); }
+/* the run's own sub-steps hang off the step above, as in a trace */
+.activity > li.is-sub { padding-left: 3.5ch; font-size: 0.76rem; }
+@media (prefers-reduced-motion: reduce) {
+  .activity > li.is-running .act-mark { animation: none; }
+}
+
+.panel-head-sub {
+  border-bottom-width: 1px;
+  margin-top: var(--line-height);
+}
+.panel-head-sub h2 { font-size: 0.8rem; }
+
 .ask-hits {
   list-style: none;
   padding: 0;
@@ -747,9 +800,22 @@ details.hit > summary::marker { content: none; }
   margin-top: 0;
   display: grid;
   grid-template-columns: 3.5ch minmax(0, 1fr) auto;
-  gap: 0.25ch 1ch;
+  grid-template-areas:
+    "n kicker score"
+    "n title  title"
+    ". preview preview"
+    ". sub     sub"
+    ". meter   meter";
+  gap: 0.15ch 1ch;
   align-items: baseline;
 }
+.hit-n { grid-area: n; }
+.hit-kicker { grid-area: kicker; }
+.hit-title { grid-area: title; }
+.hit-score { grid-area: score; }
+.hit-preview { grid-area: preview; }
+.hit-sub { grid-area: sub; }
+.hit-meter { grid-area: meter; }
 .hit > summary::-webkit-details-marker { display: none; }
 .hit-n {
   font-variant-numeric: tabular-nums;
@@ -776,7 +842,6 @@ details.hit > summary::marker { content: none; }
   justify-self: end;
 }
 .hit-sub {
-  grid-column: 2 / -1;
   display: flex;
   align-items: baseline;
   gap: 1ch;
@@ -793,8 +858,26 @@ details.hit > summary::marker { content: none; }
   min-width: 0;
 }
 .hit-tags { opacity: 0.7; white-space: nowrap; }
+/* two-line excerpt so a collapsed card still says something */
+.hit-preview {
+  font-size: 0.78rem;
+  color: var(--text-color-alt);
+  line-height: 1.45;
+  margin-top: 0.3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hit[open] .hit-preview { display: none; }
+.hit-kicker {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-color-alt);
+}
 .hit-meter {
-  grid-column: 2 / -1;
   height: 3px;
   background: var(--background-color-alt);
   margin-top: 0.4em;
@@ -937,7 +1020,47 @@ details.hit > summary::marker { content: none; }
 /* ── narrow screens ─────────────────────────────────────────────────────── */
 @media screen and (max-width: 61.99rem) {
   .chat-col { min-height: 0; }
-  .sources-col { border-top: 1px solid var(--text-color-alt); padding-top: var(--line-height); }
+
+  /* Activity + sources become a bottom sheet over the transcript. */
+  .sources-col {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    max-height: 82vh;
+    background: var(--background-color);
+    border-top: var(--border-thickness) solid var(--text-color);
+    padding: 0 2ch var(--line-height);
+    transform: translateY(101%);
+    transition: transform 0.22s ease-out;
+  }
+  .sheet-open .sources-col { transform: none; }
+  .sheet-grab {
+    display: block;
+    width: 12ch;
+    height: 4px;
+    margin: calc(var(--line-height) / 2) auto;
+    background: var(--text-color-alt);
+    flex: 0 0 auto;
+  }
+  .sources-col .panel-head {
+    position: sticky;
+    top: 0;
+    background: var(--background-color);
+    z-index: 1;
+  }
+  .sources-scroll { overflow-y: auto; flex: 1 1 auto; }
+  .sheet-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+    background: color-mix(in srgb, var(--text-color) 25%, transparent);
+  }
+  .sheet-toggle { display: inline-flex; }
+  @media (prefers-reduced-motion: reduce) {
+    .sources-col { transition: none; }
+  }
 
   /* One scrolling page here, so pin the composer to the window instead and
      reserve its measured height at the foot of the document. */

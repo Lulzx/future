@@ -46,6 +46,14 @@ const el = {
   hitsTag: $("hits-tag"),
   hitsEmpty: $("hits-empty"),
   toggleHits: $("toggle-hits"),
+  panel: $("hits-panel"),
+  activity: $("activity"),
+  activityTag: $("activity-tag"),
+  activityEmpty: $("activity-empty"),
+  closePanel: $("close-panel"),
+  openPanel: $("open-panel"),
+  sheetToggle: $("sheet-toggle"),
+  sheetBackdrop: $("sheet-backdrop"),
   helpBtn: $("help-btn"),
   helpDialog: $("help-dialog"),
   helpClose: $("help-close"),
@@ -1106,6 +1114,24 @@ function renderMarkdown(src) {
   return out.join("") || `<p>${inline(text)}</p>`;
 }
 
+/** "02-games/4-labor.md" → "02 games" — the corpus section, as a kicker. */
+function sectionOf(path) {
+  const dir = String(path || "").split("/")[0] || "";
+  return dir.replace(/\.md$/, "").replace(/[-_]/g, " ");
+}
+
+/** First couple of lines of a passage as plain text, for the collapsed card. */
+function previewOf(text) {
+  return String(text || "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/^\s*[-*+>|]\s*/gm, "")
+    .replace(/[*_`\[\]]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 220);
+}
+
 function renderHits(hits, method) {
   const scoreLabel =
     method === "hybrid" ? "rrf" : method === "dense" ? "cos" : "bm25";
@@ -1133,8 +1159,10 @@ function renderHits(hits, method) {
         <details class="hit">
           <summary>
             <span class="hit-n">${i + 1}</span>
+            <span class="hit-kicker">${escapeHtml(sectionOf(h.path))}</span>
             <a class="hit-title" href="${escapeHtml(mdToHref(h.path))}">${loc}</a>
             <span class="hit-score">${scoreLabel} ${h.score}</span>
+            <span class="hit-preview">${escapeHtml(previewOf(h.text))}</span>
             <span class="hit-sub">
               <span class="hit-path">${escapeHtml(h.path)}</span>
               ${tags.length ? `<span class="hit-tags">${escapeHtml(tags.join(" · "))}</span>` : ""}
@@ -1160,6 +1188,86 @@ function showHitsSkeleton(n = 4) {
     () =>
       `<li class="skeleton"><div class="skeleton-line"></div><div class="skeleton-line"></div><div class="skeleton-line"></div></li>`,
   ).join("");
+}
+
+/* ── activity trace ─────────────────────────────────────────────────────── */
+
+/**
+ * A running log of what the pipeline actually did — query expansion, each
+ * retriever, the fusion, the decode — with timings. Retrieval here is several
+ * stages deep, and without this the only feedback is a spinner.
+ */
+const activity = {
+  t0: 0,
+  current: null,
+
+  reset() {
+    this.t0 = performance.now();
+    this.current = null;
+    el.activity.innerHTML = "";
+    el.activityEmpty.hidden = true;
+    el.activityTag.textContent = "";
+  },
+
+  /** Open a step; it stays "running" until step()/done()/fail() is called. */
+  step(text, { sub = false } = {}) {
+    this.settle();
+    const li = document.createElement("li");
+    li.className = `is-running${sub ? " is-sub" : ""}`;
+    li.innerHTML = `<span class="act-mark">▸</span><span class="act-text"></span><span class="act-time"></span>`;
+    li.querySelector(".act-text").textContent = text;
+    el.activity.appendChild(li);
+    el.activityEmpty.hidden = true;
+    this.current = li;
+    this.tick();
+    return li;
+  },
+
+  /** Mark the open step finished, optionally rewriting its label. */
+  settle(text) {
+    if (!this.current) return;
+    const li = this.current;
+    li.classList.remove("is-running");
+    li.classList.add("is-done");
+    li.querySelector(".act-mark").textContent = "✓";
+    if (text) li.querySelector(".act-text").textContent = text;
+    li.querySelector(".act-time").textContent = fmtSecs(
+      performance.now() - this.t0,
+    );
+    this.current = null;
+  },
+
+  fail(text) {
+    const li = this.current || this.step(text);
+    li.classList.remove("is-running", "is-done");
+    li.classList.add("is-fail");
+    li.querySelector(".act-mark").textContent = "✕";
+    if (text) li.querySelector(".act-text").textContent = text;
+    this.current = null;
+    this.tick();
+  },
+
+  done(text = "Done") {
+    this.settle();
+    const li = this.step(text);
+    li.classList.remove("is-running");
+    li.classList.add("is-done");
+    li.querySelector(".act-mark").textContent = "✓";
+    li.querySelector(".act-time").textContent = fmtSecs(
+      performance.now() - this.t0,
+    );
+    this.current = null;
+    this.tick();
+  },
+
+  tick() {
+    el.activityTag.textContent = fmtSecs(performance.now() - this.t0);
+  },
+};
+
+function fmtSecs(ms) {
+  const s = ms / 1000;
+  return s < 10 ? `${s.toFixed(1)}s` : `${Math.round(s)}s`;
 }
 
 /* ── chat transcript ────────────────────────────────────────────────────── */
@@ -1268,8 +1376,11 @@ function endBotMessage({ text, model, sources } = {}) {
   if (model != null) currentBot.tag.textContent = model;
 
   if (sources != null) {
-    const s = document.createElement("span");
+    const s = document.createElement("button");
+    s.type = "button";
+    s.className = "btn-icon";
     s.textContent = `${sources} source${sources === 1 ? "" : "s"}`;
+    s.addEventListener("click", showPanel);
     currentBot.foot.appendChild(s);
   }
   if (text) {
@@ -1299,6 +1410,37 @@ function setBusy(on) {
   el.go.textContent = on ? "…" : "Ask";
 }
 
+/* ── input triage ───────────────────────────────────────────────────────── */
+
+const SMALL_TALK =
+  /^(hi|hey+|hello|yo|sup|hola|howdy|good (morning|afternoon|evening)|thanks?|thank you|ty|ok(ay)?|cool|nice|test(ing)?|ping|\?+|help)[\s!.?]*$/i;
+
+/** Greetings retrieve eight arbitrary passages and get an essay back. */
+function isSmallTalk(q) {
+  return SMALL_TALK.test(q.trim());
+}
+
+/**
+ * Retrieval always returns its top k, however bad, and a fluent 350M model
+ * will write confidently from passages that have nothing to do with the
+ * question ("zxqv plumbing invoices for my cat" → an essay on state
+ * capacity). Cosine separates the two cleanly: measured over the corpus,
+ * on-topic questions peak at 0.52-0.65 and off-topic ones at 0.08-0.29.
+ * BM25 is no help — it scores junk (8.1) as high as a real question (9.8).
+ */
+const MIN_COS = 0.4;
+
+function isWeakMatch(hits) {
+  if (!hits?.length) return true;
+  const cos = hits.reduce((m, h) => Math.max(m, Number(h.dense) || 0), 0);
+  // bm25-only retrieval has no cosine to judge by, and the user picked it.
+  if (!cos) return false;
+  return cos < MIN_COS;
+}
+
+const SMALL_TALK_REPLY =
+  "I answer questions about the forecast corpus — the games, domains, timelines, probabilities and indicators on this site. Ask me something like *why juniors stop getting hired*, *will energy or capital bind first*, or *what happens if Taiwan fabs fail*.";
+
 /* ── actions ────────────────────────────────────────────────────────────── */
 
 async function run({ withGenerate }) {
@@ -1316,9 +1458,32 @@ async function run({ withGenerate }) {
   el.q.value = "";
   autoGrow();
   updateCount();
-  startBotMessage(withGenerate ? "retrieving…" : "retrieving…");
+
+  if (isSmallTalk(query)) {
+    startBotMessage("");
+    renderAnswer(SMALL_TALK_REPLY, "no retrieval", false);
+    endBotMessage({});
+    activity.reset();
+    activity.step("Greeting — skipped retrieval");
+    activity.settle();
+    setStatus("Ready", "ok");
+    setBusy(false);
+    el.q.focus();
+    return;
+  }
+
+  startBotMessage("retrieving…");
   showHitsSkeleton(Math.min(k, 5));
   setStatus("Retrieving…", "warn");
+
+  activity.reset();
+  activity.step(
+    method === "hybrid"
+      ? "BM25 + dense → RRF"
+      : method === "dense"
+        ? "Dense · MiniLM 384-d"
+        : "BM25 · exact terms",
+  );
 
   const started = performance.now();
 
@@ -1326,6 +1491,10 @@ async function run({ withGenerate }) {
     const result = await search(query, method, k);
     renderHits(result.hits, result.method);
     const where = apiOk ? "server" : "browser";
+    activity.settle(`Retrieved ${result.hits.length} passages · ${where}`);
+    const files = new Set(result.hits.map((h) => h.path)).size;
+    activity.step(`${files} file${files === 1 ? "" : "s"} matched`, { sub: true });
+    activity.settle();
     setStatus(
       `Retrieved ${result.hits.length} · ${result.method} · ${where}`,
       "ok",
@@ -1344,10 +1513,27 @@ async function run({ withGenerate }) {
       return;
     }
 
+    // A 350M model will happily write an essay from passages that have
+    // nothing to do with the question, so refuse the weak ones outright.
+    if (isWeakMatch(result.hits)) {
+      activity.step("Best match too weak — not generating");
+      activity.fail("No confident match");
+      renderAnswer(
+        "Nothing in the corpus is a close match for that. The passages I found are in **Sources** — try naming a topic from the corpus (juniors, energy, Taiwan fabs, the master asymmetry).",
+        "no confident match",
+        false,
+      );
+      endBotMessage({ sources: result.hits.length });
+      setStatus("No confident match", "warn");
+      return;
+    }
+
     renderAnswer("", "generating…", true);
     setStatus("Generating with LFM2.5…", "warn");
+    activity.step(`LFM2.5-350M · ${genDevice || "webgpu"} · decoding`);
     const answer = await generateAnswer(query, result.hits, (partial) => {
       renderAnswer(partial, `${GEN_MODEL.split("/").pop()} · streaming`, true);
+      activity.tick();
     });
     const secs = ((performance.now() - started) / 1000).toFixed(1);
     const tag = answer.model ? `${answer.model} · ${secs}s` : `${secs}s`;
@@ -1357,11 +1543,14 @@ async function run({ withGenerate }) {
       model: tag,
       sources: result.hits.length,
     });
+    activity.settle(`Generated ${answer.text.length} chars`);
+    activity.done();
     setStatus(answer.model ? `Done · ${answer.model}` : "Done", "ok");
   } catch (err) {
     console.error(err);
     const msg = formatError(err);
     setStatus(msg, "err");
+    activity.fail(msg);
     if (currentBot) currentBot.row.classList.add("is-error");
     renderAnswer(`**Error** — ${msg}`, "failed", false);
     endBotMessage({});
@@ -1462,6 +1651,55 @@ function syncOptsSummary() {
 );
 syncOptsSummary();
 
+/* ── panel: column on wide screens, bottom sheet on narrow ──────────────── */
+
+const isNarrow = () => window.matchMedia("(max-width: 61.99rem)").matches;
+
+function showPanel() {
+  if (isNarrow()) {
+    document.body.classList.add("sheet-open");
+    el.sheetBackdrop.hidden = false;
+    el.panel.scrollTop = 0;
+  } else {
+    document.body.classList.remove("panel-hidden");
+    localStorage.removeItem("ask-panel-hidden");
+    el.openPanel.hidden = true;
+  }
+}
+
+function hidePanel() {
+  if (isNarrow()) {
+    document.body.classList.remove("sheet-open");
+    el.sheetBackdrop.hidden = true;
+  } else {
+    document.body.classList.add("panel-hidden");
+    localStorage.setItem("ask-panel-hidden", "1");
+    el.openPanel.hidden = false;
+  }
+}
+
+if (localStorage.getItem("ask-panel-hidden")) {
+  document.body.classList.add("panel-hidden");
+  el.openPanel.hidden = false;
+}
+
+el.closePanel?.addEventListener("click", hidePanel);
+el.openPanel?.addEventListener("click", showPanel);
+el.sheetToggle?.addEventListener("click", () =>
+  document.body.classList.contains("sheet-open") ? hidePanel() : showPanel(),
+);
+el.sheetBackdrop?.addEventListener("click", hidePanel);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && document.body.classList.contains("sheet-open")) {
+    hidePanel();
+  }
+});
+// Leaving the narrow layout should not strand the sheet state.
+window.matchMedia("(max-width: 61.99rem)").addEventListener("change", () => {
+  document.body.classList.remove("sheet-open");
+  el.sheetBackdrop.hidden = true;
+});
+
 /* ── sources: expand / collapse all ─────────────────────────────────────── */
 
 el.toggleHits?.addEventListener("click", () => {
@@ -1515,30 +1753,47 @@ document.addEventListener("keydown", (e) => {
  * leaves retrieval usable.
  */
 async function warmUp() {
-  if (!(await probeApi())) {
+  activity.reset();
+  activity.step("Checking search API");
+
+  if (await probeApi()) {
+    activity.settle("Search API ready");
+  } else {
+    activity.settle("No search API — running in-browser");
     try {
+      activity.step("Corpus index + vectors");
       await ensureClientCorpus();
+      activity.settle(`Corpus ready · ${clientIndex.N} passages`);
     } catch (err) {
+      activity.fail(formatError(err));
       setStatus(formatError(err), "err");
       return;
     }
     try {
+      activity.step("Query embedder · MiniLM 384-d");
       await ensureEmbedder();
+      activity.settle("Embedder ready");
     } catch (err) {
       console.warn("embedder preload failed", err);
+      activity.fail("Embedder unavailable — BM25 only");
     }
   }
 
   if (!el.generate.checked) return;
   // Don't spend someone's metered data on a 280 MB model unprompted.
   if (navigator.connection?.saveData) {
+    activity.step("Save-Data on — model loads on first ask");
+    activity.settle();
     setStatus("Retrieval ready · Save-Data on, press Ask to load the model", "ok");
     return;
   }
   try {
+    activity.step("LFM2.5-350M · WebGPU q4");
     await ensureGenerator();
+    activity.settle(`Model ready · ${genDevice} · ${genDtype}`);
   } catch (err) {
     console.warn("generator preload failed", err);
+    activity.fail(formatError(err));
     setStatus(`${formatError(err)} — press Ask to retry`, "warn");
   }
 }

@@ -23,6 +23,8 @@
           <span class="subtitle">Ask the corpus</span>
           <span class="masthead-actions">
             <a class="btn-icon" href="../">Index</a>
+            <button id="open-panel" class="btn-icon" type="button" hidden
+              title="Show activity and sources">Panel</button>
             <button id="theme" class="btn-icon" type="button" title="Toggle light / dark (t)">Theme</button>
             <button id="help-btn" class="btn-icon btn-help" type="button"
               title="How this works (?)" aria-label="How this works">?</button>
@@ -98,6 +100,7 @@
                 <span class="composer-count" id="q-count"></span>
               </span>
               <span class="composer-actions">
+                <button type="button" id="sheet-toggle" class="btn sheet-toggle">Sources</button>
                 <button type="button" id="retrieve-only" class="btn">Retrieve</button>
                 <button type="submit" id="go" class="btn-primary">Ask</button>
               </span>
@@ -138,21 +141,35 @@
       </div>
     </section>
 
-    <!-- ── sources column ─────────────────────────────────────────────── -->
-    <aside class="sources-col" id="hits-panel" aria-label="Sources">
+    <!-- ── activity + sources ─────────────────────────────────────────── -->
+    <aside class="sources-col" id="hits-panel" aria-label="Activity and sources">
+      <div class="sheet-grab" aria-hidden="true"></div>
       <div class="panel-head">
-        <h2>Sources</h2>
+        <h2>Activity</h2>
         <span class="panel-head-right">
-          <span class="tag" id="hits-tag"></span>
-          <button type="button" class="btn-icon" id="toggle-hits" aria-expanded="false">Expand</button>
+          <span class="tag" id="activity-tag"></span>
+          <button type="button" class="btn-icon" id="close-panel"
+            aria-label="Hide panel" title="Hide panel">✕</button>
         </span>
       </div>
 
       <div class="sources-scroll">
+        <ol class="activity" id="activity"></ol>
+        <p class="ask-empty" id="activity-empty">Idle. Ask something.</p>
+
+        <div class="panel-head panel-head-sub">
+          <h2>Sources</h2>
+          <span class="panel-head-right">
+            <span class="tag" id="hits-tag"></span>
+            <button type="button" class="btn-icon" id="toggle-hits" aria-expanded="false" hidden>Expand</button>
+          </span>
+        </div>
+
         <ol id="hits" class="ask-hits"></ol>
-        <p class="ask-empty" id="hits-empty">No retrieval yet. Ask something.</p>
+        <p class="ask-empty" id="hits-empty">No retrieval yet.</p>
       </div>
     </aside>
+    <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
 
   </div>
 </main>
