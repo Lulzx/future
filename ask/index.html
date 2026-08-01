@@ -134,6 +134,10 @@
                 <input type="checkbox" id="generate" checked>
                 Generate answer (LFM2.5)
               </label>
+              <label class="ctrl check" title="Sends the question to DuckDuckGo through this site">
+                <input type="checkbox" id="websearch">
+                Web search (DuckDuckGo)
+              </label>
               <button type="button" id="load-model" class="btn btn-quiet">Preload LFM2.5</button>
             </div>
           </details>
@@ -167,6 +171,14 @@
 
         <ol id="hits" class="ask-hits"></ol>
         <p class="ask-empty" id="hits-empty">No retrieval yet.</p>
+
+        <div class="panel-head panel-head-sub" id="web-head" hidden>
+          <h2>Web</h2>
+          <span class="panel-head-right">
+            <span class="tag" id="web-tag"></span>
+          </span>
+        </div>
+        <ol id="web-hits" class="ask-hits ask-web" hidden></ol>
       </div>
     </aside>
     <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
@@ -197,7 +209,9 @@
       Retrieval runs on the ask server when available; otherwise BM25 and dense run in
       the browser from <code>/rag/</code>. Generation runs on-device in a Web Worker
       (transformers.js v4 · AutoModel · WebGPU q4 · shader warmup). Nothing leaves your
-      machine after the model download.
+      machine after the model download — with one exception: turning on
+      <strong>Web search</strong> in Options sends that question to DuckDuckGo
+      through this site. It is off by default.
     </p>
     <dl class="modal-keys">
       <dt><kbd>⌘</kbd><kbd>↵</kbd></dt><dd>Ask</dd>

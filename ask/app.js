@@ -34,7 +34,11 @@ const el = {
   method: $("method"),
   k: $("k"),
   generate: $("generate"),
+  websearch: $("websearch"),
   optsSummary: $("opts-summary"),
+  webHits: $("web-hits"),
+  webHead: $("web-head"),
+  webTag: $("web-tag"),
   go: $("go"),
   retrieveOnly: $("retrieve-only"),
   loadModel: $("load-model"),
@@ -833,8 +837,9 @@ function selectContextHits(hits, max = 6) {
   return out.length ? out : hits.slice(0, Math.min(max, hits.length));
 }
 
-function buildUserPrompt(query, hits, mode = "answer") {
-  const packed = selectContextHits(hits, 5);
+function buildUserPrompt(query, hits, mode = "answer", web = []) {
+  // Web snippets are short; give the corpus most of the budget.
+  const packed = selectContextHits(hits, web.length ? 4 : 5);
   const parts = [];
   let used = 0;
   for (let i = 0; i < packed.length; i++) {
@@ -847,6 +852,15 @@ function buildUserPrompt(query, hits, mode = "answer") {
     if (body.length > budget) body = body.slice(0, budget - 1) + "…";
     parts.push(header + body);
     used += header.length + body.length + 8;
+  }
+
+  // Web snippets go in their own block, labelled, so the model (and anyone
+  // reading the trace) can tell corpus claims from things found on the web.
+  for (const r of web.slice(0, 3)) {
+    const line = `Web — ${r.domain}: ${r.title}. ${r.snippet || ""}`;
+    if (used + line.length > MAX_CONTEXT_CHARS) break;
+    parts.push(line.slice(0, 400));
+    used += Math.min(line.length, 400);
   }
 
   // Put the instruction last (recency helps small models stay on task).
@@ -892,7 +906,7 @@ function cleanGeneratedAnswer(text) {
   return t;
 }
 
-async function generateAnswer(query, hits, onToken, mode = "answer") {
+async function generateAnswer(query, hits, onToken, mode = "answer", web = []) {
   if (!hits.length) {
     return {
       text: "No relevant passages found in the corpus for that query.",
@@ -911,7 +925,7 @@ async function generateAnswer(query, hits, onToken, mode = "answer") {
 
   const messages = [
     { role: "system", content: SYSTEM_PROMPT },
-    { role: "user", content: buildUserPrompt(query, hits, mode) },
+    { role: "user", content: buildUserPrompt(query, hits, mode, web) },
   ];
 
   const runOnce = () =>
@@ -1190,6 +1204,116 @@ function renderHits(hits, method) {
       </li>`;
     })
     .join("");
+}
+
+/* ── web search (DuckDuckGo Lite via same-origin proxy) ─────────────────── */
+
+/**
+ * DuckDuckGo sends no CORS headers, so the browser cannot call it directly;
+ * /api/websearch on this origin fetches and parses Lite's HTML. Without that
+ * route (a plain static host) the feature reports itself unavailable rather
+ * than failing silently.
+ */
+async function webSearch(query, n = 5) {
+  const res = await fetch(
+    `/api/websearch?q=${encodeURIComponent(query)}&n=${n}`,
+    { headers: { Accept: "application/json, text/html" } },
+  );
+  if (res.status === 404) {
+    throw Object.assign(new Error("No web search proxy on this host"), {
+      code: "NO_PROXY",
+    });
+  }
+  if (!res.ok) {
+    const body = await res.clone().json().catch(() => ({}));
+    throw new Error(body.error || `Web search failed (${res.status})`);
+  }
+
+  // The ask server returns parsed JSON; a bare Caddy reverse_proxy hands back
+  // DuckDuckGo's own HTML, so handle both.
+  const type = res.headers.get("content-type") || "";
+  if (type.includes("json")) return (await res.json()).results || [];
+  return parseLiteHtml(await res.text(), n);
+}
+
+/** DDG wraps every href in /l/?uddg=<target>; sponsored ones go via y.js. */
+function unwrapDdg(href) {
+  const m = /[?&]uddg=([^&]+)/.exec(href || "");
+  if (!m) return href?.startsWith("//") ? `https:${href}` : href || "";
+  try {
+    return decodeURIComponent(m[1]);
+  } catch {
+    return href;
+  }
+}
+
+const IS_AD = /(^|\/)y\.js|[?&]ad_(domain|provider|type)=|bing\.com\/aclick/i;
+
+function parseLiteHtml(html, limit) {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const nodes = doc.querySelectorAll(".result-link, .result-snippet");
+  const out = [];
+  let pending = null;
+  for (const node of nodes) {
+    if (node.classList.contains("result-link")) {
+      if (pending) out.push(pending);
+      const url = unwrapDdg(node.getAttribute("href"));
+      pending = IS_AD.test(url)
+        ? null
+        : {
+            title: node.textContent.trim(),
+            url,
+            domain: (() => {
+              try {
+                return new URL(url).hostname.replace(/^www\./, "");
+              } catch {
+                return "web";
+              }
+            })(),
+            snippet: "",
+          };
+    } else if (pending) {
+      pending.snippet = node.textContent.replace(/\s+/g, " ").trim();
+      out.push(pending);
+      pending = null;
+    }
+    if (out.length >= limit) break;
+  }
+  if (pending && out.length < limit) out.push(pending);
+  return out.filter((r) => r.url && r.title);
+}
+
+function renderWebHits(results) {
+  const has = results.length > 0;
+  el.webHead.hidden = !has;
+  el.webHits.hidden = !has;
+  el.webTag.textContent = has ? `${results.length} · duckduckgo` : "";
+  el.webHits.innerHTML = results
+    .map(
+      (r, i) => `<li>
+        <details class="hit">
+          <summary>
+            <span class="hit-n">w${i + 1}</span>
+            <span class="hit-kicker">${escapeHtml(r.domain || "web")}</span>
+            <a class="hit-title" href="${escapeHtml(r.url)}"
+               rel="noopener noreferrer" target="_blank">${escapeHtml(r.title)}</a>
+            <span class="hit-preview">${escapeHtml(r.snippet || "")}</span>
+          </summary>
+          <div class="hit-body">
+            <div class="hit-text">${escapeHtml(r.snippet || "")}</div>
+            <a class="hit-open" href="${escapeHtml(r.url)}"
+               rel="noopener noreferrer" target="_blank">Open ${escapeHtml(r.domain || "link")} →</a>
+          </div>
+        </details>
+      </li>`,
+    )
+    .join("");
+}
+
+function clearWebHits() {
+  el.webHead.hidden = true;
+  el.webHits.hidden = true;
+  el.webHits.innerHTML = "";
 }
 
 function showHitsSkeleton(n = 4) {
@@ -1531,6 +1655,7 @@ async function run({ withGenerate }) {
   const seed = openEnded ? pickSeed() : query;
 
   startBotMessage("retrieving…");
+  clearWebHits();
   showHitsSkeleton(Math.min(k, 5));
   setStatus("Retrieving…", "warn");
 
@@ -1562,8 +1687,35 @@ async function run({ withGenerate }) {
       "ok",
     );
 
+    // Optional, off by default: this is the one step that leaves the machine.
+    let web = [];
+    if (el.websearch?.checked) {
+      activity.step("DuckDuckGo Lite");
+      try {
+        web = await webSearch(seed, 5);
+        renderWebHits(web);
+        activity.settle(`Web · ${web.length} result${web.length === 1 ? "" : "s"}`);
+      } catch (err) {
+        clearWebHits();
+        activity.fail(
+          err.code === "NO_PROXY"
+            ? "Web search needs the ask server (no proxy here)"
+            : `Web search: ${formatError(err)}`,
+        );
+      }
+    }
+
     if (!withGenerate) {
       const secs = ((performance.now() - started) / 1000).toFixed(1);
+      if (web.length) {
+        renderAnswer(
+          `Retrieved ${result.hits.length} passages and ${web.length} web results — see **Sources**.`,
+          `${result.method} · web · ${secs}s`,
+          false,
+        );
+        endBotMessage({ sources: result.hits.length + web.length });
+        return;
+      }
       renderAnswer(
         result.hits.length
           ? `Retrieved ${result.hits.length} passages — see **Sources**.`
@@ -1578,7 +1730,7 @@ async function run({ withGenerate }) {
     // A 350M model will happily write an essay from passages that have
     // nothing to do with the question, so refuse the weak ones outright.
     // An open-ended ask is exempt: its seed topic is from the corpus.
-    if (!openEnded && isWeakMatch(result.hits)) {
+    if (!openEnded && !web.length && isWeakMatch(result.hits)) {
       const closest = result.hits[0];
       activity.step("Best match too weak — not generating");
       activity.fail("No confident match");
@@ -1603,11 +1755,13 @@ async function run({ withGenerate }) {
         activity.tick();
       },
       openEnded ? "highlight" : "answer",
+      web,
     );
     const secs = ((performance.now() - started) / 1000).toFixed(1);
     const tag =
       (answer.model ? `${answer.model} · ` : "") +
       (openEnded ? "highlight · " : "") +
+      (web.length ? "corpus + web · " : "") +
       `${secs}s`;
     renderAnswer(answer.text, tag, false);
     endBotMessage({
@@ -1716,9 +1870,11 @@ if (dock && "ResizeObserver" in window) {
 
 function syncOptsSummary() {
   if (!el.optsSummary) return;
-  el.optsSummary.textContent = `${el.method.value} · ${el.k.value} hits · generate ${el.generate.checked ? "on" : "off"}`;
+  el.optsSummary.textContent =
+    `${el.method.value} · ${el.k.value} hits · generate ${el.generate.checked ? "on" : "off"}` +
+    (el.websearch?.checked ? " · web on" : "");
 }
-[el.method, el.k, el.generate].forEach((node) =>
+[el.method, el.k, el.generate, el.websearch].forEach((node) =>
   node?.addEventListener("change", syncOptsSummary),
 );
 syncOptsSummary();

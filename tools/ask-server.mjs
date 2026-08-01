@@ -10,6 +10,7 @@
  *   /ask/       → ask UI (source tree, always current)
  *   /rag/*      → .rag/index.json, vectors.bin, vectors.meta.json
  *   POST /api/search  { query, method?, k? } → hybrid/bm25/dense hits
+ *   GET  /api/websearch?q=&n=  → DuckDuckGo Lite results (CORS proxy)
  *
  * Generation (LFM2.5-350M) runs in the browser Web Worker via transformers.js v4
  * (AutoModelForCausalLM + WebGPU) — not on this server.
@@ -39,6 +40,7 @@ import {
   expandQuery,
   round,
 } from "./rag-lib.mjs";
+import { webSearch } from "./websearch.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.join(ROOT, "_site");
@@ -316,6 +318,20 @@ const server = createServer(async (req, res) => {
         k: body.k ?? 8,
       });
       return sendJson(res, 200, result);
+    }
+
+    if (req.method === "GET" && urlPath === "/api/websearch") {
+      const q = url.searchParams.get("q") || "";
+      const n = Math.min(Number(url.searchParams.get("n")) || 6, 10);
+      if (!q.trim()) return sendJson(res, 400, { error: "q required" });
+      try {
+        const out = await webSearch(q, { limit: n });
+        // Cheap client-side revisit; DDG rate-limits repeat scraping.
+        res.setHeader("Cache-Control", "public, max-age=600");
+        return sendJson(res, 200, out);
+      } catch (err) {
+        return sendJson(res, 502, { error: err.message || String(err) });
+      }
     }
 
     if (req.method === "GET" && urlPath === "/api/health") {
