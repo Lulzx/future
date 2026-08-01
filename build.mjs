@@ -1205,7 +1205,7 @@ ${posts.length
 
 <section class="blog-sub">
 <h2 class="plain">Follow</h2>
-<p><a href="feed.xml">RSS</a> <span class="sep">·</span> <a href="archives/">archives</a> <span class="sep">·</span> <a href="${relHref(doc, DEFAULT_DOC)}">the corpus</a> <span class="sep">·</span> <a href="${rootPrefix(doc)}ask/">ask it a question</a> <span class="sep">·</span> <a href="${REPO}" rel="noopener noreferrer" target="_blank">source</a></p>
+<p><a href="feed.xml">RSS</a> <span class="sep">·</span> <a href="${relHref(doc, DEFAULT_DOC)}">the corpus</a> <span class="sep">·</span> <a href="${rootPrefix(doc)}ask/">ask it a question</a> <span class="sep">·</span> <a href="${REPO}" rel="noopener noreferrer" target="_blank">source</a></p>
 </section>`;
 
   const html = page(doc, `${BLOG.name} · ${BLOG.tagline}`, "blog-index", body, {
