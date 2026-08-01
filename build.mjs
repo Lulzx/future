@@ -973,7 +973,9 @@ async function readPosts() {
   const dir = path.join(ROOT, BLOG.dir);
   let names;
   try {
-    names = (await fs.readdir(dir)).filter(n => n.endsWith(".md") && n !== "README.md");
+    // `_name.md` is working material (style guide, drafts), not a post.
+    names = (await fs.readdir(dir))
+      .filter(n => n.endsWith(".md") && n !== "README.md" && !n.startsWith("_"));
   } catch {
     return [];
   }

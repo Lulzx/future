@@ -1,6 +1,6 @@
 ---
 title: AI Is Superhuman Wherever the Scoreboard Is Cheap
-dek: High-quality text ran out. The frontier moved onto verifiable rewards. That single pivot explains almost every uneven thing about AI progress since.
+dek: Why AI blew past humans at competitive programming and is still mediocre at telling you whether to take the job. It is not about difficulty. It is about who is keeping score.
 date: 2026-07-30
 tags: verification, capability, careers
 takeaway: Capability flows downhill toward cheap ground truth. Stand where the scoreboard is expensive, or own the scoreboard.
@@ -9,27 +9,59 @@ corpus: 01-substrate/data.md, 06-uncertainties/learned-verification.md, 03-domai
 
 # AI Is Superhuman Wherever the Scoreboard Is Cheap
 
-High-quality human text is exhausted. Roughly **10^14 useful tokens** exist against models already trained on **10^13**. That leaves one order of magnitude of headroom, and it is the *low-quality* order.
+Here is a pattern that looks completely arbitrary until you find the single rule underneath it, at which point it stops looking arbitrary forever.
 
-This was not a crisis and it slowed nothing down. It caused a redirection: the frontier moved to synthetic data, reinforcement learning on verifiable outcomes, and self-play in domains with cheap ground truth.
+AI is now superhuman at competitive programming. Superhuman at formal mathematics. Better than most professionals at finding software vulnerabilities. It plays board games at a level no human being will ever reach again, and nobody even finds that remarkable anymore.
 
-That move was not neutral across domains.
+AI is also, after all of that, roughly *fine* at telling you whether to take the job offer. Fine at sensing when a negotiation has quietly turned against you. Fine at taste.
 
-## The asymmetry
+The obvious explanation is that the first list is easy and the second list is hard. That explanation feels correct and is completely wrong. Competitive programming is not easier than having good judgment about people. Ask literally any programmer.
 
-**Capability now grows fastest where verification is cheap.**
+The real rule is stranger, and once you see it you cannot stop seeing it:
 
-This is why math, code, and formal reasoning improved far faster than taste, judgment, and long-horizon planning. The mechanism is simple.
+**AI becomes superhuman at anything where checking the answer is cheap, and stays mediocre at everything where checking the answer is expensive.**
 
-A training loop needs a signal. Where the signal is a unit test, a proof checker, or a benchmark score, the loop runs **millions of times a day**. Where the signal is *did this advice actually help a human over six months*, the loop runs approximately **never**.
+Not doing. **Checking.**
+
+To see why, we have to go back to the moment the industry ran out of internet.
+
+## The internet ran out
+
+For several years the recipe for a better model was gloriously simple. Get more text. Use more compute. Get a better model. It worked so reliably and for so long that people started treating it as a law of nature.
+
+Then the text ran out.
+
+The rough numbers: somewhere around **10^14 useful tokens** of high-quality human text exist in the world. Models had already been trained on about **10^13** of them. Which leaves one order of magnitude of headroom, and it is the *low-quality* order. The good stuff was eaten first, the way it always is.
+
+![The remaining headroom is one order of magnitude, and it is the low quality order.](img/dry-well.avif)
+
+That is the well. The robot is scraping the bottom of it, and what is coming up in the bucket is mud.
+
+This did not cause a crisis and it did not slow anything down, which is the part people consistently get wrong. It caused a **redirection.** Denied more text, the frontier pivoted to synthetic data, to reinforcement learning on verifiable outcomes, and to self-play in domains where you can cheaply check whether an answer was right.
+
+That pivot could not possibly have been neutral across domains. It made the entire enterprise dependent on something that is distributed across human activity with spectacular unevenness: **a cheap way to find out whether the answer was any good.**
+
+## The mechanism, which is almost insultingly simple
+
+A training loop needs a signal. Something that says *yes, more of that,* or *no, less of that.* Millions of times over.
+
+So consider two loops.
+
+**Loop one is code with a unit test.** The model writes code. The test runs. It passes or it fails. That is your signal. It costs approximately nothing, it takes milliseconds, it needs no human at all, and it can run **millions of times a day**, forever, all night, while everyone is asleep. Call it **the Millisecond Loop**.
+
+**Loop two is career advice.** The model gives advice. And now, to discover whether that advice was any good, you wait six months and observe how someone's life went. Then you attempt to disentangle the effect of the advice from eleven other things that also happened. (Good luck. Nobody has ever done this convincingly, including the person whose life it was.)
+
+Call this one **the Six-Month Loop**. It runs approximately **never.**
+
+![Same model, same budget. The only thing that changed is what it costs to find out whether the answer was any good.](img/two-loops.avif)
+
+Same robot. Same compute. Same everything. The one on the left has done five million reps since breakfast. The one on the right is sitting on the floor next to a clock, waiting, and will still be waiting next quarter.
 
 There is no clever architecture that fixes a loop you cannot run.
 
-![Same model, same budget. The only difference is what it costs to score the answer.](img/two-loops.png)
+## Which makes the whole map predictable in advance
 
-## What it predicts
-
-Expect AI to become superhuman at things with a scoreboard and remain merely-good at things without one. Ordered by how cheap the ground truth is:
+Once you accept that capability flows toward cheap verification, you can write down where AI will be strong and weak without knowing anything at all about the models. Just order the world by how much the ground truth costs:
 
 | Fast | Medium | Slow |
 |---|---|---|
@@ -39,64 +71,94 @@ Expect AI to become superhuman at things with a scoreboard and remain merely-goo
 | Games with defined win conditions | Forecasting with resolution | Social science, policy |
 | Cyber exploits (self-verifying) | Grid dispatch and markets | Specialty harvest, last-metre delivery |
 
-When a domain forecast looks surprising, the explanation is almost always its position in this table: the cost of checking whether the answer was right, rather than model size or funding or talent density.
+Now picture that table as a hill.
 
-![Ordered by the cost of ground truth, not by difficulty. Taste is not harder than formal maths, it is harder to grade.](img/verification-slope.png)
+![Same robots, opposite outcomes, decided entirely by which side of the hill the work happens to sit on.](img/verification-slope.avif)
 
-## Why synthetic data does not dissolve the constraint
+The robots sliding down the left side are not smarter than the ones straining on the right. They are the same robots. One group happens to work in a domain that grades its own homework, so gravity does the job for them. The other group is shoving rocks uphill, because every single training example needs an expensive human being to say whether it was any good.
 
-The obvious rejoinder, *models will just generate their own training data*, fails in a way that makes the asymmetry **sharper**. This is where most optimistic arguments break.
+Everything in the fast column runs a Millisecond Loop. Everything in the slow column runs a Six-Month Loop. That is the entire table.
 
-Unfiltered synthetic data degrades models toward their own priors. What makes synthetic data work in practice is a filter that keeps only the verified-correct samples. Self-play in games, proof-checked mathematics, test-passing code: every synthetic-data success story is a success *because* the domain has a cheap verifier doing the filtering.
+So when a domain forecast surprises you, this is almost always why. Not model size. Not funding. Not how many brilliant people are working on the problem. Just: what does it cost to find out if the answer was right.
 
-Synthetic generation is therefore an amplifier wired **in series** with verification. Where ground truth is cheap it multiplies the training signal enormously. Where ground truth is expensive it multiplies approximately nothing.
+## "But models can make their own training data"
 
-The pivot to synthetic data was not an escape from the asymmetry. It was the mechanism that created it.
+This is the standard objection and it deserves a real answer rather than a brush-off, because it is a genuinely good objection. It also fails in a way that makes the problem *worse*, which is the interesting part.
 
-## The slow column is doubly stuck
+Unfiltered synthetic data makes models worse. A model trained on its own output drifts toward its own priors and gradually disappears up itself.
 
-There is a second-order trap here.
+What makes synthetic data actually work, every single time it has worked, is a **filter** that discards everything except the verified-correct samples. Self-play in games. Proof-checked mathematics. Code that passes its tests. Every synthetic data success story is a success *because the domain had a cheap verifier sitting there to do the filtering.*
 
-Progress on taste, judgment, and long-horizon advice runs on human preference and outcome labels. Those labels are expensive precisely because they consume **senior judgment**, the scarce resource that the labor transition is [already thinning](../02-games/4-labor.md) by breaking the novice-to-expert pathway that produced it.
+![Same input, same volume, and the only difference is whether there is a filter in the neck of the funnel.](img/two-funnels.avif)
 
-The slow domains train on the very resource whose supply this transition erodes. The fast domains have no such dependency. A unit test does not require a twenty-year career to write.
+Both funnels are being fed the same slurry. The one on the left has a sieve, so neat clean cubes come out the bottom. The one on the right has no sieve, so what comes out is exactly what went in.
 
-That feedback loop runs in the wrong direction, and it is a reason to expect the gap between the columns to widen before it narrows.
+Synthetic generation is not an escape from verification. It is an amplifier wired **in series** with it. Where ground truth is cheap it multiplies your training signal enormously. Where ground truth is expensive it multiplies approximately nothing.
+
+The pivot to synthetic data did not dissolve the asymmetry. **It is the mechanism that created it.**
+
+## The genuinely bleak part
+
+There is a second-order problem here that gets almost no attention, and it is the one I would most like to turn out to be wrong about.
+
+Progress in the slow column runs on human preference and outcome labels. Somebody experienced has to look at the output and say whether it was good. Which means the Six-Month Loop does not merely run slowly. It runs on a fuel: **senior judgment.**
+
+And senior judgment is exactly what this transition is [draining](../02-games/4-labor.md), by breaking the path that produced it. You become a senior person by spending a decade as a junior person, doing exactly the work that is being automated first.
+
+![The slow domains run on the one resource this transition is cutting off at the source.](img/sawn-ladder.avif)
+
+The robot has climbed to the top and is drinking from the expert's cup. The rungs that used to manufacture new experts are lying on the ground.
+
+So the slow domains train on the very resource whose supply is being eroded, and the fast domains have no such dependency, because a unit test does not require a twenty-year career to write. That loop runs in the wrong direction. It is a reason to expect the gap between the columns to get **wider** before it gets narrower.
 
 ## Three ways to misread the table
 
-The table is useful and is therefore abused. Three errors, in order of how often I see them:
+The table is useful, which is exactly why it gets abused. Three errors, roughly in order of how often I run into them.
 
-**1. Treating benchmark progress as domain progress.** A model can ace a legal licensing exam and still sit in the medium column for negotiation and strategy, because the exam is a scoreboard and the job is not. The exam was *selected* for being cheap to grade. That is the whole reason it exists.
+**One: treating benchmark progress as domain progress.** A model aces the bar exam and everyone concludes lawyers are finished. But the exam is a scoreboard and the job is not. The exam exists *because* it is cheap to grade. That is the entire reason anybody invented it.
 
-**2. Averaging a domain.** Medicine is fast in narrow imaging and slow in clinical judgment. Filing the average as "medium" destroys the actual information, which is the deployment path: tools first, autonomy much later, with the boundary between them tracking verification cost.
+![The exam was selected for being cheap to grade. The job was not selected for anything.](img/exam-vs-job.avif)
 
-**3. Reading the ordering as an employment forecast.** It is not. The table orders *capability growth*, not job destruction. Superhuman code generation can raise developer headcount through Jevons demand expansion while still being the fastest column on the board. Software is the worked example, and the one people get wrong in both directions.
+The robot on the left genuinely did do very well. The mess on the right is the actual job, and nobody is grading it.
 
-## The partial escape
+**Two: averaging a domain.** Medicine is fast in narrow imaging and slow in clinical judgment. Filing the average as "medium" destroys the only useful information you had, which was the deployment path. Tools first, autonomy much later, and the boundary between them sits precisely where verification cost sits.
 
-You cannot erase the table, but you can move within it, by **buying cheaper ground truth**:
+**Three: reading the ordering as an employment forecast.** It is not one. The table orders *capability growth*, not job destruction. Superhuman code generation can raise developer headcount through sheer demand expansion while still being the fastest column on the board. Software is the worked example, and it is the one people manage to get wrong in both directions simultaneously.
 
-- **Automated labs**, instrumenting the experiment so the result is machine-readable
-- **Instrumented robotics data**, manufacturing the interaction corpus that never existed publicly
-- **Outcome-priced contracts**, letting the customer's result become the training label
+## Can you cheat your way off the slow side?
 
-Each of these shifts a domain leftward. None deletes a column. Each costs real capital, which is why the shift shows up first where a single buyer can fund the instrumentation and capture the return.
+Partly. You cannot erase the table, but you can move around inside it, and the move is always the same: **go and buy cheaper ground truth.**
 
-Robotics illustrates the underlying scarcity best: **there is no internet of manipulation**. Text and code had public corpora. Physical interaction does not. That is why robotics lags even when vision-language models transfer well. The binding constraint is samples in the world, not model size.
+- **Automated labs**, so the experiment reports its own result in machine-readable form
+- **Instrumented robotics**, manufacturing the interaction data that never existed publicly
+- **Outcome-priced contracts**, so the customer's actual result becomes your training label
 
-## What would retire this
+Each of these drags a domain leftward. None of them deletes a column. All of them cost real capital, which is why it happens first wherever a single buyer can fund the instrumentation and then capture the return.
 
-One thing, which the corpus files as a framework-level risk rather than a parameter uncertainty: **learned verification**.
+Robotics shows the underlying scarcity most starkly, because of a thing that simply does not exist: **there is no internet of manipulation.**
 
-If models can bootstrap reliable verifiers for soft domains, training a judge on sparse human labels that then generalizes, the series wiring breaks and the amplifier runs open-loop. Expensive domains stop lagging. The table reorders. A large fraction of the domain-by-domain forecast built on top of it fails with it.
+![Text and code had a public corpus lying around for the taking. Physical interaction never did.](img/empty-shelf.avif)
 
-Score it honestly, which means watching **production depth in unverifiable domains, not demos**. A judge model that impresses in evaluation is not evidence. A judge model that a company puts between itself and a liability is.
+Text had that vast library sitting there, free, already written. Physical interaction has an empty room and one glove. This is why robotics lags even when vision-language models transfer beautifully. The binding constraint was never model size. It is samples in the world, and nobody collected them.
+
+## What would blow this up
+
+One thing, and the corpus files it as a framework-level risk rather than a parameter uncertainty: **learned verification.**
+
+If models can bootstrap reliable verifiers for the soft domains, training a judge on sparse human labels that then generalizes properly, the series wiring breaks and the amplifier runs open-loop. Expensive domains stop lagging. The table reorders. A very large fraction of the domain-by-domain forecast built on top of it fails with it.
+
+So score it honestly, which means watching **production depth in unverifiable domains, not demos.** A judge model that impresses in an evaluation is not evidence of anything. A judge model that a company is willing to put between itself and a lawsuit is.
 
 ---
 
-The practical form of all this is uncomfortable and short. If your work has a cheap scoreboard, the scoreboard will be run by something faster than you within a few years, and the value of being good at it collapses toward the cost of compute.
+The practical version of all this is short and mildly uncomfortable.
 
-If your work has no cheap scoreboard, you are safer. But the reason you are safe is also the reason it is hard to prove you are good at it, which is its own career problem.
+If your work has a cheap scoreboard, something faster than you will be running that scoreboard within a few years, and the market value of being excellent at it collapses toward the cost of compute.
 
-The stable position is the third one: **own the scoreboard**. Be the party that defines what counts as correct, carries the liability for that judgment, and holds the data that settles it. Verification is simultaneously the technical bottleneck and the economic opportunity, and that is no coincidence. Both are downstream of generation becoming free.
+If your work has no cheap scoreboard, you are safer. But notice that the thing keeping you safe is the same thing that makes it hard to prove you are any good, which is its own career problem and always has been.
+
+There is a third position, and it is the stable one.
+
+![The players are working extremely hard. The one holding the whistle is not.](img/own-the-scoreboard.avif)
+
+**Own the scoreboard.** Be the party that defines what counts as correct, carries the liability for that judgment, and holds the data that settles the argument. Verification is simultaneously the technical bottleneck and the economic opportunity, and that is not a coincidence. Both are downstream of the same fact: generation became free, and checking did not.
