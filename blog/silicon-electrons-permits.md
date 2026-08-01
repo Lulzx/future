@@ -1,6 +1,6 @@
 ---
 title: "The Bottleneck Migrates: Silicon → Electrons → Permits"
-dek: For thirty years the question was whether you could get the chips. It is about to be whether a state utility commission returns your call. Nobody in AI is emotionally prepared for this.
+dek: For thirty years the binding constraint was chip supply. By 2028 it is interconnection queues, turbine order books, and environmental review.
 date: 2026-07-28
 tags: energy, datacenters, policy
 takeaway: The variance across US markets is larger than the variance across countries. That is how you know the constraint is not physics.

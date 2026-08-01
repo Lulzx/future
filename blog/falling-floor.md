@@ -1,6 +1,6 @@
 ---
 title: You Cannot Own a Falling Floor
-dek: Somebody is about to give away for free the exact thing your company sells. You can even work out roughly when. Here is the clock nobody in AI wants to look at.
+dek: Inference cost at a fixed capability fell 100 to 1000 times in two years, on a published schedule. Any product whose moat is model access has about two years of shelf life.
 date: 2026-08-01
 tags: inference, moats, unit economics
 takeaway: A moat that depreciates on a published schedule is not a moat. It is a lease, and everybody can read the term.

@@ -100,6 +100,27 @@ reader feel the scale before moving on.
 One image, worked hard across the piece, beats five clever comparisons. The
 ladder returns. The hill returns. The queue returns.
 
+### Do not end a dek on a staged reveal
+
+The one tell that got caught by a reader rather than by the scanner. All four
+original deks ended the same way, with a short reversal delivering the "real"
+point: *"It is not about difficulty. It is about who is keeping score."*
+
+That shape, `it's not about X, it's about Y`, is negation-then-reveal, and it
+is the single most recognisable AI-writing tic there is. One reframe can be a
+real correction. Four in a row, always in the last sentence, is a reflex, and
+it reads as generated no matter how good the underlying claim is.
+
+A dek should state the substance and trust it.
+
+> Before: *"Why AI blew past humans at competitive programming and is still
+> mediocre at telling you whether to take the job. It is not about difficulty.
+> It is about who is keeping score."*
+>
+> After: *"AI is superhuman at competitive programming and merely fine at
+> telling you whether to take the job. What separates the two is the cost of
+> checking the answer."*
+
 ### End abruptly
 
 No summary, no recap, no "in conclusion". Urban either cuts to a joke
@@ -180,7 +201,7 @@ dark theme invert them instead of glaring.
 6. Does every heading read as a claim?
 7. Is each big number dramatised before it is used?
 8. Does the piece ride one analogy rather than five?
-9. Does it end on a reframe with no summary?
+9. Does it end on a reframe with no summary, and does the dek avoid a staged reveal?
 10. Does every image have setup before and a reference after?
 11. Is there a falsifier section, and does every number still have its source?
 12. Zero em dashes, semicolons, and middle dots?

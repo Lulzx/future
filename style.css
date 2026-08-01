@@ -33,9 +33,9 @@ table { border-collapse: collapse; border-spacing: 0; }
   --font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --line-height: 1.20rem;
   --border-thickness: 2px;
-  --text-color: #000;
+  --text-color: #16181c;
   --text-color-alt: #666;
-  --background-color: #fff;
+  --background-color: #fdfdfc;
   --background-color-alt: #eee;
   --font-weight-normal: 500;
   --font-weight-medium: 600;
@@ -49,17 +49,38 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #fff; --text-color-alt: #8a8a8a;
-    --background-color: #000; --background-color-alt: #131313;
+  /* Not pure black on pure white. That pairing glares, and light text on a
+     black field blooms so it also reads a weight heavier than it is, so the
+     dark theme softens both ends and drops a step of weight to compensate. */
+  --text-color: #d6dae0; --text-color-alt: #8b9199;
+  --background-color: #101215; --background-color-alt: #1a1d22;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   }
 }
 :root[data-theme="dark"] {
-  --text-color: #fff; --text-color-alt: #8a8a8a;
-  --background-color: #000; --background-color-alt: #131313;
+  /* Not pure black on pure white. That pairing glares, and light text on a
+     black field blooms so it also reads a weight heavier than it is, so the
+     dark theme softens both ends and drops a step of weight to compensate. */
+  --text-color: #d6dae0; --text-color-alt: #8b9199;
+  --background-color: #101215; --background-color-alt: #1a1d22;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 :root[data-theme="light"] {
-  --text-color: #000; --text-color-alt: #666;
-  --background-color: #fff; --background-color-alt: #eee;
+  --text-color: #16181c; --text-color-alt: #666;
+  --background-color: #fdfdfc; --background-color-alt: #eee;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 * { box-sizing: border-box; }
@@ -681,10 +702,10 @@ h2.plain {
 }
 
 @media (prefers-color-scheme: dark) {
-  .post figure img { filter: invert(1); mix-blend-mode: screen; }
+  .post figure img { filter: invert(1) brightness(0.87); mix-blend-mode: screen; }
 }
 :root[data-theme="dark"] .post figure img {
-  filter: invert(1); mix-blend-mode: screen;
+  filter: invert(1) brightness(0.87); mix-blend-mode: screen;
 }
 :root[data-theme="light"] .post figure img {
   filter: none; mix-blend-mode: multiply;

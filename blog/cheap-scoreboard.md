@@ -1,6 +1,6 @@
 ---
 title: AI Is Superhuman Wherever the Scoreboard Is Cheap
-dek: Why AI blew past humans at competitive programming and is still mediocre at telling you whether to take the job. It is not about difficulty. It is about who is keeping score.
+dek: AI is superhuman at competitive programming and merely fine at telling you whether to take the job. What separates the two is the cost of checking the answer.
 date: 2026-07-30
 tags: verification, capability, careers
 takeaway: Capability flows downhill toward cheap ground truth. Stand where the scoreboard is expensive, or own the scoreboard.
