@@ -50,10 +50,15 @@ date: YYYY-MM-DD
 tags: comma, separated
 takeaway: the one line worth keeping, rendered in a box at the foot
 corpus: 01-substrate/data.md, 02-games/4-labor.md
-draft: true            # optional, omit to publish
 ---
 ```
 
+- Visibility is the date, nothing else. A post dated past the build date is
+  *scheduled*: its page renders and its links are checked, but it stays out of
+  the index, the feed, Find, and the older/newer chain until a build runs on
+  or after its date. `blog/archives/` lists every post, scheduled ones badged.
+  New posts are dated one day after the previous post. The site is static, so
+  a scheduled post surfaces on the first deploy on or after its date.
 - `corpus:` renders as a "Where this comes from" source list. A claim with no
   corpus page behind it should not be in the post.
 - A leading `# Title` in the body is stripped, since the header renders

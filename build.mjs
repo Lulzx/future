@@ -1036,7 +1036,6 @@ async function readPosts() {
     const doc = `${BLOG.dir}/${name}`;
     const raw = await fs.readFile(path.join(dir, name), "utf8");
     const { meta, body: raw2 } = frontMatter(raw);
-    if (meta.draft === "true") continue;
     // The post header renders `title:`, so a leading `# …` would duplicate it.
     // Posts stay readable as plain markdown on GitHub either way.
     const body = raw2.replace(/^\s*#\s+.*\r?\n+/, "");
