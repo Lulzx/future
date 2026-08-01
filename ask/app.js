@@ -461,9 +461,23 @@ function workerRequest(type, data, { key, onUpdate } = {}) {
   });
 }
 
-async function ensureGenerator() {
-  if (genReady) return { device: genDevice, dtype: genDtype, model: genModelId };
+/** Single-flight: a click during warm-up joins the in-flight load. */
+let genLoading = null;
+function ensureGenerator() {
+  if (genReady) {
+    return Promise.resolve({
+      device: genDevice,
+      dtype: genDtype,
+      model: genModelId,
+    });
+  }
+  genLoading ??= loadGenerator().finally(() => {
+    genLoading = null;
+  });
+  return genLoading;
+}
 
+async function loadGenerator() {
   resetLoadState("LFM2.5-350M · webgpu · q4");
   setProgressUI({
     label: "Loading LFM2.5-350M",
@@ -602,8 +616,16 @@ async function fetchRag(url, label) {
   return new Response(new Blob(chunks), { headers: res.headers });
 }
 
-async function ensureClientCorpus() {
-  if (clientIndex && clientMatrix) return;
+let corpusLoading = null;
+function ensureClientCorpus() {
+  if (clientIndex && clientMatrix) return Promise.resolve();
+  corpusLoading ??= loadClientCorpus().finally(() => {
+    corpusLoading = null;
+  });
+  return corpusLoading;
+}
+
+async function loadClientCorpus() {
   setStatus("Loading corpus index…", "warn");
   const indexRes = await fetchRag("/rag/index.json", "Corpus index");
   if (!indexRes.ok) {
@@ -675,8 +697,16 @@ function formatError(err) {
   return msg;
 }
 
-async function ensureEmbedder() {
-  if (embedder) return embedder;
+let embedderLoading = null;
+function ensureEmbedder() {
+  if (embedder) return Promise.resolve(embedder);
+  embedderLoading ??= loadEmbedder().finally(() => {
+    embedderLoading = null;
+  });
+  return embedderLoading;
+}
+
+async function loadEmbedder() {
   setStatus(`Loading query embedder (${EMBED_MODEL})…`, "warn");
   const { pipeline } = await loadTransformers();
   embedder = await pipeline("feature-extraction", EMBED_MODEL, {
@@ -1144,7 +1174,21 @@ function clockLabel() {
   });
 }
 
+/**
+ * Wide layout scrolls the transcript inside its own column (the composer is
+ * pinned to the viewport); narrow layout scrolls the page. Follow whichever
+ * one is live.
+ */
+function scrollHost() {
+  const log = el.chatLog;
+  return log && log.scrollHeight > log.clientHeight + 4 ? log : null;
+}
+
 function atBottom() {
+  const host = scrollHost();
+  if (host) {
+    return host.scrollTop + host.clientHeight >= host.scrollHeight - 160;
+  }
   return (
     window.innerHeight + window.scrollY >=
     document.documentElement.scrollHeight - 160
@@ -1154,10 +1198,15 @@ function atBottom() {
 function scrollToLatest(force = false) {
   if (!force && !atBottom()) return;
   requestAnimationFrame(() => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
+    const host = scrollHost();
+    if (host) {
+      host.scrollTo({ top: host.scrollHeight, behavior: "smooth" });
+    } else {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   });
 }
 
@@ -1390,6 +1439,18 @@ el.q.addEventListener("keydown", (e) => {
   }
 });
 
+// On narrow screens the dock is fixed to the window; publish its height so
+// the page can reserve exactly that much room at the bottom.
+const dock = document.querySelector(".chat-dock");
+if (dock && "ResizeObserver" in window) {
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty(
+      "--dock-h",
+      `${dock.offsetHeight}px`,
+    );
+  }).observe(dock);
+}
+
 /* ── options summary ────────────────────────────────────────────────────── */
 
 function syncOptsSummary() {
@@ -1444,5 +1505,45 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+/* ── warm up on load ────────────────────────────────────────────────────── */
+
+/**
+ * Pull everything an ask needs before the first ask: the corpus (a few MB),
+ * the query embedder, then the 350M generator (~280 MB, cached after the
+ * first visit). Ordered cheapest-first so retrieval works while the model is
+ * still coming down, and each step is independent — a failed generator still
+ * leaves retrieval usable.
+ */
+async function warmUp() {
+  if (!(await probeApi())) {
+    try {
+      await ensureClientCorpus();
+    } catch (err) {
+      setStatus(formatError(err), "err");
+      return;
+    }
+    try {
+      await ensureEmbedder();
+    } catch (err) {
+      console.warn("embedder preload failed", err);
+    }
+  }
+
+  if (!el.generate.checked) return;
+  // Don't spend someone's metered data on a 280 MB model unprompted.
+  if (navigator.connection?.saveData) {
+    setStatus("Retrieval ready · Save-Data on, press Ask to load the model", "ok");
+    return;
+  }
+  try {
+    await ensureGenerator();
+  } catch (err) {
+    console.warn("generator preload failed", err);
+    setStatus(`${formatError(err)} — press Ask to retry`, "warn");
+  }
+}
+
 autoGrow();
-probeApi();
+// Let first paint land before saturating the network.
+if (document.readyState === "complete") setTimeout(warmUp, 200);
+else window.addEventListener("load", () => setTimeout(warmUp, 200));

@@ -35,6 +35,40 @@
   .ask-layout {
     grid-template-columns: minmax(0, 1fr) minmax(34ch, 46ch);
   }
+
+  /* App shell: the page itself never scrolls, so the composer is always at
+     the bottom of the viewport and each column scrolls on its own. */
+  html { height: 100%; overflow: hidden; }
+  body.ask-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+  .ask-page > header,
+  .ask-page > hr { flex: 0 0 auto; }
+  .ask-main {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+  }
+  .ask-layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+  }
+  .chat-col { height: 100%; min-height: 0; }
+  .chat-log {
+    overflow-y: auto;
+    min-height: 0;
+    scrollbar-width: thin;
+  }
+  .chat-dock {
+    position: static;
+    padding-bottom: calc(var(--line-height) / 2);
+  }
+  .sources-col { height: 100%; min-height: 0; }
 }
 
 /* ── chat column ────────────────────────────────────────────────────────── */
@@ -53,9 +87,11 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 .chat-log > li { margin-top: 0; }
+/* push a short transcript down to the composer without the flex-end
+   overflow bug that makes the top of a long one unreachable */
+.chat-log > li:first-child { margin-top: auto; }
 /* the site stylesheet numbers every <ol> item — not here */
 .chat-log > li::before,
 .ask-hits > li::before { content: none; }
@@ -638,11 +674,6 @@ button.example {
 }
 .sources-col > * { margin-top: 0; }
 @media screen and (min-width: 62rem) {
-  .sources-col {
-    position: sticky;
-    top: var(--line-height);
-    max-height: calc(100vh - var(--line-height) * 2);
-  }
   .sources-scroll {
     overflow-y: auto;
     flex: 1 1 auto;
@@ -907,6 +938,19 @@ details.hit > summary::marker { content: none; }
 @media screen and (max-width: 61.99rem) {
   .chat-col { min-height: 0; }
   .sources-col { border-top: 1px solid var(--text-color-alt); padding-top: var(--line-height); }
+
+  /* One scrolling page here, so pin the composer to the window instead and
+     reserve its measured height at the foot of the document. */
+  .ask-page { padding-bottom: calc(var(--dock-h, 9rem) + var(--line-height)); }
+  .chat-dock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: calc(var(--line-height) / 2) 2ch;
+    border-top: var(--border-thickness) solid var(--text-color);
+  }
+  .chat-dock::before { display: none; }
 }
 @media screen and (max-width: 40rem) {
   .ask-controls { gap: 1ch; }
