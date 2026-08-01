@@ -35,8 +35,9 @@ Several of these rules sharpen claims the posts made loosely. That sharpening is
 | 6 | No major disruption to Taiwanese leading-edge output | 90% | Dec 2032 |
 | 7 | If Taiwan supply breaks, repricing moves before anything kinetic | 70% | conditional |
 | 8 | No learned judge carries production liability in a slow domain | 80% | Dec 2028 |
+| 9 | Over 100 MW of AI compute operating in orbit | 60% | Dec 2030 |
 
-All eight opened 1 August 2026. All eight open.
+All nine opened 1 August 2026. All nine open.
 
 ## 1. The open-weight lag is still six months or shorter at the end of 2027
 
@@ -101,6 +102,14 @@ If nothing breaks, this row stays open forever and scores nothing, which is the 
 **Resolves no if**, by 31 December 2028, a company operating in clinical judgment, legal advice, or negotiation runs a learned verifier in production, at scale, with the operator carrying legal liability for its unreviewed judgments. A judge model sitting behind a human reviewer does not count, and neither does an impressive evaluation.
 
 A no here would be bad for this page and very good for the world's slow domains, which is a trade worth being on the record about. Opened at 80%. Corpus: [learned verification](../06-uncertainties/learned-verification.md).
+
+## 9. By the end of 2030, more than 100 MW of AI compute is operating in orbit
+
+[No Night, No Neighbors](no-night-no-neighbors.md) argues the datacenter build-out escapes the Permit Window vertically, and carries this prediction at the confidence it was published at. The bar is set far below SpaceX's stated ambitions on purpose: 100 MW is under a thousand AI1-class satellites, about twenty Starship launches' worth, against a claimed eventual run-rate of 100 GW a year.
+
+**Resolves yes if** publicly disclosed, independently trackable orbital compute capacity in active service exceeds 100 MW of IT load on 31 December 2030, summed across all operators, per operator disclosures cross-checked against satellite tracking. Ground-relay and communications payloads do not count, compute payloads do.
+
+The post names the miss scenario: launch cost per kilogram staying above roughly $500. Opened at 60%. Corpus: [energy](../01-substrate/energy.md), [power permitting](../06-uncertainties/power-permitting.md).
 
 ---
 

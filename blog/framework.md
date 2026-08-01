@@ -42,6 +42,8 @@ The stable position is to **own the scoreboard**: be the party that defines corr
 
 Not chips. The bottleneck migrates, silicon to electrons to permits, and by 2028 the rate-limiting step on US frontier AI is **the Permit Window**: interconnection queues, environmental review, turbine order books. The tell is that variance across US power markets exceeds variance across countries, which is how you know the constraint is institutional rather than physical. Grounded in [energy](../01-substrate/energy.md).
 
+[The orbital post](no-night-no-neighbors.md) extends the migration one step, to kilograms. Terrestrial power pays **the Night Tax**, the firming cost that makes always-on solar a multiple of its record-cheap headline price, and **the Neighbor Problem**, the ratepayer, commissioner, and hearing attached to every site on the map. Orbit pays neither, and what it pays instead, launch mass, is an industrial constraint rather than an institutional one, the kind that factories and learning curves grind down.
+
 ## What would break all of this?
 
 Two different kinds of failure, and they get separate instruments.
@@ -62,6 +64,8 @@ For reference, every named concept in one place. The claim column is deliberatel
 | The Two-Year Clock | A moat made of model access has a published expiry date | [Falling floor](falling-floor.md) |
 | The Red Queen | Mandatory adoption with no relative gain, so the surplus passes through to buyers | [Falling floor](falling-floor.md) |
 | The Permit Window | The binding constraint on US AI is administrative, not physical | [Bottleneck](silicon-electrons-permits.md) |
+| The Night Tax | Firming quarter-time solar for an always-on load costs more than the solar | [Orbital](no-night-no-neighbors.md) |
+| The Neighbor Problem | Every terrestrial watt answers to a ratepayer, a commissioner, and a hearing | [Orbital](no-night-no-neighbors.md) |
 | The Gray Zone | Taiwan fails by repricing long before it fails by invasion | [Taiwan](taiwan-gray-zone.md) |
 | Scored vs consumed | The assumption you scored is weaker than the one your conclusions rest on | [Taiwan](taiwan-gray-zone.md) |
 | The Green Dashboard | Indicators built for the dramatic failure stay green through the actual one | [Taiwan](taiwan-gray-zone.md) |
