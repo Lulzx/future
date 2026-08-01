@@ -51,6 +51,43 @@ export function cleanChunk(s) {
     .trim();
 }
 
+/**
+ * Text used for embedding + for BM25 body. Title/heading carry the page's
+ * named concepts (e.g. H1 "Data - and the master asymmetry") that the body
+ * may never repeat.
+ */
+export function chunkSearchText(chunk) {
+  const parts = [];
+  if (chunk.title) parts.push(chunk.title);
+  if (chunk.heading && chunk.heading !== chunk.title) parts.push(chunk.heading);
+  if (chunk.text) parts.push(chunk.text);
+  return parts.join("\n\n");
+}
+
+/**
+ * BM25 tokens: body once, title+heading twice (light field boost so
+ * definition pages rank on their names, not only on prose that cites them).
+ */
+export function chunkTokens(title, heading, text) {
+  const head = tokenize([title, heading].filter(Boolean).join(" "));
+  const body = tokenize(text || "");
+  return head.concat(head, body);
+}
+
+/** Soft penalty for hub/README pages that match every topic list. */
+export function pathWeight(path) {
+  if (!path) return 1;
+  if (path === "README.md") return 0.55;
+  if (path.endsWith("/README.md")) {
+    // part hubs (02-games/README.md) vs deep hubs (startups/README.md)
+    const depth = path.split("/").length;
+    return depth <= 2 ? 0.65 : 0.8;
+  }
+  // HISTORY / RESEARCH are meta
+  if (path === "HISTORY.md" || path === "RESEARCH.md") return 0.5;
+  return 1;
+}
+
 /** Split on ## headings, then into ~paragraph blocks under each section. */
 export function chunkMarkdown(text, title) {
   const lines = text.replace(/\r\n/g, "\n").split("\n");
@@ -131,8 +168,9 @@ export async function buildIndexData() {
     const text = await fs.readFile(path.join(ROOT, rel), "utf8");
     const title = extractTitle(text, rel);
     for (const chunk of chunkMarkdown(text, title)) {
-      const tokens = tokenize(chunk.text);
-      if (tokens.length < 8) continue;
+      const tokens = chunkTokens(title, chunk.heading, chunk.text);
+      // Allow short definition stubs if title/heading carry signal
+      if (tokens.length < 6) continue;
       chunks.push({
         id: id++,
         path: rel,
@@ -151,7 +189,7 @@ export async function buildIndexData() {
 
   const avgdl = chunks.reduce((s, c) => s + c.tokens.length, 0) / Math.max(chunks.length, 1);
   return {
-    version: 1,
+    version: 2,
     builtAt: new Date().toISOString(),
     fingerprint: await corpusFingerprint(),
     files: files.length,
@@ -193,15 +231,18 @@ export function bm25Score(queryTokens, docTokens, df, N, avgdl, k1 = 1.2, b = 0.
 
 export function retrieveBm25(index, query, k) {
   const qTokens = tokenize(query);
-  const scored = index.chunks.map((c) => ({
-    id: c.id,
-    path: c.path,
-    title: c.title,
-    heading: c.heading,
-    text: c.text,
-    score: bm25Score(qTokens, c.tokens, index.df, index.N, index.avgdl),
-    method: "bm25",
-  }));
+  const scored = index.chunks.map((c) => {
+    const raw = bm25Score(qTokens, c.tokens, index.df, index.N, index.avgdl);
+    return {
+      id: c.id,
+      path: c.path,
+      title: c.title,
+      heading: c.heading,
+      text: c.text,
+      score: raw * pathWeight(c.path),
+      method: "bm25",
+    };
+  });
   scored.sort((a, b) => b.score - a.score);
   return scored.filter((c) => c.score > 0).slice(0, k);
 }
@@ -239,7 +280,7 @@ export function retrieveDense(index, queryVec, matrix, dim, k) {
       title: c.title,
       heading: c.heading,
       text: c.text,
-      score: dot,
+      score: dot * pathWeight(c.path),
       method: "dense",
     };
   }
@@ -251,32 +292,49 @@ export function retrieveDense(index, queryVec, matrix, dim, k) {
 
 /**
  * Reciprocal Rank Fusion over one or more ranked lists.
- * Each list item needs a stable `id`.
+ * Groups by `path` by default so several chunks of the same page don't
+ * split the vote (a common hybrid failure mode).
  */
-export function rrfFuse(lists, { k = 60, topK = 8 } = {}) {
+export function rrfFuse(lists, { k = 60, topK = 8, groupBy = "path" } = {}) {
   const map = new Map();
   for (const list of lists) {
+    // Best rank per group within this list (avoid double-counting same page)
+    const seenInList = new Set();
     list.forEach((item, rank) => {
-      const cur = map.get(item.id) || {
+      const key = groupBy === "id" ? String(item.id) : item.path;
+      if (seenInList.has(key)) return;
+      seenInList.add(key);
+
+      const cur = map.get(key) || {
         id: item.id,
         path: item.path,
         title: item.title,
         heading: item.heading,
         text: item.text,
         score: 0,
+        bestRank: Infinity,
         bm25: null,
         dense: null,
         methods: [],
       };
       cur.score += 1 / (k + rank + 1);
-      if (item.method === "bm25") cur.bm25 = item.score;
-      if (item.method === "dense") cur.dense = item.score;
+      if (rank < cur.bestRank) {
+        cur.bestRank = rank;
+        cur.id = item.id;
+        cur.heading = item.heading;
+        cur.text = item.text;
+        cur.title = item.title || cur.title;
+      }
+      if (item.method === "bm25") {
+        cur.bm25 = cur.bm25 == null ? item.score : Math.max(cur.bm25, item.score);
+      }
+      if (item.method === "dense") {
+        cur.dense = cur.dense == null ? item.score : Math.max(cur.dense, item.score);
+      }
       if (item.method && !cur.methods.includes(item.method)) {
         cur.methods.push(item.method);
       }
-      // keep richest text/path fields
-      if (!cur.text && item.text) cur.text = item.text;
-      map.set(item.id, cur);
+      map.set(key, cur);
     });
   }
   return [...map.values()]
@@ -297,14 +355,14 @@ export function rrfFuse(lists, { k = 60, topK = 8 } = {}) {
 }
 
 /**
- * Hybrid retrieve: BM25 ∪ dense → RRF.
+ * Hybrid retrieve: BM25 ∪ dense → RRF (grouped by path).
  * `candidatePool` is how many to take from each retriever before fusion.
  */
 export function retrieveHybrid(index, query, matrix, dim, queryVec, k, candidatePool = 40) {
   const pool = Math.max(k, candidatePool);
   const bm25 = retrieveBm25(index, query, pool);
   const dense = retrieveDense(index, queryVec, matrix, dim, pool);
-  return rrfFuse([bm25, dense], { topK: k });
+  return rrfFuse([bm25, dense], { topK: k, groupBy: "path" });
 }
 
 export function round(n) {

@@ -38,17 +38,30 @@ export function bm25Score(queryTokens, docTokens, df, N, avgdl, k1 = 1.2, b = 0.
   return score;
 }
 
+function pathWeight(path) {
+  if (!path) return 1;
+  if (path === "README.md") return 0.55;
+  if (path.endsWith("/README.md")) {
+    return path.split("/").length <= 2 ? 0.65 : 0.8;
+  }
+  if (path === "HISTORY.md" || path === "RESEARCH.md") return 0.5;
+  return 1;
+}
+
 export function retrieveBm25(index, query, k) {
   const qTokens = tokenize(query);
-  const scored = index.chunks.map((c) => ({
-    id: c.id,
-    path: c.path,
-    title: c.title,
-    heading: c.heading,
-    text: c.text,
-    score: bm25Score(qTokens, c.tokens, index.df, index.N, index.avgdl),
-    method: "bm25",
-  }));
+  const scored = index.chunks.map((c) => {
+    const raw = bm25Score(qTokens, c.tokens, index.df, index.N, index.avgdl);
+    return {
+      id: c.id,
+      path: c.path,
+      title: c.title,
+      heading: c.heading,
+      text: c.text,
+      score: raw * pathWeight(c.path),
+      method: "bm25",
+    };
+  });
   scored.sort((a, b) => b.score - a.score);
   return scored.filter((c) => c.score > 0).slice(0, k);
 }
@@ -67,7 +80,7 @@ export function retrieveDense(index, queryVec, matrix, dim, k) {
       title: c.title,
       heading: c.heading,
       text: c.text,
-      score: dot,
+      score: dot * pathWeight(c.path),
       method: "dense",
     };
   }
@@ -75,32 +88,47 @@ export function retrieveDense(index, queryVec, matrix, dim, k) {
   return scored.slice(0, k);
 }
 
-export function rrfFuse(lists, { k = 60, topK = 8 } = {}) {
+export function rrfFuse(lists, { k = 60, topK = 8, groupBy = "path" } = {}) {
   const map = new Map();
+  const round = (n) => Math.round(n * 1000) / 1000;
   for (const list of lists) {
+    const seenInList = new Set();
     list.forEach((item, rank) => {
-      const cur = map.get(item.id) || {
+      const key = groupBy === "id" ? String(item.id) : item.path;
+      if (seenInList.has(key)) return;
+      seenInList.add(key);
+      const cur = map.get(key) || {
         id: item.id,
         path: item.path,
         title: item.title,
         heading: item.heading,
         text: item.text,
         score: 0,
+        bestRank: Infinity,
         bm25: null,
         dense: null,
         methods: [],
       };
       cur.score += 1 / (k + rank + 1);
-      if (item.method === "bm25") cur.bm25 = item.score;
-      if (item.method === "dense") cur.dense = item.score;
+      if (rank < cur.bestRank) {
+        cur.bestRank = rank;
+        cur.id = item.id;
+        cur.heading = item.heading;
+        cur.text = item.text;
+        cur.title = item.title || cur.title;
+      }
+      if (item.method === "bm25") {
+        cur.bm25 = cur.bm25 == null ? item.score : Math.max(cur.bm25, item.score);
+      }
+      if (item.method === "dense") {
+        cur.dense = cur.dense == null ? item.score : Math.max(cur.dense, item.score);
+      }
       if (item.method && !cur.methods.includes(item.method)) {
         cur.methods.push(item.method);
       }
-      if (!cur.text && item.text) cur.text = item.text;
-      map.set(item.id, cur);
+      map.set(key, cur);
     });
   }
-  const round = (n) => Math.round(n * 1000) / 1000;
   return [...map.values()]
     .sort((a, b) => b.score - a.score)
     .slice(0, topK)

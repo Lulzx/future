@@ -68,7 +68,14 @@ async function main() {
 
   for (let i = 0; i < index.chunks.length; i += batchSize) {
     const batch = index.chunks.slice(i, i + batchSize);
-    const texts = batch.map((c) => truncateForEmbed(c.text));
+    // Include title/heading so dense matches named concepts (same as BM25 v2).
+    const texts = batch.map((c) =>
+      truncateForEmbed(
+        [c.title, c.heading !== c.title ? c.heading : "", c.text]
+          .filter(Boolean)
+          .join("\n\n"),
+      ),
+    );
     const vecs = await embed(texts);
     for (let j = 0; j < vecs.length; j++) {
       matrix.set(vecs[j], (i + j) * EMBED_DIM);
