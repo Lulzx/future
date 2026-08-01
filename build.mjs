@@ -23,6 +23,19 @@ const OUT = path.join(ROOT, "_site");
 const REPO = "https://github.com/Lulzx/future";
 const SITE = "The Next Fifteen Years";
 const DEFAULT_DOC = "README.md";
+const ORIGIN = "https://future.lulzx.space";
+
+// The blog that sits on top of the corpus. Every editorial string lives here.
+const BLOG = {
+  dir: "blog",
+  name: "Ground Truth",
+  tagline: "Silicon, capital, and what intelligence cannot manufacture",
+  author: "Lulzx",
+  description:
+    "Constraint-first analysis of AI, semiconductors, and capital. " +
+    "Every claim traceable to a 100,000-word forecast.",
+  wpm: 230,
+};
 
 /* ── path resolution ─────────────────────────────────────────────────────── */
 
@@ -781,28 +794,44 @@ function clientScript(doc) {
 </script>`;
 }
 
-function page(doc, title, bodyClass, contentHtml) {
+function page(doc, title, bodyClass, contentHtml, opts = {}) {
   const stylesheet = relHref(doc, DEFAULT_DOC) === "./"
     ? "style.css"
     : path.posix.relative(dirname(outPath(doc)), "style.css");
   const urlPath = "/" + outPath(doc).replace(/(^|\/)index\.html$/, "$1");
-  const srcHref = path.posix.relative(dirname(outPath(doc)) || ".", doc);
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${escapeHtml(title)}</title>
-<meta name="description" content="A fifteen-year forecast built from first principles.">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▚</text></svg>">
-<link rel="stylesheet" href="${stylesheet}">
-</head>
-<body>
+  const srcHref = opts.srcHref
+    ?? path.posix.relative(dirname(outPath(doc)) || ".", doc);
+  const blogHome = relHref(doc, `${BLOG.dir}/README.md`);
+  const description = opts.description
+    ?? "A fifteen-year forecast built from first principles.";
 
-<div class="debug-grid" aria-hidden="true"></div>
-
-<header class="masthead">
+  // The blog wears its own masthead; the corpus keeps the one it had.
+  const masthead = opts.blog
+    ? `<header class="masthead blog-masthead">
+  <table class="width-auto">
+    <tbody>
+      <tr>
+        <td class="width-auto" colspan="2">
+          <h1><a href="${blogHome}">${BLOG.name}</a></h1>
+          <span class="subtitle">${escapeHtml(BLOG.tagline)}</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="width-min">Corpus</th>
+        <td class="width-auto crumb"><a href="${relHref(doc, DEFAULT_DOC)}">${SITE}</a><span class="sep"> / </span><a href="${blogHome}">blog</a>${
+          opts.crumbLeaf ? `<span class="sep"> / </span><span>${escapeHtml(opts.crumbLeaf)}</span>` : ""
+        }</td>
+      </tr>
+      <tr class="keys-row">
+        <th class="width-min">Keys</th>
+        <td class="width-auto meta">
+          <kbd>/</kbd> find · <kbd>t</kbd> theme · <a href="${rootPrefix(doc)}${BLOG.dir}/feed.xml">RSS</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</header>`
+    : `<header class="masthead">
   <table class="width-auto">
     <tbody>
       <tr>
@@ -823,7 +852,30 @@ function page(doc, title, bodyClass, contentHtml) {
       </tr>
     </tbody>
   </table>
-</header>
+</header>`;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeHtml(title)}</title>
+<meta name="description" content="${escapeHtml(description)}">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:description" content="${escapeHtml(description)}">
+<meta property="og:type" content="${opts.blog && opts.crumbLeaf ? "article" : "website"}">
+<meta property="og:url" content="${ORIGIN}${escapeHtml(urlPath)}">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="${escapeHtml(BLOG.name)}" href="${rootPrefix(doc)}${BLOG.dir}/feed.xml">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▚</text></svg>">
+<link rel="stylesheet" href="${stylesheet}">
+</head>
+<body>
+
+<div class="debug-grid" aria-hidden="true"></div>
+
+${masthead}
 
 <hr>
 
@@ -835,6 +887,7 @@ ${contentHtml}
   <div class="statusbar-inner">
     <span class="sb-path" id="sb-path">${escapeHtml(urlPath)}</span>
     <span class="sb-actions">
+      <a class="sb-link" href="${rootPrefix(doc)}${BLOG.dir}/" title="${escapeHtml(BLOG.name)} — essays on the corpus">Blog</a>
       <a class="sb-link" href="${rootPrefix(doc)}ask/" title="Ask the corpus (RAG)">Ask</a>
       <button id="find" type="button" title="Find a page (/)">Find</button>
       <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
@@ -861,6 +914,285 @@ ${clientScript(doc)}
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
+   Blog — posts live in blog/*.md with a front-matter header, and are built
+   separately from the corpus: no section numbering, no reading order, their
+   own masthead, an index, and a feed. The corpus is the citation layer
+   underneath them, which is what the `corpus:` field wires up.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/** Split `---\nkey: value\n---` off the top. Flat string values only. */
+function frontMatter(md) {
+  const m = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/.exec(md);
+  if (!m) return { meta: {}, body: md };
+  const meta = {};
+  for (const line of m[1].split(/\r?\n/)) {
+    const i = line.indexOf(":");
+    if (i === -1) continue;
+    const key = line.slice(0, i).trim();
+    let val = line.slice(i + 1).trim();
+    if (/^(".*"|'.*')$/.test(val)) val = val.slice(1, -1);
+    meta[key] = val;
+  }
+  return { meta, body: md.slice(m[0].length) };
+}
+
+function csv(s) {
+  return (s || "").split(",").map(x => x.trim()).filter(Boolean);
+}
+
+function readingTime(md) {
+  const words = md.replace(/```[\s\S]*?```/g, " ").split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / BLOG.wpm));
+}
+
+function longDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  const months = ["January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"];
+  return `${d} ${months[m - 1]} ${y}`;
+}
+
+function rfc822(iso) {
+  return new Date(`${iso}T12:00:00Z`).toUTCString();
+}
+
+/** h2/h3 ids for the TOC, without the corpus's §-numbering. */
+function collectHeadings(blocks) {
+  const heads = [];
+  for (const b of blocks) {
+    const re = /<h([23]) id="([^"]+)">([\s\S]*?)<a class="anchor"/g;
+    let m;
+    while ((m = re.exec(b))) {
+      heads.push({ level: +m[1], id: m[2], sec: "", text: stripTags(m[3]).trim() });
+    }
+  }
+  return heads;
+}
+
+async function readPosts() {
+  const dir = path.join(ROOT, BLOG.dir);
+  let names;
+  try {
+    names = (await fs.readdir(dir)).filter(n => n.endsWith(".md") && n !== "README.md");
+  } catch {
+    return [];
+  }
+
+  const posts = [];
+  for (const name of names.sort()) {
+    const doc = `${BLOG.dir}/${name}`;
+    const raw = await fs.readFile(path.join(dir, name), "utf8");
+    const { meta, body: raw2 } = frontMatter(raw);
+    if (meta.draft === "true") continue;
+    // The post header renders `title:`, so a leading `# …` would duplicate it.
+    // Posts stay readable as plain markdown on GitHub either way.
+    const body = raw2.replace(/^\s*#\s+.*\r?\n+/, "");
+    if (!meta.title || !meta.date) {
+      console.warn(`  ! ${doc}: needs both title: and date: — skipped`);
+      continue;
+    }
+    posts.push({
+      doc,
+      slug: name.replace(/\.md$/, ""),
+      title: meta.title,
+      dek: meta.dek || "",
+      date: meta.date,
+      tags: csv(meta.tags),
+      takeaway: meta.takeaway || "",
+      corpus: csv(meta.corpus),
+      body,
+      minutes: readingTime(body),
+    });
+  }
+  // Newest first; ties broken by slug so the order is stable across builds.
+  posts.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));
+  return posts;
+}
+
+function tagsHtml(post, fromDoc) {
+  if (!post.tags.length) return "";
+  const home = relHref(fromDoc, `${BLOG.dir}/README.md`);
+  return post.tags
+    .map(t => `<a class="tag" href="${home}#tag-${slug(t)}">${escapeHtml(t)}</a>`)
+    .join(" ");
+}
+
+/** "Sources in the corpus" — every post grounds out in the long document. */
+function corpusHtml(post, titles) {
+  if (!post.corpus.length) return "";
+  const items = post.corpus.map(target => {
+    const clean = target.replace(/^\.?\//, "");
+    const title = titles.get(clean) || clean;
+    return `<li><a href="${relHref(post.doc, clean)}">${escapeHtml(title)}</a>` +
+           ` <span class="src-path">${escapeHtml(clean)}</span></li>`;
+  }).join("");
+  return `<section class="corpus-sources">
+<h2 class="plain">Where this comes from</h2>
+<p>Every number above is carried by a page in the corpus. These are the ones doing the work:</p>
+<ul class="src-list">${items}</ul>
+<p class="msg">Or interrogate the whole thing directly: <a href="${rootPrefix(post.doc)}ask/">ask the corpus</a>.</p>
+</section>`;
+}
+
+function takeawayHtml(post) {
+  if (!post.takeaway) return "";
+  return `<aside class="takeaway">
+<p class="takeaway-label">The one line</p>
+<p class="takeaway-body">${inline(post.takeaway, post.doc)}</p>
+</aside>`;
+}
+
+function postNavHtml(post, posts) {
+  const i = posts.indexOf(post);
+  // Newest-first array, so the *newer* post is the one before it.
+  const newer = i > 0 ? posts[i - 1] : null;
+  const older = i < posts.length - 1 ? posts[i + 1] : null;
+  const cell = (dir, other) => other
+    ? `<div class="cell"><span class="dir">${dir}</span><a href="${relHref(post.doc, other.doc)}">${escapeHtml(other.title)}</a></div>`
+    : `<div class="cell empty"><span class="dir">${dir}</span> - </div>`;
+  return `<nav class="pagenav grid">${cell("← Older", older)}${cell("Newer →", newer)}</nav>`;
+}
+
+async function buildPost(post, posts, titles) {
+  let blocks = labelCallouts(render(post.body, post.doc));
+  tidyNavChrome(blocks);
+
+  const toc = tocHtml(collectHeadings(blocks));
+
+  const head = `<header class="post-head">
+<h1>${inline(post.title, post.doc)}</h1>
+${post.dek ? `<p class="dek">${inline(post.dek, post.doc)}</p>` : ""}
+<p class="post-meta">
+  <time datetime="${post.date}">${longDate(post.date)}</time>
+  <span class="sep">·</span> ${post.minutes} min
+  <span class="sep">·</span> ${escapeHtml(BLOG.author)}
+  ${post.tags.length ? `<span class="sep">·</span> ${tagsHtml(post, post.doc)}` : ""}
+</p>
+</header>`;
+
+  const html = page(
+    post.doc,
+    `${stripTags(inline(post.title, post.doc))} · ${BLOG.name}`,
+    "post",
+    `<article class="post">
+${head}
+${toc || ""}
+${blocks.join("\n")}
+${takeawayHtml(post)}
+${corpusHtml(post, titles)}
+</article>
+${postNavHtml(post, posts)}
+<p class="msg"><a href="${REPO}/blob/main/${post.doc}" rel="noopener noreferrer" target="_blank">View markdown source</a></p>`,
+    {
+      blog: true,
+      crumbLeaf: post.slug,
+      description: stripTags(inline(post.dek || post.title, post.doc)),
+    },
+  );
+
+  const out = path.join(OUT, outPath(post.doc));
+  await fs.mkdir(path.dirname(out), { recursive: true });
+  await fs.writeFile(out, html);
+}
+
+async function buildBlogIndex(posts) {
+  const doc = `${BLOG.dir}/README.md`;
+
+  const rows = posts.map(p => `<tr>
+<td class="width-min"><time datetime="${p.date}">${p.date}</time></td>
+<td class="width-auto">
+  <a class="post-link" href="${relHref(doc, p.doc)}">${inline(p.title, doc)}</a>
+  ${p.dek ? `<span class="row-dek">${inline(p.dek, doc)}</span>` : ""}
+</td>
+<td class="width-min post-mins">${p.minutes} min</td>
+</tr>`).join("\n");
+
+  // Tag buckets, so the `#tag-x` links in post headers land somewhere real.
+  const byTag = new Map();
+  for (const p of posts) {
+    for (const t of p.tags) {
+      if (!byTag.has(t)) byTag.set(t, []);
+      byTag.get(t).push(p);
+    }
+  }
+  const tagSection = byTag.size
+    ? `<h2 class="plain">By tag</h2>
+<dl class="tag-index">${[...byTag.entries()]
+        .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
+        .map(([t, ps]) => `<dt id="tag-${slug(t)}">${escapeHtml(t)} <span class="tag-count">${ps.length}</span></dt>
+<dd>${ps.map(p => `<a href="${relHref(doc, p.doc)}">${escapeHtml(p.title)}</a>`).join(`<span class="sep"> · </span>`)}</dd>`).join("\n")}</dl>`
+    : "";
+
+  const body = `<section class="blog-intro">
+<p><strong>${escapeHtml(BLOG.name)}</strong> is where the forecast argues with the news.</p>
+<p>Underneath every post is <a href="${relHref(doc, DEFAULT_DOC)}">a ~100,000-word document</a> built the unfashionable way: from physical constraints upward, with scored probabilities, named falsifiers, and a quarterly indicator dashboard. Posts here take one claim out of it, put current numbers against it, and say plainly what would prove it wrong.</p>
+<p>No takes without an order book behind them. Each piece ends on the one line worth keeping.</p>
+</section>
+
+<h2 class="plain">Posts</h2>
+${posts.length
+    ? `<table class="post-table"><tbody>\n${rows}\n</tbody></table>`
+    : `<p class="msg">Nothing published yet.</p>`}
+
+${tagSection}
+
+<section class="blog-sub">
+<h2 class="plain">Follow</h2>
+<p><a href="feed.xml">RSS</a> <span class="sep">·</span> <a href="${relHref(doc, DEFAULT_DOC)}">the corpus</a> <span class="sep">·</span> <a href="${rootPrefix(doc)}ask/">ask it a question</a> <span class="sep">·</span> <a href="${REPO}" rel="noopener noreferrer" target="_blank">source</a></p>
+</section>`;
+
+  const html = page(doc, `${BLOG.name} · ${BLOG.tagline}`, "blog-index", body, {
+    blog: true,
+    srcHref: `${rootPrefix(doc)}${DEFAULT_DOC}`,
+    description: BLOG.description,
+  });
+
+  const out = path.join(OUT, outPath(doc));
+  await fs.mkdir(path.dirname(out), { recursive: true });
+  await fs.writeFile(out, html);
+}
+
+async function writeFeed(posts) {
+  const url = p => `${ORIGIN}/${outPath(p.doc)}`;
+  const items = posts.slice(0, 20).map(p => `  <item>
+    <title>${escapeHtml(stripTags(inline(p.title, p.doc)))}</title>
+    <link>${url(p)}</link>
+    <guid isPermaLink="true">${url(p)}</guid>
+    <pubDate>${rfc822(p.date)}</pubDate>
+    ${p.tags.map(t => `<category>${escapeHtml(t)}</category>`).join("")}
+    <description>${escapeHtml(stripTags(inline(p.dek || "", p.doc)))}</description>
+  </item>`).join("\n");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>${escapeHtml(BLOG.name)}</title>
+  <link>${ORIGIN}/${BLOG.dir}/</link>
+  <atom:link href="${ORIGIN}/${BLOG.dir}/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>${escapeHtml(BLOG.description)}</description>
+  <language>en</language>
+${items}
+</channel>
+</rss>
+`;
+  await fs.mkdir(path.join(OUT, BLOG.dir), { recursive: true });
+  await fs.writeFile(path.join(OUT, BLOG.dir, "feed.xml"), xml);
+}
+
+async function buildBlog(titles) {
+  const posts = await readPosts();
+  for (const post of posts) await buildPost(post, posts, titles);
+  await buildBlogIndex(posts);
+  await writeFeed(posts);
+
+  // Publish the raw markdown alongside, same as the corpus does.
+  for (const post of posts) {
+    await fs.copyFile(path.join(ROOT, post.doc), path.join(OUT, post.doc));
+  }
+  return posts;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
    Build
    ══════════════════════════════════════════════════════════════════════════ */
 
@@ -869,6 +1201,8 @@ async function mdFiles() {
   async function walk(dir) {
     for (const e of await fs.readdir(dir, { withFileTypes: true })) {
       if (e.name.startsWith(".") || e.name === "_site" || e.name === "node_modules") continue;
+      // The blog is built by buildBlog(), not by the corpus reading order.
+      if (dir === ROOT && e.name === BLOG.dir) continue;
       const full = path.join(dir, e.name);
       if (e.isDirectory()) await walk(full);
       else if (e.name.endsWith(".md")) found.push(path.relative(ROOT, full).split(path.sep).join("/"));
@@ -923,12 +1257,22 @@ async function copyDir(src, dest) {
   }
 }
 
-async function copyStatic(docs) {
-  for (const f of [...docs, "style.css", "catalog.json", "check-invariants.sh"]) {
+async function copyStatic(docs, posts = []) {
+  for (const f of [...docs, "style.css", "check-invariants.sh"]) {
     const out = path.join(OUT, f);
     await fs.mkdir(path.dirname(out), { recursive: true });
     await fs.copyFile(path.join(ROOT, f), out);
   }
+
+  // catalog.json drives the Find dialog. Blog posts are not in the corpus
+  // catalog, so fold them in here rather than teaching the indexer about them.
+  const catalog = JSON.parse(await fs.readFile(path.join(ROOT, "catalog.json"), "utf8"));
+  const merged = [
+    ...catalog,
+    { path: `${BLOG.dir}/README.md`, title: `${BLOG.name} - blog` },
+    ...posts.map(p => ({ path: p.doc, title: p.title })),
+  ];
+  await fs.writeFile(path.join(OUT, "catalog.json"), JSON.stringify(merged, null, 2) + "\n");
 
   // Ask UI (RAG + LFM2.5) — not part of the markdown corpus.
   const askSrc = path.join(ROOT, "ask");
@@ -971,5 +1315,9 @@ await fs.rm(OUT, { recursive: true, force: true });
 for (const doc of docs) {
   await buildDoc(doc, sources.get(doc), sequentialNav(doc, order, titles));
 }
-await copyStatic(docs);
-console.log(`built ${docs.length} pages → _site/ (${order.length} in reading order)`);
+const posts = await buildBlog(titles);
+await copyStatic(docs, posts);
+console.log(
+  `built ${docs.length} pages → _site/ (${order.length} in reading order)` +
+  ` · ${BLOG.name}: ${posts.length} post${posts.length === 1 ? "" : "s"}`,
+);

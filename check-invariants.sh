@@ -3,6 +3,10 @@
 # Check corpus invariants from RESEARCH.md §7 (subset that is machine-checkable).
 # Usage: ./check-invariants.sh
 # Exit 0 if clean; 1 if any check fails.
+#
+# blog/ is a separate publication, not corpus: it carries its own page chrome
+# and has no length ceiling, so checks 2-7 skip it. Check 1 (link resolution)
+# still covers it — broken links matter everywhere.
 
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -57,7 +61,7 @@ fi
 missing_nav=$(python3 - <<'PY'
 import pathlib
 root = pathlib.Path('.')
-skip = {'_site', 'node_modules', '.rag'}
+skip = {'_site', 'node_modules', '.rag', 'blog'}
 missing = []
 for f in sorted(root.rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
@@ -85,7 +89,7 @@ over=$(python3 - <<PY
 import pathlib, re
 hard = $HARD_CAP
 exempt = re.compile(r'$EXEMPT_OVER')
-skip = {'_site', 'node_modules', '.rag'}
+skip = {'_site', 'node_modules', '.rag', 'blog'}
 rows = []
 for f in sorted(pathlib.Path('.').rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
@@ -108,7 +112,7 @@ dir_over=$(python3 - <<PY
 from pathlib import Path
 from collections import defaultdict
 cap = $DIR_CAP
-skip = {'_site', 'node_modules', '.rag'}
+skip = {'_site', 'node_modules', '.rag', 'blog'}
 c = defaultdict(int)
 for f in Path('.').rglob('*.md'):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
@@ -130,7 +134,7 @@ fi
 # ── 5. Depth cap: max 3 directory levels below root ────────────────────────
 too_deep=$(python3 - <<'PY'
 from pathlib import Path
-skip = {'_site', 'node_modules', '.rag'}
+skip = {'_site', 'node_modules', '.rag', 'blog'}
 rows = []
 for f in sorted(Path('.').rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
@@ -150,7 +154,7 @@ fi
 # ── 6. Counts ──────────────────────────────────────────────────────────────
 counts=$(python3 - <<'PY'
 from pathlib import Path
-skip = {'_site', 'node_modules', '.rag'}
+skip = {'_site', 'node_modules', '.rag', 'blog'}
 files = [
     p for p in Path('.').rglob('*.md')
     if not skip.intersection(p.parts) and not any(x.startswith('.') for x in p.parts)
@@ -166,7 +170,7 @@ python3 - <<'PY'
 from pathlib import Path
 import json, re
 
-skip = {'_site', 'node_modules', '.rag'}
+skip = {'_site', 'node_modules', '.rag', 'blog'}
 
 def title_of(path: Path) -> str:
     for line in path.read_text(errors='replace').splitlines():

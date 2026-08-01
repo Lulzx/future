@@ -566,3 +566,99 @@ kbd {
   padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
+
+/* ── blog · Ground Truth ─────────────────────────────────────────────────
+   Posts share the corpus grid; what differs is the masthead, a dek under
+   the title, a metadata line, and the closing takeaway block.            */
+
+.blog-masthead h1 a { text-decoration: none; }
+
+/* post header */
+.post-head { margin-bottom: calc(var(--line-height) * 1.5); }
+.post-head h1 { margin-bottom: calc(var(--line-height) / 2); }
+.post .dek {
+  color: var(--text-color-alt);
+  margin-bottom: var(--line-height);
+  text-wrap: pretty;
+}
+.post-meta {
+  color: var(--text-color-alt);
+  font-size: 0.85rem;
+  border-top: var(--border-thickness) solid var(--text-color);
+  padding-top: calc(var(--line-height) / 2);
+}
+.post-meta .sep { opacity: .5; margin: 0 0.5ch; }
+.post-meta a.tag, .tag {
+  color: var(--text-color-alt);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+.post-meta a.tag:hover, .tag:hover { color: var(--text-color); }
+
+/* headings that shouldn't take a § number or an anchor rule */
+h2.plain {
+  margin-top: calc(var(--line-height) * 2);
+  margin-bottom: var(--line-height);
+}
+
+/* the one line — the whole point of the piece, boxed */
+.takeaway {
+  margin: calc(var(--line-height) * 2) 0;
+  border: var(--border-thickness) solid var(--text-color);
+  padding: var(--line-height) 1.5ch;
+  background: var(--background-color-alt);
+}
+.takeaway-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+  color: var(--text-color-alt);
+  margin-bottom: calc(var(--line-height) / 2);
+}
+.takeaway-body {
+  font-weight: var(--font-weight-bold);
+  text-wrap: balance;
+  margin: 0;
+}
+
+/* provenance — the corpus under every post */
+.corpus-sources {
+  margin-top: calc(var(--line-height) * 2);
+  border-top: var(--border-thickness) solid var(--text-color);
+  padding-top: var(--line-height);
+}
+.src-list { list-style: none; margin-left: 0; }
+.src-list li { margin-bottom: calc(var(--line-height) / 2); }
+.src-list li::before { content: "→ "; color: var(--text-color-alt); }
+.src-path {
+  color: var(--text-color-alt);
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+/* index */
+.blog-intro { margin-bottom: calc(var(--line-height) * 2); }
+.post-table { width: 100%; }
+.post-table td { vertical-align: top; }
+.post-table time { color: var(--text-color-alt); white-space: nowrap; }
+.post-link {
+  font-weight: var(--font-weight-medium);
+  display: block;
+}
+.row-dek {
+  display: block;
+  color: var(--text-color-alt);
+  font-size: 0.9rem;
+  text-wrap: pretty;
+}
+.post-mins { color: var(--text-color-alt); white-space: nowrap; text-align: right; }
+@media screen and (max-width: 640px) {
+  .post-mins { display: none; }
+}
+
+.tag-index dt {
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--line-height);
+}
+.tag-index dd { color: var(--text-color-alt); }
+.tag-count { color: var(--text-color-alt); font-weight: var(--font-weight-normal); }

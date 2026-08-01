@@ -15,6 +15,9 @@ import {
 } from "./client-retrieve.mjs";
 
 const GEN_MODEL = "onnx-community/LFM2.5-350M-ONNX";
+/** Phones and tablets get the 230M sibling: 201 MB of weights instead of 280,
+ *  and far less memory pressure when Safari has no WebGPU and falls to wasm. */
+const GEN_MODEL_MOBILE = "LiquidAI/LFM2.5-230M-ONNX";
 const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
 const EMBED_DIM = 384;
 /** Keep RAG context modest for 350M on-device decode, but allow multi-source. */
@@ -25,6 +28,35 @@ const TFJS_CDN =
   "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
 
 const $ = (id) => document.getElementById(id);
+
+/* ── device / model selection ───────────────────────────────────────────── */
+
+/** iPadOS Safari reports itself as a Mac, so touch points settle it. */
+function isMobileDevice() {
+  if (navigator.userAgentData?.mobile) return true;
+  if (/iPhone|iPod|Android/i.test(navigator.userAgent)) return true;
+  const iPadish =
+    /Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1;
+  if (iPadish || /iPad/.test(navigator.userAgent)) return true;
+  return (
+    matchMedia("(pointer: coarse)").matches &&
+    matchMedia("(max-width: 1024px)").matches
+  );
+}
+
+/** ?model=230m / 350m forces a build, for testing on a desktop. */
+function chooseModel() {
+  const forced = new URLSearchParams(location.search).get("model");
+  if (forced === "230m") return GEN_MODEL_MOBILE;
+  if (forced === "350m") return GEN_MODEL;
+  if (forced?.includes("/")) return forced;
+  return isMobileDevice() ? GEN_MODEL_MOBILE : GEN_MODEL;
+}
+
+const shortModel = (id) => String(id || "").split("/").pop();
+
+/** ?dtype=q4f32 etc, for testing quantisations without an edit-deploy cycle. */
+const forcedDtype = () => new URLSearchParams(location.search).get("dtype");
 
 const el = {
   form: $("ask-form"),
@@ -81,9 +113,11 @@ let busy = false;
 /** @type {Worker | null} */
 let genWorker = null;
 let genReady = false;
+/** Set once every build has failed here, so we stop retrying on each ask. */
+let genUnavailable = false;
 let genDevice = null;
 let genDtype = null;
-let genModelId = GEN_MODEL;
+let genModelId = chooseModel();
 /** @type {Map<string, { resolve: Function, reject: Function, onUpdate?: Function }>} */
 const workerWaiters = new Map();
 
@@ -258,7 +292,7 @@ function onModelProgress(p) {
     });
     if (pct != null) {
       setStatus(
-        `Loading LFM2.5… ${Math.round(pct)}%${file ? " · " + shortFile(file) : ""}`,
+        `Loading ${shortModel(chooseModel())}… ${Math.round(pct)}%${file ? " · " + shortFile(file) : ""}`,
         "warn",
       );
     }
@@ -377,13 +411,13 @@ function onWorkerMessage(msg) {
 
   if (status === "loading") {
     setProgressUI({
-      label: "Loading LFM2.5",
+      label: `Loading ${shortModel(chooseModel())}`,
       file: msg.data || "",
       detail: "",
       indeterminate: !loadState.files.size,
       pct: aggregatePct(),
     });
-    setStatus(msg.data || "Loading LFM2.5…", "warn");
+    setStatus(msg.data || `Loading ${shortModel(chooseModel())}…`, "warn");
     return;
   }
 
@@ -412,15 +446,15 @@ function onWorkerMessage(msg) {
     genReady = true;
     genDevice = msg.device || "webgpu";
     genDtype = msg.dtype || "q4";
-    genModelId = msg.model || GEN_MODEL;
+    genModelId = msg.model || chooseModel();
     setProgressUI({
-      label: "LFM2.5 ready",
+      label: `${shortModel(genModelId)} ready`,
       pct: 100,
       file: "",
       detail: `${genDevice} · ${genDtype}`,
       done: true,
     });
-    setStatus(`LFM2.5-350M ready · ${genDevice} · ${genDtype}`, "ok");
+    setStatus(`${shortModel(genModelId)} ready · ${genDevice} · ${genDtype}`, "ok");
     hideProgress(900);
     const w = workerWaiters.get("load");
     if (w) {
@@ -489,61 +523,87 @@ function ensureGenerator() {
   return genLoading;
 }
 
+/**
+ * Load order, and why it is this way.
+ *
+ * Every LFM2.5 ONNX export quantises the embedding table with
+ * GatherBlockQuantized, and onnxruntime-web ships no wasm kernel for that op —
+ * q4 and q8 alike fail with "Could not find an implementation" the moment
+ * WebGPU is absent. That is what broke generation on tablets: the wasm
+ * "fallback" could never have worked. So devices without WebGPU get SmolLM2,
+ * whose export runs on wasm; it is markedly weaker, and the tag says which
+ * model answered.
+ *
+ * q4f16 is 243 MB against q4's 280 MB and decodes faster, but needs the
+ * WebGPU shader-f16 feature, so q4 stays as the WebGPU fallback.
+ */
+const WASM_MODEL = "HuggingFaceTB/SmolLM2-135M-Instruct";
+
+function loadAttempts() {
+  const dtype = forcedDtype();
+  const device = new URLSearchParams(location.search).get("device");
+  const model = chooseModel();
+  if (dtype || device) {
+    return [{ model, device: device || "webgpu", dtype: dtype || "q4" }];
+  }
+  return [
+    { model, device: "webgpu", dtype: "q4f16" },
+    { model, device: "webgpu", dtype: "q4" },
+    { model: WASM_MODEL, device: "wasm", dtype: "q4" },
+  ];
+}
+
 async function loadGenerator() {
-  resetLoadState("LFM2.5-350M · webgpu · q4");
+  const attempts = loadAttempts();
+
+  resetLoadState(`${shortModel(attempts[0].model)} · loading`);
   setProgressUI({
-    label: "Loading LFM2.5-350M",
-    file: "Web Worker · WebGPU · q4 · first run ~200MB",
+    label: `Loading ${shortModel(attempts[0].model)}`,
+    file: "Web Worker · WebGPU q4f16 · first run ~243MB",
     detail: "",
     indeterminate: true,
   });
-  setStatus("Loading LFM2.5-350M in worker (WebGPU, q4)…", "warn");
-
-  // Prefer WebGPU; if load fails, retry wasm in a fresh worker session.
-  const attempts = [
-    { device: "webgpu", dtype: "q4" },
-    { device: "wasm", dtype: "q4" },
-  ];
 
   let lastErr = null;
   for (const attempt of attempts) {
+    const name = shortModel(attempt.model);
     try {
-      // Recreate worker between attempts so a poisoned WebGPU session is dropped
+      // Recreate worker between attempts so a poisoned session is dropped
       if (genWorker && lastErr) {
         genWorker.terminate();
         genWorker = null;
         genReady = false;
       }
-      resetLoadState(`LFM2.5-350M · ${attempt.device} · ${attempt.dtype}`);
+      resetLoadState(`${name} · ${attempt.device} · ${attempt.dtype}`);
       setProgressUI({
-        label: `Loading LFM2.5-350M`,
+        label: `Loading ${name}`,
         file: `${attempt.device} · ${attempt.dtype}`,
         detail: "",
         indeterminate: true,
       });
-      setStatus(
-        `Loading LFM2.5 (${attempt.device}, ${attempt.dtype})…`,
-        "warn",
-      );
+      setStatus(`Loading ${name} (${attempt.device}, ${attempt.dtype})…`, "warn");
       await workerRequest("load", {
-        modelId: GEN_MODEL,
+        modelId: attempt.model,
         device: attempt.device,
         dtype: attempt.dtype,
       }, { key: "load" });
       return { device: genDevice, dtype: genDtype, model: genModelId };
     } catch (err) {
       lastErr = err;
-      console.warn(`LFM load failed on ${attempt.device}:`, err);
+      console.warn(`${name} load failed on ${attempt.device}/${attempt.dtype}:`, err);
       genReady = false;
       setStatus(
-        `Load failed on ${attempt.device} (${formatError(err)}) — trying fallback…`,
+        `${name} failed on ${attempt.device} (${formatError(err)}) — trying the next build…`,
         "warn",
       );
     }
   }
 
   hideProgress();
-  throw new Error(`Could not load LFM2.5-350M. ${formatError(lastErr)}`);
+  genUnavailable = true;
+  throw new Error(
+    `No generator would load on this device. ${formatError(lastErr)}`,
+  );
 }
 
 /* ── client corpus (static fallback) ────────────────────────────────────── */
@@ -665,7 +725,7 @@ async function loadClientCorpus() {
     );
   }
   setStatus(
-    `browser · ${clientIndex.N} passages${ragCacheHits >= 2 ? " (cached)" : ""} · hybrid ready · gen ${GEN_MODEL.split("/").pop()}`,
+    `browser · ${clientIndex.N} passages${ragCacheHits >= 2 ? " (cached)" : ""} · hybrid ready · gen ${shortModel(chooseModel())}`,
     "ok",
   );
 }
@@ -818,6 +878,9 @@ async function search(query, method, k) {
  * Keep this short — LFM2.5-350M follows long rule lists poorly and starts
  * talking about "the excerpts" or writing literal "[n]" placeholders.
  */
+/** Used when the corpus has nothing on the question and we say so. */
+const GENERAL_SYSTEM_PROMPT = `You are a concise, helpful assistant. Answer the user's question directly in 2-4 plain sentences. If you do not know, say so rather than guessing. Never use bracket citations or reference numbers.`;
+
 const SYSTEM_PROMPT = `You are a concise analyst. Answer the user's question using only the sources below. Write 2-5 plain sentences of prose. Never use bracket citations or reference numbers of any kind — no [1], no [2], no [n]. Never invent facts. Never discuss the sources themselves ("the excerpts say…", "the documents discuss…"). Start directly with the answer.`;
 
 /** Soft floor so generation is not dominated by weak tail hits. */
@@ -838,6 +901,13 @@ function selectContextHits(hits, max = 6) {
 }
 
 function buildUserPrompt(query, hits, mode = "answer", web = []) {
+  // No corpus context: a plain question for the model to answer on its own.
+  if (mode === "general") {
+    return `Question: ${query}
+
+Answer in 2-4 sentences of plain prose from your own knowledge. If you are not sure, say so plainly. Do not invent citations or references.`;
+  }
+
   // Web snippets are short; give the corpus most of the budget.
   const packed = selectContextHits(hits, web.length ? 4 : 5);
   const parts = [];
@@ -907,7 +977,7 @@ function cleanGeneratedAnswer(text) {
 }
 
 async function generateAnswer(query, hits, onToken, mode = "answer", web = []) {
-  if (!hits.length) {
+  if (!hits.length && mode !== "general") {
     return {
       text: "No relevant passages found in the corpus for that query.",
       model: null,
@@ -924,7 +994,10 @@ async function generateAnswer(query, hits, onToken, mode = "answer", web = []) {
   }
 
   const messages = [
-    { role: "system", content: SYSTEM_PROMPT },
+    {
+      role: "system",
+      content: mode === "general" ? GENERAL_SYSTEM_PROMPT : SYSTEM_PROMPT,
+    },
     { role: "user", content: buildUserPrompt(query, hits, mode, web) },
   ];
 
@@ -944,28 +1017,29 @@ async function generateAnswer(query, hits, onToken, mode = "answer", web = []) {
     onToken?.(text);
     return {
       text,
-      model: `${result.model || GEN_MODEL} · ${result.device || genDevice || "webgpu"}`,
+      model: `${result.model || genModelId} · ${result.device || genDevice || "webgpu"}`,
     };
   } catch (err) {
     if (genDevice !== "webgpu") throw new Error(formatError(err));
 
-    // WebGPU decoded OK at load but failed mid-generate — hard switch to WASM.
+    // WebGPU decoded OK at load but failed mid-generate — hard switch to wasm.
+    // LFM2.5 cannot run there (quantised embeddings), so this is SmolLM2 too.
     setStatus(`${formatError(err)} — reloading on WASM…`, "warn");
     genReady = false;
     if (genWorker) {
       genWorker.terminate();
       genWorker = null;
     }
-    resetLoadState("LFM2.5-350M · wasm · q4");
+    resetLoadState(`${shortModel(WASM_MODEL)} · wasm · q4`);
     setProgressUI({
-      label: "Loading LFM2.5 on WASM",
+      label: `Loading ${shortModel(WASM_MODEL)} on WASM`,
       file: "webgpu generate failed",
       detail: "",
       indeterminate: true,
     });
     await workerRequest(
       "load",
-      { modelId: GEN_MODEL, device: "wasm", dtype: "q4" },
+      { modelId: WASM_MODEL, device: "wasm", dtype: "q4" },
       { key: "load" },
     );
     const result = await runOnce();
@@ -973,7 +1047,7 @@ async function generateAnswer(query, hits, onToken, mode = "answer", web = []) {
     onToken?.(text);
     return {
       text,
-      model: `${result.model || GEN_MODEL} · wasm (fallback)`,
+      model: `${result.model || genModelId} · wasm (fallback)`,
     };
   }
 }
@@ -1558,24 +1632,6 @@ function isSmallTalk(q) {
 }
 
 /**
- * Retrieval always returns its top k, however bad, and a fluent 350M model
- * will write confidently from passages that have nothing to do with the
- * question ("zxqv plumbing invoices for my cat" → an essay on state
- * capacity). Cosine separates the two cleanly: measured over the corpus,
- * on-topic questions peak at 0.52-0.65 and off-topic ones at 0.08-0.29.
- * BM25 is no help — it scores junk (8.1) as high as a real question (9.8).
- */
-const MIN_COS = 0.4;
-
-function isWeakMatch(hits) {
-  if (!hits?.length) return true;
-  const cos = hits.reduce((m, h) => Math.max(m, Number(h.dense) || 0), 0);
-  // bm25-only retrieval has no cosine to judge by, and the user picked it.
-  if (!cos) return false;
-  return cos < MIN_COS;
-}
-
-/**
  * "Tell me something interesting" is a real request with no topical anchor,
  * so retrieval scores it like noise. Route it to a topic instead of refusing.
  */
@@ -1705,6 +1761,22 @@ async function run({ withGenerate }) {
       }
     }
 
+    // Generation already proved impossible here — answer with retrieval and
+    // say so once, rather than failing the same way on every ask.
+    if (withGenerate && genUnavailable) {
+      const secs = ((performance.now() - started) / 1000).toFixed(1);
+      activity.step("Generation unavailable on this device");
+      activity.settle();
+      renderAnswer(
+        `This browser cannot run the answer model — it needs WebGPU, or a wasm build the runtime supports. Retrieval still works: the ${result.hits.length} best passages for that question are in **Sources**.`,
+        `retrieval only · ${secs}s`,
+        false,
+      );
+      endBotMessage({ sources: result.hits.length });
+      setStatus("Retrieval only — no generator on this device", "warn");
+      return;
+    }
+
     if (!withGenerate) {
       const secs = ((performance.now() - started) / 1000).toFixed(1);
       if (web.length) {
@@ -1727,47 +1799,45 @@ async function run({ withGenerate }) {
       return;
     }
 
-    // A 350M model will happily write an essay from passages that have
-    // nothing to do with the question, so refuse the weak ones outright.
-    // An open-ended ask is exempt: its seed topic is from the corpus.
-    if (!openEnded && !web.length && isWeakMatch(result.hits)) {
-      const closest = result.hits[0];
-      activity.step("Best match too weak — not generating");
-      activity.fail("No confident match");
-      renderAnswer(
-        `Nothing in the corpus is a close match for that. The closest passage is **${closest.title}**${closest.heading && closest.heading !== closest.title ? ` · ${closest.heading}` : ""} — the rest are in **Sources**. This corpus covers AI's effect on labour, energy, compute, capital, geopolitics and institutions over the next fifteen years; ask about one of those, or say *tell me something interesting*.`,
-        "no confident match",
-        false,
-      );
-      endBotMessage({ sources: result.hits.length });
-      setStatus("No confident match", "warn");
-      return;
+    // Always answer from whatever retrieval actually matched, however loosely
+    // ranked — a weak-match refusal is worse than a grounded best effort, and
+    // the passages are shown alongside so the reader can judge the fit.
+    // The model-knowledge path is reserved for retrieval returning nothing.
+    const offCorpus = !result.hits.length && !web.length;
+    if (offCorpus) {
+      activity.settle();
+      activity.step("No passages retrieved — answering from model knowledge");
+      activity.settle();
     }
 
     renderAnswer("", "generating…", true);
     setStatus("Generating with LFM2.5…", "warn");
-    activity.step(`LFM2.5-350M · ${genDevice || "webgpu"} · decoding`);
+    activity.step(`${shortModel(genModelId)} · ${genDevice || "webgpu"} · decoding`);
     const answer = await generateAnswer(
-      seed,
-      result.hits,
+      offCorpus ? query : seed,
+      offCorpus ? [] : result.hits,
       (partial) => {
-        renderAnswer(partial, `${GEN_MODEL.split("/").pop()} · streaming`, true);
+        renderAnswer(partial, `${shortModel(genModelId)} · streaming`, true);
         activity.tick();
       },
-      openEnded ? "highlight" : "answer",
+      offCorpus ? "general" : openEnded ? "highlight" : "answer",
       web,
     );
     const secs = ((performance.now() - started) / 1000).toFixed(1);
     const tag =
       (answer.model ? `${answer.model} · ` : "") +
+      (offCorpus ? "not from the corpus · " : "") +
       (openEnded ? "highlight · " : "") +
       (web.length ? "corpus + web · " : "") +
       `${secs}s`;
-    renderAnswer(answer.text, tag, false);
+    const body = offCorpus
+      ? `${answer.text}\n\n*Retrieval returned no passages, so this is the model's own knowledge — not a claim from the forecast.*`
+      : answer.text;
+    renderAnswer(body, tag, false);
     endBotMessage({
       text: answer.text,
       model: tag,
-      sources: result.hits.length,
+      sources: offCorpus ? null : result.hits.length,
     });
     activity.settle(`Generated ${answer.text.length} chars`);
     activity.done();
@@ -1975,7 +2045,8 @@ document.addEventListener("keydown", (e) => {
 
 /**
  * Pull everything an ask needs before the first ask: the corpus (a few MB),
- * the query embedder, then the 350M generator (~280 MB, cached after the
+ * the query embedder, then the generator (280 MB, or 201 MB of LFM2.5-230M
+ * on phones and tablets; cached after the
  * first visit). Ordered cheapest-first so retrieval works while the model is
  * still coming down, and each step is independent — a failed generator still
  * leaves retrieval usable.
@@ -2016,7 +2087,7 @@ async function warmUp() {
     return;
   }
   try {
-    activity.step("LFM2.5-350M · WebGPU q4");
+    activity.step(`${shortModel(chooseModel())} · WebGPU q4`);
     await ensureGenerator();
     activity.settle(`Model ready · ${genDevice} · ${genDtype}`);
   } catch (err) {
