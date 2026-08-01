@@ -1213,6 +1213,8 @@ async function mdFiles() {
       if (e.name.startsWith(".") || e.name === "_site" || e.name === "node_modules") continue;
       // The blog is built by buildBlog(), not by the corpus reading order.
       if (dir === ROOT && e.name === BLOG.dir) continue;
+      // Agent/contributor instructions are not part of the published corpus.
+      if (dir === ROOT && e.name === "CLAUDE.md") continue;
       const full = path.join(dir, e.name);
       if (e.isDirectory()) await walk(full);
       else if (e.name.endsWith(".md")) found.push(path.relative(ROOT, full).split(path.sep).join("/"));

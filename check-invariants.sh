@@ -62,9 +62,12 @@ missing_nav=$(python3 - <<'PY'
 import pathlib
 root = pathlib.Path('.')
 skip = {'_site', 'node_modules', '.rag', 'blog'}
+skip_files = {'CLAUDE.md'}
 missing = []
 for f in sorted(root.rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
+        continue
+    if f.name in skip_files:
         continue
     if f.name == 'RESEARCH.md':
         continue
@@ -90,9 +93,12 @@ import pathlib, re
 hard = $HARD_CAP
 exempt = re.compile(r'$EXEMPT_OVER')
 skip = {'_site', 'node_modules', '.rag', 'blog'}
+skip_files = {'CLAUDE.md'}
 rows = []
 for f in sorted(pathlib.Path('.').rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
+        continue
+    if f.name in skip_files:
         continue
     n = len(f.read_text().splitlines())
     if n > hard and not exempt.search(str(f)):
@@ -113,9 +119,12 @@ from pathlib import Path
 from collections import defaultdict
 cap = $DIR_CAP
 skip = {'_site', 'node_modules', '.rag', 'blog'}
+skip_files = {'CLAUDE.md'}
 c = defaultdict(int)
 for f in Path('.').rglob('*.md'):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
+        continue
+    if f.name in skip_files:
         continue
     if f.name == 'README.md':
         continue
@@ -135,9 +144,12 @@ fi
 too_deep=$(python3 - <<'PY'
 from pathlib import Path
 skip = {'_site', 'node_modules', '.rag', 'blog'}
+skip_files = {'CLAUDE.md'}
 rows = []
 for f in sorted(Path('.').rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
+        continue
+    if f.name in skip_files:
         continue
     if len(f.parts) > 4:  # part/group/subgroup/file.md is the deepest allowed
         rows.append(str(f))
@@ -155,9 +167,11 @@ fi
 counts=$(python3 - <<'PY'
 from pathlib import Path
 skip = {'_site', 'node_modules', '.rag', 'blog'}
+skip_files = {'CLAUDE.md'}
 files = [
     p for p in Path('.').rglob('*.md')
     if not skip.intersection(p.parts) and not any(x.startswith('.') for x in p.parts)
+    and p.name not in skip_files
 ]
 lines = sum(len(p.read_text().splitlines()) for p in files)
 print(f'{len(files)} files, {lines} lines')
@@ -171,6 +185,7 @@ from pathlib import Path
 import json, re
 
 skip = {'_site', 'node_modules', '.rag', 'blog'}
+skip_files = {'CLAUDE.md'}
 
 def title_of(path: Path) -> str:
     for line in path.read_text(errors='replace').splitlines():
@@ -182,6 +197,8 @@ def title_of(path: Path) -> str:
 entries = []
 for p in sorted(Path('.').rglob('*.md')):
     if skip.intersection(p.parts) or any(part.startswith('.') for part in p.parts):
+        continue
+    if p.name in skip_files:
         continue
     entries.append({"path": p.as_posix(), "title": title_of(p)})
 Path('catalog.json').write_text(json.dumps(entries, indent=2, ensure_ascii=False) + '\n')
