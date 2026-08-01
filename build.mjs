@@ -1286,6 +1286,16 @@ async function copyStatic(docs, posts = []) {
   ];
   await fs.writeFile(path.join(OUT, "catalog.json"), JSON.stringify(merged, null, 2) + "\n");
 
+  // Self-hosted JetBrains Mono. @font-face URLs resolve relative to style.css,
+  // so one copy at the root serves every page depth.
+  const fontSrc = path.join(ROOT, "fonts");
+  try {
+    await fs.access(fontSrc);
+    await copyDir(fontSrc, path.join(OUT, "fonts"));
+  } catch {
+    /* optional */
+  }
+
   // Ask UI (RAG + LFM2.5) — not part of the markdown corpus.
   const askSrc = path.join(ROOT, "ask");
   try {

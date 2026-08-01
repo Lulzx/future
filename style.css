@@ -27,12 +27,71 @@ q:before, q:after { content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 /* ── the-monospace-web · index.css ──────────────────────────────────────── */
-@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+/* JetBrains Mono, self-hosted. Was an @import from a third-party CDN,
+   which chained three round trips before text could render correctly and
+   silently fell back to SF Mono whenever that host was unreachable.
+   Vendored under SIL OFL 1.1, see fonts/OFL.txt. */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/JetBrainsMono-Italic.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/JetBrainsMono-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: url('fonts/JetBrainsMono-MediumItalic.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/JetBrainsMono-SemiBold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+  font-display: swap;
+}
 
 :root {
   --font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --line-height: 1.20rem;
-  --border-thickness: 2px;
+  --border-thickness: 1px;
   --text-color: #16181c;
   --text-color-alt: #666;
   --background-color: #fdfdfc;
@@ -84,6 +143,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 
 * { box-sizing: border-box; }
+/* Form controls do not inherit font-family, so they opt out of the page
+   font unless told otherwise. */
+input, textarea, select, button, optgroup { font-family: inherit; }
 * + * { margin-top: var(--line-height); }
 
 html {
