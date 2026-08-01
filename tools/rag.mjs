@@ -33,6 +33,7 @@ import {
   retrieveBm25,
   retrieveDense,
   retrieveHybrid,
+  expandQuery,
   tokenize,
   bm25Score,
   round,
@@ -137,7 +138,7 @@ async function retrieve(index, query, k, method) {
   }
 
   const { matrix, meta } = await ensureVectors(index);
-  const queryVec = await embedQuery(query);
+  const queryVec = await embedQuery(expandQuery(query));
 
   if (method === "dense") {
     return retrieveDense(index, queryVec, matrix, meta.dim, k).map((h) => ({

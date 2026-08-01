@@ -36,6 +36,7 @@ import {
   retrieveBm25,
   retrieveDense,
   retrieveHybrid,
+  expandQuery,
   round,
 } from "./rag-lib.mjs";
 
@@ -155,6 +156,8 @@ async function search({ query, method = "hybrid", k = 8 }) {
   }
   const topK = Math.min(Math.max(Number(k) || 8, 1), 24);
   const index = await getIndex();
+  // Retrieval string may include dual-vocab expansions (open source → open-weight, …)
+  const qRet = expandQuery(q);
 
   if (method === "bm25") {
     return {
@@ -165,7 +168,8 @@ async function search({ query, method = "hybrid", k = 8 }) {
   }
 
   const { matrix, meta } = await getVectors(index);
-  const queryVec = await embedQuery(q);
+  // Dense: embed expanded query so synonym pages surface
+  const queryVec = await embedQuery(qRet);
 
   if (method === "dense") {
     return {

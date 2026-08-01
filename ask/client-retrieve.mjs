@@ -21,6 +21,46 @@ export function tokenize(text) {
     .filter((t) => t.length > 1 && !STOP.has(t));
 }
 
+/** Keep in sync with tools/rag-lib.mjs expandQuery */
+const QUERY_EXPANSIONS = [
+  {
+    when: /\bopen[\s-]?source\b/i,
+    and: /\b(ai|model|llm|weight|lab)/i,
+    add: "open-weight open-weights open weights distillation lag frontier",
+  },
+  {
+    when: /\b(oss|foss)\b/i,
+    and: /\b(ai|model|llm)/i,
+    add: "open-weight open-weights",
+  },
+  {
+    when: /\bopen[\s-]?weight/i,
+    add: "open-source distillation lag leaky bucket",
+  },
+  {
+    when: /\b(rsi|recursive)\b/i,
+    add: "self-improvement research cycle closed loop",
+  },
+  {
+    when: /\bjunior/i,
+    and: /\b(hir|job|employ|entry|work|wage)/i,
+    add: "entry-level apprenticeship B1 labor",
+  },
+];
+
+export function expandQuery(query) {
+  const q = String(query || "").trim();
+  if (!q) return q;
+  const extras = [];
+  for (const rule of QUERY_EXPANSIONS) {
+    if (rule.when.test(q) && (!rule.and || rule.and.test(q))) {
+      extras.push(rule.add);
+    }
+  }
+  if (!extras.length) return q;
+  return `${q} ${extras.join(" ")}`;
+}
+
 export function bm25Score(queryTokens, docTokens, df, N, avgdl, k1 = 1.2, b = 0.75) {
   if (!queryTokens.length || !docTokens.length) return 0;
   const tf = new Map();
@@ -49,7 +89,7 @@ function pathWeight(path) {
 }
 
 export function retrieveBm25(index, query, k) {
-  const qTokens = tokenize(query);
+  const qTokens = tokenize(expandQuery(query));
   const scored = index.chunks.map((c) => {
     const raw = bm25Score(qTokens, c.tokens, index.df, index.N, index.avgdl);
     return {

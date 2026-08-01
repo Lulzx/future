@@ -37,6 +37,51 @@ export function tokenize(text) {
     .filter((t) => t.length > 1 && !STOP.has(t));
 }
 
+/**
+ * Retrieval-only query expansion: dual vocabulary this corpus uses.
+ * Rules are structural (when A and maybe B, append terms) — not one-off questions.
+ */
+const QUERY_EXPANSIONS = [
+  {
+    // Everyday "open source AI" ≈ "open-weight" / distillation lag in this corpus
+    when: /\bopen[\s-]?source\b/i,
+    and: /\b(ai|model|llm|weight|lab)/i,
+    add: "open-weight open-weights open weights distillation lag frontier",
+  },
+  {
+    when: /\b(oss|foss)\b/i,
+    and: /\b(ai|model|llm)/i,
+    add: "open-weight open-weights",
+  },
+  {
+    when: /\bopen[\s-]?weight/i,
+    add: "open-source distillation lag leaky bucket",
+  },
+  {
+    when: /\b(rsi|recursive)\b/i,
+    add: "self-improvement research cycle closed loop",
+  },
+  {
+    when: /\bjunior/i,
+    and: /\b(hir|job|employ|entry|work|wage)/i,
+    add: "entry-level apprenticeship B1 labor",
+  },
+];
+
+/** Expand query string for BM25/dense. Returns original if no rule fires. */
+export function expandQuery(query) {
+  const q = String(query || "").trim();
+  if (!q) return q;
+  const extras = [];
+  for (const rule of QUERY_EXPANSIONS) {
+    if (rule.when.test(q) && (!rule.and || rule.and.test(q))) {
+      extras.push(rule.add);
+    }
+  }
+  if (!extras.length) return q;
+  return `${q} ${extras.join(" ")}`;
+}
+
 export function extractTitle(text, rel) {
   const m = text.match(/^#\s+(.+)$/m);
   return m ? m[1].trim() : rel;
@@ -230,7 +275,7 @@ export function bm25Score(queryTokens, docTokens, df, N, avgdl, k1 = 1.2, b = 0.
 }
 
 export function retrieveBm25(index, query, k) {
-  const qTokens = tokenize(query);
+  const qTokens = tokenize(expandQuery(query));
   const scored = index.chunks.map((c) => {
     const raw = bm25Score(qTokens, c.tokens, index.df, index.N, index.avgdl);
     return {
@@ -360,9 +405,31 @@ export function rrfFuse(lists, { k = 60, topK = 8, groupBy = "path" } = {}) {
  */
 export function retrieveHybrid(index, query, matrix, dim, queryVec, k, candidatePool = 40) {
   const pool = Math.max(k, candidatePool);
+  // BM25 uses expandQuery internally; dense queryVec should be built from expandQuery(query) by caller.
   const bm25 = retrieveBm25(index, query, pool);
   const dense = retrieveDense(index, queryVec, matrix, dim, pool);
   return rrfFuse([bm25, dense], { topK: k, groupBy: "path" });
+}
+
+/**
+ * Pack hits for a generator: keep score order, drop near-noise relative to #1,
+ * already path-unique after hybrid. Returns a shorter, cleaner list.
+ */
+export function selectContextHits(hits, { max = 6, minRatio = 0.45 } = {}) {
+  if (!hits?.length) return [];
+  const top = hits[0].score || 0;
+  const floor = top > 0 ? top * minRatio : 0;
+  const out = [];
+  const seenPath = new Set();
+  for (const h of hits) {
+    if (out.length >= max) break;
+    if (seenPath.has(h.path)) continue;
+    // Keep first always; later ones need to clear a soft floor (skip for hybrid RRF ~0.03 scale if ratio ok)
+    if (out.length > 0 && top > 0 && h.score < floor) continue;
+    seenPath.add(h.path);
+    out.push(h);
+  }
+  return out.length ? out : hits.slice(0, Math.min(max, hits.length));
 }
 
 export function round(n) {

@@ -135,7 +135,7 @@ async function load({ modelId, device, dtype } = {}) {
   }
 }
 
-async function generate({ messages, max_new_tokens = 256 } = {}) {
+async function generate({ messages, max_new_tokens = 320 } = {}) {
   if (!ready) {
     post({ status: "error", phase: "generate", error: "Model not loaded" });
     return;
@@ -143,6 +143,10 @@ async function generate({ messages, max_new_tokens = 256 } = {}) {
 
   try {
     const [tokenizer, model] = await LfmPipeline.getInstance();
+
+    // Stateless Q&A: never reuse KV across different questions (avoids bleed / one-liners).
+    past_key_values_cache = null;
+    stopping_criteria.reset();
 
     const inputs = tokenizer.apply_chat_template(messages, {
       add_generation_prompt: true,
@@ -186,11 +190,9 @@ async function generate({ messages, max_new_tokens = 256 } = {}) {
 
     post({ status: "start" });
 
-    stopping_criteria.reset();
-
     const result = await model.generate({
       ...inputs,
-      past_key_values: past_key_values_cache,
+      // No past_key_values — each Ask is independent
       do_sample: false,
       temperature: 0.1,
       top_k: 50,
@@ -200,11 +202,6 @@ async function generate({ messages, max_new_tokens = 256 } = {}) {
       stopping_criteria,
       return_dict_in_generate: true,
     });
-
-    // Cache KV for multi-turn if present
-    if (result?.past_key_values) {
-      past_key_values_cache = result.past_key_values;
-    }
 
     let text = streamed;
     if (!text && result?.sequences) {

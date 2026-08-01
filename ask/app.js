@@ -11,14 +11,15 @@ import {
   retrieveBm25,
   retrieveDense,
   retrieveHybrid,
+  expandQuery,
 } from "./client-retrieve.mjs";
 
 const GEN_MODEL = "onnx-community/LFM2.5-350M-ONNX";
 const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
 const EMBED_DIM = 384;
-/** Keep RAG context modest for 350M on-device decode. */
-const MAX_CONTEXT_CHARS = 2800;
-const MAX_NEW_TOKENS = 256;
+/** Keep RAG context modest for 350M on-device decode, but allow multi-source. */
+const MAX_CONTEXT_CHARS = 3400;
+const MAX_NEW_TOKENS = 320;
 /** MiniLM embedder for client-side dense/hybrid fallback (main thread). */
 const TFJS_CDN =
   "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
@@ -629,6 +630,8 @@ async function searchApi(query, method, k) {
 
 async function searchClient(query, method, k) {
   await ensureClientCorpus();
+  // Dual-vocab expansion for dense (BM25 expands inside retrieveBm25)
+  const qRet = expandQuery(query);
   if (method === "bm25") {
     return {
       query,
@@ -639,7 +642,7 @@ async function searchClient(query, method, k) {
       })),
     };
   }
-  const queryVec = await embedQuery(query);
+  const queryVec = await embedQuery(qRet);
   if (method === "dense") {
     return {
       query,
@@ -677,20 +680,38 @@ async function search(query, method, k) {
 
 /* ── generation prompts ─────────────────────────────────────────────────── */
 
-const SYSTEM_PROMPT = `You answer questions using ONLY the provided corpus excerpts from "The Next Fifteen Years" forecast document.
+const SYSTEM_PROMPT = `You answer questions about "The Next Fifteen Years" using only the numbered corpus excerpts provided.
 
 Rules:
-1. Prefer quoting or closely paraphrasing the excerpts. When you quote, use exact wording in quotation marks.
-2. Cite sources inline as [n] matching the excerpt numbers.
-3. If the excerpts do not contain enough to answer, say what is missing — do not invent claims, numbers, or probabilities.
-4. Keep the voice tight and analytical, matching the corpus. No preamble.
-5. When the corpus states a probability, range, or named uncertainty, preserve it exactly.`;
+1. Answer the USER'S QUESTION directly in 2–5 sentences. Lead with that answer — do not open by restating a single excerpt headline or an off-topic passage.
+2. Treat excerpts as evidence, not as the question. Cite claims as [n]. Prefer synthesizing 2+ relevant sources when they apply.
+3. If most excerpts are off-topic for the question, say so briefly and only report the nearest on-topic claims with citations. Do not force an answer out of an irrelevant top hit.
+4. Do not invent facts, numbers, probabilities, or mechanisms missing from the excerpts. Preserve probabilities and ranges exactly when used.
+5. No preamble ("Sure", "Based on the excerpts", "According to the document"). No closing offer to help further.`;
+
+/** Soft floor so generation is not dominated by weak tail hits. */
+function selectContextHits(hits, max = 6) {
+  if (!hits?.length) return [];
+  const top = hits[0].score || 0;
+  const floor = top > 0 ? top * 0.4 : 0;
+  const out = [];
+  const seen = new Set();
+  for (const h of hits) {
+    if (out.length >= max) break;
+    if (seen.has(h.path)) continue;
+    if (out.length > 0 && top > 0 && (h.score || 0) < floor) continue;
+    seen.add(h.path);
+    out.push(h);
+  }
+  return out.length ? out : hits.slice(0, Math.min(max, hits.length));
+}
 
 function buildUserPrompt(query, hits) {
+  const packed = selectContextHits(hits, 6);
   const parts = [];
   let used = 0;
-  for (let i = 0; i < hits.length; i++) {
-    const h = hits[i];
+  for (let i = 0; i < packed.length; i++) {
+    const h = packed[i];
     const loc = h.path + (h.heading ? " · " + h.heading : "");
     const header = `[${i + 1}] (${loc})\n`;
     const budget = MAX_CONTEXT_CHARS - used - header.length - 8;
@@ -700,12 +721,13 @@ function buildUserPrompt(query, hits) {
     parts.push(header + body);
     used += header.length + body.length + 8;
   }
-  return `Question: ${query}
+  return `User question:
+${query}
 
-Corpus excerpts:
+Corpus excerpts (evidence only — answer the question above, not an excerpt title):
 ${parts.join("\n\n---\n\n")}
 
-Answer from the excerpts only.`;
+Write the answer now. Cite [n]. If the excerpts do not really answer the question, say what is missing.`;
 }
 
 async function generateAnswer(query, hits, onToken) {
@@ -717,6 +739,13 @@ async function generateAnswer(query, hits, onToken) {
   }
 
   await ensureGenerator();
+
+  // Reset worker multi-turn state between independent asks
+  try {
+    getGenWorker().postMessage({ type: "reset" });
+  } catch {
+    /* worker not up yet — ensureGenerator will create it */
+  }
 
   const messages = [
     { role: "system", content: SYSTEM_PROMPT },
