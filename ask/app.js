@@ -14,6 +14,11 @@ import {
 const GEN_MODEL = "onnx-community/LFM2.5-350M-ONNX";
 const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
 const EMBED_DIM = 384;
+/** Keep prompt small — 350M + WebGPU OOMs on long RAG contexts (raw code 10290344). */
+const MAX_CONTEXT_CHARS = 2800;
+const MAX_NEW_TOKENS = 256;
+const TFJS_CDN =
+  "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
 
 const $ = (id) => document.getElementById(id);
 
@@ -346,9 +351,40 @@ async function ensureClientCorpus() {
   );
 }
 
+let _tfjs = null;
 async function loadTransformers() {
-  // ESM CDN — same package as the Node embed path
-  return import("https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.2");
+  if (_tfjs) return _tfjs;
+  _tfjs = await import(TFJS_CDN);
+  return _tfjs;
+}
+
+/** Turn ORT/WebGPU numeric throws into something readable. */
+function formatError(err) {
+  if (err == null) return "Unknown error";
+  if (typeof err === "number") {
+    return (
+      `Runtime error ${err}` +
+      (err === 10290344 || err > 1e6
+        ? " — usually WebGPU OOM or an unsupported op. Retrying on WASM or shortening context often fixes it."
+        : "")
+    );
+  }
+  if (typeof err === "string") return err;
+  const bits = [];
+  if (err.message) bits.push(err.message);
+  else if (err.name) bits.push(err.name);
+  if (err.code != null && String(err.code) !== err.message) {
+    bits.push(`code ${err.code}`);
+  }
+  if (err.cause) bits.push(formatError(err.cause));
+  // Some ORT builds put the real code only on stack / toString
+  const raw = String(err);
+  if (bits.length === 0) return raw;
+  const msg = bits.join(" · ");
+  if (/^\d+$/.test(msg.trim())) {
+    return formatError(Number(msg.trim()));
+  }
+  return msg;
 }
 
 async function ensureEmbedder() {
@@ -456,109 +492,28 @@ Rules:
 5. When the corpus states a probability, range, or named uncertainty, preserve it exactly.`;
 
 function buildUserPrompt(query, hits) {
-  const context = hits
-    .map(
-      (h, i) =>
-        `[${i + 1}] (${h.path}${h.heading ? " · " + h.heading : ""})\n${h.text}`,
-    )
-    .join("\n\n---\n\n");
+  const parts = [];
+  let used = 0;
+  for (let i = 0; i < hits.length; i++) {
+    const h = hits[i];
+    const loc = h.path + (h.heading ? " · " + h.heading : "");
+    const header = `[${i + 1}] (${loc})\n`;
+    const budget = MAX_CONTEXT_CHARS - used - header.length - 8;
+    if (budget < 100) break;
+    let body = h.text || "";
+    if (body.length > budget) body = body.slice(0, budget - 1) + "…";
+    parts.push(header + body);
+    used += header.length + body.length + 8;
+  }
   return `Question: ${query}
 
 Corpus excerpts:
-${context}
+${parts.join("\n\n---\n\n")}
 
 Answer from the excerpts only.`;
 }
 
-async function ensureGenerator() {
-  if (generator) return generator;
-  const webgpu = await hasWebGPU();
-  genDevice = webgpu ? "webgpu" : "wasm";
-
-  resetLoadState(`LFM2.5-350M · ${genDevice}${webgpu ? " · q4" : ""}`);
-  setProgressUI({
-    label: `Loading LFM2.5-350M`,
-    file: webgpu ? "WebGPU · first run ~200MB" : "WASM fallback · first run ~200MB",
-    detail: "",
-    indeterminate: true,
-  });
-  setStatus(
-    `Loading LFM2.5-350M (${genDevice}${webgpu ? ", q4" : ""})… first run downloads ~200MB`,
-    "warn",
-  );
-
-  setProgressUI({
-    label: "Loading transformers.js",
-    file: "cdn.jsdelivr.net",
-    detail: "",
-    indeterminate: true,
-  });
-  const { pipeline } = await loadTransformers();
-
-  resetLoadState(`LFM2.5-350M · ${genDevice}`);
-  setProgressUI({
-    label: "Downloading LFM2.5",
-    file: GEN_MODEL.split("/").pop(),
-    detail: "",
-    indeterminate: true,
-  });
-
-  generator = await pipeline("text-generation", GEN_MODEL, {
-    dtype: "q4",
-    device: genDevice,
-    progress_callback: onModelProgress,
-  });
-
-  setProgressUI({
-    label: "LFM2.5 ready",
-    pct: 100,
-    file: "",
-    detail: genDevice,
-    done: true,
-  });
-  setStatus(`LFM2.5-350M ready · ${genDevice}`, "ok");
-  hideProgress(900);
-  return generator;
-}
-
-async function generateAnswer(query, hits, onToken) {
-  if (!hits.length) {
-    return {
-      text: "No relevant passages found in the corpus for that query.",
-      model: null,
-    };
-  }
-  const gen = await ensureGenerator();
-  const messages = [
-    { role: "system", content: SYSTEM_PROMPT },
-    { role: "user", content: buildUserPrompt(query, hits) },
-  ];
-
-  let streamed = "";
-  const { TextStreamer } = await loadTransformers();
-  const streamer = new TextStreamer(gen.tokenizer, {
-    skip_prompt: true,
-    skip_special_tokens: true,
-    callback_function: (text) => {
-      // TextStreamer may pass cumulative or delta depending on version;
-      // prefer treating as full decoded stream piece.
-      if (typeof text === "string") {
-        // library often calls with the new chunk only
-        streamed += text;
-        onToken?.(streamed);
-      }
-    },
-  });
-
-  const output = await gen(messages, {
-    max_new_tokens: 512,
-    do_sample: false,
-    temperature: 0.1,
-    top_k: 50,
-    repetition_penalty: 1.05,
-    streamer,
-  });
-
+function extractGeneratedText(output, streamed) {
   let text =
     output?.[0]?.generated_text?.at?.(-1)?.content ||
     output?.[0]?.generated_text ||
@@ -569,8 +524,173 @@ async function generateAnswer(query, hits, onToken) {
   }
   if (typeof text !== "string") text = streamed || "(empty)";
   text = text.trim();
-  if (streamed && streamed.trim().length >= text.length) text = streamed.trim();
-  return { text, model: `${GEN_MODEL} · ${genDevice}` };
+  if (streamed && streamed.trim().length > text.length) text = streamed.trim();
+  return text;
+}
+
+async function loadGenPipeline(device, dtype) {
+  const { pipeline } = await loadTransformers();
+  return pipeline("text-generation", GEN_MODEL, {
+    dtype,
+    device,
+    progress_callback: onModelProgress,
+  });
+}
+
+async function ensureGenerator() {
+  if (generator) return generator;
+
+  const webgpu = await hasWebGPU();
+  const attempts = webgpu
+    ? [
+        { device: "webgpu", dtype: "q4" },
+        { device: "wasm", dtype: "q4" },
+      ]
+    : [{ device: "wasm", dtype: "q4" }];
+
+  setProgressUI({
+    label: "Loading transformers.js",
+    file: TFJS_CDN.split("@").pop() || "cdn",
+    detail: "",
+    indeterminate: true,
+  });
+  await loadTransformers();
+
+  let lastErr = null;
+  for (const attempt of attempts) {
+    const { device, dtype } = attempt;
+    genDevice = device;
+    resetLoadState(`LFM2.5-350M · ${device} · ${dtype}`);
+    setProgressUI({
+      label: `Loading LFM2.5-350M`,
+      file: `${device} · ${dtype} · ~200MB first run`,
+      detail: "",
+      indeterminate: true,
+    });
+    setStatus(`Loading LFM2.5-350M (${device}, ${dtype})…`, "warn");
+
+    try {
+      generator = await loadGenPipeline(device, dtype);
+      setProgressUI({
+        label: "LFM2.5 ready",
+        pct: 100,
+        file: "",
+        detail: `${device} · ${dtype}`,
+        done: true,
+      });
+      setStatus(`LFM2.5-350M ready · ${device}`, "ok");
+      hideProgress(900);
+      return generator;
+    } catch (err) {
+      lastErr = err;
+      console.warn(`LFM load failed on ${device}/${dtype}:`, err);
+      generator = null;
+      setStatus(
+        `Load failed on ${device} (${formatError(err)}) — trying fallback…`,
+        "warn",
+      );
+    }
+  }
+
+  hideProgress();
+  throw new Error(
+    `Could not load LFM2.5-350M. ${formatError(lastErr)}`,
+  );
+}
+
+/** Drop WebGPU model and reload on WASM after a runtime fault. */
+async function fallbackGeneratorToWasm() {
+  if (genDevice === "wasm" && generator) return generator;
+  console.warn("Falling back to WASM generation…");
+  generator = null;
+  genDevice = "wasm";
+  resetLoadState("LFM2.5-350M · wasm · q4");
+  setProgressUI({
+    label: "Retrying on WASM",
+    file: "WebGPU failed — loading CPU path",
+    detail: "",
+    indeterminate: true,
+  });
+  setStatus("WebGPU failed — reloading LFM2.5 on WASM…", "warn");
+  generator = await loadGenPipeline("wasm", "q4");
+  setProgressUI({
+    label: "LFM2.5 ready",
+    pct: 100,
+    file: "",
+    detail: "wasm · q4",
+    done: true,
+  });
+  hideProgress(700);
+  setStatus("LFM2.5-350M ready · wasm", "ok");
+  return generator;
+}
+
+async function runGeneration(gen, messages, onToken) {
+  const genOpts = {
+    max_new_tokens: MAX_NEW_TOKENS,
+    do_sample: false,
+    temperature: 0.1,
+    top_k: 50,
+    repetition_penalty: 1.05,
+  };
+
+  // Prefer streaming when TextStreamer exists; fall back to one-shot.
+  try {
+    const mod = await loadTransformers();
+    if (typeof mod.TextStreamer === "function") {
+      let streamed = "";
+      const streamer = new mod.TextStreamer(gen.tokenizer, {
+        skip_prompt: true,
+        skip_special_tokens: true,
+        callback_function: (text) => {
+          if (typeof text === "string") {
+            streamed += text;
+            onToken?.(streamed);
+          }
+        },
+      });
+      const output = await gen(messages, { ...genOpts, streamer });
+      return extractGeneratedText(output, streamed);
+    }
+  } catch (err) {
+    console.warn("Streaming generate failed, retrying without streamer:", err);
+  }
+
+  const output = await gen(messages, genOpts);
+  const text = extractGeneratedText(output, "");
+  onToken?.(text);
+  return text;
+}
+
+async function generateAnswer(query, hits, onToken) {
+  if (!hits.length) {
+    return {
+      text: "No relevant passages found in the corpus for that query.",
+      model: null,
+    };
+  }
+
+  let gen = await ensureGenerator();
+  const messages = [
+    { role: "system", content: SYSTEM_PROMPT },
+    { role: "user", content: buildUserPrompt(query, hits) },
+  ];
+
+  try {
+    const text = await runGeneration(gen, messages, onToken);
+    return { text, model: `${GEN_MODEL} · ${genDevice}` };
+  } catch (err) {
+    console.warn("Generate failed:", err);
+    // Classic WebGPU ORT fault: bare integer (e.g. 10290344)
+    const msg = formatError(err);
+    if (genDevice === "webgpu") {
+      setStatus(`${msg} — retrying on WASM…`, "warn");
+      gen = await fallbackGeneratorToWasm();
+      const text = await runGeneration(gen, messages, onToken);
+      return { text, model: `${GEN_MODEL} · wasm (fallback)` };
+    }
+    throw new Error(msg);
+  }
 }
 
 /* ── render ─────────────────────────────────────────────────────────────── */
@@ -594,13 +714,157 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
+/** Lightweight markdown → HTML for corpus excerpts (tables, lists, emphasis). */
+function renderMarkdown(src) {
+  if (!src) return "";
+  const text = String(src).replace(/\r\n/g, "\n");
+  const lines = text.split("\n");
+  const out = [];
+  let i = 0;
+
+  const inline = (s) => {
+    let t = escapeHtml(s);
+    // code
+    t = t.replace(/`([^`]+)`/g, "<code>$1</code>");
+    // bold / italic
+    t = t.replace(/\*\*\*((?:[^*]|\*(?!\*))+?)\*\*\*/g, "<strong><em>$1</em></strong>");
+    t = t.replace(/\*\*((?:[^*]|\*(?!\*))+?)\*\*/g, "<strong>$1</strong>");
+    t = t.replace(/(^|[^*\w])\*([^*\n]+)\*(?![*\w])/g, "$1<em>$2</em>");
+    // links [text](url) — internal .md → site paths
+    t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+      let h = href.trim();
+      if (h.endsWith(".md") || h.includes(".md#") || h.endsWith("/")) {
+        // leave relative as plain text if not resolvable from root
+        return `<span class="md-linkish">${label}</span>`;
+      }
+      if (/^https?:\/\//i.test(h)) {
+        return `<a href="${escapeHtml(h)}" rel="noopener noreferrer" target="_blank">${label}</a>`;
+      }
+      return `<span class="md-linkish">${label}</span>`;
+    });
+    // citation markers [1]
+    t = t.replace(/\[(\d+)\]/g, '<span class="cite">[$1]</span>');
+    return t;
+  };
+
+  const isTableSep = (line) =>
+    /^\s*\|?[\s:|-]*-[\s:|-]*\|?/.test(line) && line.includes("-");
+  const splitRow = (line) =>
+    line
+      .replace(/^\s*\|/, "")
+      .replace(/\|\s*$/, "")
+      .split("|")
+      .map((c) => c.trim());
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (!line.trim()) {
+      i++;
+      continue;
+    }
+
+    // fenced code
+    if (/^```/.test(line)) {
+      const buf = [];
+      i++;
+      while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]);
+      i++;
+      out.push(`<pre><code>${escapeHtml(buf.join("\n"))}</code></pre>`);
+      continue;
+    }
+
+    // table
+    if (
+      line.includes("|") &&
+      i + 1 < lines.length &&
+      isTableSep(lines[i + 1])
+    ) {
+      const head = splitRow(line);
+      i += 2;
+      const body = [];
+      while (i < lines.length && lines[i].includes("|") && lines[i].trim()) {
+        body.push(splitRow(lines[i++]));
+      }
+      const th = head.map((c) => `<th>${inline(c)}</th>`).join("");
+      const rows = body
+        .map(
+          (r) =>
+            "<tr>" + r.map((c) => `<td>${inline(c)}</td>`).join("") + "</tr>",
+        )
+        .join("");
+      out.push(
+        `<div class="md-table"><table><thead><tr>${th}</tr></thead><tbody>${rows}</tbody></table></div>`,
+      );
+      continue;
+    }
+
+    // headings
+    const hm = line.match(/^(#{1,4})\s+(.*)$/);
+    if (hm) {
+      const lvl = Math.min(hm[1].length + 2, 5); // h3–h5 inside card
+      out.push(`<h${lvl} class="md-h">${inline(hm[2])}</h${lvl}>`);
+      i++;
+      continue;
+    }
+
+    // blockquote
+    if (/^\s{0,3}>\s?/.test(line)) {
+      const buf = [];
+      while (i < lines.length && /^\s{0,3}>\s?/.test(lines[i])) {
+        buf.push(lines[i].replace(/^\s{0,3}>\s?/, ""));
+        i++;
+      }
+      out.push(`<blockquote>${inline(buf.join(" "))}</blockquote>`);
+      continue;
+    }
+
+    // lists
+    if (/^\s*[-*+]\s+/.test(line) || /^\s*\d+[.)]\s+/.test(line)) {
+      const ordered = /^\s*\d+[.)]\s+/.test(line);
+      const items = [];
+      while (i < lines.length) {
+        const m = lines[i].match(
+          ordered ? /^\s*\d+[.)]\s+(.*)$/ : /^\s*[-*+]\s+(.*)$/,
+        );
+        if (!m) break;
+        items.push(`<li>${inline(m[1])}</li>`);
+        i++;
+      }
+      out.push(
+        ordered ? `<ol>${items.join("")}</ol>` : `<ul>${items.join("")}</ul>`,
+      );
+      continue;
+    }
+
+    // paragraph (merge wrapped lines)
+    const buf = [line];
+    i++;
+    while (
+      i < lines.length &&
+      lines[i].trim() &&
+      !/^#{1,4}\s/.test(lines[i]) &&
+      !/^\s{0,3}>\s?/.test(lines[i]) &&
+      !/^\s*[-*+]\s+/.test(lines[i]) &&
+      !/^\s*\d+[.)]\s+/.test(lines[i]) &&
+      !/^```/.test(lines[i]) &&
+      !(lines[i].includes("|") && isTableSep(lines[i + 1] || ""))
+    ) {
+      buf.push(lines[i++]);
+    }
+    out.push(`<p>${inline(buf.join(" "))}</p>`);
+  }
+
+  return out.join("") || `<p>${inline(text)}</p>`;
+}
+
 function renderHits(hits, method) {
   el.hitsPanel.hidden = false;
   const scoreLabel =
     method === "hybrid" ? "rrf" : method === "dense" ? "cos" : "bm25";
   el.hitsTag.textContent = `${hits.length} · ${method}`;
   el.hits.innerHTML = hits
-    .map((h, i) => {
+    .map((h) => {
       const loc =
         h.heading && h.heading !== h.title
           ? `${escapeHtml(h.title)} · ${escapeHtml(h.heading)}`
@@ -619,7 +883,7 @@ function renderHits(hits, method) {
           <a class="hit-title" href="${escapeHtml(mdToHref(h.path))}">${loc}</a>
           <span class="hit-meta">${meta}</span>
         </div>
-        <div class="hit-text">${escapeHtml(h.text)}</div>
+        <div class="hit-text md-body">${renderMarkdown(h.text)}</div>
       </li>`;
     })
     .join("");
@@ -629,12 +893,10 @@ function renderAnswer(text, model, streaming) {
   el.answerPanel.hidden = false;
   el.answerTag.textContent = model || "";
   el.answer.classList.toggle("is-streaming", !!streaming);
-  // Light-touch: highlight [n] citations
-  const html = escapeHtml(text).replace(
-    /\[(\d+)\]/g,
-    '<span class="cite">[$1]</span>',
-  );
-  el.answer.innerHTML = html || "&nbsp;";
+  // Answers are mostly prose; still run light markdown + cite highlighting
+  el.answer.innerHTML = text
+    ? `<div class="md-body">${renderMarkdown(text)}</div>`
+    : "&nbsp;";
 }
 
 function setBusy(on) {
@@ -685,9 +947,10 @@ async function run({ withGenerate }) {
     }
   } catch (err) {
     console.error(err);
-    setStatus(err.message || String(err), "err");
+    const msg = formatError(err);
+    setStatus(msg, "err");
     el.answerPanel.hidden = false;
-    renderAnswer(`Error: ${err.message || err}`, null, false);
+    renderAnswer(`Error: ${msg}`, null, false);
   } finally {
     setBusy(false);
   }
@@ -708,10 +971,11 @@ el.loadModel.addEventListener("click", async () => {
   try {
     await ensureGenerator();
   } catch (err) {
-    setStatus(err.message || String(err), "err");
+    const msg = formatError(err);
+    setStatus(msg, "err");
     setProgressUI({
       label: "Load failed",
-      file: err.message || String(err),
+      file: msg,
       detail: "",
       indeterminate: false,
       pct: 0,
