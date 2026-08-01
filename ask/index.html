@@ -21,15 +21,22 @@
         <td class="width-auto" colspan="2">
           <h1><a href="../">The Next Fifteen Years</a></h1>
           <span class="subtitle">Ask the corpus</span>
+          <span class="masthead-actions">
+            <a class="btn-icon" href="../">Index</a>
+            <button id="theme" class="btn-icon" type="button" title="Toggle light / dark (t)">Theme</button>
+            <button id="help-btn" class="btn-icon btn-help" type="button"
+              title="How this works (?)" aria-label="How this works">?</button>
+          </span>
         </td>
-      </tr>
-      <tr>
-        <th class="width-min">Mode</th>
-        <td class="width-auto crumb">hybrid retrieval · LFM2.5-350M WebGPU worker</td>
       </tr>
       <tr class="keys-row">
         <th class="width-min">Status</th>
-        <td class="width-auto meta" id="status-line">Checking…</td>
+        <td class="width-auto meta">
+          <span class="status-wrap" id="status-wrap">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="status-line">Checking…</span>
+          </span>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -38,79 +45,124 @@
 <hr>
 
 <main id="content" class="ask-main">
-  <form id="ask-form" class="ask-form" autocomplete="off">
-    <label class="ask-label" for="q">Question</label>
-    <textarea id="q" name="q" rows="3" maxlength="2000"
-      placeholder="e.g. why juniors stop getting hired"
-      required></textarea>
+  <div class="ask-layout">
 
-    <div class="ask-controls">
-      <label class="ctrl">
-        Method
-        <select id="method" name="method">
-          <option value="hybrid" selected>hybrid (BM25 + dense → RRF)</option>
-          <option value="bm25">bm25 only</option>
-          <option value="dense">dense only</option>
-        </select>
-      </label>
-      <label class="ctrl">
-        Hits
-        <select id="k" name="k">
-          <option value="6">6</option>
-          <option value="8" selected>8</option>
-          <option value="12">12</option>
-          <option value="16">16</option>
-        </select>
-      </label>
-      <label class="ctrl check">
-        <input type="checkbox" id="generate" checked>
-        Generate (LFM2.5)
-      </label>
-    </div>
+    <!-- ── chat column ────────────────────────────────────────────────── -->
+    <section class="chat-col" aria-label="Conversation">
+      <ol class="chat-log" id="chat-log">
+        <li class="chat-empty" id="chat-empty">
+          <p class="chat-empty-title">Ask the corpus</p>
+          <p class="chat-empty-sub">
+            Hybrid retrieval over the forecast corpus; the answer is generated
+            on-device by LFM2.5-350M. Nothing leaves your machine.
+          </p>
+          <p class="ask-examples">
+            <span class="ask-examples-label">Try</span>
+            <button type="button" class="example" data-q="why juniors stop getting hired">juniors</button>
+            <button type="button" class="example" data-q="what is the master asymmetry">master asymmetry</button>
+            <button type="button" class="example" data-q="will energy or capital bind first">energy vs capital</button>
+            <button type="button" class="example" data-q="what happens if Taiwan fabs fail">Taiwan</button>
+          </p>
+        </li>
+      </ol>
 
-    <div class="ask-actions">
-      <button type="submit" id="go" class="btn-primary">Ask</button>
-      <button type="button" id="retrieve-only" class="btn">Retrieve only</button>
-      <button type="button" id="load-model" class="btn">Load LFM2.5</button>
-    </div>
-  </form>
+      <div class="chat-dock">
+        <div id="load-progress" class="load-progress" hidden aria-live="polite">
+          <div class="load-progress-head">
+            <span class="load-progress-label" id="load-label">Loading model…</span>
+            <span class="load-progress-pct" id="load-pct">0%</span>
+          </div>
+          <div class="load-progress-track" role="progressbar"
+            aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="load-bar">
+            <div class="load-progress-fill" id="load-fill"></div>
+            <div class="load-progress-shine" aria-hidden="true"></div>
+          </div>
+          <div class="load-progress-meta">
+            <span id="load-file" class="load-progress-file"></span>
+            <span id="load-detail" class="load-progress-detail"></span>
+          </div>
+        </div>
 
-  <div id="load-progress" class="load-progress" hidden aria-live="polite">
-    <div class="load-progress-head">
-      <span class="load-progress-label" id="load-label">Loading model…</span>
-      <span class="load-progress-pct" id="load-pct">0%</span>
-    </div>
-    <div class="load-progress-track" role="progressbar"
-      aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="load-bar">
-      <div class="load-progress-fill" id="load-fill"></div>
-      <div class="load-progress-shine" aria-hidden="true"></div>
-    </div>
-    <div class="load-progress-meta">
-      <span id="load-file" class="load-progress-file"></span>
-      <span id="load-detail" class="load-progress-detail"></span>
-    </div>
+        <form id="ask-form" class="ask-form" autocomplete="off">
+          <label class="sr-only" for="q">Question</label>
+
+          <div class="composer" id="composer">
+            <div class="composer-input">
+              <span class="composer-caret" aria-hidden="true">❯</span>
+              <textarea id="q" name="q" rows="1" maxlength="2000"
+                placeholder="Ask a question…" required></textarea>
+            </div>
+            <div class="composer-bar">
+              <span class="composer-hint">
+                <kbd>⌘</kbd><kbd>↵</kbd> to ask
+                <span class="composer-count" id="q-count"></span>
+              </span>
+              <span class="composer-actions">
+                <button type="button" id="retrieve-only" class="btn">Retrieve</button>
+                <button type="submit" id="go" class="btn-primary">Ask</button>
+              </span>
+            </div>
+          </div>
+
+          <details class="ask-opts" id="ask-opts">
+            <summary>
+              <span class="ask-opts-title">Options</span>
+              <span class="ask-opts-summary" id="opts-summary">hybrid · 8 hits · generate on</span>
+            </summary>
+            <div class="ask-controls">
+              <label class="ctrl">
+                Method
+                <select id="method" name="method">
+                  <option value="hybrid" selected>hybrid (BM25 + dense → RRF)</option>
+                  <option value="bm25">bm25 only</option>
+                  <option value="dense">dense only</option>
+                </select>
+              </label>
+              <label class="ctrl">
+                Hits
+                <select id="k" name="k">
+                  <option value="6">6</option>
+                  <option value="8" selected>8</option>
+                  <option value="12">12</option>
+                  <option value="16">16</option>
+                </select>
+              </label>
+              <label class="ctrl check">
+                <input type="checkbox" id="generate" checked>
+                Generate answer (LFM2.5)
+              </label>
+              <button type="button" id="load-model" class="btn btn-quiet">Preload LFM2.5</button>
+            </div>
+          </details>
+        </form>
+      </div>
+    </section>
+
+    <!-- ── sources column ─────────────────────────────────────────────── -->
+    <aside class="sources-col" id="hits-panel" aria-label="Sources">
+      <div class="panel-head">
+        <h2>Sources</h2>
+        <span class="panel-head-right">
+          <span class="tag" id="hits-tag"></span>
+          <button type="button" class="btn-icon" id="toggle-hits" aria-expanded="false">Expand</button>
+        </span>
+      </div>
+
+      <div class="sources-scroll">
+        <ol id="hits" class="ask-hits"></ol>
+        <p class="ask-empty" id="hits-empty">No retrieval yet. Ask something.</p>
+      </div>
+    </aside>
+
   </div>
+</main>
 
-  <p class="ask-examples msg">
-    Try:
-    <button type="button" class="example" data-q="why juniors stop getting hired">juniors</button>
-    <button type="button" class="example" data-q="what is the master asymmetry">master asymmetry</button>
-    <button type="button" class="example" data-q="will energy or capital bind first">energy vs capital</button>
-    <button type="button" class="example" data-q="what happens if Taiwan fabs fail">Taiwan</button>
-  </p>
-
-  <section id="answer-panel" class="ask-panel" hidden>
-    <h2>Answer <span class="tag" id="answer-tag"></span></h2>
-    <div id="answer" class="ask-answer"></div>
-  </section>
-
-  <section id="hits-panel" class="ask-panel" hidden>
-    <h2>Sources <span class="tag" id="hits-tag"></span></h2>
-    <ol id="hits" class="ask-hits"></ol>
-  </section>
-
-  <section class="ask-panel ask-about">
-    <h2>How this works</h2>
+<dialog id="help-dialog" class="modal" aria-labelledby="help-title">
+  <div class="modal-head">
+    <h2 id="help-title">How this works</h2>
+    <button type="button" class="btn-icon" id="help-close" aria-label="Close">Esc ✕</button>
+  </div>
+  <div class="modal-body">
     <div class="table-scroll">
       <table>
         <thead>
@@ -120,26 +172,24 @@
           <tr><td>BM25</td><td>Exact terms: “master asymmetry”, “B3”, “Taiwan”</td></tr>
           <tr><td>Dense</td><td>MiniLM 384-d cosine (same model as the CLI embed index)</td></tr>
           <tr><td>RRF</td><td>Fuses both rank lists · 1/(60+rank)</td></tr>
-          <tr><td>Generate</td><td>LFM2.5-350M · transformers.js v4 worker · WebGPU q4 · chat template</td></tr>
+          <tr><td>Generate</td><td>LFM2.5-350M · transformers.js v4 · WebGPU q4</td></tr>
         </tbody>
       </table>
     </div>
     <p class="msg">
-      Retrieval runs on the ask server when available; otherwise BM25/dense run in the browser from <code>/rag/</code>.
-      Generation runs on-device in a Web Worker (transformers.js v4 · AutoModel · WebGPU q4 · shader warmup). Nothing leaves your machine after the model download.
+      Retrieval runs on the ask server when available; otherwise BM25 and dense run in
+      the browser from <code>/rag/</code>. Generation runs on-device in a Web Worker
+      (transformers.js v4 · AutoModel · WebGPU q4 · shader warmup). Nothing leaves your
+      machine after the model download.
     </p>
-  </section>
-</main>
-
-<footer class="statusbar">
-  <div class="statusbar-inner">
-    <span class="sb-path" id="sb-path">/ask/</span>
-    <span class="sb-actions">
-      <a class="sb-link" href="../">Index</a>
-      <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
-    </span>
+    <dl class="modal-keys">
+      <dt><kbd>⌘</kbd><kbd>↵</kbd></dt><dd>Ask</dd>
+      <dt><kbd>/</kbd></dt><dd>Focus the question box</dd>
+      <dt><kbd>t</kbd></dt><dd>Toggle light / dark</dd>
+      <dt><kbd>?</kbd></dt><dd>This panel</dd>
+    </dl>
   </div>
-</footer>
+</dialog>
 
 <script type="module" src="app.js"></script>
 </body>

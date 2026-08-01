@@ -29,19 +29,26 @@ const $ = (id) => document.getElementById(id);
 const el = {
   form: $("ask-form"),
   q: $("q"),
+  qCount: $("q-count"),
+  composer: $("composer"),
   method: $("method"),
   k: $("k"),
   generate: $("generate"),
+  optsSummary: $("opts-summary"),
   go: $("go"),
   retrieveOnly: $("retrieve-only"),
   loadModel: $("load-model"),
   status: $("status-line"),
-  answerPanel: $("answer-panel"),
-  answer: $("answer"),
-  answerTag: $("answer-tag"),
-  hitsPanel: $("hits-panel"),
+  statusWrap: $("status-wrap"),
+  chatLog: $("chat-log"),
+  chatEmpty: $("chat-empty"),
   hits: $("hits"),
   hitsTag: $("hits-tag"),
+  hitsEmpty: $("hits-empty"),
+  toggleHits: $("toggle-hits"),
+  helpBtn: $("help-btn"),
+  helpDialog: $("help-dialog"),
+  helpClose: $("help-close"),
   theme: $("theme"),
   loadProgress: $("load-progress"),
   loadLabel: $("load-label"),
@@ -96,10 +103,12 @@ const workerWaiters = new Map();
 
 function setStatus(text, kind = "ok") {
   el.status.textContent = text;
-  el.status.classList.remove("is-ok", "is-warn", "is-err");
-  el.status.classList.add(
-    kind === "err" ? "is-err" : kind === "warn" ? "is-warn" : "is-ok",
-  );
+  const cls = kind === "err" ? "is-err" : kind === "warn" ? "is-warn" : "is-ok";
+  for (const node of [el.status, el.statusWrap]) {
+    if (!node) continue;
+    node.classList.remove("is-ok", "is-warn", "is-err");
+    node.classList.add(cls);
+  }
 }
 
 /* ── load progress bar ──────────────────────────────────────────────────── */
@@ -684,7 +693,7 @@ async function search(query, method, k) {
  * Keep this short — LFM2.5-350M follows long rule lists poorly and starts
  * talking about "the excerpts" or writing literal "[n]" placeholders.
  */
-const SYSTEM_PROMPT = `You are a concise analyst. Answer the user's question using only the numbered sources below. Write 2-5 plain sentences. Put real citation numbers like [1] or [2] after claims. Never invent facts. Never discuss the sources themselves ("the excerpts say…", "the documents discuss…"). Never write the placeholder [n].`;
+const SYSTEM_PROMPT = `You are a concise analyst. Answer the user's question using only the sources below. Write 2-5 plain sentences of prose. Never use bracket citations or reference numbers of any kind — no [1], no [2], no [n]. Never invent facts. Never discuss the sources themselves ("the excerpts say…", "the documents discuss…"). Start directly with the answer.`;
 
 /** Soft floor so generation is not dominated by weak tail hits. */
 function selectContextHits(hits, max = 6) {
@@ -710,7 +719,7 @@ function buildUserPrompt(query, hits) {
   for (let i = 0; i < packed.length; i++) {
     const h = packed[i];
     const loc = h.path + (h.heading ? " · " + h.heading : "");
-    const header = `Source ${i + 1} [${i + 1}] ${loc}\n`;
+    const header = `Source ${i + 1} — ${loc}\n`;
     const budget = MAX_CONTEXT_CHARS - used - header.length - 8;
     if (budget < 100) break;
     let body = h.text || "";
@@ -725,14 +734,14 @@ ${parts.join("\n\n")}
 
 Question: ${query}
 
-Answer the question in 2-5 sentences using the sources. Cite like [1] or [2]. Do not mention "excerpts" or "sources" as a topic. Start with the answer:`;
+Answer the question in 2-5 sentences of plain prose using the sources. Do not use bracket citations such as [1] or [2]. Do not mention "excerpts" or "sources" as a topic. Start with the answer:`;
 }
 
 /** Clean common 350M failure modes in the streamed answer. */
 function cleanGeneratedAnswer(text) {
   let t = String(text || "").trim();
-  // Literal placeholder citations
-  t = t.replace(/\[n\]/gi, "");
+  // Strip every bracket citation — the UI shows sources in their own column.
+  t = t.replace(/\s*\[\s*(?:\d+|n)\s*\]/gi, "");
   // Meta openers the small model loves
   t = t.replace(
     /^(Based on (the )?(excerpts?|sources?|documents?|corpus)[^.]*\.\s*)+/i,
@@ -743,6 +752,9 @@ function cleanGeneratedAnswer(text) {
     "",
   );
   t = t.replace(/\s+/g, " ").trim();
+  // Tidy the gaps a removed citation leaves behind
+  t = t.replace(/\s+([,.;:!?])/g, "$1");
+  t = t.replace(/^[\s,.;:—-]+/, "");
   return t;
 }
 
@@ -867,8 +879,6 @@ function renderMarkdown(src) {
       }
       return `<span class="md-linkish">${label}</span>`;
     });
-    // citation markers [1]
-    t = t.replace(/\[(\d+)\]/g, '<span class="cite">[$1]</span>');
     return t;
   };
 
@@ -984,12 +994,19 @@ function renderMarkdown(src) {
 }
 
 function renderHits(hits, method) {
-  el.hitsPanel.hidden = false;
   const scoreLabel =
     method === "hybrid" ? "rrf" : method === "dense" ? "cos" : "bm25";
-  el.hitsTag.textContent = `${hits.length} · ${method}`;
+  el.hitsTag.textContent = hits.length ? `${hits.length} · ${method}` : "";
+  el.hitsEmpty.hidden = hits.length > 0;
+  if (el.toggleHits) {
+    el.toggleHits.hidden = hits.length === 0;
+    el.toggleHits.textContent = "Expand";
+    el.toggleHits.setAttribute("aria-expanded", "false");
+  }
+
+  const top = hits[0]?.score || 0;
   el.hits.innerHTML = hits
-    .map((h) => {
+    .map((h, i) => {
       const loc =
         h.heading && h.heading !== h.title
           ? `${escapeHtml(h.title)} · ${escapeHtml(h.heading)}`
@@ -998,30 +1015,148 @@ function renderHits(hits, method) {
       if (h.methods?.length) tags.push(h.methods.join("+"));
       if (h.bm25 != null) tags.push(`bm25=${h.bm25}`);
       if (h.dense != null) tags.push(`cos=${h.dense}`);
-      const meta = [
-        `${scoreLabel}=${h.score}`,
-        escapeHtml(h.path),
-        ...tags,
-      ].join(" · ");
+      const pct = top > 0 ? Math.max(4, Math.round(((h.score || 0) / top) * 100)) : 0;
       return `<li>
-        <div class="hit-head">
-          <a class="hit-title" href="${escapeHtml(mdToHref(h.path))}">${loc}</a>
-          <span class="hit-meta">${meta}</span>
-        </div>
-        <div class="hit-text md-body">${renderMarkdown(h.text)}</div>
+        <details class="hit">
+          <summary>
+            <span class="hit-n">${i + 1}</span>
+            <a class="hit-title" href="${escapeHtml(mdToHref(h.path))}">${loc}</a>
+            <span class="hit-score">${scoreLabel} ${h.score}</span>
+            <span class="hit-sub">
+              <span class="hit-path">${escapeHtml(h.path)}</span>
+              ${tags.length ? `<span class="hit-tags">${escapeHtml(tags.join(" · "))}</span>` : ""}
+            </span>
+            <span class="hit-meter"><span style="width:${pct}%"></span></span>
+          </summary>
+          <div class="hit-body">
+            <div class="hit-text md-body">${renderMarkdown(h.text)}</div>
+            <a class="hit-open" href="${escapeHtml(mdToHref(h.path))}">Open page →</a>
+          </div>
+        </details>
       </li>`;
     })
     .join("");
 }
 
+function showHitsSkeleton(n = 4) {
+  el.hitsEmpty.hidden = true;
+  if (el.toggleHits) el.toggleHits.hidden = true;
+  el.hitsTag.textContent = "retrieving…";
+  el.hits.innerHTML = Array.from(
+    { length: n },
+    () =>
+      `<li class="skeleton"><div class="skeleton-line"></div><div class="skeleton-line"></div><div class="skeleton-line"></div></li>`,
+  ).join("");
+}
+
+/* ── chat transcript ────────────────────────────────────────────────────── */
+
+/** The assistant bubble currently being written to. */
+let currentBot = null;
+
+function clockLabel() {
+  return new Date().toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+function atBottom() {
+  return (
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 160
+  );
+}
+
+function scrollToLatest(force = false) {
+  if (!force && !atBottom()) return;
+  requestAnimationFrame(() => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  });
+}
+
+function appendRow(kind, author, avatar) {
+  el.chatEmpty?.remove();
+  const li = document.createElement("li");
+  li.className = `msg-row is-${kind}`;
+  li.innerHTML = `
+    <div class="msg-avatar" aria-hidden="true">${avatar}</div>
+    <div class="msg-body">
+      <div class="msg-head">
+        <span class="msg-author">${author}</span>
+        <span class="msg-time">${clockLabel()}</span>
+      </div>
+      <div class="msg-content"></div>
+    </div>`;
+  el.chatLog.appendChild(li);
+  return li;
+}
+
+function appendUserMessage(text) {
+  const row = appendRow("user", "You", "YOU");
+  row.querySelector(".msg-content").textContent = text;
+  scrollToLatest(true);
+  return row;
+}
+
+/** Open an assistant bubble; subsequent renderAnswer() calls fill it. */
+function startBotMessage(label = "thinking") {
+  const row = appendRow("bot", "Corpus", "▚");
+  const content = row.querySelector(".msg-content");
+  content.innerHTML = `<span class="thinking"><span>·</span><span>·</span><span>·</span></span>`;
+
+  const foot = document.createElement("div");
+  foot.className = "msg-foot";
+  foot.innerHTML = `<span class="tag"></span>`;
+  row.querySelector(".msg-body").appendChild(foot);
+
+  currentBot = { row, content, foot, tag: foot.querySelector(".tag") };
+  currentBot.tag.textContent = label;
+  scrollToLatest(true);
+  return currentBot;
+}
+
 function renderAnswer(text, model, streaming) {
-  el.answerPanel.hidden = false;
-  el.answerTag.textContent = model || "";
-  el.answer.classList.toggle("is-streaming", !!streaming);
-  // Answers are mostly prose; still run light markdown + cite highlighting
-  el.answer.innerHTML = text
-    ? `<div class="md-body">${renderMarkdown(text)}</div>`
-    : "&nbsp;";
+  if (!currentBot) startBotMessage();
+  currentBot.row.classList.toggle("is-streaming", !!streaming);
+  currentBot.tag.textContent = model || "";
+  if (text) {
+    currentBot.content.innerHTML = `<div class="md-body">${renderMarkdown(text)}</div>`;
+  }
+  scrollToLatest();
+}
+
+/** Finish the current bubble: stop the caret, add a copy affordance. */
+function endBotMessage({ text, model, sources } = {}) {
+  if (!currentBot) return;
+  currentBot.row.classList.remove("is-streaming");
+  if (model != null) currentBot.tag.textContent = model;
+
+  if (sources != null) {
+    const s = document.createElement("span");
+    s.textContent = `${sources} source${sources === 1 ? "" : "s"}`;
+    currentBot.foot.appendChild(s);
+  }
+  if (text) {
+    const copy = document.createElement("button");
+    copy.type = "button";
+    copy.className = "btn-icon";
+    copy.textContent = "Copy";
+    copy.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+        copy.textContent = "Copied";
+        setTimeout(() => (copy.textContent = "Copy"), 1200);
+      } catch {
+        copy.textContent = "Failed";
+      }
+    });
+    currentBot.foot.appendChild(copy);
+  }
+  currentBot = null;
 }
 
 function setBusy(on) {
@@ -1029,6 +1164,7 @@ function setBusy(on) {
   el.go.disabled = on;
   el.retrieveOnly.disabled = on;
   el.loadModel.disabled = on;
+  el.go.textContent = on ? "…" : "Ask";
 }
 
 /* ── actions ────────────────────────────────────────────────────────────── */
@@ -1044,40 +1180,63 @@ async function run({ withGenerate }) {
   const k = Number(el.k.value) || 8;
 
   setBusy(true);
-  el.answerPanel.hidden = true;
-  el.hitsPanel.hidden = true;
+  appendUserMessage(query);
+  el.q.value = "";
+  autoGrow();
+  updateCount();
+  startBotMessage(withGenerate ? "retrieving…" : "retrieving…");
+  showHitsSkeleton(Math.min(k, 5));
   setStatus("Retrieving…", "warn");
+
+  const started = performance.now();
 
   try {
     const result = await search(query, method, k);
     renderHits(result.hits, result.method);
+    const where = apiOk ? "server" : "browser";
     setStatus(
-      `Retrieved ${result.hits.length} · ${result.method}${apiOk ? " · server" : " · browser"}`,
+      `Retrieved ${result.hits.length} · ${result.method} · ${where}`,
       "ok",
     );
 
-    if (withGenerate) {
-      renderAnswer("", "generating…", true);
-      setStatus("Generating with LFM2.5…", "warn");
-      const answer = await generateAnswer(query, result.hits, (partial) => {
-        renderAnswer(partial, `${GEN_MODEL.split("/").pop()} · streaming`, true);
-      });
-      renderAnswer(answer.text, answer.model, false);
-      setStatus(
-        answer.model
-          ? `Done · ${answer.model}`
-          : `Done · retrieval only`,
-        "ok",
+    if (!withGenerate) {
+      const secs = ((performance.now() - started) / 1000).toFixed(1);
+      renderAnswer(
+        result.hits.length
+          ? `Retrieved ${result.hits.length} passages — see **Sources**.`
+          : "Nothing in the corpus matched that query.",
+        `${result.method} · ${secs}s`,
+        false,
       );
+      endBotMessage({ sources: result.hits.length });
+      return;
     }
+
+    renderAnswer("", "generating…", true);
+    setStatus("Generating with LFM2.5…", "warn");
+    const answer = await generateAnswer(query, result.hits, (partial) => {
+      renderAnswer(partial, `${GEN_MODEL.split("/").pop()} · streaming`, true);
+    });
+    const secs = ((performance.now() - started) / 1000).toFixed(1);
+    const tag = answer.model ? `${answer.model} · ${secs}s` : `${secs}s`;
+    renderAnswer(answer.text, tag, false);
+    endBotMessage({
+      text: answer.text,
+      model: tag,
+      sources: result.hits.length,
+    });
+    setStatus(answer.model ? `Done · ${answer.model}` : "Done", "ok");
   } catch (err) {
     console.error(err);
     const msg = formatError(err);
     setStatus(msg, "err");
-    el.answerPanel.hidden = false;
-    renderAnswer(`Error: ${msg}`, null, false);
+    if (currentBot) currentBot.row.classList.add("is-error");
+    renderAnswer(`**Error** — ${msg}`, "failed", false);
+    endBotMessage({});
   } finally {
+    endBotMessage({});
     setBusy(false);
+    el.q.focus();
   }
 }
 
@@ -1115,8 +1274,30 @@ document.querySelectorAll("button.example").forEach((btn) => {
   btn.addEventListener("click", () => {
     el.q.value = btn.getAttribute("data-q") || "";
     el.q.focus();
+    autoGrow();
+    updateCount();
   });
 });
+
+/* ── composer behaviour ─────────────────────────────────────────────────── */
+
+function autoGrow() {
+  el.q.style.height = "auto";
+  el.q.style.height = `${el.q.scrollHeight}px`;
+}
+
+function updateCount() {
+  if (!el.qCount) return;
+  const n = el.q.value.length;
+  el.qCount.textContent = n > 1600 ? `${n}/2000` : "";
+}
+
+el.q.addEventListener("input", () => {
+  autoGrow();
+  updateCount();
+});
+el.q.addEventListener("focus", () => el.composer?.classList.add("is-focused"));
+el.q.addEventListener("blur", () => el.composer?.classList.remove("is-focused"));
 
 // Cmd/Ctrl+Enter to submit
 el.q.addEventListener("keydown", (e) => {
@@ -1126,4 +1307,59 @@ el.q.addEventListener("keydown", (e) => {
   }
 });
 
+/* ── options summary ────────────────────────────────────────────────────── */
+
+function syncOptsSummary() {
+  if (!el.optsSummary) return;
+  el.optsSummary.textContent = `${el.method.value} · ${el.k.value} hits · generate ${el.generate.checked ? "on" : "off"}`;
+}
+[el.method, el.k, el.generate].forEach((node) =>
+  node?.addEventListener("change", syncOptsSummary),
+);
+syncOptsSummary();
+
+/* ── sources: expand / collapse all ─────────────────────────────────────── */
+
+el.toggleHits?.addEventListener("click", () => {
+  const expand = el.toggleHits.getAttribute("aria-expanded") !== "true";
+  el.hits.querySelectorAll("details.hit").forEach((d) => (d.open = expand));
+  el.toggleHits.setAttribute("aria-expanded", String(expand));
+  el.toggleHits.textContent = expand ? "Collapse" : "Expand";
+});
+
+/* ── help modal ─────────────────────────────────────────────────────────── */
+
+function openHelp() {
+  if (!el.helpDialog) return;
+  if (typeof el.helpDialog.showModal === "function") el.helpDialog.showModal();
+  else el.helpDialog.setAttribute("open", "");
+}
+function closeHelp() {
+  if (typeof el.helpDialog?.close === "function") el.helpDialog.close();
+  else el.helpDialog?.removeAttribute("open");
+}
+el.helpBtn?.addEventListener("click", openHelp);
+el.helpClose?.addEventListener("click", closeHelp);
+// Click outside the panel (on the backdrop) closes it.
+el.helpDialog?.addEventListener("click", (e) => {
+  if (e.target === el.helpDialog) closeHelp();
+});
+
+/* ── page shortcuts ─────────────────────────────────────────────────────── */
+
+document.addEventListener("keydown", (e) => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const t = e.target;
+  const typing =
+    t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
+  if (e.key === "?" && !typing) {
+    e.preventDefault();
+    el.helpDialog?.open ? closeHelp() : openHelp();
+  } else if (e.key === "/" && !typing) {
+    e.preventDefault();
+    el.q.focus();
+  }
+});
+
+autoGrow();
 probeApi();
