@@ -664,6 +664,28 @@ function clientScript(doc) {
     return;
   }
 
+  /* ── scheduled posts ───────────────────────────────────────────────────
+     Visibility is the date, computed here at view time so a post surfaces
+     on its day without a rebuild. Index rows and chain cells carry
+     data-post-date and hide while future; archives rows carry
+     data-scheduled-until and shed their badge once the day arrives. */
+  var nowD = new Date();
+  var today = nowD.getFullYear() + "-" +
+    ("0" + (nowD.getMonth() + 1)).slice(-2) + "-" +
+    ("0" + nowD.getDate()).slice(-2);
+  var futs = document.querySelectorAll("[data-post-date]");
+  for (var fi = 0; fi < futs.length; fi++) {
+    if (futs[fi].getAttribute("data-post-date") > today) futs[fi].hidden = true;
+  }
+  var scheds = document.querySelectorAll("[data-scheduled-until]");
+  for (var si = 0; si < scheds.length; si++) {
+    if (scheds[si].getAttribute("data-scheduled-until") <= today) {
+      scheds[si].classList.remove("scheduled");
+      var badge = scheds[si].querySelector(".sched-badge");
+      if (badge) badge.hidden = true;
+    }
+  }
+
   function escapeHtml(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
       .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -1101,7 +1123,7 @@ function postNavHtml(post, posts) {
   const newer = i > 0 ? posts[i - 1] : null;
   const older = i < posts.length - 1 ? posts[i + 1] : null;
   const cell = (dir, other) => other
-    ? `<div class="cell"><span class="dir">${dir}</span><a href="${relHref(post.doc, other.doc)}">${escapeHtml(other.title)}</a></div>`
+    ? `<div class="cell" data-post-date="${other.date}"><span class="dir">${dir}</span><a href="${relHref(post.doc, other.doc)}">${escapeHtml(other.title)}</a></div>`
     : `<div class="cell empty"><span class="dir">${dir}</span> - </div>`;
   return `<nav class="pagenav grid">${cell("← Older", older)}${cell("Newer →", newer)}</nav>`;
 }
@@ -1154,7 +1176,7 @@ async function buildBlogIndex(posts, pages) {
   const framework = standing("framework");
   const scorecard = standing("forecasts");
 
-  const rows = posts.map(p => `<tr>
+  const rows = posts.map(p => `<tr data-post-date="${p.date}">
 <td class="width-min"><time datetime="${p.date}">${p.date}</time></td>
 <td class="width-auto">
   <a class="post-link" href="${relHref(doc, p.doc)}">${inline(p.title, doc)}</a>
@@ -1201,11 +1223,11 @@ ${posts.length
 async function buildArchives(posts, pages) {
   const doc = `${BLOG.dir}/archives/README.md`;
 
-  const rows = posts.map(p => `<tr${p.scheduled ? ` class="scheduled"` : ""}>
+  const rows = posts.map(p => `<tr${p.scheduled ? ` class="scheduled" data-scheduled-until="${p.date}"` : ""}>
 <td class="width-min"><time datetime="${p.date}">${p.date}</time></td>
 <td class="width-auto">
   <a class="post-link" href="${relHref(doc, p.doc)}">${inline(p.title, doc)}</a>
-  ${p.scheduled ? `<span class="tag">scheduled</span>` : ""}
+  ${p.scheduled ? `<span class="tag sched-badge">scheduled</span>` : ""}
   ${p.dek ? `<span class="row-dek">${inline(p.dek, doc)}</span>` : ""}
 </td>
 <td class="width-min post-mins">${p.minutes} min</td>
@@ -1213,7 +1235,7 @@ async function buildArchives(posts, pages) {
 
   const scheduled = posts.filter(p => p.scheduled).length;
   const body = `<section class="blog-intro">
-<p>Every post, including the ${scheduled === 1 ? "one" : scheduled} not yet on <a href="${relHref(doc, `${BLOG.dir}/README.md`)}">the front page</a>. A post dated ahead of the last build sits here first and joins the index, the feed, and the chain on its date.</p>
+<p>Every post, including any not yet on <a href="${relHref(doc, `${BLOG.dir}/README.md`)}">the front page</a>. A post dated in the future sits here first and joins the front page on its date${scheduled ? ` (${scheduled} waiting as of the last build)` : ""}.</p>
 </section>
 
 <h2 class="plain">All posts</h2>
@@ -1264,10 +1286,12 @@ async function buildBlog(titles) {
   const posts = entries.filter(e => !e.page);
   const live = posts.filter(p => !p.scheduled);
   const pages = entries.filter(e => e.page);
-  // Scheduled posts render (the archives page links them) but chain, index,
-  // and feed only see live posts, so they surface on their date.
-  for (const entry of entries) await buildPost(entry, live, titles);
-  await buildBlogIndex(live, pages);
+  // Every post builds into the index and chain, stamped with its date; the
+  // client script hides future ones at view time, so a post surfaces on its
+  // day without a rebuild. Only the feed (a static artifact read by
+  // machines) stays build-time gated.
+  for (const entry of entries) await buildPost(entry, posts, titles);
+  await buildBlogIndex(posts, pages);
   await buildArchives(posts, pages);
   await writeFeed(live);
 

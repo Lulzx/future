@@ -53,12 +53,13 @@ corpus: 01-substrate/data.md, 02-games/4-labor.md
 ---
 ```
 
-- Visibility is the date, nothing else. A post dated past the build date is
-  *scheduled*: its page renders and its links are checked, but it stays out of
-  the index, the feed, Find, and the older/newer chain until a build runs on
-  or after its date. `blog/archives/` lists every post, scheduled ones badged.
-  New posts are dated one day after the previous post. The site is static, so
-  a scheduled post surfaces on the first deploy on or after its date.
+- Visibility is the date, nothing else. Every post builds and ships. The
+  index and the older/newer chain stamp each entry with `data-post-date`, and
+  the client script hides future ones at view time, so a post surfaces on its
+  date with no rebuild. `blog/archives/` lists every post, future ones
+  badged. Only the RSS feed and the Find catalog are build-time gated, so
+  they pick up a new post at the next deploy. New posts are dated one day
+  after the previous post.
 - `corpus:` renders as a "Where this comes from" source list. A claim with no
   corpus page behind it should not be in the post.
 - A leading `# Title` in the body is stripped, since the header renders
