@@ -1,11 +1,11 @@
 ---
 title: The Scorecard
 dek: Every claim on this blog that can be caught failing, held still long enough to be graded. Each one carries a probability, a resolution date, and the rule it resolves by.
-date: 2026-08-02
+date: 2026-08-05
 tags: forecasts, method
 page: true
 takeaway: A forecast that cannot lose is marketing. Everything on this page can lose.
-corpus: 07-indicators/README.md, 06-uncertainties/README.md, 01-substrate/inference-economics.md, 06-uncertainties/taiwan.md, 06-uncertainties/learned-verification.md, 01-substrate/energy.md, 02-games/4-labor.md
+corpus: 07-indicators/README.md, 06-uncertainties/README.md, 01-substrate/inference-economics.md, 06-uncertainties/taiwan.md, 01-substrate/energy.md, 02-games/4-labor.md, 01-substrate/capital.md, 03-domains/cognitive/insurance.md, 09-macro/prices.md
 ---
 
 # The Scorecard
@@ -38,8 +38,14 @@ Several of these rules sharpen claims the posts made loosely. That sharpening is
 | 9 | Over 100 MW of AI compute operating in orbit | 60% | Dec 2030 |
 | 10 | Junior hiring misses the next white-collar recovery | 65% | conditional |
 | 11 | No professional body mandates AI-era training ratios | 80% | Dec 2029 |
+| 12 | If a correction comes, a credit event fires first | 65% | conditional |
+| 13 | The frontier consolidates to 3 to 5 labs | 70% | Dec 2029 |
+| 14 | AI liability is a distinct insurance line with published rates | 70% | Dec 2030 |
+| 15 | First correlated AI loss brings a backstop bill within 18 months | 75% | conditional |
+| 16 | The cognitive-physical price split shows in official statistics | 70% | Dec 2030 |
+| 17 | A major central bank revises its target | 50% | Dec 2035 |
 
-Rows 1 through 9 opened 1 August 2026, rows 10 and 11 on 2 August 2026. All eleven open.
+Rows 1 through 9 opened 1 August 2026, then two rows with each post since: 10 and 11 on 2 August, 12 and 13 on 3 August, 14 and 15 on 4 August, 16 and 17 on 5 August. All seventeen open.
 
 ## 1. The open-weight lag is still six months or shorter at the end of 2027
 
@@ -128,6 +134,48 @@ The same post's scorecard-of-responses observes that as of August 2026 no profes
 **Resolves yes if**, by 31 December 2029, no major professional body in law, accounting, or engineering in the US or UK (state bars or the ABA, AICPA or ICAEW, or an equivalent licensing institution) has adopted a binding requirement on junior training intake or supervision ratios that its own text or contemporaneous statements tie to AI displacement of junior work. Voluntary guidance, reports, and consultations do not count. A binding rule does, whatever it is called.
 
 **Resolves no** is the hopeful branch: the commons failure getting a collective fix inside the corpus window, faster than the medical precedent suggests. Opened at 80%.
+
+## 12. If a 2027 to 2029 correction arrives, its proximate trigger is a credit event, not an earnings miss
+
+[The AI Race Ends in a Refinancing](capex-verdict.md) carries [the corpus's claim](../01-substrate/capital.md) that the equity story is well covered and the debt story is where the leverage is. A conditional row: it only scores if the correction happens.
+
+**Resolves only if**, before 31 December 2029, US AI infrastructure investment contracts materially: aggregate hyperscaler capex guidance falling year over year, or two consecutive quarters of falling AI datacenter starts per public tracking. **Then resolves yes if** the contraction was preceded or accompanied, within two quarters, by a default, restructuring, or forced collateral liquidation in AI-adjacent structured finance (a neocloud, SPV, or vendor-financing vehicle) reported by major financial press. **Resolves no** if the contraction arrives as a spending pause with no such credit event in the window.
+
+If no correction comes, the row stays open and scores nothing, which is the correct outcome for a conditional. Opened at 65%, matching the corpus.
+
+## 13. By the end of 2029, the frontier has consolidated to three to five labs
+
+The same post carries [Game 1's](../02-games/1-labs.md) standing prediction at its published shape: capital intensity forces consolidation, and a correction culls by financing type.
+
+**Resolves yes if**, on 31 December 2029, five or fewer organizations globally have trained a model within one generation of the frontier in the preceding twelve months, counting a lab and its controlling investor as one organization, per Epoch AI or equivalent public capability tracking. Labs that merged, pivoted away from frontier training, or moved under state or hyperscaler control since 2026 count toward the consolidation, however the press frames the transaction.
+
+The miss scenario: training costs falling faster than capital concentrates, keeping a dozen credible frontier players funded. That world is also the world where row 2 keeps resolving yes, which would be informative tension. Opened at 70%.
+
+## 14. By the end of 2030, AI-specific liability coverage is a distinct line with published rates
+
+[The insurance post](insurance-ceiling.md) argues underwriters govern deployment before legislators do. This is [the corpus's](../03-domains/cognitive/insurance.md) visible-half prediction, carried at its published confidence.
+
+**Resolves yes if**, by 31 December 2030, at least three major carriers or a recognized market (Lloyd's syndicates count) offer standalone AI liability products with rate structures observable in filings, market reports, or broker publications, and the line is material enough to be reported as its own category by at least one industry data source. Riders buried in cyber or E&O policies do not count. Opened at 70%.
+
+## 15. The first correlated AI loss event produces a state-backstop proposal within 18 months
+
+The same post predicts the terrorism-reinsurance template becomes the standing proposal after the first event, inside [the 18-month window](../02-games/2-nations.md) the corpus assigns to post-incident politics. Conditional, like rows 7 and 12.
+
+**Resolves only if** a single AI failure mode produces insured or insurable losses across 100 or more distinct organizations within one quarter, attributed to one model or provider by credible reporting. **Then resolves yes if**, within 18 months, legislation is formally introduced in the US or EU proposing a public backstop or reinsurance facility for correlated AI liability. **Resolves no** if 18 months pass with no such bill.
+
+Opened at 75%. The event itself carries no probability here: this row scores the response, not the disaster.
+
+## 16. The price split shows up in official statistics by the end of 2030
+
+[The two-economies post](two-economies.md) forecasts the cognitive-physical divergence becomes the defining political fact of the 2030s. Politics cannot be scored, but [the corpus's indicator](../07-indicators/diffusion/economy.md) can: the split has to appear in the numbers first, and it has to sustain.
+
+**Resolves yes if**, by 31 December 2030, a cognitive basket of US CPI or PCE components (software, information services, professional and technical services) has diverged from a physical basket (energy, shelter, medical care services, household maintenance and repair) by a cumulative relative price change, sustained over at least eight consecutive quarters, visible in the published component series without seasonal gymnastics. The eight-quarter bar is the corpus's own noise rule: one energy spike or discount season does not count. Opened at 70%.
+
+## 17. A major central bank formally revises its target definition or tolerance band by 2035
+
+The same post carries the corpus's ~50% at face value, and it is the longest-dated row on the board.
+
+**Resolves yes if**, by 31 December 2035, the Federal Reserve, ECB, Bank of England, or Bank of Japan formally changes its inflation target definition, its target index, or its stated tolerance band, in an announced framework revision that its own communications tie at least in part to relative-price divergence or measurement concerns. A routine framework review that reaffirms the status quo resolves no. Opened at 50%, which is the honest way of saying this one is a coin flip and the interesting part is being on the record about the mechanism rather than the outcome.
 
 ---
 

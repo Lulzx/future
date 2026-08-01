@@ -1,11 +1,11 @@
 ---
 title: The Framework
 dek: The posts on this blog keep using the same handful of named concepts. This page says what each one claims, how they fit into one model, and where each claim grounds out in the corpus.
-date: 2026-08-02
+date: 2026-08-05
 tags: method, concepts
 page: true
-takeaway: One model, asked as six questions. Every post is an answer to one of them.
-corpus: 00-overview/README.md, 01-substrate/inference-economics.md, 01-substrate/data.md, 01-substrate/energy.md, 02-games/3-firms.md, 02-games/4-labor.md, 06-uncertainties/taiwan.md
+takeaway: One model, asked as nine questions. Every post is an answer to one of them.
+corpus: 00-overview/README.md, 01-substrate/inference-economics.md, 01-substrate/energy.md, 01-substrate/capital.md, 02-games/3-firms.md, 02-games/4-labor.md, 03-domains/cognitive/insurance.md, 09-macro/prices.md, 06-uncertainties/taiwan.md
 ---
 
 # The Framework
@@ -16,9 +16,9 @@ Each post here reads on its own, but they are not independent essays. They are o
 2. [You Cannot Own a Falling Floor](falling-floor.md), the economic model
 3. [The Bottleneck Migrates](silicon-electrons-permits.md), the physical model
 
-Together they say where AI capability goes next, why having it stops being worth anything, and what scarce thing the race runs into instead. [The Taiwan post](taiwan-gray-zone.md) is the risk model underneath all three: the one assumption that, if it fails, takes the rest of the document with it. [The two-products post](two-products.md) is the people model: what the same transition does to the pipeline that manufactures senior judgment.
+Together they say where AI capability goes next, why having it stops being worth anything, and what scarce thing the race runs into instead. [The Taiwan post](taiwan-gray-zone.md) is the risk model underneath all three: the one assumption that, if it fails, takes the rest of the document with it. [The two-products post](two-products.md) is the people model: what the same transition does to the pipeline that manufactures senior judgment. And three forecast posts run the model forward: [the money](capex-verdict.md), [the deployment gate](insurance-ceiling.md), and [the price index](two-economies.md).
 
-The model itself fits in six questions. Everything on this blog, and most of the corpus, is an answer to one of them.
+The model itself fits in nine questions. Everything on this blog, and most of the corpus, is an answer to one of them.
 
 ## Where does capability go next?
 
@@ -42,11 +42,23 @@ The stable position is to **own the scoreboard**: be the party that defines corr
 
 Currently, nowhere. Junior work was **the Bundle**: a deliverable the firm paid for, and the slow manufacture of a senior professional, sold together because they could not be produced apart. AI lets firms buy the deliverable alone, so each one rationally stops buying the training, and the profession's pipeline dries up while the existing stock of seniors keeps every dashboard green for a decade. The discriminator is **the Recovery Test**: if entry-level hiring misses the next white-collar hiring recovery, around 2027 to 2028, the cut was substitution rather than cycle. Grounded in [the labor game](../02-games/4-labor.md) and [the apprenticeship gap](../06-uncertainties/apprenticeship-gap.md).
 
+## Who is paying, and when do they stop?
+
+Increasingly, lenders, and lenders stop suddenly. Compute, energy, and data are constraints, but capital is **the Verdict**: a continuously re-priced judgment about repayment, the only input that can reverse. The build's financing has been migrating from hyperscaler operating cash toward private credit and SPVs, structures whose failure mode is a credit event rather than a spending pause, and headline AI revenue carries **the Echo**, a reflection of the capex financing it. If the 2027 to 2029 correction arrives, it culls by financing type rather than research quality, and the surviving field is smaller and more state-adjacent. Grounded in [capital](../01-substrate/capital.md) and [the labs game](../02-games/1-labs.md).
+
 ## What physical constraint binds next?
 
 Not chips. The bottleneck migrates, silicon to electrons to permits, and by 2028 the rate-limiting step on US frontier AI is **the Permit Window**: interconnection queues, environmental review, turbine order books. The tell is that variance across US power markets exceeds variance across countries, which is how you know the constraint is institutional rather than physical. Grounded in [energy](../01-substrate/energy.md).
 
 [The orbital post](no-night-no-neighbors.md) extends the migration one step, to kilograms. Terrestrial power pays **the Night Tax**, the firming cost that makes always-on solar a multiple of its record-cheap headline price, and **the Neighbor Problem**, the ratepayer, commissioner, and hearing attached to every site on the map. Orbit pays neither in that form. It still files with the FCC and shares the sky, but what actually prices the bet is launch mass, an industrial constraint rather than a local institutional one, the kind that factories and learning curves grind down.
+
+## Who signs off on deployment?
+
+An underwriter, before any legislator. A firm deploying autonomy needs coverage, the quote requires a view on failure and correlation, and the view becomes a condition that binds at every renewal. **The Exclusion Map**, what policies refuse to cover, charts where autonomy actually operates, and because correlated failure is the uninsurable core, aggregate capacity converges to **the Insurance Ceiling**: what a handful of reinsurance treaties will bear. The precedent is steam boilers and electrical fire, where insurers wrote the code decades before governments did. Grounded in [insurance](../03-domains/cognitive/insurance.md) and [correlated risk](../06-uncertainties/correlated-risk.md).
+
+## What does it do to the cost of living?
+
+Splits it along one axis: cognition deflates, everything intelligence cannot manufacture inflates. The gains arrive as **the Ambient Discount**, unpriced and unnoticed, while the costs arrive as the most salient bills a household has, so the statistics mismeasure the transition and the politics run on the half that hurts. A central bank with one rate and an averaged index is set wrong for both halves at once. Grounded in [prices](../09-macro/prices.md).
 
 ## What would break all of this?
 
@@ -75,5 +87,10 @@ For reference, every named concept in one place. The claim column is deliberatel
 | The Green Dashboard | Indicators built for the dramatic failure stay green through the actual one | [Taiwan](taiwan-gray-zone.md) |
 | The Bundle | Junior work sold a deliverable and manufactured a senior in one purchase | [Two products](two-products.md) |
 | The Recovery Test | If juniors miss the next white-collar recovery, the cut was substitution, not cycle | [Two products](two-products.md) |
+| The Verdict | Capital is the only input that can change its mind, and it reverses in quarters | [Refinancing](capex-verdict.md) |
+| The Echo | Headline AI revenue contains a reflection of the capex financing it | [Refinancing](capex-verdict.md) |
+| The Exclusion Map | What insurers refuse to cover charts where autonomy actually operates | [Insurance](insurance-ceiling.md) |
+| The Insurance Ceiling | Economy-wide deployment converges to what reinsurance treaties will bear | [Insurance](insurance-ceiling.md) |
+| The Ambient Discount | The gains arrive unpriced and unnoticed while the costs arrive as bills | [Two economies](two-economies.md) |
 
 If a future post coins something and it is not on this list within a week, that is a bug in this page.
