@@ -908,14 +908,21 @@ function buildUserPrompt(query, hits, mode = "answer", web = []) {
 Answer in 2-4 sentences of plain prose from your own knowledge. If you are not sure, say so plainly. Do not invent citations or references.`;
   }
 
-  // Web snippets are short; give the corpus most of the budget.
-  const packed = selectContextHits(hits, web.length ? 4 : 5);
+  // Web snippets are short; give the corpus most of the budget. Highlights get
+  // fewer passages — with five to choose from the model blends them into a
+  // claim none of them made.
+  const packed = selectContextHits(
+    hits,
+    mode === "highlight" ? 3 : web.length ? 4 : 5,
+  );
   const parts = [];
   let used = 0;
   for (let i = 0; i < packed.length; i++) {
     const h = packed[i];
     const loc = h.path + (h.heading ? " · " + h.heading : "");
-    const header = `Source ${i + 1} — ${loc}\n`;
+    // No numbers in the label: the model echoes "Source 4 explicitly says…"
+    // when it can, and the reader has no numbered list to match it against.
+    const header = `From ${loc}\n`;
     const budget = MAX_CONTEXT_CHARS - used - header.length - 8;
     if (budget < 100) break;
     let body = h.text || "";
@@ -963,6 +970,8 @@ function cleanGeneratedAnswer(text) {
     /^(The (excerpts?|sources?|documents?) (primarily |mainly )?(discuss|describe|highlight|mention)[^.]*\.\s*)+/i,
     "",
   );
+  // Belt and braces for the label leaking anyway
+  t = t.replace(/\b(Source|Passage|Document)\s+\d+\b/gi, "the corpus");
   // Highlight-mode preamble: "The most striking claim is that X" → "X"
   t = t.replace(
     /^((the|one|a) (most |single most )?(striking|notable|interesting) claim (here )?is( that)?)[:,]?\s*/i,
@@ -1642,6 +1651,29 @@ function isOpenEnded(q) {
   return OPEN_ENDED.test(q);
 }
 
+/**
+ * Retrieval always returns its top k, however unrelated, and the model will
+ * write confidently from whatever it is handed — asked who wrote Dune, it
+ * answered from a passage on scoring method. Cosine separates the two cleanly;
+ * measured over this corpus:
+ *
+ *   on-topic     0.52 (master asymmetry) … 0.65 (junior hiring)
+ *   off-topic    0.13 (Dune) · 0.25 (capital of France) · 0.34 (Berlin wall)
+ *
+ * so 0.45 sits in the gap. BM25 cannot make this call: it scores junk (8.1)
+ * as high as a real question (9.8). Below the line we answer from the model's
+ * own knowledge and say so, rather than dressing up unrelated passages.
+ */
+const MIN_COS = 0.45;
+
+function isOffCorpus(hits) {
+  if (!hits?.length) return true;
+  const cos = hits.reduce((m, h) => Math.max(m, Number(h.dense) || 0), 0);
+  // bm25-only retrieval has no cosine to judge by, and the user picked it.
+  if (!cos) return false;
+  return cos < MIN_COS;
+}
+
 /** Real topics from the corpus, so the seed retrieval lands somewhere good. */
 const HIGHLIGHT_SEEDS = [
   "the master asymmetry in data",
@@ -1799,14 +1831,12 @@ async function run({ withGenerate }) {
       return;
     }
 
-    // Always answer from whatever retrieval actually matched, however loosely
-    // ranked — a weak-match refusal is worse than a grounded best effort, and
-    // the passages are shown alongside so the reader can judge the fit.
-    // The model-knowledge path is reserved for retrieval returning nothing.
-    const offCorpus = !result.hits.length && !web.length;
+    // Nothing in the corpus is close: answer the question from the model's own
+    // knowledge and label it, rather than narrating unrelated passages.
+    const offCorpus = !openEnded && !web.length && isOffCorpus(result.hits);
     if (offCorpus) {
       activity.settle();
-      activity.step("No passages retrieved — answering from model knowledge");
+      activity.step("No corpus match — answering from model knowledge");
       activity.settle();
     }
 
@@ -1831,7 +1861,7 @@ async function run({ withGenerate }) {
       (web.length ? "corpus + web · " : "") +
       `${secs}s`;
     const body = offCorpus
-      ? `${answer.text}\n\n*Retrieval returned no passages, so this is the model's own knowledge — not a claim from the forecast.*`
+      ? `${answer.text}\n\n*Nothing in the corpus covers that, so this is the model's own knowledge — not a claim from the forecast.*`
       : answer.text;
     renderAnswer(body, tag, false);
     endBotMessage({
