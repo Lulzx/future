@@ -1,8 +1,10 @@
 /**
- * Ask UI — hybrid retrieval + LFM2.5-350M generation (WebGPU).
+ * Ask UI — hybrid retrieval + LFM2.5-350M generation.
  *
- * Retrieval: prefer POST /api/search (ask-server); fall back to /rag/* client-side.
- * Generation: onnx-community/LFM2.5-350M-ONNX via @huggingface/transformers CDN.
+ * Retrieval: POST /api/search (ask-server) or /rag/* client-side.
+ * Generation: Web Worker (lfm-worker.js) using transformers.js v4
+ *   AutoTokenizer + AutoModelForCausalLM + WebGPU q4 + shader warmup
+ *   (Liquid docs / sitammeur/lfm2.5-jp-web pattern).
  */
 
 import {
@@ -14,9 +16,10 @@ import {
 const GEN_MODEL = "onnx-community/LFM2.5-350M-ONNX";
 const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
 const EMBED_DIM = 384;
-/** Keep prompt small — 350M + WebGPU OOMs on long RAG contexts (raw code 10290344). */
+/** Keep RAG context modest for 350M on-device decode. */
 const MAX_CONTEXT_CHARS = 2800;
 const MAX_NEW_TOKENS = 256;
+/** MiniLM embedder for client-side dense/hybrid fallback (main thread). */
 const TFJS_CDN =
   "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
 
@@ -53,9 +56,16 @@ let clientIndex = null;
 let clientMatrix = null;
 let clientDim = EMBED_DIM;
 let embedder = null;
-let generator = null;
-let genDevice = null;
 let busy = false;
+
+/** @type {Worker | null} */
+let genWorker = null;
+let genReady = false;
+let genDevice = null;
+let genDtype = null;
+let genModelId = GEN_MODEL;
+/** @type {Map<string, { resolve: Function, reject: Function, onUpdate?: Function }>} */
+const workerWaiters = new Map();
 
 /* ── theme ──────────────────────────────────────────────────────────────── */
 
@@ -304,15 +314,200 @@ async function probeApi() {
     apiOk = true;
     const dense = h.dense ? "dense ready" : "dense missing";
     setStatus(
-      `server · ${h.passages} passages · ${dense} · gen ${GEN_MODEL.split("/").pop()}`,
+      `server · ${h.passages} passages · ${dense} · gen worker LFM2.5 (WebGPU)`,
       h.dense ? "ok" : "warn",
     );
     return true;
   } catch {
     apiOk = false;
-    setStatus("no API — will use static /rag/ in browser", "warn");
+    setStatus("no search API — /rag/ in browser · gen = WebGPU worker", "warn");
     return false;
   }
+}
+
+/* ── LFM worker (v4 AutoModel + WebGPU) ─────────────────────────────────── */
+
+function getGenWorker() {
+  if (genWorker) return genWorker;
+  genWorker = new Worker(new URL("./lfm-worker.js", import.meta.url), {
+    type: "module",
+  });
+  genWorker.onmessage = (e) => onWorkerMessage(e.data || {});
+  genWorker.onerror = (err) => {
+    console.error("LFM worker error", err);
+    setStatus(`Worker error: ${err.message || err}`, "err");
+    // Reject any pending load/generate
+    for (const [id, w] of workerWaiters) {
+      w.reject(new Error(err.message || "Worker failed"));
+      workerWaiters.delete(id);
+    }
+  };
+  return genWorker;
+}
+
+function onWorkerMessage(msg) {
+  const { status } = msg;
+
+  if (status === "progress" && msg.progress) {
+    onModelProgress(msg.progress);
+    return;
+  }
+
+  if (status === "loading") {
+    setProgressUI({
+      label: "Loading LFM2.5",
+      file: msg.data || "",
+      detail: "",
+      indeterminate: !loadState.files.size,
+      pct: aggregatePct(),
+    });
+    setStatus(msg.data || "Loading LFM2.5…", "warn");
+    return;
+  }
+
+  if (status === "webgpu-ok") {
+    setStatus("WebGPU available", "ok");
+    return;
+  }
+
+  if (status === "webgpu-fail") {
+    setStatus(`WebGPU unavailable: ${msg.error || "no adapter"}`, "warn");
+    return;
+  }
+
+  if (status === "start") {
+    setStatus("Generating…", "warn");
+    return;
+  }
+
+  if (status === "update") {
+    const w = workerWaiters.get("generate");
+    if (w?.onUpdate && msg.output != null) w.onUpdate(msg.output);
+    return;
+  }
+
+  if (status === "ready") {
+    genReady = true;
+    genDevice = msg.device || "webgpu";
+    genDtype = msg.dtype || "q4";
+    genModelId = msg.model || GEN_MODEL;
+    setProgressUI({
+      label: "LFM2.5 ready",
+      pct: 100,
+      file: "",
+      detail: `${genDevice} · ${genDtype}`,
+      done: true,
+    });
+    setStatus(`LFM2.5-350M ready · ${genDevice} · ${genDtype}`, "ok");
+    hideProgress(900);
+    const w = workerWaiters.get("load");
+    if (w) {
+      workerWaiters.delete("load");
+      w.resolve(msg);
+    }
+    return;
+  }
+
+  if (status === "complete") {
+    const w = workerWaiters.get("generate");
+    if (w) {
+      workerWaiters.delete("generate");
+      w.resolve(msg);
+    }
+    return;
+  }
+
+  if (status === "error") {
+    const err = new Error(msg.error || msg.raw || "LFM worker error");
+    console.error("LFM worker:", msg);
+    if (msg.phase === "load") {
+      genReady = false;
+      hideProgress();
+      const w = workerWaiters.get("load");
+      if (w) {
+        workerWaiters.delete("load");
+        w.reject(err);
+      }
+    } else {
+      const w = workerWaiters.get("generate");
+      if (w) {
+        workerWaiters.delete("generate");
+        w.reject(err);
+      }
+    }
+    setStatus(formatError(err), "err");
+  }
+}
+
+function workerRequest(type, data, { key, onUpdate } = {}) {
+  const id = key || type;
+  return new Promise((resolve, reject) => {
+    if (workerWaiters.has(id)) {
+      workerWaiters.get(id).reject(new Error("Superseded"));
+      workerWaiters.delete(id);
+    }
+    workerWaiters.set(id, { resolve, reject, onUpdate });
+    getGenWorker().postMessage({ type, data });
+  });
+}
+
+async function ensureGenerator() {
+  if (genReady) return { device: genDevice, dtype: genDtype, model: genModelId };
+
+  resetLoadState("LFM2.5-350M · webgpu · q4");
+  setProgressUI({
+    label: "Loading LFM2.5-350M",
+    file: "Web Worker · WebGPU · q4 · first run ~200MB",
+    detail: "",
+    indeterminate: true,
+  });
+  setStatus("Loading LFM2.5-350M in worker (WebGPU, q4)…", "warn");
+
+  // Prefer WebGPU; if load fails, retry wasm in a fresh worker session.
+  const attempts = [
+    { device: "webgpu", dtype: "q4" },
+    { device: "wasm", dtype: "q4" },
+  ];
+
+  let lastErr = null;
+  for (const attempt of attempts) {
+    try {
+      // Recreate worker between attempts so a poisoned WebGPU session is dropped
+      if (genWorker && lastErr) {
+        genWorker.terminate();
+        genWorker = null;
+        genReady = false;
+      }
+      resetLoadState(`LFM2.5-350M · ${attempt.device} · ${attempt.dtype}`);
+      setProgressUI({
+        label: `Loading LFM2.5-350M`,
+        file: `${attempt.device} · ${attempt.dtype}`,
+        detail: "",
+        indeterminate: true,
+      });
+      setStatus(
+        `Loading LFM2.5 (${attempt.device}, ${attempt.dtype})…`,
+        "warn",
+      );
+      await workerRequest("load", {
+        modelId: GEN_MODEL,
+        device: attempt.device,
+        dtype: attempt.dtype,
+      }, { key: "load" });
+      return { device: genDevice, dtype: genDtype, model: genModelId };
+    } catch (err) {
+      lastErr = err;
+      console.warn(`LFM load failed on ${attempt.device}:`, err);
+      genReady = false;
+      setStatus(
+        `Load failed on ${attempt.device} (${formatError(err)}) — trying fallback…`,
+        "warn",
+      );
+    }
+  }
+
+  hideProgress();
+  throw new Error(`Could not load LFM2.5-350M. ${formatError(lastErr)}`);
 }
 
 /* ── client corpus (static fallback) ────────────────────────────────────── */
@@ -480,7 +675,7 @@ async function search(query, method, k) {
   return searchClient(query, method, k);
 }
 
-/* ── generation (LFM2.5) ────────────────────────────────────────────────── */
+/* ── generation prompts ─────────────────────────────────────────────────── */
 
 const SYSTEM_PROMPT = `You answer questions using ONLY the provided corpus excerpts from "The Next Fifteen Years" forecast document.
 
@@ -513,155 +708,6 @@ ${parts.join("\n\n---\n\n")}
 Answer from the excerpts only.`;
 }
 
-function extractGeneratedText(output, streamed) {
-  let text =
-    output?.[0]?.generated_text?.at?.(-1)?.content ||
-    output?.[0]?.generated_text ||
-    streamed;
-  if (Array.isArray(text)) {
-    const last = text[text.length - 1];
-    text = last?.content || String(last);
-  }
-  if (typeof text !== "string") text = streamed || "(empty)";
-  text = text.trim();
-  if (streamed && streamed.trim().length > text.length) text = streamed.trim();
-  return text;
-}
-
-async function loadGenPipeline(device, dtype) {
-  const { pipeline } = await loadTransformers();
-  return pipeline("text-generation", GEN_MODEL, {
-    dtype,
-    device,
-    progress_callback: onModelProgress,
-  });
-}
-
-async function ensureGenerator() {
-  if (generator) return generator;
-
-  const webgpu = await hasWebGPU();
-  const attempts = webgpu
-    ? [
-        { device: "webgpu", dtype: "q4" },
-        { device: "wasm", dtype: "q4" },
-      ]
-    : [{ device: "wasm", dtype: "q4" }];
-
-  setProgressUI({
-    label: "Loading transformers.js",
-    file: TFJS_CDN.split("@").pop() || "cdn",
-    detail: "",
-    indeterminate: true,
-  });
-  await loadTransformers();
-
-  let lastErr = null;
-  for (const attempt of attempts) {
-    const { device, dtype } = attempt;
-    genDevice = device;
-    resetLoadState(`LFM2.5-350M · ${device} · ${dtype}`);
-    setProgressUI({
-      label: `Loading LFM2.5-350M`,
-      file: `${device} · ${dtype} · ~200MB first run`,
-      detail: "",
-      indeterminate: true,
-    });
-    setStatus(`Loading LFM2.5-350M (${device}, ${dtype})…`, "warn");
-
-    try {
-      generator = await loadGenPipeline(device, dtype);
-      setProgressUI({
-        label: "LFM2.5 ready",
-        pct: 100,
-        file: "",
-        detail: `${device} · ${dtype}`,
-        done: true,
-      });
-      setStatus(`LFM2.5-350M ready · ${device}`, "ok");
-      hideProgress(900);
-      return generator;
-    } catch (err) {
-      lastErr = err;
-      console.warn(`LFM load failed on ${device}/${dtype}:`, err);
-      generator = null;
-      setStatus(
-        `Load failed on ${device} (${formatError(err)}) — trying fallback…`,
-        "warn",
-      );
-    }
-  }
-
-  hideProgress();
-  throw new Error(
-    `Could not load LFM2.5-350M. ${formatError(lastErr)}`,
-  );
-}
-
-/** Drop WebGPU model and reload on WASM after a runtime fault. */
-async function fallbackGeneratorToWasm() {
-  if (genDevice === "wasm" && generator) return generator;
-  console.warn("Falling back to WASM generation…");
-  generator = null;
-  genDevice = "wasm";
-  resetLoadState("LFM2.5-350M · wasm · q4");
-  setProgressUI({
-    label: "Retrying on WASM",
-    file: "WebGPU failed — loading CPU path",
-    detail: "",
-    indeterminate: true,
-  });
-  setStatus("WebGPU failed — reloading LFM2.5 on WASM…", "warn");
-  generator = await loadGenPipeline("wasm", "q4");
-  setProgressUI({
-    label: "LFM2.5 ready",
-    pct: 100,
-    file: "",
-    detail: "wasm · q4",
-    done: true,
-  });
-  hideProgress(700);
-  setStatus("LFM2.5-350M ready · wasm", "ok");
-  return generator;
-}
-
-async function runGeneration(gen, messages, onToken) {
-  const genOpts = {
-    max_new_tokens: MAX_NEW_TOKENS,
-    do_sample: false,
-    temperature: 0.1,
-    top_k: 50,
-    repetition_penalty: 1.05,
-  };
-
-  // Prefer streaming when TextStreamer exists; fall back to one-shot.
-  try {
-    const mod = await loadTransformers();
-    if (typeof mod.TextStreamer === "function") {
-      let streamed = "";
-      const streamer = new mod.TextStreamer(gen.tokenizer, {
-        skip_prompt: true,
-        skip_special_tokens: true,
-        callback_function: (text) => {
-          if (typeof text === "string") {
-            streamed += text;
-            onToken?.(streamed);
-          }
-        },
-      });
-      const output = await gen(messages, { ...genOpts, streamer });
-      return extractGeneratedText(output, streamed);
-    }
-  } catch (err) {
-    console.warn("Streaming generate failed, retrying without streamer:", err);
-  }
-
-  const output = await gen(messages, genOpts);
-  const text = extractGeneratedText(output, "");
-  onToken?.(text);
-  return text;
-}
-
 async function generateAnswer(query, hits, onToken) {
   if (!hits.length) {
     return {
@@ -670,26 +716,57 @@ async function generateAnswer(query, hits, onToken) {
     };
   }
 
-  let gen = await ensureGenerator();
+  await ensureGenerator();
+
   const messages = [
     { role: "system", content: SYSTEM_PROMPT },
     { role: "user", content: buildUserPrompt(query, hits) },
   ];
 
+  const runOnce = () =>
+    workerRequest(
+      "generate",
+      { messages, max_new_tokens: MAX_NEW_TOKENS },
+      { key: "generate", onUpdate: (partial) => onToken?.(partial) },
+    );
+
   try {
-    const text = await runGeneration(gen, messages, onToken);
-    return { text, model: `${GEN_MODEL} · ${genDevice}` };
+    const result = await runOnce();
+    const text = (result.output || "").trim() || "(empty)";
+    onToken?.(text);
+    return {
+      text,
+      model: `${result.model || GEN_MODEL} · ${result.device || genDevice || "webgpu"}`,
+    };
   } catch (err) {
-    console.warn("Generate failed:", err);
-    // Classic WebGPU ORT fault: bare integer (e.g. 10290344)
-    const msg = formatError(err);
-    if (genDevice === "webgpu") {
-      setStatus(`${msg} — retrying on WASM…`, "warn");
-      gen = await fallbackGeneratorToWasm();
-      const text = await runGeneration(gen, messages, onToken);
-      return { text, model: `${GEN_MODEL} · wasm (fallback)` };
+    if (genDevice !== "webgpu") throw new Error(formatError(err));
+
+    // WebGPU decoded OK at load but failed mid-generate — hard switch to WASM.
+    setStatus(`${formatError(err)} — reloading on WASM…`, "warn");
+    genReady = false;
+    if (genWorker) {
+      genWorker.terminate();
+      genWorker = null;
     }
-    throw new Error(msg);
+    resetLoadState("LFM2.5-350M · wasm · q4");
+    setProgressUI({
+      label: "Loading LFM2.5 on WASM",
+      file: "webgpu generate failed",
+      detail: "",
+      indeterminate: true,
+    });
+    await workerRequest(
+      "load",
+      { modelId: GEN_MODEL, device: "wasm", dtype: "q4" },
+      { key: "load" },
+    );
+    const result = await runOnce();
+    const text = (result.output || "").trim() || "(empty)";
+    onToken?.(text);
+    return {
+      text,
+      model: `${result.model || GEN_MODEL} · wasm (fallback)`,
+    };
   }
 }
 

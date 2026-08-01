@@ -11,7 +11,8 @@
  *   /rag/*      → .rag/index.json, vectors.bin, vectors.meta.json
  *   POST /api/search  { query, method?, k? } → hybrid/bm25/dense hits
  *
- * Generation (LFM2.5-350M) runs in the browser via WebGPU — not here.
+ * Generation (LFM2.5-350M) runs in the browser Web Worker via transformers.js v4
+ * (AutoModelForCausalLM + WebGPU) — not on this server.
  */
 
 import { createServer } from "node:http";
@@ -327,7 +328,7 @@ const server = createServer(async (req, res) => {
         files: index.files,
         dense,
         embed: EMBED_MODEL,
-        gen: "onnx-community/LFM2.5-350M-ONNX (browser WebGPU)",
+        gen: "onnx-community/LFM2.5-350M-ONNX (browser worker, WebGPU q4)",
       });
     }
 

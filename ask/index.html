@@ -25,7 +25,7 @@
       </tr>
       <tr>
         <th class="width-min">Mode</th>
-        <td class="width-auto crumb">hybrid retrieval · LFM2.5-350M generate</td>
+        <td class="width-auto crumb">hybrid retrieval · LFM2.5-350M WebGPU worker</td>
       </tr>
       <tr class="keys-row">
         <th class="width-min">Status</th>
@@ -120,13 +120,13 @@
           <tr><td>BM25</td><td>Exact terms: “master asymmetry”, “B3”, “Taiwan”</td></tr>
           <tr><td>Dense</td><td>MiniLM 384-d cosine (same model as the CLI embed index)</td></tr>
           <tr><td>RRF</td><td>Fuses both rank lists · 1/(60+rank)</td></tr>
-          <tr><td>Generate</td><td>LFM2.5-350M · WebGPU · answers only from retrieved excerpts</td></tr>
+          <tr><td>Generate</td><td>LFM2.5-350M · transformers.js v4 worker · WebGPU q4 · chat template</td></tr>
         </tbody>
       </table>
     </div>
     <p class="msg">
       Retrieval runs on the ask server when available; otherwise BM25/dense run in the browser from <code>/rag/</code>.
-      Generation always runs on-device — nothing leaves your machine after the model download.
+      Generation runs on-device in a Web Worker (transformers.js v4 · AutoModel · WebGPU q4 · shader warmup). Nothing leaves your machine after the model download.
     </p>
   </section>
 </main>
