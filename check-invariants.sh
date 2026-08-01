@@ -5,8 +5,11 @@
 # Exit 0 if clean; 1 if any check fails.
 #
 # blog/ is a separate publication, not corpus: it carries its own page chrome
-# and has no length ceiling, so checks 2-7 skip it. Check 1 (link resolution)
-# still covers it — broken links matter everywhere.
+# and has no length ceiling, so checks 2-7 skip it, as does CLAUDE.md.
+#
+# Check 1 (link resolution) is scoped by whether a file ships, not by
+# directory. Everything published is checked, blog posts included. Files that
+# never ship are not: CLAUDE.md and any `_`-prefixed draft.
 
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -26,10 +29,14 @@ broken=$(python3 - <<'PY'
 import pathlib, re
 root = pathlib.Path('.')
 skip = {'_site', 'node_modules', '.rag'}
+skip_files = {'CLAUDE.md'}
 link_re = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
 broken = []
 for f in sorted(root.rglob('*.md')):
     if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
+        continue
+    # never-published working material: contributor docs and `_` drafts
+    if f.name in skip_files or f.name.startswith('_'):
         continue
     text = re.sub(r'```.*?```', '', f.read_text(), flags=re.S)
     for m in link_re.finditer(text):

@@ -26,10 +26,14 @@ top, a 180-line cap, ≤10 content files per directory, ≤3 directory levels, a
 no broken internal links. `deploy.sh` runs it first and `set -e` means a
 failure blocks the deploy.
 
-Two things are exempt from the *corpus* rules but not from link resolution,
-because broken links matter everywhere: `blog/` and this file. The blog carries
-its own page chrome and has no length ceiling, so the nav and line-cap checks
-would be nonsense there.
+`blog/` and this file are exempt from the *corpus* rules. The blog carries its
+own page chrome and has no length ceiling, so the nav and line-cap checks would
+be nonsense there.
+
+Link resolution is scoped differently, by whether a file ships rather than by
+directory. Anything published is checked, including blog posts. Never-published
+working material is not: this file, and any `_`-prefixed draft. So a broken
+link in a post fails the build, and a stale link in a draft does not block you.
 
 Check 7 rewrites `catalog.json`, which drives the Find dialog. It covers the
 corpus only; `build.mjs` folds the blog posts in at build time.
