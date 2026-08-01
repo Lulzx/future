@@ -156,17 +156,46 @@ function slug(text) {
     .replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-");
 }
 
-function tableClasses(head, body) {
+// Column sizing, from how much text each column actually holds. A column whose
+// longest cell is short shrinks to its content. Where the prose lives decides
+// the rest: one column of running prose takes all the slack, but when two or
+// more carry it they split it by typical cell length, because width:100% on one
+// of them starves the other down to a word a line.
+function tableColAttrs(head, body) {
+  const NARROW = 14;   // longest cell, in characters: below this, shrink to fit
+  const PROSE = 25;    // typical cell: above this, the column wraps as text
   const cols = Math.max(head.length, ...body.map(r => r.length), 0);
-  const widths = [];
+  const widths = [];   // longest cell, which decides whether a column is short
+  const means = [];    // typical cell, which decides how the slack is split
+  // Measure what a reader sees. A cell holding one linked word is short, but
+  // its markdown carries the whole relative path, which would read as prose.
+  const visible = s => (s || "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/[*`_]/g, "").length;
   for (let c = 0; c < cols; c++) {
-    let w = (head[c] || "").length;
-    for (const r of body) w = Math.max(w, (r[c] || "").length);
+    let w = visible(head[c]), sum = 0;
+    for (const r of body) {
+      const len = visible(r[c]);
+      w = Math.max(w, len);
+      sum += len;
+    }
     widths.push(w);
+    means.push(body.length ? sum / body.length : w);
   }
-  const widest = widths.indexOf(Math.max(...widths));
-  return widths.map((w, i) =>
-    i === widest ? "width-auto" : (w <= 14 ? "width-min" : ""));
+  const prose = means.map((m, i) => i).filter(i => means[i] > PROSE);
+  // At most one column of running prose: the old rule holds. The widest takes
+  // the slack so the table spans the measure instead of huddling at the left
+  // margin, and nothing else is long enough to be starved by it.
+  if (prose.length < 2) {
+    const widest = prose.length ? prose[0] : widths.indexOf(Math.max(...widths));
+    return widths.map((w, i) =>
+      i === widest ? ` class="width-auto"` : (w <= NARROW ? ` class="width-min"` : ""));
+  }
+  const total = prose.reduce((s, i) => s + means[i], 0);
+  return widths.map((w, i) => {
+    if (!prose.includes(i)) return w <= NARROW ? ` class="width-min"` : "";
+    return ` style="width:${Math.round((means[i] / total) * 100)}%"`;
+  });
 }
 
 function parse(lines, base) {
@@ -207,8 +236,8 @@ function parse(lines, base) {
       i += 2;
       const body = [];
       while (i < lines.length && RE_TROW.test(lines[i])) body.push(splitRow(lines[i++]));
-      const cls = tableClasses(head, body);
-      const klass = c => cls[c] ? ` class="${cls[c]}"` : "";
+      const cls = tableColAttrs(head, body);
+      const klass = c => cls[c] || "";
       const th = head.map((c, n) => `<th${klass(n)}>${inline(c, base)}</th>`).join("");
       const rows = body.map(r =>
         "<tr>" + r.map((c, n) => `<td${klass(n)}>${inline(c, base)}</td>`).join("") + "</tr>").join("");
