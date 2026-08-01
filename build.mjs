@@ -835,6 +835,7 @@ ${contentHtml}
   <div class="statusbar-inner">
     <span class="sb-path" id="sb-path">${escapeHtml(urlPath)}</span>
     <span class="sb-actions">
+      <a class="sb-link" href="${rootPrefix(doc)}ask/" title="Ask the corpus (RAG)">Ask</a>
       <button id="find" type="button" title="Find a page (/)">Find</button>
       <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
       <a class="sb-link" href="${srcHref}">Src</a>
@@ -911,11 +912,49 @@ async function buildDoc(doc, md, nav) {
   await fs.writeFile(out, html);
 }
 
+async function copyDir(src, dest) {
+  await fs.mkdir(dest, { recursive: true });
+  for (const ent of await fs.readdir(src, { withFileTypes: true })) {
+    if (ent.name.startsWith(".")) continue;
+    const from = path.join(src, ent.name);
+    const to = path.join(dest, ent.name);
+    if (ent.isDirectory()) await copyDir(from, to);
+    else await fs.copyFile(from, to);
+  }
+}
+
 async function copyStatic(docs) {
   for (const f of [...docs, "style.css", "catalog.json", "check-invariants.sh"]) {
     const out = path.join(OUT, f);
     await fs.mkdir(path.dirname(out), { recursive: true });
     await fs.copyFile(path.join(ROOT, f), out);
+  }
+
+  // Ask UI (RAG + LFM2.5) — not part of the markdown corpus.
+  const askSrc = path.join(ROOT, "ask");
+  try {
+    await fs.access(askSrc);
+    await copyDir(askSrc, path.join(OUT, "ask"));
+  } catch {
+    /* optional */
+  }
+
+  // Prebuilt retrieval assets for static / browser fallback.
+  const ragSrc = path.join(ROOT, ".rag");
+  try {
+    await fs.access(path.join(ragSrc, "index.json"));
+    const ragOut = path.join(OUT, "rag");
+    await fs.mkdir(ragOut, { recursive: true });
+    for (const name of ["index.json", "vectors.bin", "vectors.meta.json"]) {
+      const from = path.join(ragSrc, name);
+      try {
+        await fs.copyFile(from, path.join(ragOut, name));
+      } catch {
+        /* vectors optional until embed.mjs has run */
+      }
+    }
+  } catch {
+    /* optional until reindex */
   }
 }
 

@@ -330,7 +330,8 @@ function printHits(query, hits) {
     console.log(indent(h.text, "   "));
     console.log();
   }
-  console.log("Tip: `node tools/rag.mjs ask \"…\"` synthesizes an answer (needs XAI_API_KEY).");
+  console.log("Tip: `npm run ask` → http://127.0.0.1:8787/ask/  (LFM2.5 WebGPU generate)");
+  console.log("     or `node tools/rag.mjs ask \"…\"` (needs XAI_API_KEY).");
 }
 
 function printAnswer(answer, hits) {

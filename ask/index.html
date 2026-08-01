@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask · The Next Fifteen Years</title>
+<meta name="description" content="Hybrid RAG over the forecast corpus. Retrieval: BM25 + MiniLM → RRF. Generation: LFM2.5-350M on-device.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▚</text></svg>">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="ask.css">
+</head>
+<body class="ask-page">
+
+<div class="debug-grid" aria-hidden="true"></div>
+
+<header class="masthead">
+  <table class="width-auto">
+    <tbody>
+      <tr>
+        <td class="width-auto" colspan="2">
+          <h1><a href="../">The Next Fifteen Years</a></h1>
+          <span class="subtitle">Ask the corpus</span>
+        </td>
+      </tr>
+      <tr>
+        <th class="width-min">Mode</th>
+        <td class="width-auto crumb">hybrid retrieval · LFM2.5-350M generate</td>
+      </tr>
+      <tr class="keys-row">
+        <th class="width-min">Status</th>
+        <td class="width-auto meta" id="status-line">Checking…</td>
+      </tr>
+    </tbody>
+  </table>
+</header>
+
+<hr>
+
+<main id="content" class="ask-main">
+  <form id="ask-form" class="ask-form" autocomplete="off">
+    <label class="ask-label" for="q">Question</label>
+    <textarea id="q" name="q" rows="3" maxlength="2000"
+      placeholder="e.g. why juniors stop getting hired"
+      required></textarea>
+
+    <div class="ask-controls">
+      <label class="ctrl">
+        Method
+        <select id="method" name="method">
+          <option value="hybrid" selected>hybrid (BM25 + dense → RRF)</option>
+          <option value="bm25">bm25 only</option>
+          <option value="dense">dense only</option>
+        </select>
+      </label>
+      <label class="ctrl">
+        Hits
+        <select id="k" name="k">
+          <option value="6">6</option>
+          <option value="8" selected>8</option>
+          <option value="12">12</option>
+          <option value="16">16</option>
+        </select>
+      </label>
+      <label class="ctrl check">
+        <input type="checkbox" id="generate" checked>
+        Generate (LFM2.5)
+      </label>
+    </div>
+
+    <div class="ask-actions">
+      <button type="submit" id="go" class="btn-primary">Ask</button>
+      <button type="button" id="retrieve-only" class="btn">Retrieve only</button>
+      <button type="button" id="load-model" class="btn">Load LFM2.5</button>
+    </div>
+  </form>
+
+  <p class="ask-examples msg">
+    Try:
+    <button type="button" class="example" data-q="why juniors stop getting hired">juniors</button>
+    <button type="button" class="example" data-q="what is the master asymmetry">master asymmetry</button>
+    <button type="button" class="example" data-q="will energy or capital bind first">energy vs capital</button>
+    <button type="button" class="example" data-q="what happens if Taiwan fabs fail">Taiwan</button>
+  </p>
+
+  <section id="answer-panel" class="ask-panel" hidden>
+    <h2>Answer <span class="tag" id="answer-tag"></span></h2>
+    <div id="answer" class="ask-answer"></div>
+  </section>
+
+  <section id="hits-panel" class="ask-panel" hidden>
+    <h2>Sources <span class="tag" id="hits-tag"></span></h2>
+    <ol id="hits" class="ask-hits"></ol>
+  </section>
+
+  <section class="ask-panel ask-about">
+    <h2>How this works</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Layer</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BM25</td><td>Exact terms: “master asymmetry”, “B3”, “Taiwan”</td></tr>
+          <tr><td>Dense</td><td>MiniLM 384-d cosine (same model as the CLI embed index)</td></tr>
+          <tr><td>RRF</td><td>Fuses both rank lists · 1/(60+rank)</td></tr>
+          <tr><td>Generate</td><td>LFM2.5-350M · WebGPU · answers only from retrieved excerpts</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="msg">
+      Retrieval runs on the ask server when available; otherwise BM25/dense run in the browser from <code>/rag/</code>.
+      Generation always runs on-device — nothing leaves your machine after the model download.
+    </p>
+  </section>
+</main>
+
+<footer class="statusbar">
+  <div class="statusbar-inner">
+    <span class="sb-path" id="sb-path">/ask/</span>
+    <span class="sb-actions">
+      <a class="sb-link" href="../">Index</a>
+      <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
+    </span>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
+    "ask": "node tools/ask-server.mjs",
+    "ask:dev": "node build.mjs && node tools/ask-server.mjs",
     "rag": "node tools/rag.mjs",
     "rag:embed": "node tools/embed.mjs",
     "rag:reindex": "node tools/rag.mjs reindex && node tools/embed.mjs"
