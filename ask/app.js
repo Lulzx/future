@@ -680,14 +680,11 @@ async function search(query, method, k) {
 
 /* ── generation prompts ─────────────────────────────────────────────────── */
 
-const SYSTEM_PROMPT = `You answer questions about "The Next Fifteen Years" using only the numbered corpus excerpts provided.
-
-Rules:
-1. Answer the USER'S QUESTION directly in 2–5 sentences. Lead with that answer — do not open by restating a single excerpt headline or an off-topic passage.
-2. Treat excerpts as evidence, not as the question. Cite claims as [n]. Prefer synthesizing 2+ relevant sources when they apply.
-3. If most excerpts are off-topic for the question, say so briefly and only report the nearest on-topic claims with citations. Do not force an answer out of an irrelevant top hit.
-4. Do not invent facts, numbers, probabilities, or mechanisms missing from the excerpts. Preserve probabilities and ranges exactly when used.
-5. No preamble ("Sure", "Based on the excerpts", "According to the document"). No closing offer to help further.`;
+/**
+ * Keep this short — LFM2.5-350M follows long rule lists poorly and starts
+ * talking about "the excerpts" or writing literal "[n]" placeholders.
+ */
+const SYSTEM_PROMPT = `You are a concise analyst. Answer the user's question using only the numbered sources below. Write 2-5 plain sentences. Put real citation numbers like [1] or [2] after claims. Never invent facts. Never discuss the sources themselves ("the excerpts say…", "the documents discuss…"). Never write the placeholder [n].`;
 
 /** Soft floor so generation is not dominated by weak tail hits. */
 function selectContextHits(hits, max = 6) {
@@ -707,13 +704,13 @@ function selectContextHits(hits, max = 6) {
 }
 
 function buildUserPrompt(query, hits) {
-  const packed = selectContextHits(hits, 6);
+  const packed = selectContextHits(hits, 5);
   const parts = [];
   let used = 0;
   for (let i = 0; i < packed.length; i++) {
     const h = packed[i];
     const loc = h.path + (h.heading ? " · " + h.heading : "");
-    const header = `[${i + 1}] (${loc})\n`;
+    const header = `Source ${i + 1} [${i + 1}] ${loc}\n`;
     const budget = MAX_CONTEXT_CHARS - used - header.length - 8;
     if (budget < 100) break;
     let body = h.text || "";
@@ -721,13 +718,32 @@ function buildUserPrompt(query, hits) {
     parts.push(header + body);
     used += header.length + body.length + 8;
   }
-  return `User question:
-${query}
 
-Corpus excerpts (evidence only — answer the question above, not an excerpt title):
-${parts.join("\n\n---\n\n")}
+  // Put the question last (recency helps small models stay on task).
+  return `Sources:
+${parts.join("\n\n")}
 
-Write the answer now. Cite [n]. If the excerpts do not really answer the question, say what is missing.`;
+Question: ${query}
+
+Answer the question in 2-5 sentences using the sources. Cite like [1] or [2]. Do not mention "excerpts" or "sources" as a topic. Start with the answer:`;
+}
+
+/** Clean common 350M failure modes in the streamed answer. */
+function cleanGeneratedAnswer(text) {
+  let t = String(text || "").trim();
+  // Literal placeholder citations
+  t = t.replace(/\[n\]/gi, "");
+  // Meta openers the small model loves
+  t = t.replace(
+    /^(Based on (the )?(excerpts?|sources?|documents?|corpus)[^.]*\.\s*)+/i,
+    "",
+  );
+  t = t.replace(
+    /^(The (excerpts?|sources?|documents?) (primarily |mainly )?(discuss|describe|highlight|mention)[^.]*\.\s*)+/i,
+    "",
+  );
+  t = t.replace(/\s+/g, " ").trim();
+  return t;
 }
 
 async function generateAnswer(query, hits, onToken) {
@@ -756,12 +772,15 @@ async function generateAnswer(query, hits, onToken) {
     workerRequest(
       "generate",
       { messages, max_new_tokens: MAX_NEW_TOKENS },
-      { key: "generate", onUpdate: (partial) => onToken?.(partial) },
+      {
+        key: "generate",
+        onUpdate: (partial) => onToken?.(cleanGeneratedAnswer(partial) || partial),
+      },
     );
 
   try {
     const result = await runOnce();
-    const text = (result.output || "").trim() || "(empty)";
+    const text = cleanGeneratedAnswer(result.output) || "(empty)";
     onToken?.(text);
     return {
       text,
@@ -790,7 +809,7 @@ async function generateAnswer(query, hits, onToken) {
       { key: "load" },
     );
     const result = await runOnce();
-    const text = (result.output || "").trim() || "(empty)";
+    const text = cleanGeneratedAnswer(result.output) || "(empty)";
     onToken?.(text);
     return {
       text,
