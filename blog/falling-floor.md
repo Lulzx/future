@@ -9,17 +9,15 @@ corpus: 01-substrate/inference-economics.md, 02-games/3-firms.md, 01-substrate/c
 
 # You Cannot Own a Falling Floor
 
-Start with the number, because almost nobody prices off it.
-
 Cost per token **at fixed capability** fell roughly **100–1000× in two years**. That range is deliberately conservative against the measured one. Epoch AI's price-trend series across 2023–25 finds declines of **9× to 900× per year** depending on the task and the capability threshold you hold constant, with a median around **50×/yr**, and the steepest part of the curve starting after January 2024.
 
-Hold that phrase, *at fixed capability*. It is doing all the work. The claim is not that AI gets cheaper in some vague sense. It is that a specific level of intelligence, once it exists, becomes nearly free on a schedule you can put in a spreadsheet.
+Hold that phrase, *at fixed capability*. The claim is not that AI gets cheaper in some vague sense. It is that a specific level of intelligence, once it exists, becomes nearly free on a schedule you can put in a spreadsheet.
 
-Every other constraint in this business is a ceiling. Compute has one. Energy has one. Data has one. This is the only input that is a **floor collapsing**, and it is the number the rest of the forecast leans on hardest.
+Compute, energy, and data all impose ceilings. Inference cost is the one input that moves the other way: a **floor collapsing**.
 
 ## Why "costs are collapsing" and "capex is exploding" are both true
 
-The most common analytical error in AI right now is treating these two facts as contradictory and picking a side. They are the same fact seen from two ends. Jevons: make cognition cheap and the world consumes vastly more of it, so **total spend rises while unit price collapses**.
+These two facts get read as contradictory, so people pick a side. They are the same fact seen from two ends. Jevons: make cognition cheap and the world consumes vastly more of it, so **total spend rises while unit price collapses**.
 
 | Observation | The naive read | The correct read |
 |---|---|---|
@@ -27,7 +25,7 @@ The most common analytical error in AI right now is treating these two facts as 
 | Capex rising | Contradicts the above | Capacity for the volume that just appeared |
 | Wrapper margins compressing | The models failed | Capability commoditized on schedule |
 
-The third row is where most of the money is being lost, so the mechanism deserves to be stated bluntly. Margin compression at the application layer is not evidence that something broke. It is the system working as designed, arriving on time.
+The third row is where most of the money is being lost. Margin compression at the application layer is not evidence that something broke. It is the system working as designed, arriving on time.
 
 ## Three mechanisms, three different expiry dates
 
@@ -41,7 +39,7 @@ The third row is where most of the money is being lost, so the mechanism deserve
 
 Only the third can fail suddenly, and its failure mode is the one that matters commercially.
 
-## The distinction almost everyone collapses
+## Cost is not price
 
 **Costs falling is close to physics. Prices falling is politics.**
 
@@ -57,11 +55,9 @@ The headline number hides a gradient. Prices fall fastest where models are subst
 
 The floor collapses fastest underneath the tasks that were automated first. It is the same gradient that governs capability, showing up a second time as a pricing fact. If your product is in verifiable territory, you are on the fast side of both curves, the good one and the bad one.
 
-## What this kills
+## What this rules out
 
-Anything whose value proposition is *we have access to a smart model* has a two-year moat, maximum. Frontier access is a wasting asset that depreciates on a known schedule.
-
-Specifically dead:
+Anything whose value proposition is *we have access to a smart model* has a two-year moat, maximum. Frontier access is a wasting asset that depreciates on a known schedule, which rules out:
 
 - Wrappers whose differentiation is model access
 - Products differentiated by capability rather than by data, distribution, or workflow lock-in
@@ -69,15 +65,15 @@ Specifically dead:
 
 Treat this as an engineering constraint on product design, not a market-timing tip. Any feature whose only differentiation is "we call a smarter model" must either be rebuilt every generation as a pure cost center, or be wrapped in a complement before the lag closes: proprietary workflow data, evaluation harnesses the buyer cannot port, distribution defaults, liability you will actually carry.
 
-The test is observable. Products that fail it show high churn the moment a cheaper equivalent tier lands. Products that pass it stay sticky through the next open-weight release.
+The test is observable. Products that fail it show high churn the moment a cheaper equivalent tier arrives. Products that pass it stay sticky through the next open-weight release.
 
-## The planning question almost nobody asks
+## What stays scarce
 
 If capability is free on a two-year lag, then the right question is never *what can the best model do today*.
 
 It is: **what will be free in 2028, and what will still be scarce then?**
 
-Almost all product strategy in this industry answers the first question. The scarce list is short, boring, and has barely moved: energy, interconnection, licenses, trusted real-time data, distribution, liability capacity, physical presence, verified identity, and senior judgment after the apprenticeship gap does its damage.
+Most product strategy answers the first question. The scarce list is short, boring, and has barely moved: energy, interconnection, licenses, trusted real-time data, distribution, liability capacity, physical presence, verified identity, and senior judgment after the apprenticeship gap does its damage.
 
 Six of those are owned by capital rather than earned by labor. That is a separate and uncomfortable argument, made [elsewhere in the corpus](../09-macro/assets.md).
 
@@ -93,6 +89,6 @@ The first would be visible in published serving prices within two quarters. The 
 
 ---
 
-All of this is one instance of a more general result: as cognition approaches free, value concentrates in the inelastic complements. Adoption becomes mandatory and the return becomes defensive. You spend to not die, not to win. That is [the Red Queen](../02-games/3-firms.md), and it is the normal outcome for a general-purpose technology. Electricity, containerization, ERP, and the internet all ran the same way.
+There is a second consequence, and it falls on adopters rather than vendors. Where entry is not blocked, the cost saving passes to buyers rather than to the firm that spent on it, so adoption becomes mandatory and the return becomes defensive. You spend to not die, not to win. That is [the Red Queen](../02-games/3-firms.md), and it is the normal outcome for a general-purpose technology. Electricity, containerization, ERP, and the internet all ran the same way.
 
 The mistake is not being wrong about how good the models get. Almost everyone is roughly right about that now. The mistake is assuming that being right about capability tells you anything about who gets paid.

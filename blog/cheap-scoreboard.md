@@ -13,7 +13,7 @@ High-quality human text is exhausted. Roughly **10^14 useful tokens** exist agai
 
 This was not a crisis and it slowed nothing down. It caused a redirection: the frontier moved to synthetic data, reinforcement learning on verifiable outcomes, and self-play in domains with cheap ground truth.
 
-That move was not neutral across domains. It could not have been.
+That move was not neutral across domains.
 
 ## The asymmetry
 
@@ -37,11 +37,11 @@ Expect AI to become superhuman at things with a scoreboard and remain merely-goo
 | Games with defined win conditions | Forecasting with resolution | Social science, policy |
 | Cyber exploits (self-verifying) | Grid dispatch and markets | Specialty harvest, last-metre delivery |
 
-When a domain forecast looks surprising, the explanation is almost always its position in this table. Not model size, not funding, not talent density. The cost of checking whether the answer was right.
+When a domain forecast looks surprising, the explanation is almost always its position in this table: the cost of checking whether the answer was right, rather than model size or funding or talent density.
 
 ## Why synthetic data does not dissolve the constraint
 
-The obvious rejoinder, *models will just generate their own training data*, fails in a way that makes the asymmetry **sharper**. This is where most optimistic arguments break, so it is worth following slowly.
+The obvious rejoinder, *models will just generate their own training data*, fails in a way that makes the asymmetry **sharper**. This is where most optimistic arguments break.
 
 Unfiltered synthetic data degrades models toward their own priors. What makes synthetic data work in practice is a filter that keeps only the verified-correct samples. Self-play in games, proof-checked mathematics, test-passing code: every synthetic-data success story is a success *because* the domain has a cheap verifier doing the filtering.
 
@@ -51,7 +51,7 @@ The pivot to synthetic data was not an escape from the asymmetry. It was the mec
 
 ## The slow column is doubly stuck
 
-There is a second-order trap here that gets almost no attention.
+There is a second-order trap here.
 
 Progress on taste, judgment, and long-horizon advice runs on human preference and outcome labels. Those labels are expensive precisely because they consume **senior judgment**, the scarce resource that the labor transition is [already thinning](../02-games/4-labor.md) by breaking the novice-to-expert pathway that produced it.
 
@@ -71,7 +71,7 @@ The table is useful and is therefore abused. Three errors, in order of how often
 
 ## The partial escape
 
-You cannot erase the table, but you can move within it. The move is to **buy cheaper ground truth**:
+You cannot erase the table, but you can move within it, by **buying cheaper ground truth**:
 
 - **Automated labs**, instrumenting the experiment so the result is machine-readable
 - **Instrumented robotics data**, manufacturing the interaction corpus that never existed publicly
@@ -83,7 +83,7 @@ Robotics illustrates the underlying scarcity best: **there is no internet of man
 
 ## What would retire this
 
-One thing, and it is the most important open question in the framework: **learned verification**.
+One thing, which the corpus files as a framework-level risk rather than a parameter uncertainty: **learned verification**.
 
 If models can bootstrap reliable verifiers for soft domains, training a judge on sparse human labels that then generalizes, the series wiring breaks and the amplifier runs open-loop. Expensive domains stop lagging. The table reorders. A large fraction of the domain-by-domain forecast built on top of it fails with it.
 

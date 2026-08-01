@@ -41,7 +41,7 @@ Look at the table again. ERCOT's advantage is not geography, weather, capital, o
 
 **The variance across US markets is larger than the variance across countries.** A gigawatt in Texas and a gigawatt in California are the same physics and a completely different calendar. When the spread within one country exceeds the spread between countries, you are not looking at a resource constraint. You are looking at an institutional one.
 
-This is the most underrated fact in AI forecasting: **the bottleneck migrates from silicon to electrons to permits.**
+**The bottleneck migrates from silicon to electrons to permits.**
 
 By 2028 the rate-limiting step on frontier AI in the US is environmental review, transmission rights-of-way, and turbine manufacturing. Export controls address *China's* bottleneck. They do nothing about America's.
 
@@ -69,11 +69,11 @@ So order books full into 2030 are being served by overtime and brownfield debott
 
 This is the industrial-base version of the permitting problem. Both are institutions optimized for a stable grid being asked to price a spike they have good reason to distrust. Sovereign-backed offtake guarantees or defense-production-style procurement would change the manufacturers' math overnight, which is why equipment lead times belong on the same watch list as statutes.
 
-## The catch inside the escape hatch
+## What behind-the-meter still owes the grid
 
 Behind-the-meter has a physical dependency the strategy discussion tends to skip. **Islanded loads still need firm backup**, and grid-scale storage or redundant generation adds real cost to the headline $/MW figures.
 
-The load mix is also changing underneath the argument. Training tolerates interruption. Inference serving increasingly does not, because it carries customer SLAs. As Jevons expansion shifts the mix from training toward serving, the interruptibility advantage that makes curtailment-tolerant interconnection cheap quietly erodes.
+The load mix is also changing underneath the argument. Training tolerates interruption. Inference serving increasingly does not, because it carries customer SLAs. As Jevons expansion shifts the mix from training toward serving, the interruptibility advantage that makes curtailment-tolerant interconnection cheap erodes.
 
 The industry's flexibility story is truest in exactly the phase of the build-out that is ending first.
 
@@ -95,9 +95,9 @@ Countries that can build power fast gain structural advantage **that has nothing
 - **Gulf states**, with sovereign capital, abundant gas, and minimal permitting friction
 - **A second tier** of India, Brazil, and Indonesia, with the additions but not yet the transmission or the demand-side buyers
 
-This decouples AI *capacity* from AI *capability*. A country can have world-class researchers and no ability to deploy them at scale, or the reverse. Most existing analysis conflates the two.
+This decouples AI *capacity* from AI *capability*. A country can lead in published research and still be unable to deploy at scale, or the reverse. Most existing analysis conflates the two.
 
-## The honest caveat
+## Why this could loosen fast
 
 This is politics, not physics, and that cuts against the pessimistic reading.
 
@@ -114,7 +114,7 @@ Three series, not one, because they can diverge and the divergence is informativ
 
 1. **Queue length**, the political constraint
 2. **Behind-the-meter share of new MW**, the routing path around it
-3. **Interruptible share of new datacenter contracts**, the cheap fix nobody has priced
+3. **Interruptible share of new datacenter contracts**, the fix that is nearly free and barely used
 
 Queue length can look stuck while training capacity grows fine, if the money has simply routed around the public rate case. Read all three or you will misread the first.
 
@@ -122,4 +122,4 @@ Queue length can look stuck while training capacity grows fine, if the money has
 
 The failure mode of this analysis is treating every delayed datacenter announcement as proof the wall arrived early. Discretionary delay, chip allocation, and power queues can each slip a project without the economic ceiling binding at all.
 
-But the direction is not in much doubt. For thirty years the question in this industry was whether you could get the chips. For the next ten it is whether you can get the interconnect, and that question is answered by a public utility commission, on a timeline nobody in the industry is used to negotiating with.
+But the direction is not in much doubt. For thirty years the question in this industry was whether you could get the chips. For the next ten it is whether you can get the interconnect, and that question is answered by a public utility commission, on a timeline set by statute rather than by the industry.
