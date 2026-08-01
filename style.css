@@ -414,7 +414,13 @@ a[target="_blank"]:after {
 /* ── masthead ────────────────────────────────────────────────────────────
    Upstream's header table: title and subtitle at left, metadata at right,
    everything landing on the same character grid.                          */
-.masthead { margin-bottom: var(--line-height); }
+/* The header carries its own hairline. A double rule under it as well read as
+   a second, emptier header. */
+.masthead {
+  margin-bottom: calc(var(--line-height) * 1.5);
+  padding-bottom: var(--line-height);
+  border-bottom: var(--border-thickness) solid var(--edge);
+}
 .masthead table { top: 0; margin-bottom: 0; }
 .masthead th, .masthead td { border: none; padding: 0; }
 .masthead th {
@@ -438,23 +444,6 @@ a[target="_blank"]:after {
 }
 .masthead h1 a:hover {
   background: var(--surface-2);
-  border-bottom: 1px solid currentColor;
-}
-.masthead .meta { white-space: nowrap; }
-/* the keyboard hints are noise on a touch screen */
-@media screen and (max-width: 640px), (pointer: coarse) {
-  .masthead .keys-row { display: none; }
-}
-.masthead .meta a {
-  color: var(--text-color-alt);
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.22em;
-  text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
-}
-.masthead .meta a:hover {
-  color: var(--text-color);
   border-bottom: 1px solid currentColor;
 }
 
@@ -677,7 +666,16 @@ tbody tr:hover > * { background: var(--surface-1); }
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   min-width: 4.5ch;
+  gap: 0.75ch;
 }
+/* The shortcut rides inside its control, the way a menu accelerator does. A
+   box inside a box is one border too many, so it drops to bare type. */
+.sb-actions kbd {
+  border: none; padding: 0;
+  font-size: 0.7rem; text-transform: none;
+  color: var(--text-color-alt);
+}
+@media (pointer: coarse) { .sb-actions kbd { display: none; } }
 .sb-actions button:hover,
 .sb-actions .sb-link:hover,
 .sb-actions button:focus-visible,

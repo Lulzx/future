@@ -876,12 +876,6 @@ function page(doc, title, bodyClass, contentHtml, opts = {}) {
           opts.crumbLeaf ? `<span class="sep"> / </span><span>${escapeHtml(opts.crumbLeaf)}</span>` : ""
         }</td>
       </tr>
-      <tr class="keys-row">
-        <th class="width-min">Keys</th>
-        <td class="width-auto meta">
-          <kbd>/</kbd> find · <kbd>t</kbd> theme · <a href="${rootPrefix(doc)}${BLOG.dir}/feed.xml">RSS</a>
-        </td>
-      </tr>
     </tbody>
   </table>
 </header>`
@@ -897,12 +891,6 @@ function page(doc, title, bodyClass, contentHtml, opts = {}) {
       <tr>
         <th class="width-min">Section</th>
         <td class="width-auto crumb" id="crumb">${breadcrumb(doc)}</td>
-      </tr>
-      <tr class="keys-row">
-        <th class="width-min">Keys</th>
-        <td class="width-auto meta">
-          <kbd>←</kbd> <kbd>→</kbd> page · <kbd>/</kbd> find · <kbd>t</kbd> theme
-        </td>
       </tr>
     </tbody>
   </table>
@@ -931,8 +919,6 @@ function page(doc, title, bodyClass, contentHtml, opts = {}) {
 
 ${masthead}
 
-<hr>
-
 <main id="content" class="${bodyClass}">
 ${contentHtml}
 </main>
@@ -945,9 +931,11 @@ ${contentHtml}
     <span class="sb-path" id="sb-path">${escapeHtml(urlPath)}</span>
     <span class="sb-actions">
       <a class="sb-link" href="${rootPrefix(doc)}${BLOG.dir}/" title="${escapeHtml(BLOG.name)} — essays on the corpus">Blog</a>
-      <a class="sb-link" href="${rootPrefix(doc)}ask/" title="Ask the corpus (RAG)">Ask</a>
-      <button id="find" type="button" title="Find a page (/)">Find</button>
-      <button id="theme" type="button" title="Toggle light / dark (t)">Theme</button>
+      <a class="sb-link" href="${rootPrefix(doc)}ask/" title="Ask the corpus (RAG)">Ask</a>${
+        opts.blog ? `\n      <a class="sb-link" href="${rootPrefix(doc)}${BLOG.dir}/feed.xml">RSS</a>` : ""
+      }
+      <button id="find" type="button" title="Find a page (/)">Find <kbd>/</kbd></button>
+      <button id="theme" type="button" title="Toggle light / dark (t)">Theme <kbd>t</kbd></button>
       <a class="sb-link" href="${srcHref}">Src</a>
     </span>
   </div>
@@ -1164,7 +1152,6 @@ async function buildBlogIndex(posts) {
 </tr>`).join("\n");
 
   const body = `<section class="blog-intro">
-<p><strong>${escapeHtml(BLOG.name)}</strong> is where the forecast argues with the news.</p>
 <p>Underneath every post is <a href="${relHref(doc, DEFAULT_DOC)}">a ~100,000-word document</a> built the unfashionable way: from physical constraints upward, with scored probabilities, named falsifiers, and a quarterly indicator dashboard. Posts here take one claim out of it, put current numbers against it, and say plainly what would prove it wrong.</p>
 <p>No takes without an order book behind them. Each piece ends on the one line worth keeping.</p>
 </section>
