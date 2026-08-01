@@ -336,31 +336,23 @@ function tocHtml(heads) {
   return `<details class="toc" open><summary>Contents</summary><ul class="tree">${html}</ul></details>`;
 }
 
-/* The `← [Index] · [Part IV]` strip and the closing `**Next:** …` line are
-   the corpus's own navigation: style the first, turn the second into a
-   prev/next footer. */
-function extractNav(blocks) {
-  const nav = { prev: null, next: null };
-  const linkRe = /<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g;
-
+/* Style the corpus's `← [Parent] · [Index]` strip and drop hand-written
+   `**Next:**` / `**Previous:**` lines — sequential prev/next comes from
+   the reading-order algorithm, not from those markers. */
+function tidyNavChrome(blocks) {
   for (let i = 0; i < blocks.length; i++) {
     if (/^<p>←/.test(blocks[i])) {
-      const links = [...blocks[i].matchAll(linkRe)]
-        .map(m => ({ href: m[1], text: stripTags(m[2]).trim() }));
-      const a = links.find(l => l.text.toLowerCase() !== "index") || links[0];
-      if (a) nav.prev = a;
       blocks[i] = blocks[i].replace(/^<p>/, `<p class="nav-up">`);
       break;
     }
   }
 
   for (let i = blocks.length - 1; i >= 0; i--) {
-    if (/^<p><strong>Next:<\/strong>/.test(blocks[i])) {
-      const m = linkRe.exec(blocks[i]);
-      linkRe.lastIndex = 0;
-      if (m) nav.next = { href: m[1], text: stripTags(m[2]).trim() };
+    if (/^<p><strong>(?:Next|Previous):<\/strong>/.test(blocks[i])) {
       blocks.splice(i, 1);
       if (i > 0 && blocks[i - 1] === "<hr>") blocks.splice(i - 1, 1);
+      // keep scanning: some pages have both Next and Previous on one line
+      // (already matched) or a lone Previous; one pass from the end is enough
       break;
     }
   }
@@ -375,8 +367,6 @@ function extractNav(blocks) {
       break;
     }
   }
-
-  return nav;
 }
 
 function pagenavHtml(nav) {
@@ -387,6 +377,207 @@ function pagenavHtml(nav) {
     cell("← Prev", nav.prev) +
     cell("Next →", nav.next) +
   `</nav>`;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Reading order — DFS over hub READMEs, children ordered by first local
+   link appearance, then leftover siblings alphabetically.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+const LINK_RE = /\[([^\]]*)\]\(([^)\s]+)\)/g;
+
+function titleOf(md, fallback) {
+  const m = md.match(/^#\s+(.+)$/m);
+  return m ? m[1].trim() : fallback;
+}
+
+/** Short label for the prev/next footer (drop long subtitles). */
+function navLabel(title) {
+  // "Game 1 - Labs: a Tullock contest…" → "Game 1 - Labs"
+  // "Compute" stays "Compute"
+  const cut = title.split(/:\s+/)[0].trim();
+  return cut || title;
+}
+
+/** Is `target` a direct structural child of the hub at `hubDoc`? */
+function isLocalChild(hubDoc, target) {
+  if (target === hubDoc) return false;
+  const hubDir = dirname(hubDoc);
+
+  if (!hubDir) {
+    // Root: top-level files, or one-segment package READMEs (00-overview/README.md).
+    if (!target.includes("/")) return true;
+    const parts = target.split("/");
+    return parts.length === 2 && parts[1] === "README.md";
+  }
+
+  if (!target.startsWith(hubDir + "/")) return false;
+  const rest = target.slice(hubDir.length + 1);
+  if (!rest.includes("/")) return true; // sibling file
+  // Immediate subdirectory, represented by its README only.
+  const parts = rest.split("/");
+  return parts.length === 2 && parts[1] === "README.md";
+}
+
+/**
+ * Resolve a markdown href under hubDoc to a local child path, collapsing
+ * deep links into a subdir (e.g. startups/ideas.md → startups/README.md)
+ * when that README exists.
+ */
+function resolveLocalChild(href, hubDoc, docSet) {
+  const resolved = resolveDoc(href, hubDoc);
+  if (!resolved) return null;
+  const target = resolved.split("#")[0];
+  if (!docSet.has(target)) return null;
+
+  if (isLocalChild(hubDoc, target)) return target;
+
+  // Deep link under a local subdir → that subdir's README, if present.
+  const hubDir = dirname(hubDoc);
+  if (!hubDir || !target.startsWith(hubDir + "/")) return null;
+  const rest = target.slice(hubDir.length + 1);
+  const sub = rest.split("/")[0];
+  if (!sub) return null;
+  const subReadme = hubDir + "/" + sub + "/README.md";
+  if (docSet.has(subReadme) && isLocalChild(hubDoc, subReadme)) return subReadme;
+  return null;
+}
+
+/**
+ * Prefer the ## Contents block when present (root index), so prose links
+ * earlier in the page do not scramble package order.
+ */
+function structuralRegion(md) {
+  const start = md.search(/^##\s+Contents\s*$/m);
+  if (start === -1) return md;
+  let region = md.slice(start);
+  const end = region.search(/\n---\s*\n/);
+  if (end !== -1) region = region.slice(0, end);
+  return region;
+}
+
+/**
+ * Children of a hub: `linked` in first-appearance order from the structural
+ * region, then alpha `leftovers` not mentioned there.
+ */
+function orderedChildren(hubDoc, md, docSet) {
+  const linked = [];
+  const seen = new Set();
+  const region = structuralRegion(md);
+
+  for (const m of region.matchAll(new RegExp(LINK_RE.source, "g"))) {
+    const child = resolveLocalChild(m[2], hubDoc, docSet);
+    if (!child || seen.has(child)) continue;
+    seen.add(child);
+    linked.push(child);
+  }
+
+  const leftovers = [];
+  for (const doc of docSet) {
+    if (seen.has(doc) || doc === hubDoc) continue;
+    if (!isLocalChild(hubDoc, doc)) continue;
+    leftovers.push(doc);
+  }
+  leftovers.sort((a, b) => a.localeCompare(b));
+  return { linked, leftovers, all: linked.concat(leftovers) };
+}
+
+/** First target of a hand-written `**Next:**` line, if any. */
+function explicitNext(doc, md, docSet) {
+  const line = md.match(/^\*\*Next:\*\*\s*(.+)$/m);
+  if (!line) return null;
+  const link = line[1].match(/\[([^\]]*)\]\(([^)\s]+)\)/);
+  if (!link) return null;
+  const resolved = resolveDoc(link[2], doc);
+  if (!resolved) return null;
+  const target = resolved.split("#")[0];
+  return docSet.has(target) ? target : null;
+}
+
+/**
+ * Follow `**Next:**` only to a peer in the same directory, or into an
+ * immediate subdirectory hub — never across parts via a stray link.
+ */
+function isNearby(from, to) {
+  const fromDir = dirname(from);
+  const toDir = dirname(to);
+  if (fromDir === toDir) return true;
+  return to.endsWith("/README.md") && dirname(toDir) === fromDir;
+}
+
+/**
+ * Linear reading order for the whole corpus.
+ * Returns { order: string[], titles: Map<doc,string> }.
+ *
+ * Algorithm:
+ * 1. DFS from the root README.
+ * 2. At each hub (README), children are local links in structural order
+ *    (## Contents when present; else whole page), then alpha leftovers.
+ * 3. After placing any page, follow its `**Next:**` into an unvisited
+ *    nearby page that is NOT already a linked child of the active hub
+ *    (hub table order wins over stale Next; Next still chains leftovers
+ *    like ideas-verification → ideas-atoms).
+ */
+function buildReadingOrder(docSet, sources) {
+  const order = [];
+  const visited = new Set();
+  const titles = new Map();
+
+  for (const [doc, md] of sources) {
+    titles.set(doc, navLabel(titleOf(md, doc)));
+  }
+
+  /**
+   * @param {string} doc
+   * @param {Set<string>|null} linkedSiblings hub children discovered via
+   *   links (not leftovers). Explicit Next into this set is ignored so a
+   *   stale Next cannot reorder the hub table.
+   */
+  function visit(doc, linkedSiblings = null) {
+    if (visited.has(doc) || !docSet.has(doc)) return;
+    visited.add(doc);
+    order.push(doc);
+
+    const md = sources.get(doc) || "";
+
+    if (doc === DEFAULT_DOC || doc.endsWith("/README.md")) {
+      const { linked, leftovers } = orderedChildren(doc, md, docSet);
+      const linkedSet = new Set(linked);
+      for (const k of linked) visit(k, linkedSet);
+      for (const k of leftovers) visit(k, linkedSet);
+    }
+
+    const next = explicitNext(doc, md, docSet);
+    if (
+      next &&
+      !visited.has(next) &&
+      isNearby(doc, next) &&
+      !(linkedSiblings && linkedSiblings.has(next))
+    ) {
+      visit(next, linkedSiblings);
+    }
+  }
+
+  visit(DEFAULT_DOC);
+
+  // Orphans (unlinked meta docs, etc.) — stable alpha tail.
+  const orphans = [...docSet].filter(d => !visited.has(d)).sort((a, b) => a.localeCompare(b));
+  for (const d of orphans) visit(d);
+
+  return { order, titles };
+}
+
+/** prev/next link objects for a doc, relative to that doc's page. */
+function sequentialNav(doc, order, titles) {
+  const i = order.indexOf(doc);
+  if (i === -1) return { prev: null, next: null };
+  const link = (other) => other
+    ? { href: relHref(doc, other), text: titles.get(other) || other }
+    : null;
+  return {
+    prev: link(i > 0 ? order[i - 1] : null),
+    next: link(i < order.length - 1 ? order[i + 1] : null),
+  };
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -686,8 +877,7 @@ async function mdFiles() {
   return found.sort();
 }
 
-async function buildDoc(doc) {
-  const md = await fs.readFile(path.join(ROOT, doc), "utf8");
+async function buildDoc(doc, md, nav) {
   const isIndex = doc === DEFAULT_DOC;
 
   let blocks = render(md, doc);
@@ -696,8 +886,7 @@ async function buildDoc(doc) {
   let heads = [];
   if (!isIndex) ({ blocks, heads } = numberSections(blocks));
 
-  const nav = extractNav(blocks);
-  if (!nav.prev && !isIndex) nav.prev = { href: relHref(doc, DEFAULT_DOC), text: "Index" };
+  tidyNavChrome(blocks);
 
   if (!isIndex) {
     const toc = tocHtml(heads);
@@ -731,7 +920,17 @@ async function copyStatic(docs) {
 }
 
 const docs = await mdFiles();
+const docSet = new Set(docs);
+const sources = new Map();
+for (const doc of docs) {
+  sources.set(doc, await fs.readFile(path.join(ROOT, doc), "utf8"));
+}
+
+const { order, titles } = buildReadingOrder(docSet, sources);
+
 await fs.rm(OUT, { recursive: true, force: true });
-for (const doc of docs) await buildDoc(doc);
+for (const doc of docs) {
+  await buildDoc(doc, sources.get(doc), sequentialNav(doc, order, titles));
+}
 await copyStatic(docs);
-console.log(`built ${docs.length} pages → _site/`);
+console.log(`built ${docs.length} pages → _site/ (${order.length} in reading order)`);
