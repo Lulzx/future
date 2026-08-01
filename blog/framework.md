@@ -1,10 +1,10 @@
 ---
 title: The Framework
 dek: The posts on this blog keep using the same handful of named concepts. This page says what each one claims, how they fit into one model, and where each claim grounds out in the corpus.
-date: 2026-08-11
+date: 2026-08-14
 tags: method, concepts
 page: true
-takeaway: One model, asked as thirteen questions. Every post is an answer to one of them.
+takeaway: One model, asked as fifteen questions. Every post is an answer to one of them.
 corpus: 00-overview/README.md, 01-substrate/inference-economics.md, 01-substrate/energy.md, 01-substrate/capital.md, 02-games/3-firms.md, 02-games/4-labor.md, 03-domains/cognitive/insurance.md, 09-macro/prices.md, 06-uncertainties/taiwan.md
 ---
 
@@ -16,9 +16,9 @@ Each post here reads on its own, but they are not independent essays. They are o
 2. [You Cannot Own a Falling Floor](falling-floor.md), the economic model
 3. [The Bottleneck Migrates](silicon-electrons-permits.md), the physical model
 
-Together they say where AI capability goes next, why having it stops being worth anything, and what scarce thing the race runs into instead. [The Taiwan post](taiwan-gray-zone.md) is the risk model underneath all three: the one assumption that, if it fails, takes the rest of the document with it. [The two-products post](two-products.md) is the people model: what the same transition does to the pipeline that manufactures senior judgment. And a run of forecast posts extends it forward: [the money](capex-verdict.md), [the deployment gate](insurance-ceiling.md), [the price index](two-economies.md), [the rulebook](incident-window.md), [the trust stack](dead-signals.md), [the cost of money](success-tax.md), [the build list](what-to-build.md), [the org chart](line-shaft.md), and [the robot-hour](delivered-hour.md).
+Together they say where AI capability goes next, why having it stops being worth anything, and what scarce thing the race runs into instead. [The Taiwan post](taiwan-gray-zone.md) is the risk model underneath all three: the one assumption that, if it fails, takes the rest of the document with it. [The two-products post](two-products.md) is the people model: what the same transition does to the pipeline that manufactures senior judgment. And a run of forecast posts extends it forward: [the money](capex-verdict.md), [the deployment gate](insurance-ceiling.md), [the price index](two-economies.md), [the rulebook](incident-window.md), [the trust stack](dead-signals.md), [the cost of money](success-tax.md), [the build list](what-to-build.md), [the org chart](line-shaft.md), [the robot-hour](delivered-hour.md), [the ownership column](seventh-row.md), [the missing workers](missing-workers.md), and [the takeoff brakes](three-governors.md).
 
-The model itself fits in thirteen questions. Everything on this blog, and most of the corpus, is an answer to one of them.
+The model itself fits in fifteen questions. Everything on this blog, and most of the corpus, is an answer to one of them.
 
 ## Where does capability go next?
 
@@ -37,6 +37,8 @@ The cost decline is close to physics. The *price* decline is politics, carried b
 Mostly not the people spending the money. When every firm has to adopt and none gains an edge by adopting, spending becomes defensive: **the Red Queen**, the standard fate of a general-purpose technology, argued in [the firms game](../02-games/3-firms.md). The surplus passes through to customers and to whoever owns the short list of things that do not get cheaper: energy, distribution, licences, liability capacity, trusted data, senior judgment.
 
 The stable position is to **own the scoreboard**: be the party that defines correct, carries the liability for that judgment, and holds the data that settles the argument.
+
+And the surplus question has an ownership answer with a sting: six of the seven inelastic complements are held by capital, and only **the Seventh Row**, physical presence and the skilled trades, is held by labor. Consumer surplus arrives as a flow, asset appreciation as a stock, and only the stock can be inherited. Grounded in [assets](../09-macro/assets.md).
 
 ## Where does the next senior come from?
 
@@ -75,6 +77,14 @@ When **the Delivered Hour** crosses fully-loaded labor cost, not when the robot'
 ## What does it do to the cost of living?
 
 Splits it along one axis: cognition deflates, everything intelligence cannot manufacture inflates. The gains arrive as **the Ambient Discount**, unpriced and unnoticed, while the costs arrive as the most salient bills a household has, so the statistics mismeasure the transition and the politics run on the half that hurts. A central bank with one rate and an averaged index is set wrong for both halves at once. Grounded in [prices](../09-macro/prices.md).
+
+## Where did the workers go?
+
+They were never born, and that was settled decades ago. Shrinking workforces meet shrinking labor demand in **the Offset**: aggregate AI displacement lands as an upper bound in economies short of workers, and automation that replaces workers who never existed is not displacement. But the cancellation is aggregate-only. The junior pipeline stays broken from both directions, and **the Care Collision** is the binding case: demand for elder care rises on the fixed demographic schedule while supply falls, in the one domain robots reach last. Labor scarcity pulls automation in rather than pushing it onto resisters, which is why China treats robots as demographic policy. Grounded in [demography](../09-macro/demography.md).
+
+## What if it speeds itself up?
+
+Then it still has to pass **the Three Governors**: verification (a research loop runs fast only where checking is cheap), physics (fabs and transformers do not compound), and finance (success raises the rate that funds the next round). Two of the three are not technical, which is why fast-takeoff scenarios are over-weighted relative to their technical plausibility, and why the likely fast outcome is a fast decade rather than a discontinuity. The tell is **the Takeoff Signature**: the frontier pulling away from followers while the governors visibly strain. A narrowing follower gap, the observed pattern, is evidence against. Grounded in [the RSI register entry](../06-uncertainties/recursive-self-improvement.md).
 
 ## What would break all of this?
 
@@ -117,5 +127,10 @@ For reference, every named concept in one place. The claim column is deliberatel
 | The Line-Shaft Problem | The tool is new, the floor plan is not, and the floor plan is where the productivity lives | [Line shaft](line-shaft.md) |
 | The Dispersion Test | Widening between-firm gaps confirm the redesign story, a rising mean with flat gaps refutes it | [Line shaft](line-shaft.md) |
 | The Delivered Hour | A robot's real cost divides everything by utilization and success rate, not by calendar | [Delivered hour](delivered-hour.md) |
+| The Seventh Row | Of the seven scarce complements, six belong to capital and one to labor | [Seventh row](seventh-row.md) |
+| The Offset | Aggregate displacement lands in economies already running out of workers | [Missing workers](missing-workers.md) |
+| The Care Collision | Elder-care demand rises on a fixed schedule in the one domain robots reach last | [Missing workers](missing-workers.md) |
+| The Three Governors | A research loop must pass verification, physics, and finance, and only one is technical | [Three governors](three-governors.md) |
+| The Takeoff Signature | The frontier pulling away while the governors strain, and nothing less | [Three governors](three-governors.md) |
 
 If a future post coins something and it is not on this list within a week, that is a bug in this page.

@@ -1,7 +1,7 @@
 ---
 title: The Scorecard
 dek: Every claim on this blog that can be caught failing, held still long enough to be graded. Each one carries a probability, a resolution date, and the rule it resolves by.
-date: 2026-08-11
+date: 2026-08-14
 tags: forecasts, method
 page: true
 takeaway: A forecast that cannot lose is marketing. Everything on this page can lose.
@@ -51,8 +51,11 @@ Several of these rules sharpen claims the posts made loosely. That sharpening is
 | 22 | Capture-time attestation ships default-on in flagship phones | 55% | Dec 2029 |
 | 23 | A productivity step-up is visible in official statistics | 20% | Dec 2030 |
 | 24 | The first large robot fleets are structured-setting fleets | 80% | Dec 2030 |
+| 25 | Trades wages outgrow credentialed professional wages | 70% | Dec 2035 |
+| 26 | China keeps a majority of global robot installations | 75% | Dec 2030 |
+| 27 | No takeoff signature appears | 80% | Dec 2029 |
 
-Rows 1 through 9 opened 1 August 2026, and each post since has brought one or two: through row 24 on 11 August. All twenty-four open.
+Rows 1 through 9 opened 1 August 2026, and each post since has brought one or two: through row 27 on 14 August. All twenty-seven open.
 
 ## 1. The open-weight lag is still six months or shorter at the end of 2027
 
@@ -229,6 +232,28 @@ Opened at 85%. The corpus's sharper sub-claim, that ~50% of the operative techni
 [The delivered-hour post](delivered-hour.md) carries [the cost-curves prediction](../03-domains/physical/robotics/cost-curves.md): warehousing, logistics yards, and food processing before construction, retail, or care.
 
 **Resolves yes if**, on 31 December 2030, the largest deployed fleets of mobile or humanoid robots outside automotive manufacturing, measured by units in commercial service per public disclosures and industry tracking, are concentrated in warehousing, logistics, or food processing rather than construction, retail, or care. Teleoperated units count only where the operator ratio is disclosed and autonomy is the majority mode, per the post's own filter. Opened at 80%.
+
+## 25. Real wage growth in licensed trades outpaces credentialed cognitive professions, 2026 to 2035
+
+[The ownership post](seventh-row.md) carries [the corpus's least intuitive checkable claim](../09-macro/assets.md) at its published confidence, and [the demography post](missing-workers.md) arrives at the same prediction independently, which is why it gets a row despite the long horizon.
+
+**Resolves yes if** cumulative real wage growth from 2026 through 2035, per BLS occupational wage series deflated by CPI, is higher for licensed skilled trades (electricians, plumbers and pipefitters, HVAC technicians, powerline workers, as a group) than for credentialed cognitive professions (lawyers, accountants and auditors, financial and management analysts, as a group). Composition effects are the known hazard: the comparison uses median wages within occupations, not averages across a changing mix.
+
+The claim is explicitly conditioned on robotics staying out of unstructured physical work through the window. If row 24's world extends to unstructured settings early, this row is expected to fail, and the annotation will say which condition broke. Opened at 70%.
+
+## 26. China keeps a majority of global industrial-robot installations through 2030
+
+[The demography post](missing-workers.md) argues labor scarcity pulls automation in, and that the pull is strongest where the workforce contraction is largest. China took 54% of global installations in 2024 (IFR World Robotics, 2025), with domestic makers outselling foreign suppliers at home for the first time.
+
+**Resolves yes if** China's share of annual global industrial-robot installations, per IFR World Robotics, is at or above 50% in the 2030 report year. **Resolves no** below that, which would say the scarcity-pull mechanism is weaker than the demographic arithmetic implies, or that substitution moved elsewhere faster. Opened at 75%.
+
+## 27. No takeoff signature appears by the end of 2029
+
+[The three-governors post](three-governors.md) defines the signature of genuine recursive acceleration as a conjunction: the frontier pulling away from followers *while* the public governors strain. Either alone is noise. A narrowing follower gap is evidence against.
+
+**Resolves yes if**, through 31 December 2029, the measured frontier-to-open-weight lag (Epoch AI's stricter equivalence rule, or its named successor) stays at or below 12 months. **Resolves no if** the lag exceeds 12 months for two consecutive published readings *and* at least two governor-strain signals are concurrently visible: real rates up more than 100 basis points from their 2024 to 2026 average, US interconnection queues lengthening year over year, or the verifiable-versus-unverifiable capability gap widening per the corpus's B8 tracking. A widening lag with relaxed governors resolves neither way and gets logged as the anomaly the governor model says should not happen.
+
+A no here is the biggest single rewrite this scorecard can take, and the blog has pre-committed to taking it as a rewrite rather than an explanation. Opened at 80%.
 
 ---
 
