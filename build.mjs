@@ -1144,7 +1144,9 @@ ${post.page ? "" : postNavHtml(post, posts)}
 
 async function buildBlogIndex(posts, pages) {
   const doc = `${BLOG.dir}/README.md`;
-  const scorecard = pages.find(p => p.slug === "forecasts");
+  const standing = slug => pages.find(p => p.slug === slug);
+  const framework = standing("framework");
+  const scorecard = standing("forecasts");
 
   const rows = posts.map(p => `<tr>
 <td class="width-min"><time datetime="${p.date}">${p.date}</time></td>
@@ -1158,6 +1160,10 @@ async function buildBlogIndex(posts, pages) {
   const body = `<section class="blog-intro">
 <p>Underneath every post is <a href="${relHref(doc, DEFAULT_DOC)}">a ~100,000-word document</a> built the unfashionable way: from physical constraints upward, with scored probabilities, named falsifiers, and a quarterly indicator dashboard. Posts here take one claim out of it, put current numbers against it, and say plainly what would prove it wrong.</p>
 <p>No takes without an order book behind them. Each piece ends on the one line worth keeping.${
+    framework
+      ? ` New here? <a href="${relHref(doc, framework.doc)}">The framework</a> is the map: what each named concept claims, and how the posts fit together.`
+      : ""
+  }${
     scorecard
       ? ` And the claims that can be caught failing live on <a href="${relHref(doc, scorecard.doc)}">the scorecard</a>, each with a probability, a resolution date, and the rule it will be graded by.`
       : ""
