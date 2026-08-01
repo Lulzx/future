@@ -833,7 +833,7 @@ function selectContextHits(hits, max = 6) {
   return out.length ? out : hits.slice(0, Math.min(max, hits.length));
 }
 
-function buildUserPrompt(query, hits) {
+function buildUserPrompt(query, hits, mode = "answer") {
   const packed = selectContextHits(hits, 5);
   const parts = [];
   let used = 0;
@@ -849,7 +849,14 @@ function buildUserPrompt(query, hits) {
     used += header.length + body.length + 8;
   }
 
-  // Put the question last (recency helps small models stay on task).
+  // Put the instruction last (recency helps small models stay on task).
+  if (mode === "highlight") {
+    return `Sources:
+${parts.join("\n\n")}
+
+Pick the single most striking claim in the sources and explain it in 2-4 sentences of plain prose: what it claims and the mechanism behind it. Be specific and concrete. State the claim directly — do not open with "the most striking claim is". Do not use bracket citations such as [1] or [2]. Do not mention "excerpts" or "sources" as a topic. Start with the claim itself:`;
+  }
+
   return `Sources:
 ${parts.join("\n\n")}
 
@@ -872,14 +879,20 @@ function cleanGeneratedAnswer(text) {
     /^(The (excerpts?|sources?|documents?) (primarily |mainly )?(discuss|describe|highlight|mention)[^.]*\.\s*)+/i,
     "",
   );
+  // Highlight-mode preamble: "The most striking claim is that X" → "X"
+  t = t.replace(
+    /^((the|one|a) (most |single most )?(striking|notable|interesting) claim (here )?is( that)?)[:,]?\s*/i,
+    "",
+  );
   t = t.replace(/\s+/g, " ").trim();
   // Tidy the gaps a removed citation leaves behind
   t = t.replace(/\s+([,.;:!?])/g, "$1");
   t = t.replace(/^[\s,.;:—-]+/, "");
+  if (t) t = t[0].toUpperCase() + t.slice(1);
   return t;
 }
 
-async function generateAnswer(query, hits, onToken) {
+async function generateAnswer(query, hits, onToken, mode = "answer") {
   if (!hits.length) {
     return {
       text: "No relevant passages found in the corpus for that query.",
@@ -898,7 +911,7 @@ async function generateAnswer(query, hits, onToken) {
 
   const messages = [
     { role: "system", content: SYSTEM_PROMPT },
-    { role: "user", content: buildUserPrompt(query, hits) },
+    { role: "user", content: buildUserPrompt(query, hits, mode) },
   ];
 
   const runOnce = () =>
@@ -1438,6 +1451,47 @@ function isWeakMatch(hits) {
   return cos < MIN_COS;
 }
 
+/**
+ * "Tell me something interesting" is a real request with no topical anchor,
+ * so retrieval scores it like noise. Route it to a topic instead of refusing.
+ */
+const OPEN_ENDED =
+  /\b(tell me (something|anything)|something interesting|anything interesting|surprise me|what('s| is) interesting|what should i (know|read|ask)|where (do|should) i start|give me (something|an example)|what('s| is) (this|it) about|what does (this|it) say|summar(y|ise|ize)|overview|tl;?dr|random|pick (one|something))\b/i;
+
+function isOpenEnded(q) {
+  return OPEN_ENDED.test(q);
+}
+
+/** Real topics from the corpus, so the seed retrieval lands somewhere good. */
+const HIGHLIGHT_SEEDS = [
+  "the master asymmetry in data",
+  "energy is the constraint that bites before capital",
+  "inference economics and the two-year moat",
+  "labs as a Tullock contest, not a prisoner's dilemma",
+  "comparative advantage does not guarantee a wage",
+  "the collapse of costly signaling",
+  "the apprenticeship gap and junior hiring",
+  "insurance prices the whole transition",
+  "state capacity as the precondition for governance",
+  "Taiwan and leading-edge fabrication",
+  "robotics cost curves and the economic threshold",
+  "verification and trust as the scarce input",
+  "the Global South and the missing complements",
+  "cheap founding and expensive moats",
+  "the Red Queen: adoption does not mean profit",
+  "nations as a security dilemma with a leaky bucket",
+];
+
+let lastSeed = -1;
+function pickSeed() {
+  let i = lastSeed;
+  while (i === lastSeed && HIGHLIGHT_SEEDS.length > 1) {
+    i = Math.floor(Math.random() * HIGHLIGHT_SEEDS.length);
+  }
+  lastSeed = i;
+  return HIGHLIGHT_SEEDS[i];
+}
+
 const SMALL_TALK_REPLY =
   "I answer questions about the forecast corpus — the games, domains, timelines, probabilities and indicators on this site. Ask me something like *why juniors stop getting hired*, *will energy or capital bind first*, or *what happens if Taiwan fabs fail*.";
 
@@ -1472,11 +1526,19 @@ async function run({ withGenerate }) {
     return;
   }
 
+  // An open-ended ask has no topic to retrieve on, so give it one.
+  const openEnded = isOpenEnded(query);
+  const seed = openEnded ? pickSeed() : query;
+
   startBotMessage("retrieving…");
   showHitsSkeleton(Math.min(k, 5));
   setStatus("Retrieving…", "warn");
 
   activity.reset();
+  if (openEnded) {
+    activity.step(`Open-ended — picking a topic: ${seed}`);
+    activity.settle();
+  }
   activity.step(
     method === "hybrid"
       ? "BM25 + dense → RRF"
@@ -1488,7 +1550,7 @@ async function run({ withGenerate }) {
   const started = performance.now();
 
   try {
-    const result = await search(query, method, k);
+    const result = await search(seed, method, k);
     renderHits(result.hits, result.method);
     const where = apiOk ? "server" : "browser";
     activity.settle(`Retrieved ${result.hits.length} passages · ${where}`);
@@ -1515,11 +1577,13 @@ async function run({ withGenerate }) {
 
     // A 350M model will happily write an essay from passages that have
     // nothing to do with the question, so refuse the weak ones outright.
-    if (isWeakMatch(result.hits)) {
+    // An open-ended ask is exempt: its seed topic is from the corpus.
+    if (!openEnded && isWeakMatch(result.hits)) {
+      const closest = result.hits[0];
       activity.step("Best match too weak — not generating");
       activity.fail("No confident match");
       renderAnswer(
-        "Nothing in the corpus is a close match for that. The passages I found are in **Sources** — try naming a topic from the corpus (juniors, energy, Taiwan fabs, the master asymmetry).",
+        `Nothing in the corpus is a close match for that. The closest passage is **${closest.title}**${closest.heading && closest.heading !== closest.title ? ` · ${closest.heading}` : ""} — the rest are in **Sources**. This corpus covers AI's effect on labour, energy, compute, capital, geopolitics and institutions over the next fifteen years; ask about one of those, or say *tell me something interesting*.`,
         "no confident match",
         false,
       );
@@ -1531,12 +1595,20 @@ async function run({ withGenerate }) {
     renderAnswer("", "generating…", true);
     setStatus("Generating with LFM2.5…", "warn");
     activity.step(`LFM2.5-350M · ${genDevice || "webgpu"} · decoding`);
-    const answer = await generateAnswer(query, result.hits, (partial) => {
-      renderAnswer(partial, `${GEN_MODEL.split("/").pop()} · streaming`, true);
-      activity.tick();
-    });
+    const answer = await generateAnswer(
+      seed,
+      result.hits,
+      (partial) => {
+        renderAnswer(partial, `${GEN_MODEL.split("/").pop()} · streaming`, true);
+        activity.tick();
+      },
+      openEnded ? "highlight" : "answer",
+    );
     const secs = ((performance.now() - started) / 1000).toFixed(1);
-    const tag = answer.model ? `${answer.model} · ${secs}s` : `${secs}s`;
+    const tag =
+      (answer.model ? `${answer.model} · ` : "") +
+      (openEnded ? "highlight · " : "") +
+      `${secs}s`;
     renderAnswer(answer.text, tag, false);
     endBotMessage({
       text: answer.text,
