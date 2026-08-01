@@ -60,6 +60,11 @@ draft: true            # optional, omit to publish
   `title:`. Keep it so the file still reads on GitHub.
 - Files starting with `_` are working material, not posts. That is how
   `_style-guide.md` sits next to the posts without publishing.
+- `page: true` makes a standing page instead of a post: blog chrome and an
+  "Updated" date, but no feed entry, no row in the post table, no place in
+  the older/newer chain. `forecasts.md` (the scorecard, reviewed quarterly)
+  and `framework.md` (the concept map, updated whenever a post coins a name)
+  are the two that exist. Keep both current when posts change.
 - Posts are built separately from the corpus: no section numbering, no reading
   order, their own masthead. Do not add them to the corpus walk.
 
