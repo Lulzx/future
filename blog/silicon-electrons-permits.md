@@ -33,6 +33,8 @@ Now put the other number beside it. A hyperscale facility is **built in 1–3 ye
 
 The construction cycle is shorter than the permission cycle, which means the binding constraint is not the thing being built. On interconnection and construction bottlenecks alone, roughly **30–50% of planned 2026 AI datacenter capacity is expected to slip to 2028**.
 
+![ERCOT clears the same load in 3 to 4 years, which is how you know it is not a physics problem.](img/build-vs-permission.png)
+
 That is not a forecast about model capability. It is a forecast about paperwork, and it moves capability timelines anyway.
 
 ## ERCOT is the tell
@@ -44,6 +46,8 @@ Look at the table again. ERCOT's advantage is not geography, weather, capital, o
 **The bottleneck migrates from silicon to electrons to permits.**
 
 By 2028 the rate-limiting step on frontier AI in the US is environmental review, transmission rights-of-way, and turbine manufacturing. Export controls address *China's* bottleneck. They do nothing about America's.
+
+![Export controls narrow the first gate. The queue is at the third.](img/three-gates.png)
 
 The corollary would have sounded absurd in 2023 and now sets the schedule: **AI progress is partly a function of American administrative law.**
 

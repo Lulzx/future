@@ -1189,6 +1189,14 @@ async function buildBlog(titles) {
   for (const post of posts) {
     await fs.copyFile(path.join(ROOT, post.doc), path.join(OUT, post.doc));
   }
+
+  const imgSrc = path.join(ROOT, BLOG.dir, "img");
+  try {
+    await fs.access(imgSrc);
+    await copyDir(imgSrc, path.join(OUT, BLOG.dir, "img"));
+  } catch {
+    /* no illustrations yet */
+  }
   return posts;
 }
 

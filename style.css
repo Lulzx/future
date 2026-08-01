@@ -662,3 +662,30 @@ h2.plain {
 }
 .tag-index dd { color: var(--text-color-alt); }
 .tag-count { color: var(--text-color-alt); font-weight: var(--font-weight-normal); }
+
+/* Illustrations are black line art on white, drawn to sit on the page with no
+   frame. Because they are greyscale, the dark theme inverts them instead of
+   letting a white rectangle glare out of a black page. */
+.post figure { margin-left: 0; margin-right: 0; }
+.post figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.post figcaption {
+  font-style: normal;
+  font-size: 0.85rem;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+@media (prefers-color-scheme: dark) {
+  .post figure img { filter: invert(1); mix-blend-mode: screen; }
+}
+:root[data-theme="dark"] .post figure img {
+  filter: invert(1); mix-blend-mode: screen;
+}
+:root[data-theme="light"] .post figure img {
+  filter: none; mix-blend-mode: multiply;
+}

@@ -25,6 +25,8 @@ A training loop needs a signal. Where the signal is a unit test, a proof checker
 
 There is no clever architecture that fixes a loop you cannot run.
 
+![Same model, same budget. The only difference is what it costs to score the answer.](img/two-loops.png)
+
 ## What it predicts
 
 Expect AI to become superhuman at things with a scoreboard and remain merely-good at things without one. Ordered by how cheap the ground truth is:
@@ -38,6 +40,8 @@ Expect AI to become superhuman at things with a scoreboard and remain merely-goo
 | Cyber exploits (self-verifying) | Grid dispatch and markets | Specialty harvest, last-metre delivery |
 
 When a domain forecast looks surprising, the explanation is almost always its position in this table: the cost of checking whether the answer was right, rather than model size or funding or talent density.
+
+![Ordered by the cost of ground truth, not by difficulty. Taste is not harder than formal maths, it is harder to grade.](img/verification-slope.png)
 
 ## Why synthetic data does not dissolve the constraint
 

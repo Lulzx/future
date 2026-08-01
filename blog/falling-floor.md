@@ -15,6 +15,8 @@ Hold that phrase, *at fixed capability*. The claim is not that AI gets cheaper i
 
 Compute, energy, and data all impose ceilings. Inference cost is the one input that moves the other way: a **floor collapsing**.
 
+![A capability tier holds its level. Everything else rises to meet it, on a schedule you can read in advance.](img/floor-falling.png)
+
 ## Why "costs are collapsing" and "capex is exploding" are both true
 
 These two facts get read as contradictory, so people pick a side. They are the same fact seen from two ends. Jevons: make cognition cheap and the world consumes vastly more of it, so **total spend rises while unit price collapses**.
@@ -46,6 +48,8 @@ Only the third can fail suddenly, and its failure mode is the one that matters c
 Costs will almost certainly keep falling, because hardware and distillation grind away regardless of who wins. Whether *prices* follow is a question about market structure, and market structure is exactly the thing under active contest. Consolidation to three to five frontier labs, plus regulatory moats that raise the cost of entry, would restore pricing power without a single technical change.
 
 So the two-year moat is a **cost claim** that becomes a **product-strategy claim** only when competition transmits it into price. Score serving costs and serving prices as two separate series. The scenario where the moat survives technically but dies commercially is the [labs endgame](../02-games/1-labs.md), and it is not remote.
+
+![The gap between the two lines is the whole commercial question.](img/cost-vs-price.png)
 
 Current evidence runs the other way. Open-weight models sit only about **3–6 months behind the frontier**. Epoch AI's January–May 2026 comparison puts the average lag near **four months**, roughly six under a stricter comparison rule. That figure has been *shortening*: earlier versions of this analysis carried 9–15 months. Fast-following is keeping the model layer competitive, which is why surplus passes *through* the model layer rather than pooling in it.
 
