@@ -11,7 +11,7 @@ corpus: 01-substrate/energy.md, 06-uncertainties/power-permitting.md, 01-substra
 
 A 1GW datacenter campus draws what about **800,000 homes** draw.
 
-That comparison points at which institutions are about to become load-bearing for AI progress, and none of them are in California or Seattle. The supply chain behind that gigawatt is measured in years:
+That comparison points at who sets the schedule for AI progress, and none of them are in California or Seattle. The supply chain behind that gigawatt is measured in years:
 
 - US grid interconnection queues for large new loads: **5–7 years**
 - Gas turbine order books: full **into 2030**
@@ -91,7 +91,7 @@ That number is the seed of the backlash, and the mechanism is simple enough to s
 
 Countries that can build power fast gain structural advantage **that has nothing to do with their AI research talent**:
 
-- **China**, at ~**300GW/yr** of generation additions, roughly an order of magnitude above US net additions, with permitting that functions as an instrument of policy rather than an obstacle to it
+- **China**, at ~**300GW/yr** of generation additions, roughly an order of magnitude above US net additions, with permitting that is an instrument of policy rather than an obstacle to it
 - **Gulf states**, with sovereign capital, abundant gas, and minimal permitting friction
 - **A second tier** of India, Brazil, and Indonesia, with the additions but not yet the transmission or the demand-side buyers
 

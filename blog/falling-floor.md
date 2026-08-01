@@ -36,7 +36,7 @@ The third row is where most of the money is being lost, so the mechanism deserve
 | Mechanism | What it is | How durable |
 |---|---|---|
 | **Hardware** | $/FLOP plus serving-stack utilization | Manufacturing cadence. Steady, slow, unlikely to stop or accelerate |
-| **Distillation** | Compressing frontier behavior into small models | Largest single contributor, and visibly bounded. You cannot distill below the capability the task actually needs, so it exhausts *per tier* while repeating for each new tier |
+| **Distillation** | Compressing frontier behavior into small models | Largest single contributor, and visibly bounded. You cannot distill below the capability the task needs, so it exhausts *per tier* while repeating for each new tier |
 | **Competition** | Several near-equivalent vendors converting cost into price | The fragile one. A market-structure fact, not a technical one |
 
 Only the third can fail suddenly, and its failure mode is the one that matters commercially.
@@ -55,7 +55,7 @@ Current evidence runs the other way. Open-weight models sit only about **3–6 m
 
 The headline number hides a gradient. Prices fall fastest where models are substitutable, which by the [verification asymmetry](../01-substrate/data.md) means the benchmarkable work. Where output quality is hard to verify, buyers cannot compare vendors, switching carries real risk, and price stays sticky.
 
-The floor collapses fastest underneath the tasks that were automated first. It is the same gradient that governs capability, showing up a second time as a pricing fact. If your product sits in verifiable territory, you are on the fast side of both curves, the good one and the bad one.
+The floor collapses fastest underneath the tasks that were automated first. It is the same gradient that governs capability, showing up a second time as a pricing fact. If your product is in verifiable territory, you are on the fast side of both curves, the good one and the bad one.
 
 ## What this kills
 
