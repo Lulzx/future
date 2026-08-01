@@ -35,13 +35,13 @@ Flat demand, quarter-time supply. Something has to fill the gap, and the somethi
 
 Call it **the Night Tax**: everything you have to buy so that quarter-time power can serve an always-on load. Batteries, overbuilt panels, backup gas, some blend. The tax runs larger than the electricity it firms.
 
-Run the arithmetic once and it stops being abstract. To carry a 1GW campus through one night you need roughly 16 gigawatt-hours of storage, plus several gigawatts of extra panels to charge it during the day. The largest battery facility on earth, Edwards & Sanborn in California, stores about **3.3 GWh**.
+Run the arithmetic once and it stops being abstract. To carry a 1GW campus through one night you need roughly 16 gigawatt-hours of storage, plus about three to four gigawatts of extra panels to charge that stack in a short solar day. The largest battery facility on earth, Edwards & Sanborn in California, stores about **3.3 GWh**.
 
 One campus. Five of the biggest battery ever built. Per night. Assuming tomorrow is sunny.
 
 ![A cheap panel, and towering over it, the pile of batteries that lets the panel keep its promises after dark.](img/night-tax.avif)
 
-That pile in the drawing is the Night Tax made visible, and it is why the firmed product costs a multiple of the headline cent, which is why hyperscalers desperate for carbon-free power are restarting Three Mile Island and ordering small modular reactors instead of just buying more of the cheapest electricity in history. Nobody skips the record-setting price by accident. **They are not paying for the electricity. They are paying for the night.**
+That pile in the drawing is the Night Tax made visible. Lazard's recent unsubsidized band for utility solar-plus-storage sits around **six to fifteen cents** per kilowatt-hour, and that pairing is typically a four-hour battery, not a sixteen-hour night. Against a desert PPA at a cent, the firmed product is an order of magnitude more expensive, which is why hyperscalers desperate for carbon-free power are restarting Three Mile Island and ordering small modular reactors instead of just buying more of the cheapest electricity in history. Nobody skips the record-setting price by accident. **They are not paying for the electricity. They are paying for the night.**
 
 ## Pay the tax in full and you are still somebody's neighbor
 
@@ -51,7 +51,7 @@ Somebody lives next to it.
 
 Call this one **the Neighbor Problem**. Every terrestrial watt sits in a jurisdiction, upstream of a ratepayer, within reach of a commissioner. The last post laid out the receipts: wholesale power up **+267%** at the most affected US nodes over 2020 to 2025 per Bloomberg, PJM wholesale costs up **~76% year-on-year** into early 2026 with the market monitor naming datacenter load as the driver, and [the corpus's standing bet](../06-uncertainties/power-permitting.md) that the electricity bill regulates American AI before capability politics does. The AEP Ohio tariff already showed how fast one rate case moves compared to any reform.
 
-The Night Tax is physics and the Neighbor Problem is politics, and the build-out is currently paying both at once. Which is the setup for an objection you should absolutely be making right now.
+The Night Tax is physics and the Neighbor Problem is politics, and the build-out is currently paying both at once.
 
 ## "Fine, then burn gas until the reactors show up"
 
@@ -59,11 +59,11 @@ That is the actual industry plan, and it is not stupid. Gas dodges the Night Tax
 
 But look at what each option pays instead. Gas turbine order books are full **into 2030**, and every on-site gas plant is a ratepayer story and a siting fight waiting to happen. The Three Mile Island restart is one plant. SMRs at scale are a 2030s technology on their own vendors' timelines. Every one of these escapes the tax by walking deeper into the Neighbor Problem, into the queue, the hearing, the rate case, the five-to-seven-year line at the Permit Window.
 
-So do the exercise this blog exists for. Forget the technologies and write down what the perfect site would need. Sun that never sets, so the tax is zero. No grid, so there is no queue. No jurisdiction, so there is no window to queue at. No neighbors, so there is no bill for a campaign ad to photograph.
+So do the exercise this blog exists for. Forget the technologies and write down what the perfect site would need. Sun that never sets, so the tax is zero. No grid interconnection, so there is no five-to-seven-year plug-in queue. No ratepayer next door, so the Neighbor Problem has nothing to attach to. A licensing surface that is federal and technical rather than local and political: spectrum filings and launch permits, not county hearings and rate cases.
 
-Read the list back. No site on the map has all four.
+Read the list back. No site on the map has that combination.
 
-One place does. It starts 550 kilometers straight up.
+One place comes closest. It starts 550 kilometers straight up.
 
 ## In June the biggest launch company on earth made it a product
 
@@ -71,9 +71,9 @@ On 24 June 2026, SpaceX confirmed the name **Starmind** for an orbital AI datace
 
 And SpaceX is late. Starcloud flew an H100 to orbit in November 2025 and [raised a $170M Series A in March](https://techcrunch.com/2026/03/30/starcloud-raises-170-million-series-ato-build-data-centers-in-space). Google announced Project Suncatcher, TPUs on satellites, in November 2025, with its own 2027 prototypes. Three organizations that do not copy each other's homework arrived at the same answer within a year.
 
-The reason is the list above. In the dawn-dusk sun-synchronous orbits these designs use, a panel sees the sun over 99% of the year at full space intensity, about 1361 watts per square meter with no atmosphere and no weather in the way. Google's Suncatcher paper puts the annual yield at up to **eight times** the same panel on mid-latitude ground. The Night Tax is zero, permanently, by orbital mechanics. And nobody in low earth orbit pays a rate case.
+The reason is the list above. In the dawn-dusk sun-synchronous orbits these designs use, a panel sees the sun over 99% of the year at full space intensity, about 1361 watts per square meter with no atmosphere and no weather in the way. Google's Suncatcher paper puts the annual yield at up to **eight times** the same panel on mid-latitude ground. The Night Tax is zero, permanently, by orbital mechanics. And nobody in low earth orbit pays a rate case. They still file with the FCC, and they still share the sky with debris, astronomy, and every other constellation, but that is not the Permit Window, and it is not a commissioner answering to a ratepayer.
 
-Now dramatize the ambition properly, because the number SpaceX gave investors deserves it. The claim is **100 GW of new compute capacity per year** once Starship flies at rate, a million tonnes of hardware annually at 100 kW per tonne. The entire United States nets about thirty gigawatts of new grid capacity a year. One company is claiming it will add three American grids' worth of AI power annually, from a place with no interconnection queue, because there is no interconnection.
+Now dramatize the ambition properly, because the number SpaceX gave investors deserves it. The claim is **100 GW of new compute capacity per year** once Starship flies at rate. At the roughly **70 kW per tonne** SpaceX lists as AI1 vehicle efficiency, that is about 1.4 million tonnes of hardware annually. The entire United States nets about thirty gigawatts of new grid capacity a year. One company is claiming it will add three American grids' worth of AI power annually, from a place with no interconnection queue, because there is no interconnection.
 
 ## "You cannot send a repair truck to orbit"
 
@@ -85,7 +85,7 @@ Look at the proportions in that drawing. The rack is the small thing. Almost eve
 
 Here is why the objection is weaker than it sounds: **the repair truck stopped visiting terrestrial racks too.** At hyperscale, a failed server is drained and swapped, not repaired, and an AI accelerator is economically dead in three to five years regardless, obsoleted long before it breaks. That is precisely Starlink's fleet model, 8,000+ satellites launched, five-year design lives, deorbit and replace. Orbit does not need datacenter hardware to become immortal. It needs it to survive about as long as it was going to matter anyway.
 
-The honest caveat is the shape of the compute. Training wants thousands of racks on one fat interconnect, which orbit does badly for now. Inference wants many small nodes near users, which a constellation with laser crosslinks does naturally, and from 550 kilometers the light-lag is single-digit milliseconds. Starmind is pitched as inference first for exactly this reason. Orbit does not have to replace the terrestrial build-out. It has to absorb the growth, and [the growth is the inference side](../01-substrate/inference-economics.md).
+The honest caveat is the shape of the compute. Training wants thousands of racks on one fat interconnect, which orbit does badly for now. Inference wants many small nodes, which a constellation with laser crosslinks does naturally, and from 550 kilometers the satellite link itself is single-digit milliseconds, not the fat fabric a training cluster needs. Starmind is pitched as inference first for exactly this reason. Orbit does not have to replace the terrestrial build-out. It has to absorb the growth, and [the growth is the inference side](../01-substrate/inference-economics.md).
 
 ## The whole question reduces to the price of a kilogram
 
@@ -93,7 +93,7 @@ The corpus's most-used sentence is that the bottleneck migrates, silicon to elec
 
 Silicon, electrons, permits, kilograms.
 
-At 100 kW per tonne, a kilogram launched carries 100 watts of compute. On a Falcon 9 at roughly $3,000 per kilogram of list-price capacity, that is **$30 per watt** spent before the first token, against roughly $10 to 15 per watt for a complete terrestrial campus. Dead on arrival. At the few hundred dollars per kilogram Starship is designed to reach, the same watt rides up for two or three dollars, and the arithmetic flips from absurd to unfair.
+At 70 kW per tonne, a kilogram launched carries 70 watts of compute. On a Falcon 9 at roughly $3,000 per kilogram of list-price capacity, that is about **$43 per watt** spent on launch before the first token, against roughly $10 to 15 per watt for a complete terrestrial campus. Dead on arrival. At the few hundred dollars per kilogram Starship is designed to reach, the same watt rides up for four or five dollars, and the arithmetic flips from absurd to competitive, then unfair if the price keeps falling.
 
 ![Four barriers now. The last one is a scale, and it only asks one question.](img/fourth-gate.avif)
 
@@ -116,4 +116,4 @@ Watch those four series, prototype telemetry, customer launch pricing, third-par
 
 For as long as there has been a grid, the iron rule of siting was that you build where the power is cheap and the neighbors are few. Everyone read that rule as a statement about geography.
 
-It was a statement about queues, bills, and hearings, and there is exactly one place left where none of the three exist. The datacenter of 2035 is not sited where power is cheapest. It is sited where nobody can say no, and that place is falling around the planet at eight kilometers a second, in permanent sunshine, with no one next door.
+It was a statement about queues, bills, and hearings, and there is exactly one place left where those three do not set the schedule. The datacenter of 2035 is not sited where power is cheapest. It is sited where the ratepayer cannot say no, and that place is falling around the planet at eight kilometers a second, in permanent sunshine, with no one next door.
