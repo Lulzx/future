@@ -96,6 +96,25 @@ table { border-collapse: collapse; border-spacing: 0; }
   --text-color-alt: #666;
   --background-color: #fdfdfc;
   --background-color-alt: #eee;
+  /* ── elevation ──────────────────────────────────────────────────────────
+     Four surfaces, one per height off the page. 0 is the page itself, 1 is
+     content that sits on it (takeaway, sources, post rows), 2 is chrome that
+     floats over it (status bar, dialog, buttons), 3 is the hover/active state
+     of anything on 2. In light the surfaces darken as they rise and carry a
+     shadow, in dark they lighten, which is the only direction that reads on a
+     near-black ground. Everything else is derived from these, so a tone change
+     happens in one place. */
+  --surface-0: #fdfdfc;
+  --surface-1: #f4f3ef;
+  --surface-2: #edebe6;
+  --surface-3: #e2dfd8;
+  --edge: color-mix(in srgb, var(--text-color) 16%, transparent);
+  --edge-strong: color-mix(in srgb, var(--text-color) 34%, transparent);
+  --shadow-1: 0 1px 2px rgba(20, 22, 28, .06);
+  --shadow-2: 0 2px 10px rgba(20, 22, 28, .10);
+  --radius-sm: 4px;
+  --radius: 7px;
+  --radius-lg: 11px;
   --font-weight-normal: 500;
   --font-weight-medium: 600;
   --font-weight-bold: 800;
@@ -113,6 +132,14 @@ table { border-collapse: collapse; border-spacing: 0; }
      dark theme softens both ends and drops a step of weight to compensate. */
   --text-color: #d6dae0; --text-color-alt: #8b9199;
   --background-color: #101215; --background-color-alt: #1a1d22;
+  --surface-0: #101215;
+  --surface-1: #171a1f;
+  --surface-2: #1e222a;
+  --surface-3: #272c35;
+  --edge: color-mix(in srgb, var(--text-color) 18%, transparent);
+  --edge-strong: color-mix(in srgb, var(--text-color) 38%, transparent);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .40);
+  --shadow-2: 0 2px 12px rgba(0, 0, 0, .55);
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
@@ -126,6 +153,14 @@ table { border-collapse: collapse; border-spacing: 0; }
      dark theme softens both ends and drops a step of weight to compensate. */
   --text-color: #d6dae0; --text-color-alt: #8b9199;
   --background-color: #101215; --background-color-alt: #1a1d22;
+  --surface-0: #101215;
+  --surface-1: #171a1f;
+  --surface-2: #1e222a;
+  --surface-3: #272c35;
+  --edge: color-mix(in srgb, var(--text-color) 18%, transparent);
+  --edge-strong: color-mix(in srgb, var(--text-color) 38%, transparent);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .40);
+  --shadow-2: 0 2px 12px rgba(0, 0, 0, .55);
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
@@ -135,6 +170,14 @@ table { border-collapse: collapse; border-spacing: 0; }
 :root[data-theme="light"] {
   --text-color: #16181c; --text-color-alt: #666;
   --background-color: #fdfdfc; --background-color-alt: #eee;
+  --surface-0: #fdfdfc;
+  --surface-1: #f4f3ef;
+  --surface-2: #edebe6;
+  --surface-3: #e2dfd8;
+  --edge: color-mix(in srgb, var(--text-color) 16%, transparent);
+  --edge-strong: color-mix(in srgb, var(--text-color) 34%, transparent);
+  --shadow-1: 0 1px 2px rgba(20, 22, 28, .06);
+  --shadow-2: 0 2px 10px rgba(20, 22, 28, .10);
   --font-weight-normal: 500;
   --font-weight-medium: 600;
   --font-weight-bold: 800;
@@ -212,7 +255,7 @@ table {
   border-collapse: collapse; margin: 0 0 calc(var(--line-height) * 2);
 }
 th, td {
-  border: var(--border-thickness) solid var(--text-color);
+  border: var(--border-thickness) solid var(--edge-strong);
   padding:
     calc((var(--line-height) / 2))
     calc(1ch - var(--border-thickness) / 2)
@@ -228,8 +271,10 @@ img, video { display: block; width: 100%; object-fit: contain; overflow: hidden;
 img { font-style: italic; color: var(--text-color-alt); }
 
 details {
-  border: var(--border-thickness) solid var(--text-color);
-  padding: calc(var(--line-height) - var(--border-thickness)) 1ch;
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--surface-1);
+  padding: calc(var(--line-height) - var(--border-thickness)) 1.5ch;
   margin-bottom: var(--line-height);
 }
 summary { font-weight: var(--font-weight-medium); cursor: pointer; text-transform: uppercase; }
@@ -262,18 +307,32 @@ li::marker { line-height: 0; }
 ::-webkit-scrollbar { height: var(--line-height); width: var(--line-height); }
 ::-webkit-scrollbar-thumb { background: var(--text-color-alt); }
 
+/* A button is a raised thing, not an outlined region. It sits on surface 2 so
+   it reads as a control even before you find its border, and the border is a
+   hairline that shapes the fill rather than a black box drawn around a label. */
 button {
-  border: var(--border-thickness) solid var(--text-color);
+  border: var(--border-thickness) solid var(--edge-strong);
+  border-radius: var(--radius-sm);
   padding: calc(var(--line-height) / 2 - var(--border-thickness)) calc(1ch - var(--border-thickness));
   margin: 0; font: inherit; font-weight: var(--font-weight-medium);
   height: calc(var(--line-height) * 2);
-  background: var(--background-color); color: var(--text-color);
+  background: var(--surface-2); color: var(--text-color);
+  box-shadow: var(--shadow-1);
   line-height: normal; text-transform: uppercase; cursor: pointer;
+  transition: background-color .12s ease-out, box-shadow .12s ease-out;
   -webkit-appearance: none;
 }
-button:hover { background: var(--background-color-alt); }
-button:active { transform: translate(2px, 2px); }
-button:focus-visible { --border-thickness: 3px; outline: none; }
+button:hover { background: var(--surface-3); }
+button:active {
+  background: var(--surface-3);
+  box-shadow: none;
+  transform: translateY(1px);
+}
+button:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) { button { transition: none; } }
 
 /* tree connectors - upstream .tree */
 .tree, .tree ul {
@@ -338,7 +397,7 @@ a { text-decoration: none; }
   text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
 }
 #content a:hover, #content a:focus-visible {
-  background: var(--background-color-alt);
+  background: var(--surface-2);
   border-bottom: 1px solid currentColor;
   outline: none;
 }
@@ -378,7 +437,7 @@ a[target="_blank"]:after {
   text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
 }
 .masthead h1 a:hover {
-  background: var(--background-color-alt);
+  background: var(--surface-2);
   border-bottom: 1px solid currentColor;
 }
 .masthead .meta { white-space: nowrap; }
@@ -410,7 +469,7 @@ a[target="_blank"]:after {
 }
 .crumb a:hover {
   color: var(--text-color);
-  background: var(--background-color-alt);
+  background: var(--surface-2);
   border-bottom: 1px solid currentColor;
 }
 .crumb .sep { opacity: .5; }
@@ -463,8 +522,10 @@ h4:hover .anchor, .anchor:focus-visible { opacity: 1; }
    the top border so the claim reads as a box you can find by scanning.   */
 blockquote {
   position: relative;
-  border: var(--border-thickness) solid var(--text-color);
-  padding: var(--line-height) 1ch calc(var(--line-height) - var(--border-thickness));
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--surface-1);
+  padding: var(--line-height) 1.5ch calc(var(--line-height) - var(--border-thickness));
   margin: calc(var(--line-height) * 2) 0 calc(var(--line-height) * 2);
 }
 blockquote > *:first-child { margin-top: 0; }
@@ -472,17 +533,22 @@ blockquote > *:last-child { margin-bottom: 0; }
 blockquote[data-label]:before {
   content: attr(data-label);
   position: absolute; top: calc(var(--line-height) * -0.5 - var(--border-thickness) / 2);
-  left: 2ch; padding: 0 1ch;
-  background: var(--background-color); color: var(--text-color);
+  left: 1.5ch; padding: 0 1ch;
+  background: var(--surface-1); color: var(--text-color);
   font-weight: var(--font-weight-bold); text-transform: uppercase;
   line-height: var(--line-height); white-space: nowrap;
 }
 blockquote[data-label] { padding-top: calc(var(--line-height) * 1.25); }
 
 /* ── code ───────────────────────────────────────────────────────────── */
-code:not(pre code) { background: var(--background-color-alt); padding: 0 0.4ch; }
+code:not(pre code) {
+  background: var(--surface-2); padding: 0 0.4ch;
+  border-radius: var(--radius-sm);
+}
 pre {
-  border: var(--border-thickness) solid var(--text-color);
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--surface-1);
   padding: calc(var(--line-height) / 2) 1ch;
 }
 pre code { background: none; padding: 0; }
@@ -490,11 +556,16 @@ pre code { background: none; padding: 0; }
 /* ── tables ─────────────────────────────────────────────────────────── */
 /* The scroll box clips, so the table drops upstream's half-line offset here
    and the wrapper carries the spacing instead. */
-.table-scroll { overflow-x: auto; margin: var(--line-height) 0 calc(var(--line-height) * 2); }
+/* The scroll box already clips, so a radius on it rounds the table's corners
+   without having to break border-collapse on every cell. */
+.table-scroll {
+  overflow-x: auto; margin: var(--line-height) 0 calc(var(--line-height) * 2);
+  border-radius: var(--radius-sm);
+}
 .table-scroll table { top: 0; margin: 0; min-width: 100%; }
 thead th { background: var(--text-color); color: var(--background-color); }
 thead th a:link, thead th a:visited { color: var(--background-color); }
-tbody tr:hover > * { background: var(--background-color-alt); }
+tbody tr:hover > * { background: var(--surface-1); }
 
 /* ── the index page ─────────────────────────────────────────────────────
    Its `### [00 - Overview](…)` sections are the site map; give each one a
@@ -515,14 +586,18 @@ tbody tr:hover > * { background: var(--background-color-alt); }
   margin-bottom: 0;
 }
 .pagenav .cell {
-  border: var(--border-thickness) solid var(--text-color);
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--surface-1);
   padding: calc(var(--line-height) / 2 - var(--border-thickness) / 2) 1ch;
   margin-top: 0; min-width: 0;
 }
-.pagenav .cell.empty { border-style: dashed; color: var(--text-color-alt); }
+.pagenav .cell.empty {
+  border-style: dashed; color: var(--text-color-alt); background: none;
+}
 .pagenav .dir { display: block; color: var(--text-color-alt); text-transform: uppercase; }
 .pagenav .cell a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pagenav .cell:hover { background: var(--background-color-alt); }
+.pagenav .cell:hover { background: var(--surface-2); }
 .pagenav + .msg { margin-top: var(--line-height); }
 
 /* ── status bar ─────────────────────────────────────────────────────────
@@ -530,8 +605,11 @@ tbody tr:hover > * { background: var(--background-color-alt); }
 .statusbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
   margin: 0;
-  background: var(--background-color);
-  border-top: var(--border-thickness) solid var(--text-color);
+  /* Chrome, so it sits a step above the page instead of matching it. The tone
+     change does the separating and the rule can stay a hairline. */
+  background: var(--surface-2);
+  border-top: var(--border-thickness) solid var(--edge);
+  box-shadow: var(--shadow-2);
   line-height: var(--line-height);
   /* Collapsed by default. A bar permanently pinned over the text reads as a
      consent banner, and the eye starts hunting for the dismiss button. */
@@ -550,15 +628,17 @@ tbody tr:hover > * { background: var(--background-color-alt); }
   width: calc(var(--line-height) * 1.75);
   height: calc(var(--line-height) * 1.75);
   display: flex; align-items: center; justify-content: center;
-  border: var(--border-thickness) solid var(--text-color);
-  background: var(--background-color);
+  border: var(--border-thickness) solid var(--edge-strong);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  box-shadow: var(--shadow-2);
   color: var(--text-color-alt);
   font-size: 0.9rem; line-height: 1; cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 .sb-toggle:hover, .sb-toggle:focus-visible {
-  background: var(--background-color-alt); color: var(--text-color);
+  background: var(--surface-3); color: var(--text-color);
 }
 .statusbar-inner {
   display: flex; align-items: center; gap: 1ch;
@@ -578,15 +658,22 @@ tbody tr:hover > * { background: var(--background-color-alt); }
   /* Never shrink: Find must stay tappable on narrow screens. */
   flex-shrink: 0;
 }
+/* Controls sitting on the bar take the next step up, otherwise a surface-2
+   button on a surface-2 bar disappears into it. */
 .sb-actions button,
 .sb-actions .sb-link {
   height: calc(var(--line-height) * 1.5); font-size: 0.75rem;
   padding: 0 calc(1ch - var(--border-thickness));
   display: inline-flex; align-items: center; justify-content: center;
-  border: var(--border-thickness) solid var(--text-color);
-  background: var(--background-color); color: var(--text-color);
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius-sm);
+  background: var(--surface-3); color: var(--text-color);
+  box-shadow: none;
   font-family: inherit; cursor: pointer;
-  text-decoration: none; border-bottom: var(--border-thickness) solid var(--text-color) !important;
+  /* The links sit in the same row of pills as the buttons, so they take the
+     button's casing too. */
+  text-transform: uppercase; letter-spacing: 0.03em;
+  text-decoration: none; border-bottom: var(--border-thickness) solid var(--edge) !important;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   min-width: 4.5ch;
@@ -595,9 +682,13 @@ tbody tr:hover > * { background: var(--background-color-alt); }
 .sb-actions .sb-link:hover,
 .sb-actions button:focus-visible,
 .sb-actions .sb-link:focus-visible {
-  background: var(--background-color-alt);
+  background: color-mix(in srgb, var(--text-color) 12%, var(--surface-3));
+  border-color: var(--edge-strong);
 }
-button[aria-pressed="true"] { background: var(--text-color); color: var(--background-color); }
+button[aria-pressed="true"] {
+  background: var(--text-color); color: var(--background-color);
+  border-color: var(--text-color);
+}
 @media screen and (max-width: 640px) {
   .statusbar-inner { padding: calc(var(--line-height) / 2) 1ch; }
   .sb-progress { display: none; }
@@ -623,8 +714,11 @@ kbd {
 
 /* ── find dialog (catalog search) ─────────────────────────────────────── */
 .find-dialog {
-  border: var(--border-thickness) solid var(--text-color);
-  background: var(--background-color); color: var(--text-color);
+  border: var(--border-thickness) solid var(--edge-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-2); color: var(--text-color);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
   padding: 0;
   /* Center on both desktop and mobile; use dvh so the keyboard does not clip. */
   margin: auto;
@@ -645,35 +739,43 @@ kbd {
   font-weight: var(--font-weight-bold); text-transform: uppercase;
   color: var(--text-color-alt);
 }
+/* An input is the one thing that goes down rather than up: it drops to the
+   page surface so it reads as a well cut into the dialog. */
 #find-input {
-  font: inherit; color: var(--text-color); background: var(--background-color);
-  border: var(--border-thickness) solid var(--text-color);
+  font: inherit; color: var(--text-color); background: var(--surface-0);
+  border: var(--border-thickness) solid var(--edge-strong);
   padding: calc(var(--line-height) / 4) 1ch;
   width: 100%;
   /* 16px minimum stops iOS Safari from zooming the page on focus. */
   font-size: max(1rem, 16px);
-  border-radius: 0;
+  border-radius: var(--radius-sm);
   -webkit-appearance: none;
   appearance: none;
 }
-#find-input:focus { outline: none; background: var(--background-color-alt); }
+#find-input:focus {
+  outline: none;
+  border-color: var(--text-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--text-color) 18%, transparent);
+}
 .find-results {
   list-style: none; padding: 0; margin: 0;
   max-height: min(40dvh, 20rem); overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  border-top: var(--border-thickness) solid var(--text-color);
+  border-top: var(--border-thickness) solid var(--edge);
 }
-.find-results li { margin: 0; border-bottom: 1px solid var(--background-color-alt); }
+.find-results li { margin: 0; border-bottom: 1px solid var(--edge); }
+.find-results li:last-child { border-bottom: none; }
 .find-results a {
   display: block;
-  padding: calc(var(--line-height) / 2) 0.5ch;
+  padding: calc(var(--line-height) / 2) 1ch;
+  border-radius: var(--radius-sm);
   border-bottom: none !important; text-decoration: none; color: var(--text-color);
   /* Comfortable tap target */
   min-height: calc(var(--line-height) * 2.5);
 }
 .find-results li.is-active a,
 .find-results a:hover,
-.find-results a:focus-visible { background: var(--background-color-alt); }
+.find-results a:focus-visible { background: var(--surface-3); }
 .find-title { display: block; font-weight: var(--font-weight-medium); }
 .find-path { display: block; color: var(--text-color-alt); font-size: 0.85rem; }
 .find-empty { padding: var(--line-height) 0.5ch; color: var(--text-color-alt); }
@@ -711,7 +813,7 @@ kbd {
 .post-meta {
   color: var(--text-color-alt);
   font-size: 0.85rem;
-  border-top: var(--border-thickness) solid var(--text-color);
+  border-top: var(--border-thickness) solid var(--edge-strong);
   padding-top: calc(var(--line-height) / 2);
 }
 .post-meta .sep { opacity: .5; margin: 0 0.5ch; }
@@ -734,9 +836,13 @@ h2.plain {
 /* the one line — the whole point of the piece, boxed */
 .takeaway {
   margin: calc(var(--line-height) * 2) 0;
-  border: var(--border-thickness) solid var(--text-color);
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius-lg);
   padding: var(--line-height) 1.5ch;
-  background: var(--background-color-alt);
+  /* The one raised block in a post, so it goes a step higher than the sources
+     panel and takes the shadow. */
+  background: var(--surface-2);
+  box-shadow: var(--shadow-1);
 }
 .takeaway-label {
   font-size: 0.75rem;
@@ -754,9 +860,13 @@ h2.plain {
 /* provenance — the corpus under every post */
 .corpus-sources {
   margin-top: calc(var(--line-height) * 2);
-  border-top: var(--border-thickness) solid var(--text-color);
-  padding-top: var(--line-height);
+  border: var(--border-thickness) solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--surface-1);
+  padding: var(--line-height) 1.5ch;
 }
+.corpus-sources > *:first-child { margin-top: 0; }
+.corpus-sources > *:last-child { margin-bottom: 0; }
 .src-list { list-style: none; margin-left: 0; }
 .src-list li { margin-bottom: calc(var(--line-height) / 2); }
 .src-list li::before { content: "→ "; color: var(--text-color-alt); }
@@ -768,8 +878,32 @@ h2.plain {
 
 /* index */
 .blog-intro { margin-bottom: calc(var(--line-height) * 2); }
-.post-table { width: 100%; }
-.post-table td { vertical-align: top; }
+/* The feed reads as a stack of cards, one step off the page, rather than a
+   grid of ruled cells. Separate borders plus row spacing is the only way a
+   table row can carry a radius. */
+.post-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 calc(var(--line-height) / 2);
+  margin-bottom: var(--line-height);
+}
+.post-table td {
+  vertical-align: top;
+  background: var(--surface-1);
+  border: var(--border-thickness) solid var(--edge);
+  border-left-width: 0; border-right-width: 0;
+  transition: background-color .12s ease-out;
+}
+.post-table td:first-child {
+  border-left-width: var(--border-thickness);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.post-table td:last-child {
+  border-right-width: var(--border-thickness);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.post-table tbody tr:hover > td { background: var(--surface-2); }
+@media (prefers-reduced-motion: reduce) { .post-table td { transition: none; } }
 .post-table time { color: var(--text-color-alt); white-space: nowrap; }
 .post-link {
   font-weight: var(--font-weight-medium);
