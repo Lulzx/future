@@ -901,6 +901,8 @@ h2.plain {
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 .post-table tbody tr:hover > td { background: var(--surface-2); }
+/* Archives: a post waiting on its date sits dimmed until a build releases it. */
+.post-table tr.scheduled > td { opacity: .6; }
 @media (prefers-reduced-motion: reduce) { .post-table td { transition: none; } }
 .post-table time { color: var(--text-color-alt); white-space: nowrap; }
 .post-link {

@@ -1025,6 +1025,12 @@ async function readPosts() {
     return [];
   }
 
+  // Posts dated past the build date are scheduled: their pages build, but
+  // they stay out of the index, feed, Find, and the older/newer chain until
+  // a build runs on or after their date. The archives page lists them.
+  const d = new Date();
+  const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
   const posts = [];
   for (const name of names.sort()) {
     const doc = `${BLOG.dir}/${name}`;
@@ -1044,6 +1050,7 @@ async function readPosts() {
       // `page: true` marks a standing page: blog chrome, but no feed entry,
       // no row in the post table, no place in the older/newer chain.
       page: meta.page === "true",
+      scheduled: meta.page !== "true" && meta.date > today,
       title: meta.title,
       dek: meta.dek || "",
       date: meta.date,
@@ -1177,13 +1184,48 @@ ${posts.length
 
 <section class="blog-sub">
 <h2 class="plain">Follow</h2>
-<p><a href="feed.xml">RSS</a> <span class="sep">·</span> <a href="${relHref(doc, DEFAULT_DOC)}">the corpus</a> <span class="sep">·</span> <a href="${rootPrefix(doc)}ask/">ask it a question</a> <span class="sep">·</span> <a href="${REPO}" rel="noopener noreferrer" target="_blank">source</a></p>
+<p><a href="feed.xml">RSS</a> <span class="sep">·</span> <a href="archives/">archives</a> <span class="sep">·</span> <a href="${relHref(doc, DEFAULT_DOC)}">the corpus</a> <span class="sep">·</span> <a href="${rootPrefix(doc)}ask/">ask it a question</a> <span class="sep">·</span> <a href="${REPO}" rel="noopener noreferrer" target="_blank">source</a></p>
 </section>`;
 
   const html = page(doc, `${BLOG.name} · ${BLOG.tagline}`, "blog-index", body, {
     blog: true,
     srcHref: `${rootPrefix(doc)}${DEFAULT_DOC}`,
     description: BLOG.description,
+  });
+
+  const out = path.join(OUT, outPath(doc));
+  await fs.mkdir(path.dirname(out), { recursive: true });
+  await fs.writeFile(out, html);
+}
+
+/** Every post ever written, scheduled ones included, at /blog/archives/. */
+async function buildArchives(posts, pages) {
+  const doc = `${BLOG.dir}/archives/README.md`;
+
+  const rows = posts.map(p => `<tr${p.scheduled ? ` class="scheduled"` : ""}>
+<td class="width-min"><time datetime="${p.date}">${p.date}</time></td>
+<td class="width-auto">
+  <a class="post-link" href="${relHref(doc, p.doc)}">${inline(p.title, doc)}</a>
+  ${p.scheduled ? `<span class="tag">scheduled</span>` : ""}
+  ${p.dek ? `<span class="row-dek">${inline(p.dek, doc)}</span>` : ""}
+</td>
+<td class="width-min post-mins">${p.minutes} min</td>
+</tr>`).join("\n");
+
+  const scheduled = posts.filter(p => p.scheduled).length;
+  const body = `<section class="blog-intro">
+<p>Every post, including the ${scheduled === 1 ? "one" : scheduled} not yet on <a href="${relHref(doc, `${BLOG.dir}/README.md`)}">the front page</a>. A post dated ahead of the last build sits here first and joins the index, the feed, and the chain on its date.</p>
+</section>
+
+<h2 class="plain">All posts</h2>
+${posts.length
+    ? `<table class="post-table"><tbody>\n${rows}\n</tbody></table>`
+    : `<p class="msg">Nothing here yet.</p>`}`;
+
+  const html = page(doc, `Archives · ${BLOG.name}`, "blog-index", body, {
+    blog: true,
+    crumbLeaf: "archives",
+    description: `Every ${BLOG.name} post, scheduled ones included.`,
   });
 
   const out = path.join(OUT, outPath(doc));
@@ -1221,10 +1263,14 @@ ${items}
 async function buildBlog(titles) {
   const entries = await readPosts();
   const posts = entries.filter(e => !e.page);
+  const live = posts.filter(p => !p.scheduled);
   const pages = entries.filter(e => e.page);
-  for (const entry of entries) await buildPost(entry, posts, titles);
-  await buildBlogIndex(posts, pages);
-  await writeFeed(posts);
+  // Scheduled posts render (the archives page links them) but chain, index,
+  // and feed only see live posts, so they surface on their date.
+  for (const entry of entries) await buildPost(entry, live, titles);
+  await buildBlogIndex(live, pages);
+  await buildArchives(posts, pages);
+  await writeFeed(live);
 
   // Publish the raw markdown alongside, same as the corpus does.
   for (const entry of entries) {
@@ -1377,10 +1423,12 @@ for (const doc of docs) {
   await buildDoc(doc, sources.get(doc), sequentialNav(doc, order, titles));
 }
 const entries = await buildBlog(titles);
-await copyStatic(docs, entries);
-const postCount = entries.filter(e => !e.page).length;
+await copyStatic(docs, entries.filter(e => !e.scheduled));
+const postCount = entries.filter(e => !e.page && !e.scheduled).length;
+const scheduledCount = entries.filter(e => e.scheduled).length;
 console.log(
   `built ${docs.length} pages → _site/ (${order.length} in reading order)` +
   ` · ${BLOG.name}: ${postCount} post${postCount === 1 ? "" : "s"}` +
-  `${entries.length > postCount ? ` + ${entries.length - postCount} standing` : ""}`,
+  `${scheduledCount ? ` + ${scheduledCount} scheduled` : ""}` +
+  `${entries.length > postCount + scheduledCount ? ` + ${entries.length - postCount - scheduledCount} standing` : ""}`,
 );
