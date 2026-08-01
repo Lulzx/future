@@ -9,7 +9,13 @@ import {
   AutoModelForCausalLM,
   TextStreamer,
   InterruptableStoppingCriteria,
+  env,
 } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0";
+
+// The q4 weights are ~280 MB — keep them in Cache Storage so a repeat visit
+// loads from disk. This is the library default; stated so an upgrade that
+// flips it does not silently re-download on every visit.
+env.useBrowserCache = true;
 
 const DEFAULT_MODEL = "onnx-community/LFM2.5-350M-ONNX";
 

@@ -522,10 +522,90 @@ async function ensureGenerator() {
 
 /* ── client corpus (static fallback) ────────────────────────────────────── */
 
+/**
+ * The index and the vector matrix are a few MB and change only when the
+ * corpus is reindexed, so keep them in the Cache Storage API and serve
+ * cache-first. A conditional request revalidates in the background: the
+ * current session runs on the cached copy either way, and a changed corpus
+ * lands on the next load.
+ */
+const RAG_CACHE = "ask-rag-v1";
+let ragCacheHits = 0;
+
+async function ragCache() {
+  // Unavailable in insecure contexts and some private windows.
+  if (typeof caches === "undefined") return null;
+  try {
+    const cache = await caches.open(RAG_CACHE);
+    const names = await caches.keys();
+    await Promise.all(
+      names.filter((n) => n.startsWith("ask-rag-") && n !== RAG_CACHE)
+        .map((n) => caches.delete(n)),
+    );
+    return cache;
+  } catch {
+    return null;
+  }
+}
+
+async function revalidate(cache, url, cached) {
+  const headers = {};
+  const etag = cached.headers.get("etag");
+  const lastMod = cached.headers.get("last-modified");
+  if (etag) headers["If-None-Match"] = etag;
+  else if (lastMod) headers["If-Modified-Since"] = lastMod;
+  if (!etag && !lastMod) return;
+  try {
+    const res = await fetch(url, { headers, cache: "no-cache" });
+    if (res.status === 304 || !res.ok) return;
+    await cache.put(url, res.clone());
+    setStatus("Corpus index updated — reload to use it", "warn");
+  } catch {
+    /* offline: the cached copy stands */
+  }
+}
+
+/** Cache-first fetch with optional byte progress on a cold download. */
+async function fetchRag(url, label) {
+  const cache = await ragCache();
+  const hit = cache ? await cache.match(url) : null;
+  if (hit) {
+    ragCacheHits++;
+    revalidate(cache, url, hit);
+    return hit;
+  }
+
+  const res = await fetch(url);
+  if (!res.ok) return res;
+  if (cache) await cache.put(url, res.clone());
+
+  // Stream the copy we return so the bar moves on the first (cold) load.
+  const total = Number(res.headers.get("content-length")) || 0;
+  if (!total || !res.body) return res;
+  resetLoadState(label);
+  let loaded = 0;
+  const reader = res.body.getReader();
+  const chunks = [];
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    loaded += value.length;
+    setProgressUI({
+      label,
+      pct: (loaded / total) * 100,
+      file: url,
+      detail: `${formatBytes(loaded)} / ${formatBytes(total)}`,
+    });
+  }
+  hideProgress();
+  return new Response(new Blob(chunks), { headers: res.headers });
+}
+
 async function ensureClientCorpus() {
   if (clientIndex && clientMatrix) return;
-  setStatus("Loading /rag/index.json…", "warn");
-  const indexRes = await fetch("/rag/index.json", { cache: "no-cache" });
+  setStatus("Loading corpus index…", "warn");
+  const indexRes = await fetchRag("/rag/index.json", "Corpus index");
   if (!indexRes.ok) {
     throw new Error(
       "No /rag/index.json. Run: node tools/rag.mjs reindex && npm run ask",
@@ -536,8 +616,8 @@ async function ensureClientCorpus() {
     throw new Error("Index missing tokens — rebuild with node tools/rag.mjs reindex");
   }
 
-  setStatus("Loading /rag/vectors.bin…", "warn");
-  const vecRes = await fetch("/rag/vectors.bin", { cache: "no-cache" });
+  setStatus("Loading corpus vectors…", "warn");
+  const vecRes = await fetchRag("/rag/vectors.bin", "Corpus vectors");
   if (!vecRes.ok) {
     throw new Error("No /rag/vectors.bin. Run: node tools/embed.mjs");
   }
@@ -551,7 +631,7 @@ async function ensureClientCorpus() {
     );
   }
   setStatus(
-    `browser · ${clientIndex.N} passages · hybrid ready · gen ${GEN_MODEL.split("/").pop()}`,
+    `browser · ${clientIndex.N} passages${ragCacheHits >= 2 ? " (cached)" : ""} · hybrid ready · gen ${GEN_MODEL.split("/").pop()}`,
     "ok",
   );
 }
@@ -560,6 +640,9 @@ let _tfjs = null;
 async function loadTransformers() {
   if (_tfjs) return _tfjs;
   _tfjs = await import(TFJS_CDN);
+  // Keep MiniLM's weights in the browser cache across visits (the default,
+  // stated explicitly so it survives a library upgrade changing it).
+  if (_tfjs.env) _tfjs.env.useBrowserCache = true;
   return _tfjs;
 }
 
