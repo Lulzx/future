@@ -652,6 +652,31 @@ function clientScript(doc) {
     rootEl.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
   }
+  // The bar sits over the text and reads like a consent banner if it is
+  // always there, so it starts collapsed behind a single control. The
+  // keyboard shortcuts work either way, so nothing is lost while it is shut.
+  var bar = document.getElementById("statusbar");
+  var sbToggle = document.getElementById("sb-toggle");
+  function setBar(open) {
+    if (!bar || !sbToggle) return;
+    bar.setAttribute("data-open", open ? "true" : "false");
+    sbToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    sbToggle.setAttribute("aria-label", open ? "Hide page actions" : "Show page actions");
+    sbToggle.innerHTML = open ? "&#215;" : "&#9776;";
+    try { localStorage.setItem("sb-open", open ? "1" : "0"); } catch (e) {}
+  }
+  if (sbToggle) {
+    var stored = "0";
+    try { stored = localStorage.getItem("sb-open") || "0"; } catch (e) {}
+    setBar(stored === "1");
+    sbToggle.addEventListener("click", function () {
+      setBar(bar.getAttribute("data-open") !== "true");
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && bar.getAttribute("data-open") === "true") setBar(false);
+    });
+  }
+
   var themeBtn = document.getElementById("theme");
   if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
 
@@ -883,7 +908,10 @@ ${masthead}
 ${contentHtml}
 </main>
 
-<footer class="statusbar">
+<footer class="statusbar" id="statusbar" data-open="false">
+  <button id="sb-toggle" class="sb-toggle" type="button"
+    aria-expanded="false" aria-controls="statusbar" aria-label="Show page actions"
+    title="Page actions">&#9776;</button>
   <div class="statusbar-inner">
     <span class="sb-path" id="sb-path">${escapeHtml(urlPath)}</span>
     <span class="sb-actions">
@@ -1011,12 +1039,9 @@ async function readPosts() {
   return posts;
 }
 
-function tagsHtml(post, fromDoc) {
+function tagsHtml(post) {
   if (!post.tags.length) return "";
-  const home = relHref(fromDoc, `${BLOG.dir}/README.md`);
-  return post.tags
-    .map(t => `<a class="tag" href="${home}#tag-${slug(t)}">${escapeHtml(t)}</a>`)
-    .join(" ");
+  return post.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join(" ");
 }
 
 /** "Sources in the corpus" — every post grounds out in the long document. */
@@ -1068,7 +1093,7 @@ ${post.dek ? `<p class="dek">${inline(post.dek, post.doc)}</p>` : ""}
   <time datetime="${post.date}">${longDate(post.date)}</time>
   <span class="sep">·</span> ${post.minutes} min
   <span class="sep">·</span> ${escapeHtml(BLOG.author)}
-  ${post.tags.length ? `<span class="sep">·</span> ${tagsHtml(post, post.doc)}` : ""}
+  ${post.tags.length ? `<span class="sep">·</span> ${tagsHtml(post)}` : ""}
 </p>
 </header>`;
 
@@ -1109,22 +1134,6 @@ async function buildBlogIndex(posts) {
 <td class="width-min post-mins">${p.minutes} min</td>
 </tr>`).join("\n");
 
-  // Tag buckets, so the `#tag-x` links in post headers land somewhere real.
-  const byTag = new Map();
-  for (const p of posts) {
-    for (const t of p.tags) {
-      if (!byTag.has(t)) byTag.set(t, []);
-      byTag.get(t).push(p);
-    }
-  }
-  const tagSection = byTag.size
-    ? `<h2 class="plain">By tag</h2>
-<dl class="tag-index">${[...byTag.entries()]
-        .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
-        .map(([t, ps]) => `<dt id="tag-${slug(t)}">${escapeHtml(t)} <span class="tag-count">${ps.length}</span></dt>
-<dd>${ps.map(p => `<a href="${relHref(doc, p.doc)}">${escapeHtml(p.title)}</a>`).join(`<span class="sep"> · </span>`)}</dd>`).join("\n")}</dl>`
-    : "";
-
   const body = `<section class="blog-intro">
 <p><strong>${escapeHtml(BLOG.name)}</strong> is where the forecast argues with the news.</p>
 <p>Underneath every post is <a href="${relHref(doc, DEFAULT_DOC)}">a ~100,000-word document</a> built the unfashionable way: from physical constraints upward, with scored probabilities, named falsifiers, and a quarterly indicator dashboard. Posts here take one claim out of it, put current numbers against it, and say plainly what would prove it wrong.</p>
@@ -1135,8 +1144,6 @@ async function buildBlogIndex(posts) {
 ${posts.length
     ? `<table class="post-table"><tbody>\n${rows}\n</tbody></table>`
     : `<p class="msg">Nothing published yet.</p>`}
-
-${tagSection}
 
 <section class="blog-sub">
 <h2 class="plain">Follow</h2>
