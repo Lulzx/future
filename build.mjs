@@ -1041,6 +1041,9 @@ async function readPosts() {
     posts.push({
       doc,
       slug: name.replace(/\.md$/, ""),
+      // `page: true` marks a standing page: blog chrome, but no feed entry,
+      // no row in the post table, no place in the older/newer chain.
+      page: meta.page === "true",
       title: meta.title,
       dek: meta.dek || "",
       date: meta.date,
@@ -1107,7 +1110,7 @@ async function buildPost(post, posts, titles) {
 <h1>${inline(post.title, post.doc)}</h1>
 ${post.dek ? `<p class="dek">${inline(post.dek, post.doc)}</p>` : ""}
 <p class="post-meta">
-  <time datetime="${post.date}">${longDate(post.date)}</time>
+  ${post.page ? "Updated " : ""}<time datetime="${post.date}">${longDate(post.date)}</time>
   <span class="sep">·</span> ${post.minutes} min
   <span class="sep">·</span> ${escapeHtml(BLOG.author)}
   ${post.tags.length ? `<span class="sep">·</span> ${tagsHtml(post)}` : ""}
@@ -1125,7 +1128,7 @@ ${blocks.join("\n")}
 ${takeawayHtml(post)}
 ${corpusHtml(post, titles)}
 </article>
-${postNavHtml(post, posts)}
+${post.page ? "" : postNavHtml(post, posts)}
 <p class="msg"><a href="${REPO}/blob/main/${post.doc}" rel="noopener noreferrer" target="_blank">View markdown source</a></p>`,
     {
       blog: true,
@@ -1139,8 +1142,9 @@ ${postNavHtml(post, posts)}
   await fs.writeFile(out, html);
 }
 
-async function buildBlogIndex(posts) {
+async function buildBlogIndex(posts, pages) {
   const doc = `${BLOG.dir}/README.md`;
+  const scorecard = pages.find(p => p.slug === "forecasts");
 
   const rows = posts.map(p => `<tr>
 <td class="width-min"><time datetime="${p.date}">${p.date}</time></td>
@@ -1153,7 +1157,11 @@ async function buildBlogIndex(posts) {
 
   const body = `<section class="blog-intro">
 <p>Underneath every post is <a href="${relHref(doc, DEFAULT_DOC)}">a ~100,000-word document</a> built the unfashionable way: from physical constraints upward, with scored probabilities, named falsifiers, and a quarterly indicator dashboard. Posts here take one claim out of it, put current numbers against it, and say plainly what would prove it wrong.</p>
-<p>No takes without an order book behind them. Each piece ends on the one line worth keeping.</p>
+<p>No takes without an order book behind them. Each piece ends on the one line worth keeping.${
+    scorecard
+      ? ` And the claims that can be caught failing live on <a href="${relHref(doc, scorecard.doc)}">the scorecard</a>, each with a probability, a resolution date, and the rule it will be graded by.`
+      : ""
+  }</p>
 </section>
 
 <h2 class="plain">Posts</h2>
@@ -1205,14 +1213,16 @@ ${items}
 }
 
 async function buildBlog(titles) {
-  const posts = await readPosts();
-  for (const post of posts) await buildPost(post, posts, titles);
-  await buildBlogIndex(posts);
+  const entries = await readPosts();
+  const posts = entries.filter(e => !e.page);
+  const pages = entries.filter(e => e.page);
+  for (const entry of entries) await buildPost(entry, posts, titles);
+  await buildBlogIndex(posts, pages);
   await writeFeed(posts);
 
   // Publish the raw markdown alongside, same as the corpus does.
-  for (const post of posts) {
-    await fs.copyFile(path.join(ROOT, post.doc), path.join(OUT, post.doc));
+  for (const entry of entries) {
+    await fs.copyFile(path.join(ROOT, entry.doc), path.join(OUT, entry.doc));
   }
 
   const imgSrc = path.join(ROOT, BLOG.dir, "img");
@@ -1222,7 +1232,7 @@ async function buildBlog(titles) {
   } catch {
     /* no illustrations yet */
   }
-  return posts;
+  return entries;
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -1360,9 +1370,11 @@ await fs.rm(OUT, { recursive: true, force: true });
 for (const doc of docs) {
   await buildDoc(doc, sources.get(doc), sequentialNav(doc, order, titles));
 }
-const posts = await buildBlog(titles);
-await copyStatic(docs, posts);
+const entries = await buildBlog(titles);
+await copyStatic(docs, entries);
+const postCount = entries.filter(e => !e.page).length;
 console.log(
   `built ${docs.length} pages → _site/ (${order.length} in reading order)` +
-  ` · ${BLOG.name}: ${posts.length} post${posts.length === 1 ? "" : "s"}`,
+  ` · ${BLOG.name}: ${postCount} post${postCount === 1 ? "" : "s"}` +
+  `${entries.length > postCount ? ` + ${entries.length - postCount} standing` : ""}`,
 );
