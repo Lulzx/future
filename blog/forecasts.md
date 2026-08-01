@@ -1,7 +1,7 @@
 ---
 title: The Scorecard
 dek: Every claim on this blog that can be caught failing, held still long enough to be graded. Each one carries a probability, a resolution date, and the rule it resolves by.
-date: 2026-08-05
+date: 2026-08-11
 tags: forecasts, method
 page: true
 takeaway: A forecast that cannot lose is marketing. Everything on this page can lose.
@@ -44,8 +44,15 @@ Several of these rules sharpen claims the posts made loosely. That sharpening is
 | 15 | First correlated AI loss brings a backstop bill within 18 months | 75% | conditional |
 | 16 | The cognitive-physical price split shows in official statistics | 70% | Dec 2030 |
 | 17 | A major central bank revises its target | 50% | Dec 2035 |
+| 18 | A salient AI-attributed incident occurs | 75% | Dec 2031 |
+| 19 | Binding rules follow the incident within 18 months | 85% | conditional |
+| 20 | Selective hiring reverts to witnessed assessment | 70% | Dec 2030 |
+| 21 | The productivity step-up beats the demographic tide on rates | 30% | Dec 2035 |
+| 22 | Capture-time attestation ships default-on in flagship phones | 55% | Dec 2029 |
+| 23 | A productivity step-up is visible in official statistics | 20% | Dec 2030 |
+| 24 | The first large robot fleets are structured-setting fleets | 80% | Dec 2030 |
 
-Rows 1 through 9 opened 1 August 2026, then two rows with each post since: 10 and 11 on 2 August, 12 and 13 on 3 August, 14 and 15 on 4 August, 16 and 17 on 5 August. All seventeen open.
+Rows 1 through 9 opened 1 August 2026, and each post since has brought one or two: through row 24 on 11 August. All twenty-four open.
 
 ## 1. The open-weight lag is still six months or shorter at the end of 2027
 
@@ -176,6 +183,52 @@ Opened at 75%. The event itself carries no probability here: this row scores the
 The same post carries the corpus's ~50% at face value, and it is the longest-dated row on the board.
 
 **Resolves yes if**, by 31 December 2035, the Federal Reserve, ECB, Bank of England, or Bank of Japan formally changes its inflation target definition, its target index, or its stated tolerance band, in an announced framework revision that its own communications tie at least in part to relative-price divergence or measurement concerns. A routine framework review that reaffirms the status quo resolves no. Opened at 50%, which is the honest way of saying this one is a coin flip and the interesting part is being on the record about the mechanism rather than the outcome.
+
+## 18. A salient AI-attributed incident occurs by the end of 2031
+
+[The incident post](incident-window.md) carries [the corpus's expectation](../02-games/2-nations.md) of a serious AI-attributed incident, most plausibly financial, correlated-cyber, or a biological near-miss, in the 2027 to 2031 window.
+
+**Resolves yes if**, by 31 December 2031, a single event causing large, widely reported harm (fatalities, losses above $1B, or a declared emergency) is attributed to an AI system as a proximate cause by official investigation or by consensus reporting in major outlets. Attribution is the load-bearing clause: diffuse harms, gradual displacement, and contested causation do not count, which is exactly the privacy-class failure mode the post names.
+
+A no here is not good news exactly, since the diffuse-harm world produces late, weak, fragmented rules instead. Opened at 75%.
+
+## 19. Within 18 months of that incident, binding rules are enacted or formally proposed
+
+The corpus's refined prediction, conditional on row 18.
+
+**Resolves only if** row 18 resolves yes. **Then resolves yes if**, within 18 months of the incident, binding AI rules are enacted or formally introduced in the incident's jurisdiction, addressed to the incident's mechanism. **Resolves no** if the window passes with hearings and voluntary frameworks only, which would confirm the theatre branch.
+
+Opened at 85%. The corpus's sharper sub-claim, that ~50% of the operative technical content is industry-originated absent a public measurement institution, is noted here for the annotation but not scored, because origin attribution of statutory text is not cleanly resolvable.
+
+## 20. By the end of 2030, selective hiring and education revert to witnessed assessment
+
+[The signals post](dead-signals.md) applies the Witness Test forward, and [the education page](../03-domains/cognitive/education.md) predicts the reversion by 2030.
+
+**Resolves yes if**, by 31 December 2030, credible surveys or reporting show a majority of selective employers in exposed knowledge professions (law, consulting, software, finance) weight supervised work samples, invigilated or synchronous assessment, or in-person evaluation over asynchronous application materials as the primary screen. The signal is the screen's weight, not its existence: take-homes surviving as a formality does not save the row. Opened at 70%.
+
+## 21. The productivity step-up beats the demographic tide on rates by 2035
+
+[The success-tax post](success-tax.md) carries [the corpus's rates claim](../09-macro/rates.md) at face value.
+
+**Resolves yes if**, by 31 December 2035, ten-year real rates (TIPS or equivalent) in the US are sustained more than 100 basis points above their 2015 to 2024 average for at least eight consecutive quarters, in a period where measured productivity growth has visibly accelerated, per the row 23 test or its successor series. The joint condition is deliberate: rates rising on fiscal stress alone resolves this row no, with the annotation saying so. Opened at 30%.
+
+## 22. Capture-time attestation ships default-on in most flagship phones by the end of 2029
+
+[The build post](what-to-build.md) argues detection loses and attestation wins, and stakes the gets-built list on this row. It is the blog's sharpening of [C8](../07-indicators/governance.md), which tracks provenance infrastructure rather than detector accuracy.
+
+**Resolves yes if**, by 31 December 2029, a majority of new flagship smartphones from the top five global vendors by unit share ship with cryptographic content credentials (C2PA-style capture attestation) enabled by default for the built-in camera. Opt-in features, journalist-only hardware, and platform-side labeling do not count. Default-on at capture is the whole claim. Opened at 55%.
+
+## 23. A productivity step-up is visible in official statistics by 2030
+
+[The line-shaft post](line-shaft.md) argues the J-curve resolves on management-cohort turnover, which is why this row's probability is low despite the blog's general thesis that the technology works.
+
+**Resolves yes if**, by 31 December 2030, US trend TFP or labor-productivity growth in the official series runs at least half a percentage point above its 2015 to 2024 average over a rolling three-year window. Opened at 20%, matching the corpus's own probability row, and the post is on record that a no here plus widening between-firm dispersion is the mechanism *succeeding*, not failing. The dispersion reading goes in the annotation either way.
+
+## 24. The first large robot fleets are in structured, high-turnover settings
+
+[The delivered-hour post](delivered-hour.md) carries [the cost-curves prediction](../03-domains/physical/robotics/cost-curves.md): warehousing, logistics yards, and food processing before construction, retail, or care.
+
+**Resolves yes if**, on 31 December 2030, the largest deployed fleets of mobile or humanoid robots outside automotive manufacturing, measured by units in commercial service per public disclosures and industry tracking, are concentrated in warehousing, logistics, or food processing rather than construction, retail, or care. Teleoperated units count only where the operator ratio is disclosed and autonomy is the majority mode, per the post's own filter. Opened at 80%.
 
 ---
 
