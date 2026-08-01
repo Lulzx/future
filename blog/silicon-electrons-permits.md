@@ -25,7 +25,7 @@ Because the supply chain behind that gigawatt is measured in years:
 - Gas turbine order books: full **into 2030**
 - Transformers: **2 to 3 year** lead times
 
-There is a sentence that people in this industry find genuinely difficult to internalize, so it is worth saying plainly.
+There is a sentence that people in this industry find difficult to internalize, so it is worth saying plainly.
 
 **You cannot software-engineer your way past a substation.**
 
@@ -89,7 +89,7 @@ Faced with a five-year line, a sufficiently rich company does the obvious thing.
 
 ![The rational response to an unmovable queue is to stop being in it.](img/behind-the-meter.avif)
 
-This is precisely what 2025 to 2026 capital allocation shows:
+This is what 2025 to 2026 capital allocation shows:
 
 - **Direct generation ownership.** Alphabet's ~**$4.75B** acquisition of Intersect Power, announced 2025-12-22 and closing H1 2026, which moves risk out of grid queues and into owned generation-plus-storage packages.
 - **Nuclear restarts and offtakes.** Microsoft's Three Mile Island restart, plus Amazon and Google contracting small modular reactors for carbon-free baseload.
@@ -109,7 +109,7 @@ The textbook response to a demand spike is capacity expansion. Turbine and trans
 
 They are doing it slowly and late. And here is the uncomfortable part: **they are being rational.**
 
-Heavy electrical equipment plants take years to build and decades to pay back. The demand signal in front of them is one sector's five-year build-out with a widely discussed correction scenario attached to it. Manufacturers who overbuilt into previous electricity booms ate decade-long busts, and the firms still standing today are precisely the ones that learned that lesson and are not about to unlearn it for you.
+Heavy electrical equipment plants take years to build and decades to pay back. The demand signal in front of them is one sector's five-year build-out with a widely discussed correction scenario attached to it. Manufacturers who overbuilt into previous electricity booms ate decade-long busts, and the firms still standing today are the ones that learned that lesson and are not about to unlearn it for you.
 
 So those order books full into 2030 are being served by overtime and brownfield debottlenecking rather than new factories. Which produces a very specific and very annoying outcome:
 

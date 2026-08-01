@@ -63,7 +63,7 @@ Accelerator supply does not vanish. It becomes rationed and politically allocate
 
 Everyone is standing around the big red switch, watching to see if anyone touches it. The valve is over there, and it is already being turned.
 
-## The part that should genuinely worry you
+## The part that should worry you
 
 Now for the finding that made me want to write this, because it is subtle and it is bad.
 
@@ -109,11 +109,11 @@ The order matters. By the time an event has a name, the insurance market has bee
 
 ## "But nobody would actually do it"
 
-This is the strongest objection and it deserves better than a brush-off, because it is genuinely good and it has been right every single time so far.
+This is the strongest objection and it deserves better than a brush-off, because it has been right every single time so far.
 
 The argument is the **silicon shield**. All parties lose too much for deliberate disruption to be rational. Blockades are not accidents, the loss function is visible to everyone involved, and deterrence has held through every crisis to date. That is not wishful thinking. That is a real mechanism with a real track record.
 
-Here is the problem, and it is uncomfortable.
+Here is the problem.
 
 **The shield decays on our own timeline.**
 
@@ -121,7 +121,7 @@ Here is the problem, and it is uncomfortable.
 
 Every wafer of leading-edge capacity qualified outside Taiwan lowers the cost of disruption to the buyer side. Meanwhile the AI race raises the perceived cost of *not* acting for whichever side is losing it.
 
-Which produces the genuinely nasty structural feature of this whole problem: **the same progress that reduces the consequence of disruption also erodes the thing preventing it.**
+Which produces the nasty structural feature of this whole problem: **the same progress that reduces the consequence of disruption also erodes the thing preventing it.**
 
 ![Building the lifeboat is a good idea. It also makes sinking the ship cheaper.](img/two-arrows.avif)
 
@@ -131,7 +131,7 @@ This is why "non-Taiwan capacity is rising, so this risk is falling" is only hal
 
 ## What would change my mind
 
-- **Non-Taiwan leading-edge share crosses a genuinely material threshold, with yields, before any crisis.** Not announced fabs. Not ribbon-cuttings. Qualified wafers at node. That lowers the variance of this whole uncertainty without moving the point estimate on disruption at all, because it shrinks consequence rather than probability.
+- **Non-Taiwan leading-edge share crosses a material threshold, with yields, before any crisis.** Not announced fabs. Not ribbon-cuttings. Qualified wafers at node. That lowers the variance of this whole uncertainty without moving the point estimate on disruption at all, because it shrinks consequence rather than probability.
 - **Gray-zone indicators stay flat for several years** while capacity diversifies. That would suggest the repricing channel I am describing is not actually live and the binary framing was adequate after all.
 - **A crisis that resolves cleanly in months rather than years**, demonstrating that the substitution lag is shorter than the corpus assumes. The corpus is explicit that 2026 to 2028 and 2028 to 2032 have no substitute at volume. If that turns out to be wrong, the severity here drops a lot.
 

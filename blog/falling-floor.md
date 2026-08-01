@@ -64,7 +64,7 @@ The 2026 version is tokens. Which gives us a small translation table, because ea
 | Capex rising | Contradicts the above | Capacity for the volume that just appeared |
 | Wrapper margins compressing | The models failed | Capability commoditized exactly on schedule |
 
-That third row is where most of the money is currently being lost, so it deserves to be said without any cushioning: **margin compression at the application layer is not evidence that something went wrong.** It is the system working precisely as designed, arriving precisely on time. It was on the schedule. Nobody read the schedule.
+That third row is where most of the money is currently being lost, so it deserves to be said plainly: **margin compression at the application layer is not evidence that something went wrong.** It is the system working precisely as designed, arriving precisely on time. It was on the schedule. Nobody read the schedule.
 
 ## Three engines, three different expiry dates
 
@@ -98,7 +98,7 @@ Right now, though, the evidence runs the other way, and it runs hard.
 
 Open-weight models sit roughly **3 to 6 months behind the frontier.** Epoch AI's January to May 2026 comparison puts the average lag near **four months**, about six if you use a stricter rule for what counts as equivalent.
 
-And here is the part that should genuinely alarm anyone whose plan depends on a gap: **that number has been shrinking.** Earlier versions of this analysis carried 9 to 15 months. It is now four.
+And here is the part that should alarm anyone whose plan depends on a gap: **that number has been shrinking.** Earlier versions of this analysis carried 9 to 15 months. It is now four.
 
 ![The lag between frontier and open weights has been shrinking, not growing.](img/fast-follower.avif)
 
@@ -110,7 +110,7 @@ The Two-Year Clock is running on everybody, including the people who have not no
 
 Frontier access is not an asset. It is a **wasting asset**, depreciating on a schedule that is published, in public, by researchers, for free.
 
-Which rules out, fairly brutally:
+Which rules out:
 
 - Wrappers whose differentiation is model access
 - Products differentiated by capability rather than by data, distribution, or workflow lock-in
@@ -138,7 +138,7 @@ The scarce list, meanwhile, is short and boring and has barely changed in years:
 
 ![Almost everything becomes abundant. The interesting question is what is behind the glass.](img/scarce-cabinet.avif)
 
-Six of the nine things on that list are owned by capital rather than earned by labor, which is a separate and considerably more uncomfortable argument, made [elsewhere in the corpus](../09-macro/assets.md).
+Six of the nine things on that list are owned by capital rather than earned by labor, which is a separate and more uncomfortable argument, made [elsewhere in the corpus](../09-macro/assets.md).
 
 ## How you would know if this is wrong
 
@@ -158,7 +158,7 @@ Where entry is not blocked, the cost saving does not stay with the firm that spe
 
 ![Everyone adopts, everyone spends, and nobody gains a step on anybody.](img/red-queen.avif)
 
-This is [the Red Queen](../02-games/3-firms.md), and before you decide it is some strange new AI pathology, it is the completely standard outcome for a general-purpose technology. Electricity did this. Containerization did this. ERP did this. The internet did this. Everyone had to buy it, almost nobody got rich from buying it, and the surplus went to customers and to whoever owned the few genuinely scarce things.
+This is [the Red Queen](../02-games/3-firms.md), and before you decide it is some strange new AI pathology, it is the completely standard outcome for a general-purpose technology. Electricity did this. Containerization did this. ERP did this. The internet did this. Everyone had to buy it, almost nobody got rich from buying it, and the surplus went to customers and to whoever owned the few scarce things.
 
 Which leaves the actual mistake people are making, and it is not the one they think.
 

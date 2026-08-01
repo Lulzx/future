@@ -22,7 +22,7 @@ The model itself fits in five questions. Everything on this blog, and most of th
 
 ## Where does capability go next?
 
-Wherever checking the answer is cheap. A training loop needs a signal, and domains split by what that signal costs: **the Millisecond Loop**, where a unit test or a proof checker grades millions of attempts a day for free, against **the Six-Month Loop**, where finding out whether the advice was any good takes half a year and an argument. Capability flows downhill toward the cheap side, which is why the same model is superhuman at competitive programming and merely fine at judgment.
+Wherever checking the answer is cheap. A training loop needs a signal, and domains split by what that signal costs: **the Millisecond Loop**, where a unit test or a proof checker grades millions of attempts a day for free, against **the Six-Month Loop**, where finding out whether the advice was any good takes half a year and an argument. Capability flows downhill toward the cheap side, which is why the same model is superhuman at competitive programming and merely fine at judgment. "Cheap" is shorthand for three properties, cheap, faithful, and hard to game, and the post stress-tests all three against autonomous driving, the strongest counterexample on offer.
 
 The corpus grounds this in [the data wall](../01-substrate/data.md) and files the one development that would break it, learned verification, as a [framework-level risk](../06-uncertainties/learned-verification.md).
 

@@ -97,7 +97,21 @@ Synthetic generation is not an escape from verification. It is an amplifier wire
 
 The pivot to synthetic data did not dissolve the asymmetry. **It is the mechanism that created it.**
 
-## The genuinely bleak part
+## "Then why can't the car drive itself?"
+
+If the rule is true, autonomous driving should have been easy. It has everything the fast column has. Simulators that run millions of miles a night. Fleet telemetry by the petabyte. Defined metrics, disengagements and crashes per mile. More capital than any slow-column domain has ever seen. And it still took twenty years to reach robotaxis in a handful of carefully mapped cities.
+
+This is the best counterexample anyone has, and it does not break the rule. It exposes what the word "cheap" was quietly carrying.
+
+A driving simulator is a cheap scoreboard for the wrong game. It grades performance in the simulator's world, and the residue between that world and a real road, the sim-to-real gap, is exactly where the difficulty lives. The signal is cheap but it is not faithful. Meanwhile the faithful signal, what happens across millions of real miles, is cheap in the middle of the distribution and expensive at the tail, because the informative events are crashes, and you cannot run crashes all night while everyone is asleep. Driving is a Millisecond Loop welded to a Six-Month Loop, and the Six-Month half is the half that matters.
+
+So unpack the rule, because "cheap" was doing three jobs:
+
+**Capability flows to domains where the scoreboard is cheap, faithful, and hard to game.** Cheap: millions of attempts get scored economically. Faithful: the score measures the outcome you actually wanted. Hard to game: the model cannot raise the score without doing the task.
+
+A unit test scores well on all three, which is why code sits at the top of the fast column. A benchmark often fails the third, which is why models ace exams that stop predicting the job. A simulator fails the second, which is why a billion simulated miles bought less than anyone expected. When a domain looks like an exception to the rule, check the three properties one at a time. Usually one of them quietly failed while the cheap part held.
+
+## The bleak part
 
 There is a second-order problem here that gets almost no attention, and it is the one I would most like to turn out to be wrong about.
 
