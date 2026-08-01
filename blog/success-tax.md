@@ -11,7 +11,11 @@ corpus: 09-macro/rates.md, 01-substrate/capital.md, 09-macro/demography.md, 09-m
 
 Buried inside every trillion-dollar AI capex projection is an assumption so quiet that the people making the projections mostly do not know they are making it: the cost of money stays roughly where it is.
 
-Model spreadsheets, datacenter pro formas, sovereign compute funds, the whole financing stack this blog [walked through five days ago](capex-verdict.md), all of it is discounted at rates from the mid-2020s and projected forward as if the discount rate were weather, a background condition unaffected by the thing being financed. [The corpus](../09-macro/rates.md) points at the buried assumption and makes the claim this post exists to unpack:
+Model spreadsheets, datacenter pro formas, sovereign compute funds, the whole financing stack this blog [walked through five days ago](capex-verdict.md), all of it is discounted at rates from the mid-2020s and projected forward as if the discount rate were weather, a background condition unaffected by the thing being financed.
+
+![The tower is the capex plan. The rug is the discount rate. The figures lifting its corners were hired by the tower.](img/rug-pull.avif)
+
+The builder in that drawing has done nothing wrong except assume the floor, and the strange part, the part this post exists to unpack, is that the figures at the corners work for the tower's own success. [The corpus](../09-macro/rates.md) points at the buried assumption and makes the claim plainly:
 
 **It is wrong in a specific and interesting direction. The better AI works, the more expensive it becomes to finance.**
 
@@ -42,6 +46,10 @@ If the Success Tax were the only force, the forecast would be simple and this po
 
 The second row is the one to respect, because it is the one with a thirty-year winning streak. Shrinking working-age populations across every advanced economy, high savings among the old, falling investment demand to equip workers who do not exist: that is the secular-stagnation machine, it is demographically locked in for decades, and it has flattened every "rates must rise" argument since the 1990s. Call it **the Demographic Tide**, and note that it does not care about model capability at all.
 
+![Two forces strain on the light side of the plank. The heavy side is a giant who is not even playing.](img/giant-seesaw.avif)
+
+That seesaw is the rates market of the last thirty years. The scientist with the lightning bolt has just climbed on, full of consequence, and the giant has not looked up.
+
 The third row is the subtle one, and the corpus flags it as a link almost nothing in the AI-forecasting literature makes. If [the firms game](../02-games/3-firms.md) is right that AI's gains accrue to capital and to consumers rather than to labor, then income shifts toward high-savings-propensity holders. More aggregate saving pushes rates *down*, partially offsetting the very productivity effect that generated the gains. The distribution of the winnings feeds back into the price of capital. Who gets the money changes what the money costs.
 
 ![The sail is real and pulling hard. So is the tide, and the tide has been winning since the 1990s.](img/wave-vs-sail.avif)
@@ -53,6 +61,10 @@ The small boat in that drawing has both things happening to it at once, which is
 So the corpus does not predict a rate spike, and neither does this post. It predicts a fight, and prices it: **roughly 30% that a productivity step-up raises real rates by more than about 100 basis points against the demographic tide by 2035.** That number goes on [the scorecard](forecasts.md), and it is deliberately consistent with the corpus's own productivity row, because raising real rates a full point against this tide and delivering a visible TFP step-up are nearly the same claim wearing different clothes.
 
 Read the number backwards and it says the strange thing plainly: **the most likely world is one where AI works well enough to matter and rates stay low anyway,** because demographics dominate. Consider how odd that world is for the people living in it. Genuine technological transformation, visible in output and margins, and the bond market shrugs, because the boomers' savings and the missing workers outweigh the datacenters. Most economic commentary in that world will be a fight between people pointing at the transformation and people pointing at the yields, both certain the other side's evidence must be fake. Both real. Different forces, one price.
+
+![Out the window, the transformation. On the desk, the yields. Both are telling the truth.](img/bond-shrug.avif)
+
+The trader in that drawing is not asleep from ignorance. The dominoes on the desk genuinely have not moved, and the rocket out the window is genuinely flying. The 30% above is the probability that the dominoes eventually notice.
 
 ## "If rates stay low, the capex post was wrong to worry"
 
@@ -72,5 +84,9 @@ There is one more interaction, and it runs through the state. [Fiscal deteriorat
 ---
 
 Every previous general-purpose technology ran through a capital-market crisis on its way to changing the world, and the technology was fine. The investors were not, and the difference between those two sentences is the entire reason this post exists.
+
+![The bank cracked. The locomotive did not notice. Both halves of the street are the precedent.](img/railway-crisis.avif)
+
+That street is the railway 1840s and the electric 1890s, and if the corpus is right about the shape, some year not far from now. Keep your eye on which half of the drawing recovers first, because it is always the half with the wheels.
 
 The machines will work. The question that decides who profits is set in a market the machine people do not read.

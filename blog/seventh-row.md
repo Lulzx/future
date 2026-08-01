@@ -41,13 +41,25 @@ Cheaper cognitive everything, genuine and broad. More expensive housing, energy,
 
 Follow the middle three and you find the group that loses most, and it is not the poorest. It is **the credentialed professional middle**: the class whose entire economic position is scarce cognitive skill certified by an institution, which is to say an asset [depreciating on the two-year schedule](falling-floor.md) this blog opened with, hit simultaneously by [the dead credential](dead-signals.md) and [the vanished junior rung](two-products.md). That class is small in headcount and enormous in voice: it staffs the media, the professions, the civil service, and politics itself. The corpus's warning deserves quoting whole: **predictions about the politics of this transition that ignore who is writing the coverage will be systematically wrong.** Expect the discourse to be an anguished referendum on the professional experience of the 2030s, conducted by the one class for whom that experience is worst, while the electrician outside the window has the best decade of their trade's history.
 
+![Inside, the worst decade of the credentialed life. Through the window, the best decade of the trade. One of these files copy.](img/pressroom-window.avif)
+
+Both halves of that drawing are true at once. Only one of them writes the columns, which is exactly the distortion to correct for when reading the 2030s press.
+
 Which is the corpus's least intuitive checkable claim, and it goes on [the scorecard](forecasts.md) at its published confidence: **real wage growth in licensed skilled trades outpaces real wage growth in credentialed cognitive professions over 2026 to 2035, at roughly 70%.** The Seventh Row is protected by everything at once: [robotics does not reach unstructured work in this window](delivered-hour.md), licensure limits supply, [the energy build](silicon-electrons-permits.md) raises demand directly, and the trades kept their apprenticeship systems intact while the professions [let theirs erode](two-products.md).
+
+![One door never closed. The other is chained, and it was not the guard who chained it.](img/apprentice-door.avif)
+
+The welder waving the apprentices in has the thing the office tower lost: a pipeline that survives efficiency, because the work cannot be learned by watching a model do it.
 
 ## The sharpest line runs through the house
 
 Within households, though, the divide this page predicts is not labor against capital, since most households hold a little of both. It is **owner against renter**, because housing is the one appreciating complement ordinary households hold at scale, roughly two-thirds of households in most advanced economies (OECD housing statistics, stable for decades), with ownership concentrated sharply by age.
 
 Run the split through that fact. The owner cohort collects the land-and-power appreciation without selling, while the renter cohort eats [the inflating basket](two-economies.md) with no offsetting asset. Because ownership tracks age, the price split lands substantially as an *intergenerational transfer*, and the politics of the 2030s runs along that line at least as hard as along the employment one. It will be branded as housing politics. It will be AI distribution politics wearing a different name, which by now is [this blog's most repeated finding](silicon-electrons-permits.md).
+
+![The same monthly payment, twice: one version turns into walls, the other goes through the slot.](img/rent-slot.avif)
+
+The two households in that drawing pay about the same every month. Only one of them is getting taller, and the difference between them is not income. It is which side of the door the payment lands on.
 
 ## "So concentration is just the equilibrium? Nothing moves it?"
 

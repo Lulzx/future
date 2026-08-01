@@ -17,6 +17,10 @@ It goes: a humanoid at $200,000 does nothing to labor markets. But get the unit 
 
 Capital, energy, maintenance, integration, and supervision on top. Utilization times success rate on the bottom. Call the result **the Delivered Hour**, and watch what the denominator does to the fantasy.
 
+![The price tag is on the robot's wrist. The price is on the roll heading out the door.](img/long-receipt.avif)
+
+The shopkeeper in that drawing is not lying. The tag is real. The receipt is the denominator arriving line by line, and it does not fit in the shop.
+
 ## The denominator is where the three dollars goes to die
 
 Every term the naive figure assumes away, with the corpus's realistic ranges. Utilization is not 100%. It is 20 to 50%, eaten by shift patterns, charging, changeover, and idle time. Task success is not 100% on unstructured work, and every failure buys a human intervention. Integration is not zero. It routinely *exceeds the hardware cost*: fixturing, workflow redesign, safety certification. Supervision is not zero, which is the polite way of saying that a "deployed" fleet frequently has teleoperators in the loop. Maintenance is not negligible, because actuators and end-effectors are consumables under real duty cycles.
@@ -45,7 +49,15 @@ One more layer, and the corpus flags it as the term that binds hardest in practi
 
 Which is why the most important robotics development to watch is not a hardware demo but a pricing structure: **robots as a service.** Selling the robot-hour instead of the robot converts the buyer's capital decision into an operating one, directly comparable to a wage, and dissolves the hurdle-rate psychology without changing a single number in the physics. RaaS spreading is evidence that vendors have located the real obstacle, procurement, not capability. Watch its share the way [the capex post](capex-verdict.md) watches financing mix: as a revealed diagnosis.
 
+![The stall stopped selling robots and started selling hours, which is the moment the buyer's arithmetic got easy.](img/hours-counter.avif)
+
+Note where the robot stands in that drawing: behind the stall, tagged, owned by the vendor. The customer walks away holding nothing but hours, which is the only unit their budget ever understood.
+
 And when a deployment is announced, apply the corpus's one-line filter, which this blog hereby adopts as policy: teleoperation-to-autonomy ratios, not demo videos. **Any deployment reporting impressive capability without disclosing the ratio should be read as reporting teleoperation.**
+
+![The bow is real, the applause is real, and so are the cables.](img/teleop-curtain.avif)
+
+The sweating figure behind the curtain is not a scandal. They are a line item. The entire point of the ratio is to make the curtain part of the disclosure, so the audience knows what it is applauding per hour.
 
 ## The trades wage is riding on this denominator
 

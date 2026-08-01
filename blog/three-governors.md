@@ -15,6 +15,10 @@ Seventeen posts of constraint-first argument, permits, underwriters, org charts,
 
 The variable is whether AI research is beginning to feed on itself. Models already write substantial fractions of the labs' new code, optimize training runs and kernels, survey literature, and generate and triage experiments. Nobody disputes the direction. The question that matters is which of two regimes it settles into: a **productivity multiplier**, where researchers get a large, roughly linear speedup, enormously valuable, structurally boring, or a **feedback loop with a short doubling time**, where each generation of models meaningfully shortens the time to the next. The first regime changes budgets. The second changes everything: the capex wall in [the substrate](../01-substrate/compute.md) is a claim about dollars per unit of capability, and that ratio is exactly what a loop attacks, so [every timeline the blog leans on](line-shaft.md) compresses and the institutional-lag backbone snaps.
 
+![Each robot builds the next, smaller and faster. The human engineer started the line and is already optional.](img/shrinking-line.avif)
+
+That assembly line is the whole debate in one image. Everything turns on one question about it: is each handoff faster than the last, or just another handoff.
+
 So this is the post where the blog stops assuming the answer and states how it watches the question.
 
 ## The number that matters is private
@@ -49,6 +53,10 @@ Now the practical part: the proxies, each named so it can be scored rather than 
 
 **The follower gap.** A genuinely compounding loop is private by construction: it should *widen* the frontier lab's lead, because compounding compounds. The observed pattern is the opposite, and this blog [already carries it](falling-floor.md): the open-weight tier trails the frontier by three to six months, and the gap has been shrinking. The corpus is emphatic about the reading, and it is the single most common error in takeoff discourse right now: **a narrowing follower gap is not evidence of recursive self-improvement. It is evidence against it**, the signature of a shared productivity multiplier diffusing with the methods, a loop that behaves like a public good.
 
+![The leader is straining. The pack is drafting three to six months back, and one of them is yawning.](img/peloton.avif)
+
+That race is the measured 2026 pattern. A real takeoff looks like the leader vanishing up the road while the pack argues about gearing. Nobody has vanished.
+
 **Strain on the governors themselves.** This is the falsifiable heart of the framework. Rates, interconnection queues, and the verifiable-versus-unverifiable capability gap are all public series, and the governor model makes a prediction with teeth: real loop progress should show up as *strain*, capital costs rising, queues lengthening, verifiable domains pulling further ahead, before it shows up as discontinuity. Put the two positive signals together and you get **the Takeoff Signature**: the frontier pulling away from followers *while* the governors visibly strain. That conjunction is what would move the map. A quiet takeoff with relaxed governors is the one pattern the model says should not exist, so observing it would falsify not just the estimate but the framework, which is exactly what a good indicator is for.
 
 ## "You cannot rule out the discontinuity from outside"
@@ -58,6 +66,10 @@ Correct, and this post does not. What it can do is name the two mistakes that do
 The first is scoring the wrong evidence, covered above: release-day hype, benchmark jumps, and follower-gap compression all get read as loop evidence when they are respectively noise, output, and *counter*-evidence.
 
 The second is subtler, and the corpus files it as the counter-argument the technical debate underweights: **rising difficulty**. Each doubling of research throughput consumes the easiest remaining wins. If the difficulty of the next capability increment rises about as fast as throughput compounds, which is what the long history of log-linear scaling curves suggests, then a closed loop yields exponential input growth against exponentially rising cost per result, and the observable output stays roughly linear. Read that twice, because it is the strangest sentence in the whole uncertainty: **the loop closing and progress staying steady are compatible.** From outside, "the loop failed to close" and "the loop closed against rising difficulty" may not be distinguishable for years. Anyone who tells you the absence of visible takeoff settles the question, in either direction, has not done the arithmetic.
+
+![Running faster, gaining nothing, because the stairs move too. From the rail, that looks exactly like standing still.](img/down-escalator.avif)
+
+The robot on that escalator may be sprinting twice as fast as last year. From where the bored attendant leans, it has not moved. Both readings are correct, which is the maddening epistemic core of this whole uncertainty.
 
 What resolution would force, per the corpus: if the technical trigger fires *and* the governors are not binding, pull every timeline forward, re-read the capex wall as soft, and treat [learned verification](../06-uncertainties/learned-verification.md) as urgent, since a closed loop with cheap learned verifiers is the one genuine discontinuity case in the register. If the technical trigger fires and the governors bind, log a local research win and leave the map alone. The conjunction moves the map. The first conjunct alone does not.
 

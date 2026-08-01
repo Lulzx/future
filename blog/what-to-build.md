@@ -15,6 +15,10 @@ The corpus has an answer, and it is not a hedge. Its hundred thousand words comp
 
 The reasoning is the convergence this blog has been circling since [the first post](cheap-scoreboard.md). Verification is the bottleneck on capability, because training needs cheap ground truth. It is the bottleneck on information markets, because [the signals died](dead-signals.md) when generation got free. It is the bottleneck on hiring, on credentials, on [what insurers will cover](insurance-ceiling.md). And it is an inelastic complement, which per [the firms game](../02-games/3-firms.md) is where value accrues when everything around it gets cheap. One scarcity, five markets. Generation became free and checking did not, and every durable position in the next decade is some form of standing on that gap.
 
+![Five professions, five queues, one pump. The attendant is the entire verification economy at current staffing.](img/five-queues.avif)
+
+Every queue in that drawing arrived from a different collapse, and none of them can see the others. The pump does not care which market you came from. That is what "one scarcity, five markets" looks like from above.
+
 So this post is a forecast about construction: which verification infrastructure actually gets built and funded between now and 2031, which stays an essay, and the one rule that separates them.
 
 ## The rule: verification is a public good until somebody owns the loss
@@ -22,6 +26,10 @@ So this post is a forecast about construction: which verification infrastructure
 Here is the uncomfortable economics that the "just build verification" advice usually skips. Most verification is a commons on *both* sides. The producer of a careful check cannot capture most of its value, because the check's benefit leaks to everyone who relies on the same judgment. The corpus's [evaluator-commons argument](../02-games/5-information.md) is blunt: everyone cites the verification layer and nobody funds it, and rebuilding it requires coordination among free-riders, which is the slow kind of problem.
 
 Which yields the sorting rule for the whole build list, worth a name because every entry below is an application of it. Call it **the Loss-Owner Rule**: verification gets built where a single party internalizes the full cost of being wrong, and stays undersupplied everywhere else. The underwriter pays when the claim is bad. The clearinghouse pays when the trade breaks. The employer pays when the hire fails. Where the loss has an owner, the checking gets funded. Where the loss is diffuse, the checking gets a conference and a white paper.
+
+![The extinguisher was purchased at full price, at a sprint, by the only person whose roof it is.](img/own-roof.avif)
+
+The neighbors at the fences are not villains. Their houses are fine, so their wallets are closed, and that front yard is the entire economics of verification in one scene.
 
 ![The shop sells whistles, stopwatches, and scoreboards, and the queue outside includes everyone who just discovered their old referee stopped working.](img/scoreboard-shop.avif)
 
@@ -33,7 +41,15 @@ That shop is the commercial form of the whole corpus. Notice what it does not se
 
 **Stays an essay, mostly.** Public epistemic infrastructure: open fact-checking, common-good provenance registries, civic reputation systems. Diffuse loss, no owner, grant-funded at one percent of need. General-purpose "truth layers" for the open web, same diagnosis, sadder brochure. And universal detector tools, which fail the deeper way: not underfunded but structurally doomed, cycling through generations that erase their own signal.
 
+![The shelf got funded once, at publication. The tower of cameras and padlocks is getting funded monthly.](img/cobweb-scrolls.avif)
+
+The two builders ignoring the bookshelf in that drawing are not philistines. They are the Loss-Owner Rule selecting its survivors, one camera and one padlock at a time.
+
 **The swing category.** Portable, staked track records, the cryptographic apprenticeship record, the vouching graph with skin in the game. This is the one that could rebuild the outsider channel that died with the cover letter, and [the signals post](dead-signals.md) called it a design question rather than a market inevitability. It sits in the swing category because the Loss-Owner Rule stalls on it: the worker owns the loss of being unverifiable, but workers are the party least able to fund infrastructure. If an employer consortium or a guild funds it, it ships. If not, it joins the essays.
+
+![The bridge is built plank by plank from one side only, by the person with the least capital and the most to gain.](img/swing-bridge.avif)
+
+The employers on the far cliff are waiting to see whether the bridge holds before helping, which is reasonable of them and is also exactly why the gorge persists. The swing category resolves on whether anyone funds the far anchor.
 
 ## "A model will just verify everything, and this list is a training-data snapshot"
 
@@ -42,6 +58,10 @@ This is the strongest objection to the entire corpus, not just this post, and it
 The corpus's honest reply has three layers. The recursion layer: a learned verifier is only as good as what trained it, and where genuine ground truth never arrives, self-verification drifts confidently, so the objection assumes its own conclusion in exactly the domains that matter most. The weakness of that reply, which the corpus states against itself: human expertise is also mostly peer-validated without external ground truth, and human expertise runs civilization. If learned verification merely matches peer review, that is enough for most economic purposes.
 
 Then the layer this post actually banks on: the likeliest resolution is *tiered*. Checking process, was the reasoning well-formed, were the steps standard, is learnable, because process has abundant training signal. Checking outcome truth in slow-feedback domains, did the strategy work, was the rare diagnosis right, is starved of training data by the same slowness that made human verification expensive there. Learned verifiers master the first tier well before the second. For a builder, that tiering is not a threat but a product boundary: everything in the first tier becomes a feature of the model stack, and everything in the second tier, outcome truth, attested provenance, staked reputation, liability-grade audit, stays scarce and stays sellable. Build on the second tier. The first tier is the models' side of the gap, and it is closing from their side.
+
+![The lower tier grades itself at machine speed. The fruit on the upper level still waits for someone who can tell ripe from convincing.](img/two-tiers.avif)
+
+The robot at the ladder is not stuck forever. But the expert under the tree is filling the one basket the lower tier cannot, and that basket is the product.
 
 And in the meantime, the institutional cushion: courts, licensure, and [insurance exclusions](insurance-ceiling.md) all assume a human checker, and a verifier that works must still be accepted before deployment reorders. That lag is a moat measured in years, rented rather than owned, and worth exactly its duration.
 

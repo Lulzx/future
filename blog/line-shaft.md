@@ -21,9 +21,17 @@ The productivity jump came two decades later, and it did not come from better mo
 
 Translate the line shaft into the present tense. The AI equivalent of bolting the motor to the old engine mount is *installing a copilot*: procurement, a license, an onboarding email. It shows up in month one, captures a sliver of value, and changes nothing about the shape of the organization. Call the underlying condition **the Line-Shaft Problem**: the tool is new, the floor plan is not, and the floor plan is where the productivity lives.
 
+![Everyone got the parrot. The pyramid did not move an inch.](img/shoulder-parrot.avif)
+
+That office has adopted AI at one hundred percent, and every adoption survey it answers will glow. Now look past the parrots: the pyramid on the wall is the same pyramid as last year, which is why the productivity statistics are too.
+
 The equivalent of rebuilding the factory is reorganizing a function around two assumptions the old structure never had: first drafts are free, and verification is the scarce input. Take those seriously and the org chart stops making sense. Spans of control widen, because [checking is the job now](cheap-scoreboard.md) and one senior person can check what a floor of juniors used to produce. The junior pipeline changes shape or [quietly disappears](two-products.md). Review moves from sampling to the center of the workflow. Whole coordination layers, the people whose job was moving drafts between people, lose the thing they coordinated.
 
 And here is why it does not happen on the tool's schedule: the redesign is resisted by exactly the people whose expertise the old workflow encodes. Not from stupidity, from accounting. A senior manager's value is substantially their mastery of the current floor plan, who checks what, what gets escalated, where the bodies are buried in the process. The redesign expropriates that asset. Asking incumbents to lead it is asking them to write down their own capital, and the electrification cohort already showed us how that goes: the plants kept their shafts until the shaft men retired.
+
+![The wall map is genuinely masterful, and the wrecking ball outside is patient.](img/wall-map.avif)
+
+The manager spread across that diagram is defending the most valuable thing they own, a complete mental model of how the current floor works. The young worker holding the little motor is not the threat. The motor is, and it can wait.
 
 ![The motor arrived years ago. It sits in the corner while the belts run, because the man who knows every belt is still running the floor.](img/line-shaft.avif)
 
@@ -32,6 +40,10 @@ That drawing is the American factory in 1910 and a Fortune 500 workflow in 2027.
 ## The forecast: entrants move the statistics, not incumbents
 
 If the mechanism is right, it makes a prediction sharper than "productivity lags." Sector statistics move when *cohort replacement* moves: firms founded after the capability existed, which never paid for the old layout, displacing incumbents that installed copilots on top of it. Growth by substitution of firms, not transformation of firms, exactly as single-story plants displaced shaft-built ones rather than shaft-built ones remodeling.
+
+![The old plant gets its plaque polished. The new one is being born already shaped around the motor.](img/new-factory.avif)
+
+The moving truck between those two buildings is the productivity statistic in transit. It will show up in the sector average when it finishes unloading, not before.
 
 The corpus's timeline places the visible resolution in the [2028 to 2032 window](../04-timelines/2028-2032.md): the J-curve finally turns as intangible investment shows up in output, roughly on the schedule electrification and ERP both followed. Two measurement warnings ride along. Quality-adjusted gains are [largely invisible to the price statistics](two-economies.md), so the official series will understate whatever happens. And self-reported productivity is unreliable in a known direction, the METR result this blog [keeps returning to](../02-games/4-labor.md): experienced developers measured 19% slower with AI assistance while believing they were 20% faster. Weight instrumented and revealed-preference measures. Surveys are how the Line-Shaft Problem hides.
 

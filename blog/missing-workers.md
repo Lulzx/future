@@ -13,6 +13,10 @@ Forecasting is mostly the business of being wrong about uncertain things, which 
 
 Demography is that variable. The people who will be of working age in 2045 have all been born. You can count them now. There is a margin of error, and it is trivial next to anything else in this blog: no breakthrough accelerates the birth rate of 2019, no crash revises it downward. Japan, Korea, Italy, Germany, and China already have shrinking workforces. Most of the rest of the advanced world is flat or propped up by immigration, fertility is below replacement in countries representing the large majority of world GDP, and, the part usually missed, it has fallen fastest in *middle-income* countries, which are aging before they got rich.
 
+![The 2045 workforce, viewed through glass. The actuary is not estimating. They are counting.](img/empty-cribs.avif)
+
+That nursery window is the entire dataset, and it is not a forecast. Every empty crib in the row is a 2045 vacancy that is already scheduled, and no policy reaches back to fill it.
+
 Now put that beside everything this blog has said about labor. Sixteen posts about a technology that displaces workers, and [the corpus admits the omission](../09-macro/demography.md) in one line: all of it has been written against the backdrop of economies that are running out of workers anyway.
 
 This post is about what happens when you finally let the two biggest labor forces of the century into the same room. The answer is not that they cancel. It is more useful than that, and it is checkable.
@@ -38,6 +42,10 @@ The second consequence inverts the political story most commentary assumes, and 
 
 In a labor-abundant economy, automation is *pushed* onto a workforce that resists it, and the politics are ugly. In a labor-scarce economy, automation is *pulled* in by employers who cannot hire at any wage, and the politics mostly fail to materialize. Japan has run the experiment since the 2000s: high automation, low unemployment, minimal backlash. Nobody riots against the machine that fills a vacancy nobody applied for.
 
+![High automation, low unemployment, one cat. The experiment has run for twenty years.](img/quiet-shop.avif)
+
+The shopkeeper in that drawing is not unemployed. They are asleep, which is a different condition, and the robot on the ladder is the reason the shop is still open at all. The street outside holds the entire protest movement: a cat.
+
 Which reframes the great-power race in a way [the bipolar page](../03-domains/contested/geopolitics/bipolar.md) develops and almost no Western coverage does. China's workforce contraction is the largest anywhere in absolute terms, and China took **54% of global industrial-robot installations in 2024**, 295,000 of 542,000 units, with domestic manufacturers outselling foreign suppliers at home for the first time (IFR World Robotics, 2025). The state treats automation explicitly as demographic policy. So the US races out of abundance of capital, and China races out of scarcity of workers, and the corpus's quiet judgment is that **the second motive is the more durable one**, because it does not depend on the return on investment staying high. A race run to replace workers who are already not there does not stop when the CFO gets nervous.
 
 One more inversion, closer to home: the US, whose politics dominate every AI-and-labor debate, is the *least* representative case, being the one advanced economy with a still-growing workforce. The displacement anxiety that saturates American coverage is being generalized from the country where it applies most and exported to countries where it applies least.
@@ -59,6 +67,10 @@ Look at the proportions in that drawing, because they are the forecast: a bench 
 So the corpus's prediction, arrived at independently from [yesterday's ownership argument](seventh-row.md), which is the best kind of evidence a forecast like this gets: **the acute labor problem of the 2030s in advanced economies is a shortage in care and skilled trades, not a surplus in cognitive work.** Real wages in both outpace the credentialed professions. Call the underlying squeeze **the Care Collision**, and note its bitter geometry: the one labor market that tightens hardest is the one the technology cannot enter, in the service of the generation that owns [the appreciating assets](seventh-row.md), staffed by the cohort that does not.
 
 The standard policy answer is immigration, and the corpus's forecast for it is bleak in a specific way: immigration is most politically constrained in exactly the countries with the sharpest shortages. Expect that fight to be conducted entirely as a cultural question while being, underneath, an arithmetic one, the same misdirection pattern as [the price split](two-economies.md), and file it with this blog's growing collection of AI politics wearing other names.
+
+![The debate is loud, the abacus is finished, and nobody is looking at it.](img/abacus-argument.avif)
+
+The beads on that abacus were pushed decades ago, by birth rates. The argument on either side of it is real and will decide real things. The arithmetic is not listening.
 
 ## "The projections always say this, and the workforce always shows up"
 

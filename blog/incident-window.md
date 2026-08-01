@@ -13,7 +13,9 @@ Here is a strange pattern in how modern societies govern dangerous technologies,
 
 Aviation safety architecture, nuclear regulation, financial oversight, pharmaceutical approval. In every case, the governing regime arrived after a disaster, drafted by people reacting to one specific, vivid failure rather than to a general argument about risk. Decades of careful essays about what could go wrong achieved approximately nothing, and then one crash, one meltdown, one collapse produced in months what the essays could not produce in years. Sarbanes-Oxley passed nine months after Enron. Dodd-Frank arrived about twenty-two months after Lehman. The 737 MAX grounding-and-reform cycle ran on the same clock.
 
-[The corpus](../02-games/2-nations.md) compresses the pattern into four words: **coordination is event-driven.** Not reason-driven. And it commits to the forecast this post is about, so here it is up front, where it can lose.
+![The rulebook is always written second, by someone sitting on a crate next to the reason for it.](img/rulebook-second.avif)
+
+The clerk in that drawing is not late. They are the system working as designed: the wreck first, the book second, the measurements taken while the smoke is still rising. [The corpus](../02-games/2-nations.md) compresses the pattern into four words: **coordination is event-driven.** Not reason-driven. And it commits to the forecast this post is about, so here it is up front, where it can lose.
 
 A serious AI-attributed incident, most plausibly financial, a correlated cyber event, or a biological near-miss, arrives between 2027 and 2031. The regulatory architecture that governs AI through the 2030s gets written in roughly the **18 months** after it. And, the part that matters if you can act on it: the quality of that architecture was mostly determined *before* the incident, by which drafts were mature enough to move when the window opened.
 
@@ -38,7 +40,9 @@ Here is the forecast's second layer, and it is the one almost no one prices: *wh
 | Consumer or clinical harm | Health and product-safety agencies | Approval gates, professional sign-off |
 | Kinetic event involving autonomy | Defense and export-control establishments | Controls, classification, military rules |
 
-The corpus ranks finance and insurance as the most likely forcing events, not because they are the worst risks but because their feedback is fastest and their institutions already have crisis muscle. Warfare is the least likely and the least recoverable. And the ranking implies something uncomfortable: the 2030s regime will be well fitted to whichever war happened to come first, and thinly fitted to everything else. A finance-triggered event produces model-risk rules that say nearly nothing about biosecurity. The architecture you get depends on which failure got the microphone, not on which risk was largest in expectation.
+![Four buildings, one bolt. Where it lands decides which agency holds the pen for a decade.](img/four-doors.avif)
+
+The bolt in that drawing has stopped mid-air, which is the honest way to draw the present: everything about the shape of the 2030s regime is downstream of which roof it finds. The corpus ranks finance and insurance as the most likely forcing events, not because they are the worst risks but because their feedback is fastest and their institutions already have crisis muscle. Warfare is the least likely and the least recoverable. And the ranking implies something uncomfortable: the 2030s regime will be well fitted to whichever war happened to come first, and thinly fitted to everything else. A finance-triggered event produces model-risk rules that say nearly nothing about biosecurity. The architecture you get depends on which failure got the microphone, not on which risk was largest in expectation.
 
 ## "Surely the experts write the rules either way"
 
@@ -46,13 +50,19 @@ Someone writes them. The question is who, and [the state-capacity page](../03-do
 
 The corpus puts a number on it: within 18 months of a salient incident in a major jurisdiction, binding rules get enacted or formally proposed at high probability, but roughly **50% of the operative technical content is industry-originated** unless a public measurement institution already exists. That outcome will not be reported as regulation failing to arrive. It arrives, with hearings and signatures. It is regulation as capture by default, and it is the modal case, because in most jurisdictions the only people who can define an evaluation, an audit, or a compute threshold in enforceable language currently work for the companies being regulated.
 
-Which converts this post's forecast into advice for exactly one audience. If you work on AI governance, the deliverable that matters is not advocacy, a framework, or a post like this one. It is statute-shaped text, defensible in committee, sitting finished in a drawer. The window will not wait for it to be written.
+![The official has the desk and the authority. The visitor has the finished text and the pen, which is what actually decides.](img/industry-pen.avif)
+
+That handover will not be reported as capture. It will be reported as consultation, and the tired official accepting the stack is not corrupt, just outdrafted. Which converts this post's forecast into advice for exactly one audience. If you work on AI governance, the deliverable that matters is not advocacy, a framework, or a post like this one. It is statute-shaped text, defensible in committee, sitting finished in a drawer. The window will not wait for it to be written.
 
 ## What the rules can and cannot reach
 
 One more asymmetry, from the [leaky-bucket structure](../02-games/2-nations.md) of the whole game. Open weights and distillation mean that post-incident rules in one bloc do not contain capability globally. So whatever passes will bind what can be enforced locally: liability, procurement, deployment licensing, power siting. It will not bind what would require global verification of training runs, because no verification regime exists and the lever that could have built one, compute tracking, is being spent as a race instrument instead.
 
-Expect the resulting architecture to look lopsided and to be described as a failure of nerve. It will actually be a map of enforceability. Immobile, capital-intensive layers, frontier training, grid interconnection, get real rules. Mobile layers, deployment, fine-tuning, talent, leak to whichever middle power declines to adopt the rules, and middle powers face standing rents for declining. The enforceable residue is local. That is also why [the insurance post](insurance-ceiling.md) matters as much as this one: liability and coverage are the local instruments, and they were binding before the legislature sat down.
+Expect the resulting architecture to look lopsided and to be described as a failure of nerve. It will actually be a map of enforceability. Immobile, capital-intensive layers, frontier training, grid interconnection, get real rules. Mobile layers, deployment, fine-tuning, talent, leak to whichever middle power declines to adopt the rules, and middle powers face standing rents for declining. The enforceable residue is local.
+
+![The ribbon is sincere, and it is tied around the one part of the bucket that was not leaking.](img/leaky-bucket.avif)
+
+The official in that drawing is not foolish. The ribbon genuinely holds where it touches. It is the holes that are policy. That is also why [the insurance post](insurance-ceiling.md) matters as much as this one: liability and coverage are the local instruments, and they were binding before the legislature sat down.
 
 ## What would prove this post wrong
 

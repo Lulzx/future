@@ -15,7 +15,9 @@ A thoughtful cover letter proved somebody spent an evening on it. A polished ess
 
 Economists call this signaling, and the whole machine rests on one assumption: the signal has to be expensive for the person faking it. AI did something surgical to that assumption. It collapsed the cost of *producing* every text-shaped signal without collapsing the cost of *possessing* the quality the signal advertised. The essay is free. Being the person the essay implies is as expensive as ever.
 
-[The corpus](../02-games/5-information.md) states the consequence flatly: the signal and the substance have come apart, and every institution that relied on them moving together is now running on a broken instrument.
+![One writer paid an evening. One machine paid nothing. The receiver can no longer tell, which bankrupts both.](img/twin-letters.avif)
+
+The manager in the middle of that drawing is every evaluator in the economy now: two identical documents, two wildly different production costs, and no way to bill the difference. [The corpus](../02-games/5-information.md) states the consequence flatly: the signal and the substance have come apart, and every institution that relied on them moving together is now running on a broken instrument.
 
 ## The obituary list, and the one rule underneath it
 
@@ -31,13 +33,21 @@ The little graveyard in that drawing is not a prediction. Most of those stones a
 
 Now the forecast half, because the interesting question is not what dies but what fills the vacancy. The replacements, already visible: in-person and synchronous evaluation. Cryptographic provenance, content credentials stamped at capture. Track records with stakes attached. Reputation graphs. Institutional vouching.
 
-Read that list again slowly, because everything on it is socially *older* than what it replaces. We are heading back toward **guilds, apprenticeships, and personal reputation, mediated by cryptography.** The pre-modern world solved trust for conditions where documents could be forged and strangers could not be checked, which is precisely the world the internet just re-entered. The wax seal, the guild examination, the master who vouches for the apprentice: each is returning wearing new clothes, and the corpus tracks the return as [an indicator](../07-indicators/diffusion/labor.md), not a metaphor. Education is the cleanest early case: [the education page](../03-domains/cognitive/education.md) predicts that by 2030 selective employers in exposed professions weight supervised work samples, apprenticeships, and invigilated assessment over GPA-and-essay bundles. Teaching gets cheaper while assessing gets more expensive, which is the strangest sentence in the whole corpus and follows directly from the Witness Test.
+Read that list again slowly, because everything on it is socially *older* than what it replaces. We are heading back toward **guilds, apprenticeships, and personal reputation, mediated by cryptography.** The pre-modern world solved trust for conditions where documents could be forged and strangers could not be checked, which is precisely the world the internet just re-entered. The wax seal, the guild examination, the master who vouches for the apprentice: each is returning wearing new clothes, and the corpus tracks the return as [an indicator](../07-indicators/diffusion/labor.md), not a metaphor.
+
+![The seal is back. Note the queue behind the apprentice: laptops, waiting their turn.](img/wax-seal.avif)
+
+Look at who is waiting behind the apprentice in that drawing: modern applicants holding the exact devices that killed the old signals, queuing for a technology that predates them all by five centuries. Education is the cleanest early case: [the education page](../03-domains/cognitive/education.md) predicts that by 2030 selective employers in exposed professions weight supervised work samples, apprenticeships, and invigilated assessment over GPA-and-essay bundles. Teaching gets cheaper while assessing gets more expensive, which is the strangest sentence in the whole corpus and follows directly from the Witness Test.
 
 Two mechanical predictions ride along. First, on the open web, an Akerlof lemons spiral: as synthetic content's share rises, the average value of anything unverified falls, and readers retreat to walled gardens with provenance inside. The corpus scores the enclosure of the open web as roughly **85% likely to be substantially complete by 2030**, and files it as a genuine loss, because the open web worked by keeping publishing cheap enough to be democratic and just costly enough to be a filter. Generation deleted the filter and kept the cheapness.
 
 ![Inside the wall, everything carries a seal. Outside, the unstamped pages blow around in drifts, and the average one is worth what it cost to make.](img/walled-garden.avif)
 
 Second, within the verification rebuild, detection loses to attestation. A detector classifying finished content plays an adversarial game against generators that improve by erasing exactly the signal the detector needs, so every detector generation is a temporary advantage that its own deployment erodes. Attestation, binding content cryptographically to a capture device at creation, makes no claim about the content at all, only about its origin, so generator progress is irrelevant to it. Institutions betting on detection will cycle through tools and quietly abandon them. The durable infrastructure converges on attestation plus reputation, which is why the corpus's [C8 indicator](../07-indicators/governance.md) tracks provenance adoption and ignores detector accuracy, and why a label law without capture-time cryptography is theatre with a compliance cost.
+
+![The crank sets the belt speed, and the crank belongs to the generator. The detective's best pace is a temporary score.](img/detector-treadmill.avif)
+
+That treadmill is every detection vendor's roadmap. The robot at the crank is turning it with one finger.
 
 ## "People will just get better at spotting AI text"
 
@@ -50,6 +60,10 @@ The subtler version of the objection is that evaluators will rebuild rigor. Here
 Here is the part of this story that deserves more attention than it gets, and the reason this post is not a neutral obituary.
 
 The signals that died were disproportionately the ones *outsiders* could use. The strong cover letter, the polished portfolio, the well-argued cold email: these were exactly the channels through which someone with no network, no pedigree, and no proximity could demonstrate quality to a stranger. The replacements, in-person evaluation, institutional vouching, reputation graphs, track records with stakes, all price in prior access. Whom you know. Where you already are. Who will vouch.
+
+![The circle is warm, closed, and back in charge. The excellent document is leaving with the wind.](img/network-ring.avif)
+
+The person outside that circle was the cheap signals' whole constituency. The wind taking the page is not a comment on its quality. The page is superb. It is a comment on its readership, which is now zero.
 
 So verification scarcity is not distributionally neutral. It quietly shifts screening weight back toward the pre-meritocratic filters that cheap signals had partially displaced, and it does so while wearing the costume of rigor. The one counterweight the corpus flags: cheap cryptographic attestation of genuinely earned track records, portable, verifiable, staked reputation, could rebuild an outsider channel better than the one that died. Whether it gets built is a design question, not a market inevitability, which is exactly why it leads [tomorrow's post](what-to-build.md).
 
