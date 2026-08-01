@@ -1,7 +1,7 @@
 ---
 title: The Taiwan Risk Is Not the One You Are Watching
 dek: The likelier failure is not an invasion but a quarantine, a war-risk insurance premium, and an export licence that takes eleven months instead of three.
-date: 2026-08-01
+date: 2026-07-31
 tags: taiwan, semiconductors, risk
 takeaway: The assumption is scored as "no major disruption" and consumed as "supply keeps flowing to us". Those are different sentences, and only one of them is on the dashboard.
 corpus: 06-uncertainties/taiwan.md, 07-indicators/substrate.md, 03-domains/contested/geopolitics/bipolar.md, 01-substrate/compute.md
