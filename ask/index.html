@@ -75,6 +75,22 @@
     </div>
   </form>
 
+  <div id="load-progress" class="load-progress" hidden aria-live="polite">
+    <div class="load-progress-head">
+      <span class="load-progress-label" id="load-label">Loading model…</span>
+      <span class="load-progress-pct" id="load-pct">0%</span>
+    </div>
+    <div class="load-progress-track" role="progressbar"
+      aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="load-bar">
+      <div class="load-progress-fill" id="load-fill"></div>
+      <div class="load-progress-shine" aria-hidden="true"></div>
+    </div>
+    <div class="load-progress-meta">
+      <span id="load-file" class="load-progress-file"></span>
+      <span id="load-detail" class="load-progress-detail"></span>
+    </div>
+  </div>
+
   <p class="ask-examples msg">
     Try:
     <button type="button" class="example" data-q="why juniors stop getting hired">juniors</button>

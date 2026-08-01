@@ -34,6 +34,13 @@ const el = {
   hits: $("hits"),
   hitsTag: $("hits-tag"),
   theme: $("theme"),
+  loadProgress: $("load-progress"),
+  loadLabel: $("load-label"),
+  loadPct: $("load-pct"),
+  loadBar: $("load-bar"),
+  loadFill: $("load-fill"),
+  loadFile: $("load-file"),
+  loadDetail: $("load-detail"),
 };
 
 let apiOk = false;
@@ -77,6 +84,211 @@ function setStatus(text, kind = "ok") {
   el.status.classList.add(
     kind === "err" ? "is-err" : kind === "warn" ? "is-warn" : "is-ok",
   );
+}
+
+/* ── load progress bar ──────────────────────────────────────────────────── */
+
+/** Per-file download tracker for multi-shard model loads. */
+const loadState = {
+  files: new Map(), // file -> { loaded, total, progress }
+  phase: "",
+};
+
+function formatBytes(n) {
+  if (n == null || !Number.isFinite(n) || n < 0) return "";
+  if (n < 1024) return `${n} B`;
+  if (n < 1024 * 1024) return `${(n / 1024).toFixed(0)} KB`;
+  return `${(n / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+function shortFile(name) {
+  if (!name) return "";
+  const base = String(name).split("/").pop();
+  return base.length > 42 ? base.slice(0, 20) + "…" + base.slice(-18) : base;
+}
+
+function showProgress() {
+  if (!el.loadProgress) return;
+  el.loadProgress.hidden = false;
+  el.loadProgress.classList.remove("is-done");
+}
+
+function hideProgress(delayMs = 0) {
+  if (!el.loadProgress) return;
+  const go = () => {
+    el.loadProgress.hidden = true;
+    el.loadProgress.classList.remove("is-done", "is-indeterminate");
+  };
+  if (delayMs > 0) setTimeout(go, delayMs);
+  else go();
+}
+
+function setProgressUI({
+  label,
+  pct,
+  file,
+  detail,
+  indeterminate = false,
+  done = false,
+}) {
+  if (!el.loadProgress) return;
+  showProgress();
+  el.loadProgress.classList.toggle("is-indeterminate", !!indeterminate && !done);
+  el.loadProgress.classList.toggle("is-done", !!done);
+
+  if (label != null) el.loadLabel.textContent = label;
+
+  const clamped =
+    pct == null || !Number.isFinite(pct)
+      ? null
+      : Math.max(0, Math.min(100, pct));
+
+  if (done) {
+    el.loadPct.textContent = "100%";
+    el.loadFill.style.width = "100%";
+    el.loadBar?.setAttribute("aria-valuenow", "100");
+  } else if (indeterminate || clamped == null) {
+    el.loadPct.textContent = "…";
+    el.loadFill.style.width = "32%";
+    el.loadBar?.removeAttribute("aria-valuenow");
+  } else {
+    const rounded = Math.round(clamped);
+    el.loadPct.textContent = `${rounded}%`;
+    el.loadFill.style.width = `${clamped}%`;
+    el.loadBar?.setAttribute("aria-valuenow", String(rounded));
+  }
+
+  if (file != null) el.loadFile.textContent = file;
+  if (detail != null) el.loadDetail.textContent = detail;
+}
+
+function resetLoadState(phase = "") {
+  loadState.files.clear();
+  loadState.phase = phase;
+}
+
+/** Aggregate transformers.js progress_callback events into one bar. */
+function onModelProgress(p) {
+  if (!p) return;
+
+  const status = p.status || "";
+  const file = p.file || p.name || "";
+
+  if (status === "initiate" || status === "download") {
+    if (file && !loadState.files.has(file)) {
+      loadState.files.set(file, { loaded: 0, total: p.total || 0, progress: 0 });
+    }
+    setProgressUI({
+      label: loadState.phase || "Downloading LFM2.5",
+      file: shortFile(file),
+      detail: file ? "starting…" : "",
+      indeterminate: loadState.files.size === 0,
+      pct: aggregatePct(),
+    });
+    return;
+  }
+
+  if (status === "progress") {
+    const loaded = Number(p.loaded) || 0;
+    const total = Number(p.total) || 0;
+    // Prefer byte ratio; fall back to progress (0–100 or 0–1 depending on version).
+    let progress;
+    if (total > 0) {
+      progress = (loaded / total) * 100;
+    } else if (p.progress != null) {
+      const raw = Number(p.progress);
+      progress = raw >= 0 && raw <= 1 ? raw * 100 : raw;
+    } else {
+      progress = 0;
+    }
+
+    if (file) {
+      loadState.files.set(file, {
+        loaded,
+        total,
+        progress: Math.max(0, Math.min(100, progress)),
+      });
+    }
+
+    const pct = aggregatePct();
+    const bytes = aggregateBytes();
+    setProgressUI({
+      label: loadState.phase || "Downloading LFM2.5",
+      pct,
+      file: shortFile(file),
+      detail: bytes,
+      indeterminate: pct == null,
+    });
+    if (pct != null) {
+      setStatus(
+        `Loading LFM2.5… ${Math.round(pct)}%${file ? " · " + shortFile(file) : ""}`,
+        "warn",
+      );
+    }
+    return;
+  }
+
+  if (status === "done") {
+    if (file) {
+      const prev = loadState.files.get(file) || { loaded: 0, total: 0, progress: 0 };
+      loadState.files.set(file, {
+        loaded: prev.total || prev.loaded,
+        total: prev.total || prev.loaded,
+        progress: 100,
+      });
+    }
+    const pct = aggregatePct();
+    setProgressUI({
+      label: loadState.phase || "Downloading LFM2.5",
+      pct: pct ?? 100,
+      file: shortFile(file),
+      detail: file ? "cached" : "",
+      indeterminate: false,
+    });
+    return;
+  }
+
+  if (status === "ready") {
+    setProgressUI({
+      label: "Model ready",
+      pct: 100,
+      file: "",
+      detail: genDevice || "",
+      done: true,
+    });
+  }
+}
+
+function aggregatePct() {
+  if (!loadState.files.size) return null;
+  let weighted = 0;
+  let weight = 0;
+  let simple = 0;
+  let n = 0;
+  for (const f of loadState.files.values()) {
+    const p = Math.max(0, Math.min(100, f.progress || 0));
+    simple += p;
+    n++;
+    if (f.total > 0) {
+      weighted += p * f.total;
+      weight += f.total;
+    }
+  }
+  if (weight > 0) return weighted / weight;
+  if (n > 0) return simple / n;
+  return null;
+}
+
+function aggregateBytes() {
+  let loaded = 0;
+  let total = 0;
+  for (const f of loadState.files.values()) {
+    loaded += f.loaded || 0;
+    total += f.total || 0;
+  }
+  if (total > 0) return `${formatBytes(loaded)} / ${formatBytes(total)}`;
+  if (loaded > 0) return formatBytes(loaded);
+  return `${loadState.files.size} file${loadState.files.size === 1 ? "" : "s"}`;
 }
 
 async function probeApi() {
@@ -258,29 +470,54 @@ ${context}
 Answer from the excerpts only.`;
 }
 
-async function ensureGenerator(onProgress) {
+async function ensureGenerator() {
   if (generator) return generator;
   const webgpu = await hasWebGPU();
   genDevice = webgpu ? "webgpu" : "wasm";
-  onProgress?.(
+
+  resetLoadState(`LFM2.5-350M · ${genDevice}${webgpu ? " · q4" : ""}`);
+  setProgressUI({
+    label: `Loading LFM2.5-350M`,
+    file: webgpu ? "WebGPU · first run ~200MB" : "WASM fallback · first run ~200MB",
+    detail: "",
+    indeterminate: true,
+  });
+  setStatus(
     `Loading LFM2.5-350M (${genDevice}${webgpu ? ", q4" : ""})… first run downloads ~200MB`,
+    "warn",
   );
+
+  setProgressUI({
+    label: "Loading transformers.js",
+    file: "cdn.jsdelivr.net",
+    detail: "",
+    indeterminate: true,
+  });
   const { pipeline } = await loadTransformers();
+
+  resetLoadState(`LFM2.5-350M · ${genDevice}`);
+  setProgressUI({
+    label: "Downloading LFM2.5",
+    file: GEN_MODEL.split("/").pop(),
+    detail: "",
+    indeterminate: true,
+  });
+
   generator = await pipeline("text-generation", GEN_MODEL, {
     dtype: "q4",
     device: genDevice,
-    progress_callback: (p) => {
-      if (!p) return;
-      if (p.status === "progress" && p.progress != null) {
-        onProgress?.(
-          `LFM2.5 ${p.file || ""} ${Math.round(p.progress)}%`,
-        );
-      } else if (p.status === "ready" || p.status === "done") {
-        onProgress?.(`LFM2.5 ready (${genDevice})`);
-      }
-    },
+    progress_callback: onModelProgress,
   });
-  onProgress?.(`LFM2.5-350M ready · ${genDevice}`);
+
+  setProgressUI({
+    label: "LFM2.5 ready",
+    pct: 100,
+    file: "",
+    detail: genDevice,
+    done: true,
+  });
+  setStatus(`LFM2.5-350M ready · ${genDevice}`, "ok");
+  hideProgress(900);
   return generator;
 }
 
@@ -291,7 +528,7 @@ async function generateAnswer(query, hits, onToken) {
       model: null,
     };
   }
-  const gen = await ensureGenerator((msg) => setStatus(msg, "warn"));
+  const gen = await ensureGenerator();
   const messages = [
     { role: "system", content: SYSTEM_PROMPT },
     { role: "user", content: buildUserPrompt(query, hits) },
@@ -469,10 +706,17 @@ el.loadModel.addEventListener("click", async () => {
   if (busy) return;
   setBusy(true);
   try {
-    await ensureGenerator((msg) => setStatus(msg, "warn"));
-    setStatus(`LFM2.5-350M ready · ${genDevice}`, "ok");
+    await ensureGenerator();
   } catch (err) {
     setStatus(err.message || String(err), "err");
+    setProgressUI({
+      label: "Load failed",
+      file: err.message || String(err),
+      detail: "",
+      indeterminate: false,
+      pct: 0,
+    });
+    el.loadProgress?.classList.remove("is-done");
   } finally {
     setBusy(false);
   }
