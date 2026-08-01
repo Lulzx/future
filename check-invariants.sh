@@ -21,10 +21,11 @@ ok()   { note "OK:   $*"; }
 broken=$(python3 - <<'PY'
 import pathlib, re
 root = pathlib.Path('.')
+skip = {'_site', 'node_modules', '.rag'}
 link_re = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
 broken = []
 for f in sorted(root.rglob('*.md')):
-    if '_site' in f.parts:
+    if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
         continue
     text = re.sub(r'```.*?```', '', f.read_text(), flags=re.S)
     for m in link_re.finditer(text):
@@ -56,9 +57,10 @@ fi
 missing_nav=$(python3 - <<'PY'
 import pathlib
 root = pathlib.Path('.')
+skip = {'_site', 'node_modules', '.rag'}
 missing = []
 for f in sorted(root.rglob('*.md')):
-    if '_site' in f.parts:
+    if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
         continue
     if f.name == 'RESEARCH.md':
         continue
@@ -83,9 +85,10 @@ over=$(python3 - <<PY
 import pathlib, re
 hard = $HARD_CAP
 exempt = re.compile(r'$EXEMPT_OVER')
+skip = {'_site', 'node_modules', '.rag'}
 rows = []
 for f in sorted(pathlib.Path('.').rglob('*.md')):
-    if '_site' in f.parts:
+    if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
         continue
     n = len(f.read_text().splitlines())
     if n > hard and not exempt.search(str(f)):
@@ -105,9 +108,10 @@ dir_over=$(python3 - <<PY
 from pathlib import Path
 from collections import defaultdict
 cap = $DIR_CAP
+skip = {'_site', 'node_modules', '.rag'}
 c = defaultdict(int)
 for f in Path('.').rglob('*.md'):
-    if '_site' in f.parts:
+    if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
         continue
     if f.name == 'README.md':
         continue
@@ -126,9 +130,10 @@ fi
 # ── 5. Depth cap: max 3 directory levels below root ────────────────────────
 too_deep=$(python3 - <<'PY'
 from pathlib import Path
+skip = {'_site', 'node_modules', '.rag'}
 rows = []
 for f in sorted(Path('.').rglob('*.md')):
-    if '_site' in f.parts:
+    if skip.intersection(f.parts) or any(p.startswith('.') for p in f.parts):
         continue
     if len(f.parts) > 4:  # part/group/subgroup/file.md is the deepest allowed
         rows.append(str(f))
@@ -145,7 +150,11 @@ fi
 # ── 6. Counts ──────────────────────────────────────────────────────────────
 counts=$(python3 - <<'PY'
 from pathlib import Path
-files = [p for p in Path('.').rglob('*.md') if '_site' not in p.parts]
+skip = {'_site', 'node_modules', '.rag'}
+files = [
+    p for p in Path('.').rglob('*.md')
+    if not skip.intersection(p.parts) and not any(x.startswith('.') for x in p.parts)
+]
 lines = sum(len(p.read_text().splitlines()) for p in files)
 print(f'{len(files)} files, {lines} lines')
 PY
@@ -157,6 +166,8 @@ python3 - <<'PY'
 from pathlib import Path
 import json, re
 
+skip = {'_site', 'node_modules', '.rag'}
+
 def title_of(path: Path) -> str:
     for line in path.read_text(errors='replace').splitlines():
         m = re.match(r'^#\s+(.+)$', line.strip())
@@ -166,7 +177,7 @@ def title_of(path: Path) -> str:
 
 entries = []
 for p in sorted(Path('.').rglob('*.md')):
-    if '_site' in p.parts or any(part.startswith('.') for part in p.parts):
+    if skip.intersection(p.parts) or any(part.startswith('.') for part in p.parts):
         continue
     entries.append({"path": p.as_posix(), "title": title_of(p)})
 Path('catalog.json').write_text(json.dumps(entries, indent=2, ensure_ascii=False) + '\n')

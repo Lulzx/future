@@ -1,0 +1,19 @@
+{
+  "name": "future",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "rag": "node tools/rag.mjs",
+    "rag:embed": "node tools/embed.mjs",
+    "rag:reindex": "node tools/rag.mjs reindex && node tools/embed.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.2"
+  },
+  "allowScripts": {
+    "onnxruntime-node@1.21.0": true,
+    "protobufjs@7.6.5": true,
+    "sharp@0.34.5": true
+  }
+}
