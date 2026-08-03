@@ -953,6 +953,7 @@ ${contentHtml}
     <span class="sb-path" id="sb-path">${escapeHtml(urlPath)}</span>
     <span class="sb-actions">
       <a class="sb-link" href="${rootPrefix(doc)}${BLOG.dir}/" title="${escapeHtml(BLOG.name)} — essays on the corpus">Blog</a>
+      <a class="sb-link" href="${rootPrefix(doc)}dashboard/" title="Public forecast scorecard">Dashboard</a>
       <a class="sb-link" href="${rootPrefix(doc)}ask/" title="Ask the corpus (RAG)">Ask</a>${
         opts.blog ? `\n      <a class="sb-link" href="${rootPrefix(doc)}${BLOG.dir}/feed.xml">RSS</a>` : ""
       }
@@ -1409,6 +1410,16 @@ async function copyStatic(docs, posts = []) {
   try {
     await fs.access(askSrc);
     await copyDir(askSrc, path.join(OUT, "ask"));
+  } catch {
+    /* optional */
+  }
+
+  // Public forecast instrument: authored as a static app with hand-editable,
+  // date-stamped JSON rather than prose rendered from markdown.
+  const dashboardSrc = path.join(ROOT, "dashboard");
+  try {
+    await fs.access(dashboardSrc);
+    await copyDir(dashboardSrc, path.join(OUT, "dashboard"));
   } catch {
     /* optional */
   }

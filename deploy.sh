@@ -49,7 +49,7 @@ check_family() {
   local family=$1 addr=$2 target=$2 path code
   [[ "$family" == 6 ]] && target="[${addr}]"
   echo "→ checking ${DOMAIN} over IPv${family} (${addr})"
-  for path in / /style.css /README.md /RESEARCH.md /09-macro/demography.md; do
+  for path in / /style.css /README.md /RESEARCH.md /09-macro/demography.md /dashboard/ /dashboard/indicators.json; do
     code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 \
       --resolve "${DOMAIN}:443:${target}" "https://${DOMAIN}${path}")
     printf '   %-28s %s\n' "$path" "$code"

@@ -1,0 +1,95 @@
+{
+  "edition": "r26",
+  "updatedAt": "2026-07-18",
+  "cadence": "Quarterly",
+  "dependencies": [
+    { "id": "capital", "label": "Capital ceiling", "claim": "Revenue catches the infrastructure build before financing quality decays." },
+    { "id": "power", "label": "Power governor", "claim": "Electricity and interconnection constrain the build through the late 2020s." },
+    { "id": "diffusion", "label": "Slow diffusion", "claim": "Institutions, workflow and embodiment delay economy-wide substitution." },
+    { "id": "governance", "label": "Governance lever", "claim": "Capability remains measurable and liability remains allocable." },
+    { "id": "taiwan", "label": "Taiwan continuity", "claim": "Leading-edge supply remains geographically brittle but uninterrupted." },
+    { "id": "two-economies", "label": "Two economies", "claim": "Cognitive abundance and physical scarcity pull prices apart." }
+  ],
+  "indicators": [
+    {
+      "id": "B1", "name": "Entry-level : senior hiring", "family": "Diffusion", "status": "yellow",
+      "reading": "Entry-level remains about 7% of large-tech hires; the aggregate white-collar recovery test has not resolved.",
+      "signal": "Flat", "assumption": "Junior hiring fails to recover even when aggregate hiring does.",
+      "breaks": "The apprenticeship-gap mechanism and labor-substitution timing.", "observedAt": "2026-07-18",
+      "source": "/07-indicators/diffusion/labor.html", "sourceLabel": "B1", "dependencies": ["diffusion", "two-economies"],
+      "history": ["yellow", "yellow", "yellow", "yellow"]
+    },
+    {
+      "id": "A2", "name": "AI revenue against capex", "family": "Substrate", "status": "yellow",
+      "reading": "$60B 2025 revenue run-rate against $700–725B 2026 hyperscaler capex guidance.",
+      "signal": "Gap wide", "assumption": "Revenue compounds at 45–55% to absorb the build by 2030.",
+      "breaks": "The correction schedule and capital-ceiling mechanism.", "observedAt": "2026-07-12",
+      "source": "/07-indicators/substrate.html#a2---revenue-against-capex", "sourceLabel": "A2", "dependencies": ["capital"],
+      "history": ["green", "green", "yellow", "yellow"]
+    },
+    {
+      "id": "A3", "name": "Infrastructure financing mix", "family": "Substrate", "status": "yellow",
+      "reading": "Funding is migrating from operating cash flow toward private credit, SPVs and vendor financing.",
+      "signal": "Fragility up", "assumption": "A correction is an orderly pause unless debt makes it propagate.",
+      "breaks": "The difference between a spending decision and a credit event.", "observedAt": "2026-07-12",
+      "source": "/07-indicators/substrate.html#a3---the-financing-mix", "sourceLabel": "A3", "dependencies": ["capital"],
+      "history": ["green", "green", "yellow", "yellow"]
+    },
+    {
+      "id": "A4", "name": "Grid interconnection wait", "family": "Substrate", "status": "green",
+      "reading": "Typical waits remain 5–7 years; active CAISO queue about 523GW and MISO about 380GW.",
+      "signal": "Constraint holds", "assumption": "Power remains a physical governor on frontier capacity.",
+      "breaks": "The constrained build schedule if a major market halves its wait.", "observedAt": "2026-06-30",
+      "source": "/07-indicators/substrate.html#a4---interconnection-and-power", "sourceLabel": "A4", "dependencies": ["power", "capital"],
+      "history": ["green", "green", "green", "green"]
+    },
+    {
+      "id": "A6", "name": "Leading-edge capacity outside Taiwan", "family": "Substrate", "status": "green",
+      "reading": "The vast majority of leading-edge logic wafers remain Taiwan-concentrated; alternatives are not at volume yield.",
+      "signal": "Brittleness holds", "assumption": "Taiwan supply remains concentrated and continuous through 2032.",
+      "breaks": "Every compute-gated timeline if continuity fails; consequence shrinks if substitution succeeds.", "observedAt": "2026-06-30",
+      "source": "/07-indicators/substrate.html#a6---leading-edge-capacity-outside-taiwan", "sourceLabel": "A6", "dependencies": ["taiwan", "capital"],
+      "history": ["green", "green", "green", "green"]
+    },
+    {
+      "id": "B8", "name": "Verifiable capability gap", "family": "Diffusion", "status": "yellow",
+      "reading": "Progress remains strongest where outcomes are cheap to verify; no stable cross-domain series yet closes the gap.",
+      "signal": "Measurement thin", "assumption": "Verification, not raw intelligence, governs reliable autonomy.",
+      "breaks": "The learned-verification bottleneck and slow-diffusion case.", "observedAt": "2026-07-05",
+      "source": "/07-indicators/diffusion/capability.html", "sourceLabel": "B8", "dependencies": ["diffusion", "governance"],
+      "history": ["yellow", "yellow", "yellow", "yellow"]
+    },
+    {
+      "id": "B12", "name": "Autonomy in unstructured physical work", "family": "Diffusion", "status": "green",
+      "reading": "Commercial deployments remain overwhelmingly scripted, bounded or teleoperated; unstructured autonomy is below 50%.",
+      "signal": "Slow path holds", "assumption": "Embodiment keeps physical substitution behind cognitive substitution.",
+      "breaks": "The 2030s robotics swing variable and slow-diffusion branch.", "observedAt": "2026-07-05",
+      "source": "/07-indicators/diffusion/capability.html", "sourceLabel": "B12", "dependencies": ["diffusion", "two-economies"],
+      "history": ["green", "green", "green", "green"]
+    },
+    {
+      "id": "C4", "name": "Open-weight frontier lag", "family": "Governance", "status": "red",
+      "reading": "The open-weight tier is about 3–6 months behind frontier, already below the authored 9–15 month expectation.",
+      "signal": "Clause missed", "assumption": "Frontier leads decay slowly enough to remain strategically governable.",
+      "breaks": "The compute-control lever and the original lab-consolidation clause.", "observedAt": "2026-07-15",
+      "source": "/07-indicators/governance.html#c4---diffusion-rate-of-frontier-capability", "sourceLabel": "C4", "dependencies": ["governance", "diffusion"],
+      "history": ["green", "yellow", "red", "red"]
+    },
+    {
+      "id": "C7", "name": "AI liability insurance capacity", "family": "Governance", "status": "yellow",
+      "reading": "No material AI-specific commercial line has published rates; cyber forms remain the imperfect substitute.",
+      "signal": "Unresolved", "assumption": "Insurers price a legible deployment frontier before correlated losses bind.",
+      "breaks": "The accountability moat across medicine, law and autonomous systems.", "observedAt": "2026-07-15",
+      "source": "/07-indicators/governance.html#c7---ai-liability-insurance-capacity", "sourceLabel": "C7", "dependencies": ["governance"],
+      "history": ["yellow", "yellow", "yellow", "yellow"]
+    },
+    {
+      "id": "B7", "name": "Cognitive vs physical services inflation", "family": "Diffusion", "status": "yellow",
+      "reading": "The directional split is visible in components, but the fixed comparator series has not persisted long enough to score.",
+      "signal": "Early split", "assumption": "Cognition gets cheaper while embodied, local services retain pricing power.",
+      "breaks": "The two-economy price path and complement-scarcity thesis.", "observedAt": "2026-06-28",
+      "source": "/07-indicators/diffusion/economy.html", "sourceLabel": "B7", "dependencies": ["two-economies", "diffusion"],
+      "history": ["yellow", "yellow", "yellow", "yellow"]
+    }
+  ]
+}
